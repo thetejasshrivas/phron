@@ -1,0 +1,53 @@
+{
+  "run_id": "PH04-source-verification",
+  "timestamp_ist": "2026-10-06T02:59:36.320211+05:30",
+  "status": "PASS",
+  "sources": [
+    {
+      "origin": "W:\\AI Product Sprint\\Phron\\PHRON_PRD_v1.2.1_FROZEN.txt",
+      "copy": "W:\\AI Product Sprint\\Phron\\docs\\source\\PHRON_PRD_v1.2.1_FROZEN.txt",
+      "sha256": "d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994",
+      "bytes": 131484,
+      "status": "PASS"
+    },
+    {
+      "origin": "W:\\AI Product Sprint\\Phron\\Phron Master discussion.txt",
+      "copy": "W:\\AI Product Sprint\\Phron\\docs\\source\\Phron Master discussion.txt",
+      "sha256": "2f34ea67dedce90f02a2c13a538a46fad77ff4eec7b0a44838da7160e4a377b0",
+      "bytes": 35198,
+      "status": "PASS"
+    },
+    {
+      "origin": "W:\\AI Product Sprint\\PHRON_Codex_Execution_Playbook.pdf",
+      "copy": "W:\\AI Product Sprint\\Phron\\docs\\source\\PHRON_Codex_Execution_Playbook.pdf",
+      "sha256": "65e77ec69df99015003dc749e014de0f79f0724563d7adef995927b435a673f6",
+      "bytes": 241071,
+      "status": "PASS"
+    },
+    {
+      "origin": "W:\\AI Product Sprint\\AI Product Sprint Codex Execution Playbook.pdf",
+      "copy": "W:\\AI Product Sprint\\Phron\\docs\\source\\AI Product Sprint Codex Execution Playbook.pdf",
+      "sha256": "9e844c731c8ea7f9139728901354c69fe5ad48d8ec174c4bb00297095e55d35a",
+      "bytes": 739154,
+      "status": "PASS"
+    },
+    {
+      "origin": "W:\\AI Product Sprint\\PHRON Master Discovery Mind Map & Discussion Record.pdf",
+      "copy": "W:\\AI Product Sprint\\Phron\\docs\\source\\PHRON Master Discovery Mind Map & Discussion Record.pdf",
+      "sha256": "affb4a3624c44a1d1b9395514607aeebb9f45ea73e2988a1f9b84cf8e309958b",
+      "bytes": 546302,
+      "status": "PASS"
+    }
+  ],
+  "agents_part12_complete": "PASS",
+  "part13_templates": 8,
+  "approved_amendments": 8,
+  "registered_owners": 5,
+  "actual_fr": 60,
+  "actual_ac": 47,
+  "existing_file_collisions": [],
+  "product_tests": "NOT_RUN",
+  "application_created": false,
+  "installs": false,
+  "git_repository": false
+}

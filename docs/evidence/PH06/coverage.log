@@ -1,0 +1,20 @@
+
+> phron@0.1.0 test:contracts:coverage
+> jest --config jest.config.mjs --selectProjects unit --runInBand --coverage
+
+Running one project: unit
+---------------|---------|----------|---------|---------|-------------------
+File           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+---------------|---------|----------|---------|---------|-------------------
+All files      |     100 |      100 |   95.23 |     100 |                   
+ boundaries.ts |     100 |      100 |     100 |     100 |                   
+ money.ts      |     100 |      100 |     100 |     100 |                   
+ snapshot.ts   |     100 |      100 |    87.5 |     100 |                   
+---------------|---------|----------|---------|---------|-------------------
+Jest: Coverage for functions (95.23%) does not meet "global" threshold (100%)
+
+Test Suites: 3 passed, 3 total
+Tests:       69 passed, 69 total
+Snapshots:   0 total
+Time:        1.013 s
+Ran all test suites.

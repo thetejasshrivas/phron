@@ -1,0 +1,11 @@
+
+> phron@0.1.0 lint
+> eslint . --max-warnings=0
+
+
+W:\AI Product Sprint\Phron\jest.config.mjs
+  9:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+✖ 1 problem (0 errors, 1 warning)
+
+ESLint found too many warnings (maximum: 0).

@@ -1,0 +1,17 @@
+phron@0.1.0 W:\AI Product Sprint\Phron
+├── @playwright/test@1.63.0
+├── @supabase/ssr@0.12.7
+├── @supabase/supabase-js@2.117.2
+├── @types/jest@30.0.0
+├── @types/node@24.19.1
+├── @types/react-dom@19.3.0
+├── @types/react@19.3.0
+├── eslint-config-next@16.3.8
+├── eslint@9.39.5
+├── fast-check@4.10.2
+├── jest@30.5.2
+├── next@16.3.8
+├── react-dom@19.3.0
+├── react@19.3.0
+└── typescript@6.0.2
+

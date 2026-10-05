@@ -1,0 +1,371 @@
+================================================================================
+MASTER PRODUCT DISCOVERY & DISCUSSION DOCUMENT: AI PERSONAL FINANCE MENTOR (0→1 SPRINT)
+================================================================================
+Status: Discovery Complete — Ready for Review / Pre-PRD Baseline
+Intended Audience: External Senior Product Reviewer, System Architect, Implementation Agent (Codex)
+Primary Function: Comprehensive intellectual history, trade-off record, decision lineage, and architectural constraint repository.
+
+
+================================================================================
+1. ORIGINAL ASSIGNMENT, PROBLEM STATEMENT & CONSTRAINTS
+================================================================================
+
+1.1 Verbatim Problem Statement
+"AI Personal Finance Mentor — Building Healthy Money Habits Over Time. Many people know they should budget, save, and invest but struggle to translate generic financial advice into action given their specific income, debts, and goals. Existing finance apps track spending but rarely guide users toward better decisions or sustained behavior change. The goal is to design an AI-native finance mentor that helps users build and maintain healthy financial habits tailored to their situation. Build this as a 0→1 product. Define how the system models a user's financial situation and goals, recommends incremental actions, and adapts guidance as habits and circumstances evolve."
+
+1.2 Assignment & Operational Reality
+- Sprint Sequence: This is the founder's second AI product sprint. The prior sprint produced RoamSense (an AI travel destination discovery tool built in approximately 42 hours as a stateless, single-page application without dashboards, authentication, or ongoing user state).
+- Sprint Ambition: For Product 2, the goal was explicitly defined as moving beyond a simple LLM query-wrapper or recommendation interface into a product that is structurally and behaviorally sophisticated, operating on continuous state, deterministic boundaries, and adaptive behavior.
+- Builder Profile: Business and product background with limited hands-on software engineering experience.
+- Engineering Agent: OpenAI Codex / LLM programming agents will serve as the primary implementation engine.
+- Capital Budget: Hard Rs 0 / $0 cash expenditure constraint. All infrastructure, hosting, database storage, authentication, and LLM inference must operate within sustainable free tiers.
+- Deployment Target: A responsive web application accessible via desktop and mobile browsers, tested directly with real users (the founder and a cohort of 5–10 friends).
+
+
+================================================================================
+2. ORIGIN OF THE IDEA & PERSONAL MOTIVATION
+================================================================================
+
+2.1 The Founder's Personal Breakdown (n=1 Evidence)
+The product concept emerged directly from the founder's own financial friction in urban India:
+- The Invisible Friction of Cashless Payments: The ubiquitous adoption of Unified Payments Interface (UPI), debit cards, and contactless credit cards completely detached the emotional weight of paying from the act of spending. Money vanished invisibly in micro-transactions across platforms like Zomato, Swiggy, Blinkit, and Amazon.
+- The Month-End Shock: Without continuous visibility, month-end repeatedly arrived with sudden realization: disposable income had evaporated, leaving zero progress toward major capital purchases or emergency buffers.
+- The Specific Milestone Failure (The Smartphone Purchase): The founder wanted to purchase an upgraded smartphone during annual e-commerce festive sales (e.g., Big Billion Days). He lacked a practical mechanism to calculate:
+  1. The exact target price required;
+  2. The required weekly reduction in discretionary spending across specific categories;
+  3. How to absorb a momentary spending slip without completely abandoning the goal.
+- The Failure of Generic Advice ("Faltu ka Gyan"): Conventional personal finance content ("save 20% of your income," "invest in index funds," "stop buying coffee") provided useless moralizing preaching without operational workflows tailored to specific paychecks, fixed EMIs, and real-world trade-offs.
+- Spreadsheet Exhaustion: The founder attempted to log transactions manually in Microsoft Excel / Google Sheets. He abandoned the effort within 1–2 sessions. Entering rows after a 10-hour corporate workday felt like an uncompensated "second job." Spreadsheets displayed cold numbers but offered no positive reinforcement, visual satisfaction, or dynamic recovery advice.
+
+
+================================================================================
+3. TARGET USERS, PERSONAS & BEHAVIORAL ARCHETYPES
+================================================================================
+
+3.1 ICP v0 (Ideal Customer Profile — Validated for MVP Cohort)
+- Demographic: Young, salaried white-collar professionals in metropolitan India (ages 22–32).
+- Income & Outflow: Monthly salary credited via direct bank transfer (Rs 35,000 – Rs 1,50,000/month). Manages multiple bank accounts, 2–4 UPI payment handles (GPay, PhonePe, Paytm), and 1–2 entry-level credit cards.
+- Fixed Obligations: Carries non-negotiable monthly outflows: apartment rent, utility bills, Wi-Fi, vehicle/personal loan EMIs, and monthly credit card bill balances.
+- Aspirations: Has 1–2 specific medium-term capital milestones (e.g., an electronics upgrade during a sale, an international vacation, buying a two-wheeler).
+- Current State: Has completely quit manual expense tracking or maintains an inconsistent, guilt-ridden spreadsheet.
+
+3.2 The Concrete Testing Cohort (Founder's Network)
+- The Founder (The Aspirational Drifter): Earns a stable income, invests in recurring Mutual Fund SIPs (confirming an ability to sustain automated, low-friction habits), but bleeds cash on food delivery and quick-commerce. Motivated by visual dashboards, clear boundaries, and empathetic recovery.
+- Friend B (The Frustrated Disciplinarian): Highly financially literate, maintains an emergency buffer, invests methodically, and tracks finances in an Excel sheet. However, he openly complains that updating Excel is tedious, unrewarding, and lacks dynamic visual feedback. Product Role: Proves whether natural-language capture and bucket visualization beat spreadsheets for disciplined users.
+- Friend A (The Distressed Borrower — Out-of-Bounds Archetype): Heavy behavioral indiscipline. Carries ~Rs 1,00,000 in unstructured debt owed to his partner, overdue revolving credit card balances, ongoing bike EMIs, and chronic month-end insolvency. Frequently borrows from friends/family to bridge deficits, while continuing impulse spends on quick-commerce. Product Role: Exposed the critical need for a non-punitive "Financial Distress State."
+
+
+================================================================================
+4. JOBS-TO-BE-DONE (JTBD) & PROBLEM FRAMING
+================================================================================
+
+4.1 Functional Jobs
+1. Instant Reality Check: "When I open the app, tell me immediately what I have left that is safe to spend today and this week, without forcing me to reconcile 40 individual bank line items."
+2. Zero-Friction Transaction Offloading: "When I spend money, let me type or speak a messy, natural sentence in 5 seconds and trust the system to log it in the right place."
+3. Deterministic Overspend Recovery: "When I overspend on dining or shopping, don't just show me red text; calculate an exact, step-by-step trim across my other buckets so my dated goals stay alive."
+
+4.2 Emotional & Social Jobs
+1. Elimination of Money Guilt: Transform money management from an anxiety-provoking, punitive audit into a calm, supportive coaching experience.
+2. Agency & Autonomy: Enable the user to feel in total control of their money rather than feeling judged by a clinical algorithm.
+3. Tangible Visual Progress: Replace abstract numbers with physical visual metaphors (filling goal tanks, draining allowance buckets) that reward daily discipline.
+
+
+================================================================================
+5. EVOLUTION OF THINKING: DETAILED CHRONOLOGICAL ARC
+================================================================================
+
+5.1 Stage 1: The Commodity Trap vs. The Active Mentor Loop (Questions 1–4)
+- Initial State: The founder's initial vision resembled a traditional fintech interface: charts, category breakdowns, a bucket ledger, and an open chat interface to ask an LLM for portfolio growth tips.
+- The Critique: Tracking is a solved, commoditized space. Apps that merely log numbers are abandoned because the burden of data entry exceeds the cognitive reward. Furthermore, open-ended portfolio advice borders on regulated investment advisory.
+- The Pivot: The true product differentiator was identified as a closed-loop reactive workflow:
+  State Tracking -> Deficit/Event Detection -> Impact Projection -> Constrained Recovery Plan -> Action -> System Adaptation
+
+5.2 Stage 2: Capture Mechanism & Friction Economics (Questions 4 & 8)
+- The Contradiction: In Question 4, the founder initially selected Option A (Tap a button per spend: enter amount + bucket). However, in Question 2, he admitted that logging spends in Excel was abandoned because it felt like a "second job." If manual entry in a spreadsheet caused abandonment, manual UI form-filling would inevitably suffer the exact same fate.
+- The Resolution: In Question 8, the capture mechanism was officially shifted to Natural-Language Shorthand Ingestion. The user inputs unstructured text (e.g., "450 zomato, 650 on amazon prime, around 2k clothes"). The system delegates linguistic parsing to an LLM, freeing the user from rigid dropdown menus and form fields.
+
+5.3 Stage 3: Setup Velocity vs. Long-Term Autonomy (Questions 7 & 14)
+- The Tension: Forcing an exhaustive 15-minute onboarding flow (listing all utility bills, insurance premiums, grocery budgets) causes immediate bounce. Conversely, having an AI automatically generate and assign all budget buckets makes the user passive, disconnected, and "lethargic."
+- The Resolution: A strictly partitioned Two-Step Setup:
+  * Step 1 (First 2 Minutes): Collect Income + Fixed Obligations (Rent, EMIs). Prompt 3–4 lightweight, tap-based lifestyle questions. Immediately render a baseline "Safe-to-Spend" number and starting discretionary buckets via deterministic templates.
+  * Step 2 (The Milestone Expansion): Triggered only after the user establishes baseline spending activity across their buckets. At this point, the user is invited to formalize specific milestone goals (e.g., Phone, Bike) and adjust their own bucket boundaries.
+
+5.4 Stage 4: Tone, Framing & The Psychology of Setbacks (Questions 13 & 15)
+- The Debate: In Question 13, the founder hypothesized that when a user returns after a period of neglect, the app should deliberately "show the damage" because negative emotion and fear act as powerful motivators to shock people back into discipline.
+- The Challenge: Behavioral economics and retention data indicate that financial shame and guilt trigger avoidance behavior. When confronted with scolding or alarming interfaces after a long workday, users do not reform; they close the browser tab and churn permanently.
+- The Resolution (Q15): The founder tested three explicit copy variants for a Rs 1,200 shopping overspend threatening a goal. He definitively chose Option C (Empathetic Coach) over Option A (Blunt/Loss) and Option B (Neutral). The product stance was locked: The mentor must normalize human setbacks, present financial reality without moral judgment, and immediately pivot to an actionable recovery path.
+
+5.5 Stage 5: Overspend Recovery & Debt Compounding (Questions 5 & 16)
+- The Mechanics: When an overspend occurs, trims are calculated across discretionary buckets. But what happens when allowable trims cannot cover the deficit?
+- The Evolution: In Question 16, the founder established that recovery logic must branch dynamically on goal characteristics:
+  * Flexible Goals (e.g., Bike): Protect future income. Absorb the deficit by pushing out the goal deadline or reducing this month's contribution.
+  * Fixed-Date Goals (e.g., Phone at Festive Sale): The date cannot slide without missing the discount window. The system permits borrowing against next month's starting discretionary pool, creating an explicit, tracked "Debt to Future Self."
+- The Counter-Risk & Guardrail: Unrestricted borrowing against future earnings creates an informal payday-loan trap. The product introduced a hard, deterministic Borrow Cap (maximum 15–20% of next month's trimmable pool) to prevent compounding multi-month deficit spirals.
+
+5.6 Stage 6: The North Star Metric Definition (Questions 12 & 17–18)
+- The Shift: During Question 17, the founder initially proposed that the North Star Metric should be the System Accuracy Percentage (the precision of AI categorization and advice).
+- The Critique: System accuracy is an engineering quality threshold (a guardrail), not a North Star. An app with 99.9% categorization accuracy that all users abandon after 4 days has failed.
+- The Re-alignment: In Question 18, the founder course-corrected, recognizing that the core problem being solved is behavioral discipline and visibility. The metrics were permanently restructured into a 3-tier hierarchy:
+  1. Long-Term North Star: Weekly Active Disciplined Users (WADU) — Users who log at least once weekly while keeping goals on track.
+  2. 3-Week Trial Primary Validation: 2-Week Habit Persistence — Percentage of pilot testers who log transactions across at least two consecutive weeks.
+  3. System Guardrail: Unassisted Accuracy Rate — Percentage of entries committed without manual user override.
+
+5.7 Stage 7: Logging Ambiguity & Interaction Friction (Question 18)
+- The Conflict: The founder insisted that incorrect categorizations destroy user trust. However, real-world inputs like "1200 on Blinkit and sent 500 to Rahul" contain multi-layer ambiguities (Blinkit = groceries vs. snacks; Rahul = split bill vs. loan).
+- The Failure of Interrogation (Option A): Halting the user with interactive modal quizzes for every spend replicates the fatigue of spreadsheets.
+- The Choice of Optimistic Logging (Option B): The system commits transactions instantly based on best guesses, surfaces unobtrusive, 1-tap inline category-swap chips (e.g., [Change to Snacks]), and restricts active questioning exclusively to zero-context entries (e.g., an unadorned personal name).
+
+5.8 Stage 8: Data Privacy & The LLM Isolation Wall (Question 19)
+- Regulatory & Trust Reality: Under India's Digital Personal Data Protection (DPDP) Act, transmitting comprehensive personal financial profiles to public cloud LLMs creates legal liability and provokes user refusal during onboarding.
+- The Architecture: The founder locked Option C (Minimalist Hybrid). Absolute financial figures (total bank balance, monthly salary, total debt) are strictly sequestered within the application's secure PostgreSQL database. The LLM operates purely as a stateless, isolated linguistic extractor for individual transaction snippets.
+
+5.9 Stage 9: Handling Balance Discrepancies & Cash Drift (Question 20)
+- The Problem: In manual or semi-manual logging, system balances inevitably drift from actual bank balances due to unrecorded cash, tips, or micro-transactions. Forcing complete reconciliation causes abandonment; ignoring drift invalidates goal math.
+- The Solution: A Two-Tier "Soft Detective" Flow. The mentor surfaces a friendly, conversational prompt asking for ballpark recollections of major missing expenditures. Any remaining unaccounted discrepancy is absorbed with a single tap into an "Unallocated / Drift" category, instantly trueing up the balance to reality without guilt.
+
+5.10 Stage 10: Debt Distress & Ethical Safety (Question 21)
+- The Problem of Friend A: Users whose fixed obligations match or exceed total income (Safe-to-Spend <= 0) cannot use standard discretionary budgeting.
+- The Decision: The founder selected Option B (Permissive Mode with Urgent Debt Priority) over cold exclusion. The app remains functional, locks all discretionary want-goals (no electronics or vacations), tightens discretionary allowances, and automatically aggregates all disciplined savings into debt reduction. Crucially, the system accommodates unstructured, non-interest family debts without imposing artificial punitive penalties.
+
+5.11 Stage 11: Scope Cut & Zero-Budget Stack (Questions 22–24)
+- Sidebar Rationalization: The vague "Different Tasks" menu item was permanently excised. The navigation was frozen to three primary surfaces: Home Dashboard, Visualize Spending (featuring a weekly category burn matrix), and Add/Edit Buckets.
+- Deferred to P1: Outbound weekly automated emails (due to domain verification costs and cron complexities) and formal peer-to-peer lending ledgers were cut from the MVP.
+- Stack Confirmation: Next.js (React) hosted on Vercel, Supabase (PostgreSQL + Google OAuth), and generous free-tier LLM inference APIs (Google Gemini API / Groq Cloud).
+
+
+================================================================================
+6. THE CORE PRODUCT LOOP & BEHAVIORAL ENGINE
+================================================================================
+
+[User Ingestion / Check-in (Natural-Language Spend / Balance)]
+                   |
+                   v
+[Deterministic State Engine (Reconcile Balance, Deduct Buckets, Calculate Safe-to-Spend Gap)]
+                   |
+         +---------+---------+
+         |                   |
+         v                   v
+[No Budget Breach]   [Overspend Detected]
+         |                   |
+         |                   v
+         |           [Goal-Type Branching Decision]
+         |                   |
+         |         +---------+---------+
+         |         |                   |
+         |         v                   v
+         |   [Flexible Goal]     [Fixed-Date Goal]
+         |         |                   |
+         |         v                   v
+         |   [Sacrifice Goal     [Borrow Against Future
+         |    Velocity (Extend    Income (Up to Cap)]
+         |    Target Date)]            |
+         |         |                   |
+         |         +---------+---------+
+         |                   |
+         v                   v
+[Visual Reinforcement] [Empathetic Coach Response (LLM)]
+(Buckets Drain /        ("Rough week! Here is the exact plan to fix it:
+ Goal Tanks Fill)        - Trim Category A by Rs X
+                         - Trim Category B by Rs Y")
+         |                   |
+         +---------+---------+
+                   |
+                   v
+[Observe User Action / Adapt (Accept Trims, Override, or Sync)]
+
+
+================================================================================
+7. DIVISION OF LABOR: DETERMINISTIC LOGIC VS. AI / LLM RESPONSIBILITIES
+================================================================================
+
+7.1 System Responsibilities Overview
+DETERMINISTIC LOGIC (Code):
+- Safe-to-Spend Equations
+- Bucket Ledger Decrements
+- Category Spend x Time Matrix
+- Borrow Cap Enforcement (Max 15-20%)
+- Goal Trajectory Run-rates
+- Database Storage & Google OAuth
+- Rejection Counter & Limits
+- High/Medium/Low Confidence Scoring Logic
+
+LLM RESPONSIBILITIES (Gemini / Groq):
+- Unstructured Natural Language Parsing (Extract Amount, Payee, Category Shorthand)
+- Normalizing Ambiguous Input into Clean Structured JSON Payloads
+- Conversational Framing in Empathetic Coach Voice (Option C)
+- Formulating Conversational Ballpark Reconciliation Prompts
+
+7.2 Detailed Boundary Matrix
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Functional Requirement   | Deterministic Code (TypeScript / SQL)                    | LLM Responsibilities (Gemini / Groq)
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Transaction Ingestion    | Validates parsed payload fields, enforces numeric data   | Parses messy Hinglish and shorthand text; maps merchant
+                         | types, updates account balances.                         | strings to candidate categories.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Ambiguity Handling       | Evaluates numeric confidence score (>=0.85, 0.50-0.84,   | Generates contextual alternate category suggestions
+                         | <0.50); renders 1-tap swap chips.                        | (e.g., Blinkit -> "Snacks").
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Budget Math & State      | Calculates daily/weekly burn-rates, safe-to-spend        | Strictly Prohibited. The LLM never computes or alters
+                         | balance, bucket depletion percentages.                   | balances directly.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Overspend Detection      | Evaluates if Spend > Limit; identifies available         | Formulates the empathetic, non-punitive coaching
+                         | trimmable pool down to floors.                           | narrative around the calculated delta.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Deficit Allocation       | Determines whether to extend goal date or apply          | Synthesizes the recovery options into plain, human-friendly
+                         | next-month borrowing cap formula.                        | action steps.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Reconciliation           | Computes the mathematical drift:                         | Generates friendly, low-friction conversational prompts
+                         | Delta = Reported Balance - Calculated Balance.           | asking for ballpark expenditures.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Safety Guardrails        | Blocks third-party loan suggestions, blocks              | Constrained by strict system prompts never to output
+                         | discretionary goal creation in distress states.          | investment, tax, or legal advice.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+================================================================================
+8. FINANCIAL-STATE & DATA MODELING DECISIONS
+================================================================================
+
+8.1 Core Entities & Structural Schema
+1. User Profile: Internal unique ID, Google Auth UUID, primary income pay-cycle date (e.g., 1st or 30th of month), distress state flag (active_debt_firefight: boolean).
+2. Financial Ledger Snapshot (Deterministic Core):
+   - monthly_net_income: Base monthly credited salary.
+   - current_liquid_balance: Aggregated bank balance across all active accounts.
+   - safe_to_spend_pool: Calculated unreserved discretionary balance for current cycle.
+   - future_debt_obligation: Ledger recording borrowed amounts against next month's salary.
+3. Buckets (Categorized Containers):
+   - tier: Categorized into three immutable classes:
+     * Tier 1: Obligation (Untouchable) — Rent, EMIs, Insurance, Minimum Debt Dues.
+     * Tier 2: Discretionary (Trimmable) — Dining Out, Quick-Commerce, Shopping, Entertainment, Transit.
+     * Tier 3: Milestone (Goal) — Dedicated savings tanks (e.g., Phone, Bike).
+   - monthly_allocation: Target rupee ceiling.
+   - current_spent: Real-time sum of debits.
+   - hard_floor: User-defined non-negotiable minimum (for trimmable buckets).
+4. Goals:
+   - target_amount: Rupee requirement.
+   - target_date: Absolute calendar deadline.
+   - date_type: fixed (hard deadline, permits salary borrowing) vs. flexible (elastic deadline, velocity adjusts).
+   - current_accumulated: Total funds accrued.
+5. Transactions:
+   - amount: Explicit rupee value.
+   - assigned_bucket_id: Foreign key link to active bucket.
+   - confidence_score: Numeric marker from extraction engine.
+   - is_estimated: Boolean flag distinguishing exact UPI figures from ballpark user estimates.
+   - raw_text: Preserved original string for audit review.
+
+
+================================================================================
+9. COMPREHENSIVE DECISION LOG & EPISTEMIC STATUS
+================================================================================
+
+- Product Form Factor [CONFIRMED DECISION]
+  Summary: Responsive web application deployed on modern free-tier hosting (Vercel). Rapid iteration for solo builder.
+  Rejected Alternative: Native Mobile App (Swift/Kotlin/Flutter) — rejected due to app store delays and zero budget.
+
+- Authentication [CONFIRMED DECISION]
+  Summary: Google OAuth exclusively via Supabase. Zero upfront cost, seamless sign-in.
+  Rejected Alternative: Phone OTP / SMS Auth — rejected due to recurring SMS gateway costs and Indian TRAI DLT regulations.
+
+- Capture Interface [CONFIRMED DECISION]
+  Summary: Natural-Language Shorthand Ingestion via text box. Eliminates manual spreadsheet-like data entry fatigue.
+  Rejected Alternative: Form dropdowns (rejected: high friction); Receipt OCR (rejected: high compute cost, brittle on Indian bills).
+
+- Logging Ambiguity Protocol [CONFIRMED DECISION]
+  Summary: Option B: Optimistic logging with 1-tap inline category swap chips. Interrupts user only on zero context.
+  Rejected Alternative: Option A: Halting interrogation modals (rejected: induces logging fatigue); Option C: Rigid merchant locks.
+
+- Mentor Persona & Tone [CONFIRMED DECISION]
+  Summary: Option C: Empathetic Coach. Normalizes slips, avoids moralizing shame, immediately delivers a recovery path.
+  Rejected Alternative: Option A: Blunt loss framing (rejected: causes tab abandonment); Option B: Clinical ledger accounting.
+
+- Goal Branching Recovery [CONFIRMED DECISION]
+  Summary: Flexible goals sacrifice velocity/date; Fixed goals allow borrowing against future income up to a hard cap.
+  Rejected Alternative: Uniform date-slippage (breaks festive sale targets); Unrestricted salary borrowing (causes payday debt loops).
+
+- Salary Borrow Cap [ACCEPTED-DEFAULT]
+  Summary: Hard ceiling: future salary borrowing capped at max 15–20% of projected trimmable income.
+  Rejected Alternative: Uncapped borrowing (rejected: triggers compounding debt spiral across consecutive cycles).
+
+- Reconciliation Mechanics [CONFIRMED DECISION]
+  Summary: Two-Tier Soft Detective: friendly recall prompt for ballparks; remainder absorbed into Unallocated Drift.
+  Rejected Alternative: Mandatory penny-perfect reconciliation (rejected: induces burnout); Silent drift erasure (corrupts math).
+
+- Distress Mode Handling [CONFIRMED DECISION]
+  Summary: Option B: Permissive mode. Locks want-goals, tightens allowances, aggregates surplus toward debt reduction.
+  Rejected Alternative: Hard lock-out / exclusion (rejected: drives users away); Unrestricted budgeting with negative numbers.
+
+- LLM Privacy Architecture [CONFIRMED DECISION]
+  Summary: Option C: Minimalist Hybrid. Absolute balances sequestered in DB; isolated transaction text sent to LLM.
+  Rejected Alternative: Passing full financial profile in system prompt (rejected: violates DPDP principles, breaks user trust).
+
+- Navigation Structure [CONFIRMED DECISION]
+  Summary: 3 primary surfaces: Home Dashboard, Visualize Spending (category x time matrix), Add/Edit Buckets.
+  Rejected Alternative: Including "Different Tasks" (rejected: undefined scope creep); Complex multi-screen navigation suites.
+
+- Step-2 Onboarding Trigger [CONFIRMED DECISION]
+  Summary: Unlocked upon data completeness (logging across >= 3 buckets), leveraging active financial focus.
+  Rejected Alternative: Arbitrary timer (Day 2/3 nudge); Immediate setup interruption (overwhelms user on first session).
+
+- Outbound Email & Crons [PARKED / REJECTED (P1)]
+  Summary: Weekly email summary deferred to P1. Eliminates custom domain costs, DNS setup, and cron fragility.
+  Rejected Alternative: In-app push notifications (impossible on web); Daily transactional email digests via paid APIs.
+
+- Investment Portfolio Advice [PARKED / REJECTED (Scope)]
+  Summary: App tracks invested rupee amounts only. Strictly non-advisory regarding instruments, stocks, or funds.
+  Rejected Alternative: Generating automated asset allocation advice (rejected: severe SEBI regulatory licensing violations).
+
+- Product North Star Metric [CONFIRMED DECISION]
+  Summary: Weekly Active Disciplined Users (WADU) — Users logging >= 1x/week with goals on track.
+  Rejected Alternative: System Extraction Accuracy % (re-classified as Guardrail); 3-Week Goal Achievement (too slow to measure).
+
+
+================================================================================
+10. EXPLICIT NON-GOALS & MVP EXCLUSIONS
+================================================================================
+
+1. Automated Account Aggregator (AA) / SMS Ingestion: No direct scraping of Android SMS messages or integration with RBI Account Aggregator NBFCs. All input is natural-language manual ingestion.
+2. Regulated Financial Advice: No mutual fund selection, stock picking, crypto recommendations, tax optimization calculations, or insurance adequacy reviews.
+3. Third-Party Credit Brokering: The application will never recommend loans, credit cards, peer-to-peer lending platforms, or Buy-Now-Pay-Later (BNPL) schemes to bridge budget shortfalls.
+4. Multi-User Shared Ledgers: No shared wallets, multi-tenant couple tracking, or Splitwise-style peer expense reconciliation in MVP v1.
+5. Multi-Currency Support: All transactional models and calculations assume Indian Rupees (INR / Rs).
+
+
+================================================================================
+11. KNOWN TRADE-OFFS ACCEPTED
+================================================================================
+
+- Manual Entry Reliance vs. Total Automation: By rejecting automated SMS scraping and bank APIs, the product accepts the risk of missed entries in exchange for zero infrastructure costs, zero compliance hurdles, and complete platform independence (web-based).
+- Optimistic Ingestion vs. Classification Precision: By choosing 1-tap inline category swap chips over upfront clarifying questions, the system accepts occasional category misallocations to eliminate conversational friction.
+- Empathetic Coaching vs. Financial Urgency: By adopting an empathetic coaching voice, the system accepts the risk of softening serious budget overruns to keep users engaged and prevent app abandonment.
+- Future Income Borrowing vs. Clean Accounting: By allowing fixed-date goals to borrow from next month's salary, the system introduces multi-cycle debt state tracking to protect time-sensitive real-world goals.
+
+
+================================================================================
+12. UNRESOLVED QUESTIONS & POST-MVP BACKLOG
+================================================================================
+
+12.1 Open Operational & Behavioral Questions
+1. Chronic Overspend Degradation [NEEDS VALIDATION]: How many consecutive overspends can occur before the Empathetic Coach persona (Option C) loses credibility and must shift into Neutral Accountability (Option B)?
+2. True-up Cadence & Nudge Absence [UNRESOLVED]: With outbound emails deferred to P1 and web push disabled, what psychological mechanism pulls a user back to reconcile their balance if they miss their usual Sunday check-in?
+3. Informal Debt Repayment Mechanics [NEEDS VALIDATION]: When a user repays a friend or family member, does that payment register as an Untouchable Obligation debit, or does it dynamically adjust a dedicated Debt Goal container?
+
+12.2 Technical Dependencies for Codex Implementation
+1. LLM Free-Tier Rate Limits: Ensuring Google Gemini API free-tier quotas (RPM/TPM limits) can sustain continuous, multi-turn transaction parsing during user onboarding spikes.
+2. Date/Week Boundary Computation: Establishing uniform date handling for calendar months spanning partial weeks (e.g., a 3-day final week in a 31-day month) to prevent corrupted cross-tab matrix tables.
+
+
+================================================================================
+13. PRD HANDOFF — DECISIONS THE PRD MUST PRESERVE
+================================================================================
+
+When drafting the implementation-ready PRD, the authoring agent must strictly preserve the following architectural parameters:
+
+1. Form Factor & Stack Constraints: Website (Next.js/React deployed to Vercel), Supabase (PostgreSQL + Google OAuth), Free-Tier LLM parsing API (Google Gemini / Groq). Operating budget is exactly Rs 0.
+2. The Interaction Model: Optimistic Natural-Language Capture with 1-tap inline category-swap chips. Active interrogation modals are permitted only when an entry has zero contextual clues (e.g., an unadorned personal name).
+3. Strict Deterministic Separation: All calculations (Safe-to-Spend balances, bucket decrements, borrow caps, cross-tab matrices, and debt ceilings) must be executed deterministically in application code. The LLM must never perform financial calculations or modify balances directly.
+4. Privacy Isolation Wall: The LLM must operate as a stateless extraction utility. Total bank balances, monthly salaries, and global debt figures must never be passed to the LLM API.
+5. Dynamic Goal Branching: Deficit recovery must branch based on the goal flag: Flexible goals sacrifice velocity/dates; Fixed-date goals permit borrowing against future income, strictly constrained by a deterministic Borrow Cap (15–20% of next month's trimmable pool).
+6. Reconciliation Flow: Two-Tier Soft Detective: friendly recall prompt for ballparks, with all remaining unaccounted drift cleanly absorbed into an Unallocated category via a single tap.
+7. Financial Distress Mode: When obligations exceed income, the system enters Permissive Mode: discretionary want-goals are locked, living allowances are tightened, and disciplined surpluses are diverted entirely toward debt reduction.
+8. Information Architecture: Exactly three core navigation views: Home Dashboard, Visualize Spending (featuring the category x week matrix), and Add/Edit Buckets. "Different Tasks" and automated outbound emails remain permanently excluded from MVP v1.
+================================================================================

@@ -1,0 +1,18 @@
+
+> phron@0.1.0 test:contracts:coverage
+> jest --config jest.config.mjs --selectProjects unit --runInBand --coverage
+
+Running one project: unit
+---------------|---------|----------|---------|---------|-------------------
+File           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+---------------|---------|----------|---------|---------|-------------------
+All files      |     100 |      100 |     100 |     100 |                   
+ boundaries.ts |     100 |      100 |     100 |     100 |                   
+ money.ts      |     100 |      100 |     100 |     100 |                   
+---------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 2 passed, 2 total
+Tests:       53 passed, 53 total
+Snapshots:   0 total
+Time:        0.642 s
+Ran all test suites.

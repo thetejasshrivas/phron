@@ -1,0 +1,5 @@
+
+> phron@0.1.0 test:domain:coverage
+> node scripts/domain-coverage.mjs
+
+BLOCKED: financial domain is not implemented (PH-10). No domain coverage can be claimed.

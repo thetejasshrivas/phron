@@ -1,0 +1,42 @@
+
+> phron@0.1.0 test:unit
+> jest --config jest.config.mjs --selectProjects unit --runInBand
+
+Running one project: unit
+FAIL unit tests/unit/contracts/boundaries.test.ts
+  ● Test suite failed to run
+
+    Cannot find module '../../../src/contracts/boundaries' from 'tests/unit/contracts/boundaries.test.ts'
+
+      3 | test.each(["2024-02-29", "2026-10-06", "0001-01-01", "9999-12-31"])("accepts date-only %s", (value) => {
+      4 |   expect(financialDate(value)).toBe(value);
+    > 5 | });
+        |    ^
+      6 | test.each(["2025-02-29", "2026-02-30", "2026-13-01", "2026-00-01", "0000-01-01", "2026-1-01", "2026-10-06T00:00:00Z", null])("rejects invalid financial date %p", (value) => {
+      7 |   expect(() => financialDate(value)).toThrow();
+      8 | });
+
+      at Resolver._throwModNotFoundError (node_modules/jest-resolve/build/index.js:1031:11)
+      at Object.<anonymous> (tests/unit/contracts/boundaries.test.ts:5:21)
+
+FAIL unit tests/unit/contracts/money.test.ts
+  ● Test suite failed to run
+
+    Cannot find module '../../../src/contracts/money' from 'tests/unit/contracts/money.test.ts'
+
+      4 | describe("exact integer paise transport", () => {
+      5 |   test("round-trips values above JavaScript safe integer precision", () => {
+    > 6 |     const wire = encodePaise(9007199254740993n);
+        |                ^
+      7 |     expect(JSON.parse(JSON.stringify({ amount: wire }))).toEqual({ amount: "9007199254740993" });
+      8 |     expect(decodePaise(wire)).toBe(9007199254740993n);
+      9 |   });
+
+      at Resolver._throwModNotFoundError (node_modules/jest-resolve/build/index.js:1031:11)
+      at Object.<anonymous> (tests/unit/contracts/money.test.ts:6:16)
+
+Test Suites: 2 failed, 2 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.382 s
+Ran all test suites.
