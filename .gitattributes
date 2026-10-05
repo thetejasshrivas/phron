@@ -1,0 +1,4 @@
+# Preserve supplied source bytes across Windows checkouts and commits.
+docs/source/** -text
+PHRON_PRD_v1.2.1_FROZEN.txt -text
+"Phron Master discussion.txt" -text
