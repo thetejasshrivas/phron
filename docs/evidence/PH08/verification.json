@@ -1,0 +1,165 @@
+{
+  "environment": "local production / installed Edge / synthetic only",
+  "results": [
+    {
+      "width": 375,
+      "state": "healthy",
+      "overflow": false,
+      "clientErrors": 0,
+      "screenshot": "375-healthy.png",
+      "result": "PASS"
+    },
+    {
+      "width": 375,
+      "state": "exhausted",
+      "overflow": false,
+      "clientErrors": 0,
+      "screenshot": "375-exhausted.png",
+      "result": "PASS"
+    },
+    {
+      "width": 375,
+      "state": "distressed",
+      "overflow": false,
+      "clientErrors": 0,
+      "screenshot": "375-distressed.png",
+      "result": "PASS"
+    },
+    {
+      "width": 375,
+      "state": "empty",
+      "overflow": false,
+      "clientErrors": 0,
+      "screenshot": "375-empty.png",
+      "result": "PASS"
+    },
+    {
+      "width": 375,
+      "state": "loading",
+      "overflow": false,
+      "clientErrors": 0,
+      "screenshot": "375-loading.png",
+      "result": "PASS"
+    },
+    {
+      "width": 375,
+      "captureFocus": "PASS",
+      "suppliedCaptureValues": "PASS",
+      "noImplicitGoalTransfer": "PASS",
+      "goalFill": "PASS",
+      "distressedPurchaseAbsent": "PASS"
+    },
+    {
+      "width": 768,
+      "state": "healthy",
+      "overflow": false,
+      "clientErrors": 0,
+      "screenshot": "768-healthy.png",
+      "result": "PASS"
+    },
+    {
+      "width": 768,
+      "state": "exhausted",
+      "overflow": false,
+      "clientErrors": 0,
+      "screenshot": "768-exhausted.png",
+      "result": "PASS"
+    },
+    {
+      "width": 768,
+      "state": "distressed",
+      "overflow": false,
+      "clientErrors": 0,
+      "screenshot": "768-distressed.png",
+      "result": "PASS"
+    },
+    {
+      "width": 768,
+      "state": "empty",
+      "overflow": false,
+      "clientErrors": 0,
+      "screenshot": "768-empty.png",
+      "result": "PASS"
+    },
+    {
+      "width": 768,
+      "state": "loading",
+      "overflow": false,
+      "clientErrors": 0,
+      "screenshot": "768-loading.png",
+      "result": "PASS"
+    },
+    {
+      "width": 768,
+      "captureFocus": "PASS",
+      "suppliedCaptureValues": "PASS",
+      "noImplicitGoalTransfer": "PASS",
+      "goalFill": "PASS",
+      "distressedPurchaseAbsent": "PASS"
+    },
+    {
+      "width": 1280,
+      "state": "healthy",
+      "overflow": false,
+      "clientErrors": 0,
+      "screenshot": "1280-healthy.png",
+      "result": "PASS"
+    },
+    {
+      "width": 1280,
+      "state": "exhausted",
+      "overflow": false,
+      "clientErrors": 0,
+      "screenshot": "1280-exhausted.png",
+      "result": "PASS"
+    },
+    {
+      "width": 1280,
+      "state": "distressed",
+      "overflow": false,
+      "clientErrors": 0,
+      "screenshot": "1280-distressed.png",
+      "result": "PASS"
+    },
+    {
+      "width": 1280,
+      "state": "empty",
+      "overflow": false,
+      "clientErrors": 0,
+      "screenshot": "1280-empty.png",
+      "result": "PASS"
+    },
+    {
+      "width": 1280,
+      "state": "loading",
+      "overflow": false,
+      "clientErrors": 0,
+      "screenshot": "1280-loading.png",
+      "result": "PASS"
+    },
+    {
+      "width": 1280,
+      "captureFocus": "PASS",
+      "suppliedCaptureValues": "PASS",
+      "noImplicitGoalTransfer": "PASS",
+      "goalFill": "PASS",
+      "distressedPurchaseAbsent": "PASS"
+    },
+    {
+      "motion": "PASS",
+      "before": 41.75,
+      "during": 36.953125,
+      "after": 32.015625
+    },
+    {
+      "goalMotion": "PASS",
+      "goalBefore": 147,
+      "goalDuring": 149.296875,
+      "goalAfter": 151.078125
+    },
+    {
+      "reducedMotion": "PASS",
+      "transitionDuration": "0s"
+    }
+  ]
+}

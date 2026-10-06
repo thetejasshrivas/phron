@@ -1,0 +1,22 @@
+[
+  {
+    "pair": "ink/canvas",
+    "ratio": 11.044079324767358
+  },
+  {
+    "pair": "muted/canvas",
+    "ratio": 5.851534139530546
+  },
+  {
+    "pair": "ink/accent",
+    "ratio": 9.759932587999561
+  },
+  {
+    "pair": "muted/surface",
+    "ratio": 5.320261107915499
+  },
+  {
+    "pair": "control outline/canvas",
+    "ratio": 3.5871357389777674
+  }
+]

@@ -5,25 +5,25 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: 0aac28bf780e56083e68fede5b3d6dbba0266942
+commit: 49296bca6d3f3a54331283d38df7ba0886279608
 dirty_files: []
-active_chat: PHRON-00 Lead
+active_chat: PHRON-03 Experience
 phase: 1
-current_step: PH-07
+current_step: PH-08
 step_state: COMPLETE
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
 approved_amendments: [D01-v1, D02-v1, D03-v1, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1]
-completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07]
+completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08]
 passed_gates: [G0A, G1]
 founder_reviews: {V1: PENDING, V2: PENDING, V3: PENDING}
 blocking_decisions: [D05-extension, D07-card, D07-funding, D08, D09, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D20, D21, D22, D23, D24, D25, D26]
-latest_evidence: docs/evidence/PH07/PREVIEW_RESULT.md
+latest_evidence: docs/evidence/PH08/RESULT.md
 deployment: {preview: READY_PROTECTED, preview_url: "https://phron-o4v4vtg1r-tts-1e31.vercel.app", preview_id: dpl_ASbz9jBxuFcQnB8KQAfstJ38dxKh, production: PROTECTED_INERT_BOOTSTRAP_READY_NO_ALIASES, commit: 0aac28bf780e56083e68fede5b3d6dbba0266942}
 migration_state: NOT_APPLIED
 ownership_transfers: []
 requests_for_other_owners: []
-next_action: Fresh-chat P-RESUME for PH-08; read execution playbook before work
-last_updated_ist: 2026-10-06T11:54:23+05:30
+next_action: PH-09 / P01-MOTION — separate Impeccable pass, then named founder V1 review
+last_updated_ist: 2026-10-06T12:13:04.1064748+05:30
 ```
 
 ## Authoritative current outcome — PH-07 COMPLETE / G1 PASS
@@ -62,3 +62,6 @@ Tejas explicitly approved PH07-HOST-01 Option 2. Applied the exact reviewed guar
 Command used --prod --skip-domain and build-only PHRON_SKELETON_BOOTSTRAP_ALLOW=1. Vercel unexpectedly assigned its generated production alias despite the option. Lead removed only that new alias to restore the approved no-domain condition. Actual aliases API now [], former alias HTTP404; do not claim it was never assigned. No custom domain or product launch. Unique deployment anonymous home/health HTTP302 to authentication; authenticated home HTTP200, health HTTP200 exact safe JSON and no-store. Private PRD/env HTTP404. Protected automation smoke used a generated project automation bypass internally; no token, cookies or secret headers stored/printed. CLI curl forwarded global options incorrectly twice; independent internal-token HTTPS smoke then PASS.
 
 PASS: four guard cases, lint, typecheck, local and remote bootstrap builds (Node24.21.0/npm11.19.0/Next16.3.8), actual 24-file upload manifest excluding private sources, five source hashes, unchanged app/lock, Hobby/protection/empty app-env account settings. Unit/domain/auth/DB/AI/phone tests NOT_RUN this turn; foundation evidence retained, no financial behavior changed. No migration, app secrets, paid tier or feature code. Evidence: PH07/BOOTSTRAP_RESULT.md and linked filtered artifacts. Next one action: protected real Preview deployment/target verification and home/health smoke; do not enter PH-08 yet.
+## PH-08 authoritative current outcome
+
+Experience explicitly activated by Tejas after read-only resume. HOME-V1-01 local synthetic Home at /home, five states, capture/STS/bucket drain/goal fill/coach hierarchy implemented. DESIGN direction proposed, not previously approved; Taste entry/default workflow plus bundled frontend UI guidance used. Existing / skeleton and health, financial contracts/formulas, dependency pins/lock/frozen sources unchanged. No deployment or provider/DB/finance write. Fifteen responsive captures375/768/1280 and browser motion/reduced-motion checks PASS. PH-08 representative Home and initial motion spec ready; V1 remains PENDING. Next PH-09 separate Impeccable pass, then explicit named revision review. Existing financial open decisions and gates unchanged. See PH08/RESULT.md. Record-only historical PH-07 statements above remain evidence for the deployed skeleton, not the new Home.
