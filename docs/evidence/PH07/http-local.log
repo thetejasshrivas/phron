@@ -1,0 +1,4 @@
+PASS: home 200, skeleton content, no input/form.
+PASS: health 200, exact safe JSON, no-store, no cookie.
+PASS: health POST 405 (no mutation).
+PASS: private/project file probes 404.

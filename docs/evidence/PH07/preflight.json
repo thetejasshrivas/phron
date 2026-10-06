@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "checkedAtUTC": "2026-10-06T05:42:13.862Z",
+  "repository": "W:/AI Product Sprint/Phron",
+  "branch": "main",
+  "baselineCommit": "e765c67e8ac1d492858d17004035ac38784ed616",
+  "node": "v24.21.0",
+  "packageManager": "npm@11.19.0",
+  "lockSha256": "1b2fc53515393bedf555e1bfe48109b6d7c48293256ada25767d41650a4731d2",
+  "lockUnchanged": true,
+  "configurationSha256": "a10de53f835228628a90c61bc556638a9b4ea1a1adb0a12bb6a3a61c82e38968",
+  "uploadRulesSha256": "b7342e8d6f30fad14ae6a32c8e53c4c94af12a0bd494ec90f39ce97083ff3511",
+  "uploadChecks": {
+    "excluded": 12,
+    "required": 12
+  },
+  "publicApiRoutes": [
+    "GET /api/health"
+  ],
+  "privateDiagnostics": false,
+  "financeWrites": false,
+  "accountVerification": "Tejas reports Hobby; quota/settings/authorization pending",
+  "vercelBuildAndLiveSmoke": "NOT_RUN"
+}

@@ -5,28 +5,34 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: c5648a95d30ad24aa34635c0e5cf6b01a79a5db5
+commit: d519f66b363ec324cc88fcd63711bc2a5319c12c
 dirty_files: []
 active_chat: PHRON-00 Lead
 phase: 1
-current_step: PH-06
-step_state: COMPLETE
+current_step: PH-07
+step_state: PREPARED_AWAITING_ACCOUNT_AND_AUTHORIZATION
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
 approved_amendments: [D01-v1, D02-v1, D03-v1, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1]
 completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06]
 passed_gates: [G0A]
 founder_reviews: {V1: PENDING, V2: PENDING, V3: PENDING}
 blocking_decisions: [D05-extension, D07-card, D07-funding, D08, D09, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D20, D21, D22, D23, D24, D25, D26]
-latest_evidence: docs/evidence/PH06/FINAL.md
+latest_evidence: docs/evidence/PH07/PREFLIGHT.md
 deployment: {preview: NONE, production: NONE, commit: NONE}
 migration_state: NOT_APPLIED
 ownership_transfers: []
 requests_for_other_owners: []
-next_action: PH-07 / P-DEPLOY-EARLY — prepare safe zero-cost skeleton preview
-last_updated_ist: 2026-10-06T10:46:17.924496+05:30
+next_action: PH-07 dashboard action 2 — verify Hobby Usage limits/pauses; deployment remains unauthorized
+last_updated_ist: 2026-10-06T11:11:15+05:30
 ```
 
-PH-06 foundation is complete and verified at application commit c5648a95d30ad24aa34635c0e5cf6b01a79a5db5. The commit field identifies tested application code; the later documentation-only commit stores this record. Local branch main; no remote or deployment. Final dirty state is checked after committing documentation.
+PH-07 restricted Preview candidate d519f66b363ec324cc88fcd63711bc2a5319c12c is prepared on the existing main branch. Local preview build, Production guard refusal, zero-warning lint, strict types, two installed-Edge E2E tests, safe HTTP/private-path probes, upload rules, unchanged lock and all five source hashes PASS. Runtime Node 24.21.0/npm 11.19.0. Follow-up record-only commit stores this evidence; inspect Git tip and candidate before upload.
+
+Tejas explicitly reports Hobby from Billing action 1. Dashboard action 2 Usage is pending; actual workspace identity/settings/protection, quota and zero-cost eligibility are not yet fully verified. No project link, CLI installation, Git remote, provider variables, upload or deployment. Preview URL/ID/commit remain NONE; no live smoke. Preparation authorized, deployment authorization still PENDING. G1 remains NOT_RUN; PH-07 is not COMPLETE and no next guided step has been entered. Source decisions and eight approvals unchanged; D25 hosting partially checked, all provider checks remain open. See DEPLOYMENT and PH07/PREFLIGHT.
+
+## PH-06 completed record
+
+PH-06 foundation is complete and verified at application commit c5648a95d30ad24aa34635c0e5cf6b01a79a5db5. The PH-06 documentation-only commit e765c67e8ac1d492858d17004035ac38784ed616 stored that record. Local branch main; no remote or deployment at completion.
 
 G0A: loaded instructions, correct folder/version and five matching source hashes verified in the preceding P-RESUME and independently rechecked in PH-06. Evidence: docs/evidence/PH06/repository-verification.json and prior PH04 verification. Fresh-chat creation itself was not independently established by repository files; loaded-rule/source verification is the evidence claimed here.
 

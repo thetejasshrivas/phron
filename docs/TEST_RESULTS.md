@@ -38,3 +38,21 @@ Provider mode: not applicable; no provider requests
 Residual issue and owner: Lead — ESLint 9 EOL compatibility limitation; source OPEN decisions remain. Platform auth/DB/RLS, financial FIT/scenarios, live providers, remote CI and real-phone checks NOT_RUN. No deployment/migration.
 
 Failure history retained: expected RED modules; encoder coercion regression fixed; lint warning fixed; ESLint10 incompatible and restored9; sandbox localhost denied; Chrome launch failed, Edge final smoke passed. Details and exact logs in FINAL.md. No product test was skipped to create a green result.
+
+# PH-07 local preflight
+
+Run ID: PH07-preflight
+Date and time IST: 2026-10-06T11:11:15+05:30 (build/smoke earlier; log timestamps available)
+Commit and dirty-state description: candidate d519f66b363ec324cc88fcd63711bc2a5319c12c, main; follow-up docs/evidence-only commit stores run. Existing application and lock unchanged.
+Environment: local Windows; Node 24.21.0/npm 11.19.0; installed Edge; no account/provider fixtures.
+Step and gate: PH-07 local preparation; G1 NOT_RUN remotely, no deployment.
+Requirement / AC / FIT / scenario IDs: restricted skeleton home/health/privacy; financial IDs NOT_RUN.
+Exact command or browser action: node docs/evidence/PH07/verify-preflight.mjs; npm run verify:sources; npm run lint; npm run typecheck; VERCEL_ENV=preview npm run build:preview; VERCEL_ENV=production npm run build:preview -- --check-only; npm run test:e2e; node scripts/preview-smoke.mjs http://127.0.0.1:3110 with temporary local production server.
+Fixture and account class: coming-soon skeleton, no personal/test money data; no account accessed by tooling.
+Expected result: Preview builds, Production guard refuses, home/health safe, private project files unavailable, upload inputs sufficient, exact npm/lock and frozen bytes preserved.
+Observed result: PASS; build/lint/types/source checks; 2/2 Edge E2E; home200, health200/exact JSON/no-store/no cookie, POST405, four private-path404 checks; 12 upload exclusions and 12 inclusions; unchanged lock SHA.
+Status: PASS local preflight only. Vercel install/build/URL/live smoke/phone NOT_RUN; quota/settings/authorization pending. Initial HTTP probe BLOCKED EACCES then authorized local socket rerun PASS (not a product failure).
+Counts and coverage: 2 browser tests; additional HTTP/privacy and config assertions; no new domain or product coverage claim. PH-06 contract evidence reused because contracts/lock unchanged.
+Evidence path: docs/evidence/PH07/PREFLIGHT.md and linked logs/checker/preflight.json.
+Provider mode: NONE; no Supabase/AI request, finance write or migration.
+Residual issue and owner: Lead — complete actual account zero-cost/target verification and obtain deployment authorization; remote smoke required for G1. OPEN decisions remain unchanged. No production readiness claim.
