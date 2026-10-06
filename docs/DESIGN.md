@@ -1,4 +1,6 @@
 # Design
+Current status: Gate V1 PASSED — Tejas explicitly accepted HOME-V1-02 at855f1dde9b314af798a8cb262067ca2b4023c2b0 on2026-10-06 IST. Approved visual foundation; final refinement Phase5 V3. See current founder approval below. Original initialization template and prior proposals are preserved as history.
+
 Accepted direction and founder revision: NOT_STARTED
 Audience and main actions: salaried Indian users; capture/decide/recover
 Palette with verified contrast pairs: NOT_STARTED
@@ -65,3 +67,9 @@ The sample outcome selector exposes success/error for inspection. Goal fill anno
 Impeccable context launcher did not run: no usable local engine, first-run download prevented. Existing DESIGN/MOTION were read directly with the skill's animate/craft-floor guidance. No tools installed. One combined inspection at375/1280 in normal/reduced motion passed; screenshots inspected once, no post-inspection correction batch or confirmation loop needed. Automated proof and 40 state/feedback/intermediate captures: docs/evidence/PH09/verification.json and RESULT.md. Browser emulation is not a physical phone test or founder approval. PH-08's768px evidence remains historical, not a new PH-09 capture.
 
 Acceptance action: Tejas reviews HOME-V1-02 and explicitly accepts that named implementation commit. Until then PH-09 awaits V1 and G2 is not claimed.
+
+## Current founder approval — Gate V1 PASSED
+
+Recorded2026-10-06 IST from Tejas's explicit instruction: “Tejas accepts V1 — HOME-V1-02 at commit 855f1dd as the approved visual foundation, with final visual polish and refinement scheduled for the Phase 5 V3 pass.” Approved revision HOME-V1-02, full implementation commit855f1dde9b314af798a8cb262067ca2b4023c2b0, evidence cf637597a3c47ca5309390ce9425f7e91b8d08d1 and docs/evidence/PH09. Gate V1 PASSED; PH-09 COMPLETE. Earlier PENDING/proposed statements record pre-approval history and are superseded by this acceptance.
+
+The green editorial Home, typographic hierarchy, exact money, vessel/goal language and responsive motion/accessibility direction form the approved visual foundation. Final visual polish/refinement is scheduled for Phase5 / PH-26 / P05-FINAL with explicit V3 review. V2/V3 remain PENDING; this approval does not attest to a physical phone test, persisted slice, complete product or financial semantics. Required motion and accessible behavior continue with each implemented component. Next ownership handoff: docs/handoffs/EXPERIENCE.md to PHRON-01 Financial Engine for PH-10.

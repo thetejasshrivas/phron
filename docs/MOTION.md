@@ -1,4 +1,6 @@
 # Motion
+Current status: Gate V1 PASSED — HOME-V1-02 at855f1dde9b314af798a8cb262067ca2b4023c2b0 explicitly accepted by Tejas2026-10-06 IST. PH-09 COMPLETE; final visual refinement Phase5 V3. Original template and preceding pending-review records below are historical.
+
 Component and trigger: NOT_STARTED
 Meaning conveyed: NOT_STARTED
 Start/end states and authoritative value handling: NOT_STARTED
@@ -50,3 +52,9 @@ Separate Impeccable pass2026-10-06. Earlier prepared/NOT_RUN paragraphs are hist
 | Empty/loading | Unknown values remain unknown | Static placeholders and labels | Identical readable equivalent; no progress fiction |
 
 Browser evidence: verification.json reports intermediate vessel heights and goal widths for both375/1280 normal views; both reduced views have transitionDuration0s and intermediate geometry equal to final geometry. Forty PNGs include all five states, error/success and before/intermediate/final contexts. No video capture engine was available; these are actual frames plus measurements, not a fabricated acceptance clip. Focus, error/retry, pending values, cancellation and absence of non-GET requests PASS. One bounded inspection round; no correction after inspection. Real backend commit/rollback, goal purchase, physical phone/performance and founder acceptance remain NOT_RUN/PENDING.
+
+## Current acceptance — Gate V1 PASSED
+
+2026-10-06 IST: Tejas explicitly accepts HOME-V1-02 at855f1dd (full855f1dde9b314af798a8cb262067ca2b4023c2b0) as the approved visual foundation. This includes the shown spend drain, goal fill, feedback, section focus/navigation and reduced-motion direction, with actual evidence in PH09. PH-09 COMPLETE; historical PENDING statements above describe the preceding review state. Approval is founder-reported, not automation-inferred; no missing recording or physical-device proof is fabricated.
+
+Final visual polish/refinement scheduled for Phase5 / PH-26 / P05-FINAL / V3. V2 and V3 remain PENDING. Motion is still required when connecting real authoritative values in PH-13; pending/error/retry/cancellation behavior must preserve server contracts. Exact money remains immediately readable, animation changes geometry only, and reduced equivalents stay available. No real backend success/rollback, financial rule or goal execution is approved by this visual gate. Next prepared step is PH-10 / P02-ENGINE; see docs/handoffs/EXPERIENCE.md.
