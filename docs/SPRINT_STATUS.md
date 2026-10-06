@@ -5,25 +5,25 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: d519f66b363ec324cc88fcd63711bc2a5319c12c
+commit: 55ef586f190e2cca53d41f15ae2573b9601f0e68
 dirty_files: []
 active_chat: PHRON-00 Lead
 phase: 1
 current_step: PH-07
-step_state: BLOCKED_TARGET_GUARANTEE
+step_state: BOOTSTRAP_VERIFIED_PREVIEW_PENDING
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
 approved_amendments: [D01-v1, D02-v1, D03-v1, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1]
 completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06]
 passed_gates: [G0A]
 founder_reviews: {V1: PENDING, V2: PENDING, V3: PENDING}
 blocking_decisions: [D05-extension, D07-card, D07-funding, D08, D09, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D20, D21, D22, D23, D24, D25, D26]
-latest_evidence: docs/evidence/PH07/PREFLIGHT.md
-deployment: {preview: NONE, production: ERROR_ATTEMPT_ONLY, commit: f68bd6e5e66c0472bf8a5257da1f265b098c18cc}
+latest_evidence: docs/evidence/PH07/BOOTSTRAP_RESULT.md
+deployment: {preview: NONE, production: PROTECTED_INERT_BOOTSTRAP_READY_NO_ALIASES, commit: 55ef586f190e2cca53d41f15ae2573b9601f0e68}
 migration_state: NOT_APPLIED
 ownership_transfers: []
 requests_for_other_owners: []
-next_action: PH07-HOST-01 — retain Preview-only scope or explicitly approve protected skeleton bootstrap exception
-last_updated_ist: 2026-10-06T11:30:03+05:30
+next_action: PH-07 — deploy and verify a real protected Preview of the verified skeleton
+last_updated_ist: 2026-10-06T11:48:09+05:30
 ```
 
 PH-07 restricted Preview candidate d519f66b363ec324cc88fcd63711bc2a5319c12c is prepared on the existing main branch. Local preview build, Production guard refusal, zero-warning lint, strict types, two installed-Edge E2E tests, safe HTTP/private-path probes, upload rules, unchanged lock and all five source hashes PASS. Runtime Node 24.21.0/npm 11.19.0. Follow-up record-only commit stores this evidence; inspect Git tip and candidate before upload.
@@ -45,3 +45,11 @@ G0B remains OPEN for affected semantics; G1 awaits PH-07 preview/health proof. G
 Verified foundation: clean npm ci, exact pins/one lockfile, lint, strict types, 74 unit/contract tests, one health-handler integration test, 100% contract line/branch/function/statement coverage, production build, two installed-Edge E2E/HTTP tests, zero known production audit advisories. All five source originals/copies and Git blobs match. Domain coverage explicitly BLOCKED until PH-10; FIT/card/scenario/financial/DB/auth/provider/real-phone tests NOT_RUN. See FINAL.md and append-only TEST_RESULTS for actual failures and remedies.
 
 No financial schema, authenticated write, AI payload, account mutation, migration, deployment or P1/P2 behavior introduced. Narrow Lead foundation scope is recorded in OWNERSHIP. No ownership requests were discarded. User authorized continued PH-06 after the read-only PH-05 report; no next guided step was executed.
+
+## Authoritative bootstrap outcome — 2026-10-06 IST
+
+Tejas explicitly approved PH07-HOST-01 Option 2. Applied the exact reviewed guard patch and recorded candidate 55ef586f190e2cca53d41f15ae2573b9601f0e68 on main. Deployment dpl_GGioXFrbNnQ4PGW43CdtyUqUWXSr is READY, target Production, URL https://phron-h5tl0mrst-tts-1e31.vercel.app. No actual Preview exists yet; PH-07/G1 remain incomplete and unpassed. Earlier OPEN/blocker/pending-login text above is historical and superseded by this outcome.
+
+Command used --prod --skip-domain and build-only PHRON_SKELETON_BOOTSTRAP_ALLOW=1. Vercel unexpectedly assigned its generated production alias despite the option. Lead removed only that new alias to restore the approved no-domain condition. Actual aliases API now [], former alias HTTP404; do not claim it was never assigned. No custom domain or product launch. Unique deployment anonymous home/health HTTP302 to authentication; authenticated home HTTP200, health HTTP200 exact safe JSON and no-store. Private PRD/env HTTP404. Protected automation smoke used a generated project automation bypass internally; no token, cookies or secret headers stored/printed. CLI curl forwarded global options incorrectly twice; independent internal-token HTTPS smoke then PASS.
+
+PASS: four guard cases, lint, typecheck, local and remote bootstrap builds (Node24.21.0/npm11.19.0/Next16.3.8), actual 24-file upload manifest excluding private sources, five source hashes, unchanged app/lock, Hobby/protection/empty app-env account settings. Unit/domain/auth/DB/AI/phone tests NOT_RUN this turn; foundation evidence retained, no financial behavior changed. No migration, app secrets, paid tier or feature code. Evidence: PH07/BOOTSTRAP_RESULT.md and linked filtered artifacts. Next one action: protected real Preview deployment/target verification and home/health smoke; do not enter PH-08 yet.

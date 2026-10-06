@@ -1,0 +1,14 @@
+[
+  {
+    "path": "/",
+    "redirectPath": "/sso-api",
+    "redirectHost": "vercel.com",
+    "status": 302
+  },
+  {
+    "path": "/api/health",
+    "redirectPath": "/sso-api",
+    "redirectHost": "vercel.com",
+    "status": 302
+  }
+]

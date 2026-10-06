@@ -1,0 +1,27 @@
+{
+  "deployment": "https://phron-h5tl0mrst-tts-1e31.vercel.app",
+  "checkedAt": "2026-10-06T11:48:09.5501620+05:30",
+  "authenticated": [
+    {
+      "status": 200,
+      "path": "/",
+      "expectedHome": true
+    },
+    {
+      "status": 200,
+      "path": "/api/health",
+      "contentType": "application/json",
+      "exactSafeBody": true,
+      "noStore": true
+    },
+    {
+      "status": 404,
+      "path": "/docs/source/PHRON_PRD_v1.2.1_FROZEN.txt"
+    },
+    {
+      "status": 404,
+      "path": "/.env"
+    }
+  ],
+  "method": "HTTPS using existing automation bypass internally; no token or cookies saved"
+}

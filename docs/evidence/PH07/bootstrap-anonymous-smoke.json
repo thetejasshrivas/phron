@@ -1,0 +1,19 @@
+{
+  "removedAliasStatus": 404,
+  "deployment": "https://phron-h5tl0mrst-tts-1e31.vercel.app",
+  "checkedAt": "2026-10-06T11:46:41.5956711+05:30",
+  "anonymous": [
+    {
+      "protected": true,
+      "appAccessible": false,
+      "path": "/",
+      "status": 302
+    },
+    {
+      "protected": true,
+      "appAccessible": false,
+      "path": "/api/health",
+      "status": 302
+    }
+  ]
+}
