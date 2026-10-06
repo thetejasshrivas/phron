@@ -5,26 +5,36 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: 87d3d2d3a2cd10b1b20f51a0e0d2f76a087a32b8
+commit: c5fa2299707c66960582444459163d1f470abd9d
 dirty_files: []
-active_chat: PHRON-01 Financial Engine
+active_chat: PHRON-02 Platform
 phase: 2
-current_step: PH-10
+current_step: PH-11
 step_state: COMPLETE
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
-approved_amendments: [D01-v1, D02-v1, D03-v1, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1]
-completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10]
+approved_amendments: [D01-v1, D02-v1, D03-v1, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D11-v1, D17-v1, D27-v1]
+completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11]
 passed_gates: [G0A, G1, V1]
 founder_reviews: {V1: PASSED, V2: PENDING, V3: PENDING}
-blocking_decisions: [D05-extension, D07-card, D07-funding, D08, D09, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D20, D21, D22, D23, D24, D25, D26]
-latest_evidence: tests/unit/domain/evidence/RESULT.md
+blocking_decisions: [D05-extension, D07-card, D07-funding, D08, D09, D10, D12, D13, D14, D15, D16, D18, D19, D20, D21, D22, D23, D24, D25, D26]
+latest_evidence: tests/integration/ph11/evidence/RESULT.md
 deployment: {preview: READY_PROTECTED, preview_url: "https://phron-o4v4vtg1r-tts-1e31.vercel.app", preview_id: dpl_ASbz9jBxuFcQnB8KQAfstJ38dxKh, production: PROTECTED_INERT_BOOTSTRAP_READY_NO_ALIASES, commit: 0aac28bf780e56083e68fede5b3d6dbba0266942}
-migration_state: NOT_APPLIED
+migration_state: LOCAL_CANDIDATE_VERIFIED_REMOTE_NOT_APPLIED
 ownership_transfers: []
-requests_for_other_owners: [Lead safeWeekly snapshot-contract review, Lead D11 schema decision before dependent persistence]
-next_action: PHRON-02 Platform — P-RESUME then PH-11 / P02-DATA; inspect ENGINE handoff and prepare schema within approved decisions
+requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
+next_action: PHRON-02 Platform — fresh P-RESUME then PH-12 / P02-AUTH; SSR Google OAuth and onboarding, one account action at a time
 last_updated_ist: 2026-10-06
 ```
+
+## Authoritative current outcome — PH-11 COMPLETE (local data slice)
+
+2026-10-06 IST. Implementation/approval/test-evidence commit c5fa2299707c66960582444459163d1f470abd9d on main. Tejas explicitly approved D11-v1, D17-v1 and D27-v1. Introduced owner-scoped schema, forced RLS, restricted transaction writer, composite parent constraints, replay records, exact initial-cycle snapshots and atomic onboarding/manual cash/UPI/debit spending. No client-supplied identity or direct-table financial writes. Source PRD and application dependencies/lock unchanged.
+
+PASS: complete migration against empty local app schema; 31 real local Auth/PostgREST transaction/ownership checks (16 onboarding,12 spend/concurrency/rollback,3 ownership/purge),6 schema/security checks; local security advisor no issues;156 unit plus3 Jest integration tests; lint/typecheck; all5 source hashes. These are separate counts;37 local database checks are not included in Jest's159. Actual synthetic response examples pass the existing snapshot parser. Evidence tests/integration/ph11/evidence/RESULT.md and associated logs; typed output src/server/finance/types.ts. Supabase CLI2.119.0 temporarily checksum-verified, PostgreSQL17.11 local. No SQL coverage percentage or full financial lifecycle claim.
+
+Two-user read/write isolation, anonymous denial, forged parents, duplicate replay, concurrent requests, bounded contention and forced intermediate rollback are proven for this slice. Introduced payment dependency graph and raw-text cascade tested with synthetic account deletion, preserving another user; payment mutation endpoints and actual session revocation remain later work. Due/overdue/noninitial cycles and D26 insufficient factual cash return UNAVAILABLE without changes; those requirements remain OPEN rather than silently resolved.
+
+No remote migration/project link, deployment, provider configuration, OAuth or SSR session implementation. G0A/G1/V1 retained; G2/V2 require PH-12/13/14 and are not passed here. Fresh build/browser/full FIT/all18 scenarios NOT_RUN this step. PH-12 / P02-AUTH is the next eligible guided action after P-RESUME; it has not started. The commit field identifies implementation; this record-only commit follows. Handoff docs/handoffs/PLATFORM.md supersedes historical preparation blockers. No other chat was messaged or activated.
 
 ## Authoritative current outcome — PH-07 COMPLETE / G1 PASS
 
