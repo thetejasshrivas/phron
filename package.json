@@ -1,0 +1,42 @@
+{
+  "name": "phron",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "npm@11.19.0",
+  "engines": { "node": "24.x", "npm": "11.19.0" },
+  "scripts": {
+    "dev": "node scripts/next.mjs dev --hostname 127.0.0.1",
+    "start": "node scripts/next.mjs start --hostname 127.0.0.1",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "jest --config jest.config.mjs --selectProjects unit --runInBand",
+    "test:contracts:coverage": "jest --config jest.config.mjs --selectProjects unit --runInBand --coverage",
+    "test:domain:coverage": "node scripts/domain-coverage.mjs",
+    "test:integration": "jest --config jest.config.mjs --selectProjects integration --runInBand",
+    "test:e2e": "playwright test",
+    "build": "node scripts/next.mjs build",
+    "verify:sources": "node scripts/verify-sources.mjs",
+    "check": "npm run verify:sources && npm run lint && npm run typecheck && npm test && npm run test:contracts:coverage && npm run build"
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.117.2",
+    "next": "16.3.8",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "30.5.2",
+    "@playwright/test": "1.63.0",
+    "@types/jest": "30.0.0",
+    "@types/node": "24.19.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.8",
+    "fast-check": "4.10.2",
+    "jest": "30.5.2",
+    "typescript": "6.0.2"
+  }
+}
