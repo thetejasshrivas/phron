@@ -1,0 +1,35 @@
+{
+  "method": "HTTPS; existing automation token internally for protected smoke; no tokens/cookies saved",
+  "checkedAt": "2026-10-06T11:54:23.0830671+05:30",
+  "results": [
+    {
+      "status": 302,
+      "path": "/",
+      "mode": "anonymous",
+      "redirectPath": "/sso-api",
+      "redirectHost": "vercel.com"
+    },
+    {
+      "status": 302,
+      "path": "/api/health",
+      "mode": "anonymous",
+      "redirectPath": "/sso-api",
+      "redirectHost": "vercel.com"
+    },
+    {
+      "status": 200,
+      "expectedHome": true,
+      "path": "/",
+      "mode": "authenticated"
+    },
+    {
+      "path": "/api/health",
+      "exactSafeBody": true,
+      "mode": "authenticated",
+      "contentType": "application/json",
+      "status": 200,
+      "cacheControl": "no-store"
+    }
+  ],
+  "deployment": "https://phron-o4v4vtg1r-tts-1e31.vercel.app"
+}

@@ -1,0 +1,13 @@
+{
+  "protection": "prod_deployment_urls_and_all_previews",
+  "checkedAt": "2026-10-06T11:52:00.1871555+05:30",
+  "project": "phron",
+  "nodeVersion": "24.x",
+  "workspace": "tts-1e31",
+  "plan": "hobby",
+  "branch": "main",
+  "buildCommand": "npm run build:preview",
+  "configuredEnvNames": [],
+  "candidate": "0aac28bf780e56083e68fede5b3d6dbba0266942",
+  "framework": "nextjs"
+}

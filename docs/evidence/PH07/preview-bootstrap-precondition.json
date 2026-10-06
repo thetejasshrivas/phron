@@ -1,0 +1,20 @@
+{
+  "project": "phron",
+  "bootstrapTarget": "production",
+  "latestDeployments": [
+    {
+      "id": "dpl_GGioXFrbNnQ4PGW43CdtyUqUWXSr",
+      "readyState": "READY",
+      "target": "production"
+    },
+    {
+      "id": "dpl_FsDnQRXo7VnCGQNQiNFjvBsHdYPH",
+      "readyState": "ERROR",
+      "target": "production"
+    }
+  ],
+  "checkedAt": "2026-10-06T11:52:48.7281489+05:30",
+  "bootstrapId": "dpl_GGioXFrbNnQ4PGW43CdtyUqUWXSr",
+  "bootstrapState": "READY",
+  "productionTargetId": "dpl_FsDnQRXo7VnCGQNQiNFjvBsHdYPH"
+}

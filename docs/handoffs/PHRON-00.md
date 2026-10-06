@@ -1,3 +1,12 @@
+# Current handoff — PH-07 complete, Gate G1 passed
+
+2026-10-06 11:54 IST. W:/AI Product Sprint/Phron, main, Lead active writer. Deployed candidate 0aac28bf780e56083e68fede5b3d6dbba0266942; record-only commit follows. Genuine protected Preview https://phron-o4v4vtg1r-tts-1e31.vercel.app, dpl_ASbz9jBxuFcQnB8KQAfstJ38dxKh, READY owner API target null, CLI productionUrl null; no bootstrap flag. Anonymous home/health302 to vercel.com/sso-api, protected home200, health200 exact safe JSON/no-store. Actual assigned aliases[] on Preview/bootstrap. All five source hashes match, app/lock/guard unchanged. Remote build PASS pinned Node24.21.0/npm11.19.0/Next16.3.8; Hobby/auth/empty app-env verified. No product-ready release or founder taste approval.
+
+Initial upload blocked by automatic review, before execution; successful-bootstrap precondition and official post-first-deploy behavior verified, reviewed retry allowed; actual Preview proved. No bypass. See docs/evidence/PH07/PREVIEW_RESULT.md. Existing CLI auth isolated under elevated TEMP; automation token only used internally, never print/read auth credential files or save secrets. Source decisions remain OPEN where previously open; hosting exception APPROVED and fulfilled. G0B still unresolved, other gates unchanged.
+
+Next one action: fresh-chat P-RESUME for PH-08; inspect instructions, manifest/status/decisions/contracts and playbook before its work. PH-08 not started. Do not repeat deployment/bootstrap, promote Production or broaden financial scope. Earlier handoffs below are historical and superseded.
+
+---
 # Current handoff — approved PH-07 bootstrap verified
 
 2026-10-06 IST. Lead active writer in W:/AI Product Sprint/Phron, main. Candidate 55ef586f190e2cca53d41f15ae2573b9601f0e68; record-only commit follows. PH07-HOST-01 APPROVED by explicit Option 2 reply, exact guard patch applied/tested. Bootstrap dpl_GGioXFrbNnQ4PGW43CdtyUqUWXSr READY target Production, protected unique URL https://phron-h5tl0mrst-tts-1e31.vercel.app. CLI --skip-domain unexpectedly assigned phron-tts-1e31.vercel.app; removed only that alias. Actual aliases now []; alias HTTP404. Anonymous unique home/health302 to auth; authenticated home200 and safe health200 exact JSON/no-store, PRD/env404. Source hashes match, application/lock unchanged. No paid resource/migration/finance/provider write.
