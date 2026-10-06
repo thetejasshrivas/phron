@@ -27,3 +27,7 @@ Tejas explicitly answered “hobby” to dashboard Billing action 1. This is ope
 Current official framework/build/install/Node/Preview/ignore documentation and proposed settings are linked in ../../DEPLOYMENT.md. Local build proves the config's guard and application build; it does not prove Vercel's Linux install or managed Node patch. Build-time runtime versions belong only in operator evidence, never the public health body.
 
 Preparation is authorized. Deployment authorization is still PENDING; no remote, CLI installation, project link, upload, URL or deployment ID. G1 requires live Preview home/health evidence and remains NOT_RUN. PH-07 remains PREPARED_AWAITING_ACCOUNT_AND_AUTHORIZATION. All existing OPEN decisions remain OPEN. No production release, founder taste approval, real-phone result or finance readiness claimed.
+
+## Account evidence update — recorded 2026-10-06T11:13:11+05:30
+
+The initial preflight above and preflight.json preserve their original check state. After dashboard action 2, Tejas explicitly reported: “All usage metrics are at zero. It's a new hobby account. No resources or limits are paused or exceeded.” Operator-reported plan/quota evidence is now established for that same workspace; no tool-observed account inspection is claimed. Exact workspace slug, project/settings/protection, remote build and live smoke are pending. Dashboard action 3 requests only the workspace slug from Overview; no project import or deployment. No new source amendment or deployment authorization received.
