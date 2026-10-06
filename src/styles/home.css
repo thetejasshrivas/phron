@@ -173,3 +173,22 @@
 .goal-pace{display:inline-block;font-size:11px;color:var(--muted);margin-bottom:10px;border:1px solid var(--line);border-radius:4px;padding:4px 6px}
 
 .phron-home input,.preview-bar select,.bucket-vessel{border-color:#72866d}
+/* PH-09: response feedback and navigation continuity; amounts never animate. */
+.phron-home ::selection{background:var(--accent);color:var(--ink)}
+.phron-home input{caret-color:var(--ink)}
+.phron-home .sts-number,.home-brand{letter-spacing:-.04em}
+.phron-home nav a{transition:background 160ms ease,color 160ms ease;min-height:44px}
+.home-sidebar nav [aria-current="location"]{background:var(--surface);font-weight:700}
+.phron-home #bucket-section,.phron-home #goal-section{scroll-margin-top:24px}
+.phron-home #bucket-section:focus-visible,.phron-home #goal-section:focus-visible,.phron-home #home-main:focus-visible{outline-offset:6px}
+.outcome-control{grid-column:2;font-size:11px;color:var(--muted);display:flex;align-items:center;gap:10px}
+.outcome-control select{border:1px solid #72866d;background:var(--canvas);color:var(--ink);border-radius:5px;padding:8px;min-height:36px}
+.capture-notice{min-height:52px;transition:background 180ms ease,color 180ms ease;padding:12px 8px;border-radius:6px}
+.capture-notice.success{background:var(--surface);color:var(--ink)}
+.capture-notice.error{background:#f0e1da;color:#713024}
+.capture-notice.pending{background:#eef0e7;color:var(--ink)}
+.capture-notice p{line-height:1.5}.capture-notice p:empty{display:none}
+.phron-home input[aria-invalid="true"]{border-color:#933f30}
+@media(max-width:1000px){.outcome-control{grid-column:1}}
+@media(max-width:767px){.home-sidebar nav{display:flex;gap:2px}.home-sidebar nav a,.home-sidebar nav [aria-current]{display:flex;font-size:11px;padding:10px 7px;min-height:44px;align-items:center}.home-sidebar{gap:12px}.home-brand{font-size:27px}.home-brand span{font-size:18px;padding:2px 5px}.outcome-control{font-size:11px}.capture-notice{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.phron-home *{transition:none!important;animation:none!important;scroll-behavior:auto!important}.text-action:hover span,.capture-button:active{transform:none}}

@@ -53,3 +53,15 @@ No raster assets, external image requests or decorative stock imagery; this is f
 ### Revision and evidence
 
 HOME-V1-01: proposed, Tejas acceptance PENDING. Screenshots at docs/evidence/PH08/{375,768,1280}-{healthy,exhausted,distressed,empty,loading}.png. Fifteen viewport/state captures plus interaction/drain/reduced-motion verification. Local installed Edge production build, not a physical phone test. PH-08 done-when: representative Home, A/B/C, mobile/desktop evidence and initial motion spec ready. PH-09 separate Impeccable pass remains NOT_RUN; V1 must be reviewed after that named refinement.
+
+## PH-09 current revision — HOME-V1-02
+
+2026-10-06, separate Impeccable refinement within the proposed Taste direction. Preserves the green editorial canvas, exact money, unequal STS/coach hierarchy, vessel charts, goal stamps and all five synthetic states. This supersedes the historical PH-09 NOT_RUN statement above. V1 remains PENDING; neither Taste direction nor this revision has founder acceptance.
+
+Mobile now exposes Your day / Buckets / Goals navigation. Each action transfers focus immediately to its section; normal scrolling is smooth, reduced scrolling instant. Capture has readable pending, success and error feedback, a retained entry on failure and explicit retry. Only the submitting control is held during the 240ms local response fixture; input, navigation and goal controls remain available. Success cannot steal focus from another section or erase subsequently typed text. Changing fixture cancels a late response. All notices explicitly describe preview behavior; nothing is saved.
+
+The sample outcome selector exposes success/error for inspection. Goal fill announces the supplied exact amount independently of capture feedback. Figures update directly to supplied canonical values; animation affects geometry, never displayed money. No real save, provider call, new rule, contract change or goal purchase behavior is introduced.
+
+Impeccable context launcher did not run: no usable local engine, first-run download prevented. Existing DESIGN/MOTION were read directly with the skill's animate/craft-floor guidance. No tools installed. One combined inspection at375/1280 in normal/reduced motion passed; screenshots inspected once, no post-inspection correction batch or confirmation loop needed. Automated proof and 40 state/feedback/intermediate captures: docs/evidence/PH09/verification.json and RESULT.md. Browser emulation is not a physical phone test or founder approval. PH-08's768px evidence remains historical, not a new PH-09 capture.
+
+Acceptance action: Tejas reviews HOME-V1-02 and explicitly accepts that named implementation commit. Until then PH-09 awaits V1 and G2 is not claimed.

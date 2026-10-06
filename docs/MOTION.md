@@ -33,3 +33,20 @@ Browser proof: PH08/verification.json records before/intermediate/after vessel h
 Inspect this named revision with impeccable:impeccable after P-RESUME. Audit readable numbers/labels at375px, visible focus/tab order, control contrast, state-change announcements, interrupted drain/fill, reduced-motion equivalence and keyboard/touch responsiveness. Refine purposeful motion without adding loops or changing canonical money. Add motion clip and real interaction evidence, independently inspect all A/B/C/empty/loading states, then present a named revision to Tejas for V1. Do not self-approve V1, claim phone evidence or implement any open source rule. Existing HOME-V1-01 is a starting point, not an accepted visual gate.
 
 References checked2026-10-06: https://nextjs.org/docs/app/api-reference/components/link ; https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion .
+
+## PH-09 executed refinement — HOME-V1-02 / V1 PENDING
+
+Separate Impeccable pass2026-10-06. Earlier prepared/NOT_RUN paragraphs are historical. Preserve the PH-08 motion language, then make feedback and navigation complete. Native CSS and browser APIs only. No money interpolation or animation dependency. Meaning: spending lowers a vessel; a supplied goal contribution fills its track; feedback confirms which synthetic response occurred. No loop, shimmer, celebratory confetti or blocked navigation.
+
+| Trigger | Value handling / meaning | Normal | Reduced / access / interruption |
+| --- | --- | --- | --- |
+| Valid sample capture | Preserve all values while pending; success selects supplied captured fixture | 240ms local response fixture, readable Previewing label, no simulated progress | Same feedback duration; only duplicate submit held, entry/navigation/goal remain active |
+| Successful sample response | Exact text commits immediately; dining36% ->27.6%, STS supplied1240.00 ->1210.00 | Vessel650ms cubic-bezier(.22,1,.36,1); status surface180ms | Geometry and surface instant; live success explicitly says Nothing saved |
+| Error response / invalid sample | No value or entry change, no drain | Error text and border; Retry preview; surface180ms | Instant color, role=alert, aria-invalid + described feedback; retained text retry |
+| Goal fill | Independent supplied held18000.00 ->18500.00; track60% ->61.6667% | Width650ms same easing | Instant geometry, exact amount aria-live polite; no purchase or transfer |
+| Day / Buckets / Goals navigation | Section focus and current location change immediately | Browser smooth scroll; selected nav tone160ms | Instant scroll and tone; focusable section with visible outline; no focus theft on response |
+| Hover / press | Direction / tactile response | Existing arrow160ms and press150ms | Transform disabled, not merely zero duration; focus/text still convey action |
+| Fixture change / unmount | Cancel pending response; reset sample changes | Level transitions retarget current rendered geometry | Instant level; cancelled response cannot mutate new state |
+| Empty/loading | Unknown values remain unknown | Static placeholders and labels | Identical readable equivalent; no progress fiction |
+
+Browser evidence: verification.json reports intermediate vessel heights and goal widths for both375/1280 normal views; both reduced views have transitionDuration0s and intermediate geometry equal to final geometry. Forty PNGs include all five states, error/success and before/intermediate/final contexts. No video capture engine was available; these are actual frames plus measurements, not a fabricated acceptance clip. Focus, error/retry, pending values, cancellation and absence of non-GET requests PASS. One bounded inspection round; no correction after inspection. Real backend commit/rollback, goal purchase, physical phone/performance and founder acceptance remain NOT_RUN/PENDING.
