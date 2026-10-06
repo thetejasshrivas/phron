@@ -1,0 +1,28 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "moneyUnit": "integer paise encoded as decimal strings",
+  "cases": [
+    {
+      "id": "D17-DECLARED-THEN-CASH-SPEND",
+      "source": ["D17-v1", "D01-v1", "D02-v1", "FIT-01", "FIT-02"],
+      "given": { "sustainableIncome": "6000000", "totalObligations": "2000000", "declaredCash": "250000", "unpaidObligations": "50000", "goalHeld": "0", "cardReserve": "0" },
+      "onboardingExpected": { "openingBudget": "200000", "cash": "250000", "marginBudget": "200000", "marginLiquid": "200000", "safePool": "200000", "health": "A" },
+      "spend": { "amount": "10000", "method": "cash" },
+      "spendExpected": { "openingBudget": "200000", "spent": "10000", "cash": "240000", "marginBudget": "190000", "marginLiquid": "190000", "safePool": "190000", "health": "A" }
+    },
+    {
+      "id": "D17-NEGATIVE-OPENING-MARGIN",
+      "source": ["D17-v1", "D01-v1", "D02-v1", "FR-ONB-04"],
+      "given": { "sustainableIncome": "6000000", "totalObligations": "2000000", "declaredCash": "40000", "unpaidObligations": "50000", "goalHeld": "0", "cardReserve": "0" },
+      "onboardingExpected": { "openingBudget": "0", "cash": "40000", "marginBudget": "0", "marginLiquid": "-10000", "safePool": "0", "health": "C" }
+    },
+    {
+      "id": "D17-EXACT-UNSAFE-JS-INTEGER",
+      "source": ["D17-v1", "PH-06 exact paise transport"],
+      "given": { "sustainableIncome": "9007199254740993", "totalObligations": "0", "declaredCash": "9007199254740993", "unpaidObligations": "0", "goalHeld": "0", "cardReserve": "0" },
+      "onboardingExpected": { "openingBudget": "9007199254740993", "cash": "9007199254740993", "marginBudget": "9007199254740993", "marginLiquid": "9007199254740993", "safePool": "9007199254740993", "health": "A" },
+      "spend": { "amount": "1", "method": "cash" },
+      "spendExpected": { "openingBudget": "9007199254740993", "spent": "1", "cash": "9007199254740992", "marginBudget": "9007199254740992", "marginLiquid": "9007199254740992", "safePool": "9007199254740992", "health": "A" }
+    }
+  ]
+}

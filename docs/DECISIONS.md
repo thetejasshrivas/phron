@@ -241,16 +241,16 @@ Owner: PHRON-00 Lead
 ## D11
 
 Decision ID: D11
-Status: OPEN
+Status: APPROVED
 Source clauses: 20;32
 Issue: Schema lacks ownership and ledger structures needed by requirements
 Counterexample: One mixed payment needs multiple allocations under one stable ID
 Affected steps and gates: PH-11/12/15/17/24; dependent gate remains blocked
 Proposed resolution: Prepare schema supplement: auth-linked users, profile uniqueness, cycle/history, operation replay hash, adjustments, goal reserves, settlement allocations and ownership constraints; purge dependencies explicitly. NON-NORMATIVE.
 Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
+Exact approved wording: items1–7 under Exact proposed approval text in [D11-v1 schema supplement](../supabase/proposals/D11-v1.md).
+Founder approval and date IST: explicit Tejas reply “Approve D11-v1 exactly as proposed”,2026-10-06 IST; exact approval time not supplied.
+Amendment version or implementation-only classification: D11-v1 scoped schema supplement; no remote migration authorization and no adjacent semantic approval.
 Required tests: CRUD/RLS/RPC, cross-user denial, purge and races; NOT_RUN
 Owner: PHRON-00 Lead
 
@@ -337,17 +337,17 @@ Owner: PHRON-00 Lead
 ## D17
 
 Decision ID: D17
-Status: OPEN
+Status: APPROVED — D17-v1
 Source clauses: mid-cycle onboarding;18.1
 Issue: Declared opening budget not persistently specified
 Counterexample: ₹50k declared/10 days then ₹100 logged switches to baseline ₹39,900
 Affected steps and gates: PH-10/11/12/17; dependent gate remains blocked
-Proposed resolution: Persist declared initial-cycle budget until explicit rollover. NON-NORMATIVE.
+Proposed resolution: Superseded by the exact approved D17-v1 wording linked below.
 Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
-Required tests: AC-ONB-01/02;FIT-01/02; NOT_RUN
+Exact approved wording: [D17-v1](amendments/D17-v1.md), section “Exact approved wording”, reproduced unchanged from the approval question.
+Founder approval and date IST: “Approve D17-v1 exactly as proposed” — 2026-10-06 IST.
+Amendment version or implementation-only classification: D17-v1 scoped requirement amendment; frozen PRD unchanged.
+Required tests: AC-ONB-01/02;FIT-01/02; NOT_RUN for persistence; approval does not establish test evidence.
 Owner: PHRON-00 Lead
 
 ## D18
@@ -492,4 +492,19 @@ Exact approved wording: NONE
 Founder approval and date IST: NONE
 Amendment version or implementation-only classification: NONE
 Required tests: FIT-01/03/09; insufficient declared cash; NOT_RUN
+Owner: PHRON-00 Lead
+
+## D27
+
+Decision ID: D27
+Status: APPROVED — D27-v1
+Source clauses: FR-ONB-01; FR-BUCKET-01; AC-BUCKET-01; §18.3 Baseline_Weight_i; D07a-v1
+Issue: Three lifestyle taps are required, but their options and mapping to starter weights are unspecified. AC-BUCKET-01 gives the concrete 30/25/20/15/10 example, not a tap-dependent mapping.
+Counterexample: Two users choose different dining/transit lifestyles; the source does not determine whether either differs from the example weights.
+Affected steps and gates: PH-11 full onboarding mapping; PH-12 onboarding UX. Independent persistence/security preparation may continue.
+Proposed resolution: Superseded by explicit scoped approval below; no lifestyle taps in P0 Step 1.
+Exact approved wording: [D27-v1](amendments/D27-v1.md), section “Exact approved wording”.
+Founder approval and date IST: Tejas: “I approve D27 with the exact proposed wording” followed by the entire quoted rule — 2026-10-06 IST.
+Amendment version or implementation-only classification: D27-v1 scoped amendment to FR-ONB-01/FR-BUCKET-01; frozen PRD unchanged.
+Required tests: AC-BUCKET-01 baseline; one-paisa pool; D07a conservation/ties. NOT_RUN at approval.
 Owner: PHRON-00 Lead

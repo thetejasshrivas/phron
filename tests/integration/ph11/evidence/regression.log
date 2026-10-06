@@ -1,0 +1,26 @@
+
+> phron@0.1.0 test
+> npm run test:unit && npm run test:integration
+
+
+> phron@0.1.0 test:unit
+> jest --config jest.config.mjs --selectProjects unit --runInBand
+
+Running one project: unit
+
+Test Suites: 6 passed, 6 total
+Tests:       156 passed, 156 total
+Snapshots:   0 total
+Time:        0.596 s
+Ran all test suites.
+
+> phron@0.1.0 test:integration
+> jest --config jest.config.mjs --selectProjects integration --runInBand
+
+Running one project: integration
+
+Test Suites: 2 passed, 2 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        0.375 s
+Ran all test suites.
