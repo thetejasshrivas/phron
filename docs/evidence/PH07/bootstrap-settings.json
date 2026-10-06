@@ -1,0 +1,14 @@
+{
+  "workspace": "tts-1e31",
+  "plan": "hobby",
+  "project": "phron",
+  "framework": "nextjs",
+  "nodeVersion": "24.x",
+  "buildCommand": "npm run build:preview",
+  "installCommand": "npm install --global npm@11.19.0 --ignore-scripts --no-audit --no-fund && npm ci --include=dev --ignore-scripts --no-audit --no-fund",
+  "ssoProtection": {
+    "deploymentType": "prod_deployment_urls_and_all_previews"
+  },
+  "configuredEnvNames": [],
+  "checkedAt": "2026-10-06T11:43:54.6573322+05:30"
+}

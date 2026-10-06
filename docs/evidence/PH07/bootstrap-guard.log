@@ -1,0 +1,44 @@
+env=preview flag= exit=0
+
+> phron@0.1.0 build:preview
+> node scripts/vercel-build.mjs --check-only
+
+Preview build preflight: Node v24.21.0; npm 11.19.0.
+env=production flag= exit=1
+
+> phron@0.1.0 build:preview
+> node scripts/vercel-build.mjs --check-only
+
+file:///W:/AI%20Product%20Sprint/Phron/scripts/vercel-build.mjs:8
+  throw new Error("PH-07 requires Preview or an explicitly authorized skeleton bootstrap.");
+        ^
+
+Error: PH-07 requires Preview or an explicitly authorized skeleton bootstrap.
+    at file:///W:/AI%20Product%20Sprint/Phron/scripts/vercel-build.mjs:8:9
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.21.0
+env=production flag=1 exit=0
+
+> phron@0.1.0 build:preview
+> node scripts/vercel-build.mjs --check-only
+
+Preview build preflight: Node v24.21.0; npm 11.19.0.
+env=development flag=1 exit=1
+
+> phron@0.1.0 build:preview
+> node scripts/vercel-build.mjs --check-only
+
+file:///W:/AI%20Product%20Sprint/Phron/scripts/vercel-build.mjs:8
+  throw new Error("PH-07 requires Preview or an explicitly authorized skeleton bootstrap.");
+        ^
+
+Error: PH-07 requires Preview or an explicitly authorized skeleton bootstrap.
+    at file:///W:/AI%20Product%20Sprint/Phron/scripts/vercel-build.mjs:8:9
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.21.0
