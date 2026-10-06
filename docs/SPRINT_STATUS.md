@@ -22,13 +22,13 @@ deployment: {preview: NONE, production: NONE, commit: NONE}
 migration_state: NOT_APPLIED
 ownership_transfers: []
 requests_for_other_owners: []
-next_action: PH-07 dashboard action 3 — identify the verified Hobby workspace slug; no project import/deployment yet
-last_updated_ist: 2026-10-06T11:13:11+05:30
+next_action: PH-07 — explicit approval for pinned CLI setup and phron Preview in workspace tts-1e31; authenticate/verify target before upload
+last_updated_ist: 2026-10-06T11:19:31+05:30
 ```
 
 PH-07 restricted Preview candidate d519f66b363ec324cc88fcd63711bc2a5319c12c is prepared on the existing main branch. Local preview build, Production guard refusal, zero-warning lint, strict types, two installed-Edge E2E tests, safe HTTP/private-path probes, upload rules, unchanged lock and all five source hashes PASS. Runtime Node 24.21.0/npm 11.19.0. Follow-up record-only commit stores this evidence; inspect Git tip and candidate before upload.
 
-Tejas explicitly reports Hobby from Billing action 1 and all Usage metrics zero, new account, no paused/exceeded resources or limits from action 2. This is operator-reported plan/quota evidence. Dashboard action 3 identifies the same workspace slug; target identity/settings/protection and full deployment eligibility remain pending. No project link, CLI installation, Git remote, provider variables, upload or deployment. Preview URL/ID/commit remain NONE; no live smoke. Preparation authorized, deployment authorization still PENDING. G1 remains NOT_RUN; PH-07 is not COMPLETE and no next guided step has been entered. Source decisions and eight approvals unchanged; D25 hosting partially checked, all provider checks remain open. See DEPLOYMENT and PH07/PREFLIGHT.
+Tejas explicitly reports Hobby from Billing action 1 and all Usage metrics zero, new account, no paused/exceeded resources or limits from action 2. This is operator-reported plan/quota evidence. Action 3 reply “complete tts-1e31” is interpreted as workspace slug tts-1e31; approval will explicitly confirm that target. Planned project phron; authenticated scope/settings/protection and remote execution remain pending. Pinned Vercel CLI62.4.0 metadata verified read-only (Node >=20); not installed. No project link, CLI installation, Git remote, provider variables, upload or deployment. Preview URL/ID/commit remain NONE; no live smoke. Preparation authorized, deployment authorization still PENDING. G1 remains NOT_RUN; PH-07 is not COMPLETE and no next guided step has been entered. Source decisions and eight approvals unchanged; D25 hosting partially checked, all provider checks remain open. See DEPLOYMENT and PH07/PREFLIGHT.
 
 ## PH-06 completed record
 
