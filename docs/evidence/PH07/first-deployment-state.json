@@ -1,0 +1,12 @@
+{
+  "id": "dpl_FsDnQRXo7VnCGQNQiNFjvBsHdYPH",
+  "url": "phron-e0f2udypq-tts-1e31.vercel.app",
+  "target": "production",
+  "readyState": "ERROR",
+  "createdAt": 1791266314934,
+  "projectName": "phron",
+  "commit": "f68bd6e5e66c0472bf8a5257da1f265b098c18cc",
+  "branch": "main",
+  "errorCode": "module_not_found",
+  "checkedAt": "2026-10-06T11:30:03.2805654+05:30"
+}

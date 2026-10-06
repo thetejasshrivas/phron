@@ -1,0 +1,297 @@
+{
+  "framework": {
+    "name": "Next.js",
+    "slug": "nextjs"
+  },
+  "basePath": "W:\\AI Product Sprint\\Phron",
+  "fileCount": 24,
+  "totalSize": 359240,
+  "ignoredCount": 30,
+  "ignored": [
+    ".env.example",
+    ".git",
+    ".gitattributes",
+    ".github",
+    ".gitignore",
+    ".next",
+    ".nvmrc",
+    ".swc",
+    ".vercel",
+    ".vercelignore",
+    "AGENTS.md",
+    "PHRON_PRD_v1.2.1_FROZEN.txt",
+    "Phron Master discussion.txt",
+    "README.md",
+    "coverage",
+    "docs",
+    "eslint.config.mjs",
+    "jest.config.mjs",
+    "jest.domain.config.mjs",
+    "next-env.d.ts",
+    "node_modules",
+    "playwright-report",
+    "playwright.config.ts",
+    "scripts\\domain-coverage.mjs",
+    "scripts\\preview-smoke.mjs",
+    "scripts\\verify-sources.mjs",
+    "supabase",
+    "test-results",
+    "tests",
+    "tsconfig.tsbuildinfo"
+  ],
+  "directories": [
+    {
+      "path": "package-lock.json",
+      "fileCount": 1,
+      "size": 345176
+    },
+    {
+      "path": "src",
+      "fileCount": 15,
+      "size": 9917
+    },
+    {
+      "path": "package.json",
+      "fileCount": 1,
+      "size": 1633
+    },
+    {
+      "path": "scripts",
+      "fileCount": 2,
+      "size": 1333
+    },
+    {
+      "path": "tsconfig.json",
+      "fileCount": 1,
+      "size": 722
+    },
+    {
+      "path": "vercel.json",
+      "fileCount": 1,
+      "size": 281
+    },
+    {
+      "path": "next.config.ts",
+      "fileCount": 1,
+      "size": 119
+    },
+    {
+      "path": ".npmrc",
+      "fileCount": 1,
+      "size": 59
+    },
+    {
+      "path": "public",
+      "fileCount": 1,
+      "size": 0
+    }
+  ],
+  "largestFiles": [
+    {
+      "path": "package-lock.json",
+      "size": 345176,
+      "mode": 33206,
+      "sha": "8ce9dfb1e81ff25855e7504bf98e00c089578ab8"
+    },
+    {
+      "path": "src/contracts/snapshot.ts",
+      "size": 4161,
+      "mode": 33206,
+      "sha": "2002fea18ca31ccc384fedc212e28e8a50a5812f"
+    },
+    {
+      "path": "src/contracts/boundaries.ts",
+      "size": 2215,
+      "mode": 33206,
+      "sha": "d15cdaf59783c488f5f809b42319f8282baf5296"
+    },
+    {
+      "path": "package.json",
+      "size": 1633,
+      "mode": 33206,
+      "sha": "3c62bb0cd1393bba4bf1ca5b4bf39355b329dc33"
+    },
+    {
+      "path": "src/app/globals.css",
+      "size": 1119,
+      "mode": 33206,
+      "sha": "bf6dd14d207f72a1bd855904c8df1e4d8cea517a"
+    },
+    {
+      "path": "scripts/vercel-build.mjs",
+      "size": 905,
+      "mode": 33206,
+      "sha": "3e03444904e0658a97ce34f247b6e06b5eea55ce"
+    },
+    {
+      "path": "src/contracts/money.ts",
+      "size": 876,
+      "mode": 33206,
+      "sha": "97f2b02e009a6a294329e626be46275ccc70d571"
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 722,
+      "mode": 33206,
+      "sha": "11d9f9a549e9148849f12f1cec9877279e170135"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "size": 513,
+      "mode": 33206,
+      "sha": "1958add87c7d393a52b099fea688b834c2a51617"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "size": 506,
+      "mode": 33206,
+      "sha": "774b251936ca24374cee922dda651997a831db32"
+    }
+  ],
+  "files": [
+    {
+      "path": ".npmrc",
+      "size": 59,
+      "mode": 33206,
+      "sha": "c8a709ecbf599550c722546509583395a5ff142c"
+    },
+    {
+      "path": "next.config.ts",
+      "size": 119,
+      "mode": 33206,
+      "sha": "575b91a99f14632a7995a48fcdf5a69524911af0"
+    },
+    {
+      "path": "package-lock.json",
+      "size": 345176,
+      "mode": 33206,
+      "sha": "8ce9dfb1e81ff25855e7504bf98e00c089578ab8"
+    },
+    {
+      "path": "package.json",
+      "size": 1633,
+      "mode": 33206,
+      "sha": "3c62bb0cd1393bba4bf1ca5b4bf39355b329dc33"
+    },
+    {
+      "path": "public/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "scripts/next.mjs",
+      "size": 428,
+      "mode": 33206,
+      "sha": "6897c062b84967916167ae0c557c2a434d93d716"
+    },
+    {
+      "path": "scripts/vercel-build.mjs",
+      "size": 905,
+      "mode": 33206,
+      "sha": "3e03444904e0658a97ce34f247b6e06b5eea55ce"
+    },
+    {
+      "path": "src/app/api/health/route.ts",
+      "size": 325,
+      "mode": 33206,
+      "sha": "e24cc6370dbf213ff506d8383b5dee82cc92581d"
+    },
+    {
+      "path": "src/app/globals.css",
+      "size": 1119,
+      "mode": 33206,
+      "sha": "bf6dd14d207f72a1bd855904c8df1e4d8cea517a"
+    },
+    {
+      "path": "src/app/icon.svg",
+      "size": 202,
+      "mode": 33206,
+      "sha": "9f21c6b9476110182e1ff1ed43009853a29c1495"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "size": 506,
+      "mode": 33206,
+      "sha": "774b251936ca24374cee922dda651997a831db32"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "size": 513,
+      "mode": 33206,
+      "sha": "1958add87c7d393a52b099fea688b834c2a51617"
+    },
+    {
+      "path": "src/client/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/components/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/contracts/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/contracts/boundaries.ts",
+      "size": 2215,
+      "mode": 33206,
+      "sha": "d15cdaf59783c488f5f809b42319f8282baf5296"
+    },
+    {
+      "path": "src/contracts/money.ts",
+      "size": 876,
+      "mode": 33206,
+      "sha": "97f2b02e009a6a294329e626be46275ccc70d571"
+    },
+    {
+      "path": "src/contracts/snapshot.ts",
+      "size": 4161,
+      "mode": 33206,
+      "sha": "2002fea18ca31ccc384fedc212e28e8a50a5812f"
+    },
+    {
+      "path": "src/domain/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/lib/supabase/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/server/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/styles/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 722,
+      "mode": 33206,
+      "sha": "11d9f9a549e9148849f12f1cec9877279e170135"
+    },
+    {
+      "path": "vercel.json",
+      "size": 281,
+      "mode": 33206,
+      "sha": "88445f76fc07631afe9c6e1a3934bb5530561982"
+    }
+  ]
+}

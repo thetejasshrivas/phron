@@ -1,6 +1,18 @@
 # Handoff
 
+## Authoritative current state — PH-07 target blocker
+
+Approved Preview source tip f68bd6e5e66c0472bf8a5257da1f265b098c18cc; subsequent root-ignore/evidence record commit follows. App/lock/frozen source unchanged; guard still refuses Production. Login COMPLETE, authenticated tts-1e31 Hobby confirmed. phron created/linked; settings/protection/empty configured env verified in account-target.json/project-settings.json. CLI-generated OIDC .env.local removed without reading values; .gitignore restored.
+
+First attempt dpl_FsDnQRXo7VnCGQNQiNFjvBsHdYPH is target Production, state ERROR, missing scripts/vercel-build.mjs, NOT a working release. No remote app build/live smoke, G1 unpassed. Actual CLI file selection corrected from6 to24 by !src/!public/!scripts without trailing slash; permanent .vercelignore correction prepared, private sources excluded. Automatic approval review rejected retry before execution because identical Preview command can again produce Production. No bypass or second upload. Source/evidence: PH07/DEPLOYMENT_BLOCKER.md, deploy.log, first-deployment-state.json, upload-dry-before/corrected.json.
+
+Next one action: explicit PH07-HOST-01 choice — retain Preview-only and hold for supported guarantee, or approve one protected zero-cost inert-skeleton Production bootstrap followed by real Preview. Proposed PRODUCTION_BOOTSTRAP.patch is NOT_APPLIED, reviewable; never infer approval, disable auth, deploy paid options or claim product readiness. Existing Preview authorization remains valid; new approval is required only for the Production scope exception. Isolated CLI auth persists under elevated TEMP/phron-vercel-cli-62.4.0/auth; never read/print credentials. Do not repeat completed login/account/project work. Earlier state below retained as history.
+
 ## Current — PH-07 prepared, awaiting account checks and authorization
+
+Latest update recorded 2026-10-06T11:21:29+05:30: Tejas explicitly approved Preview setup/deployment, main f68bd6e5e66c0472bf8a5257da1f265b098c18cc, workspace tts-1e31/project phron. Do not request repeated approval. CLI62.4.0 installed under the elevated process's TEMP/phron-vercel-cli-62.4.0 (285 packages, no lifecycle scripts, no app/lock change); normal sandbox TEMP differs, so run CLI using the elevated shell's TEMP. Authentication config is isolated in that cache's auth directory; do not print/read credential contents. Set VERCEL_TELEMETRY_DISABLED=1 for CLI calls (DO_NOT_TRACK was not the recognized opt-out; actual opt-out verified from installed code).
+
+Browser action 4 pending: complete the device-login link shown in chat; do not store device code in repository. Login exec session 17365 can be resumed with write_stdin; do not spam spinner polls. If expired, restart only the approved login and supply a fresh browser action. After login, verify only target slug/plan/settings/env names without raw account/secret output, then create/link/configure phron and deploy Preview. No upload/project creation yet. Docs-only changes currently uncommitted to preserve the approved Git source tip f68bd6e for upload. Commit records after deployment or intentional stop; all source hashes rechecked PASS. This update supersedes pending approval/CLI statements below.
 
 From / To: PHRON-00 Lead / PHRON-00 Lead (continue PH-07; do not enter PH-08)
 Repository or worktree absolute path: W:\AI Product Sprint\Phron

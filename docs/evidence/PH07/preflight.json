@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "checkedAtUTC": "2026-10-06T05:42:13.862Z",
+  "checkedAtUTC": "2026-10-06T06:07:02.996Z",
   "repository": "W:/AI Product Sprint/Phron",
   "branch": "main",
   "baselineCommit": "e765c67e8ac1d492858d17004035ac38784ed616",
@@ -9,7 +9,7 @@
   "lockSha256": "1b2fc53515393bedf555e1bfe48109b6d7c48293256ada25767d41650a4731d2",
   "lockUnchanged": true,
   "configurationSha256": "a10de53f835228628a90c61bc556638a9b4ea1a1adb0a12bb6a3a61c82e38968",
-  "uploadRulesSha256": "b7342e8d6f30fad14ae6a32c8e53c4c94af12a0bd494ec90f39ce97083ff3511",
+  "uploadRulesSha256": "d92bd98e713013b5cccaae772410835492d58d85d97cd1b11f00aea714ab3573",
   "uploadChecks": {
     "excluded": 12,
     "required": 12
@@ -19,6 +19,6 @@
   ],
   "privateDiagnostics": false,
   "financeWrites": false,
-  "accountVerification": "Tejas reports Hobby; quota/settings/authorization pending",
-  "vercelBuildAndLiveSmoke": "NOT_RUN"
+  "accountVerification": "See account-target.json, project-settings.json and AUTHORIZATION.md for dated account/approval evidence",
+  "vercelBuildAndLiveSmoke": "See first-deployment-state.json and DEPLOYMENT_BLOCKER.md; no successful remote app build or live smoke"
 }

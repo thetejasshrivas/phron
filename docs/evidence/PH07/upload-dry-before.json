@@ -1,0 +1,150 @@
+{
+  "framework": {
+    "name": "Next.js",
+    "slug": "nextjs"
+  },
+  "basePath": "W:\\AI Product Sprint\\Phron",
+  "fileCount": 6,
+  "totalSize": 347990,
+  "ignoredCount": 30,
+  "ignored": [
+    ".env.example",
+    ".git",
+    ".gitattributes",
+    ".github",
+    ".gitignore",
+    ".next",
+    ".nvmrc",
+    ".swc",
+    ".vercel",
+    ".vercelignore",
+    "AGENTS.md",
+    "PHRON_PRD_v1.2.1_FROZEN.txt",
+    "Phron Master discussion.txt",
+    "README.md",
+    "coverage",
+    "docs",
+    "eslint.config.mjs",
+    "jest.config.mjs",
+    "jest.domain.config.mjs",
+    "next-env.d.ts",
+    "node_modules",
+    "playwright-report",
+    "playwright.config.ts",
+    "public",
+    "scripts",
+    "src",
+    "supabase",
+    "test-results",
+    "tests",
+    "tsconfig.tsbuildinfo"
+  ],
+  "directories": [
+    {
+      "path": "package-lock.json",
+      "fileCount": 1,
+      "size": 345176
+    },
+    {
+      "path": "package.json",
+      "fileCount": 1,
+      "size": 1633
+    },
+    {
+      "path": "tsconfig.json",
+      "fileCount": 1,
+      "size": 722
+    },
+    {
+      "path": "vercel.json",
+      "fileCount": 1,
+      "size": 281
+    },
+    {
+      "path": "next.config.ts",
+      "fileCount": 1,
+      "size": 119
+    },
+    {
+      "path": ".npmrc",
+      "fileCount": 1,
+      "size": 59
+    }
+  ],
+  "largestFiles": [
+    {
+      "path": "package-lock.json",
+      "size": 345176,
+      "mode": 33206,
+      "sha": "8ce9dfb1e81ff25855e7504bf98e00c089578ab8"
+    },
+    {
+      "path": "package.json",
+      "size": 1633,
+      "mode": 33206,
+      "sha": "3c62bb0cd1393bba4bf1ca5b4bf39355b329dc33"
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 722,
+      "mode": 33206,
+      "sha": "11d9f9a549e9148849f12f1cec9877279e170135"
+    },
+    {
+      "path": "vercel.json",
+      "size": 281,
+      "mode": 33206,
+      "sha": "88445f76fc07631afe9c6e1a3934bb5530561982"
+    },
+    {
+      "path": "next.config.ts",
+      "size": 119,
+      "mode": 33206,
+      "sha": "575b91a99f14632a7995a48fcdf5a69524911af0"
+    },
+    {
+      "path": ".npmrc",
+      "size": 59,
+      "mode": 33206,
+      "sha": "c8a709ecbf599550c722546509583395a5ff142c"
+    }
+  ],
+  "files": [
+    {
+      "path": ".npmrc",
+      "size": 59,
+      "mode": 33206,
+      "sha": "c8a709ecbf599550c722546509583395a5ff142c"
+    },
+    {
+      "path": "next.config.ts",
+      "size": 119,
+      "mode": 33206,
+      "sha": "575b91a99f14632a7995a48fcdf5a69524911af0"
+    },
+    {
+      "path": "package-lock.json",
+      "size": 345176,
+      "mode": 33206,
+      "sha": "8ce9dfb1e81ff25855e7504bf98e00c089578ab8"
+    },
+    {
+      "path": "package.json",
+      "size": 1633,
+      "mode": 33206,
+      "sha": "3c62bb0cd1393bba4bf1ca5b4bf39355b329dc33"
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 722,
+      "mode": 33206,
+      "sha": "11d9f9a549e9148849f12f1cec9877279e170135"
+    },
+    {
+      "path": "vercel.json",
+      "size": 281,
+      "mode": 33206,
+      "sha": "88445f76fc07631afe9c6e1a3934bb5530561982"
+    }
+  ]
+}

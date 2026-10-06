@@ -37,8 +37,8 @@ const report = {
   configurationSha256: hash(readFileSync("vercel.json")), uploadRulesSha256: hash(readFileSync(".vercelignore")),
   uploadChecks: { excluded: forbidden.length, required: required.length },
   publicApiRoutes: ["GET /api/health"], privateDiagnostics: false, financeWrites: false,
-  accountVerification: "Tejas reports Hobby; quota/settings/authorization pending",
-  vercelBuildAndLiveSmoke: "NOT_RUN",
+  accountVerification: "See account-target.json, project-settings.json and AUTHORIZATION.md for dated account/approval evidence",
+  vercelBuildAndLiveSmoke: "See first-deployment-state.json and DEPLOYMENT_BLOCKER.md; no successful remote app build or live smoke",
 };
 writeFileSync("docs/evidence/PH07/preflight.json", `${JSON.stringify(report, null, 2)}\n`);
 console.log("PASS: config, unchanged lock, upload exclusions/inclusions and safe route inspection.");

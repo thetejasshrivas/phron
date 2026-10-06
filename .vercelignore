@@ -6,9 +6,9 @@
 !tsconfig.json
 !next.config.ts
 !vercel.json
-!src/
-!public/
-!scripts/
+!src
+!public
+!scripts
 scripts/*
 !scripts/next.mjs
 !scripts/vercel-build.mjs

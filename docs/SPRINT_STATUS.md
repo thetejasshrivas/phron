@@ -10,7 +10,7 @@ dirty_files: []
 active_chat: PHRON-00 Lead
 phase: 1
 current_step: PH-07
-step_state: PREPARED_AWAITING_ACCOUNT_AND_AUTHORIZATION
+step_state: BLOCKED_TARGET_GUARANTEE
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
 approved_amendments: [D01-v1, D02-v1, D03-v1, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1]
 completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06]
@@ -18,17 +18,21 @@ passed_gates: [G0A]
 founder_reviews: {V1: PENDING, V2: PENDING, V3: PENDING}
 blocking_decisions: [D05-extension, D07-card, D07-funding, D08, D09, D10, D11, D12, D13, D14, D15, D16, D17, D18, D19, D20, D21, D22, D23, D24, D25, D26]
 latest_evidence: docs/evidence/PH07/PREFLIGHT.md
-deployment: {preview: NONE, production: NONE, commit: NONE}
+deployment: {preview: NONE, production: ERROR_ATTEMPT_ONLY, commit: f68bd6e5e66c0472bf8a5257da1f265b098c18cc}
 migration_state: NOT_APPLIED
 ownership_transfers: []
 requests_for_other_owners: []
-next_action: PH-07 — explicit approval for pinned CLI setup and phron Preview in workspace tts-1e31; authenticate/verify target before upload
-last_updated_ist: 2026-10-06T11:19:31+05:30
+next_action: PH07-HOST-01 — retain Preview-only scope or explicitly approve protected skeleton bootstrap exception
+last_updated_ist: 2026-10-06T11:30:03+05:30
 ```
 
 PH-07 restricted Preview candidate d519f66b363ec324cc88fcd63711bc2a5319c12c is prepared on the existing main branch. Local preview build, Production guard refusal, zero-warning lint, strict types, two installed-Edge E2E tests, safe HTTP/private-path probes, upload rules, unchanged lock and all five source hashes PASS. Runtime Node 24.21.0/npm 11.19.0. Follow-up record-only commit stores this evidence; inspect Git tip and candidate before upload.
 
 Tejas explicitly reports Hobby from Billing action 1 and all Usage metrics zero, new account, no paused/exceeded resources or limits from action 2. This is operator-reported plan/quota evidence. Action 3 reply “complete tts-1e31” is interpreted as workspace slug tts-1e31; approval will explicitly confirm that target. Planned project phron; authenticated scope/settings/protection and remote execution remain pending. Pinned Vercel CLI62.4.0 metadata verified read-only (Node >=20); not installed. No project link, CLI installation, Git remote, provider variables, upload or deployment. Preview URL/ID/commit remain NONE; no live smoke. Preparation authorized, deployment authorization still PENDING. G1 remains NOT_RUN; PH-07 is not COMPLETE and no next guided step has been entered. Source decisions and eight approvals unchanged; D25 hosting partially checked, all provider checks remain open. See DEPLOYMENT and PH07/PREFLIGHT.
+
+Current PH-07 authorization update: Tejas explicitly approved temporary CLI62.4.0 setup, login, creation/link of phron in tts-1e31 and protected Preview of main f68bd6e5e66c0472bf8a5257da1f265b098c18cc. CLI installed in isolated temporary cache, version confirmed, no app/lock change. Device login waiting for browser action 4. This supersedes the pending-authorization paragraph above; G1 and live smoke remain NOT_RUN. Working Git tip remains the approved commit; current documentation-only updates stay uncommitted until upload so the authorized source commit is preserved.
+
+Current authoritative blocker update: login COMPLETE; authenticated Hobby target and prepared project settings/protection VERIFIED. First Preview request returned Production target and ERROR (missing uploaded script); no successful app build/health. CLI directory selection corrected and actual24-file dry manifest verified; application/lock/frozen sources/guard unchanged. Automatic approval review rejected another standard retry due to unauthorized Production risk, before execution; no second upload or bypass. PH-07 incomplete, G1 NOT_RUN. PH07-HOST-01 OPEN, proposed bootstrap patch NOT_APPLIED. A new exception needs explicit approval; existing Preview approval remains valid. See PH07/DEPLOYMENT_BLOCKER.md. Prior waiting/pending statements are historical.
 
 ## PH-06 completed record
 

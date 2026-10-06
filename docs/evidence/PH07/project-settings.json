@@ -1,0 +1,15 @@
+{
+  "workspace": "tts-1e31",
+  "project": "phron",
+  "framework": "nextjs",
+  "nodeVersion": "24.x",
+  "buildCommand": "npm run build:preview",
+  "installCommand": "npm install --global npm@11.19.0 --ignore-scripts --no-audit --no-fund && npm ci --include=dev --ignore-scripts --no-audit --no-fund",
+  "rootDirectory": null,
+  "outputDirectory": null,
+  "ssoProtection": "prod_deployment_urls_and_all_previews",
+  "configuredEnvNames": [],
+  "passwordProtectionEnabled": false,
+  "generatedLocalEnvRemoved": true,
+  "checkedAt": "2026-10-06T11:28:01.4594032+05:30"
+}
