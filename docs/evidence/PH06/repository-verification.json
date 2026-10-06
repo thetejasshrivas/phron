@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "exact_direct_pins": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.117.2",
+    "next": "16.3.8",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "@jest/globals": "30.5.2",
+    "@playwright/test": "1.63.0",
+    "@types/jest": "30.0.0",
+    "@types/node": "24.19.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.8",
+    "fast-check": "4.10.2",
+    "jest": "30.5.2",
+    "typescript": "6.0.2"
+  },
+  "lockfile_version": 3,
+  "single_lockfile": true,
+  "all_locked_packages_have_integrity": true,
+  "sources_and_git_blobs_unchanged": true,
+  "existing_files_changed_only_within_authorized_docs": [
+    "docs/CONTRACTS.md",
+    "docs/DEPENDENCIES.md",
+    "docs/OWNERSHIP.md"
+  ],
+  "env_example_empty_values": true,
+  "real_env_ignored": true
+}

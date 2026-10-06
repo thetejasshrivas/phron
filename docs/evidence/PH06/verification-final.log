@@ -1,0 +1,90 @@
+
+> phron@0.1.0 check
+> npm run verify:sources && npm run lint && npm run typecheck && npm test && npm run test:contracts:coverage && npm run build
+
+
+> phron@0.1.0 verify:sources
+> node scripts/verify-sources.mjs
+
+PASS: all five source hashes match the source manifest.
+
+> phron@0.1.0 lint
+> eslint . --max-warnings=0
+
+
+> phron@0.1.0 typecheck
+> tsc --noEmit
+
+
+> phron@0.1.0 test
+> npm run test:unit && npm run test:integration
+
+
+> phron@0.1.0 test:unit
+> jest --config jest.config.mjs --selectProjects unit --runInBand
+
+Running one project: unit
+
+Test Suites: 3 passed, 3 total
+Tests:       74 passed, 74 total
+Snapshots:   0 total
+Time:        0.834 s
+Ran all test suites.
+
+> phron@0.1.0 test:integration
+> jest --config jest.config.mjs --selectProjects integration --runInBand
+
+Running one project: integration
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.363 s
+Ran all test suites.
+
+> phron@0.1.0 test:contracts:coverage
+> jest --config jest.config.mjs --selectProjects unit --runInBand --coverage
+
+Running one project: unit
+---------------|---------|----------|---------|---------|-------------------
+File           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+---------------|---------|----------|---------|---------|-------------------
+All files      |     100 |      100 |     100 |     100 |                   
+ boundaries.ts |     100 |      100 |     100 |     100 |                   
+ money.ts      |     100 |      100 |     100 |     100 |                   
+ snapshot.ts   |     100 |      100 |     100 |     100 |                   
+---------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 3 passed, 3 total
+Tests:       74 passed, 74 total
+Snapshots:   0 total
+Time:        1.023 s
+Ran all test suites.
+
+> phron@0.1.0 build
+> node scripts/next.mjs build
+
+▲ Next.js 16.3.8 (Turbopack)
+✓ Running next.config.ts took 30ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 454ms
+  Running TypeScript ...
+  Finished TypeScript in 1782ms ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/4) ...
+  Generating static pages using 6 workers (1/4) 
+  Generating static pages using 6 workers (2/4) 
+  Generating static pages using 6 workers (3/4) 
+✓ Generating static pages using 6 workers (4/4) in 545ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/health
+└ ○ /icon.svg
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

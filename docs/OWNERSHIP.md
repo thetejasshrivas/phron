@@ -2,6 +2,8 @@
 
 Registration only; no new chats created, no parallel work launched, no paths transferred. Lead is active. Owners follow Part 12/13 and the playbook step schedule. Each owner maintains its own handoff; only active Lead consolidates SPRINT_STATUS and DECISIONS. Owner-specific records need explicit narrow transfers before another owner edits them after work starts.
 
+PH-06 narrow foundation scope (explicit user authorization): Lead initializes the root App Router landing page, safe health handler, all owner folder placeholders, contract unit/health integration/browser smoke tests and pipeline. Lead appends actual PH-06 evidence to TEST_RESULTS. This scope does not transfer financial Engine, Platform schema/auth/AI or Experience financial UI ownership. No other writer was active; later feature work follows the ownership below. Git initialized locally on main; no remote added.
+
 ## PHRON-00 Lead
 
 Owned paths: Root configuration, dependencies/lockfile/CI, src/contracts, scripts, consolidated docs excluding owner-specific records; initial app root

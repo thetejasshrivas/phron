@@ -1,0 +1,47 @@
+
+> phron@0.1.0 test:unit
+> jest --config jest.config.mjs --selectProjects unit --runInBand --testNamePattern=runtime coercion
+
+Running one project: unit
+FAIL unit tests/unit/contracts/money.test.ts
+  ● exact integer paise transport › rejects runtime coercion through encoder 9007199254740992
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+
+
+      at tests/unit/contracts/money.test.ts:66:66
+
+  ● exact integer paise transport › rejects runtime coercion through encoder 1
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+
+
+      at tests/unit/contracts/money.test.ts:66:66
+
+  ● exact integer paise transport › rejects runtime coercion through encoder "1"
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+
+
+      at tests/unit/contracts/money.test.ts:66:66
+
+Test Suites: 1 failed, 2 skipped, 1 of 3 total
+Tests:       3 failed, 69 skipped, 2 passed, 74 total
+Snapshots:   0 total
+Time:        0.422 s
+Ran all test suites with tests matching "runtime coercion".

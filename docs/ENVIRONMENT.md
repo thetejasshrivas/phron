@@ -43,3 +43,8 @@ Paths below were readable during PH-02. Catalog names are exact. Inspection does
 | sites:sites | C:/Users/thete/.codex/plugins/cache/openai-curated-remote/sites/1.0.0-c/skills/sites/SKILL.md | Hosted website workflow | Starter/install/hosting/account/commit writes; not selected for PHRON |
 
 Other visible catalog families include Taste, Ponytail, Figma, PDF, documents and plugin management; visibility alone is not a readability/setup audit. PH-02 executed none of the workflows. PH-04 uses agent-skills:documentation-and-adrs (C:/Users/thete/.codex/plugins/cache/openai-curated-remote/agent-skills/0.6.10/skills/documentation-and-adrs/SKILL.md) to record decisions following this playbook's conventions; documentation writes only.
+
+
+## PH-06 update — 2026-10-06T10:46:17.924496+05:30
+
+Historical PH-02 inventory above is preserved. Workspace now contains a local main Git repository, pinned npm manifest/lockfile and tested Next foundation at c5648a95d30ad24aa34635c0e5cf6b01a79a5db5. No remote or deployment. Clean lockfile installation, installed manifests, lint/types/tests/build and installed-Edge browser smoke locally verified; see docs/evidence/PH06/FINAL.md. No browser/CLI installation, live provider request, account/plan/OAuth/quota check or migration.
