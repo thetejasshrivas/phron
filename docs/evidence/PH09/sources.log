@@ -1,0 +1,5 @@
+
+> phron@0.1.0 verify:sources
+> node scripts/verify-sources.mjs
+
+PASS: all five source hashes match the source manifest.
