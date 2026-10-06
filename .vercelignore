@@ -1,0 +1,18 @@
+# CLI source uploads: allow only the files needed for this Next.js skeleton.
+/*
+!package.json
+!package-lock.json
+!.npmrc
+!tsconfig.json
+!next.config.ts
+!vercel.json
+!src/
+!public/
+!scripts/
+scripts/*
+!scripts/next.mjs
+!scripts/vercel-build.mjs
+# Exclude local credentials even if placed in an otherwise allowed directory.
+**/.env*
+**/*.pem
+**/*.key
