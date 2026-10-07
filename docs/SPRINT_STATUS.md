@@ -5,26 +5,32 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: 0fc19a81fb9168c9c1349e2e342d9138a3581547
-dirty_files: ["src/proxy.ts (prior PH12)", "tests/integration/ph12/proxy.test.ts (prior PH12)", "docs/handoffs/PLATFORM.md (prior PH12)", "tests/integration/ph12/remote-anonymous.mjs and evidence (prior PH12 untracked)", "New Text Document.txt (untouched user work)"]
-active_chat: PHRON-03 Experience
+commit: 798b5b015f532ed87e8101895a2d639f2221e7c8
+dirty_files: ["PH14 QA report/status/handoff/security test/evidence (staged)", "src/proxy.ts (prior PH12)", "tests/integration/ph12/proxy.test.ts (prior PH12)", "docs/handoffs/PLATFORM.md (prior PH12)", "tests/integration/ph12/remote-anonymous.mjs and evidence (prior PH12 untracked)", "New Text Document.txt (untouched user work)"]
+active_chat: PHRON-04 QA
 phase: 2
-current_step: PH-13
-step_state: COMPLETE
+current_step: PH-14
+step_state: BLOCKED
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
 approved_amendments: [D01-v1, D02-v1, D03-v1, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D11-v1, D17-v1, D27-v1]
 completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13]
 passed_gates: [G0A, G1, V1]
 founder_reviews: {V1: PASSED, V2: PENDING, V3: PENDING}
 blocking_decisions: [D05-extension, D07-card, D07-funding, D08, D09, D10, D12, D13, D14, D15, D16, D18, D19, D20, D21, D22, D23, D24, D25, D26]
-latest_evidence: tests/unit/ui/evidence/PH13_RESULT.md
+latest_evidence: docs/evidence/PH14/REPORT.md
 deployment: {preview: READY_PROTECTED, preview_url: "https://phron-o4v4vtg1r-tts-1e31.vercel.app", preview_id: dpl_ASbz9jBxuFcQnB8KQAfstJ38dxKh, production: PROTECTED_INERT_BOOTSTRAP_READY_NO_ALIASES, commit: 0aac28bf780e56083e68fede5b3d6dbba0266942}
 migration_state: REMOTE_BOTH_APPLIED_RLS_VERIFIED
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: PHRON-04 QA — P-RESUME then PH-14 using EXPERIENCE handoff
+next_action: Lead prepare protected Preview of exact frozen/reviewed slice candidate; G2/V2 remain unpassed
 last_updated_ist: 2026-10-07
 ```
+
+## PH-14 QA audit — G2 BLOCKED / V2 PENDING
+
+2026-10-07 IST. HEAD798b5b0 plus prior PH12 proxy/test overlay; no application source edits. Fresh PASS171 unit +36 integration,16 real local ordinary-user isolation/replay/rollback checks,6 schema/RLS checks,lint/types/build and5 source hashes. Browser local production app → remote Supabase ordinary Google: one new synthetic₹100 Dining save revision2→3,cash2400→2300,STS237.50→225,Dining400→300; reload identical.375/1280 no overflow; focus verified. Exact criterion report docs/TEST_RESULTS.md and docs/evidence/PH14/REPORT.md; handoff docs/handoffs/QA.md.
+
+G2 BLOCKED: recorded protected hosted Preview remains PH07 skeleton; fresh anonymous302→Vercel auth proves protection only. Authenticated hosted current slice NOT RUN; V2 candidate G2-V2-01 presented locally, no Tejas acceptance. Browser reduced-motion/network faults and remote second-Google browser NOT RUN; real local A/B denial and six forced DB rollback stages PASS. Existing G0A/G1/V1 retained; PH15 not eligible. Next repair owner Lead: prepare protected Preview of frozen/reviewed slice including prior PH12 overlay disposition. No deployment authorization inferred. Source decisions unchanged; unrelated user/Platform work preserved. QA artifacts staged only.
 
 ## PH-13 COMPLETE — real Home/manual spend slice
 

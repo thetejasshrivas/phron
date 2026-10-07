@@ -1,0 +1,50 @@
+[
+  {
+    "base": "http://127.0.0.1:3100",
+    "path": "/home",
+    "status": 307,
+    "destination": "http://127.0.0.1:3100/sign-in",
+    "cacheControl": "private, no-store, max-age=0",
+    "health": null
+  },
+  {
+    "base": "http://127.0.0.1:3100",
+    "path": "/api/health",
+    "status": 200,
+    "destination": null,
+    "cacheControl": "no-store",
+    "health": "{\"status\":\"ok\"}"
+  },
+  {
+    "base": "http://127.0.0.1:3100",
+    "path": "/api/finance/state",
+    "status": 401,
+    "destination": null,
+    "cacheControl": "private, no-store, max-age=0",
+    "health": null
+  },
+  {
+    "base": "https://phron-o4v4vtg1r-tts-1e31.vercel.app",
+    "path": "/home",
+    "status": 302,
+    "destination": "https://vercel.com/sso-api",
+    "cacheControl": "no-store, max-age=0",
+    "health": null
+  },
+  {
+    "base": "https://phron-o4v4vtg1r-tts-1e31.vercel.app",
+    "path": "/api/health",
+    "status": 302,
+    "destination": "https://vercel.com/sso-api",
+    "cacheControl": "no-store, max-age=0",
+    "health": null
+  },
+  {
+    "base": "https://phron-o4v4vtg1r-tts-1e31.vercel.app",
+    "path": "/api/finance/state",
+    "status": 302,
+    "destination": "https://vercel.com/sso-api",
+    "cacheControl": "no-store, max-age=0",
+    "health": null
+  }
+]

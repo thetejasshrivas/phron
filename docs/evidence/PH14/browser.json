@@ -1,0 +1,28 @@
+{
+  "desktop": {
+    "overflow": false,
+    "reduced": false,
+    "text": "Confirmed · revision 3\nRefresh numbers\n\nYOUR DAILY PERSPECTIVE\n\nMake room for today.\n2026-10-07\n8 spending days left\nSafe to spend today\nLooking steady\n\n₹225.00/ day\n\nA little clarity for the day ahead.\n\n₹1,800.00 left this cycle\n8 days\nCash ₹2,300.00 · INR\np\n↗\n\nA LITTLE PERSPECTIVE\n\nYou’re making room.\n\nKeep a little room for the things you enjoy. Your daily perspective reflects your confirmed numbers.\n\nAbout your perspective\n↗\nSpent something?\n\nRecord what happened. Keep your perspective current.\n\nAmount · ₹\nMerchant or payee\nBucket\nGroceries\nDining\nShopping\nTransit\nEntertainment\nPaid with\nCash\nUPI\nDebit card\nRecorded for 2026-10-07\nSave spend↗\nGive your money some shape.\n\nYour buckets drain as you spend. What remains is what you can see.\n\n5 buckets\nGR\nGroceries\n\n₹600.00\n\nremaining\nof ₹600.00\nDI\nDining\n\n₹300.00\n\nremaining\nof ₹500.00\nSH\nShopping\n\n₹400.00\n\nremaining\nof ₹400.00\nTR\nTransit\n\n₹300.00\n\nremaining\nof ₹300.00\nEN\nEntertainment\n\n₹200.00\n\nremaining\nof ₹200.00\nA future worth making room for.\n\nSomething to look forward to.\n\nGoal setup is not available yet. Your saved cash and spending remain separate from future plans.\nClarity over perfection.\nAmounts from your confirmed records.",
+    "width": 1280
+  },
+  "mobile": {
+    "focusedId": "bucket-section",
+    "overflow": false,
+    "text": "Confirmed · revision 3\nRefresh numbers\n\nYOUR DAILY PERSPECTIVE\n\nMake room for today.\nSafe to spend today\nLooking steady\n\n₹225.00/ day\n\nA little clarity for the day ahead.\n\n₹1,800.00 left this cycle\n8 days\nCash ₹2,300.00 · INR\np\n↗\n\nA LITTLE PERSPECTIVE\n\nYou’re making room.\n\nKeep a little room for the things you enjoy. Your daily perspective reflects your confirmed numbers.\n\nAbout your perspective\n↗\nSpent something?\n\nRecord what happened. Keep your perspective current.\n\nAmount · ₹\nMerchant or payee\nBucket\nGroceries\nDining\nShopping\nTransit\nEntertainment\nPaid with\nCash\nUPI\nDebit card\nRecorded for 2026-10-07\nSave spend\n↗\nGive your money some shape.\n\nYour buckets drain as you spend. What remains is what you can see.\n\n5 buckets\nGR\nGroceries\n\n₹600.00\n\nremaining\nof ₹600.00\nDI\nDining\n\n₹300.00\n\nremaining\nof ₹500.00\nSH\nShopping\n\n₹400.00\n\nremaining\nof ₹400.00\nTR\nTransit\n\n₹300.00\n\nremaining\nof ₹300.00\nEN\nEntertainment\n\n₹200.00\n\nremaining\nof ₹200.00\nA future worth making room for.\n\nSomething to look forward to.\n\nGoal setup is not available yet. Your saved cash and spending remain separate from future plans.\nClarity over perfection.\nAmounts from your confirmed records.",
+    "width": 375
+  },
+  "save": {
+    "beforeRevision": "2",
+    "afterRevision": "3",
+    "amountPaise": "10000",
+    "cashBefore": "240000",
+    "cashAfter": "230000",
+    "safeDailyBefore": "23750",
+    "safeDailyAfter": "22500",
+    "diningBefore": "40000",
+    "diningAfter": "30000",
+    "reloadRetained": true,
+    "pendingObserved": true
+  },
+  "validation": "required amount blocked blank submit; revision 3 retained"
+}
