@@ -1,0 +1,7 @@
+PASS read RPC retains invoker wrapper and restricted helper grants
+PASS new verified account has no profile; read creates nothing
+PASS unauthenticated and anonymous sessions cannot read snapshots
+PASS ordinary onboarding is replay-safe and refresh is read-only
+PASS two users receive distinct snapshots, including concurrent reads
+PASS ordinary spend then refresh retains exact paise and revision
+6 passed; 0 failed; 6 total

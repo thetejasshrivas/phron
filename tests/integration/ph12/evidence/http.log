@@ -1,0 +1,10 @@
+PASS HTTP absent, forged and expired-unrefreshable sessions denied
+PASS HTTP onboarding uses ordinary cookies and stable replay; numeric money denied
+PASS HTTP cross-site finance/logout rejected without changing state
+PASS HTTP ordinary spend and reload preserve exact canonical amounts
+PASS HTTP parallel users remain isolated and uncached
+PASS SSR forced stored expiry renews a real session and sets response cookies
+PASS HTTP callback missing/reused code redirects safely without initialization
+PASS browser mobile/desktop onboarding, failed-save retry and logout
+PASS HTTP logout removes cookies and rejects further authenticated reads
+9 passed; 0 failed; 9 total
