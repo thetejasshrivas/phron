@@ -1,0 +1,44 @@
+Vercel CLI 62.4.0 (Node.js 24.21.0)
+Deploying phron
+Uploading [--------------------] (0.0B/73.5KB)
+Uploading [=====---------------] (19.8KB/73.5KB)
+Uploading [==========----------] (37.0KB/73.5KB)
+Uploading [===============-----] (58.1KB/73.5KB)
+Uploading [====================] (73.5KB/73.5KB)
+  Inspect         https://vercel.com/tts-1e31/phron/87okEBHQTbn6nZCgr4yrQzpzqdNn
+  Preview         https://phron-hys7wn9wb-tts-1e31.vercel.app
+{
+  "status": "ok",
+  "deployment": {
+    "id": "dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn",
+    "url": "https://phron-hys7wn9wb-tts-1e31.vercel.app",
+    "productionUrl": null,
+    "inspectorUrl": "https://vercel.com/tts-1e31/phron/87okEBHQTbn6nZCgr4yrQzpzqdNn",
+    "readyState": "INITIALIZING",
+    "target": null,
+    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn",
+    "buildMachine": {
+      "machine": "basic",
+      "selectionType": "fixed",
+      "selectionSource": "plan-default"
+    },
+    "deploymentProtection": [
+      "vercel_authentication"
+    ]
+  },
+  "message": "Deployment phron-hys7wn9wb-tts-1e31.vercel.app ready.",
+  "next": [
+    {
+      "command": "vercel curl https://phron-hys7wn9wb-tts-1e31.vercel.app",
+      "when": "Verify deployment, including when Deployment Protection is enabled"
+    },
+    {
+      "command": "vercel inspect phron-hys7wn9wb-tts-1e31.vercel.app --scope tts-1e31 --global-config C:/Users/thete/AppData/Local/Temp/phron-vercel-cli-62.4.0/auth",
+      "when": "Inspect deployment"
+    },
+    {
+      "command": "vercel deploy --prod --scope tts-1e31 --global-config C:/Users/thete/AppData/Local/Temp/phron-vercel-cli-62.4.0/auth",
+      "when": "Promote to production"
+    }
+  ]
+}

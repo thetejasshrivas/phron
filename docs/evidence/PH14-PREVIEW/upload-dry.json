@@ -1,0 +1,469 @@
+Retrieving project…
+{
+  "framework": {
+    "name": "Next.js",
+    "slug": "nextjs"
+  },
+  "basePath": "W:\\AI Product Sprint\\Phron",
+  "fileCount": 52,
+  "totalSize": 434570,
+  "ignoredCount": 33,
+  "ignored": [
+    ".env.example",
+    ".env.local",
+    ".git",
+    ".gitattributes",
+    ".github",
+    ".gitignore",
+    ".next",
+    ".nvmrc",
+    ".swc",
+    ".vercel",
+    ".vercelignore",
+    "AGENTS.md",
+    "New Text Document.txt",
+    "PHRON_PRD_v1.2.1_FROZEN.txt",
+    "Phron Master discussion.txt",
+    "README.md",
+    "coverage",
+    "docs",
+    "eslint.config.mjs",
+    "jest.config.mjs",
+    "jest.domain.config.mjs",
+    "next-env.d.ts",
+    "node_modules",
+    "playwright-report",
+    "playwright.config.ts",
+    "scripts\\domain-coverage.mjs",
+    "scripts\\preview-smoke.mjs",
+    "scripts\\verify-preview-origin.mjs",
+    "scripts\\verify-sources.mjs",
+    "supabase",
+    "test-results",
+    "tests",
+    "tsconfig.tsbuildinfo"
+  ],
+  "directories": [
+    {
+      "path": "package-lock.json",
+      "fileCount": 1,
+      "size": 345176
+    },
+    {
+      "path": "src",
+      "fileCount": 43,
+      "size": 84483
+    },
+    {
+      "path": "package.json",
+      "fileCount": 1,
+      "size": 1633
+    },
+    {
+      "path": "scripts",
+      "fileCount": 2,
+      "size": 1563
+    },
+    {
+      "path": "tsconfig.json",
+      "fileCount": 1,
+      "size": 722
+    },
+    {
+      "path": "next.config.ts",
+      "fileCount": 1,
+      "size": 653
+    },
+    {
+      "path": "vercel.json",
+      "fileCount": 1,
+      "size": 281
+    },
+    {
+      "path": ".npmrc",
+      "fileCount": 1,
+      "size": 59
+    },
+    {
+      "path": "public",
+      "fileCount": 1,
+      "size": 0
+    }
+  ],
+  "largestFiles": [
+    {
+      "path": "package-lock.json",
+      "size": 345176,
+      "mode": 33206,
+      "sha": "8ce9dfb1e81ff25855e7504bf98e00c089578ab8"
+    },
+    {
+      "path": "src/styles/home.css",
+      "size": 15606,
+      "mode": 33206,
+      "sha": "e6d8b06f2cd1eb99261e93e904157fbb24055215"
+    },
+    {
+      "path": "src/components/home/Home.tsx",
+      "size": 10046,
+      "mode": 33206,
+      "sha": "c62072dc7bfdb2c0c0392a61c45aae43174b31b4"
+    },
+    {
+      "path": "src/components/auth/Onboarding.tsx",
+      "size": 5912,
+      "mode": 33206,
+      "sha": "f9cb395f6ceef2ae1f86a521423de005ffd41f6e"
+    },
+    {
+      "path": "src/server/auth/handlers.ts",
+      "size": 5062,
+      "mode": 33206,
+      "sha": "f5654b45fb8b7f67947847d0e780f8506b5d9c7d"
+    },
+    {
+      "path": "src/client/home-session.ts",
+      "size": 4856,
+      "mode": 33206,
+      "sha": "0f8d666bb5acb6f291ab210e54ae6629d53910ea"
+    },
+    {
+      "path": "src/domain/README.md",
+      "size": 4740,
+      "mode": 33206,
+      "sha": "c4db88e9cdfa15d9815542ff5746a6b18ae68028"
+    },
+    {
+      "path": "src/contracts/snapshot.ts",
+      "size": 4161,
+      "mode": 33206,
+      "sha": "2002fea18ca31ccc384fedc212e28e8a50a5812f"
+    },
+    {
+      "path": "src/domain/core.ts",
+      "size": 3898,
+      "mode": 33206,
+      "sha": "dd525bf977b1dd2813cf495118323bff145bacaf"
+    },
+    {
+      "path": "src/server/finance/parse.ts",
+      "size": 3856,
+      "mode": 33206,
+      "sha": "b788b75e6bf7ee2645201e1de5e80b1728aa8c6a"
+    }
+  ],
+  "files": [
+    {
+      "path": ".npmrc",
+      "size": 59,
+      "mode": 33206,
+      "sha": "c8a709ecbf599550c722546509583395a5ff142c"
+    },
+    {
+      "path": "next.config.ts",
+      "size": 653,
+      "mode": 33206,
+      "sha": "c2ce300946ed69af94fe2e4e2447c377e86388b3"
+    },
+    {
+      "path": "package-lock.json",
+      "size": 345176,
+      "mode": 33206,
+      "sha": "8ce9dfb1e81ff25855e7504bf98e00c089578ab8"
+    },
+    {
+      "path": "package.json",
+      "size": 1633,
+      "mode": 33206,
+      "sha": "3c62bb0cd1393bba4bf1ca5b4bf39355b329dc33"
+    },
+    {
+      "path": "public/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "scripts/next.mjs",
+      "size": 428,
+      "mode": 33206,
+      "sha": "6897c062b84967916167ae0c557c2a434d93d716"
+    },
+    {
+      "path": "scripts/vercel-build.mjs",
+      "size": 1135,
+      "mode": 33206,
+      "sha": "1ccbf93b39574ac428dc790f8bfae5108814430d"
+    },
+    {
+      "path": "src/app/api/auth/google/route.ts",
+      "size": 100,
+      "mode": 33206,
+      "sha": "85bb0bdcd90ad55f6514b98369f115c8b4c13f08"
+    },
+    {
+      "path": "src/app/api/auth/logout/route.ts",
+      "size": 95,
+      "mode": 33206,
+      "sha": "4a0f2f2c086f56cd18b085041fea3c8070941485"
+    },
+    {
+      "path": "src/app/api/finance/spend/route.ts",
+      "size": 100,
+      "mode": 33206,
+      "sha": "6c9b4af09f8f7e88eeb5872696c2fb47e0da8b74"
+    },
+    {
+      "path": "src/app/api/finance/state/route.ts",
+      "size": 100,
+      "mode": 33206,
+      "sha": "d4702a096edc415d0a9b9f2c070f53d9e773a1b0"
+    },
+    {
+      "path": "src/app/api/health/route.ts",
+      "size": 325,
+      "mode": 33206,
+      "sha": "e24cc6370dbf213ff506d8383b5dee82cc92581d"
+    },
+    {
+      "path": "src/app/api/onboarding/route.ts",
+      "size": 99,
+      "mode": 33206,
+      "sha": "3120930c479bfa9658cdaf5224c2e85eae61e63e"
+    },
+    {
+      "path": "src/app/auth/callback/route.ts",
+      "size": 100,
+      "mode": 33206,
+      "sha": "aa3951bd7313e3a4e57a2fb0652ed646f0cd4a22"
+    },
+    {
+      "path": "src/app/globals.css",
+      "size": 1119,
+      "mode": 33206,
+      "sha": "bf6dd14d207f72a1bd855904c8df1e4d8cea517a"
+    },
+    {
+      "path": "src/app/home/page.tsx",
+      "size": 624,
+      "mode": 33206,
+      "sha": "edb175a5c0614ac4b5569ab5cb71da03aca68ca7"
+    },
+    {
+      "path": "src/app/icon.svg",
+      "size": 202,
+      "mode": 33206,
+      "sha": "9f21c6b9476110182e1ff1ed43009853a29c1495"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "size": 506,
+      "mode": 33206,
+      "sha": "774b251936ca24374cee922dda651997a831db32"
+    },
+    {
+      "path": "src/app/onboarding/page.tsx",
+      "size": 660,
+      "mode": 33206,
+      "sha": "7fdcfbf726291362c6e66ac3e8d24b84c63ae215"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "size": 513,
+      "mode": 33206,
+      "sha": "1958add87c7d393a52b099fea688b834c2a51617"
+    },
+    {
+      "path": "src/app/sign-in/page.tsx",
+      "size": 956,
+      "mode": 33206,
+      "sha": "01ee4283d6f7d94cec560b86ab9f60b38f9e375b"
+    },
+    {
+      "path": "src/client/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/client/home-presentation.ts",
+      "size": 1996,
+      "mode": 33206,
+      "sha": "dfa49028dda2639432ec94193a5193cb84786c47"
+    },
+    {
+      "path": "src/client/home-session.ts",
+      "size": 4856,
+      "mode": 33206,
+      "sha": "0f8d666bb5acb6f291ab210e54ae6629d53910ea"
+    },
+    {
+      "path": "src/components/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/components/auth/money-input.ts",
+      "size": 742,
+      "mode": 33206,
+      "sha": "12e76b1b2aec3276b48c5dacab677413cf9f8b17"
+    },
+    {
+      "path": "src/components/auth/Onboarding.tsx",
+      "size": 5912,
+      "mode": 33206,
+      "sha": "f9cb395f6ceef2ae1f86a521423de005ffd41f6e"
+    },
+    {
+      "path": "src/components/home/Home.tsx",
+      "size": 10046,
+      "mode": 33206,
+      "sha": "c62072dc7bfdb2c0c0392a61c45aae43174b31b4"
+    },
+    {
+      "path": "src/contracts/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/contracts/boundaries.ts",
+      "size": 2215,
+      "mode": 33206,
+      "sha": "d15cdaf59783c488f5f809b42319f8282baf5296"
+    },
+    {
+      "path": "src/contracts/money.ts",
+      "size": 876,
+      "mode": 33206,
+      "sha": "97f2b02e009a6a294329e626be46275ccc70d571"
+    },
+    {
+      "path": "src/contracts/snapshot.ts",
+      "size": 4161,
+      "mode": 33206,
+      "sha": "2002fea18ca31ccc384fedc212e28e8a50a5812f"
+    },
+    {
+      "path": "src/domain/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/domain/CONSTRAINTS.md",
+      "size": 1877,
+      "mode": 33206,
+      "sha": "47e88391ccfff3acecb81321f3ac3029e02b63eb"
+    },
+    {
+      "path": "src/domain/core.ts",
+      "size": 3898,
+      "mode": 33206,
+      "sha": "dd525bf977b1dd2813cf495118323bff145bacaf"
+    },
+    {
+      "path": "src/domain/dates.ts",
+      "size": 2241,
+      "mode": 33206,
+      "sha": "02be486bca210ae1c4655c2e79744c4936e4e8f5"
+    },
+    {
+      "path": "src/domain/money.ts",
+      "size": 1283,
+      "mode": 33206,
+      "sha": "f90ec2d6f5f8ac1bc393c2255e1b504895d6fe4f"
+    },
+    {
+      "path": "src/domain/README.md",
+      "size": 4740,
+      "mode": 33206,
+      "sha": "c4db88e9cdfa15d9815542ff5746a6b18ae68028"
+    },
+    {
+      "path": "src/lib/supabase/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/lib/supabase/request.ts",
+      "size": 2161,
+      "mode": 33206,
+      "sha": "ce8980ab32fe9071fd889c8e904a24a8fccf3f96"
+    },
+    {
+      "path": "src/lib/supabase/server.ts",
+      "size": 788,
+      "mode": 33206,
+      "sha": "85e74f1b05a66158d1a89ee3431cfa767ae814a1"
+    },
+    {
+      "path": "src/proxy.ts",
+      "size": 1888,
+      "mode": 33206,
+      "sha": "276a1347bf22f412009e226066e2b9dd9d17e72c"
+    },
+    {
+      "path": "src/server/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/server/auth/handlers.ts",
+      "size": 5062,
+      "mode": 33206,
+      "sha": "f5654b45fb8b7f67947847d0e780f8506b5d9c7d"
+    },
+    {
+      "path": "src/server/auth/policy.ts",
+      "size": 614,
+      "mode": 33206,
+      "sha": "9c101c4b5e39eff7c57b97ae05a76538c5b18c22"
+    },
+    {
+      "path": "src/server/finance/parse.ts",
+      "size": 3856,
+      "mode": 33206,
+      "sha": "b788b75e6bf7ee2645201e1de5e80b1728aa8c6a"
+    },
+    {
+      "path": "src/server/finance/types.ts",
+      "size": 1322,
+      "mode": 33206,
+      "sha": "0dbd9aeb80180c78fd2cee6932497b0fda535273"
+    },
+    {
+      "path": "src/styles/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/styles/auth.css",
+      "size": 2844,
+      "mode": 33206,
+      "sha": "f78bd87d98e028f453862750263aa959bc766eb0"
+    },
+    {
+      "path": "src/styles/home.css",
+      "size": 15606,
+      "mode": 33206,
+      "sha": "e6d8b06f2cd1eb99261e93e904157fbb24055215"
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 722,
+      "mode": 33206,
+      "sha": "11d9f9a549e9148849f12f1cec9877279e170135"
+    },
+    {
+      "path": "vercel.json",
+      "size": 281,
+      "mode": 33206,
+      "sha": "88445f76fc07631afe9c6e1a3934bb5530561982"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "configured": [
+    {
+      "name": "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY",
+      "target": [
+        "preview"
+      ],
+      "type": "encrypted"
+    },
+    {
+      "name": "NEXT_PUBLIC_SUPABASE_URL",
+      "target": [
+        "preview"
+      ],
+      "type": "encrypted"
+    }
+  ],
+  "origin": "PHRON_APP_ORIGIN pinned from trusted VERCEL_URL at Preview build",
+  "privilegedKeysConfigured": false
+}

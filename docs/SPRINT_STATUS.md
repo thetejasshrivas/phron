@@ -5,9 +5,9 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: 798b5b015f532ed87e8101895a2d639f2221e7c8
-dirty_files: ["PH14 QA report/status/handoff/security test/evidence (staged)", "src/proxy.ts (prior PH12)", "tests/integration/ph12/proxy.test.ts (prior PH12)", "docs/handoffs/PLATFORM.md (prior PH12)", "tests/integration/ph12/remote-anonymous.mjs and evidence (prior PH12 untracked)", "New Text Document.txt (untouched user work)"]
-active_chat: PHRON-04 QA
+commit: 0f28e49e42b13ed07640855468ec943e44dda4eb
+dirty_files: ["New Text Document.txt (untouched/excluded user work)"]
+active_chat: PHRON-00 Lead
 phase: 2
 current_step: PH-14
 step_state: BLOCKED
@@ -17,14 +17,20 @@ completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10,
 passed_gates: [G0A, G1, V1]
 founder_reviews: {V1: PASSED, V2: PENDING, V3: PENDING}
 blocking_decisions: [D05-extension, D07-card, D07-funding, D08, D09, D10, D12, D13, D14, D15, D16, D18, D19, D20, D21, D22, D23, D24, D25, D26]
-latest_evidence: docs/evidence/PH14/REPORT.md
-deployment: {preview: READY_PROTECTED, preview_url: "https://phron-o4v4vtg1r-tts-1e31.vercel.app", preview_id: dpl_ASbz9jBxuFcQnB8KQAfstJ38dxKh, production: PROTECTED_INERT_BOOTSTRAP_READY_NO_ALIASES, commit: 0aac28bf780e56083e68fede5b3d6dbba0266942}
+latest_evidence: docs/DEPLOYMENT.md and docs/evidence/PH14-PREVIEW
+deployment: {preview: READY_PROTECTED_SLICE_PENDING_LIVE_JOURNEY, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
 migration_state: REMOTE_BOTH_APPLIED_RLS_VERIFIED
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Lead prepare protected Preview of exact frozen/reviewed slice candidate; G2/V2 remain unpassed
+next_action: Tejas open protected Preview /home and review G2-V2-02; hosted persisted journey and explicit V2 acceptance pending
 last_updated_ist: 2026-10-07
 ```
+
+## Lead deployment update — current slice READY / G2,V2 pending
+
+2026-10-07 IST. Committed staged QA b796c7c and verified PH12 overlay b88d05d; Lead Preview origin config0f28e49 tested six cases RED/GREEN,lint/types,171unit+36integration,Preview-mode build. Remote pinned Next16.3.8/Node24.21.0/npm11.19.0 build PASS. New protected Preview https://phron-hys7wn9wb-tts-1e31.vercel.app,IDdpl_87okEBHQTbn6nZCgr4yrQzpzqdNn,targetnull,READY,commit0f28e49,aliases[]. Public Supabase config Preview-only; no privileged keys. Exact callback explicitly approved and saved alongside localhost; hosted sign-in browser PASS. Details docs/DEPLOYMENT.md; evidence PH14-PREVIEW.
+
+Automatic review blocked protected HTTP automation-token smoke without specific approval; no rejected execution or workaround. Browser direct health also blocked; not claimed200. Scoped authorization pending. Hosted PHRON Google/save-refresh and V2 acceptance remain pending. Candidate G2-V2-02/0f28e49 presented,not accepted. G2 remains BLOCKED and PH15 ineligible. Prior G0A/G1/V1 and open decisions unchanged; user note preserved. No migrations or Production changes.
 
 ## PH-14 QA audit — G2 BLOCKED / V2 PENDING
 

@@ -1,0 +1,23 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ null
+- 'https://phron-test123-tts-1e31.vercel.app'
+
+    at file:///W:/AI%20Product%20Sprint/Phron/scripts/verify-preview-origin.mjs:16:44
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: null,
+  expected: 'https://phron-test123-tts-1e31.vercel.app',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.21.0

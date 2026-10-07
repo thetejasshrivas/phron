@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "files": 52,
+  "allFilesTracked": true,
+  "allRawHashesMatchDryManifest": true,
+  "uploadSourceDiffEmpty": true,
+  "candidate": "0f28e49e42b13ed07640855468ec943e44dda4eb",
+  "sourceHashes": "all five verified",
+  "unrelatedUserNoteExcluded": true
+}

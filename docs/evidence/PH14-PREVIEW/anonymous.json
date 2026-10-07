@@ -1,0 +1,12 @@
+[
+  {
+    "path": "/home",
+    "status": 302,
+    "redirectOrigin": "https://vercel.com"
+  },
+  {
+    "path": "/api/health",
+    "status": 302,
+    "redirectOrigin": "https://vercel.com"
+  }
+]
