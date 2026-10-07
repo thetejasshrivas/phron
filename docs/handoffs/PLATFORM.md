@@ -1,3 +1,33 @@
+# Platform handoff — PH-12 IN_PROGRESS, local slice verified
+
+2026-10-07 IST. Repository W:/AI Product Sprint/Phron, branch main. Read migration commit 2eaaa52; auth/UI/evidence commit 51772b67503475f343c432d99ba681f0aa9f8c0e. This handoff/status-only commit follows. Inspect actual HEAD/dirty files on resume. PH-11 remains complete. G0A/G1/V1 retained; PH-12/G2/V2 are not complete.
+
+## Done and verification
+
+Supported pinned Next16.3.8 + Supabase SSR0.12.7/js2.117.2 implementation: Google OAuth start, PKCE callback, request-local cookie clients, Next16 Proxy refresh, independent server getUser authorization, global logout, protected Step1 onboarding UI, exact ordinary-user onboarding/manual-spend APIs and read-only canonical snapshot refresh. Arbitrary next/forwarded-host values never choose redirect origins. Cookie-authenticated writes require trusted Origin, exact JSON and bounded bodies. No privileged application client or new table grants.
+
+PASS:156 unit +32 Jest integration tests;52 separate real local checks (31 PH11 transactions,6 PH11 security,6 PH12 read/security,9 PH12 HTTP/browser); lint/typecheck/build; security advisor no issues; five unchanged source hashes. PRD hash d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994. Source, dependencies/lock, domain and shared contracts unchanged. Evidence tests/integration/ph12/evidence/RESULT.md, http.log, read-state.log, jest-integration.log and 375/768/1280 screenshots plus reduced-motion saved receipt.
+
+Expiry fixtures force a past nonzero stored-session expiry and exercise real Auth renewal and refresh-cookie propagation on both API and Proxy. They also deny invalid refresh/forged/absent/anonymous sessions. They do not prove naturally elapsed JWT expiry or immediate invalidation of a copied access token. Successful Google callback is mocked; invalid/reused codes are denied live. Synthetic ordinary credentials prove save, duplicate replay, reload, isolation and logout. Admin used only for local synthetic setup/cleanup. Browser test starts/stops its own built server on loopback3102; no credentials written to files or chat. All synthetic accounts cleaned up.
+
+## Owned paths / explicit approval
+
+Platform retains supabase, server, lib/supabase, API/auth callback, proxy and integration paths. Tejas explicitly replied “Approve this narrow PH-12 ownership transfer” to adding sign-in/onboarding pages and form components/style, protecting /home without changing synthetic V1 design, and adding empty PHRON_APP_ORIGIN to .env.example. Transfer applies only to this PH-12 work. Shared contracts, formulas and Home design remain unchanged. Active writer alone updated this handoff and SPRINT_STATUS. No other chat activated/messaged.
+
+## Pending account action and boundaries
+
+Pending dashboard action 1: Tejas opens intended Supabase workspace Projects page and reports existing PHRON project name or “no project yet”. No response recorded. Ask/configure one account action at a time, never secrets in chat. Next verify actual free plan/target, Google Web client/consent/test user/provider settings and exact redirects, then live synthetic Google sign-in/returning-user/save/refresh/logout evidence. Google redirect points to Supabase /auth/v1/callback; Supabase allowlist points to app /auth/callback. Explicit PHRON_APP_ORIGIN prevents trusting proxy host input. Names only in .env.example.
+
+No remote migration/project creation/provider changes/deployment occurred. Remote migration remains unauthorized: prepare exact target/schema inspection, ordered SQL hashes and recovery plan before requesting authorization. Local target is phron-ph11-local, API55321/DB55322, installed Docker and CLI2.119.0. If restarting Docker, avoid unrelated containers. PH11 fresh-local harness recreates only PH11; reapply PH12 with its guarded local script afterward. Do not rerun migration creation or completed implementation.
+
+D08 consent/privacy text stays OPEN; no unsupported “stateless AI” promise added. D05 overdue/D26 cash deficits remain unavailable, and all other unresolved rules remain unchanged. Step2 milestone/real Home data integration/account deletion session guarantees are not claimed in this slice. Home still identifies synthetic fixtures until later integration. No full FIT/all18 scenarios, SQL coverage percentage, physical phone, new founder visual approval or completed G2 claim.
+
+One next action: receive the pending Supabase project-identification response and continue PH-12 account setup. Do not advance to PH-13 without PH-12 completion evidence and operator completion signal.
+
+---
+
+The PH-11 handoff below is retained as historical context; its “PH12 NOT_STARTED” statements are superseded by this PH-12 record.
+
 # Platform handoff — PH-11 COMPLETE
 
 ## Current authoritative handoff to PH-12 / P02-AUTH

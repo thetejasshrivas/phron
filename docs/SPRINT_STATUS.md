@@ -5,28 +5,36 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: c5fa2299707c66960582444459163d1f470abd9d
+commit: 51772b67503475f343c432d99ba681f0aa9f8c0e
 dirty_files: []
 active_chat: PHRON-02 Platform
 phase: 2
-current_step: PH-11
-step_state: COMPLETE
+current_step: PH-12
+step_state: IN_PROGRESS
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
 approved_amendments: [D01-v1, D02-v1, D03-v1, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D11-v1, D17-v1, D27-v1]
 completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11]
 passed_gates: [G0A, G1, V1]
 founder_reviews: {V1: PASSED, V2: PENDING, V3: PENDING}
 blocking_decisions: [D05-extension, D07-card, D07-funding, D08, D09, D10, D12, D13, D14, D15, D16, D18, D19, D20, D21, D22, D23, D24, D25, D26]
-latest_evidence: tests/integration/ph11/evidence/RESULT.md
+latest_evidence: tests/integration/ph12/evidence/RESULT.md
 deployment: {preview: READY_PROTECTED, preview_url: "https://phron-o4v4vtg1r-tts-1e31.vercel.app", preview_id: dpl_ASbz9jBxuFcQnB8KQAfstJ38dxKh, production: PROTECTED_INERT_BOOTSTRAP_READY_NO_ALIASES, commit: 0aac28bf780e56083e68fede5b3d6dbba0266942}
 migration_state: LOCAL_CANDIDATE_VERIFIED_REMOTE_NOT_APPLIED
-ownership_transfers: []
+ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: PHRON-02 Platform — fresh P-RESUME then PH-12 / P02-AUTH; SSR Google OAuth and onboarding, one account action at a time
-last_updated_ist: 2026-10-06
+next_action: PH-12 — receive Supabase project-identification response; continue OAuth account configuration one action at a time
+last_updated_ist: 2026-10-07
 ```
 
-## Authoritative current outcome — PH-11 COMPLETE (local data slice)
+## Authoritative current outcome — PH-12 IN_PROGRESS (local auth slice verified)
+
+2026-10-07 IST. Read migration commit 2eaaa52; auth/onboarding/evidence commit 51772b67503475f343c432d99ba681f0aa9f8c0e. This status/handoff-only commit follows. Implemented supported Google PKCE entry/callback, request-scoped SSR cookies, Next16 Proxy session refresh, fresh server authorization, logout, protected Step1 onboarding, ordinary-user exact save/read APIs and strict Origin/redirect/cache boundaries. Profile initialization occurs only in the idempotent onboarding RPC, never callback. Home remains labeled synthetic; approved design/contracts/formulas unchanged.
+
+PASS:156 unit +32 Jest integration;52 separate local checks (31 PH11 transaction +6 PH11 security +6 PH12 read +9 PH12 HTTP/browser), lint/typecheck/build, local security advisor no issues, all5 source hashes. Live ordinary credentials prove save/reload, duplicate retry, two-user isolation and logout. Installed Edge evidence at375/768/1280 plus reduced-motion receipt; no physical-phone/founder approval inferred. Evidence tests/integration/ph12/evidence/RESULT.md. Past nonzero stored-session expiry triggers real token renewal; naturally elapsed JWT expiry is not claimed.
+
+PH12/G2 remain IN_PROGRESS/PENDING: successful Google callback is mocked; actual project/free-plan, OAuth provider/consent/redirects and live synthetic Google flow remain unverified. Pending dashboard action1 asks Tejas for existing project name or “no project yet”. No remote schema apply, account changes, deployment, paid tools or dependency/lock changes. D08 and all other OPEN decisions retained; blocked payday/cash semantics not invented. Next one action is the project-identification reply and continued PH12 configuration, not PH13. Narrow cross-owner auth/UI/env-name transfer was explicitly approved; see PLATFORM handoff.
+
+## Prior outcome — PH-11 COMPLETE (local data slice)
 
 2026-10-06 IST. Implementation/approval/test-evidence commit c5fa2299707c66960582444459163d1f470abd9d on main. Tejas explicitly approved D11-v1, D17-v1 and D27-v1. Introduced owner-scoped schema, forced RLS, restricted transaction writer, composite parent constraints, replay records, exact initial-cycle snapshots and atomic onboarding/manual cash/UPI/debit spending. No client-supplied identity or direct-table financial writes. Source PRD and application dependencies/lock unchanged.
 
