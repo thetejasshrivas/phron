@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-07T13:27:09.017Z",
+  "commit": "0f28e49e42b13ed07640855468ec943e44dda4eb",
+  "url": "https://phron-hys7wn9wb-tts-1e31.vercel.app",
+  "checks": [
+    {
+      "path": "/home",
+      "mode": "anonymous",
+      "method": "GET",
+      "status": 302,
+      "redirect": "https://vercel.com/sso-api",
+      "cacheControl": "no-store, max-age=0"
+    },
+    {
+      "path": "/api/health",
+      "mode": "anonymous",
+      "method": "GET",
+      "status": 302,
+      "redirect": "https://vercel.com/sso-api",
+      "cacheControl": "no-store, max-age=0"
+    },
+    {
+      "path": "/api/health",
+      "mode": "existing automation protection credential; no app session",
+      "method": "GET",
+      "status": 200,
+      "redirect": null,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/api/health",
+      "mode": "existing automation protection credential; no app session",
+      "method": "POST",
+      "status": 405,
+      "redirect": null,
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/home",
+      "mode": "existing automation protection credential; no app session",
+      "method": "GET",
+      "status": 307,
+      "redirect": "https://phron-hys7wn9wb-tts-1e31.vercel.app/sign-in",
+      "cacheControl": "private, no-store, max-age=0"
+    },
+    {
+      "path": "/sign-in",
+      "mode": "existing automation protection credential; no app session",
+      "method": "GET",
+      "status": 200,
+      "redirect": null,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/finance/state",
+      "mode": "existing automation protection credential; no app session",
+      "method": "GET",
+      "status": 401,
+      "redirect": null,
+      "cacheControl": "private, no-store, max-age=0"
+    },
+    {
+      "path": "/.env.local",
+      "mode": "existing automation protection credential; no app session",
+      "method": "GET",
+      "status": 404,
+      "redirect": null,
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/docs/source/PHRON_PRD_v1.2.1_FROZEN.txt",
+      "mode": "existing automation protection credential; no app session",
+      "method": "GET",
+      "status": 404,
+      "redirect": null,
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/auth/google",
+      "mode": "existing automation protection credential; no app session",
+      "method": "POST",
+      "status": 303,
+      "redirect": "https://kavuwjngrtqavtmxyvsq.supabase.co/auth/v1/authorize",
+      "cacheControl": "private, no-store, max-age=0"
+    },
+    {
+      "path": "/api/auth/google",
+      "mode": "existing automation protection credential; no app session",
+      "method": "POST",
+      "status": 403,
+      "redirect": null,
+      "cacheControl": "private, no-store, max-age=0"
+    },
+    {
+      "path": "/auth/callback",
+      "mode": "existing automation protection credential; no app session",
+      "method": "GET",
+      "status": 303,
+      "redirect": "https://phron-hys7wn9wb-tts-1e31.vercel.app/sign-in",
+      "cacheControl": "private, no-store, max-age=0"
+    }
+  ],
+  "credentialEchoAbsent": true,
+  "oauthCallbackMatchesPreview": true,
+  "authenticatedFinanceJourney": "NOT RUN; requires ordinary human Google sign-in"
+}

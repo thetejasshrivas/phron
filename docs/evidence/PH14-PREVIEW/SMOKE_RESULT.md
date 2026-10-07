@@ -1,0 +1,10 @@
+## Protected smoke authorized and PASS — 2026-10-07 IST
+
+Explicit user authorization: “You are authorized to run the protected health smoke check against the deployed Vercel Preview (commit 0f28e49).” Existing owner login and existing automation protection credential used in memory only; no new credential,protection change,app session,finance write or deployment. Actual target null,READY,URL and exact commit0f28e49e42b13ed07640855468ec943e44dda4eb revalidated before smoke.
+
+Command: node docs/evidence/PH14-PREVIEW/smoke.mjs. PASS12 HTTP request checks (smoke.json): anonymous Home/health302 to Vercel auth; protected health200/exact {"status":"ok"}/Cache-Control:no-store/no Set-Cookie; healthPOST405; Home without app session307 to same-origin /sign-in; sign-in200; finance/state401; env/source paths404; same-origin Google initiation303 to expected Supabase origin with exact Preview /auth/callback and PKCE cookie; unsafe-origin initiation403; missing-code callback303 to same Preview origin. Credential body/header echo checks PASS; values/cookies/auth URL queries never logged/saved. Hosted ordinary Google sign-in/save-refresh remains NOT RUN; automation protection access is not an app user session. G2/V2 remain pending; not production ready.
+
+First run stopped after health checks on a smoke assertion requiring absolute Location,while app returned valid relative /sign-in. Corrected only test URL normalization with exact trusted-origin/path comparison; final full run PASS. No app code modified. Earlier automatic approval rejection remains historical; this run followed new explicit scoped authorization,not a workaround. Evidence smoke.json and smoke.mjs. No need to rerun financial/build suites for this evidence-only update.
+
+Live Tejas V2 URL: https://phron-hys7wn9wb-tts-1e31.vercel.app/home. Vercel auth → Continue with Google → Home if existing profile,Onboarding if new. Named deployed revision G2-V2-02/0f28e49 still requires explicit Tejas acceptance and hosted persisted journey evidence before G2.
+

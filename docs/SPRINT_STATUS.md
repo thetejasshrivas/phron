@@ -26,6 +26,10 @@ next_action: Tejas open protected Preview /home and review G2-V2-02; hosted pers
 last_updated_ist: 2026-10-07
 ```
 
+## Lead protected smoke — PASS (2026-10-07 IST)
+
+User explicitly authorized the existing automation protection credential for Preview0f28e49; token used only in memory. Exact target/commit reverified. PASS health200/exact {"status":"ok"}/no-store/no cookie,POST405,anonymous protection redirects,sign-in200,Home307sign-in,state401,private files404,exact Supabase OAuth callback origin,unsafe-origin403 and no credential echo. Evidence docs/evidence/PH14-PREVIEW/smoke.json. Initial relative-Location test assumption corrected; full rerun PASS; app unchanged. Prior approval blocker superseded by explicit authorization. Hosted ordinary Google/save-refresh and explicit Tejas V2 G2-V2-02 acceptance remain pending; G2 still BLOCKED. Next action remains Tejas review at protected Preview /home. No PH15 advance.
+
 ## Lead deployment update — current slice READY / G2,V2 pending
 
 2026-10-07 IST. Committed staged QA b796c7c and verified PH12 overlay b88d05d; Lead Preview origin config0f28e49 tested six cases RED/GREEN,lint/types,171unit+36integration,Preview-mode build. Remote pinned Next16.3.8/Node24.21.0/npm11.19.0 build PASS. New protected Preview https://phron-hys7wn9wb-tts-1e31.vercel.app,IDdpl_87okEBHQTbn6nZCgr4yrQzpzqdNn,targetnull,READY,commit0f28e49,aliases[]. Public Supabase config Preview-only; no privileged keys. Exact callback explicitly approved and saved alongside localhost; hosted sign-in browser PASS. Details docs/DEPLOYMENT.md; evidence PH14-PREVIEW.
