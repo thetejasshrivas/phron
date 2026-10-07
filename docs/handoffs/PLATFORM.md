@@ -1,3 +1,11 @@
+# PH-12 latest preflight — local config verified; migration approval pending
+
+2026-10-07 IST, inspected main d2e6069dab84962474b464174b47b18bf9e8f3e1. .env.local verified present/ignored, required values set, exact localhost3100 origin; .env.example empty. Saved public key accepted by Phron's Auth settings endpoint; Google enabled. Supabase target kavuwjngrtqavtmxyvsq independently matched, ACTIVE_HEALTHY/Mumbai/PostgreSQL17.11; organization verified Free. Read-only inspection: no application tables/RPCs/writer/private-schema collisions and zero Auth users. No values printed. User's untracked New Text Document.txt left untouched. Evidence tests/integration/ph12/evidence/REMOTE_PREFLIGHT.md.
+
+Next one action: Tejas reviews/authorizes supabase/proposals/PH12-REMOTE-v1.md to apply the two existing hash-verified migrations to this exact empty target. Plan includes actual DDL scope, ordered hashes, permission/advisor checks and non-destructive recovery. No remote DDL or financial writes yet. Do not begin callback/onboarding against missing tables or bypass RLS. Then continue live Google smoke with ordinary credentials and fictional financial data. PH12/G2 remain pending; prior local tests are separate evidence. This supersedes earlier requests to fill local config.
+
+---
+
 # PH-12 latest account checkpoint — 2026-10-07 IST
 
 Clean base main c6af75d7bb485024961b65700eb6896cd8c9cfae; all five source hashes PASS. Tejas reports all bundled Google/Supabase setup complete. Supabase project Phron, Free organization, South Asia (Mumbai); Google project phron-510906, External audience in Testing, his chosen test Google account saved; Web OAuth credentials entered directly into Supabase; provider enabled, Site URL http://127.0.0.1:3100 and app callback http://127.0.0.1:3100/auth/callback saved. Public project reference/URL, actual quota, migration state and live flow still unverified. See tests/integration/ph12/evidence/ACCOUNT_SETUP.md. No secrets collected. Operator now prefers bundled related setup steps.

@@ -6,7 +6,7 @@ prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
 commit: 51772b67503475f343c432d99ba681f0aa9f8c0e
-dirty_files: []
+dirty_files: ["New Text Document.txt (untracked user work; untouched)"]
 active_chat: PHRON-02 Platform
 phase: 2
 current_step: PH-12
@@ -22,9 +22,13 @@ deployment: {preview: READY_PROTECTED, preview_url: "https://phron-o4v4vtg1r-tts
 migration_state: LOCAL_CANDIDATE_VERIFIED_REMOTE_NOT_APPLIED
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: PH-12 — Tejas fills ignored .env.local with public project config; verify target and prepare remote migration approval before live OAuth
+next_action: PH-12 — authorize exact two-migration plan for verified empty Phron remote target; then live OAuth smoke
 last_updated_ist: 2026-10-07
 ```
+
+## PH-12 latest preflight — configuration verified; remote approval pending
+
+2026-10-07 IST. Local .env.local verified set and ignored, .env.example empty; saved publishable key accepted, Google provider enabled. Target Phron/kavuwjngrtqavtmxyvsq independently matched/healthy/Mumbai/PostgreSQL17.11, organization Free. Read-only schema inspection found no application tables/RPCs/writer collision and zero Auth users. No credentials output, remote DDL, finance writes or deployment. Prepared exact ordered hashes/scope/recovery at supabase/proposals/PH12-REMOTE-v1.md; next action is explicit authorization to apply that plan. Evidence tests/integration/ph12/evidence/REMOTE_PREFLIGHT.md. User's untracked New Text Document.txt preserved. Prior source-hash/local-test evidence retained; no new regression claim. PH12/G2 remain pending. Earlier missing-local-config instructions below are superseded.
 
 ## PH-12 current account checkpoint — setup reported complete
 
