@@ -1,3 +1,29 @@
+# Experience handoff — PH-13 COMPLETE → PHRON-04 QA / PH-14
+
+2026-10-07 IST. main implementation 0fc19a81fb9168c9c1349e2e342d9138a3581547; existing uncommitted PH12 proxy/tests/Platform docs/evidence and New Text Document.txt preserved. Do P-RESUME; source5 hashes PASS. G0A/G1/V1 retained; G2/V2/V3 pending. No chat messaged or advanced automatically.
+
+## Implemented / exact interfaces
+
+Home server guard requires verified user/profile; missing profile → /onboarding. Client Home fetches GET /api/finance/state private/no-store, ApiResult<FinanceMutationData|null>. Manual form calls POST /api/finance/spend JSON {operationId:UUIDv4,expectedVersion:snapshot.revision,input:{bucketId,amount:exactPaiseString,merchantOrPayee,rawText:"",paymentMethod:"cash"|"upi"|"debit",transactionDate:snapshot.asOfDate}}. No caller identity. Success {ok:true,data:{snapshot,buckets:[{id,name,allocation,spent}],transactionId}}. All snapshot/money/revision validation from imported contracts; financial formulas remain server/domain. Errors from existing catalogue,401 clears state,409 refresh prompt, unknown keeps same ID/body for explicit retry. No optimistic money: failures preserve confirmed balances/levels. No persistent browser storage or global personal cache.
+
+Types src/server/finance/types.ts (type-only imports); transport src/contracts; UI state src/client/home-session.ts; exact presentation src/client/home-presentation.ts; components/home/Home.tsx; home.css. Test fixtures/old HomePreview now tests/unit/ui/fixtures only. Profile onboarding save implemented by existing Platform API; Onboarding receipt copy corrected to real Home. Goals/cards/AI absent from these APIs; no fake data or inferred semantics.
+
+## Exact click path for Tejas and QA
+
+Local app http://127.0.0.1:3100. Existing Google account → /home (already onboarded); current live fixture revision2,cash₹2400,STS₹237.50,Dining₹400 of₹500. Refresh numbers or reload retains it. To reproduce with a fresh approved synthetic account: /sign-in → Continue with Google → human account/consent → /onboarding → salary60000,cash2500,payday15 → Add commitment Synthetic commitment/full20000/unpaid500,legacy unchecked → Save my starting point → Continue to Home → amount100,payeeSynthetic lunch,BucketDining,Paid withCash → Save spend → revision2/cash2400/STS237.50/Dining400 → reload. Each intentional extra successful save is a new spend. Retry same save is only for an unconfirmed response. No credentials in chat. Day/Buckets/Goals nav moves section focus; Sign out posts existing auth route.
+
+## Evidence and QA scope
+
+PASS171 unit/component/contract +36 integration,lint/types/build,source5 hashes;7 separate real local ordinary-user database isolation/replay/rejection checks. Actual live single-Google save, pending, vessel drain, canonical update and reload PASS.375/768/1280 screenshots no overflow; mobile navigation focus verified. tests/unit/ui/evidence/PH13_RESULT.md details environments, counts, commands and limits. Local admin confined to synthetic setup/cleanup. Windows blocks old CLI; test harness uses allowed running Docker containers directly without executing it. Do not repair policy/install tools merely to rerun an already passed equivalent check.
+
+PH14 must inspect real slice, regression/security/accessibility, actual reduced-motion equivalence, unknown-save retry and no duplicated effects, and browser second-user isolation as available. Current second-user proof is real local RPC plus per-user client tests; remote second Google not performed. Browser failure fault injection, PH13 reduced runtime, physical phone, full FIT/scenarios and live JWT natural expiry NOT_RUN. No G2/V2 claim before QA/founder evidence. Keep frozen source and other owner paths intact. D05 overdue/D26 insufficient cash remain unavailable; D09/D10 AI/correction rules not invented; safeWeekly still missing from v1 snapshot pending Lead review.
+
+One next action: PHRON-04 QA PH-14 / P-GATE G2, using this saved revision/evidence and explicit V2 review when ready.
+
+Historical Experience handoff below retained.
+
+---
+
 # Experience handoff — PH-09 complete / V1 passed
 
 Recorded2026-10-06 IST. From PHRON-03 Experience to PHRON-01 Financial Engine. Repository W:/AI Product Sprint/Phron, branch main; clean atcf637597a3c47ca5309390ce9425f7e91b8d08d1 before this documentation-only record. Inspect the actual Git tip and dirty files on resume; the record commit follows. Approved implementation: HOME-V1-02,855f1dde9b314af798a8cb262067ca2b4023c2b0.

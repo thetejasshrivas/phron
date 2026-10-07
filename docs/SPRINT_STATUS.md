@@ -5,26 +5,48 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: 51772b67503475f343c432d99ba681f0aa9f8c0e
-dirty_files: ["New Text Document.txt (untracked user work; untouched)"]
-active_chat: PHRON-02 Platform
+commit: 0fc19a81fb9168c9c1349e2e342d9138a3581547
+dirty_files: ["src/proxy.ts (prior PH12)", "tests/integration/ph12/proxy.test.ts (prior PH12)", "docs/handoffs/PLATFORM.md (prior PH12)", "tests/integration/ph12/remote-anonymous.mjs and evidence (prior PH12 untracked)", "New Text Document.txt (untouched user work)"]
+active_chat: PHRON-03 Experience
 phase: 2
-current_step: PH-12
-step_state: IN_PROGRESS
+current_step: PH-13
+step_state: COMPLETE
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
 approved_amendments: [D01-v1, D02-v1, D03-v1, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D11-v1, D17-v1, D27-v1]
-completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11]
+completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13]
 passed_gates: [G0A, G1, V1]
 founder_reviews: {V1: PASSED, V2: PENDING, V3: PENDING}
 blocking_decisions: [D05-extension, D07-card, D07-funding, D08, D09, D10, D12, D13, D14, D15, D16, D18, D19, D20, D21, D22, D23, D24, D25, D26]
-latest_evidence: tests/integration/ph12/evidence/RESULT.md
+latest_evidence: tests/unit/ui/evidence/PH13_RESULT.md
 deployment: {preview: READY_PROTECTED, preview_url: "https://phron-o4v4vtg1r-tts-1e31.vercel.app", preview_id: dpl_ASbz9jBxuFcQnB8KQAfstJ38dxKh, production: PROTECTED_INERT_BOOTSTRAP_READY_NO_ALIASES, commit: 0aac28bf780e56083e68fede5b3d6dbba0266942}
-migration_state: REMOTE_BOTH_APPLIED_FINAL_RLS_VERIFICATION_PENDING
+migration_state: REMOTE_BOTH_APPLIED_RLS_VERIFIED
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: PH-12 — resume remaining read-only RLS verification when approval review is available; existing migration/smoke approval persists
+next_action: PHRON-04 QA — P-RESUME then PH-14 using EXPERIENCE handoff
 last_updated_ist: 2026-10-07
 ```
+
+## PH-13 COMPLETE — real Home/manual spend slice
+
+2026-10-07 IST. Experience implementation 0fc19a81fb9168c9c1349e2e342d9138a3581547; record-only completion follows. Accepted V1 Home connected to ordinary authenticated canonical read/spend APIs; fixtures test-only. Stable intent/retry, pending/known rejection/unknown outcome states retain confirmed balances; success triggers vessel drain and authoritative STS/bucket update. Live₹100 Dining save revision1→2, cash₹2500→2400,STS₹250→237.50,Dining₹500→400; reload same.171 unit/component/contract +36 integration PASS;7 separate local two-user RPC isolation/replay/rollback checks PASS;lint/typecheck/build/source5 PASS. Browser375/768/1280 no overflow; mobile focus PASS. Evidence tests/unit/ui/evidence/PH13_RESULT.md. Prior PH12 overlay remains unstaged; user note untouched.
+
+G0A/G1/V1 retained; G2/V2/V3 pending. Actual PH13 reduced-motion runtime, remote second Google, browser fault-injected retry/rollback and physical phone NOT_RUN; detailed limits handed to QA. No financial source/contract/schema/dependency changes or new goal/card/AI features. Next PH14 QA from docs/handoffs/EXPERIENCE.md, not started. Historical status below superseded for current step.
+
+## PH-12 COMPLETE — live Google onboarding and refresh verified
+
+2026-10-07 IST. Successful Google /onboarding observed; fictional onboarding saved via ordinary authenticated app with revision1, cash₹2500 and safeDaily₹250 receipt. Fresh /onboarding request redirected to /home after server-side verified-user/profile read: persistence/refresh PASS. App public configuration only; no service-role client or privileged bypass used for save/read.11 tables forced RLS/21 policies verified earlier;17 anonymous checks PASS.156 unit/36 integration, lint/typecheck/build PASS on unchanged OAuth fix;5 source hashes reverified. See LIVE_RESULT.md and live-google-saved.png in tests/integration/ph12/evidence.
+
+Home remains synthetic until PH13. Browser blocked direct API navigation; no independent live JSON-body/header claim. Local read/reload/logout tests remain separate evidence. PH12 COMPLETE; G0A/G1/V1 retained, G2/V2 pending. Handoff docs/handoffs/PLATFORM.md provides exact APIs and click path. Changes uncommitted atop7783e09; user note preserved. Next guided step PH13/P02-SLICE, not started. Historical pending records below superseded.
+
+## PH-12 OAuth redirect correction — current checkpoint
+
+2026-10-07 IST. Root-with-code return confirmed in browser. Added exact-root proxy dispatch to existing trusted-origin PKCE callback, preserving plain public root. Regression first4 FAIL, then npm test156 unit/36 integration PASS; lint/typecheck/build/source5 hashes/diff PASS; anonymous17/17 PASS again. Evidence tests/integration/ph12/evidence/OAUTH_REDIRECT_FIX.md. No account configuration change or source/contract/formula/dependency change. Fresh sign-in now at Google chooser; Tejas must select test account/consent. Successful live Google/onboarding/save-refresh still pending; PH-12 IN_PROGRESS, PH-13 not started. Earlier live checkpoint below remains historical context.
+
+## PH-12 current live checkpoint — RLS PASS; Google handoff pending
+
+2026-10-07 IST. All 11 remote tables have enabled/forced RLS, 21 policies, denied anonymous/authenticated direct writes, validated constraints and restricted writer role. Remote history matches both approved migrations. Previous approval-review blocker resolved. Ordinary anonymous remote/app checks 17/17 PASS; lint/diff checks PASS; all five source hashes PASS. Evidence tests/integration/ph12/evidence/LIVE_RESULT.md, remote-rls.json, remote-rls-assertions.log and remote-anonymous.log.
+
+Google sign-in opened through the local built app at3100; Tejas must complete account selection/consent. Actual successful Google callback and ordinary authenticated remote onboarding/save-refresh/logout remain NOT_RUN. PH-12 remains IN_PROGRESS; G0A/G1/V1 retained, G2/V2 pending. No remote finance writes, migration replay, installs or deployment. Prior local evidence remains separate. Next: complete Google handoff, then Platform verifies fictional save/reload. The following historical remote blocker and pending-authorization entries are superseded by this checkpoint.
 
 ## PH-12 latest remote outcome — two migrations applied; verification incomplete
 
