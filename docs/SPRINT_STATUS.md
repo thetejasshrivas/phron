@@ -22,9 +22,15 @@ deployment: {preview: READY_PROTECTED, preview_url: "https://phron-o4v4vtg1r-tts
 migration_state: LOCAL_CANDIDATE_VERIFIED_REMOTE_NOT_APPLIED
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: PH-12 — receive Supabase project-identification response; continue OAuth account configuration one action at a time
+next_action: PH-12 — Tejas fills ignored .env.local with public project config; verify target and prepare remote migration approval before live OAuth
 last_updated_ist: 2026-10-07
 ```
+
+## PH-12 current account checkpoint — setup reported complete
+
+2026-10-07 IST. Tejas reports Supabase Phron created under a Free organization in South Asia (Mumbai); Google project phron-510906, External/Testing audience, test user saved, Web OAuth client created, Supabase Google provider enabled with credentials entered directly in its dashboard, and localhost3100 Site URL/exact app callback allowlist saved. He explicitly completed all four bundled setup steps and authorized grouped related instructions. Exact Supabase target/quota, provider behavior and live OAuth remain independently unverified. No credentials collected and no agent-made remote changes. Evidence tests/integration/ph12/evidence/ACCOUNT_SETUP.md supersedes the pending project-identification instructions below.
+
+Ignored .env.local is not yet present. Next one action: fill local public project URL/publishable key plus PHRON_APP_ORIGIN=http://127.0.0.1:3100, then verify the target read-only and prepare the concrete ordered migration/recovery plan for authorization. No remote schema application is authorized yet; do not attempt callback/onboarding against missing tables or bypass RLS. PH12 remains IN_PROGRESS; G2/V2 pending and G0A/G1/V1 retained. All five source hashes PASS at clean base c6af75d7bb485024961b65700eb6896cd8c9cfae; no implementation changes or repeated test claims.
 
 ## Authoritative current outcome — PH-12 IN_PROGRESS (local auth slice verified)
 

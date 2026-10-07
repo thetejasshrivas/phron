@@ -1,3 +1,13 @@
+# PH-12 latest account checkpoint — 2026-10-07 IST
+
+Clean base main c6af75d7bb485024961b65700eb6896cd8c9cfae; all five source hashes PASS. Tejas reports all bundled Google/Supabase setup complete. Supabase project Phron, Free organization, South Asia (Mumbai); Google project phron-510906, External audience in Testing, his chosen test Google account saved; Web OAuth credentials entered directly into Supabase; provider enabled, Site URL http://127.0.0.1:3100 and app callback http://127.0.0.1:3100/auth/callback saved. Public project reference/URL, actual quota, migration state and live flow still unverified. See tests/integration/ph12/evidence/ACCOUNT_SETUP.md. No secrets collected. Operator now prefers bundled related setup steps.
+
+Next: Tejas fills ignored project-root .env.local with public Supabase URL, publishable key and PHRON_APP_ORIGIN=http://127.0.0.1:3100. File absent at inspection. No Google secret/service-role needed by app. Then inspect target read-only, prepare exact ordered migration/recovery plan and seek remote-migration authorization. Do not attempt an OAuth callback against missing financial_profiles or reinterpret that error as no profile. No remote migration, deployment or agent-made account change has occurred. PH12/G2 not complete. Existing local tests remain valid prior evidence; not rerun for this docs-only checkpoint. Sources/contracts/product code unchanged.
+
+The earlier pending project-identification instructions below are superseded by this account checkpoint; implementation and source-decision boundaries still apply.
+
+---
+
 # Platform handoff — PH-12 IN_PROGRESS, local slice verified
 
 2026-10-07 IST. Repository W:/AI Product Sprint/Phron, branch main. Read migration commit 2eaaa52; auth/UI/evidence commit 51772b67503475f343c432d99ba681f0aa9f8c0e. This handoff/status-only commit follows. Inspect actual HEAD/dirty files on resume. PH-11 remains complete. G0A/G1/V1 retained; PH-12/G2/V2 are not complete.
