@@ -1,14 +1,14 @@
-import { HomePreview } from "@/components/home/HomePreview";
+import { Home } from "@/components/home/Home";
 import { requirePageUser } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import "@/styles/home.css";
 
-export const metadata = { title: "PHRON Home · Synthetic design preview" };
+export const metadata = { title: "PHRON · Your day" };
 export const dynamic = 'force-dynamic';
 export default async function HomePage() {
   const client=await requirePageUser();
   const profile=await client.from('financial_profiles').select('id').maybeSingle();
   if(profile.error) return <main><h1>Unable to load your profile.</h1><p>Try again shortly.</p></main>;
   if(!profile.data) redirect('/onboarding');
-  return <><form action="/api/auth/logout" method="post"><button type="submit">Sign out</button></form><HomePreview /></>;
+  return <Home />;
 }

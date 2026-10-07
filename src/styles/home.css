@@ -192,3 +192,14 @@
 @media(max-width:1000px){.outcome-control{grid-column:1}}
 @media(max-width:767px){.home-sidebar nav{display:flex;gap:2px}.home-sidebar nav a,.home-sidebar nav [aria-current]{display:flex;font-size:11px;padding:10px 7px;min-height:44px;align-items:center}.home-sidebar{gap:12px}.home-brand{font-size:27px}.home-brand span{font-size:18px;padding:2px 5px}.outcome-control{font-size:11px}.capture-notice{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.phron-home *{transition:none!important;animation:none!important;scroll-behavior:auto!important}.text-action:hover span,.capture-button:active{transform:none}}
+
+/* PH-13: manual records within the accepted Home, confirmed values only. */
+.manual-spend{display:block!important;min-width:0}
+.manual-spend fieldset{border:0;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;min-width:0}
+.manual-spend label{display:grid;gap:7px;font-size:12px;color:var(--muted);min-width:0}
+.manual-spend input,.manual-spend select{width:100%;min-height:44px;background:var(--canvas);color:var(--ink);border:1px solid #72866d;border-radius:7px;padding:12px;min-width:0}
+.manual-spend .entry-date{font-size:11px;color:var(--muted);align-self:center}
+.manual-spend .capture-button{min-height:44px}
+.phron-home .sts-number{white-space:normal;overflow-wrap:anywhere}
+.phron-home .preview-bar .text-action{padding-top:0}
+@media(max-width:767px){.manual-spend fieldset{grid-template-columns:minmax(0,1fr)}.cycle-label{white-space:normal}.manual-spend label{font-size:12px}}

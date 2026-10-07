@@ -1,0 +1,69 @@
+{
+  "desktopMetrics": {
+    "daily": "₹237.50/ day",
+    "overflow": false,
+    "revision": "Confirmed · revision 2Refresh numbers",
+    "vessels": [
+      {
+        "bucket": "Groceries",
+        "duration": "0.65s",
+        "height": 134.40000915527344
+      },
+      {
+        "bucket": "Dining",
+        "duration": "0.65s",
+        "height": 107.51250457763672
+      },
+      {
+        "bucket": "Shopping",
+        "duration": "0.65s",
+        "height": 134.40000915527344
+      },
+      {
+        "bucket": "Transit",
+        "duration": "0.65s",
+        "height": 134.40000915527344
+      },
+      {
+        "bucket": "Entertainment",
+        "duration": "0.65s",
+        "height": 134.40000915527344
+      }
+    ],
+    "width": 1280
+  },
+  "mobileMetrics": {
+    "daily": "₹237.50/ day",
+    "formWidth": 282.3999938964844,
+    "overflow": false,
+    "width": 375
+  },
+  "tabletMetrics": {
+    "daily": "₹237.50/ day",
+    "overflow": false,
+    "width": 768
+  },
+  "navigationMetrics": {
+    "focus": "bucket-section",
+    "mediaReduced": false,
+    "overflow": false,
+    "transition": "0.65s"
+  },
+  "liveSpend": {
+    "amount": "10000",
+    "before": {
+      "revision": "1",
+      "cash": "250000",
+      "daily": "25000",
+      "diningRemaining": "50000"
+    },
+    "after": {
+      "revision": "2",
+      "cash": "240000",
+      "daily": "23750",
+      "diningRemaining": "40000"
+    },
+    "refreshVerified": true
+  },
+  "reducedMotion": "NOT RUN: browser tool has viewport but no media emulation; preserved CSS rule disables transitions."
+}

@@ -1,5 +1,5 @@
 import { encodePaise } from "@/contracts/money";
-import { formatMoney } from "@/client/home-fixtures";
+import { formatMoney } from "@/client/home-presentation";
 
 test.each([
   [0n, "₹0.00"], [1n, "₹0.01"], [124000n, "₹1,240.00"],

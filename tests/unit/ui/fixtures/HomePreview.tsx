@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type CSSProperties, type FormEvent, type MouseEvent } from "react";
 import Link from "next/link";
-import { buckets, capturedBuckets, capturedGoals, capturedHealthy, formatMoney, goals, homeFixtures, type HomeState } from "@/client/home-fixtures";
+import { buckets, capturedBuckets, capturedGoals, capturedHealthy, formatMoney, goals, homeFixtures, type HomeState } from "./home-fixtures";
 
 export function HomePreview() {
   const [state, setState] = useState<HomeState>("healthy");

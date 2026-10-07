@@ -25,9 +25,4 @@ export const capturedHealthy = { ...homeFixtures.healthy, daily: money(121000n),
 export const capturedBuckets = buckets.map((bucket) => bucket.name === "Dining out" ? { ...bucket, remaining: money(138000n), level: 27.6 } : bucket);
 export const capturedGoals = goals.map((goal) => goal.name === "A little escape" ? { ...goal, held: money(1850000n), level: 61.6667 } : goal);
 
-/** Exact paise display only. No Number conversion, rounding or permission formula. */
-export function formatMoney(value: Paise): string {
-  const amount = BigInt(value);
-  const magnitude = amount < 0n ? -amount : amount;
-  return `${amount < 0n ? "−" : ""}₹${new Intl.NumberFormat("en-IN").format(magnitude / 100n)}.${(magnitude % 100n).toString().padStart(2, "0")}`;
-}
+export { formatMoney } from '@/client/home-presentation';

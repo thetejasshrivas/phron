@@ -40,7 +40,7 @@ export function Onboarding() {
     <p className="auth-note">Development preview · fictional details only. No bank connection or AI processing.</p>
     <p ref={feedback} tabIndex={-1} role="status" aria-live="polite" className={`auth-feedback ${retry?'auth-error':''}`}>{message}</p>
     {snapshot ? <div className="auth-receipt"><p className="auth-eyebrow">SAVED / REVISION {snapshot.revision}</p><h2>₹{displayPaise(snapshot.money.safeDaily)}<small> safe to spend today</small></h2>
-      <p>Cash recorded: ₹{displayPaise(snapshot.money.cash)}. Your salary has not been credited.</p><p>The Home screen still shows clearly labeled synthetic design fixtures until its live-data connection in the next step.</p><a className="auth-primary" href="/home">Continue to Home ↗</a></div>
+      <p>Cash recorded: ₹{displayPaise(snapshot.money.cash)}. Your salary has not been credited.</p><p>Your Home uses these confirmed records. You can record a spend and return to the same saved perspective.</p><a className="auth-primary" href="/home">Continue to Home ↗</a></div>
     : <form onSubmit={submit} aria-busy={busy}><fieldset disabled={busy||retry} className="auth-fields">
       <label>Monthly take-home salary <span>₹</span><input name="income" inputMode="decimal" required pattern="(0|[1-9][0-9]*)(\.[0-9]{1,2})?" placeholder="60000.00"/></label>
       <label>Cash available now <span>₹</span><input name="cash" inputMode="decimal" required pattern="(0|[1-9][0-9]*)(\.[0-9]{1,2})?" placeholder="2500.00"/></label>
