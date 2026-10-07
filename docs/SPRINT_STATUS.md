@@ -10,21 +10,32 @@ dirty_files: ["New Text Document.txt (untouched/excluded user work)"]
 active_chat: PHRON-00 Lead
 phase: 2
 current_step: PH-14
-step_state: BLOCKED
+step_state: COMPLETE
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
 approved_amendments: [D01-v1, D02-v1, D03-v1, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D11-v1, D17-v1, D27-v1]
-completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13]
-passed_gates: [G0A, G1, V1]
-founder_reviews: {V1: PASSED, V2: PENDING, V3: PENDING}
+completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14]
+passed_gates: [G0A, G1, V1, G2, V2]
+founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: PENDING}
+founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb"}
 blocking_decisions: [D05-extension, D07-card, D07-funding, D08, D09, D10, D12, D13, D14, D15, D16, D18, D19, D20, D21, D22, D23, D24, D25, D26]
-latest_evidence: docs/DEPLOYMENT.md and docs/evidence/PH14-PREVIEW
-deployment: {preview: READY_PROTECTED_SLICE_PENDING_LIVE_JOURNEY, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
+latest_evidence: docs/TEST_RESULTS.md (PH14 founder acceptance); docs/evidence/PH14-PREVIEW/smoke.json
+deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
 migration_state: REMOTE_BOTH_APPLIED_RLS_VERIFIED
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Tejas open protected Preview /home and review G2-V2-02; hosted persisted journey and explicit V2 acceptance pending
+next_action: PHRON-01 Financial Engine — P-RESUME then PH-15 / P03-CARD; review OPEN semantics before affected lifecycle work
 last_updated_ist: 2026-10-07
 ```
+
+## PH-14 COMPLETE / G2 PASSED / V2 ACCEPTED — 2026-10-07 IST
+
+Founder acceptance (explicit user instruction): “Tejas has explicitly accepted visual gate V2 for commit 0f28e49 following the hosted preview user journey.” Recorded for **G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb**, protected Preview https://phron-hys7wn9wb-tts-1e31.vercel.app/home. Hosted journey confirmation is operator-reported; this record does not claim a new agent-observed Google session, new browser recording, second remote user test or new test run. Explicit founder acceptance, not automated taste approval.
+
+Step PH-14 COMPLETE; Gate G2 PASSED; Founder Review V2 ACCEPTED for this revision. Supporting executed evidence: PH14 local real two-user isolation, duplicate prevention and six-stage rollback;171 unit+36 integration;6 schema/RLS checks;lint/typecheck/build;remote Preview build and12 authorized protected HTTP smoke checks. Evidence docs/evidence/PH14/REPORT.md and docs/evidence/PH14-PREVIEW/{SMOKE_RESULT.md,smoke.json,remote-build.log,final-state.json}; tested commit verified by deployment API. G0A/G1/V1 retained. V3 remains PENDING; final visual refinement stays Phase5 V3. Historical pending/blocker records below are superseded for PH14/G2/V2 only.
+
+This is a milestone/acceptance record,not approval of open financial decisions,G3–G6,full card lifecycle or a production-ready release. Five source hashes freshly PASS;frozen PRD unchanged. No application/schema/dependency/financial changes or installs. No product tests repeated for documentation-only acceptance. Untracked user New Text Document.txt preserved.
+
+Next owner **PHRON-01 Financial Engine**, Step **PH-15 / P03-CARD**: P-RESUME,then independent failing fixtures for Scenario15,FIT12,CC01–CC16 and approved pure card effects. Review affected OPEN semantics before dependent cases; no invented expected values. Engine hands off typed outputs to Platform for persistence; PH15 is not started/completed by this record. See docs/handoffs/LEAD.md.
 
 ## Lead protected smoke — PASS (2026-10-07 IST)
 

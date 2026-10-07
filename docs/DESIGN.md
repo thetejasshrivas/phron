@@ -1,5 +1,17 @@
 # Design
-Current status: Gate V1 PASSED — Tejas explicitly accepted HOME-V1-02 at855f1dde9b314af798a8cb262067ca2b4023c2b0 on2026-10-06 IST. Approved visual foundation; final refinement Phase5 V3. See current founder approval below. Original initialization template and prior proposals are preserved as history.
+Current status: Gate V2 ACCEPTED — G2-V2-02 at0f28e49e42b13ed07640855468ec943e44dda4eb, explicit Tejas acceptance following hosted preview journey on2026-10-07 IST. Gate V1 PASSED — Tejas explicitly accepted HOME-V1-02 at855f1dde9b314af798a8cb262067ca2b4023c2b0 on2026-10-06 IST. Approved visual foundation; final refinement Phase5 V3. See current founder approval below. Original initialization template and prior proposals are preserved as history.
+
+## PH-14 COMPLETE / G2 PASSED / V2 ACCEPTED — 2026-10-07 IST
+
+Founder acceptance (explicit user instruction): “Tejas has explicitly accepted visual gate V2 for commit 0f28e49 following the hosted preview user journey.” Recorded for **G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb**, protected Preview https://phron-hys7wn9wb-tts-1e31.vercel.app/home. Hosted journey confirmation is operator-reported; this record does not claim a new agent-observed Google session, new browser recording, second remote user test or new test run. Explicit founder acceptance, not automated taste approval.
+
+Step PH-14 COMPLETE; Gate G2 PASSED; Founder Review V2 ACCEPTED for this revision. Supporting executed evidence: PH14 local real two-user isolation, duplicate prevention and six-stage rollback;171 unit+36 integration;6 schema/RLS checks;lint/typecheck/build;remote Preview build and12 authorized protected HTTP smoke checks. Evidence docs/evidence/PH14/REPORT.md and docs/evidence/PH14-PREVIEW/{SMOKE_RESULT.md,smoke.json,remote-build.log,final-state.json}; tested commit verified by deployment API. G0A/G1/V1 retained. V3 remains PENDING; final visual refinement stays Phase5 V3. Historical pending/blocker records below are superseded for PH14/G2/V2 only.
+
+This is a milestone/acceptance record,not approval of open financial decisions,G3–G6,full card lifecycle or a production-ready release. Five source hashes freshly PASS;frozen PRD unchanged. No application/schema/dependency/financial changes or installs. No product tests repeated for documentation-only acceptance. Untracked user New Text Document.txt preserved.
+
+Next owner **PHRON-01 Financial Engine**, Step **PH-15 / P03-CARD**: P-RESUME,then independent failing fixtures for Scenario15,FIT12,CC01–CC16 and approved pure card effects. Review affected OPEN semantics before dependent cases; no invented expected values. Engine hands off typed outputs to Platform for persistence; PH15 is not started/completed by this record. See docs/handoffs/LEAD.md.
+
+
 
 Accepted direction and founder revision: NOT_STARTED
 Audience and main actions: salaried Indian users; capture/decide/recover
