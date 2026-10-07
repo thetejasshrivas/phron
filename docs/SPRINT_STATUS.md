@@ -19,12 +19,18 @@ founder_reviews: {V1: PASSED, V2: PENDING, V3: PENDING}
 blocking_decisions: [D05-extension, D07-card, D07-funding, D08, D09, D10, D12, D13, D14, D15, D16, D18, D19, D20, D21, D22, D23, D24, D25, D26]
 latest_evidence: tests/integration/ph12/evidence/RESULT.md
 deployment: {preview: READY_PROTECTED, preview_url: "https://phron-o4v4vtg1r-tts-1e31.vercel.app", preview_id: dpl_ASbz9jBxuFcQnB8KQAfstJ38dxKh, production: PROTECTED_INERT_BOOTSTRAP_READY_NO_ALIASES, commit: 0aac28bf780e56083e68fede5b3d6dbba0266942}
-migration_state: LOCAL_CANDIDATE_VERIFIED_REMOTE_NOT_APPLIED
+migration_state: REMOTE_BOTH_APPLIED_FINAL_RLS_VERIFICATION_PENDING
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: PH-12 — authorize exact two-migration plan for verified empty Phron remote target; then live OAuth smoke
+next_action: PH-12 — resume remaining read-only RLS verification when approval review is available; existing migration/smoke approval persists
 last_updated_ist: 2026-10-07
 ```
+
+## PH-12 latest remote outcome — two migrations applied; verification incomplete
+
+2026-10-07 IST. Explicit Tejas approval received for PH12-REMOTE-v1 and Google/save-refresh smoke. Both tested unchanged SQL files applied successfully to Phron/kavuwjngrtqavtmxyvsq after hash/target/empty-schema recheck. Remote history verified:20261007075021 ph11_core_transactions;20261007075032 ph12_authorized_snapshot_read. Security advisor lints:[]; RPC/helper ownership/grants/fixed search paths verified. Sources all5 hashes PASS; build with .env.local PASS. Evidence tests/integration/ph12/evidence/REMOTE_MIGRATIONS.md and remote-metadata.json.
+
+Final table-by-table RLS/role/grants/constraints verification BLOCKED before execution by automatic approval review usage-limit failure (reported “4:28 PM”, unspecified timezone). Prepared single-result SQL at supabase/verification/ph12-post-migration.sql; no bypass. Actual Google callback/ordinary remote save-refresh/logout and anonymous denial NOT_RUN; no Auth/financial writes by agent. PH12 remains IN_PROGRESS, G2/V2 pending. Next action: complete remaining authorized verification once review is available, then actual Google smoke; do not reapply migrations or ask for the same approval again. User untracked note preserved. Previous pending-authorization text below is superseded.
 
 ## PH-12 latest preflight — configuration verified; remote approval pending
 

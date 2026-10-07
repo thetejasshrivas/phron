@@ -1,3 +1,13 @@
+# PH-12 latest remote outcome — migrations APPLIED; final RLS/live smoke pending
+
+2026-10-07 IST. Tejas explicitly approved PH12-REMOTE-v1 application and Google/save-refresh smoke; approval persists. Base main0c34c37bf4aef43fde0fb97f18c7489c279d7291. Both unchanged/hash-verified migrations applied successfully to Phron kavuwjngrtqavtmxyvsq, after target/empty-schema recheck. History verified:20261007075021 ph11_core_transactions;20261007075032 ph12_authorized_snapshot_read. Do not reapply. Remote security advisor lints:[]; function grants/owners/fixed search_path verified. Evidence tests/integration/ph12/evidence/REMOTE_MIGRATIONS.md and remote-metadata.json.
+
+Final read-only table/forced-RLS/grant/role/constraint query was blocked before execution because automatic approval review hit the usage limit (reported retry “4:28 PM”, timezone unspecified). This is not an unsafe-action rejection; do not bypass it. Single-result SQL prepared at supabase/verification/ph12-post-migration.sql. Multiple-SELECT connector returned only final function result, so earlier table/role SELECTs are not evidence. Live Google/remote save-refresh and ordinary anonymous denial NOT_RUN. Build with real ignored public config PASS, local3100 not running, no Auth/finance writes or account deletion. PH12/G2 not complete.
+
+Next one action: resume the remaining read-only RLS verification once automatic approval review is available, under existing authorization; then start local3100 and guide Tejas through actual Google and fictional-money save-refresh. No paid upgrades/credits, migration rerun or alternate approval bypass. User's untracked note stays untouched. Sources/contract/domain/SQL/dependencies unchanged.
+
+---
+
 # PH-12 latest preflight — local config verified; migration approval pending
 
 2026-10-07 IST, inspected main d2e6069dab84962474b464174b47b18bf9e8f3e1. .env.local verified present/ignored, required values set, exact localhost3100 origin; .env.example empty. Saved public key accepted by Phron's Auth settings endpoint; Google enabled. Supabase target kavuwjngrtqavtmxyvsq independently matched, ACTIVE_HEALTHY/Mumbai/PostgreSQL17.11; organization verified Free. Read-only inspection: no application tables/RPCs/writer/private-schema collisions and zero Auth users. No values printed. User's untracked New Text Document.txt left untouched. Evidence tests/integration/ph12/evidence/REMOTE_PREFLIGHT.md.
