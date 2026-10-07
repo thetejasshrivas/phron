@@ -1,0 +1,18 @@
+PASS remote anonymous direct insert denied: users
+PASS remote anonymous direct insert denied: financial_profiles
+PASS remote anonymous direct insert denied: pay_cycles
+PASS remote anonymous direct insert denied: obligations
+PASS remote anonymous direct insert denied: cycle_obligations
+PASS remote anonymous direct insert denied: buckets
+PASS remote anonymous direct insert denied: cycle_buckets
+PASS remote anonymous direct insert denied: transactions
+PASS remote anonymous direct insert denied: operation_log
+PASS remote anonymous direct insert denied: card_liability_payments
+PASS remote anonymous direct insert denied: card_payment_allocations
+PASS remote anonymous RPC denied: phron_onboard
+PASS remote anonymous RPC denied: phron_manual_spend
+PASS remote anonymous RPC denied: phron_current_state
+PASS local app health returns exact safe response
+PASS local app anonymous state rejected and not cached
+PASS local protected Home redirects anonymous user to sign-in
+17 passed; 0 failed; 17 total

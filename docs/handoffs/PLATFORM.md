@@ -1,3 +1,47 @@
+# Platform handoff — PH-12 COMPLETE → PHRON-03 Experience
+
+2026-10-07 IST. W:/AI Product Sprint/Phron, main, base7783e09baffcf983e4edfef3df60a7ba163cb7bc plus uncommitted OAuth proxy fix/tests/evidence/status. Inspect actual git diff; do not overwrite it or user's untracked New Text Document.txt. PH13 not started. G0A/G1/V1 retained; G2/V2 pending. Follow P-RESUME, frozen-source verification and approved DESIGN/MOTION. All5 source hashes PASS.
+
+## Verified result
+
+Live Google → /onboarding observed. Ordinary authenticated UI saved fictional salary₹60000/cash₹2500/payday15/commitment₹20000 unpaid₹500. Receipt revision1/cash₹2500/safeDaily₹250. Fresh /onboarding server request read the persisted profile under verified user context and redirected /home. Screenshot and limits: tests/integration/ph12/evidence/LIVE_RESULT.md, live-google-saved.png. No service-role keys or bypass: public publishable client + caller cookies + verified auth + D11 restricted writer/forced RLS.11 tables/21 policies and17 anonymous checks PASS.156 unit/36 integration/lint/typecheck/build PASS from last code revision; no new product change this completion turn. Direct browser GET API navigation was client-blocked; exact live API body/headers not claimed. Local canonical read/reload/logout tests are separate. Home still synthetic. Session remains signed in.
+
+## Exact click path
+
+Built local app http://127.0.0.1:3100. Existing saved account: open /onboarding → server redirects /home; reload remains authorized. Fresh account: /sign-in → Continue with Google → operator account selection/consent → /auth/callback → /onboarding → salary/cash/payday → + Add a commitment if needed → Save my starting point → saved receipt → Continue to Home. Existing-profile callback chooses /home. Root OAuth code fallback goes through the same callback. Sign out posts /api/auth/logout. No Google credentials in chat; retain trusted origin and exact callback allowlist. Do not reapply either remote migration.
+
+## Exact interface for PH13 / P02-SLICE
+
+Types: src/server/finance/types.ts; validators src/server/finance/parse.ts; canonical transport src/contracts/{boundaries,money,snapshot}.ts. Experience owns src/client/components/pages/styles; import types without pulling server implementation into client bundles. Request/result validation must preserve these existing contracts.
+
+- GET /api/finance/state: same-origin cookie session; no request body; cache no-store. Result ApiResult<FinanceMutationData|null>; null means no initialized profile. Failure is never empty state.
+- POST /api/onboarding: JSON MutationEnvelope<OnboardingInput> = {operationId:UUIDv4, expectedVersion:"0", input:{sustainableIncome:Paise,salaryCreditDay:integer1..31,declaredCash:Paise,obligations:[{name,amount:Paise,unpaid:Paise,isCreditCardLegacy:boolean}]}}. No caller identity.
+- POST /api/finance/spend: same envelope, expectedVersion=current snapshot.revision; input {bucketId,amount:Paise,merchantOrPayee,rawText,paymentMethod:"cash"|"upi"|"debit",transactionDate:YYYY-MM-DD}. Same-origin JSON required;64KiB maximum. One UUID per intent; retain exact payload/UUID on uncertain retry.409 must be surfaced, never silently resubmitted as a fresh operation.
+- Success: {ok:true,data:{snapshot,buckets:[{id,name,allocation,spent}],transactionId:string|null}}. Canonical snapshot schemaVersion1/currencyINR/revision/cycleId/asOfDate/healthA|B|C/remainingSpendingDays/money. Money keys sustainableIncome,cycleIncome(nullable),cash,unpaidObligations,accruedCardReserve,goalCycle,goalHeld,discretionaryPool,spent,marginBudget,marginLiquid,safePool,safeDaily. All money/revisions are exact canonical decimal strings in JSON, internal money bigint. Never Number money or recompute financial formulas in UI.
+- Failure: {ok:false,error:{code,message,retryable}}. HTTP400 VALIDATION;401 UNAUTHENTICATED;403 FORBIDDEN;404 NOT_FOUND;409 VERSION_CONFLICT/REPLAY_MISMATCH/OPERATION_IN_PROGRESS;503 UNAVAILABLE;500 INTERNAL. Safe fixed copy; no raw provider/DB detail. Only authoritative success updates UI canonical balances.
+
+Next one action: Experience performs P-RESUME then PH13/P02-SLICE to connect approved Home/manual capture to canonical read and spend APIs, retaining drain/feedback/reduced motion. Verify save-refresh against live ordinary session when integrated. Current Home sample values are not saved balances. Goals/cards/AI are not implemented by these APIs; do not infer support or invent financial rules. D05 overdue, D26 cash deficit and other OPEN decisions remain unresolved. safeWeekly is not in snapshotv1; Lead review remains pending. No G2/V2 approval inferred.
+
+Historical records below are superseded by this completed handoff.
+
+---
+
+## PH-12 OAuth redirect correction — current checkpoint
+
+2026-10-07 IST. Root-with-code return confirmed in browser. Added exact-root proxy dispatch to existing trusted-origin PKCE callback, preserving plain public root. Regression first4 FAIL, then npm test156 unit/36 integration PASS; lint/typecheck/build/source5 hashes/diff PASS; anonymous17/17 PASS again. Evidence tests/integration/ph12/evidence/OAUTH_REDIRECT_FIX.md. No account configuration change or source/contract/formula/dependency change. Fresh sign-in now at Google chooser; Tejas must select test account/consent. Successful live Google/onboarding/save-refresh still pending; PH-12 IN_PROGRESS, PH-13 not started. Earlier live checkpoint below remains historical context.
+
+# Platform current checkpoint — PH-12 IN_PROGRESS, remote RLS verified
+
+2026-10-07 IST; main inspected base 7783e09baffcf983e4edfef3df60a7ba163cb7bc. Both approved migrations are already applied; do not reapply. All 11 public application tables have enabled/forced RLS, 21 policies, denied client direct writes, safe restricted writer and validated constraints. Remote history verified. Previous approval-review blocker resolved. See tests/integration/ph12/evidence/LIVE_RESULT.md and remote RLS evidence.
+
+17/17 live anonymous checks PASS using ordinary publishable credentials:11 table inserts denied,3 RPCs denied, safe health, private state401 and protected Home redirect. Lint/diff checks and all five source hashes PASS. Prior local 156 unit/32 integration/52 separate local checks are historical separate evidence, not rerun or relabeled as remote Google proof.
+
+Live built app running on http://127.0.0.1:3100. Chrome PHRON OAuth tab is at Google sign-in awaiting Tejas account selection/consent. Do not collect credentials/tokens or infer success. Next one action: Tejas completes Google and reports Onboarding/Home/error; then use fictional financial entries through the ordinary signed-in UI and verify canonical state survives refresh, returning sign-in and logout. Home is still synthetic V1, not proof of actual saved balances. No service-role normal operations or destructive account cleanup. Keep .env.local ignored and user's untracked New Text Document.txt untouched.
+
+PH-12 cannot be marked COMPLETE or handed off to PH-13 until live Google/save-refresh passes. G0A/G1/V1 retained; G2/V2 pending. Platform ownership/narrow PH12 transfer and all OPEN decisions remain unchanged; no source/contract/domain/SQL/dependency edits. Eventual recipient is PHRON-03 Experience, PH-13/P02-SLICE, after actual completion and operator signal. Historical checkpoints below are superseded by this record.
+
+---
+
 # PH-12 latest remote outcome — migrations APPLIED; final RLS/live smoke pending
 
 2026-10-07 IST. Tejas explicitly approved PH12-REMOTE-v1 application and Google/save-refresh smoke; approval persists. Base main0c34c37bf4aef43fde0fb97f18c7489c279d7291. Both unchanged/hash-verified migrations applied successfully to Phron kavuwjngrtqavtmxyvsq, after target/empty-schema recheck. History verified:20261007075021 ph11_core_transactions;20261007075032 ph12_authorized_snapshot_read. Do not reapply. Remote security advisor lints:[]; function grants/owners/fixed search_path verified. Evidence tests/integration/ph12/evidence/REMOTE_MIGRATIONS.md and remote-metadata.json.

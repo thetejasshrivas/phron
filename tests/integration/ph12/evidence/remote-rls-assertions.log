@@ -1,0 +1,8 @@
+PASS exact set of 11 expected public tables
+PASS RLS enabled and forced on all 11 tables
+PASS 21 expected policies (two per table; operation_log has writer-only policy)
+PASS anonymous and authenticated direct writes denied on all 11 tables
+PASS writer cannot login, inherit, act as superuser or bypass RLS
+PASS no client writer-role memberships
+PASS no writer policies missing USING or WITH CHECK
+PASS all constraints validated
