@@ -4,19 +4,22 @@ import { financialDate } from '@/contracts/boundaries';
 import { HomeSession } from '@/client/home-session';
 import { boundedLevel, bucketPresentation, formatMoney, healthCopy, positiveSpendAmount } from '@/client/home-presentation';
 import type { ManualSpendInput } from '@/server/finance/types';
+import { CardLedger } from './CardLedger';
 
 export function Home() {
  const [session]=useState(()=>new HomeSession((...args)=>fetch(...args),()=>crypto.randomUUID()));
  const view=useSyncExternalStore(session.subscribe,session.getSnapshot,session.getSnapshot);
- useEffect(()=>{void session.refresh();},[session]);
+ useEffect(()=>{void session.refresh();return ()=>session.dispose();},[session]);
  return <HomeSurface view={view} session={session}/>;
 }
 export function HomeSurface({view,session}:{view:ReturnType<HomeSession['getSnapshot']>;session:HomeSession}) {
  const [section,setSection]=useState('home-main');const [details,setDetails]=useState(false);
  const [message,setMessage]=useState('');const formRef=useRef<HTMLFormElement>(null);const submittedFields=useRef('');
+ const undoRef=useRef<HTMLButtonElement>(null);
  const data=view.data,snapshot=data?.snapshot,copy=snapshot?healthCopy[snapshot.health]:null;
  const locked=view.phase==='pending'||view.phase==='retry';
  useEffect(()=>{if(view.phase==='success'&&formRef.current&&JSON.stringify([...new FormData(formRef.current)])===submittedFields.current)formRef.current.reset();},[view.phase]);
+ useEffect(()=>{if(view.undo&&document.activeElement===document.body)undoRef.current?.focus({preventScroll:true});},[view.undo]);
  function navigate(event:MouseEvent<HTMLAnchorElement>,id:string) {
   event.preventDefault();setSection(id);const target=document.getElementById(id);target?.focus({preventScroll:true});
   target?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
@@ -28,7 +31,9 @@ export function HomeSurface({view,session}:{view:ReturnType<HomeSession['getSnap
    const input:ManualSpendInput={bucketId:String(fields.get('bucket')),amount:positiveSpendAmount(String(fields.get('amount'))),merchantOrPayee:String(fields.get('payee')).trim(),
     rawText:'',paymentMethod:fields.get('method') as ManualSpendInput['paymentMethod'],transactionDate:financialDate(snapshot.asOfDate)};
    if(!input.merchantOrPayee)throw new Error('Invalid entry');
-   submittedFields.current=JSON.stringify([...fields]);setMessage('');await session.submit(input);
+   submittedFields.current=JSON.stringify([...fields]);setMessage('');
+   if(fields.get('method')==='card')await session.card({action:'create',bucketId:input.bucketId,amount:input.amount,merchantOrPayee:input.merchantOrPayee,transactionDate:input.transactionDate,paymentMethod:'card',legacyObligationId:null});
+   else await session.submit(input);
   } catch {setMessage('Enter a positive amount with at most two decimal places and a payee.');}
  }
  return <div className="phron-home">
@@ -55,15 +60,17 @@ export function HomeSurface({view,session}:{view:ReturnType<HomeSession['getSnap
      <label>Amount · ₹<input name="amount" inputMode="decimal" placeholder="100.00" required aria-describedby="capture-feedback"/></label>
      <label>Merchant or payee<input name="payee" maxLength={100} required placeholder="Lunch"/></label>
      <label>Bucket<select name="bucket" required>{data?.buckets.map(b=><option key={b.id} value={b.id}>{b.name}</option>)}</select></label>
-     <label>Paid with<select name="method"><option value="cash">Cash</option><option value="upi">UPI</option><option value="debit">Debit card</option></select></label>
+     <label>Paid with<select name="method"><option value="cash">Cash</option><option value="upi">UPI</option><option value="debit">Debit card</option><option value="card">Tracked credit card</option></select></label>
      <span className="entry-date">Recorded for {snapshot?.asOfDate??'today'}</span>
      <button className="capture-button" type="submit" disabled={locked}>{view.phase==='pending'?'Saving…':'Save spend'}<span aria-hidden="true">↗</span></button>
     </fieldset></form>
    </section>
    <div id="capture-feedback" className={`capture-notice ${view.phase==='retry'||view.phase==='error'||message?'error':view.phase}`}><p role="status" aria-atomic="true">{!message&&view.phase!=='retry'&&view.phase!=='error'?view.notice:''}</p><p role="alert">{message||(view.phase==='retry'||view.phase==='error'?view.notice:'')}</p>{view.phase==='retry'&&<button className="text-action" onClick={()=>void session.retry()}>Retry same save ↗</button>}</div>
+   {view.undo&&<div className="undo-toast" role="status"><span>Deleted. Numbers reversed.</span><button ref={undoRef} className="text-action" disabled={locked} onClick={()=>void session.undo()}>Undo</button><small>Available for 6 seconds</small></div>}
    <section className="buckets-section" id="bucket-section" tabIndex={-1} aria-labelledby="buckets-title"><div className="section-heading"><div><h2 id="buckets-title">Give your money some shape.</h2><p>Your buckets drain as you spend. What remains is what you can see.</p></div><span className="section-count">{data?.buckets.length??'—'} buckets</span></div>
     {data?<div className="bucket-grid">{data.buckets.map(bucketPresentation).map((b,i)=><article className={`bucket ${i%2?'ochre':'sage'}`} key={b.id}><div className="bucket-vessel" role="img" aria-label={`${b.name}: ${formatMoney(b.remaining)} allowance remaining of ${formatMoney(b.allocation)}. Spent ${formatMoney(b.spent)}. Global safe to spend governs permission.`}><div className="vessel-ticks" aria-hidden="true"/><div className="bucket-liquid" data-bucket={b.name} style={{'--level':`${b.level}%`} as CSSProperties} aria-hidden="true"/><span className="vessel-label" aria-hidden="true">{b.name.slice(0,2).toUpperCase()}</span></div><h3>{b.name}</h3><p>{formatMoney(b.remaining)}</p><small>remaining</small><small>of {formatMoney(b.allocation)}</small>{snapshot?.health!=='A'&&<span className="paused-label">Discretionary permission paused</span>}</article>)}</div>:<div className="empty-line">{view.phase==='loading'?'Loading your buckets…':'Your buckets are unavailable until your starting point is loaded.'}</div>}
    </section>
+   {data&&<CardLedger data={data} session={session} locked={locked||view.phase==='loading'}/>}
    <section className="goals-section" id="goal-section" tabIndex={-1} aria-labelledby="goals-title"><div className="section-heading"><div><h2 id="goals-title">A future worth making room for.</h2><p>Something to look forward to.</p></div></div><div className="empty-line">Goal setup is not available yet. Your saved cash and spending remain separate from future plans.</div></section>
    <footer className="home-footer"><span>Clarity over perfection.</span><span>Amounts from your confirmed records.</span></footer>
   </main>

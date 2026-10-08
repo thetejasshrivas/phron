@@ -57,3 +57,29 @@ test('malformed success is unconfirmed and same intent survives for retry',async
  expect(session.getSnapshot().phase).toBe('retry');expect(session.getSnapshot().data?.snapshot.revision).toBe('1');
  await session.retry();expect(transport.mock.calls[1]?.[1]?.body).toBe(transport.mock.calls[2]?.[1]?.body);
 });
+
+test('D10 delete applies server reversal immediately and Undo expires at exactly 6000ms',async()=>{
+ jest.useFakeTimers();
+ try {
+  const transport=jest.fn<typeof fetch>().mockResolvedValueOnce(ok(fixture())).mockResolvedValueOnce(ok(fixture('2')));
+  const session=new HomeSession(transport,()=>id);await session.refresh();
+  await session.card({action:'delete',transactionId:id});
+  expect(session.getSnapshot().data?.snapshot.revision).toBe('2');
+  expect(session.getSnapshot().undo?.deleteOperationId).toBe(id);
+  jest.advanceTimersByTime(5999);expect(session.getSnapshot().undo).toBeDefined();
+  jest.advanceTimersByTime(1);expect(session.getSnapshot().undo).toBeUndefined();
+  await session.undo();expect(transport).toHaveBeenCalledTimes(2);
+ }finally{jest.useRealTimers();}
+});
+test('Undo is a new stable intent; unknown deletion retry cannot duplicate a write',async()=>{
+ jest.useFakeTimers();
+ try {
+  const transport=jest.fn<typeof fetch>().mockResolvedValueOnce(ok(fixture())).mockRejectedValueOnce(new Error('offline')).mockResolvedValueOnce(ok(fixture('2'))).mockResolvedValueOnce(ok(fixture('3')));
+  let calls=0;const other='4de4df19-902f-4419-b33f-10d662387374';const session=new HomeSession(transport,()=>calls++?other:id);await session.refresh();
+  await session.card({action:'delete',transactionId:id});expect(session.getSnapshot().undo).toBeUndefined();
+  await session.submit(input);expect(transport).toHaveBeenCalledTimes(2);
+  await session.retry();expect(transport.mock.calls[1]?.[1]?.body).toBe(transport.mock.calls[2]?.[1]?.body);
+  await session.undo();expect(JSON.parse(transport.mock.calls[3]?.[1]?.body as string)).toEqual({operationId:other,expectedVersion:'2',input:{action:'restore',transactionId:id,deleteOperationId:id}});
+  expect(session.getSnapshot().undo).toBeUndefined();session.dispose();
+ }finally{jest.useRealTimers();}
+});

@@ -9,8 +9,8 @@
 .phron-home :focus-visible{outline:3px solid var(--ink);outline-offset:4px}
 .phron-home h1,.phron-home h2,.phron-home h3,.phron-home p{margin:0}
 .phron-home h1,.phron-home .section-heading h2,.phron-home .coach-panel h2{font-family:Georgia,serif;font-weight:400;letter-spacing:-.035em}
-.skip-home{position:fixed;top:-100px;z-index:9;background:var(--accent);padding:16px}
-.skip-home:focus{top:12px}
+.skip-home{position:fixed;top:-100px;z-index:9;background:var(--accent);padding:16px;clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}
+.skip-home:focus{top:12px;clip-path:none;width:auto;height:auto}
 .home-sidebar{padding:40px 24px;display:flex;flex-direction:column;border-right:1px solid var(--line);min-height:100dvh}
 .home-brand{font-size:38px;font-weight:700;letter-spacing:-.065em}
 .home-brand span{display:inline-block;font-size:24px;background:var(--accent);border-radius:50%;padding:1px 7px;margin-left:5px}
@@ -203,3 +203,28 @@
 .phron-home .sts-number{white-space:normal;overflow-wrap:anywhere}
 .phron-home .preview-bar .text-action{padding-top:0}
 @media(max-width:767px){.manual-spend fieldset{grid-template-columns:minmax(0,1fr)}.cycle-label{white-space:normal}.manual-spend label{font-size:12px}}
+
+/* PH-15: quiet ledger rows, immediate exact values, bounded confirmation toast. */
+.phron-home .card-ledger{margin-top:44px;border-top:1px solid var(--line);padding-top:32px}
+.card-reserve{font-size:22px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.card-reserve small,.purchase-record summary small{display:block;font-size:12px;color:var(--muted);margin-top:6px;font-weight:400}
+.ledger-guidance{font-size:13px;line-height:1.6;max-width:72ch;margin:16px 0!important;color:var(--muted)}
+.purchase-record,.ledger-payment,.payment-record{border-bottom:1px solid var(--line);padding:16px 0}
+.purchase-record summary{display:flex;justify-content:space-between;gap:16px;align-items:center}
+.purchase-record summary::after{content:"";width:7px;height:7px;flex-shrink:0;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg)}
+.purchase-record[open]>summary::after{transform:rotate(225deg)}
+.purchase-record summary strong{margin-left:auto}
+.card-ledger summary{cursor:pointer;min-height:44px;line-height:1.5;overflow-wrap:anywhere}
+.card-ledger summary strong{white-space:nowrap;font-variant-numeric:tabular-nums}
+.card-ledger details[open]>summary{margin-bottom:16px}
+.card-ledger details p,.card-ledger small{font-size:12px;line-height:1.5;color:var(--muted)}
+.ledger-form fieldset{border:0;padding:16px 0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;min-width:0}
+.ledger-form label{display:grid;gap:8px;font-size:12px;color:var(--muted);min-width:0}
+.ledger-form input,.ledger-form select{min-width:0;width:100%;min-height:44px;padding:10px;border:1px solid #72866d;background:var(--canvas);color:var(--ink);border-radius:7px}
+.ledger-form button{align-self:end;min-height:44px}
+.card-ledger .delete-purchase{margin-right:16px;color:var(--danger);min-height:44px}
+.card-ledger [role=alert]{color:var(--danger)}
+.undo-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:10;display:flex;align-items:center;gap:16px;flex-wrap:wrap;width:max-content;max-width:calc(100vw - 32px);padding:16px 20px;background:var(--ink);color:var(--canvas);border-radius:9px;box-shadow:0 8px 24px #233b2e26;animation:undo-arrive 160ms ease-out}
+.undo-toast .text-action{color:var(--accent);padding:8px;min-height:44px}.undo-toast small{font-size:11px}
+@keyframes undo-arrive{from{opacity:.7}to{opacity:1}}
+@media(max-width:767px){.ledger-form fieldset{grid-template-columns:minmax(0,1fr)}.card-reserve{font-size:17px}.card-ledger .section-heading{align-items:start}.purchase-record summary{align-items:start}.undo-toast{bottom:16px;gap:10px}.card-ledger .section-heading h2{font-size:27px}}

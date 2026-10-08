@@ -1,0 +1,47 @@
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+import {mkdirSync,writeFileSync} from 'node:fs';
+import {chromium,expect} from '@playwright/test';
+export async function browserProof(origin,ajar,bjar) {
+ const output=new URL('./evidence/lifecycle/',import.meta.url);mkdirSync(output,{recursive:true});
+ const browser=await chromium.launch({channel:'msedge',headless:true});
+ const contexts=[];const evidence={checks:[],views:[],motion:[]};
+ try {
+  async function context(jar){const c=await browser.newContext({viewport:{width:1280,height:900}});contexts.push(c);await c.addCookies([...jar].map(([name,value])=>({name,value,url:origin})));return c;}
+  const a=await context(ajar),b=await context(bjar),page=await a.newPage(),errors=[];
+  page.on('pageerror',()=>errors.push('PAGE_ERROR'));
+  await page.goto(origin+'/home');await expect(page.getByText('Your records could not be loaded.',{exact:false})).toHaveCount(0);
+  const state=async()=>{const r=await a.request.get(origin+'/api/finance/state');assert.equal(r.status(),200);return (await r.json()).data.snapshot;};
+  const records=async()=>{const r=await a.request.get(origin+'/api/finance/card-records');assert.equal(r.status(),200);return (await r.json()).data;};
+  const before=await state();await expect(page.getByText(`Confirmed · revision ${before.revision}`)).toBeVisible();
+  const capture=page.locator('form.manual-spend');await capture.getByLabel('Amount · ₹',{exact:true}).fill('100');await capture.getByLabel('Merchant or payee').fill('Browser purchase');await capture.locator('select[name=bucket]').selectOption({label:'Dining'});await capture.locator('select[name=method]').selectOption('card');
+  const sampling=page.locator('[data-bucket=Dining]').evaluate(el=>new Promise(resolve=>{const values=[];const start=performance.now();function frame(){values.push(el.getBoundingClientRect().height);if(performance.now()-start<1600)requestAnimationFrame(frame);else resolve(values);}frame();}));
+  await capture.getByRole('button',{name:'Save spend'}).click();await expect(page.locator('.purchase-record').filter({hasText:'Browser purchase'})).toBeVisible();
+  const heights=await sampling;assert.ok(heights[0]>heights.at(-1));assert.ok(heights.some(h=>h<heights[0]&&h>heights.at(-1)));evidence.motion.push({event:'tracked purchase drain',before:heights[0],after:heights.at(-1),intermediate:true});
+  let s=await state();assert.equal(s.money.cash,before.money.cash);assert.equal(s.money.spent,'20000');assert.equal(s.money.accruedCardReserve,'10000');evidence.checks.push('ordinary browser tracked purchase saves once without cash debit');
+  let row=page.locator('.purchase-record').filter({hasText:'Browser purchase'});await row.locator('summary').click();await row.getByLabel('Purchase amount').fill('150');await row.getByRole('button',{name:'Save correction'}).click();await expect(row.locator('summary strong')).toHaveText('₹150.00');
+  s=await state();assert.equal(s.money.accruedCardReserve,'15000');assert.equal(s.money.spent,'25000');
+  const purchase=(await records()).transactions.find(t=>t.merchantOrPayee==='Browser purchase');
+  const payment=page.locator('details.ledger-payment').filter({has:page.locator('summary').getByText('Record a card payment',{exact:true})}).first();
+  await payment.locator('summary').first().click();await payment.locator(`[name="tracked:${purchase.id}"]`).fill('40');await payment.getByRole('button',{name:'Save card payment',exact:true}).click();
+  await expect(page.locator('.card-reserve')).toContainText('₹110.00');const settled=await state();assert.equal(settled.money.spent,s.money.spent);assert.equal(settled.money.safePool,s.money.safePool);assert.equal(settled.money.cash,'236000');
+  await expect(page.getByText('Loading confirmed records…')).toHaveCount(0);row=page.locator('.purchase-record').filter({hasText:'Browser purchase'});await row.locator('summary').click();await expect(row.getByRole('button',{name:'Delete purchase'})).toBeDisabled();await expect(row.locator('option[value=cash]')).toHaveJSProperty('disabled',true);evidence.checks.push('payment preserves STS; paid deletion and conversion visibly blocked');
+  await row.getByLabel('Purchase amount').fill('30');await row.getByRole('button',{name:'Save correction'}).click();await expect(page.locator('#capture-feedback [role=alert]')).toContainText('not saved');assert.deepEqual(await state(),settled);evidence.checks.push('invalid paid amount correction reports error and retains exact confirmed state');
+  await page.getByText('Saved card payments · 2',{exact:true}).click();const record=(await records()).payments.find(p=>p.tracked.some(t=>t.purchaseId===purchase.id));
+  let savedPayment=page.locator('.payment-record').filter({hasText:record.id.slice(0,8)});await savedPayment.locator('summary').click();await savedPayment.locator(`[name="tracked:${purchase.id}"]`).fill('60');await savedPayment.getByRole('button',{name:'Save payment correction'}).click();await expect(page.locator('.card-reserve')).toContainText('₹90.00');
+  const corrected=(await records()).payments.find(p=>p.tracked.some(t=>t.purchaseId===purchase.id));savedPayment=page.locator('.payment-record').filter({hasText:corrected.id.slice(0,8)});await savedPayment.locator('summary').click();await savedPayment.getByRole('button',{name:'Reverse this payment'}).click();await expect(page.locator('.card-reserve')).toContainText('₹150.00');assert.equal((await state()).money.cash,'240000');evidence.checks.push('payment correction and reversal persist through ordinary browser routes');
+  let dropped=false;const deletionIds=[];await page.route('**/api/finance/card-lifecycle',async route=>{const body=route.request().postDataJSON();if(body.input.action==='delete'){deletionIds.push(body.operationId);if(!dropped){dropped=true;await route.fetch();await route.abort('failed');return;}}await route.continue();});
+  row=page.locator('.purchase-record').filter({hasText:'Browser purchase'});await row.locator('summary').click();await row.getByRole('button',{name:'Delete purchase'}).click();await expect(page.getByRole('button',{name:'Retry same save'})).toBeVisible();assert.equal((await state()).money.spent,'10000');await page.getByRole('button',{name:'Retry same save'}).click();await expect(page.getByRole('button',{name:'Undo',exact:true})).toBeVisible();assert.equal(deletionIds.length,2);assert.equal(deletionIds[0],deletionIds[1]);await page.unroute('**/api/finance/card-lifecycle');evidence.checks.push('lost committed deletion response retries same operation ID without a second reversal');
+  await page.getByRole('button',{name:'Undo',exact:true}).click();await expect(page.locator('.purchase-record').filter({hasText:'Browser purchase'})).toBeVisible();assert.equal((await state()).money.spent,'25000');
+  await page.reload();await expect(page.locator('.purchase-record').filter({hasText:'Browser purchase'})).toBeVisible();assert.equal((await state()).money.accruedCardReserve,'15000');evidence.checks.push('delete reverses immediately; Undo re-commits and refresh retains exact state');
+  for(const width of [375,768,1280])for(const motion of ['no-preference','reduce']) {
+   await page.setViewportSize({width,height:900});await page.emulateMedia({reducedMotion:motion});await page.locator('#bucket-section').scrollIntoViewIfNeeded();
+   const metrics=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,transition:getComputedStyle(document.querySelector('.bucket-liquid')).transitionDuration,exact:document.querySelector('[data-testid=safe-daily]').textContent}));assert.equal(metrics.overflow,false);if(motion==='reduce')assert.equal(metrics.transition,'0s');
+   await page.screenshot({path:fileURLToPath(new URL(`home-${width}-${motion}.png`,output)),fullPage:true});evidence.views.push({width,motion,...metrics});
+   if(width!==768){const current=page.locator('.purchase-record').filter({hasText:'Browser purchase'});await current.locator('summary').click();await current.screenshot({path:fileURLToPath(new URL(`editor-${width}-${motion}.png`,output))});await current.locator('summary').click();}
+  }
+  const other=await b.newPage();await other.goto(origin+'/home');await expect(other.getByText('Your next saved spend will appear here.')).toBeVisible();await expect(other.getByText('Browser purchase',{exact:true})).toHaveCount(0);evidence.checks.push('second ordinary browser sees no first-user purchase/payment');
+  await page.setViewportSize({width:375,height:900});row=page.locator('.purchase-record').filter({hasText:'Browser purchase'});await row.locator('summary').click();await row.getByRole('button',{name:'Delete purchase'}).click();await expect(page.getByRole('button',{name:'Undo',exact:true})).toBeVisible();await expect(page.getByRole('button',{name:'Undo',exact:true})).toHaveCount(0,{timeout:7500});await page.reload();await expect(page.locator('.purchase-record').filter({hasText:'Browser purchase'})).toHaveCount(0);assert.equal((await state()).money.spent,'10000');evidence.checks.push('Undo window expires; deletion survives refresh');
+  assert.deepEqual(errors,[]);evidence.checks.push('no client runtime errors');writeFileSync(new URL('browser.json',output),JSON.stringify(evidence,null,2)+'\n');console.log(`PASS browser lifecycle: ${evidence.checks.length} checks; ${evidence.views.length} desktop/mobile normal/reduced views`);
+ }finally{for(const c of contexts)await c.close();await browser.close();}
+}

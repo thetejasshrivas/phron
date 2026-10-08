@@ -30,3 +30,7 @@ export function positiveSpendAmount(value:string):Paise {
  if(decodePaise(amount)<=0n) throw new TypeError('Positive amount required');
  return amount;
 }
+/** Exact decimal input presentation only; no financial recomputation. */
+export function editableMoney(value:Paise):string {
+ const amount=decodePaise(value);return `${amount/100n}.${(amount%100n).toString().padStart(2,'0')}`;
+}
