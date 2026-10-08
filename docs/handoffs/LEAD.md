@@ -152,3 +152,5 @@ D21 exact approval and lock clarification recorded in DECISIONS. Local migration
 PASS:131 domain/100% coverage;270unit+74integration;17commitment+16recovery+9cancellation;46card lifecycle+25payments+16security;types/lint/build/source hashes. Fresh-client replay and four forced rollback boundaries included. Evidence: tests/integration/ph16/evidence/RESULT.md. No remote migration/deployment.
 
 PH16 completion scope question remains pending; do not infer acceptance from elapsed time. Remaining OPEN D12/D13/D14/D07-card/funding/D03-clearance are not approvals. Next eligible implementation phase after explicit scoped completion is PH17; resolve clearing/late-salary boundaries before dependent transitions. No G3 pass or browser goal-journey proof claimed. Unrelated user note untouched.
+
+D21 verified implementation committed as 349631cdf7d42863ed53a26106906284f85c8777. Working tree afterward contains only the untouched untracked New Text Document.txt. Completion-scope question remains unanswered; PH16 status is IN_PROGRESS.
