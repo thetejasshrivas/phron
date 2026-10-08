@@ -225,17 +225,24 @@ Owner: PHRON-00 Lead
 ## D10
 
 Decision ID: D10
-Status: OPEN
+Status: APPROVED — D10-v1
 Source clauses: FR-TXN-05/06; AC-TXN-05;19.4;21.2
 Issue: Immediate logging, undo timing and correction dates conflict
 Counterexample: ₹1,200 persisted then undone within six seconds
-Affected steps and gates: PH-15/17/21/23; dependent gate remains blocked
-Proposed resolution: Immediate persistence with idempotent server reversal and constrained original/new active-cycle dates. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
-Required tests: FIT-08/12; Scenario 16; undo timing; NOT_RUN
+Affected steps and gates: PH-15/17/21/23; approval resolves the named semantics, not implementation/test gates.
+Proposed resolution: Superseded by the exact founder-approved terms below.
+
+Exact approved wording:
+
+1. Deletion immediately applies mathematical reversal to database state and UI, with a 6.0-second Undo toast permitting re-commit.
+2. Transaction date mutations are strictly restricted to dates within the active pay cycle.
+3. Card purchases with associated payments cannot be deleted or converted to cash until those payments are reversed (CC-11, CC-14).
+
+Founder approval and date IST: Explicit Tejas instruction approving D10 with the three terms above, 2026-10-08 IST. Exact approval time not supplied.
+Amendment version or implementation-only classification: D10-v1 scoped semantic amendment. Frozen PRD unchanged.
+Scope: Only the named clauses are amended. Existing historical cross-cycle edit prohibition, atomicity, stable operation IDs, ownership and card accounting constraints remain applicable. No approval of other OPEN decisions or remote deployment/migrations.
+Required tests: FIT-08/12; Scenario 16; immediate persisted reversal and canonical response, 6.0-second Undo boundary, idempotent re-commit, active-cycle date limits, paid-card deletion/conversion guards, concurrent requests and rollback. D10-specific persistence/UI verification NOT_RUN at approval; prior pure math and settlement evidence remains separately scoped.
+Implementation evidence, 2026-10-08 IST: PH-15 approved card lifecycle PASS; see tests/integration/ph15/evidence/lifecycle/RESULT.md. The 6.0-second offer, immediate canonical reversal, exact re-commit, active-cycle guards and paid-card restrictions are verified locally. This does not approve other OPEN decisions or remote migration/deployment.
 Owner: PHRON-00 Lead
 
 ## D11
