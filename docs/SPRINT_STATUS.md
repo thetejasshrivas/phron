@@ -5,8 +5,8 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: 38db99033e175f3aad0246fa45f21a0eb1cb050a
-dirty_files: ["PH16 implementation/evidence prepared for verified commit; use git status for live changes", "New Text Document.txt (untouched user work)"]
+commit: b8400c3296b6de93daa5fedfb501aa652a4ead29
+dirty_files: ["New Text Document.txt (untouched user work)"]
 active_chat: PHRON-00 Lead
 phase: 3
 current_step: PH-16
@@ -33,7 +33,7 @@ D16-v1 APPROVED exact terms in DECISIONS/amendment. Active-cycle donor trims now
 
 PASS:16 recovery acceptance +9 cancellation local cases;46 PH15 lifecycle +25 payment +16 security cases.128 domain tests,100% implemented domain coverage;267 unit (259 prior+8 new),74 integration;four new properties x500 cases. Typecheck/lint/build/source hashes PASS. A signed64 intermediate boundary failed first and passed after exact numeric intermediate correction; RED/GREEN logs retained. Evidence: tests/integration/ph16/evidence/RESULT.md and adjacent logs.
 
-PH16 IN_PROGRESS, not COMPLETE: D21 still blocks commitment acceptance/Scenarios10–11 and concurrent cap persistence; D03-clearance,D12,D13,D14,D07-card/funding remain scoped blockers. Passing all implemented tests cannot close these required expectations. No new gate passed or remote migration/deployment. Verified work is being committed separately from untouched user note; consult git log for resulting revision.
+PH16 IN_PROGRESS, not COMPLETE: D21 still blocks commitment acceptance/Scenarios10–11 and concurrent cap persistence; D03-clearance,D12,D13,D14,D07-card/funding remain scoped blockers. Passing all implemented tests cannot close these required expectations. No new gate passed or remote migration/deployment. Verified implementation committed as b8400c3296b6de93daa5fedfb501aa652a4ead29. Only the untouched user note remains untracked; this evidence-record commit follows.
 
 ## PH-16 executed verification — 2026-10-08 IST
 
