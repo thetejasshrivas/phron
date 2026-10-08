@@ -1,0 +1,7 @@
+PASS HTTP absent session denied
+PASS HTTP cross-origin payment denied
+PASS HTTP ordinary user B cannot settle A purchase
+PASS HTTP ordinary user payment saves exact canonical state
+PASS HTTP retry returns original committed response
+PASS HTTP refresh persists payment and isolates second user
+6 passed; 0 failed; 6 total

@@ -1,5 +1,6 @@
 # Test results
 
+
 Run ID: PH04-source-verification
 Date and time IST: 2026-10-06T02:59:36.320211+05:30
 Commit and dirty-state description: no Git repository; documentation/instructions only; supplied originals unchanged
@@ -144,3 +145,21 @@ Step PH-14 COMPLETE; Gate G2 PASSED; Founder Review V2 ACCEPTED for this revisio
 This is a milestone/acceptance record,not approval of open financial decisions,G3–G6,full card lifecycle or a production-ready release. Five source hashes freshly PASS;frozen PRD unchanged. No application/schema/dependency/financial changes or installs. No product tests repeated for documentation-only acceptance. Untracked user New Text Document.txt preserved.
 
 Next owner **PHRON-01 Financial Engine**, Step **PH-15 / P03-CARD**: P-RESUME,then independent failing fixtures for Scenario15,FIT12,CC01–CC16 and approved pure card effects. Review affected OPEN semantics before dependent cases; no invented expected values. Engine hands off typed outputs to Platform for persistence; PH15 is not started/completed by this record. See docs/handoffs/LEAD.md.
+## PH-15 final local result — 2026-10-08 IST
+
+PASS: PH15/P03-CARD at implementation2c6c10a76963faa31a82dc90f5c1b50320abfec7,
+main, with local-only migrations and synthetic ordinary users. Completion record follows.
+CC01–16, Scenario15 exact paise/zero floor, FIT08/12 and D10 UI timing verified; CC06/08 use
+prepared states and do not claim PH17 workflows. Canonical report and commands:
+tests/integration/ph15/evidence/lifecycle/RESULT.md.
+
+259unit+74integration/contract;116domain included,100% domain/contract coverage;
+135unique local DB/schema/security cases (including46lifecycle and25settlement);
+6HTTP+9browser journey checks;2foundation E2E;lint/typecheck/build/advisor/all5sourcehashesPASS.
+Failed intermediate RED tests and sandbox startup attempt are explicitly retained in the report.
+No final failing check, skipped test, widened permission, weakened assertion or threshold change.
+Normal/reduced375/768/1280 evidence and expanded editor captures are adjacent to browser.json.
+
+Remote migration/deployment, full18scenario release matrix, G3–G6, physical phone and V3 review
+NOT RUN here. Existing V1/V2 approvals retain their original named revisions. Full local result
+does not certify a production-ready release or approve OPEN financial semantics.

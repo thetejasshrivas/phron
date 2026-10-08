@@ -1,4 +1,5 @@
 # Motion
+
 Current status: Gate V1 PASSED — HOME-V1-02 at855f1dde9b314af798a8cb262067ca2b4023c2b0 explicitly accepted by Tejas2026-10-06 IST. PH-09 COMPLETE; final visual refinement Phase5 V3. Original template and preceding pending-review records below are historical.
 
 Component and trigger: NOT_STARTED
@@ -64,3 +65,23 @@ Final visual polish/refinement scheduled for Phase5 / PH-26 / P05-FINAL / V3. V2
 2026-10-07 IST. Spend success updates exact server text immediately and retargets existing650ms vessel height /420ms cycle-track /240ms health-tone transitions. Pending retains canonical levels; only submitting/refresh actions held, navigation and entry remain usable. Success never clears a newer entry. Unknown save locks original intent for explicit same-ID retry; known errors/rollback retain confirmed geometry with live error copy. No success drain on a failure or speculative money. Feedback surface180ms, native focus moves immediately on navigation; reduced-motion CSS turns transitions/animation off and navigation uses instant scrolling. Goal fill has no active record/API in this slice, so there is no fabricated goal motion.
 
 Actual live Dining drain134.400px→107.513px after₹100 save; canonical STS₹250→₹237.50; reload identical. Mobile bucket navigation focuses bucket-section. Browser measurements/screenshots in tests/unit/ui/evidence. PH13 reduced-motion runtime NOT_RUN (tool lacks media emulation); preserve existing CSS and hand explicit verification to QA PH14. No unseen frame/FPS/phone or V2 acceptance claim.
+## PH-15 persisted card lifecycle — 2026-10-08
+
+Revision PH15-CARD-01 / 2c6c10a. Canonical money text updates immediately on a confirmed server
+response. Card purchases and corrections reuse the 650ms bucket drain/refill; settlement alone
+preserves its level and STS. A measured purchase drain moves 134px → 107.1875px with intermediate
+frames. Pending/error retains confirmed geometry. A lost committed deletion response keeps the
+same operation ID for retry; no second reversal occurs. No speculative financial interpolation.
+
+D10 deletion immediately reverses persisted amounts. Confirmation shows a 6.0-second Undo toast
+(160ms opacity entry; exact boundary proved at 5999/6000ms). Undo re-commits with a new stable ID.
+The offer expires without delaying or altering the deletion. When deletion removes the focused
+control, Undo receives focus only if focus has fallen to the document body; navigation elsewhere
+is not interrupted. Paid purchase deletion/conversion stays disabled pending payment reversal.
+
+Reduced motion removes geometry/opacity transitions while retaining exact amounts, feedback and
+the same Undo window. Runtime 375/768/1280 normal/reduced checks: vessel transition 0.65s/0s,
+identical numeric text, no overflow. Error, payment correction, reversal, lost-response retry,
+Undo and expiry/refresh are tested in the ordinary-session browser journey. Toast DOM/timing
+proof is used; blank fixed-element screenshot artifacts are excluded. Evidence:
+tests/integration/ph15/evidence/lifecycle/RESULT.md and browser.json. No V3/physical-phone claim.

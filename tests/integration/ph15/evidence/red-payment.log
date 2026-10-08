@@ -1,0 +1,19 @@
+FAIL Scenario15 all golden rows / CC01-05: RPC_TRANSPORT_ERROR
+PASS zero floor purchase changes reserve without cash outflow
+FAIL CC03 payment mismatch / kind mismatch / stale revision: RPC_TRANSPORT_ERROR
+FAIL CC04 strict invalid/overpayment/duplicate allocation validation with no writes: RPC_TRANSPORT_ERROR
+FAIL CC04 cross-user allocations and direct writes denied: RPC_TRANSPORT_ERROR
+FAIL anonymous session and signed-out payment denied: RPC_TRANSPORT_ERROR
+FAIL CC05 legacy target must be same-user active-cycle card obligation: RPC_TRANSPORT_ERROR
+FAIL D26 insufficient factual cash stays unavailable without writes: RPC_TRANSPORT_ERROR
+FAIL CC16 same-ID concurrent requests commit once: RPC_TRANSPORT_ERROR
+FAIL CC16 distinct concurrent IDs cannot spend stale liability; refresh still rejects excess: RPC_TRANSPORT_ERROR
+FAIL CC16 forced intermediate failure at card_liability_payments rolls back all rows: RPC_TRANSPORT_ERROR
+FAIL CC16 forced intermediate failure at card_payment_allocations rolls back all rows: RPC_TRANSPORT_ERROR
+FAIL CC16 forced intermediate failure at obligation_payment_allocations rolls back all rows: SQL_OBJECT_MISSING
+FAIL CC16 forced intermediate failure at cycle_obligations rolls back all rows: RPC_TRANSPORT_ERROR
+FAIL CC16 forced intermediate failure at pay_cycles rolls back all rows: RPC_TRANSPORT_ERROR
+FAIL CC16 forced intermediate failure at financial_profiles rolls back all rows: RPC_TRANSPORT_ERROR
+FAIL CC16 forced intermediate failure at users rolls back all rows: RPC_TRANSPORT_ERROR
+FAIL CC16 forced intermediate failure at operation_log rolls back all rows: RPC_TRANSPORT_ERROR
+1 passed; 17 failed; 18 total

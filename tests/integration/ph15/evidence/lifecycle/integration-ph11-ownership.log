@@ -1,0 +1,4 @@
+PASS D11 composite FK rejects a forged parent even with admin row access
+PASS D11 writer RLS WITH CHECK rejects a different owner
+PASS D11 payment dependencies protect parents and cascade only the deleted account
+3 passed; 0 failed; 3 total

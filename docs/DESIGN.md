@@ -1,4 +1,5 @@
 # Design
+
 Current status: Gate V2 ACCEPTED — G2-V2-02 at0f28e49e42b13ed07640855468ec943e44dda4eb, explicit Tejas acceptance following hosted preview journey on2026-10-07 IST. Gate V1 PASSED — Tejas explicitly accepted HOME-V1-02 at855f1dde9b314af798a8cb262067ca2b4023c2b0 on2026-10-06 IST. Approved visual foundation; final refinement Phase5 V3. See current founder approval below. Original initialization template and prior proposals are preserved as history.
 
 ## PH-14 COMPLETE / G2 PASSED / V2 ACCEPTED — 2026-10-07 IST
@@ -91,3 +92,20 @@ The green editorial Home, typographic hierarchy, exact money, vessel/goal langua
 2026-10-07 IST. V1 foundation preserved: green editorial canvas, STS/coach hierarchy, vessel shapes, typography and navigation. Home now displays only canonical server values, with explicit manual amount/payee/bucket/payment controls and real onboarding/sign-out links. Preview state/outcome controls and goal fixtures moved out of production. Goal surface honestly empty until approved goal API exists. V1 approval is retained; V2/V3 pending. New functional revision PH13-HOME-01 requires PH14 QA and explicit founder V2 review, not self-approval.
 
 Evidence tests/unit/ui/evidence/PH13_RESULT.md and responsive375/768/1280 screenshots. All three widths no horizontal overflow; desktop/mobile visually inspected in one batch. No physical device or reduced-motion runtime claim for this step. Exact money never animates; charts use bounded presentation adapters outside components, with exact visible/accessibility values. Onboarding receipt now describes the real Home connection.
+## PH-15 card controls — PH15-CARD-01, 2026-10-08
+
+Implemented at 2c6c10a on the accepted V1/V2 visual foundation: tracked-card capture, an
+editorial record list, inline purchase corrections, explicit payment allocations and payment
+reversal/correction. The existing canvas, typography, coach/STS hierarchy and bucket vessels
+are retained. Disclosure chevrons make editable records discoverable; current-cycle bounds,
+paid guards, inline form validation and global save/retry feedback remain explicit.
+
+Impeccable animate/craft-floor guidance applied within the incumbent direction. Its optional
+context launcher had no usable local engine; no download was performed. Existing DESIGN/MOTION
+were read directly. One combined inspection found the off-screen skip link leaking into full-page
+captures; the correction hides it by clipping until focused. One confirmation batch shows
+375/768/1280 layouts without horizontal overflow, plus 375/1280 expanded editors in normal/reduced
+motion. Evidence: tests/integration/ph15/evidence/lifecycle/{browser.json,home-*.png,editor-*.png}.
+
+This is functional/local visual evidence, not new Tejas taste acceptance, a physical-phone test,
+or a hosted card release. Prior V1/V2 approvals remain scoped to their named revisions; V3 pending.

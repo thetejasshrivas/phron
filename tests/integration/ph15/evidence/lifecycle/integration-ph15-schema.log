@@ -1,0 +1,13 @@
+PASS new legacy allocation table is forced-RLS and ordinary clients cannot mutate
+PASS payment definer is restricted, wrapper invoker, anonymous function access denied
+PASS both new parent references include owner and protect allocated obligations
+PASS allocations remain immutable; writer can only mark header reversal; clients cannot change reserve source
+PASS lifecycle and records use caller RLS; anonymous helper and wrapper execution denied
+5 passed; 0 failed; 5 total
+PASS D11 required core tables exist with forced RLS
+PASS D11 dedicated writer cannot bypass RLS or log in
+PASS D11 no direct client mutation grants
+PASS D11 replay data is private
+PASS D11 helpers are private and all definers use the restricted writer
+PASS D11 RPC wrappers are invoker and anonymous execute is denied
+6 passed; 0 failed; 6 total

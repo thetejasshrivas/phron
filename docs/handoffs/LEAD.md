@@ -58,3 +58,41 @@ Protected Preview https://phron-hys7wn9wb-tts-1e31.vercel.app/home,IDdpl_87okEBH
 Hosted sign-in ordinary browser PASS; PH14-PREVIEW screenshots/settings/build logs. Historical initial automated smoke rejection resolved by new explicit user authorization. Protected smoke now PASS: health200/exact ok/no-store/no cookie,POST405,sign-in200,identity denial,exact OAuth callback,unsafe-origin denial,private files404,no credential echo. Evidence smoke.json. No rejected execution/workaround. Browser direct health limitation remains separate. Hosted ordinary Google/save-refresh and explicit V2 G2-V2-02 acceptance NOT RUN; G2 remainsblocked. Local QA isolation/rollback proof separate. No PH15 advance.
 
 One next action: Tejas opens protected /home→Vercel auth→PHRON Continue with Google→Home if returning or Onboarding if new,and reviews named deployed revision; QA still verifies hosted persisted journey before G2 pass. Open decisions/safeWeekly request unchanged. Lead ownsrootconfig/scripts/contracts/docs exceptExperience/QAexceptions; no other active writer.
+## Current handoff — PH-15 COMPLETE → PH-16 / P03-RECOVERY
+
+2026-10-08 IST. Single active writer: PHRON-00 Lead, per Tejas's instruction to run all roles
+in this chat. Repository `W:/AI Product Sprint/Phron`, main. Implementation
+**2c6c10a76963faa31a82dc90f5c1b50320abfec7**, preceded by e6f9522 (approved rules/domain) and
+3b0cb33 (atomic local persistence). Completion/evidence commit follows. Only the unrelated
+untracked `New Text Document.txt` is intentionally left out; never read, edited or staged.
+
+PH15 COMPLETE locally. Approved D10-v1 is implemented without changing frozen PRD bytes.
+See docs/CONTRACTS.md current PH15 section for exact inputs/routes and
+tests/integration/ph15/evidence/lifecycle/RESULT.md for ID-by-ID traceability and evidence limits.
+259 unit +74 integration/contract tests;116 domain tests with100% domain coverage;
+100% contract coverage;135 unique local DB/schema/security cases;6 HTTP +9 browser journey
+checks;2 foundation E2E;lint/types/build/advisor/source hashes PASS. No checks skipped or weakened.
+
+Local click path after configuring the existing local stack and applying both PH15 migrations:
+Sign in → Onboarding if needed → Home → Spent something? → Paid with: Tracked credit card →
+Save spend → The record behind your day → expand purchase → correct/delete → Undo within6seconds.
+Record a card payment accepts explicit tracked/legacy allocations; Saved card payments exposes
+current-cycle correction/reversal. Associated payments must be reversed before deleting or
+converting a paid card purchase. Refresh retains confirmed state; another user cannot see it.
+No new public demo account/password is persisted. The browser harness creates/cleans synthetic
+accounts and uses ordinary credentials; use `node tests/integration/ph15/http-local.mjs --browser`
+for a reproducible isolated local proof, then normal `npm run build` to restore build configuration.
+
+Remote Preview remains the accepted PH14 slice at0f28e49; neither PH15 migration is applied
+remotely and no deployment/push is authorized by this handoff. V3 remains pending. CC06/08
+are prepared-state proofs, not completed PH17 rollover/reconciliation. Legacy backfill detection
+uses an explicit owned obligation reference; no invented merchant/amount matching heuristic.
+D26 returns existing UNAVAILABLE/no-write behavior; no negative cash rule is inferred.
+
+Next one action, only on operator signal: **PH-16 / P03-RECOVERY**. P-RESUME from verified
+files/source hashes; read PRD18.2–18.6/22–23, D03/D07 and relevant OPEN decisions. Write
+independent failing fixtures for approved floor/priority/cap/anti-stacking math, then implement
+pure plans. D21 capacity, D07-card/funding and other affected decisions must be resolved before
+their dependent behavior. A recovery proposal is not a mutation. G3 is reserved for PH18 audit.
+
+Historical PH14-to-PH15 handoff below is retained and superseded by this section.

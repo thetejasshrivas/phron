@@ -1,0 +1,65 @@
+{
+  "checks": [
+    "ordinary browser tracked purchase saves once without cash debit",
+    "payment preserves STS; paid deletion and conversion visibly blocked",
+    "invalid paid amount correction reports error and retains exact confirmed state",
+    "payment correction and reversal persist through ordinary browser routes",
+    "lost committed deletion response retries same operation ID without a second reversal",
+    "delete reverses immediately; Undo re-commits and refresh retains exact state",
+    "second ordinary browser sees no first-user purchase/payment",
+    "Undo window expires; deletion survives refresh",
+    "no client runtime errors"
+  ],
+  "views": [
+    {
+      "width": 375,
+      "motion": "no-preference",
+      "overflow": false,
+      "transition": "0.65s",
+      "exact": "₹1,750.00/ day"
+    },
+    {
+      "width": 375,
+      "motion": "reduce",
+      "overflow": false,
+      "transition": "0s",
+      "exact": "₹1,750.00/ day"
+    },
+    {
+      "width": 768,
+      "motion": "no-preference",
+      "overflow": false,
+      "transition": "0.65s",
+      "exact": "₹1,750.00/ day"
+    },
+    {
+      "width": 768,
+      "motion": "reduce",
+      "overflow": false,
+      "transition": "0s",
+      "exact": "₹1,750.00/ day"
+    },
+    {
+      "width": 1280,
+      "motion": "no-preference",
+      "overflow": false,
+      "transition": "0.65s",
+      "exact": "₹1,750.00/ day"
+    },
+    {
+      "width": 1280,
+      "motion": "reduce",
+      "overflow": false,
+      "transition": "0s",
+      "exact": "₹1,750.00/ day"
+    }
+  ],
+  "motion": [
+    {
+      "event": "tracked purchase drain",
+      "before": 134,
+      "after": 107.1875,
+      "intermediate": true
+    }
+  ]
+}

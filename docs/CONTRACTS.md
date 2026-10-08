@@ -1,4 +1,5 @@
 # Contracts
+
 Version and approved decision references: NOT_STARTED
 Money representation: exact integer paise; JSON encoding specified
 Dates: Asia/Kolkata date-only financial boundaries
@@ -33,3 +34,54 @@ Health: GET `/api/health` returns only `{status:"ok"}`, HTTP 200 and `Cache-Cont
 Approved decision references: D01–D06, D07a and D07b govern future canonical computation within their scopes. PH-06 does not implement them. Card-funded goal execution and insufficient-funding rules remain OPEN and are not inferred.
 
 Fixtures/tests: exact unsafe-number round-trip, signed boundaries, malformed input and identity rejection, leap/date validation, exact revisions, synthetic snapshot decoding, fixed errors, health handler and production browser/HTTP smoke. Consumers: later Engine/Platform produce snapshots; Experience renders authoritative values. Compatibility tests are in `tests/unit/contracts`, `tests/integration/health.test.ts` and `tests/e2e/foundation.spec.ts`.
+## Current PH-15 card transport and persistence — 2026-10-08
+
+This section supersedes the PH-06 absence statements below for implemented card/auth/finance
+operations only. Types/parsers: `src/contracts/card.ts`; canonical snapshot v1 is unchanged.
+Internal Engine math remains `bigint`; every monetary request/response field is an exact paise
+decimal string. No money formula moved into a component.
+
+- `POST /api/finance/card-lifecycle`: `MutationEnvelope<CardLifecycleInput>`.
+  `create`: amount, bucketId, transactionDate, merchantOrPayee, paymentMethod (`cash`/`card`),
+  legacyObligationId (`null` for a new purchase, or a referenced legacy obligation which the
+  server resolves and rejects as duplicate backfill). `update` adds transactionId.
+  `delete`: transactionId. `restore`: transactionId + deleteOperationId.
+  `payment_reverse`: paymentId. `payment_correct`: paymentId + CardPaymentInput.
+  Unknown/missing fields, submitted identity, unsafe numbers and invalid dates are rejected.
+- `POST /api/finance/card-payment`: `MutationEnvelope<CardPaymentInput>` with paymentDate,
+  tracked allocations `{purchaseId,amount}` (1–100), legacy allocations
+  `{cycleObligationId,amount}` (0–100). Positive exact amounts; no repeated target IDs.
+- Both return the existing `ApiResult<FinanceMutationData>`: snapshot, ordered buckets,
+  transactionId (purchase ID for purchase changes, null for payment changes).
+- `GET /api/finance/card-records`: verified-user-only `ApiResult<CardRecords>` containing
+  revision, active cycleId/openedOn, active transaction records, unreversed payments and
+  current legacy obligations. Purchases include authoritative paid amount and method;
+  payments include explicit allocation arrays. No operation log or raw-text payload is exposed.
+- All responses are private/no-store and vary by Cookie. SSR verifies `auth.getUser()`;
+  mutation Origin is checked before client creation. RPC identity comes from the authenticated
+  caller, never request user_id; ordinary routes use public configuration with that session.
+
+The database serializes operations on the same user-row lock as onboarding/manual spend.
+Stable operation ID + kind + canonical request fingerprint are committed with all ledger effects
+and the response. Same committed replay precedes revision validation; changed intent rejects.
+Unknown client outcome retains the same ID/body/endpoint and blocks another financial intent
+until explicit retry resolves it. Known rejection retains confirmed values.
+
+Purchase deletion immediately reverses ledger/bucket effects and marks the row deleted. Restore
+is bound to that row's latest deletion ID; current-cycle and payment guards are revalidated.
+The 6.0-second UI Undo offer starts when deletion is confirmed; it submits a new restore intent.
+There is no delayed deletion or additional server expiry. Historical corrections are prohibited.
+Paid purchases cannot be deleted/converted; amount cannot fall below active allocations.
+
+Payment correction reverses the old immutable allocations by marking the header, then invokes
+the existing settlement inside the same SQL transaction. The replacement header has a generated
+child operation ID; the stable outer correction ID records the complete result. Any failure rolls
+back reversal, replacement, child/outer logs and revision. Retry creates no additional header.
+Direct client writes and allocation updates/deletes remain denied; the restricted writer only
+gains column-level UPDATE on the header's is_deleted flag.
+
+Local migrations: 20261007164321_ph15_card_settlement.sql and
+20261007222121_ph15_card_lifecycle.sql. Remote application is not authorized by this contract.
+Evidence: `tests/integration/ph15/evidence/lifecycle/RESULT.md` (CC-01–16, FIT-08/12, Scenario15).
+Legacy provenance is explicit, not an inferred match on amount/merchant. Open goal, recovery,
+negative-cash, delayed-cycle and drift-budget semantics are unchanged.

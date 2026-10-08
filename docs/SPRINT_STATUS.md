@@ -5,27 +5,89 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: 0f28e49e42b13ed07640855468ec943e44dda4eb
-dirty_files: ["New Text Document.txt (untouched/excluded user work)"]
+commit: 2c6c10a76963faa31a82dc90f5c1b50320abfec7
+dirty_files: ["New Text Document.txt (untouched user work; excluded from PH15 commits)"]
 active_chat: PHRON-00 Lead
-phase: 2
-current_step: PH-14
+phase: 3
+current_step: PH-15
 step_state: COMPLETE
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
-approved_amendments: [D01-v1, D02-v1, D03-v1, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D11-v1, D17-v1, D27-v1]
-completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14]
+approved_amendments: [D01-v1, D02-v1, D03-v1, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D10-v1, D11-v1, D17-v1, D27-v1]
+completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15]
 passed_gates: [G0A, G1, V1, G2, V2]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: PENDING}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb"}
-blocking_decisions: [D05-extension, D07-card, D07-funding, D08, D09, D10, D12, D13, D14, D15, D16, D18, D19, D20, D21, D22, D23, D24, D25, D26]
-latest_evidence: docs/TEST_RESULTS.md (PH14 founder acceptance); docs/evidence/PH14-PREVIEW/smoke.json
+blocking_decisions: [D05-extension, D07-card, D07-funding, D08, D09, D12, D13, D14, D15, D16, D18, D19, D20, D21, D22, D23, D24, D25, D26]
+latest_evidence: tests/integration/ph15/evidence/lifecycle/RESULT.md
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
-migration_state: REMOTE_BOTH_APPLIED_RLS_VERIFIED
-ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name"]
+migration_state: PH11_PH12_REMOTE_APPLIED; PH15_LOCAL_ONLY_VERIFIED_NOT_REMOTE
+ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: PHRON-01 Financial Engine — P-RESUME then PH-15 / P03-CARD; review OPEN semantics before affected lifecycle work
-last_updated_ist: 2026-10-07
+next_action: PH-16 / P03-RECOVERY — Lead P-RESUME, review approved recovery clauses and affected OPEN decisions, then TDD for independently approved rules
+last_updated_ist: 2026-10-08
 ```
+
+## PH-15 COMPLETE — 2026-10-08 IST
+
+Implementation revision **2c6c10a76963faa31a82dc90f5c1b50320abfec7** follows domain/D10
+commit e6f9522 and local persistence commit 3b0cb33. This completion/evidence commit follows
+the implementation; use `git log -1 -- docs/SPRINT_STATUS.md` for its ID. All changes are local;
+the protected hosted Preview remains PH14 revision0f28e49. No remote card migration or deployment.
+
+Tracked creation, amount/category/date corrections, immediate soft deletion, 6.0-second Undo,
+cash/card guards, payment allocations/reversal/correction, stable replay and caller RLS verified.
+CC-01–16, Scenario15 all exact paise rows/zero floor, FIT-08/12 pass within the PH15 scope.
+CC06/08 use prepared next-cycle/reconciliation states; actual workflows remain PH17.
+
+Final results: **259 unit + 74 integration/contract tests; 116 domain tests (included in unit),
+100% implemented domain and contract coverage; 46 lifecycle + 25 settlement local cases;
+11 schema/RLS; 31 onboarding/manual/ownership; 6 authorized-read; 16 security regression;
+6 HTTP + 9 browser journey checks; 2 foundation E2E** PASS. Lint, typecheck, normal build,
+local security advisor and all five source hashes PASS. There are135 unique local DB/schema/
+security cases; separately repeated PH11 imports are not counted twice.
+
+Evidence: tests/integration/ph15/evidence/lifecycle/RESULT.md and adjacent command logs,
+coverage summaries, browser.json, six responsive normal/reduced Home captures and four editors.
+No service-role for ordinary financial operations; synthetic admin setup/cleanup and scoped SQL
+fixtures/fault triggers only. Frozen PRD and dependency lockfile unchanged; user note untouched.
+
+G0A/G1/V1/G2/V2 retained. **G3–G6 and V3 are not passed by this step.** Other OPEN decisions
+remain unchanged, especially D05-extension, D07-card/funding, D20, D21, D22 and D26; no disputed
+recovery, drift or negative-cash rule invented. Final report explains explicit legacy provenance,
+Undo timing and local-only evidence limits. Current handoff: docs/handoffs/LEAD.md.
+
+Next one action: PH-16 / P03-RECOVERY in this Lead chat after the operator's next instruction;
+resolve affected OPEN semantics before dependent implementation. Do not automatically deploy
+the local card migrations or continue to recovery in this turn.
+
+## D10-v1 APPROVED — 2026-10-08 IST
+
+Tejas explicitly approved the three exact terms recorded in docs/DECISIONS.md: immediate deletion
+reversal with a 6.0-second Undo toast permitting re-commit; transaction date mutations only within
+the active pay cycle; no paid-card deletion/cash conversion until associated payments are reversed.
+D10 is removed from blocking decisions. This is approval, not implementation or new test evidence.
+PH15 remains IN_PROGRESS; G3 and remaining lifecycle gates are not passed. Other OPEN decisions,
+existing founder gates and deployment remain unchanged. All five source hashes freshly PASS.
+No product files changed by this decision record; previous uncommitted work preserved.
+Next: Platform resumes purchase/correction persistence; hand off the actual toast/UI work to Experience.
+Historical D10-pending statements below are superseded by this approval only.
+
+## PH-15 Platform — settlement locally verified; full lifecycle IN_PROGRESS
+
+2026-10-07 IST. Base HEAD be96f6539a9c91efaf083b15a4e0ba8449a660ef; current changes uncommitted.
+Engine pure card implementation remains intact. Platform added strict authenticated card-payment
+route, atomic tracked/mixed settlement RPC and D11 legacy allocation table. Local-only migration;
+existing deployed revision 0f28e49 unchanged. No UI/dependency/domain changes or remote writes.
+
+PASS 25 real local payment/RLS/race/rollback cases (nine forced failure stages), 10 schema checks,
+local security advisor with no issues, six built HTTP checks, 202 unit + 58 integration tests,
+typecheck/lint/build and all five source hashes. Evidence tests/integration/ph15/evidence/RESULT.md.
+Purchase rows and rollover/reconciliation states are explicit synthetic setup, not implemented APIs.
+CC09–14 correction/undo persistence and CC15 purchase overlap handling remain outstanding; D10 and
+other relevant OPEN rules are not inferred. D26 deficits return UNAVAILABLE without writes.
+D11 full-lifecycle release gate remains open; do not deploy payment features yet. PH15 and G3 are
+not complete. G0A/G1/V1/G2/V2 retained; V3 pending. Next Lead action and contract in
+ docs/handoffs/PLATFORM.md. Unrelated user note and prior Engine work preserved.
 
 ## PH-14 COMPLETE / G2 PASSED / V2 ACCEPTED — 2026-10-07 IST
 

@@ -1,3 +1,115 @@
+# PH-15 Lead addendum — D10-v1 approved; resume Platform lifecycle
+
+2026-10-08 IST. Tejas explicitly approved D10. Exact terms:
+
+1. Deletion immediately applies mathematical reversal to database state and UI, with a 6.0-second Undo toast permitting re-commit.
+2. Transaction date mutations are strictly restricted to dates within the active pay cycle.
+3. Card purchases with associated payments cannot be deleted or converted to cash until those payments are reversed (CC-11, CC-14).
+
+Authority: docs/DECISIONS.md, D10-v1. This supersedes D10-pending statements in the historical
+handoff below and the earlier Engine handoff. No other OPEN decision is approved. PH15 stays
+IN_PROGRESS until its cross-owner lifecycle evidence passes. Existing local settlement and Engine
+work is uncommitted; preserve it and New Text Document.txt. No remote SQL or deployment authorized.
+
+Next owner: PHRON-02 Platform. Read applicable AGENTS, SOURCE_MANIFEST, SPRINT_STATUS,
+DECISIONS, CONTRACTS, src/domain/PH15_HANDOFF.md and this addendum. Verify source hashes,
+branch and dirty files. Reuse the existing typed Engine functions and local payment implementation.
+
+Implement tracked purchase creation and remaining amount/category/date edits, soft deletion,
+Undo re-commit, payment reversal/correction and cash/card conversion with TDD. Persist deletion's
+mathematical reversal immediately; return the authoritative snapshot for UI update. Preserve historical
+edit restrictions and enforce approved active-cycle date mutations. Block paid-card deletion/conversion
+until associated payments are reversed, including fully paid purchases. Revalidate allocations and
+state under the common lock; retain distinct stable operation identities and durable replay results
+for each intent, including reversal and re-commit. No duplicate cash or discretionary debits.
+
+Test CC01–CC16, Scenario15 golden/zero-floor values, FIT12, applicable FIT08/Scenario16 and exact
+SQL/Engine parity. Replace fixture-only purchase setup with ordinary-user purchase operations where
+that path is implemented; retain explicit setup labels for unimplemented rollover/reconciliation.
+Cover current-cycle boundaries, historical denials, retries, changed payloads, paid-card guards,
+concurrent correction/payment/delete races, two-user isolation and forced intermediate rollback.
+Flag any remaining under-specified rule before selecting an expected value; continue independent work.
+
+Platform owns supabase, src/server, src/lib/supabase, src/app/api and tests/integration. Do not edit
+src/domain or UI. Coordinate any shared-contract change with Lead. Prepare typed deletion/undo
+responses and exact click path for Experience to implement the approved 6.0-second toast and
+immediate UI state update; do not claim the visual/timing gate passed without that implementation.
+Run relevant regression, typecheck, lint, build, local RLS/security and ordinary-session save/refresh
+checks. Save actual evidence and update own handoff/status without marking incomplete work complete.
+No remote migration or payment-feature release until separately authorized and lifecycle gate passed.
+
+---
+Historical settlement handoff follows. Its D10-pending/next-Lead-action statements are superseded above.
+
+# PH-15 Platform handoff — local settlement implemented, lifecycle gate open
+
+2026-10-07 IST. PHRON-02 Platform to PHRON-00 Lead. Repository W:/AI Product Sprint/Phron,
+main, base HEAD be96f6539a9c91efaf083b15a4e0ba8449a660ef plus uncommitted changes. Preserve
+untracked Engine files and New Text Document.txt. No src/domain edits, UI edits, installs, commits,
+remote SQL or deployment. One active writer; no cross-chat messages initiated.
+
+## Current scope and evidence
+
+Atomic tracked/mixed settlement is locally implemented. Migration:
+supabase/migrations/20261007164321_ph15_card_settlement.sql. New table:
+obligation_payment_allocations with FORCE RLS and composite owner keys. RPC:
+public.phron_card_payment, invoking restricted phron_private.card_payment.
+
+PASS 25 local ordinary-user persistence/security/concurrency/rollback cases; 10 schema checks;
+local security advisors no issues; six actual built HTTP checks; 202 unit + 58 integration tests;
+typecheck, lint, build, all five source hashes. Nine forced intermediate failures fully roll back.
+Engine parity uses typed functions on recorded synthetic SQL results. Exact evidence and limitations:
+tests/integration/ph15/evidence/RESULT.md. Reproduction: tests/integration/ph15/README.md.
+
+## Server contract for later integration
+
+POST /api/finance/card-payment, same-origin, verified ordinary non-anonymous Supabase session.
+Strict request, no user_id or balance/effect fields:
+
+```json
+{
+  "operationId": "<stable UUID v4 for this payment intent>",
+  "expectedVersion": "<current exact revision>",
+  "input": {
+    "paymentDate": "YYYY-MM-DD",
+    "tracked": [{"purchaseId": "<owned active tracked purchase>", "amount": "100000"}],
+    "legacy": [{"cycleObligationId": "<owned current-cycle legacy card obligation>", "amount": "50000"}]
+  }
+}
+```
+
+Tracked list: 1–100 unique purchases; legacy: 0–100 unique obligation references. Exact positive
+paise strings; no numeric coercion. Payment date is within the active cycle and no later than today
+in IST. A new current-cycle payment may target an older purchase. Existing overdue/confirmed-salary
+unsupported states return UNAVAILABLE. Stable ID is also the payment header ID. Reuse identical
+operation ID, revision and payload on an uncertain-outcome retry; changed body/kind/revision yields
+REPLAY_MISMATCH. Allocation order and UUID casing canonicalize in SQL. New stale operations yield
+VERSION_CONFLICT; lock timeout yields retryable OPERATION_IN_PROGRESS.
+
+Response is unchanged FinanceMutationData: authoritative snapshot, buckets, transactionId:null.
+Identity comes from verified auth/auth.uid. Header amount is tracked total; explicit legacy rows
+supply the other portion of the one total cash debit. B_spent and buckets do not change on settlement.
+Current and outstanding states are revalidated inside the common user lock; no client domain delta
+is trusted. SQL cannot execute TypeScript inside PostgreSQL: Engine parity tests verify arithmetic,
+while SQL enforces identity, ownership, concurrency and atomic persistence. No service-role app client.
+
+## Remaining work / release hold
+
+Full PH-15 stays IN_PROGRESS. Do not enable or deploy payment features until D11's complete lifecycle
+gate passes. This request implemented settlement, not purchase or correction endpoints. Tests seed
+tracked purchases administratively as explicit synthetic fixtures; they do not prove a purchase API.
+CC09–14 persistence awaits D10 timing/date eligibility resolution. CC15 legacy/backfill representation
+needs the purchase path and server-verified overlap handling. CC06/08 tests use prepared rollover/
+reconciliation states; actual workflows remain separate. D26 factual cash deficit returns existing
+UNAVAILABLE behavior; no new financial policy. All other OPEN decisions and founder gates unchanged.
+
+Next one action: Lead review D10's source conflict and present one scoped founder decision before
+Platform implements correction/undo persistence. Independent review of the prepared migration and
+payment tests can proceed. No remote migration permission is supplied by this handoff.
+
+---
+Historical Platform handoff follows; current PH-15 scope above supersedes its next-step guidance.
+
 # Platform handoff — PH-12 COMPLETE → PHRON-03 Experience
 
 2026-10-07 IST. W:/AI Product Sprint/Phron, main, base7783e09baffcf983e4edfef3df60a7ba163cb7bc plus uncommitted OAuth proxy fix/tests/evidence/status. Inspect actual git diff; do not overwrite it or user's untracked New Text Document.txt. PH13 not started. G0A/G1/V1 retained; G2/V2 pending. Follow P-RESUME, frozen-source verification and approved DESIGN/MOTION. All5 source hashes PASS.
@@ -151,3 +263,21 @@ G0A/G1/V1 retained. PH-11 and G2 are NOT complete. Source gap D27 now OPEN: thre
 ## Next one action
 
 Establish that the installed local Docker engine is Running. Then continue PH-11 with independent failing database tests before implementation; use verified CLI help and migration creation workflow, local-only target guards, and exact approved D11/D17 scope. Test ordinary credentials, real concurrent connections and forced database rollback without production bypass flags. No remote migration. Record implementation evidence before claiming PH-11 complete or moving to PH-12.
+## Current PH-15 completion addendum — 2026-10-08 IST
+
+Lead completed the remaining Platform/Experience lifecycle in this single chat, as explicitly
+directed by Tejas. PH15 COMPLETE locally at implementation2c6c10a (database3b0cb33,
+Engine/D10e6f9522). Evidence: tests/integration/ph15/evidence/lifecycle/RESULT.md.
+46 lifecycle +25 settlement +11 schema/RLS cases PASS; ordinary-user HTTP/browser proof,
+forced rollback, mixed corrections, durable retry, historical guards and tenant denial PASS.
+259unit+74integration;116domain and100% domain/contract coverage;lint/types/build/advisorPASS.
+
+Use docs/CONTRACTS.md PH15 section for exact card-lifecycle/card-payment/card-records contracts.
+The public wrapper rolls back the entire correction, including nested replacement settlement
+and both replay logs. Allocation rows remain immutable; only header reversal marker is writable
+by the constrained caller-RLS writer. New local migration20261007222121 follows settlement
+20261007164321; neither is authorized/applied remotely. No service-role for ordinary operations.
+
+Home click path and next PH16 action are in docs/handoffs/LEAD.md. Prior D10-pending and
+remaining-lifecycle statements below are historical. Other OPEN semantics and hosted Preview
+remain unchanged; no G3 or V3 approval is claimed.

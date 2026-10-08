@@ -1,0 +1,19 @@
+
+> phron@0.1.0 test:domain:coverage
+> node scripts/domain-coverage.mjs
+
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+----------|---------|----------|---------|---------|-------------------
+All files |     100 |      100 |     100 |     100 |
+ card.ts  |     100 |      100 |     100 |     100 |
+ core.ts  |     100 |      100 |     100 |     100 |
+ dates.ts |     100 |      100 |     100 |     100 |
+ money.ts |     100 |      100 |     100 |     100 |
+----------|---------|----------|---------|---------|-------------------
+
+Test Suites: 4 passed, 4 total
+Tests:       116 passed, 116 total
+Snapshots:   0 total
+Time:        1.982 s
+Ran all test suites.

@@ -1,0 +1,11 @@
+file:///W:/AI%20Product%20Sprint/Phron/tests/integration/ph11/auth-local.mjs:59
+  if (result.error) throw new Error('RPC_TRANSPORT_ERROR');
+                          ^
+
+Error: RPC_TRANSPORT_ERROR
+    at rpc (file:///W:/AI%20Product%20Sprint/Phron/tests/integration/ph11/auth-local.mjs:59:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async purchase (file:///W:/AI%20Product%20Sprint/Phron/tests/integration/ph15/payments.mjs:25:11)
+    at async file:///W:/AI%20Product%20Sprint/Phron/tests/integration/ph15/payments.mjs:34:33
+
+Node.js v24.21.0
