@@ -96,3 +96,48 @@ pure plans. D21 capacity, D07-card/funding and other affected decisions must be 
 their dependent behavior. A recovery proposal is not a mutation. G3 is reserved for PH18 audit.
 
 Historical PH14-to-PH15 handoff below is retained and superseded by this section.
+
+
+## PH-16 ready handoff — 2026-10-08 IST
+
+Base HEAD: 38db99033e175f3aad0246fa45f21a0eb1cb050a, main. PH15 COMPLETE; source verification passed all five hashes. This handoff records approvals, not implemented PH16 behavior. Unrelated New Text Document.txt remains untouched. Current approved versions: D03-v2 and D07-v2; preserve older amendment history. No additional gate passed.
+
+### Copy-ready next instruction
+
+PH-16 / Lead — P03-RECOVERY. Resume from applicable AGENTS.md, SOURCE_MANIFEST, SPRINT_STATUS, DECISIONS, CONTRACTS and this handoff. Verify branch, dirty files and frozen hashes. Use TDD and constraint-driven development; inspect existing code before adding or changing it. Implement only approved clauses in PRD 18.2–18.6 and 22–23 under D03-v2, D07-v2 and unaffected approved amendments.
+
+Write independent failing fixtures first. Keep financial functions pure, integer-paise exact, and typed; components consume canonical outputs. Cover overspend deficit, donor priority, protected groceries/obligations, floor-limited recovery and residual shortfall (FIT-04). Cover cumulative same-cycle commitments and exact 15% capacity (FIT-05): 600,000-paise cap minus 450,000 same-cycle leaves 150,000; test one-paisa boundaries. Cover carried-active lock and explicit cleared states (FIT-06); do not invent the event that clears a commitment (D03-clearance).
+
+For goals, test integer floor contributions with all remainder in the final cycle: 100/3 => 33,33,34; test tiny targets and conservation. Preserve pace rounding, completion precedence, G_cycle/G_held separation, completed-but-unspent reserves and exclusion from permission (FIT-07). Cancellation releases accumulated reserves once to the active discretionary pool, leaves cash unchanged and cannot also refund the original deduction. Preserve fixed-date versus flexible-goal semantics only where fully specified.
+
+Map exact fixtures by ID for Scenarios 9,10,11,12,17. Scenario 12 remains locked while its carried commitment is active; Scenario 17 completes at 30,000 rupees after its final 1,000-rupee contribution without automatically spending/releasing it. Explicitly report blocked expectations: Scenario 9 donor/health ambiguities (D12/D16), payment-capacity assumptions in 10/11 (D21), negative cap (D13), distress/floor interaction (D14), clearing event, card-funded goal execution and insufficient funding. Do not invent missing inputs, weaken assertions or count blocked scenarios as passing. Continue independent tests; present one necessary founder decision at a time.
+
+For approved acceptance/cancellation persistence, use atomic user-context transactions, stable operation IDs, durable replay, cumulative-cap revalidation and server-derived identity. Prove concurrent acceptance cannot exceed capacity; test stale requests, forced rollback, retries, anonymous denial and tenant isolation. No service-role for ordinary operations or remote migrations without authorization. Keep UI money derived from canonical contracts and preserve approved design/motion if integrating feedback.
+
+Run relevant unit/property, contract, local integration/security, typecheck and build checks. Report meaningful implemented-domain coverage, exact commands/counts, failing seeds, PASS/FAIL/BLOCKED/NOT RUN and evidence paths. Preserve PH15 regressions. Update SPRINT_STATUS and Lead handoff honestly; do not mark PH16 complete with required scenarios blocked. Stop after PH16 and report one next eligible action.
+
+
+## PH-16 executed verification — 2026-10-08 IST
+
+IN_PROGRESS: approved pure recovery/goal math and local goal cancellation verified. Recovery acceptance remains BLOCKED by D16/D21 and other affected OPEN rules. PH15 remains COMPLETE; no new gate passed.
+
+Fresh results:128 domain tests including four new properties x500 cases at seed160407;100% implemented domain statements/branches/functions/lines.267 unit tests (all259 PH15 +8 new) and74 integration PASS. Local ordinary-user tests:9 cancellation,46 card lifecycle,25 payments,16 security PASS. Lint/typecheck/build/all five source hashes/diff check PASS. Missing Jest imports fixed after initial typecheck failure; Docker started after missing engine pipe, then local tests rerun successfully.
+
+Cancellation proves once-only reserve release, unchanged cash and immutable accumulated/monthly contributions, canonical refresh, durable replay/concurrency, forced rollback and tenant isolation. Separate goal_release_paise adjustment preserves opening budget. No remote migration, goal HTTP/UI workflow or recovery acceptance implemented. All PH16 changes uncommitted; unrelated user note untouched.
+
+Evidence and full scenario mapping: tests/integration/ph16/evidence/RESULT.md and adjacent logs; tests/unit/domain/evidence/ph16/domain-coverage.log and coverage-summary.json. Scenarios9/10/11 remain partially blocked;12 active-lock and17 schedule/completion math only verified. D03-clearance,D12,D13,D14,D16,D21,D07-card/funding remain OPEN. Cancellation concurrency does not prove recovery cap concurrency.
+
+Next one action: resolve D16's accepted-plan receiving-budget effects with Tejas before implementing recovery acceptance. No invented semantics or progression to PH17.
+
+Implementation handoff: src/domain/recovery.ts returns typed bigint plans. commitmentCapacity is capacity only, not payment eligibility; carriedActive is explicit, with no inferred clearing event. goalSchedule takes a fixed accumulatedAtStart/cycleCount basis; no schedule rebase inferred.
+
+Local migration20261008080545_ph16_goal_cancellation.sql: phron_cancel_goal(p_operation_id,p_expected_revision,p_input) accepts {goalId}; identity is server-derived, expected revision exact text, operation UUID stable across retries. Result {ok:true,data:{snapshot}} contains canonical string money. It preserves accumulated/monthly contributions, releases held reserves once via separate cycle adjustment and immutable goal_releases audit. Tests seed synthetic reserves; no goal creation/contribution/rollover journey is claimed. Base commit main/38db99033e175f3aad0246fa45f21a0eb1cb050a.
+
+
+## D16-v1 implementation handoff — 2026-10-08 IST (current)
+
+Exact D16 approval recorded; donor-trim acceptance implemented in local migration20261008124355_ph16_recovery_acceptance.sql. Request/response documented in CONTRACTS. Preserves baseline allocations, cash, goals and source allowance; SQL recalculates donor priority/floors and atomically rejects stale proposals. Immutable accepted audit prevents duplicate coverage across fresh operation IDs. Actual baseline restoration belongs to PH17 rollover integration and is not claimed tested.
+
+Executed PASS:16 acceptance,9 cancellation,46 PH15 lifecycle,25 payment,16 security local cases;128 domain tests/100% coverage,267 unit,74 integration;four new seeded properties x500;typecheck/lint/build/all source hashes. Exact arithmetic overflow regression has RED/GREEN evidence. See tests/integration/ph16/evidence/RESULT.md. No remote writes, UI additions or privileged ordinary financial operations.
+
+User authorized committing verified PH16 changes. PH16 must remain IN_PROGRESS: D21 prevents commitment acceptance and full Scenarios10/11; D03-clearance,D12,D13,D14,D07-card/funding remain affected blockers. All implemented tests passing does not approve missing rules or complete canonical scenarios. Next action: resolve D21 payment capacity with Tejas before implementing commitments. Do not advance to PH17 or claim G3. Unrelated New Text Document.txt remains untouched/untracked.

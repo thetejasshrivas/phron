@@ -1,0 +1,11 @@
+FAIL D16 exact donor trims preserve baseline, cash, goals and source allowance: RPC_TRANSPORT_ERROR
+FAIL same stable ID replays after revision changes without double trimming: RPC_TRANSPORT_ERROR
+FAIL spending before acceptance rejects stale revision: RPC_TRANSPORT_ERROR
+FAIL fresh revision with incorrect cuts rejected by balance recomputation: RPC_TRANSPORT_ERROR
+FAIL concurrent acceptance serializes; only one new operation commits: RPC_TRANSPORT_ERROR
+FAIL cross-user source and donor IDs denied; direct writes denied: RPC_TRANSPORT_ERROR
+FAIL anonymous and submitted user identity denied: RPC_TRANSPORT_ERROR
+FAIL forced failure at cycle_buckets rolls back trims, audit and revision: RPC_TRANSPORT_ERROR
+FAIL forced failure at financial_profiles rolls back trims, audit and revision: RPC_TRANSPORT_ERROR
+FAIL forced failure at operation_log rolls back trims, audit and revision: RPC_TRANSPORT_ERROR
+0 passed; 10 failed; 10 total

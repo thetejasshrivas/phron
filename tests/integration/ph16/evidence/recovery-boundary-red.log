@@ -1,0 +1,17 @@
+PASS D16 exact donor trims preserve baseline, cash, goals and source allowance
+PASS same stable ID replays after revision changes without double trimming
+PASS spending before acceptance rejects stale revision
+PASS fresh revision with incorrect cuts rejected by balance recomputation
+PASS concurrent acceptance serializes; only one new operation commits
+PASS cross-user source and donor IDs denied; direct writes denied
+PASS same deficit cannot be recovered twice under a fresh operation
+PASS identical concurrent IDs replay one committed plan
+PASS changed donor balances with same revision are revalidated against floors
+PASS RLS hides accepted plans from other users; account cascade includes audit
+FAIL overspent donor plus huge floor cannot overflow intermediate capacity: ASSERTION_FAILED
+PASS D14 distress remains unavailable without financial mutation
+PASS anonymous and submitted user identity denied
+PASS forced failure at cycle_buckets rolls back trims, audit and revision
+PASS forced failure at financial_profiles rolls back trims, audit and revision
+PASS forced failure at operation_log rolls back trims, audit and revision
+15 passed; 1 failed; 16 total

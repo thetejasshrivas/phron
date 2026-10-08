@@ -5,27 +5,55 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: 2c6c10a76963faa31a82dc90f5c1b50320abfec7
-dirty_files: ["New Text Document.txt (untouched user work; excluded from PH15 commits)"]
+commit: 38db99033e175f3aad0246fa45f21a0eb1cb050a
+dirty_files: ["PH16 implementation/evidence prepared for verified commit; use git status for live changes", "New Text Document.txt (untouched user work)"]
 active_chat: PHRON-00 Lead
 phase: 3
-current_step: PH-15
-step_state: COMPLETE
+current_step: PH-16
+step_state: IN_PROGRESS
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
-approved_amendments: [D01-v1, D02-v1, D03-v1, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D10-v1, D11-v1, D17-v1, D27-v1]
+approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D10-v1, D11-v1, D16-v1, D17-v1, D27-v1]
 completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15]
 passed_gates: [G0A, G1, V1, G2, V2]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: PENDING}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb"}
-blocking_decisions: [D05-extension, D07-card, D07-funding, D08, D09, D12, D13, D14, D15, D16, D18, D19, D20, D21, D22, D23, D24, D25, D26]
-latest_evidence: tests/integration/ph15/evidence/lifecycle/RESULT.md
+blocking_decisions: [D03-clearance, D05-extension, D07-card, D07-funding, D08, D09, D12, D13, D14, D15, D18, D19, D20, D21, D22, D23, D24, D25, D26]
+latest_evidence: tests/integration/ph16/evidence/RESULT.md
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
-migration_state: PH11_PH12_REMOTE_APPLIED; PH15_LOCAL_ONLY_VERIFIED_NOT_REMOTE
+migration_state: PH11_PH12_REMOTE_APPLIED; PH15_PH16_LOCAL_ONLY_VERIFIED_NOT_REMOTE
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: PH-16 / P03-RECOVERY — Lead P-RESUME, review approved recovery clauses and affected OPEN decisions, then TDD for independently approved rules
+next_action: PH-16 — resolve D21 payment capacity before commitment acceptance; do not advance to PH17
 last_updated_ist: 2026-10-08
 ```
+
+## D16-v1 implemented locally — 2026-10-08 IST (current)
+
+D16-v1 APPROVED exact terms in DECISIONS/amendment. Active-cycle donor trims now commit atomically, revalidate balances/priority/floors, reject stale plans, preserve baseline monthly allocations and replay stable IDs. No current cash/global-budget/goal/commitment change inferred. Baseline restoration at actual salary rollover remains PH17 integration.
+
+PASS:16 recovery acceptance +9 cancellation local cases;46 PH15 lifecycle +25 payment +16 security cases.128 domain tests,100% implemented domain coverage;267 unit (259 prior+8 new),74 integration;four new properties x500 cases. Typecheck/lint/build/source hashes PASS. A signed64 intermediate boundary failed first and passed after exact numeric intermediate correction; RED/GREEN logs retained. Evidence: tests/integration/ph16/evidence/RESULT.md and adjacent logs.
+
+PH16 IN_PROGRESS, not COMPLETE: D21 still blocks commitment acceptance/Scenarios10–11 and concurrent cap persistence; D03-clearance,D12,D13,D14,D07-card/funding remain scoped blockers. Passing all implemented tests cannot close these required expectations. No new gate passed or remote migration/deployment. Verified work is being committed separately from untouched user note; consult git log for resulting revision.
+
+## PH-16 executed verification — 2026-10-08 IST
+
+IN_PROGRESS: approved pure recovery/goal math and local goal cancellation verified. Recovery acceptance remains BLOCKED by D16/D21 and other affected OPEN rules. PH15 remains COMPLETE; no new gate passed.
+
+Fresh results:128 domain tests including four new properties x500 cases at seed160407;100% implemented domain statements/branches/functions/lines.267 unit tests (all259 PH15 +8 new) and74 integration PASS. Local ordinary-user tests:9 cancellation,46 card lifecycle,25 payments,16 security PASS. Lint/typecheck/build/all five source hashes/diff check PASS. Missing Jest imports fixed after initial typecheck failure; Docker started after missing engine pipe, then local tests rerun successfully.
+
+Cancellation proves once-only reserve release, unchanged cash and immutable accumulated/monthly contributions, canonical refresh, durable replay/concurrency, forced rollback and tenant isolation. Separate goal_release_paise adjustment preserves opening budget. No remote migration, goal HTTP/UI workflow or recovery acceptance implemented. All PH16 changes uncommitted; unrelated user note untouched.
+
+Evidence and full scenario mapping: tests/integration/ph16/evidence/RESULT.md and adjacent logs; tests/unit/domain/evidence/ph16/domain-coverage.log and coverage-summary.json. Scenarios9/10/11 remain partially blocked;12 active-lock and17 schedule/completion math only verified. D03-clearance,D12,D13,D14,D16,D21,D07-card/funding remain OPEN. Cancellation concurrency does not prove recovery cap concurrency.
+
+Next one action: resolve D16's accepted-plan receiving-budget effects with Tejas before implementing recovery acceptance. No invented semantics or progression to PH17.
+
+## PH-16 READY — 2026-10-08 IST
+
+Tejas approved exact D03-v2 and D07-v2 terms, recorded in DECISIONS and versioned amendments. D03-v1's whole-cycle lock and D07a-v1's ceiling-based contribution schedule are superseded only within the new scope. PH-15 remains COMPLETE.
+
+Ready to begin TDD for independently approved recovery and goal rules. D03-clearance identifies the undefined clearing event; D12/D13/D14/D16/D21 and D07-card/funding still block their affected expectations. READY does not mean all recovery semantics or gates are resolved. Do not silently select expected values for disputed cases.
+
+Verification: all five source hashes PASS on resume; frozen sources unchanged. This documentation update runs no new domain, integration or browser tests and passes no additional gate. Prior PH15 evidence remains the latest execution evidence. Copy-ready PH16 task and scope are in the latest Lead handoff.
 
 ## PH-15 COMPLETE — 2026-10-08 IST
 

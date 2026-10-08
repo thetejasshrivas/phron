@@ -49,18 +49,26 @@ Owner: PHRON-00 Lead
 ## D03
 
 Decision ID: D03
-Status: APPROVED
+Status: APPROVED — D03-v2, 2026-10-08 IST
 Source clauses: 18.5;19.7; AC-BORR-01/02; Scenario 12; FIT-05/06
-Issue: Conflicting source rules; reconciled only within the approved scope.
-Counterexample: ₹4,500 same-cycle under ₹6,000 cap leaves ₹1,500; carried ₹4,500 locks new commitments.
-Affected steps and gates: PH-16/17/18; G0B/G3/G6 as applicable
-Proposed resolution: approved exact text in [amendment](amendments/D03-v1.md)
-Alternatives and impact: retaining literal conflicting clauses blocks dependent implementation; no alternate approved.
-Exact approved wording: canonical complete text in linked amendment.
-Founder approval and date IST: explicit Tejas approval; recorded 2026-10-06; exact time unavailable.
-Amendment version or implementation-only classification: semantic v1
-Required tests: same-cycle accumulation, prior-cycle lock after deduction, concurrent acceptance, exact cap; NOT_RUN
-Owner: PHRON-00 Lead
+Exact approved wording: Multi-event commitments within the same active cycle are permitted up to the cumulative 15% cap; carrying over an active commitment into a new cycle activates the anti-stacking lock against any new borrowing until cleared.
+Founder approval: Tejas explicitly approved these exact terms in this chat.
+Amendment: [D03-v2](amendments/D03-v2.md). [D03-v1](amendments/D03-v1.md) remains historical; its whole-cycle lock is superseded by "until cleared". Other scoped terms remain effective.
+Counterexample: 450,000 paise same-cycle commitments under a 600,000-paise cap leave 150,000 paise; active carried commitments lock new borrowing.
+Required tests: accumulation, cap boundaries, carried/cleared states, concurrency and replay; new semantics NOT RUN.
+Affected steps: PH-16/17/18. Owner: PHRON-00 Lead.
+
+## D03-clearance
+
+Decision ID: D03-clearance
+Status: OPEN
+Source clauses: D03-v2 "until cleared"; D03-v1 lock after deduction; PRD 18.5/19.7.
+Issue: The new approval changes the lock duration but does not identify the clearing event.
+Counterexample: 450,000 paise carried into a cycle is deducted at rollover; whether that deduction clears the lock is not specified by D03-v2.
+Proposed resolution: Request an explicit clearing-event definition when implementing that transition. No proposed event is approved.
+Affected tests and steps: clearing-event/rollover integration, PH-16/17/18. Independent cap and explicit locked/cleared-state tests may proceed.
+Exact approved wording: NONE for the clearing event; D03-v2 remains APPROVED.
+Owner: PHRON-00 Lead.
 
 ## D04
 
@@ -110,13 +118,26 @@ Amendment version or implementation-only classification: semantic v1
 Required tests: ±₹500 boundaries, retries, partial recall; NOT_RUN
 Owner: PHRON-00 Lead
 
+## D07
+
+Decision ID: D07
+Status: APPROVED — D07-v2, 2026-10-08 IST
+Source clauses: 18.2;23; FIT-07; Scenario 17; D07a-v1/D07b-v1.
+Exact approved wording: Monthly goal contributions use integer floor division in paise with odd remainder assigned to the final cycle; goal cancellation returns accumulated reserves to the active discretionary pool.
+Founder approval: Tejas explicitly approved these exact terms in this chat.
+Amendment: [D07-v2](amendments/D07-v2.md).
+Scope: Replaces only the ceiling-based contribution schedule in D07a-v1; confirms D07b-v1's once-only cancellation release. Other rounding, reserve and execution terms remain effective.
+Counterexample: 100 paise over three cycles becomes 33,33,34 instead of 34,33,33.
+Required tests: final-cycle remainder, conservation, completion, cancellation replay, unchanged cash and no double refund; new semantics NOT RUN.
+D07-card and D07-funding remain OPEN. Affected steps: PH-16/17/18. Owner: PHRON-00 Lead.
+
 ## D07a
 
 Decision ID: D07a
-Status: APPROVED
+Status: APPROVED — contribution schedule partially superseded by D07-v2; other terms retained
 Source clauses: 18.2;18.8;19.5;23; FIT-07/14
 Issue: Conflicting source rules; reconciled only within the approved scope.
-Counterexample: 100 paise over three cycles: 34,33,33; one-paise starter pool conserves one paise.
+Historical counterexample: 100 paise over three cycles: 34,33,33 (superseded by D07-v2: 33,33,34); one-paise starter pool conservation remains effective.
 Affected steps and gates: PH-10/12/16/18; G0B/G3/G6 as applicable
 Proposed resolution: approved exact text in [amendment](amendments/D07a-v1.md)
 Alternatives and impact: retaining literal conflicting clauses blocks dependent implementation; no alternate approved.
@@ -129,7 +150,7 @@ Owner: PHRON-00 Lead
 ## D07b
 
 Decision ID: D07b
-Status: APPROVED
+Status: APPROVED — cancellation confirmed by D07-v2; other terms retained
 Source clauses: 17–18;23; AC-GOAL-01/04; Scenario 17; FIT-01/07/08
 Issue: Conflicting source rules; reconciled only within the approved scope.
 Counterexample: Completed-but-unspent goal remains held across rollover; cash purchase releases equal reserve without second budget debit.
@@ -328,18 +349,18 @@ Owner: PHRON-00 Lead
 ## D16
 
 Decision ID: D16
-Status: OPEN
+Status: APPROVED — D16-v1
 Source clauses: 18.3/18.4/19.3
-Issue: Recovery receiver and accepted global health unclear
-Counterexample: Transfer ₹800 bucket allowance without cash spending
-Affected steps and gates: PH-16/18/21; dependent gate remains blocked
-Proposed resolution: Conserving allowance transfer to breached bucket; recompute health; distinguish future budget/goal relief. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
-Required tests: Scenarios 9–12;FIT-01/04/10; NOT_RUN
-Owner: PHRON-00 Lead
+Founder: Tejas; explicit approval 2026-10-08 IST.
+Exact approved wording:
+
+1. Current-Cycle Allocation Adjustment: Accepting a recovery plan applies calculated trims directly to donor buckets' active cycle allowance for the remainder of the cycle.
+2. Baseline Protection: Baseline monthly bucket allocations configured during onboarding are preserved and restore automatically upon new cycle rollover.
+3. Atomic Revalidation: Accepting a recovery plan is an atomic database transaction using a stable operation ID; if spending changes prior to acceptance, the plan revalidates against current balances, safely rejecting stale or conflicting proposals.
+
+Amendment: [D16-v1](amendments/D16-v1.md). Prior conserving-transfer proposal was NON-NORMATIVE and is not approved by these terms. No receiver allowance increase or cash/global-budget credit inferred.
+Required tests: atomic current-cycle trims, baseline preservation, stale balances/revision, stable replay, concurrent acceptance, rollback, tenant denial. Rollover restoration remains PH17 integration; health source conflicts and D21 are not resolved.
+Owner: PHRON-00 Lead.
 
 ## D17
 

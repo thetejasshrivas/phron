@@ -85,3 +85,10 @@ Local migrations: 20261007164321_ph15_card_settlement.sql and
 Evidence: `tests/integration/ph15/evidence/lifecycle/RESULT.md` (CC-01–16, FIT-08/12, Scenario15).
 Legacy provenance is explicit, not an inferred match on amount/merchant. Open goal, recovery,
 negative-cash, delayed-cycle and drift-budget semantics are unchanged.
+
+
+## PH16 local recovery and cancellation RPC boundary — 2026-10-08
+
+D16-v1 donor-only acceptance: phron_accept_recovery(p_operation_id UUIDv4, p_expected_revision exact nonnegative text, p_input {sourceBucketId,trims:[{bucketId,amount: exact positive paise string}]}). SQL recomputes authorized current-cycle donor cuts and checks the complete proposal; no identity submitted. Stale revision or changed balance proposal returns VERSION_CONFLICT, mismatched replay REPLAY_MISMATCH. Successful result is existing canonical current-state envelope. Baseline allowance remains unchanged; only donor active-cycle allowances reduced. Accepted audit coverage prevents re-trimming the same deficit. Unknown custom priorities/distress return UNAVAILABLE. D21 commitment acceptance is not exposed.
+
+D07 cancellation: phron_cancel_goal with same operation/revision arguments and input {goalId}; result {ok:true,data:{snapshot}}. Releases held reserves once via separate cycle goal_release_paise; accumulated/monthly contributions, cash and opening budget remain unchanged. No goal creation/contribution/rollover route is claimed. Both operations serialize on the verified caller's common row lock, replay before revision checks, use forced RLS and restricted non-bypass writer, and rollback financial/audit/replay effects together. All monetary results are canonical strings. Local migrations only; no new HTTP/UI endpoints or remote deployment.

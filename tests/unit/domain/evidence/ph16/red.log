@@ -1,0 +1,26 @@
+
+> phron@0.1.0 test:unit
+> jest --config jest.config.mjs --selectProjects unit --runInBand --testPathPatterns=recovery.test.ts
+
+Running one project: unit
+FAIL unit tests/unit/domain/recovery.test.ts
+  ● Test suite failed to run
+
+    Cannot find module '../../../src/domain/recovery' from 'tests/unit/domain/recovery.test.ts'
+
+      3 | describe("PH16 approved recovery math", () => {
+      4 |   test("overspend is positive excess only", () => {
+    > 5 |     expect(overspend(40000n, 120000n)).toBe(80000n);
+        |                   ^
+      6 |     expect(overspend(120000n, 40000n)).toBe(0n);
+      7 |     expect(overspend(1n, 1n)).toBe(0n);
+      8 |   });
+
+      at Resolver._throwModNotFoundError (node_modules/jest-resolve/build/index.js:1031:11)
+      at Object.<anonymous> (tests/unit/domain/recovery.test.ts:5:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.418 s
+Ran all test suites matching recovery.test.ts.
