@@ -1,0 +1,13 @@
+FAIL Scenario7/FIT11 overdue clamps to one without credit and permits current-cycle spend: ASSERTION_FAILED
+FAIL Scenario8 actual salary 5500000 credits once and preserves baseline/card reserve: ASSERTION_FAILED
+FAIL Scenario8 actual salary 6000000 credits once and preserves baseline/card reserve: ASSERTION_FAILED
+FAIL Scenario8 actual salary 6500000 credits once and preserves baseline/card reserve: ASSERTION_FAILED
+FAIL D06/D22 partial recall; exactly one cash and budget debit; replay: RPC_TRANSPORT_ERROR
+FAIL Scenario13 positive drift changes cash only; no card payment inferred: RPC_TRANSPORT_ERROR
+FAIL reconciliation forged bucket and over-recall rejected: RPC_TRANSPORT_ERROR
+FAIL concurrent confirmations create exactly one new cycle: ASSERTION_FAILED
+FAIL cross-user cycle denied and anonymous access denied: RPC_TRANSPORT_ERROR
+FAIL salary forced pay_cycles failure rolls back all ledger changes: ASSERTION_FAILED
+FAIL salary forced financial_profiles failure rolls back all ledger changes: ASSERTION_FAILED
+FAIL salary forced operation_log failure rolls back all ledger changes: ASSERTION_FAILED
+0 passed; 12 failed; 12 total

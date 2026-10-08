@@ -61,13 +61,14 @@ Affected steps: PH-16/17/18. Owner: PHRON-00 Lead.
 ## D03-clearance
 
 Decision ID: D03-clearance
-Status: OPEN
+Status: APPROVED — D03-clearance-v1
 Source clauses: D03-v2 "until cleared"; D03-v1 lock after deduction; PRD 18.5/19.7.
 Issue: The new approval changes the lock duration but does not identify the clearing event.
 Counterexample: 450,000 paise carried into a cycle is deducted at rollover; whether that deduction clears the lock is not specified by D03-v2.
-Proposed resolution: Request an explicit clearing-event definition when implementing that transition. No proposed event is approved.
+Resolution: Superseded by the explicit D03-clearance-v1 approval below; deduction at confirmed rollover clears the lock.
 Affected tests and steps: clearing-event/rollover integration, PH-16/17/18. Independent cap and explicit locked/cleared-state tests may proceed.
-Exact approved wording: NONE for the clearing event; D03-v2 remains APPROVED.
+Exact approved wording: “Deduction clears the lock immediately.”
+Founder: explicit Tejas reply2026-10-08 IST. Applies when confirmed salary deducts the carried commitment once from the new cycle discretionary budget. D03-v2 same-cycle cumulative cap remains effective.
 Owner: PHRON-00 Lead.
 
 ## D04
@@ -166,18 +167,15 @@ Owner: PHRON-00 Lead
 ## D05-extension
 
 Decision ID: D05-extension
-Status: OPEN
-Source clauses: 18.8; cycle rules
-Issue: Overdue salary pacing and delayed-confirmation boundaries unspecified
-Counterexample: Salary remains unconfirmed after expected payday
-Affected steps and gates: PH-10/12/17/18/21; dependent gate remains blocked
-Proposed resolution: Founder to define pacing, cycle boundaries and unpaid carry; no proposed rule approved. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
-Required tests: overdue days, late confirmation, unpaid carry; NOT_RUN
-Owner: PHRON-00 Lead
+Status: APPROVED — D05-extension-v1
+Founder: Tejas,2026-10-08 IST.
+Exact approved wording:
+
+1. Overdue Pacing Clamp: While salary confirmation is pending past the expected date, N_days_remaining is clamped to 1; Daily STS evaluates as max(0, S_pool) treating remaining funds as a single-day buffer.
+2. Active Cycle Extension: The active cycle remains open; spends and mutations continue within the current cycle until explicit salary confirmation.
+3. Atomic Rollover on Confirmation: Explicit salary confirmation formally closes the cycle boundary, credits new cash, auto-deducts outstanding next-cycle commitments (C_next_cycle), and initializes Day 1 of the new cycle.
+
+Amendment: [D05-extension-v1](amendments/D05-extension-v1.md). No inferred unpaid-carry or drift-budget rule. Tests: due/overdue clamp, extended mutation bounds, confirmed rollover, exactly-once cash and commitment deductions.
 
 ## D07-card
 
@@ -449,24 +447,17 @@ Counterexample: Cap600,000 paise; first same-cycle commitment250,000; next reque
 Proposed resolution: Retain D03-v2 and clarify D21's lock applies only to carried active commitments. Approved by the explicit clarification below; no D03-v2 supersession.
 Required tests: second same-cycle acceptance, concurrent distinct requests, carried lock, Scenarios10/11/12; PH16/17/18.
 Exact approved wording: “Yes—retain D03-v2; lock applies only to carried commitments.”
-Founder: explicit Tejas reply in this chat, 2026-10-08 IST. Multi-event same-cycle acceptance remains permitted under the cumulative cap; D03-clearance still does not define the clearing event.
+Founder: explicit Tejas reply in this chat, 2026-10-08 IST. Multi-event same-cycle acceptance remains permitted under the cumulative cap; D03-clearance was unresolved at that approval; the later D03-clearance-v1 approval defines deduction as the clearing event.
 Owner: PHRON-00 Lead.
 
 ## D22
 
 Decision ID: D22
-Status: OPEN
-Source clauses: 18.7; Scenarios 13/14
-Issue: Unexplained drift budget treatment unresolved
-Counterexample: Missing ₹1,000 could be bill payment rather than discretionary expense
-Affected steps and gates: PH-11/17/18; dependent gate remains blocked
-Proposed resolution: Provisional unallocated negative budget effect, reversible on classification; positive cash-only proposal; not approved. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
-Required tests: FIT-01/09/12; drift reclassification; NOT_RUN
-Owner: PHRON-00 Lead
+Status: APPROVED — D22-v1
+Founder: explicit Tejas approval of exact proposed wording2026-10-08 IST.
+Exact approved wording: Unexplained negative drift reduces the active discretionary budget by its absolute residual amount once; positive drift changes cash only. Recalled discretionary spending is recorded once as spending, with only the unexplained remainder treated as a budget adjustment. Reclassification must reverse the prior residual budget adjustment before applying its final classification.
+
+Source: PRD18.7, D06-v1; Scenarios13/14. Tests: residual-only budget debit, positive cash-only drift, recall once, reclassification reversal, idempotency.
 
 ## D23
 
@@ -546,3 +537,16 @@ Founder approval and date IST: Tejas: “I approve D27 with the exact proposed w
 Amendment version or implementation-only classification: D27-v1 scoped amendment to FR-ONB-01/FR-BUCKET-01; frozen PRD unchanged.
 Required tests: AC-BUCKET-01 baseline; one-paisa pool; D07a conservation/ties. NOT_RUN at approval.
 Owner: PHRON-00 Lead
+
+
+## PH16-SCOPE-v1
+
+Status: APPROVED — explicit Tejas scope decision, 2026-10-08 IST.
+Decision: Accept PH16 core P0 completion and advance current_step to PH17 / P03-CYCLE. This resolves the pending completion-scope question. It does not amend D04/D05/D06, close unrelated OPEN financial decisions, or manufacture new scenario/browser evidence. Existing executed-test limitations remain in the verification report. No new gate approval inferred.
+
+
+## D05-unpaid-carry-v1
+
+Status: APPROVED; explicit Tejas reply2026-10-08 IST.
+Exact approved wording: Carry unpaid prior-cycle obligations into the new cycle’s O_unpaid in addition to newly due obligations, preserving their history and debiting cash only on actual payment. Overdue carry does not increase the configured monthly O_total or get counted twice.
+Tests: old unpaid plus newly due, unchanged monthly baseline, repeated rollover/no duplication, actual payment only.

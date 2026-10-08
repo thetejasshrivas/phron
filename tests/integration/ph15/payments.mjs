@@ -116,7 +116,7 @@ try {
     ['CC06/07 older tracked reserve survives prepared next-cycle state and later settlement',async()=>{
       const bought=await purchase(); assert.equal((await pay(paymentInput(bought.data.transactionId))).ok,true);
       const oldCycle=bought.data.snapshot.cycleId; const next=randomUUID();
-      // Synthetic cross-cycle state only: does not implement unapproved rollover timing/carry rules.
+      // Synthetic cross-cycle card fixture; D05-unpaid-carry-v1 retains old unpaid plus new due. Real rollover is tested in PH17.
       await sql(`begin;
         update public.pay_cycles set active=false where user_id=${literal(a.id)} and id=${literal(oldCycle)};
         insert into public.pay_cycles(id,user_id,opened_on,expected_payday,budget_basis,opening_budget_paise,opening_cash_paise,goal_held_paise)
@@ -125,7 +125,7 @@ try {
         insert into public.cycle_obligations(user_id,cycle_id,obligation_id,due_paise,unpaid_paise) select user_id,${literal(next)},obligation_id,due_paise,unpaid_paise from public.cycle_obligations where user_id=${literal(a.id)} and cycle_id=${literal(oldCycle)};
         update public.buckets set current_spent_paise=0 where user_id=${literal(a.id)};
         commit;`);
-      const before=await state(); assert.equal(before.snapshot.money.accruedCardReserve,'150000'); assert.equal(before.snapshot.money.spent,'0'); assert.equal(before.snapshot.money.unpaidObligations,'200000');
+      const before=await state(); assert.equal(before.snapshot.money.accruedCardReserve,'150000'); assert.equal(before.snapshot.money.spent,'0'); assert.equal(before.snapshot.money.unpaidObligations,'400000');
       const later=await pay(paymentInput(bought.data.transactionId,'150000')); assert.equal(later.ok,true);
       assert.equal(later.data.snapshot.money.cash,'750000'); assert.equal(later.data.snapshot.money.spent,'0'); assert.equal(later.data.snapshot.money.accruedCardReserve,'0');
       assert.equal(later.data.snapshot.money.marginLiquid,before.snapshot.money.marginLiquid);

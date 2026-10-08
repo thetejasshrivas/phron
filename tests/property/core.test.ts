@@ -66,7 +66,7 @@ test("FIT-11 core boundary: calendar evaluation cannot credit cash", () => {
     const ledger=Object.freeze({opening,confirmedInflows:inflow,cashOutflows:0n,signedDrift:0n});
     const before=calculateCash(ledger);
     const payday=expectedPayday(2026,11,15);
-    expect(remainingCycleDays(payday,payday)).toEqual({status:"blocked",decision:"D05-extension"});
+    expect(remainingCycleDays(payday,payday)).toEqual({status:"ready",remainingDays:1});
     expect(calculateCash(ledger)).toBe(before);
     expect(ledger.confirmedInflows).toBe(inflow);
   }),options);

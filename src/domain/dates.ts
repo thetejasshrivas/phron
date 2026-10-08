@@ -16,13 +16,12 @@ export function expectedPayday(year: number, month: number, anchor: number): Fin
   return financialDate(`${prefix}-${String(Math.min(anchor, end.getUTCDate())).padStart(2, "0")}`);
 }
 
-export type RemainingDays = { readonly status: "ready"; readonly remainingDays: number }
-  | { readonly status: "blocked"; readonly decision: "D05-extension" };
+export type RemainingDays = { readonly status: "ready"; readonly remainingDays: number };
 
 /** Counts today, excludes explicit expected payday. Never advances an unconfirmed cycle. */
 export function remainingCycleDays(today: string, expected: string): RemainingDays {
   const days = calendarDay(expected) - calendarDay(today);
-  return days > 0 ? { status: "ready", remainingDays: days } : { status: "blocked", decision: "D05-extension" };
+  return { status: "ready", remainingDays: Math.max(1, days) };
 }
 
 export function cycleDayIndex(start: string, today: string): number {
@@ -39,4 +38,13 @@ export function financialDateAt(instant: string): FinancialDate {
     timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit",
   }).formatToParts(parsed).map(part => [part.type, part.value]));
   return financialDate(`${String(parts.year).padStart(4, "0")}-${parts.month}-${parts.day}`);
+}
+
+/** Next configured anchor strictly after explicit confirmation; no cash or automatic rollover. */
+export function nextExpectedPayday(confirmed: string, anchor: number): FinancialDate {
+ const date=financialDate(confirmed);
+ const year=Number(date.slice(0,4)),month=Number(date.slice(5,7));
+ const candidate=expectedPayday(year,month,anchor);
+ if(candidate>date)return candidate;
+ return month===12?expectedPayday(year+1,1,anchor):expectedPayday(year,month+1,anchor);
 }

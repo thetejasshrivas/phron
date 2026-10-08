@@ -1,0 +1,63 @@
+
+> phron@0.1.0 test:unit
+> jest --config jest.config.mjs --selectProjects unit --runInBand --testPathPatterns=cycle.test.ts|dates.test.ts
+
+Running one project: unit
+FAIL unit tests/unit/domain/dates.test.ts
+  ● D05-extension-v1 due/overdue 2026-11-15 clamps to one
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "remainingDays": 1,
+    -   "status": "ready",
+    +   "decision": "D05-extension",
+    +   "status": "blocked",
+      }
+
+
+
+      at tests/unit/domain/dates.test.ts:92:136
+
+  ● D05-extension-v1 due/overdue 2026-11-16 clamps to one
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "remainingDays": 1,
+    -   "status": "ready",
+    +   "decision": "D05-extension",
+    +   "status": "blocked",
+      }
+
+
+
+      at tests/unit/domain/dates.test.ts:92:136
+
+FAIL unit tests/unit/domain/cycle.test.ts
+  ● Test suite failed to run
+
+    Cannot find module '../../../src/domain/cycle' from 'tests/unit/domain/cycle.test.ts'
+
+      4 |  const r=reconciliation(100000n,100000n+drift,0n);
+      5 |  expect(r.prompt).toBe(drift>=50000n?"positive":drift<=-50000n?"recall":"absorb");
+    > 6 |  expect(r.residualDrift).toBe(drift);expect(r.cash).toBe(100000n+drift);
+        |                ^
+      7 | });
+      8 | test("D06/D22 partial recall has one cash effect and one budget effect",()=>{
+      9 |  expect(reconciliation(2000000n,1750000n,150000n)).toEqual({cash:1750000n,signedDrift:-250000n,recalledOutflow:150000n,residualDrift:-100000n,budgetAdjustment:-100000n,prompt:"recall"});
+
+      at Resolver._throwModNotFoundError (node_modules/jest-resolve/build/index.js:1031:11)
+      at Object.<anonymous> (tests/unit/domain/cycle.test.ts:6:16)
+
+Test Suites: 2 failed, 2 total
+Tests:       2 failed, 27 passed, 29 total
+Snapshots:   0 total
+Time:        0.414 s
+Ran all test suites matching cycle.test.ts|dates.test.ts.

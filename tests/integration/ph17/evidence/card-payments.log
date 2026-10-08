@@ -1,0 +1,26 @@
+PASS Scenario15 all golden rows / CC01-05
+PASS zero floor purchase changes reserve without cash outflow
+PASS CC03 payment mismatch / kind mismatch / stale revision
+PASS CC04 strict invalid/overpayment/duplicate allocation validation with no writes
+PASS CC04 cross-user allocations and direct writes denied
+PASS anonymous session and signed-out payment denied
+PASS CC05 legacy target must be same-user active-cycle card obligation
+PASS D26 insufficient factual cash stays unavailable without writes
+PASS CC16 same-ID concurrent requests commit once
+PASS CC16 distinct concurrent IDs cannot spend stale liability; refresh still rejects excess
+PASS CC06/07 older tracked reserve survives prepared next-cycle state and later settlement
+PASS CC08 balance-only reconciliation fixture does not release tracked reserve
+PASS multi-purchase canonical retry and fully-paid/deleted/noncard rejection
+PASS unsafe-number-sized payment round-trips exactly
+PASS new allocation FK and writer WITH CHECK reject foreign parents/owners
+PASS CC16 forced intermediate failure at card_liability_payments rolls back all rows
+PASS CC16 forced intermediate failure at card_payment_allocations rolls back all rows
+PASS CC16 forced intermediate failure at obligation_payment_allocations rolls back all rows
+PASS CC16 forced intermediate failure at cycle_obligations rolls back all rows
+PASS CC16 forced intermediate failure at obligations rolls back all rows
+PASS CC16 forced intermediate failure at pay_cycles rolls back all rows
+PASS CC16 forced intermediate failure at financial_profiles rolls back all rows
+PASS CC16 forced intermediate failure at users rolls back all rows
+PASS CC16 forced intermediate failure at operation_log rolls back all rows
+PASS account cascade removes mixed-payment dependencies and preserves user B
+25 passed; 0 failed; 25 total

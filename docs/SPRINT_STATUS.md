@@ -5,27 +5,45 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: 349631cdf7d42863ed53a26106906284f85c8777
+commit: PH17 implementation commit containing tests/integration/ph17/evidence/RESULT.md
 dirty_files: ["New Text Document.txt (untouched user work)"]
 active_chat: PHRON-00 Lead
 phase: 3
-current_step: PH-16
-step_state: IN_PROGRESS
+current_step: PH-18
+step_state: READY
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
-approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D10-v1, D11-v1, D16-v1, D17-v1, D21-v1, D21-lock-scope-v1, D27-v1]
-completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15]
+approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D10-v1, D11-v1, D16-v1, D17-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1]
+completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17]
 passed_gates: [G0A, G1, V1, G2, V2]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: PENDING}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb"}
-blocking_decisions: [D03-clearance, D05-extension, D07-card, D07-funding, D08, D09, D12, D13, D14, D15, D18, D19, D20, D22, D23, D24, D25, D26]
-latest_evidence: tests/integration/ph16/evidence/RESULT.md
+blocking_decisions: [ D07-card, D07-funding, D08, D09, D12, D13, D14, D15, D18, D19, D20, D23, D24, D25, D26]
+latest_evidence: tests/integration/ph17/evidence/RESULT.md
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
-migration_state: PH11_PH12_REMOTE_APPLIED; PH15_PH16_LOCAL_ONLY_VERIFIED_NOT_REMOTE
+migration_state: PH11_PH12_REMOTE_APPLIED; PH15_PH16_PH17_LOCAL_ONLY_VERIFIED_NOT_REMOTE
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Confirm PH16 completion scope; PH17 follows only after operator approval, with carried-clearance and delayed-cycle decisions explicit
+next_action: PH-18 / Gate G3 — Financial Lifecycle Audit
 last_updated_ist: 2026-10-08
 ```
+
+## PH-17 COMPLETE — 2026-10-08 IST
+
+Completed and verified the authorized local domain/persistence scope under D05-extension-v1, D03-clearance-v1, D05-unpaid-carry-v1 and D22-v1. Salary confirmation credits actual cash once, opens the new cycle and clears deducted commitments; overdue pacing stays at one day. Outstanding card reserves, held goals, unpaid arrears and baseline bucket restoration survive rollover. Signed reconciliation and residual reclassification preserve once-only cash/budget effects; current-cycle correction bounds and historical rejection remain enforced.
+
+Fresh PASS:284 unit +74 integration/contract;148 domain tests with100% implemented domain statements/branches/functions/lines;30 cycle persistence cases (expanded from23),46 card lifecycle,25 payments,16 security. Exact Scenarios6–8/13–14/16 accounting and FIT08/09/11 are mapped in tests/integration/ph17/evidence/RESULT.md. Typecheck/lint/build/all five source hashes PASS. Local synthetic users perform ordinary operations; no remote migration/deployment or new PH17 browser/UI proof.
+
+PH18 / Gate G3 Financial Lifecycle Audit is READY, not started or passed. Existing G0A/G1/V1/G2/V2 remain unchanged. D15/D26 and unrelated OPEN rules remain explicit limits; PH17 completion does not close them. Hosted Preview remains PH14. All older PH17 READY/decision-pending notes below are historical and superseded by this entry. Unrelated user note remains untouched.
+
+## PH-16 COMPLETE / PH-17 READY — 2026-10-08 IST
+
+Tejas explicitly accepted PH16 completion scope and directed advancement to PH17. PH16 is COMPLETE by that operator scope decision; current_step is PH17 / P03-CYCLE, READY for source-decision review. Verified implementation349631c and status/handoff74c694f remain the evidence revisions. This status decision does not create additional test evidence or pass G3/V3, and does not silently approve remaining financial semantics. Earlier IN_PROGRESS/completion-pending statements below are historical and superseded.
+
+PH17 scope: salary confirmation, delayed dates, signed reconciliation and current-cycle mutation rules; PRD15.10/15.11/18.7/19.8/19.9; Scenarios6–8/13–14/16. D04-v1 APPROVED: actual confirmed salary determines cycle income and is credited once; configured baseline stays separate. D05-v1 APPROVED: IST/clamped anchors/exclusive payday; calendar date alone never rolls over or credits cash. D06-v1 APPROVED: signed residual drift changes cash once; recalled outflow and audit drift are not double-counted. D10-v1 retains immediate reversal/6-second Undo and active-cycle date restrictions.
+
+Still OPEN for dependent PH17 work: D05-extension (overdue denominator, delayed-confirmation boundaries and unpaid carry), D03-clearance (event clearing carried lock), D22 (unexplained drift budget effects), D15 (STS delta vs bounded recomputation), D26 (factual negative cash). D07 reserve persistence and D16 baseline restoration must survive rollover; no new semantics inferred.
+
+First action: present D05-extension for one explicit founder decision before delayed-date implementation. Example: expected payday November1, confirmed November4—define pacing November1–3 and the new cycle boundaries without crediting salary before confirmation. Continue independent preparation only. No PH17 code written in this status turn. Source verification: all five hashes PASS; unrelated user note untouched.
 
 ## D21-v1 implemented locally — 2026-10-08 IST (current)
 

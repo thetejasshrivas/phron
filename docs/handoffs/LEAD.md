@@ -1,3 +1,14 @@
+# Current Lead handoff — PH-17 COMPLETE → PH-18 / Gate G3
+
+2026-10-08 IST. Single active writer PHRON-00 Lead, W:/AI Product Sprint/Phron, main. PH17 implementation revision is the commit containing tests/integration/ph17/evidence/RESULT.md; inspect git log and status on resume. Unrelated New Text Document.txt remains untouched. Historical handoffs below do not override this entry.
+
+PH17 authorized local domain/persistence scope COMPLETE. Approved D05-extension-v1, D03-clearance-v1, D05-unpaid-carry-v1 and D22-v1 recorded exactly in DECISIONS. Two local migrations implement explicit salary rollover, overdue pacing, unpaid carry, commitment deduction/clearance, baseline restoration, goal reservation, reconciliation and current-cycle residual reclassification. Read docs/CONTRACTS.md's PH17 RPC section for exact inputs. No new HTTP/UI workflow or remote migration/deployment.
+
+Fresh PASS:284 unit +74 integration/contract;148 domain tests,100% statements/branches/functions/lines;30 cycle persistence,46 card lifecycle,25 card payment,16 security cases;typecheck/lint/build/all five source hashes. Evidence and scenario/FIT mapping: tests/integration/ph17/evidence/RESULT.md and adjacent logs. Initial Docker absence resolved by starting the existing engine. Canonical Scenarios13/14/16 exact amounts were added as independent verification fixtures and passed. Source hash d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994 unchanged.
+
+Next one action: begin PH18 / Gate G3 Financial Lifecycle Audit with P-RESUME, then audit all canonical scenarios, FIT01–14 and CC01–16 against source IDs and executed evidence. G3 is NOT RUN. Audit must retain open D15 bounded-STS discrepancy, D26 factual negative cash, distress-goal/card-funding and other unresolved requirements; do not infer approvals or full-release readiness. Current tests prove ordinary-user local database behavior, not remote/browser cycle journeys. Do not apply pending migrations remotely without authorization.
+
+---
 # Lead handoff — PH-14 COMPLETE → PHRON-01 Financial Engine / PH-15
 
 2026-10-07 IST. Repository W:/AI Product Sprint/Phron,branch main. Accepted/deployed slice0f28e49e42b13ed07640855468ec943e44dda4eb; pre-record HEAD89f4e53d5d141e91cc18a8e80e15e12b602df135; this documentation commit follows. Inspect actual HEAD on resume. Only unrelated untracked New Text Document.txt exists before this record;preserved. No other writer or cross-chat message initiated.
@@ -154,3 +165,12 @@ PASS:131 domain/100% coverage;270unit+74integration;17commitment+16recovery+9can
 PH16 completion scope question remains pending; do not infer acceptance from elapsed time. Remaining OPEN D12/D13/D14/D07-card/funding/D03-clearance are not approvals. Next eligible implementation phase after explicit scoped completion is PH17; resolve clearing/late-salary boundaries before dependent transitions. No G3 pass or browser goal-journey proof claimed. Unrelated user note untouched.
 
 D21 verified implementation committed as 349631cdf7d42863ed53a26106906284f85c8777. Working tree afterward contains only the untouched untracked New Text Document.txt. Completion-scope question remains unanswered; PH16 status is IN_PROGRESS.
+
+
+## PH16 completion accepted / PH17 handoff — 2026-10-08 IST (current)
+
+Tejas explicitly accepted PH16 completion scope and directed advancement. PH16 COMPLETE; PH17 / P03-CYCLE READY. Earlier pending-scope statements are superseded. Implementation349631c/evidence74c694f; no additional tests claimed by founder scope acceptance. All five source hashes reverified PASS; no PH17 code or remote changes; user note untouched.
+
+Read PRD15.10/15.11/18.7/19.8/19.9, Scenarios6–8/13–14/16, D04/D05/D06/D10 and current contracts before implementation. D04 actual credited cycle salary/baseline separation, D05 IST/calendar convention and D06 once-only residual cash drift are already APPROVED; do not ask to reapprove them.
+
+First action: resolve D05-extension with one founder decision on overdue pacing, delayed-confirmation cycle boundaries and unpaid carry. Then address D03-clearance, D22 drift budget effects, D15 bounded STS effects and D26 insufficient factual cash as they become dependent. Preserve outstanding tracked reserves, held goals, baseline bucket restoration, stable operation IDs and current-cycle edit restrictions. No salary credit or rollover on date arrival alone. Existing open decisions remain open; completion scope approval is not an amendment to their financial rules.

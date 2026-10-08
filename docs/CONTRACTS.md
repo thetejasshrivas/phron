@@ -99,3 +99,19 @@ D07 cancellation: phron_cancel_goal with same operation/revision arguments and i
 Local RPC phron_accept_commitment uses stable UUID p_operation_id, exact text p_expected_revision, and p_input {sourceBucketId,amount:positive canonical paise string,purchaseId:UUID|null}; identity cannot be supplied. Response is the existing canonical current-state envelope. Server validates active owned bucket, any supplied executed owned current-cycle tracked purchase in that bucket, remaining source deficit after accepted trims/commitments, exhausted canonical donor capacity, projected baseline cap and cumulative same-cycle ledger. Cash capacity is L_current-O_unpaid-CC_accrued>=remaining deficit; the alternative is an actual executed tracked purchase covering the deficit, never a future-card promise. Existing tracked settlement does not undo the fact of execution. No cash, reserve, goal, current budget or STS credit is created.
 
 D21-lock-scope-v1 explicitly retains D03-v2 multi-event same-cycle commitments; carried_commitment_paise>0 rejects acceptance. No clearing event inferred. Same-ID committed replay returns original response before current revision validation; changed body/kind conflicts. Common user-row lock serializes revalidation, ledger insert, aggregate, revision and replay. Immutable next_cycle_commitments rows use same-user composite FKs, forced RLS and restricted writer. target_cycle_start records the currently scheduled expected payday; it does not confirm salary, open a cycle or determine an overdue/delayed boundary. PH17 must implement explicit confirmation/clearing semantics under its decisions. D13 negative projection and custom donor mapping remain unavailable.
+
+## PH-17 local cycle RPC contract — 2026-10-08
+
+Approved D04-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D06-v1 and D22-v1 govern these local migrations. No new HTTP route or UI is exposed by this step.
+
+All RPCs take p_operation_id (stable UUID), p_expected_revision (canonical integer string), p_input (JSON). Identity and financial date derive from authenticated server context; no user_id is accepted. Money is exact integer-paise text. Existing Result/error and canonical snapshot shape applies; replay returns the stored result before checking a now-stale revision. Reusing an operation ID with different input fails.
+
+| RPC | Input |
+| --- | --- |
+| phron_confirm_salary | {cycleId, amount}; positive actual credit; cycleId must be the active cycle |
+| phron_reconcile | {reportedCash, recalledAmount, bucketId}; bucketId is null when recall is zero, otherwise an owned active discretionary bucket |
+| phron_reclassify_drift | {reconciliationId, amount, bucketId}; positive amount no greater than the unclassified negative residual; current-cycle discretionary classification only |
+
+Rollover closes the old cycle on explicit confirmation, opens Day 1 on that date, and selects the next strictly future clamped anchor. Due/overdue days remain one until confirmation. Actual salary changes cash once and cycle income; sustainable income stays configured. Commitment deductions clear the carried lock; baseline buckets restore. Old unpaid obligation rows remain outstanding alongside newly due rows; monthly O_total includes only the new cycle. Card reserves remain derived across cycles. New payments may settle old purchases/legacy arrears; historical purchase/payment corrections remain forbidden.
+
+Reconciliation stores full signed drift as audit data, recalled spend once and residual drift once. Only negative unexplained residual changes discretionary budget. Reclassification reverses its residual budget adjustment before recording discretionary spending, without changing cash. Original audit records remain immutable. Active goals in structural distress retain an explicit UNAVAILABLE guard pending the open goal semantics; this is not a new funding rule.

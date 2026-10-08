@@ -1,0 +1,27 @@
+PASS Scenario6 SQL calendar anchors clamp leap and short months
+PASS Scenario7/FIT11 overdue clamps to one without credit and permits current-cycle spend
+PASS Scenario8 actual salary 5500000 credits once and preserves baseline/card reserve
+PASS Scenario8 actual salary 6000000 credits once and preserves baseline/card reserve
+PASS Scenario8 actual salary 6500000 credits once and preserves baseline/card reserve
+PASS D06/D22 partial recall; exactly one cash and budget debit; replay
+PASS Scenario13 positive drift changes cash only; no card payment inferred
+PASS reconciliation forged bucket and over-recall rejected
+PASS concurrent confirmations create exactly one new cycle
+PASS rollover deducts commitments once, clears lock, restores baseline and reserves final goal remainder
+PASS extended-cycle correction dates and post-rollover historical edits remain bounded
+PASS concurrent reconciliation and fresh-client replay apply cash once
+PASS reconciliation threshold boundary 49999 preserves cash identity
+PASS reconciliation threshold boundary 50000 preserves cash identity
+PASS reconciliation threshold boundary -49999 preserves cash identity
+PASS reconciliation threshold boundary -50000 preserves cash identity
+PASS reconciliation forced transactions failure rolls back recall, cash and budget
+PASS reconciliation forced pay_cycles failure rolls back recall, cash and budget
+PASS reconciliation forced financial_profiles failure rolls back recall, cash and budget
+PASS reconciliation forced operation_log failure rolls back recall, cash and budget
+FAIL D22 residual reclassification reverses budget adjustment without changing cash twice: RPC_TRANSPORT_ERROR
+PASS new reconciliation/reservation tables force RLS and deny direct writes
+PASS cross-user cycle denied and anonymous access denied
+PASS salary forced pay_cycles failure rolls back all ledger changes
+PASS salary forced financial_profiles failure rolls back all ledger changes
+PASS salary forced operation_log failure rolls back all ledger changes
+25 passed; 1 failed; 26 total

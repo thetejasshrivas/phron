@@ -1,0 +1,51 @@
+
+> phron@0.1.0 test:unit
+> jest --config jest.config.mjs --selectProjects unit --runInBand --testPathPatterns=dates.test.ts
+
+Running one project: unit
+FAIL unit tests/unit/domain/dates.test.ts
+  ● next anchored date after confirmed 2025-01-31
+
+    TypeError: (0 , _dates.nextExpectedPayday) is not a function
+
+
+
+      at tests/unit/domain/dates.test.ts:178:117
+
+  ● next anchored date after confirmed 2024-01-31
+
+    TypeError: (0 , _dates.nextExpectedPayday) is not a function
+
+
+
+      at tests/unit/domain/dates.test.ts:178:117
+
+  ● next anchored date after confirmed 2026-11-04
+
+    TypeError: (0 , _dates.nextExpectedPayday) is not a function
+
+
+
+      at tests/unit/domain/dates.test.ts:178:117
+
+  ● next anchored date after confirmed 2026-12-31
+
+    TypeError: (0 , _dates.nextExpectedPayday) is not a function
+
+
+
+      at tests/unit/domain/dates.test.ts:178:117
+
+  ● next anchored date after confirmed 2026-11-04
+
+    TypeError: (0 , _dates.nextExpectedPayday) is not a function
+
+
+
+      at tests/unit/domain/dates.test.ts:178:117
+
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 29 passed, 34 total
+Snapshots:   0 total
+Time:        0.361 s
+Ran all test suites matching dates.test.ts.
