@@ -143,3 +143,12 @@ Executed PASS:16 acceptance,9 cancellation,46 PH15 lifecycle,25 payment,16 secur
 User authorized committing verified PH16 changes. PH16 must remain IN_PROGRESS: D21 prevents commitment acceptance and full Scenarios10/11; D03-clearance,D12,D13,D14,D07-card/funding remain affected blockers. All implemented tests passing does not approve missing rules or complete canonical scenarios. Next action: resolve D21 payment capacity with Tejas before implementing commitments. Do not advance to PH17 or claim G3. Unrelated New Text Document.txt remains untouched/untracked.
 
 Committed implementation: b8400c3296b6de93daa5fedfb501aa652a4ead29. Post-commit status contains only untracked New Text Document.txt; no PH16 implementation changes remain unstaged. PH16 remains IN_PROGRESS for the documented source blockers.
+
+
+## D21-v1 implementation handoff — 2026-10-08 IST (current)
+
+D21 exact approval and lock clarification recorded in DECISIONS. Local migration20261008125601_ph16_commitment_acceptance.sql and tests/integration/ph16/commitments.mjs implement/verify same-cycle cumulative commitments with only carried lock. RPC contract in CONTRACTS; pure cash predicate in recovery.ts. Real tracked evidence is verified by owned executed same-cycle purchase in the breached bucket, not a boolean. No future cash credit; scheduled target date does not open/clear a cycle. Recovery acceptance now subtracts commitment coverage too.
+
+PASS:131 domain/100% coverage;270unit+74integration;17commitment+16recovery+9cancellation;46card lifecycle+25payments+16security;types/lint/build/source hashes. Fresh-client replay and four forced rollback boundaries included. Evidence: tests/integration/ph16/evidence/RESULT.md. No remote migration/deployment.
+
+PH16 completion scope question remains pending; do not infer acceptance from elapsed time. Remaining OPEN D12/D13/D14/D07-card/funding/D03-clearance are not approvals. Next eligible implementation phase after explicit scoped completion is PH17; resolve clearing/late-salary boundaries before dependent transitions. No G3 pass or browser goal-journey proof claimed. Unrelated user note untouched.

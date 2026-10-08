@@ -1,5 +1,5 @@
 import { describe, test, expect } from "@jest/globals";
-import { commitmentCapacity, goalSchedule, goalPace, overspend, planRecovery } from "@/domain/recovery";
+import { hasCashPaymentCapacity, commitmentCapacity, goalSchedule, goalPace, overspend, planRecovery } from "@/domain/recovery";
 
 describe("PH16 approved recovery math", () => {
   test("overspend is positive excess only", () => {
@@ -70,4 +70,23 @@ describe("PH16 approved recovery math", () => {
     expect(()=>planRecovery(1n,[{category:"bogus" as "dining",balance:1n,floor:0n}])).toThrow();
     expect(()=>planRecovery(1n,[{category:"dining",balance:1n,floor:0n},{category:"dining",balance:1n,floor:0n}])).toThrow();
   });
+});
+
+
+describe("D21-v1 independent cash-capacity predicate",()=>{
+ test("exact equality qualifies; one paise below does not",()=>{
+  expect(hasCashPaymentCapacity(100000n,20000n,30000n,50000n)).toBe(true);
+  expect(hasCashPaymentCapacity(99999n,20000n,30000n,50000n)).toBe(false);
+  expect(hasCashPaymentCapacity(100001n,20000n,30000n,50000n)).toBe(true);
+ });
+ test("reserved cash and exact large intermediates never invent capacity",()=>{
+  expect(hasCashPaymentCapacity(100000n,100000n,0n,1n)).toBe(false);
+  expect(hasCashPaymentCapacity(0n,9223372036854775807n,9223372036854775807n,1n)).toBe(false);
+  expect(hasCashPaymentCapacity(9007199254740993n,0n,0n,9007199254740993n)).toBe(true);
+ });
+ test("positive deficit and exact unsigned inputs required",()=>{
+  expect(()=>hasCashPaymentCapacity(1n,0n,0n,0n)).toThrow();
+  expect(()=>hasCashPaymentCapacity(-1n,0n,0n,1n)).toThrow();
+  expect(()=>hasCashPaymentCapacity(1 as unknown as bigint,0n,0n,1n)).toThrow();
+ });
 });

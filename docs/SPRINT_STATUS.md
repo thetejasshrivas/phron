@@ -12,20 +12,28 @@ phase: 3
 current_step: PH-16
 step_state: IN_PROGRESS
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
-approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D10-v1, D11-v1, D16-v1, D17-v1, D27-v1]
+approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D10-v1, D11-v1, D16-v1, D17-v1, D21-v1, D21-lock-scope-v1, D27-v1]
 completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15]
 passed_gates: [G0A, G1, V1, G2, V2]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: PENDING}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb"}
-blocking_decisions: [D03-clearance, D05-extension, D07-card, D07-funding, D08, D09, D12, D13, D14, D15, D18, D19, D20, D21, D22, D23, D24, D25, D26]
+blocking_decisions: [D03-clearance, D05-extension, D07-card, D07-funding, D08, D09, D12, D13, D14, D15, D18, D19, D20, D22, D23, D24, D25, D26]
 latest_evidence: tests/integration/ph16/evidence/RESULT.md
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
 migration_state: PH11_PH12_REMOTE_APPLIED; PH15_PH16_LOCAL_ONLY_VERIFIED_NOT_REMOTE
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: PH-16 — resolve D21 payment capacity before commitment acceptance; do not advance to PH17
+next_action: Confirm PH16 completion scope; PH17 follows only after operator approval, with carried-clearance and delayed-cycle decisions explicit
 last_updated_ist: 2026-10-08
 ```
+
+## D21-v1 implemented locally — 2026-10-08 IST (current)
+
+D21-v1 APPROVED exact terms; explicit D21-lock-scope-v1 retains D03-v2: same-cycle multi-event accumulation permitted, only carried commitments lock. Local commitment acceptance now atomically validates source deficit, exhausted donors, real cash or executed tracked purchase evidence, cumulative15% cap and ownership. Stable replay, stale rejection, concurrent requests and forced rollback verified. No current cash/STS/goal credit and no remote migration.
+
+Fresh PASS:131 domain tests/100% implemented math coverage;270 unit +74 integration;17 commitment +16 recovery +9 cancellation;46 card lifecycle +25 payment +16 security. Typecheck/lint/build/source hashes PASS. Scenario10/11 accounting and fixed goal date preserved;Scenario12 active carried lock PASS. Evidence: tests/integration/ph16/evidence/RESULT.md and commitments.log. No browser badge or salary-rollover integration claimed.
+
+Completion scope clarification pending: retain IN_PROGRESS until explicit scoped completion or remaining required gaps resolved. D12 Scenario9 inputs/health,D13 negative cap,D14 distress floors,D07-card/funding and D03-clearance remain OPEN; they are not silently approved by D21. No new gate passed.
 
 ## D16-v1 implemented locally — 2026-10-08 IST (current)
 

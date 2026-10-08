@@ -65,3 +65,10 @@ export function goalPace(target: bigint, accumulated: bigint, totalDays: number,
   return {expected, deficit: expected > saved ? expected - saved : 0n,
     status: saved >= amount ? "COMPLETED" : saved >= expected ? "ON_TRACK" : "BEHIND"};
 }
+
+/** D21-v1 cash branch only; not credit evidence, cap authorization or a ledger mutation. */
+export function hasCashPaymentCapacity(cash: bigint, unpaid: bigint, cardReserve: bigint, deficit: bigint): boolean {
+  const needed = nonnegativePaise(deficit);
+  if (needed === 0n) throw new RangeError("Deficit must be positive");
+  return nonnegativePaise(cash) - nonnegativePaise(unpaid) - nonnegativePaise(cardReserve) >= needed;
+}

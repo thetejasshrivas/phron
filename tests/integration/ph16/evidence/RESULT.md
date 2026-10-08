@@ -1,13 +1,28 @@
 # PH16 executed verification — 2026-10-08 IST
 
+## Current D21 verification
+
+Approved D21-v1 and explicit D21-lock-scope-v1 retain D03-v2 same-cycle accumulation; carried commitments alone lock. Implemented local next-cycle acceptance; no remote migration or deployment. Fresh PASS:131 domain tests/100% implemented-domain statements,branches,functions,lines;270 unit (259 PH15 +11 PH16),74 integration;17 commitment,16 donor recovery,9 cancellation,46 card lifecycle,25 payment,16 security cases;typecheck/lint/build/five source hashes. Four PH16 properties x500 at seed160407 remain included. Commands and logs below are refreshed.
+
+Scenario10/11 local accounting proof: fixed phone goal monthly500,000paise/date2026-10-10 remains unchanged; deficit250,000 accepted under600,000 cap, cash/current money unchanged, immutable commitment recorded and refreshed aggregate250,000. Scenario12 carried450,000 blocks. Synthetic reserves/donor states are explicitly seeded; no browser badge or end-to-end goal journey claimed.
+
+17 commitment cases cover cumulative second event, exact cap/one-paisa excess, carried lock, cash equality/one-paisa shortfall, actual owned tracked-card execution, no fictional cash, fresh-client durable replay, identical/distinct concurrency, stale revisions, mismatch, donor exhaustion, wrong purchase method, tenant isolation/forced RLS, direct-write/anonymous/identity denial, four intermediate failure points and same-ID retry. Negative projection remains unavailable under D13; clearing event and delayed target-cycle boundary remain PH17 decisions. Scheduled target_cycle_start is not an actual rollover event.
+
+Initial commitment RED:0/14 before migration; fault helper setup left a function after missing-table failure, then was made replaceable. GREEN17/17 follows. Test logs contain no secrets; local admin only seeds/cleans synthetic accounts and temporary faults; all acceptance runs under ordinary credentials. SQL source deficit subtracts both accepted trims and commitments to prevent recovering it twice. Commitments create future deductions only; no current cash, STS, card reserve or goal edits.
+
+PH16 completion scope clarification was requested because D12 Scenario9 inputs/health, D13 negative cap, D14 distress floors and deferred goal execution remain unresolved. Until explicit scoped completion approval, status remains IN_PROGRESS. This is not a new financial-rule approval or a passed G3 gate.
+
+## Earlier verification history (superseded where current results differ)
+
 Base commit: 38db99033e175f3aad0246fa45f21a0eb1cb050a; branch main; PH16 implementation prepared for this commit (resolve revision with git log -- src/domain/recovery.ts). Local Windows / Node 24.21.0 / installed pinned project tools. No remote migration, deployment or application UI change. New Text Document.txt is unrelated user work, untouched.
 
 ## Results
 
 | Command | Result | Evidence |
 | --- | --- | --- |
-| npm run test:domain:coverage | PASS: 128 tests / 6 suites; 100% statements, branches, functions, lines across implemented domain TS | ../../../../tests/unit/domain/evidence/ph16/domain-coverage.log; coverage-summary.json alongside it |
-| npm test | PASS: 267 unit (259 existing + 8 new), 74 integration; 11 + 10 suites | regression.log |
+| npm run test:domain:coverage | PASS: 131 tests / 6 suites; 100% statements, branches, functions, lines across implemented domain TS | ../../../../tests/unit/domain/evidence/ph16/domain-coverage.log; coverage-summary.json alongside it |
+| npm test | PASS: 270 unit (259 existing + 11 new), 74 integration; 11 + 10 suites | regression.log |
+| node tests/integration/ph16/commitments.mjs | PASS:17 local cases | commitments.log |
 | node tests/integration/ph16/recovery.mjs | PASS: 16 local donor-acceptance cases | recovery.log |
 | node tests/integration/ph16/cancellation.mjs | PASS: 9 local database cases | cancellation.log |
 | node tests/integration/ph15/lifecycle.mjs | PASS: 46 cases | ph15-lifecycle.log |

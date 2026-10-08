@@ -1,0 +1,27 @@
+
+> phron@0.1.0 test:unit
+> jest --config jest.config.mjs --selectProjects unit --runInBand --testPathPatterns=recovery.test.ts
+
+Running one project: unit
+FAIL unit tests/unit/domain/recovery.test.ts
+  ● D21-v1 independent cash-capacity predicate › exact equality qualifies; one paise below does not
+
+    TypeError: (0 , _recovery.hasCashPaymentCapacity) is not a function
+
+
+
+      at Object.<anonymous> (tests/unit/domain/recovery.test.ts:161:67)
+
+  ● D21-v1 independent cash-capacity predicate › reserved cash and exact large intermediates never invent capacity
+
+    TypeError: (0 , _recovery.hasCashPaymentCapacity) is not a function
+
+
+
+      at Object.<anonymous> (tests/unit/domain/recovery.test.ts:166:67)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 9 passed, 11 total
+Snapshots:   0 total
+Time:        0.347 s
+Ran all test suites matching recovery.test.ts.

@@ -9,9 +9,9 @@
 Running one project: unit
 
 Test Suites: 11 passed, 11 total
-Tests:       267 passed, 267 total
+Tests:       270 passed, 270 total
 Snapshots:   0 total
-Time:        1.074 s
+Time:        1.123 s
 Ran all test suites.
 
 > phron@0.1.0 test:integration
@@ -22,5 +22,5 @@ Running one project: integration
 Test Suites: 10 passed, 10 total
 Tests:       74 passed, 74 total
 Snapshots:   0 total
-Time:        1.371 s
+Time:        1.101 s
 Ran all test suites.

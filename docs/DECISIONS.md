@@ -429,18 +429,28 @@ Owner: PHRON-00 Lead
 ## D21
 
 Decision ID: D21
-Status: OPEN
-Source clauses: 18.5; recovery payment capacity; Scenarios 10/11
-Issue: Raw cash and outside credit may invent capacity
-Counterexample: ₹1,000 cash reserved for rent still appears available for ₹500 purchase
-Affected steps and gates: PH-15/16/18; dependent gate remains blocked
-Proposed resolution: Reserve-aware cash capacity; credit not STS liquidity; define external capacity rules explicitly. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
-Required tests: FIT-03/05/12; protected reserve; NOT_RUN
-Owner: PHRON-00 Lead
+Status: APPROVED — D21-v1
+Founder approval: Tejas explicitly approved the following exact terms, 2026-10-08 IST.
+Source clauses: 18.5; FIT03/05/06; Scenarios10/11/12.
+Exact approved wording:
+
+1. Dual Payment Capacity: Qualifying payment capacity requires either uncommitted declared liquid cash (L_current - O_unpaid - CC_accrued >= Deficit) OR spend executed on a tracked credit card (where card line absorbs initial spend and cash is reserved via CC_accrued).
+2. Zero Fictional Liquidity: PHRON does not lend or manufacture funds (FIT-03). Commitments represent future budget deductions (C_next_cycle) capped at 15.0% of projected discretionary income, locking subsequent borrowing until cleared (FIT-05, FIT-06).
+
+Amendment: [D21-v1](amendments/D21-v1.md). Approval does not silently supersede D03-v2. D21-lock-scope-v1 below explicitly retains D03-v2; independent cash arithmetic and acceptance may proceed within that scope.
+Required tests: exact cash capacity equality/one-paisa boundaries, tracked executed purchase ownership, cumulative cap, lock, replay/concurrency/rollback/isolation. Owner: PHRON-00 Lead.
+
+## D21-lock-scope
+
+Decision ID: D21-lock-scope
+Status: APPROVED — D21-lock-scope-v1
+Source clauses: D03-v2 permits multi-event commitments in the same active cycle; D21-v1 clause2 says commitments lock subsequent borrowing until cleared.
+Counterexample: Cap600,000 paise; first same-cycle commitment250,000; next request100,000. D03-v2 permits remaining-capacity evaluation; a literal immediate D21 lock rejects it.
+Proposed resolution: Retain D03-v2 and clarify D21's lock applies only to carried active commitments. Approved by the explicit clarification below; no D03-v2 supersession.
+Required tests: second same-cycle acceptance, concurrent distinct requests, carried lock, Scenarios10/11/12; PH16/17/18.
+Exact approved wording: “Yes—retain D03-v2; lock applies only to carried commitments.”
+Founder: explicit Tejas reply in this chat, 2026-10-08 IST. Multi-event same-cycle acceptance remains permitted under the cumulative cap; D03-clearance still does not define the clearing event.
+Owner: PHRON-00 Lead.
 
 ## D22
 

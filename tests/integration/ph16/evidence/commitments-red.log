@@ -1,0 +1,15 @@
+FAIL Scenarios10/11: exact 250000 acceptance under 600000 cap, no cash created: RPC_TRANSPORT_ERROR
+FAIL D03 multi-event same-cycle cap permits second acceptance: RPC_TRANSPORT_ERROR
+FAIL cap exactly reached; one paise above rejected atomically: RPC_TRANSPORT_ERROR
+FAIL Scenario12 carried commitment locks even with unused cumulative cap: RPC_TRANSPORT_ERROR
+FAIL D21 cash equality accepted; reserved cash one paise below denied: RPC_TRANSPORT_ERROR
+FAIL tracked executed purchase qualifies without surplus cash; canonical reserve unchanged: RPC_TRANSPORT_ERROR
+FAIL stable-ID durable replay and changed body mismatch: RPC_TRANSPORT_ERROR
+FAIL concurrent acceptance and stale retries cannot exceed cap: RPC_TRANSPORT_ERROR
+FAIL tenant source/purchase denial and no direct table writes: RPC_TRANSPORT_ERROR
+FAIL anonymous, unsafe money and submitted identity denied: RPC_TRANSPORT_ERROR
+FAIL forced next_cycle_commitments failure rolls back all effects: SQL_OBJECT_MISSING
+FAIL forced pay_cycles failure rolls back all effects: SQL_FAILED
+FAIL forced financial_profiles failure rolls back all effects: SQL_FAILED
+FAIL forced operation_log failure rolls back all effects: SQL_FAILED
+0 passed; 14 failed; 14 total
