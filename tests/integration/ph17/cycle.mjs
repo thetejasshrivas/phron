@@ -12,6 +12,12 @@ const buy=async(method='card')=>{const s=await state();const r=await change('car
 try{
  assert.equal((await rpc(b.client,'phron_onboard',initial)).ok,true);
  const cases=[
+ ...[['budget-bound','200000','250000','300000','200000'],['liquidity-bound','300000','250000','300000','250000'],['zero-floor','200000','10000','20000','0']].map(([label,budget,cash,reported,pool])=>[`D15 positive drift ${label} recomputes canonical permission without budget credit`,async()=>{
+  await sql(`update public.financial_profiles set current_liquid_balance_paise=${cash} where user_id=${literal(a.id)};update public.pay_cycles set opening_cash_paise=${cash},opening_budget_paise=${budget} where user_id=${literal(a.id)} and active`);
+  const before=await state(),op=randomUUID(),input={reportedCash:reported,recalledAmount:'0',bucketId:null};
+  const r=await change('reconcile',input,op,before.snapshot.revision);assert.equal(r.ok,true);const after=await state();
+  assert.equal(after.snapshot.money.cash,reported);assert.equal(after.snapshot.money.safePool,pool);assert.equal(after.snapshot.money.marginBudget,before.snapshot.money.marginBudget);assert.equal(BigInt(after.snapshot.money.marginLiquid)-BigInt(before.snapshot.money.marginLiquid),BigInt(reported)-BigInt(cash));assert.deepEqual(await change('reconcile',input,op,before.snapshot.revision),r);
+ }]),
  ['Scenario13 exact positive drift preserves budget; bounded STS recomputes',async()=>{
   await sql(`update public.financial_profiles set current_liquid_balance_paise=1800000 where user_id=${literal(a.id)};update public.pay_cycles set opening_cash_paise=1800000,opening_budget_paise=3000000 where user_id=${literal(a.id)} and active`);
   const before=await state();assert.equal((await change('reconcile',{reportedCash:'2050000',recalledAmount:'0',bucketId:null},randomUUID(),before.snapshot.revision)).ok,true);

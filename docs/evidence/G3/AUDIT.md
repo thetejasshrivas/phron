@@ -1,3 +1,12 @@
+## D15-v1 verified — 2026-10-09 IST
+
+D14 committed as e29fbb47734777df8b635775442b6b95b6346380. D15 exact terms and explicit zero-floor-aware recomputation approval recorded. Eight independent unit fixtures, three1000-case properties and three ordinary-user positive-drift RPC fixtures verify liquidity-bound growth, budget ceiling and zero-floor cases without changing canonical production equations. Evidence docs/evidence/G3/D15/RESULT.md and adjacent logs.
+
+Fresh unit304+integration74,domain172/100% implemented coverage;cycle33,distress9,recovery18;remaining full local-suite counts in RESULT. Types/lint/five source hashes PASS. No source/migration/remote/UI change for D15. D15 work remains uncommitted; D14 is committed.
+
+G3 remains BLOCKED. Next exact action: obtain D26's factual-spend/insufficient-declared-cash rule (₹1,500 real spend versus₹1,000 declared cash), then implement independent reconciliation/ledger fixtures. Do not fabricate cash or infer a negative-balance policy. Goal cash lifecycle, full math/SQL/sequence and FIT13 evidence remain required. No PH19 advance. Earlier D15-OPEN and D14-uncommitted statements are historical.
+
+---
 ## D14-v1 verified locally — 2026-10-09 IST
 
 D14 exact terms recorded; explicit clarification retains D02: income equality remainsC, exit requires strictly greater income plus cash coverage and confirmed salary. Active Dining/Entertainment clamp to0 while saved baselines/floors survive; standardB recovery floors protected; confirmed solvent rollover restores them. WANT creation/funding guard and paused WANT contributions implemented with explicit nullable goal classification. Unknown/NEED semantics not inferred.

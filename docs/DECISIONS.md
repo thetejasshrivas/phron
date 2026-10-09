@@ -331,18 +331,13 @@ Evidence: docs/evidence/G3/D14/RESULT.md (local domain/persistence scope; no rem
 ## D15
 
 Decision ID: D15
-Status: OPEN
-Source clauses: 17.2;18.7;AC-RECON-04;Scenarios 13/16
-Issue: Unconditional STS delta ignores binding margin and zero floor
-Counterexample: Budget ₹1k; liquidity ₹2k→₹4k; pool stays ₹1k
-Affected steps and gates: PH-10/17/18; dependent gate remains blocked
-Proposed resolution: Recompute bounded margins; do not promise equal pool delta. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
-Required tests: FIT-02/08/09; saturation; NOT_RUN
-Owner: PHRON-00 Lead
+Status: APPROVED — D15-v1 with explicit zero-floor clarification
+Founder: Tejas; explicit approval and clarification2026-10-09 IST.
+Source:17.2;18.1;18.7;AC-RECON-04;Scenarios13/16;FIT02/09.
+Exact terms: [D15-v1](amendments/D15-v1.md), reproduced unchanged in Exact approved terms.
+Exact clarification: “Approve zero-floor-aware recomputation” in response to retaining S_pool=max(0,min(M_budget,M_liquid)), with an increase only when the recomputed value exceeds the previous pool.
+Original unconditional if-and-only-if and negative-budget ceiling language is qualified by D01's zero floor. Example₹1,000 budget/−₹100 liquidity/+₹50 cash leaves₹0 permission. Positive adjustment does not change M_budget. Approved source conflict resolved; no inferred budget reallocation.
+Evidence: docs/evidence/G3/D15/RESULT.md. Owner: PHRON-00 Lead.
 
 ## D16
 

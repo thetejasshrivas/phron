@@ -5,28 +5,36 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: f4e8898d7b50d0fc5eeee80dcd33c52f7569ce16
-dirty_files: ["D14 implementation/evidence uncommitted; inspect git status", "New Text Document.txt (untouched user work)"]
+commit: e29fbb47734777df8b635775442b6b95b6346380
+dirty_files: ["D15 tests/evidence uncommitted; inspect git status", "New Text Document.txt (untouched user work)"]
 active_chat: PHRON-00 Lead
 phase: 3
 current_step: PH-18
 step_state: BLOCKED
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
-approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D10-v1, D11-v1, D16-v1, D17-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1, D14-v1]
+approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D10-v1, D11-v1, D16-v1, D17-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1, D14-v1, D15-v1]
 completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17]
 passed_gates: [G0A, G1, V1, G2, V2]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: PENDING}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb"}
-blocking_decisions: [ D07-card, D07-funding, D08, D09, D15, D18, D19, D20, D23, D24, D25, D26]
+blocking_decisions: [ D07-card, D07-funding, D08, D09, D18, D19, D20, D23, D24, D25, D26]
 latest_evidence: docs/evidence/G3/AUDIT.md
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
 migration_state: PH11_PH12_REMOTE_APPLIED; PH15_PH16_PH17_PH18_LOCAL_ONLY_VERIFIED_NOT_REMOTE
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Resolve D15 bounded STS recomputation versus unconditional delta
+next_action: Resolve D26 factual spending exceeding declared cash
 last_updated_ist: 2026-10-09
 ```
 
+
+## D15-v1 verified — 2026-10-09 IST
+
+D14 committed as e29fbb47734777df8b635775442b6b95b6346380. D15 exact terms and explicit zero-floor-aware recomputation approval recorded. Eight independent unit fixtures, three1000-case properties and three ordinary-user positive-drift RPC fixtures verify liquidity-bound growth, budget ceiling and zero-floor cases without changing canonical production equations. Evidence docs/evidence/G3/D15/RESULT.md and adjacent logs.
+
+Fresh unit304+integration74,domain172/100% implemented coverage;cycle33,distress9,recovery18;remaining full local-suite counts in RESULT. Types/lint/five source hashes PASS. No source/migration/remote/UI change for D15. D15 work remains uncommitted; D14 is committed.
+
+G3 remains BLOCKED. Next exact action: obtain D26's factual-spend/insufficient-declared-cash rule (₹1,500 real spend versus₹1,000 declared cash), then implement independent reconciliation/ledger fixtures. Do not fabricate cash or infer a negative-balance policy. Goal cash lifecycle, full math/SQL/sequence and FIT13 evidence remain required. No PH19 advance. Earlier D15-OPEN and D14-uncommitted statements are historical.
 
 ## D14-v1 verified locally — 2026-10-09 IST
 
