@@ -1,0 +1,10 @@
+PASS D14 StateB donor recovery respects configured floors
+PASS D14 database guard rejects new WANT goals and preserves tenant isolation
+PASS D14 entry clamps wants below floors and preserves baselines/other buckets
+PASS cash recovery alone cannot exit or restore; explicit solvent salary restores all floors
+PASS D02/D14 salary equality remains C; strictly greater baseline exits
+PASS D14 StateB does not clamp wants or erase floors
+PASS D14 wants receive no contribution while confirmed salary remains insolvent
+PASS D14 entry rollback leaves cash, buckets and stored health unchanged
+PASS D14 mutations cannot target another user or accept submitted identity
+9 passed; 0 failed; 9 total

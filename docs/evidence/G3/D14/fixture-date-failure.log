@@ -1,0 +1,8 @@
+PASS D14 entry clamps wants below floors and preserves baselines/other buckets
+FAIL cash recovery alone cannot exit or restore; explicit solvent salary restores all floors: SQL_FAILED
+FAIL D02/D14 salary equality remains C; strictly greater baseline exits: SQL_FAILED
+PASS D14 StateB does not clamp wants or erase floors
+FAIL D14 wants receive no contribution while confirmed salary remains insolvent: SQL_FAILED
+PASS D14 entry rollback leaves cash, buckets and stored health unchanged
+PASS D14 mutations cannot target another user or accept submitted identity
+4 passed; 3 failed; 7 total

@@ -1,0 +1,37 @@
+
+> phron@0.1.0 test:domain:coverage
+> node scripts/domain-coverage.mjs
+
+FAIL tests/unit/domain/distress.test.ts
+  ● Test suite failed to run
+
+    Cannot find module '../../../src/domain/distress' from 'tests/unit/domain/distress.test.ts'
+
+      4 | const bucket={active:280000n,baseline:300000n,floor:80000n};
+      5 | test.each(["dining","entertainment"])("D14 C overrides %s floor without deleting it",category=>{
+    > 6 |  expect(bucketPolicy("C",category,bucket,false)).toEqual({allocation:0n,floor:80000n,wantGoalsLocked:true});
+        |                   ^
+      7 |  expect(bucketPolicy("C",category,bucket,true).allocation).toBe(0n);
+      8 |  expect(bucket).toEqual({active:280000n,baseline:300000n,floor:80000n});
+      9 | });
+
+      at Resolver._throwModNotFoundError (node_modules/jest-resolve/build/index.js:1031:11)
+      at Object.<anonymous> (tests/unit/domain/distress.test.ts:6:19)
+
+-------------|---------|----------|---------|---------|-------------------
+File         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+-------------|---------|----------|---------|---------|-------------------
+All files    |     100 |      100 |     100 |     100 |
+ card.ts     |     100 |      100 |     100 |     100 |
+ core.ts     |     100 |      100 |     100 |     100 |
+ cycle.ts    |     100 |      100 |     100 |     100 |
+ dates.ts    |     100 |      100 |     100 |     100 |
+ money.ts    |     100 |      100 |     100 |     100 |
+ recovery.ts |     100 |      100 |     100 |     100 |
+-------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 1 failed, 8 passed, 9 total
+Tests:       156 passed, 156 total
+Snapshots:   0 total
+Time:        3.096 s
+Ran all test suites.

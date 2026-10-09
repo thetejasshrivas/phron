@@ -320,18 +320,13 @@ Owner: PHRON-00 Lead.
 ## D14
 
 Decision ID: D14
-Status: OPEN
-Source clauses: AC-BUCKET-02; distress rules
-Issue: Unconditional bucket floor conflicts with distress zero permission
-Counterexample: ₹2,000 floor while State C permits zero
-Affected steps and gates: PH-10/16/21; dependent gate remains blocked
-Proposed resolution: Recovery-only floors; suspend permission in distress, preserve configuration/history; define restoration. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
-Required tests: FIT-04/10; distress restoration; NOT_RUN
-Owner: PHRON-00 Lead
+Status: APPROVED — D14-v1 with explicit D02 equality clarification
+Founder: Tejas; approval and clarification2026-10-09 IST.
+Source:18.6;AC-BUCKET-02;AC-DIST-03/04;FIT04/10.
+Exact approved terms: [D14-v1](amendments/D14-v1.md), Exact approved terms section, reproduced unchanged.
+Exact clarification: “Retain D02: equality remains State C; exit requires >”
+The income test for exit is therefore I_sustainable > O_total; cash >= unpaid+tracked reserve and explicit salary confirmation remain required. Only Dining/Entertainment active allowances clamp to0 inC; baselines/floors remain saved. StandardB recovery floors remain protected. No source or unrelated goal semantics changed.
+Evidence: docs/evidence/G3/D14/RESULT.md (local domain/persistence scope; no remote migration). Owner: PHRON-00 Lead.
 
 ## D15
 

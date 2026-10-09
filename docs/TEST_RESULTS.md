@@ -1,3 +1,12 @@
+## D14-v1 verified locally — 2026-10-09 IST
+
+D14 exact terms recorded; explicit clarification retains D02: income equality remainsC, exit requires strictly greater income plus cash coverage and confirmed salary. Active Dining/Entertainment clamp to0 while saved baselines/floors survive; standardB recovery floors protected; confirmed solvent rollover restores them. WANT creation/funding guard and paused WANT contributions implemented with explicit nullable goal classification. Unknown/NEED semantics not inferred.
+
+Fresh PASS296unit+74integration/contract;161domain tests with100% implemented line/branch/function/statement coverage;9D14,30cycle,18recovery,21commitment,9cancellation,46card lifecycle,25payment,16security local cases. Typecheck/lint/build/five source hashes PASS. RED evidence and corrected fixture-date/build permission failures retained. Evidence docs/evidence/G3/D14/RESULT.md. No remote migration or new UI/API; changes uncommitted in this turn.
+
+D14 local approved scope closes; G3 remains BLOCKED. Next one action: resolve D15 unconditional STS-delta wording. Example budget₹1,000, liquidity₹2,000→₹4,000: bounded pool stays₹1,000, so a guaranteed equal STS increase is false. Proposed resolution is canonical bounded recomputation, not automatically approved. Remaining D26, goal cash lifecycle, full math/SQL/sequence and FIT13 gaps remain. No PH19 advance.
+
+---
 # PH-18 / Gate G3 audit — 2026-10-08 IST
 
 **G3 BLOCKED; PH-18 not complete.** Candidate56568aa029745a5b7bcf3b4c9f19a245a23c07aa on main. Formal source-by-ID audit: [G3/AUDIT.md](evidence/G3/AUDIT.md); exact commands and counts: [G3/RUNS.md](evidence/G3/RUNS.md). Frozen sources unchanged, five hashes PASS. Unrelated user note untouched. No application changes.
