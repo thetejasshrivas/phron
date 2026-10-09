@@ -1,7 +1,7 @@
 import { nonnegativePaise, paise } from "./money";
 /** D06 cash representation and D22 residual budget effect; no card payment inferred. */
 export function reconciliation(ledger: bigint, reported: bigint, recalled: bigint) {
- const cash=nonnegativePaise(reported), before=nonnegativePaise(ledger), recall=nonnegativePaise(recalled);
+ const cash=nonnegativePaise(reported), before=paise(ledger), recall=nonnegativePaise(recalled);
  const signedDrift=cash-before;
  if(recall>0n && (signedDrift>=0n || recall>-signedDrift)) throw new RangeError("Recall exceeds negative gap");
  const residualDrift=signedDrift+recall;
@@ -12,6 +12,6 @@ export function reconciliation(ledger: bigint, reported: bigint, recalled: bigin
 export function salaryOpening(openingCash: bigint, actual: bigint, obligations: bigint, commitments: bigint, goals: bigint) {
  const salary=nonnegativePaise(actual);
  if(salary===0n)throw new RangeError("Confirmed salary must be positive");
- return {cash:paise(nonnegativePaise(openingCash)+salary),cycleIncome:salary,
+ return {cash:paise(paise(openingCash)+salary),cycleIncome:salary,
   discretionaryPool:paise(salary-nonnegativePaise(obligations)-nonnegativePaise(commitments)-nonnegativePaise(goals))};
 }

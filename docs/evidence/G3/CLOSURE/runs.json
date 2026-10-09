@@ -1,0 +1,149 @@
+[
+  {
+    "name": "unit",
+    "command": "node node_modules/jest/bin/jest.js --config jest.config.mjs --selectProjects unit --runInBand",
+    "started": "2026-10-09T19:23:28.849Z",
+    "finished": "2026-10-09T19:23:30.270Z",
+    "exitCode": 0
+  },
+  {
+    "name": "contracts",
+    "command": "node node_modules/jest/bin/jest.js --config jest.config.mjs --selectProjects integration --runInBand",
+    "started": "2026-10-09T19:23:30.271Z",
+    "finished": "2026-10-09T19:23:31.404Z",
+    "exitCode": 0
+  },
+  {
+    "name": "domain",
+    "command": "node scripts/domain-coverage.mjs",
+    "started": "2026-10-09T19:23:31.405Z",
+    "finished": "2026-10-09T19:23:37.613Z",
+    "exitCode": 0
+  },
+  {
+    "name": "obligations",
+    "command": "node tests/integration/ph18/obligations.mjs",
+    "started": "2026-10-09T19:23:37.613Z",
+    "finished": "2026-10-09T19:23:54.144Z",
+    "exitCode": 0
+  },
+  {
+    "name": "onboarding",
+    "command": "node tests/integration/ph11/onboarding.mjs",
+    "started": "2026-10-09T19:23:54.145Z",
+    "finished": "2026-10-09T19:24:32.440Z",
+    "exitCode": 0
+  },
+  {
+    "name": "cycle",
+    "command": "node tests/integration/ph17/cycle.mjs",
+    "started": "2026-10-09T19:24:32.440Z",
+    "finished": "2026-10-09T19:24:58.733Z",
+    "exitCode": 0
+  },
+  {
+    "name": "cards",
+    "command": "node tests/integration/ph15/lifecycle.mjs",
+    "started": "2026-10-09T19:24:58.733Z",
+    "finished": "2026-10-09T19:25:48.764Z",
+    "exitCode": 0
+  },
+  {
+    "name": "payments",
+    "command": "node tests/integration/ph15/payments.mjs",
+    "started": "2026-10-09T19:25:48.764Z",
+    "finished": "2026-10-09T19:26:22.615Z",
+    "exitCode": 0
+  },
+  {
+    "name": "recovery",
+    "command": "node tests/integration/ph16/recovery.mjs",
+    "started": "2026-10-09T19:26:22.616Z",
+    "finished": "2026-10-09T19:26:41.594Z",
+    "exitCode": 0
+  },
+  {
+    "name": "commitments",
+    "command": "node tests/integration/ph16/commitments.mjs",
+    "started": "2026-10-09T19:26:41.595Z",
+    "finished": "2026-10-09T19:27:07.031Z",
+    "exitCode": 0
+  },
+  {
+    "name": "cancellation",
+    "command": "node tests/integration/ph16/cancellation.mjs",
+    "started": "2026-10-09T19:27:07.031Z",
+    "finished": "2026-10-09T19:27:14.440Z",
+    "exitCode": 0
+  },
+  {
+    "name": "distress",
+    "command": "node tests/integration/ph18/distress.mjs",
+    "started": "2026-10-09T19:27:14.440Z",
+    "finished": "2026-10-09T19:27:27.825Z",
+    "exitCode": 0
+  },
+  {
+    "name": "negative-cash",
+    "command": "node tests/integration/ph18/d26.mjs",
+    "started": "2026-10-09T19:27:27.826Z",
+    "finished": "2026-10-09T19:27:32.200Z",
+    "exitCode": 0
+  },
+  {
+    "name": "goal-purchase",
+    "command": "node tests/integration/ph18/goal-purchase.mjs",
+    "started": "2026-10-09T19:27:32.201Z",
+    "finished": "2026-10-09T19:27:38.615Z",
+    "exitCode": 0
+  },
+  {
+    "name": "security",
+    "command": "node tests/security/ph14-local.mjs",
+    "started": "2026-10-09T19:27:38.616Z",
+    "finished": "2026-10-09T19:27:48.609Z",
+    "exitCode": 0
+  },
+  {
+    "name": "ai-boundary",
+    "command": "node tests/security/fit13-adversarial.mjs",
+    "started": "2026-10-09T19:27:48.610Z",
+    "finished": "2026-10-09T19:27:52.552Z",
+    "exitCode": 0
+  },
+  {
+    "name": "mixed-sequences",
+    "command": "node tests/integration/ph18/mixed-sequences.mjs",
+    "started": "2026-10-09T19:27:52.552Z",
+    "finished": "2026-10-09T19:33:14.550Z",
+    "exitCode": 0
+  },
+  {
+    "name": "sources",
+    "command": "node scripts/verify-sources.mjs",
+    "started": "2026-10-09T19:33:14.551Z",
+    "finished": "2026-10-09T19:33:14.602Z",
+    "exitCode": 0
+  },
+  {
+    "name": "typecheck",
+    "command": "node node_modules/typescript/bin/tsc --noEmit",
+    "started": "2026-10-09T19:33:14.603Z",
+    "finished": "2026-10-09T19:33:15.633Z",
+    "exitCode": 0
+  },
+  {
+    "name": "lint",
+    "command": "node node_modules/eslint/bin/eslint.js . --max-warnings=0",
+    "started": "2026-10-09T19:33:15.633Z",
+    "finished": "2026-10-09T19:33:18.642Z",
+    "exitCode": 0
+  },
+  {
+    "name": "build",
+    "command": "node scripts/next.mjs build",
+    "started": "2026-10-09T19:33:18.643Z",
+    "finished": "2026-10-09T19:33:21.956Z",
+    "exitCode": 0
+  }
+]

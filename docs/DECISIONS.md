@@ -1,5 +1,12 @@
 # Decisions
 
+## G3-DF-01-v1 — Debt Firefight accounting semantics
+
+Status: APPROVED — Tejas, explicit approval received 2026-10-10.
+Exact approved terms are recorded in [amendments/G3-DF-01-v1.md](amendments/G3-DF-01-v1.md). Debt Firefight is an accounting tracker and target allocation, not a virtual cash quarantine or G_res. In State C, unused allowance from essential discretionary buckets and uncommitted cash above unpaid obligations are labeled as Firefight Margin. Actual debt payment debits L_current and reduces the selected debt obligation without discretionary overspend, preserving FIT-01, FIT-03 and FIT-10.
+Implementation exposes the two source amounts separately as informational accounting bases; it does not add them into spend permission or reserve either in cash. Actual obligation payment remains an explicit atomic payment operation. Card-funded goal execution and insufficient-funding behavior remain OPEN under D07b and are not inferred here.
+Owner: Lead. Affected gate: G3 §18.6 / FR-DIST-03.
+
 ## PH07-HOST-01 — execution-scope exception (not a frozen PRD amendment)
 
 Status: APPROVED
@@ -505,17 +512,15 @@ Owner: PHRON-00 Lead
 ## D26
 
 Decision ID: D26
-Status: OPEN
-Source clauses: 18.1; cash nonnegative invariant
-Issue: Factual spending can exceed declared cash
-Counterexample: ₹1,500 actual spend with ₹1,000 declared cash
-Affected steps and gates: PH-10/11/17/18; dependent gate remains blocked
-Proposed resolution: Founder to define reconciliation/error handling; no dropping factual spending or invented cash. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
-Required tests: FIT-01/03/09; insufficient declared cash; NOT_RUN
+Status: APPROVED — D26-v1, 2026-10-09 IST
+Source clauses: PRD 18.1, 18.6; FIT-01, FIT-02, FIT-03; D01 and D02
+Exact approved wording:
+1. Ledger Truth & Unclamped Cash: Real-world cash debits are recorded factually. If an outflow exceeds declared liquid cash, L_current evaluates to its true negative balance. Outflows are never dropped, rejected, or truncated merely because the ledger runs negative (FIT-01).
+2. Zero Safe-to-Spend Clamp (FIT-02, FIT-03): Because M_liquid < 0, S_pool evaluates strictly to 0 paise via max(0, min(M_budget, M_liquid)). Zero fictional spending permission is manufactured.
+3. Immediate Liquidity Distress (State C): Because L_current < O_unpaid + CC_accrued, the account immediately flags liquidity_distress = TRUE and enters State C (Financial Distress) per PRD 18.6, locking discretionary want-goals.
+Founder approval: Tejas explicitly approved D26-v1 in this chat, 2026-10-09 IST.
+Amendment: [D26-v1](amendments/D26-v1.md).
+Required tests: negative ledger result, exact zero STS, immediate State C and want-goal lock at domain and local persistence layers.
 Owner: PHRON-00 Lead
 
 ## D27

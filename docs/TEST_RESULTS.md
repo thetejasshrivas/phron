@@ -1,3 +1,113 @@
+# PH-18 / Gate G3 final verification — 2026-10-10 IST
+
+**PASS — Gate G3 criteria verified for PH-18; Step PH-18 COMPLETE.** Final command matrix: [docs/evidence/G3/CLOSURE/runs.json](evidence/G3/CLOSURE/runs.json); every one of 20 commands exited 0 on the local Windows environment with pinned project tools and isolated synthetic Supabase Docker database. No remote schema changes, provider calls, deployment, or secrets involved.
+
+| Check | Result | Evidence |
+| --- | --- | --- |
+| Unit | PASS — 339 tests / 19 suites | CLOSURE/unit.log |
+| Contracts / integration | PASS — 93 tests / 12 suites | CLOSURE/contracts.log |
+| Domain/property coverage | PASS — 198 domain tests; 100% statements, lines, branches and functions across 10 implemented domain files | CLOSURE/domain.log |
+| Ordinary obligations + G3-DF State C | PASS — 16/16 DB cases including cash/debt conservation, essential margin, no discretionary debit, replay, RLS, and rollback | CLOSURE/obligations.log |
+| Mixed SQL sequence parity | PASS — 20 generated sequences, seed 181801 | CLOSURE/mixed-sequences.log |
+| FIT-13 hostile output boundary | PASS — generated hostile parser/handler/RPC corpus | CLOSURE/ai-boundary.log |
+| Cycle/card/recovery/security | PASS — all command exits 0; card lifecycle 46, payments 25, security 16 | CLOSURE/runs.json and per-suite logs |
+| Sources/typecheck/lint/build | PASS | CLOSURE/runs.json and per-suite logs |
+
+Counts overlap and must not be summed. Card-funded goal purchase and insufficient-funding behavior remain OPEN per D07b and are not inferred by this gate closure; PH-19 provider integration is not claimed complete.
+
+---
+# Historical verification records below are retained for audit trail; the final run above supersedes prior blocked status and counts.
+
+# PH-18 current verification — 2026-10-09 IST
+
+The mixed-lifecycle and provider-free FIT13 harnesses are implemented and pass. See [executed commands and exit codes](evidence/G3/CLOSURE/runs.json), [detailed results](evidence/G3/CLOSURE/RESULT.md), and [current G3 audit](evidence/G3/AUDIT.md).
+
+Executed: 327 unit, 77 contract/integration, 185 domain/property tests; eight implemented TS domain files at 100% line/branch/function/statement coverage. Local database suites cover onboarding/spend/FK 32, cycle 33, card lifecycle 46, payments 25, recovery 18, commitments 21, cancellation 9, distress 9, negative-cash 2, goal-purchase 5, security 16 and FIT13 2. Generated properties use fixed seeds: 1000 mixed domain sequences and 20 mixed SQL sequences; FIT13 1000 arbitrary JSON, 300 hostile handler requests and 100 hostile ordinary-user SQL requests. Coverage/property counts overlap and must not be summed into an invented total.
+
+Two newly detected regressions were fixed with independent failing tests: negative cash rejected at the next domain cycle opening, and completed-goal cash debits omitted from the cycle cash-outflow ledger. No thresholds were weakened. Prior partial-output counts such as cycle 28, commitment 19 and payments 18 are superseded by the complete exit-0 results above.
+
+**Gate G3 remains BLOCKED:** §18.6 Debt Firefight surplus routing has no approved allocation definition or implementation (OPEN G3-DF-01), and ordinary non-card obligation settlement lacks the explicitly required persistence proof. These were missed by the earlier full-traceability claim; legacy-card settlement is not equivalent. The new harnesses close their own findings only. No conditional completion commit or PH19 handoff, no remote migration, no provider call and no visual acceptance claim. Final lint/typecheck/build/source results are the completed entries in runs.json.
+
+---
+# PH-18 Section 18 mathematical and SQL traceability verification — 2026-10-09 IST
+
+| Check | Result |
+| --- | --- |
+| PRD 18.1–18.9 mapping | PASS — [matrix](evidence/G3/SECTION18_MATRIX.md) maps every equation/algorithm to exact TypeScript and PostgreSQL authority |
+| 18.1 weekly STS SQL parity | PASS — independent RED/GREEN fixture proves `safeWeekly = floor(pool/days) × min(7,days)` in the canonical snapshot |
+| 18.8 onboarding SQL parity | PASS — Rohan formula, zero floor, 7/4/101-paise allocation remainders, daily quotient and exact conservation |
+| Integer-paise boundary | PASS — bigint/Postgres integer paths and unsafe-number fixtures; no money number coercion |
+| Unit/integration regression | PASS — 311 unit + 74 integration/contract |
+| Domain coverage | PASS — 182 tests/13 suites; 100% statements, lines, branches and functions across eight domain files |
+| Cycle/recovery/commitment/cancellation/card/security | PASS — local suites rerun; source hashes, lint, typecheck and production build PASS |
+
+Local-only migration `20261009123923_p18_snapshot_weekly_sts.sql` adds canonical `safeWeekly`; it was applied only to the isolated Docker database. No remote database, deployment, account, or provider action ran. G3 remains BLOCKED for the separate actual-AI-output FIT-13 proof and generated mixed-lifecycle sequence parity.
+
+---
+
+# Historical PH-18 D07b cash-funded goal-purchase verification — 2026-10-09 IST
+
+| Check | Result |
+| --- | --- |
+| Independent RED | PASS — missing domain export failed; missing RPC produced 0/5 local cases before implementation |
+| D07b unit/property/domain coverage | PASS — 178 tests, all seven collected domain files at 100% statements/lines/branches/functions |
+| Scenario 17 local goal purchase | PASS — 5 ordinary-user cases: exact cash/held deltas, no B_spent debit, completed/single-use validation, replay/concurrency, tenant/RLS denial, forced rollback |
+| Unit/integration regression | PASS — 308 unit + 74 integration/contract |
+| Cycle/recovery/commitment/cancellation/distress/card/security | PASS — 28/18/19/9/9/46+18/16 local cases; D26 and scoped FIT-13 each PASS 1 |
+| Source hashes, typecheck, lint, production build | PASS |
+
+Evidence: [D07b result](evidence/G3/D07b/RESULT.md), [current G3 audit](evidence/G3/AUDIT.md), local-only migration `supabase/migrations/20261009122459_d07b_goal_cash_purchase.sql`.
+No remote database, deployment, account, or provider action ran. Card-funded and insufficient-funding goal execution remain OPEN. Gate G3 remains BLOCKED.
+
+---
+
+# Historical PH-18 / Gate G3 D26-v1 audit update — 2026-10-09 IST
+
+**D26-v1 APPROVED and locally verified. G3 remains BLOCKED; PH-18 is not
+complete.** Exact amendment and implementation are in
+[D26-v1](amendments/D26-v1.md), the local migration is
+`supabase/migrations/20261009115731_d26_negative_cash.sql`, and detailed
+evidence is [G3/D26/RESULT.md](evidence/G3/D26/RESULT.md).
+
+The ordinary-user persistence fixture records a 300,000-paise factual outflow
+against 250,000 paise declared cash. Refresh returns cash −50,000 paise, safe
+pool 0, State C, D02 liquidity predicate true, zero Dining/Entertainment
+allowances and an unfunded/locked WANT goal. Same operation replay does not
+debit twice. The domain/property suite proves exact signed arithmetic and
+zero-clamped permission.
+
+| Check | Result |
+| --- | --- |
+| `npm test` | PASS — 306 unit + 74 integration/contract |
+| Domain coverage | PASS — 175 tests/11 suites; 100% statements/lines/branches/functions over all seven collected TypeScript domain files |
+| Cycle/reconciliation | PASS — 33 |
+| Recovery / clarified Scenario 9 | PASS — 18 |
+| Commitments / D13 | PASS — 21 |
+| Cancellation | PASS — 9 |
+| Distress / D14 | PASS — 9 |
+| Card lifecycle / payments | PASS — 46 / 25; CC-01–16 |
+| Security | PASS — 16 |
+| D26 persistence | PASS — 1 |
+| FIT-13 adversarial-shaped RPC input | PASS — 1; unknown identity/approval/cap/tool fields rejected without writes |
+| Source hashes, lint, typecheck, build | PASS |
+
+The scoped FIT-13 test does not exercise AI model output because the repository
+has no AI adapter yet. Coverage does not include the full SQL mathematical
+surface. Other G3 blockers remain: approved D07b cash goal purchase and replay
+proof, global §18 mathematical coverage, actual model-output boundary proof,
+and generated mixed lifecycle/state-sequence parity. Scenario 17 remains
+partial. Therefore the earlier NOT PASSED G3 disposition stands. No remote DB,
+deployment, provider or account action was made.
+
+The new D26 SQL was applied only to the local Postgres container. `migration
+up --local` cannot be used in the current local DB because its migration
+history is incomplete and causes an earlier PH-12 function to be reapplied;
+the D26 migration ran directly in a local transactional `psql` session. See
+[G3/AUDIT.md](evidence/G3/AUDIT.md) for the updated gate checklist and exact
+next action.
+
+---
+
 ## D15-v1 verified — 2026-10-09 IST
 
 D14 committed as e29fbb47734777df8b635775442b6b95b6346380. D15 exact terms and explicit zero-floor-aware recomputation approval recorded. Eight independent unit fixtures, three1000-case properties and three ordinary-user positive-drift RPC fixtures verify liquidity-bound growth, budget ceiling and zero-floor cases without changing canonical production equations. Evidence docs/evidence/G3/D15/RESULT.md and adjacent logs.
@@ -209,3 +319,5 @@ PASS291unit+74integration;156domain/100% implemented coverage;21commitment cases
 D12-Shopping is explicitly resolved; Shopping280000 allowance/200000 spent/80000 remaining, Entertainment140000/100000/40000. Canonical RPC acceptance covers80000 deficit, preserves StateA and canonical money/baselines; stable replay and stale donor rejection pass. D13 zero-cap SQL/domain parity passes. Latest evidence docs/evidence/G3/D12-clarified/RESULT.md.
 
 PASS291unit+74integration,156domain/100% implemented coverage,18recovery,21commitment,16security,types/lint/five source hashes. G3 remains BLOCKED for D14/D15/D26 and missing goal-cash/FIT13/full lifecycle evidence. Next exact action: resolve D14 floors versus distress permission/restoration. No remote changes or PH19 advance. Historical pending D12/D13 statements below are superseded.
+
+Final verification 2026-10-09: all 20 commands in docs/evidence/G3/CLOSURE/runs.json completed with exit 0. Sources (all five hashes), typecheck, lint and Next.js build PASS. No remote migration or deployment. G3 remains BLOCKED for the explicitly documented unmet requirements; no completion commit or PH19 advancement.

@@ -13,6 +13,15 @@ test("FIT-01 ledger identity and FIT-14 exactness above JS safe integers", () =>
     expect(cash + outflow).toBe(opening + inflow);
   }), options);
 });
+test("D26/FIT-01 true negative debits persist and FIT-02/03 grant no permission", () => {
+  fc.assert(fc.property(fc.bigInt({min:0n,max:1000000000000n}),fc.bigInt({min:1n,max:1000000000000n}), (opening,excess)=> {
+    const cash=calculateCash({opening,confirmedInflows:0n,cashOutflows:opening+excess,signedDrift:0n});
+    expect(cash).toBe(-excess);
+    const margins=calculateMargins({cycleIncome:100000n,totalObligations:0n,commitmentDue:0n,goalCycle:0n,spent:0n,cash,unpaidObligations:0n,cardReserve:0n,goalHeld:0n});
+    expect(margins.safePool).toBe(0n);
+    expect(classifyHealth({sustainableIncome:100000n,totalObligations:0n,cash,unpaidObligations:0n,cardReserve:0n,safePool:margins.safePool,previous:null,salaryConfirmed:false})).toBe("C");
+  }),{seed:260026,numRuns:1000});
+});
 test("D01/FIT-02 zero-floor and both nonnegative bounds", () => {
   fc.assert(fc.property(input, value => {
     const result = calculateMargins(Object.freeze(value));

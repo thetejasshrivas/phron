@@ -10,9 +10,8 @@ export interface CashLedgerInput {
 
 /** PRD17.1/D06 arithmetic only. Does not confirm salary or apply a reconciliation. */
 export function calculateCash(input: CashLedgerInput): bigint {
-  const cash = paise(nonnegativePaise(input.opening) + nonnegativePaise(input.confirmedInflows)
+  const cash = paise(paise(input.opening) + nonnegativePaise(input.confirmedInflows)
     - nonnegativePaise(input.cashOutflows) + paise(input.signedDrift));
-  if (cash < 0n) throw new RangeError("D26 unresolved: factual cash deficit requires a founder decision");
   return cash;
 }
 
@@ -40,7 +39,7 @@ export function calculateMargins(input: MarginInput): Margins {
   const discretionaryPool = paise(nonnegativePaise(input.cycleIncome) - nonnegativePaise(input.totalObligations)
     - nonnegativePaise(input.commitmentDue) - nonnegativePaise(input.goalCycle));
   const marginBudget = subtractPaise(discretionaryPool, nonnegativePaise(input.spent));
-  const marginLiquid = paise(nonnegativePaise(input.cash) - nonnegativePaise(input.unpaidObligations)
+  const marginLiquid = paise(paise(input.cash) - nonnegativePaise(input.unpaidObligations)
     - nonnegativePaise(input.cardReserve) - nonnegativePaise(input.goalHeld));
   const minimum = marginBudget < marginLiquid ? marginBudget : marginLiquid;
   return { discretionaryPool, marginBudget, marginLiquid, safePool: minimum > 0n ? minimum : 0n };
@@ -70,7 +69,7 @@ export function classifyHealth(input: HealthInput): Health {
   const income = nonnegativePaise(input.sustainableIncome);
   if (income === 0n) throw new RangeError("Sustainable income must be positive");
   const obligations = nonnegativePaise(input.totalObligations);
-  const cash = nonnegativePaise(input.cash);
+  const cash = paise(input.cash);
   const due = nonnegativePaise(input.unpaidObligations) + nonnegativePaise(input.cardReserve);
   const pool = nonnegativePaise(input.safePool);
   if (![null, "A", "B", "C"].includes(input.previous) || typeof input.salaryConfirmed !== "boolean") {

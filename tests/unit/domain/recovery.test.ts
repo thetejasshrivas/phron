@@ -1,5 +1,5 @@
 import { describe, test, expect } from "@jest/globals";
-import { hasCashPaymentCapacity, commitmentCapacity, goalSchedule, goalPace, overspend, planRecovery } from "@/domain/recovery";
+import { cashFundedGoalPurchase, hasCashPaymentCapacity, commitmentCapacity, goalSchedule, goalPace, overspend, planRecovery } from "@/domain/recovery";
 
 describe("PH16 approved recovery math", () => {
   test("D12-v1 canonical donor capacities cover the exact Dining deficit",()=>{
@@ -107,9 +107,23 @@ describe("D21-v1 independent cash-capacity predicate",()=>{
   expect(hasCashPaymentCapacity(0n,9223372036854775807n,9223372036854775807n,1n)).toBe(false);
   expect(hasCashPaymentCapacity(9007199254740993n,0n,0n,9007199254740993n)).toBe(true);
  });
- test("positive deficit and exact unsigned inputs required",()=>{
+ test("positive deficit and exact inputs required; D26 signed cash grants no capacity",()=>{
   expect(()=>hasCashPaymentCapacity(1n,0n,0n,0n)).toThrow();
-  expect(()=>hasCashPaymentCapacity(-1n,0n,0n,1n)).toThrow();
+  expect(hasCashPaymentCapacity(-1n,0n,0n,1n)).toBe(false);
   expect(()=>hasCashPaymentCapacity(1 as unknown as bigint,0n,0n,1n)).toThrow();
+ });
+});
+
+describe("D07b completed cash-goal purchase",()=>{
+ test("releases only the held reserve, debits cash once, and never creates discretionary spend",()=>{
+  expect(cashFundedGoalPurchase({status:"COMPLETED",held:3000000n,currentAccumulated:3000000n})).toEqual({
+   cashDelta:-3000000n, heldDelta:-3000000n, discretionarySpentDelta:0n, currentAccumulatedDelta:0n
+  });
+ });
+ test("rejects incomplete, empty, and internally inconsistent reserves",()=>{
+  expect(()=>cashFundedGoalPurchase({status:"ON_TRACK",held:1n,currentAccumulated:1n})).toThrow();
+  expect(()=>cashFundedGoalPurchase({status:"COMPLETED",held:0n,currentAccumulated:1n})).toThrow();
+  expect(()=>cashFundedGoalPurchase({status:"COMPLETED",held:2n,currentAccumulated:1n})).toThrow();
+  expect(()=>cashFundedGoalPurchase({status:"COMPLETED",held:-1n,currentAccumulated:1n})).toThrow();
  });
 });

@@ -1,0 +1,11 @@
+# Ordinary obligation settlement — PH18 continuation
+
+Verified 2026-10-10 IST in the local synthetic Supabase environment. This closes the Playbook Part 8 proof that an actual ordinary obligation payment reduces cash and `O_unpaid` equally without affecting `B_spent`.
+
+Implementation: `src/domain/obligation.ts`, `src/contracts/obligation.ts`, `src/server/auth/handlers.ts`, `src/app/api/finance/obligation-payment/route.ts`, and local-candidate migration `supabase/migrations/20261009183837_ph18_ordinary_obligation_payment.sql`.
+
+The mutation requires a verified ordinary user, operation ID, expected revision, owned active or carried unpaid `cycle_obligations` row, positive integer-paise amount no greater than its unpaid balance, and a valid payment date from active cycle opening through today (Asia/Kolkata). It locks the user/profile/cycle/obligation, reduces unpaid, records an active-cycle cash outflow and append-only cash payment, debits cash, refreshes the canonical snapshot, and records a replay response atomically. It rejects legacy card obligations; their existing explicit card/legacy allocation path remains separate. A carried obligation can be paid now without modifying its closed cycle or new-cycle obligation due. The local-only SQL migration was verified against Docker; no remote database was changed.
+
+Executed coverage: 8 unit fixtures, 1000 property cases (seed 181810), 13 HTTP/parser contract cases, and 15 ordinary-user SQL cases. Integration cases cover exact cash/reserve conservation, unchanged bucket/spend/card/goal values, partial and full payment, overpayment/invalid amounts, duplicate and concurrent requests, RLS and tenant isolation, anonymous/forged-parent denial, active date/legacy guards, carryover, negative cash and five forced rollback/retry points. Commands and logs are in `runs.json`, `unit.log`, `domain.log`, `contracts.log`, and `obligations.log`.
+
+This closes the ordinary-obligation proof gap. Its additional State C Firefight case verifies G3-DF-01-v1: separate accounting margins and an explicit payment preserve cash/unpaid conservation without discretionary debit. Gate closure evidence and the final complete battery are in `../CLOSURE/RESULT.md` and `../CLOSURE/runs.json`.

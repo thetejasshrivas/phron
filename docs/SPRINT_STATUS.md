@@ -5,30 +5,68 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: e29fbb47734777df8b635775442b6b95b6346380
-dirty_files: ["D15 tests/evidence uncommitted; inspect git status", "New Text Document.txt (untouched user work)"]
+commit: 6358f652649a84663db176db5d7c3fbbb0ba977b
+dirty_files: ["G3 closure changes pending final commit; New Text Document.txt is untouched user work and excluded"]
 active_chat: PHRON-00 Lead
-phase: 3
-current_step: PH-18
-step_state: BLOCKED
+phase: 4
+current_step: PH-19
+step_state: READY
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
-approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D10-v1, D11-v1, D16-v1, D17-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1, D14-v1, D15-v1]
-completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17]
-passed_gates: [G0A, G1, V1, G2, V2]
+approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D10-v1, D11-v1, D16-v1, D17-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1, D14-v1, D15-v1, D26-v1, G3-DF-01-v1]
+completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17, PH-18]
+passed_gates: [G0A, G1, V1, G2, V2, G3]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: PENDING}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb"}
-blocking_decisions: [ D07-card, D07-funding, D08, D09, D18, D19, D20, D23, D24, D25, D26]
-latest_evidence: docs/evidence/G3/AUDIT.md
+blocking_decisions: [D07-card, D07-funding, D08, D09, D18, D19, D20, D23, D24, D25]
+latest_evidence: docs/evidence/G3/CLOSURE/runs.json
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
 migration_state: PH11_PH12_REMOTE_APPLIED; PH15_PH16_PH17_PH18_LOCAL_ONLY_VERIFIED_NOT_REMOTE
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Resolve D26 factual spending exceeding declared cash
-last_updated_ist: 2026-10-09
+next_action: Begin PH-19 / P04-AI; keep card-funded goal and insufficient-funding rules OPEN as scoped under D07b
+last_updated_ist: 2026-10-10
 ```
 
+## PH-18 / Gate G3 closure — 2026-10-10 IST
 
-## D15-v1 verified — 2026-10-09 IST
+**Gate G3: PASSED. Step PH-18: COMPLETE.** Tejas approved G3-DF-01-v1. Firefight Margin is separately labeled essential unspent allowance and cash above unpaid obligations; it does not quarantine cash or increase spend permission. An actual ordinary-user debt payment debits L_current and O_unpaid equally, leaving B_spent unchanged.
+
+Final G3 battery: 339 unit, 93 contract/integration, 198 domain/property; ten implemented domain files at 100% statement/line/branch/function coverage; ordinary obligation/Firefight 16 cases; mixed SQL parity 20 generated sequences; adversarial FIT-13, card lifecycle/payment, cycle, recovery, security, source hashes, typecheck, lint and build PASS. All 20 commands in `docs/evidence/G3/CLOSURE/runs.json` exited 0. Counts overlap and are not summed.
+
+Deferred D07b card-funded goal execution and insufficient-funding behavior remain OPEN and are not silently resolved by Gate G3. No remote migration, deployment, or provider integration occurred.
+
+Next eligible action: PH-19 / P04-AI, after the operator starts that step.
+
+Earlier PH-18 status records below are historical and superseded by this verified closure.
+
+## Section 18 mathematical and SQL traceability — locally verified — 2026-10-10 IST
+
+Every 18.1–18.9 equation and algorithm is mapped in [the G3 matrix](evidence/G3/SECTION18_MATRIX.md) to its typed bigint domain authority and PostgreSQL RPC/function/trigger. The audit added an independently tested `midCycleOnboarding` domain function, SQL parity for zero-floor onboarding and 7/4/101-paise remainder allocation, and canonical SQL `safeWeekly` output. The weekly snapshot addition is local-only migration [20261009123923_p18_snapshot_weekly_sts.sql](../supabase/migrations/20261009123923_p18_snapshot_weekly_sts.sql); no remote migration ran.
+
+Fresh checks: 311 unit + 74 integration/contract; 182 domain tests across eight files at 100% statements/lines/branches/functions; cycle, recovery, commitment, cancellation, card, goal-purchase and security local regressions PASS; source hashes, lint, typecheck and build PASS. The Section 18 traceability/implemented SQL-parity blocker is closed.
+
+**G3 remains BLOCKED.** Separate remaining blockers are an actual AI-output FIT-13 boundary proof and generated mixed-lifecycle sequence parity. Card-funded and insufficient-funding goal execution remain OPEN; no PH-19 handoff.
+
+## D07b-v1 cash-funded goal purchase — locally verified — 2026-10-10 IST
+
+The approved cash branch is implemented locally: a confirmed completed-goal purchase releases `G_held` exactly once, debits factual cash by the same paise, and leaves `B_spent` and contribution history unchanged. The atomic ordinary-user RPC has stable operation replay, changed-request protection, tenant isolation and forced-intermediate-failure rollback. The durable `goal_purchases` record is linked to the operation log. [Local migration](../supabase/migrations/20261009122459_d07b_goal_cash_purchase.sql) was applied only to the isolated Docker database; no remote migration ran.
+
+Fresh checks: 308 unit + 74 integration/contract; 178 TypeScript-domain tests/100% statements, lines, branches and functions across all seven collected domain files; 28 cycle, 18 recovery, 19 commitment, 9 cancellation, 9 distress, 46 card lifecycle, 18 card payments, 16 security, 1 D26, 1 scoped FIT-13 and 5 D07b goal-purchase cases. Sources, lint, typecheck and build PASS. See [D07b evidence](evidence/G3/D07b/RESULT.md).
+
+**Gate G3 remains BLOCKED; PH-18 is not complete.** D07b closes the Scenario 17 cash-purchase/replay gap only. The remaining blockers are full Section 18 math/SQL traceability and coverage, an actual AI output-to-state FIT-13 proof, and generated mixed-lifecycle sequence parity. Card-funded and insufficient-funding goal execution remain OPEN. Do not hand off PH-19.
+
+
+## D26-v1 APPROVED / locally verified — 2026-10-10 IST
+
+Tejas explicitly approved factual negative cash, the D01 zero-floored STS equation, and immediate D02 liquidity State C with want-goal lock. `calculateCash`, signed liquid-margin/health inputs, and local cash-spend/card-payment RPCs preserve negative results. Domain/property and an ordinary-user D26 persistence fixture pass; want bucket allowances clamp, the exact liquidity predicate is true, a WANT cannot accrue funds, and operation replay applies once. Local-only migration [20261009115731_d26_negative_cash.sql](../supabase/migrations/20261009115731_d26_negative_cash.sql); no remote application.
+
+Fresh checks: 306 unit +74 integration/contract;175 TypeScript-domain tests/100% statements, lines, branches and functions across seven collected files;33 cycle,18 recovery,21 commitments,9 cancellation,9 distress,46 card lifecycle,25 card payments,16 security,1 D26,1 FIT-13 adversarial-shaped RPC; source hashes, lint, typecheck and build PASS. Full details: [D26 evidence](evidence/G3/D26/RESULT.md).
+
+**Gate G3 remains BLOCKED; PH-18 is not complete.** Remaining required work: approved D07b cash goal purchase persistence; complete §18 math traceability/coverage beyond TypeScript; an actual AI output-to-state boundary proof (current FIT-13 strict-RPC adversarial case is only scoped); and generated mixed-lifecycle state-sequence parity. Scenario 17 remains partial. Do not mark G3 passed or hand off PH-19. D26 changes/evidence are currently uncommitted in the working tree because the gate’s commit/complete condition is not met. Next one action: implement and verify the approved D07b cash-funded goal purchase.
+
+---
+
+## D15-v1 verified — 2026-10-10 IST
 
 D14 committed as e29fbb47734777df8b635775442b6b95b6346380. D15 exact terms and explicit zero-floor-aware recomputation approval recorded. Eight independent unit fixtures, three1000-case properties and three ordinary-user positive-drift RPC fixtures verify liquidity-bound growth, budget ceiling and zero-floor cases without changing canonical production equations. Evidence docs/evidence/G3/D15/RESULT.md and adjacent logs.
 
@@ -36,7 +74,7 @@ Fresh unit304+integration74,domain172/100% implemented coverage;cycle33,distress
 
 G3 remains BLOCKED. Next exact action: obtain D26's factual-spend/insufficient-declared-cash rule (₹1,500 real spend versus₹1,000 declared cash), then implement independent reconciliation/ledger fixtures. Do not fabricate cash or infer a negative-balance policy. Goal cash lifecycle, full math/SQL/sequence and FIT13 evidence remain required. No PH19 advance. Earlier D15-OPEN and D14-uncommitted statements are historical.
 
-## D14-v1 verified locally — 2026-10-09 IST
+## D14-v1 verified locally — 2026-10-10 IST
 
 D14 exact terms recorded; explicit clarification retains D02: income equality remainsC, exit requires strictly greater income plus cash coverage and confirmed salary. Active Dining/Entertainment clamp to0 while saved baselines/floors survive; standardB recovery floors protected; confirmed solvent rollover restores them. WANT creation/funding guard and paused WANT contributions implemented with explicit nullable goal classification. Unknown/NEED semantics not inferred.
 
@@ -44,13 +82,13 @@ Fresh PASS296unit+74integration/contract;161domain tests with100% implemented li
 
 D14 local approved scope closes; G3 remains BLOCKED. Next one action: resolve D15 unconditional STS-delta wording. Example budget₹1,000, liquidity₹2,000→₹4,000: bounded pool stays₹1,000, so a guaranteed equal STS increase is false. Proposed resolution is canonical bounded recomputation, not automatically approved. Remaining D26, goal cash lifecycle, full math/SQL/sequence and FIT13 gaps remain. No PH19 advance.
 
-## D12 clarified / D13 parity verified — 2026-10-09 IST
+## D12 clarified / D13 parity verified — 2026-10-10 IST
 
 D12-Shopping is explicitly resolved; Shopping280000 allowance/200000 spent/80000 remaining, Entertainment140000/100000/40000. Canonical RPC acceptance covers80000 deficit, preserves StateA and canonical money/baselines; stable replay and stale donor rejection pass. D13 zero-cap SQL/domain parity passes. Latest evidence docs/evidence/G3/D12-clarified/RESULT.md.
 
 PASS291unit+74integration,156domain/100% implemented coverage,18recovery,21commitment,16security,types/lint/five source hashes. G3 remains BLOCKED for D14/D15/D26 and missing goal-cash/FIT13/full lifecycle evidence. Next exact action: resolve D14 floors versus distress permission/restoration. No remote changes or PH19 advance. Historical pending D12/D13 statements below are superseded.
 
-## D12-v1 / D13 database follow-up — 2026-10-09 IST
+## D12-v1 / D13 database follow-up — 2026-10-10 IST
 
 D12-v1 exact Scenario9 approval recorded in amendments/D12-v1.md. D12-Shopping conflict remains pending: “remaining spent₹2,200” conflicts with D16 allowance-only trimming (₹2,800 allowance/₹2,000 spent/₹800 remaining). Approval was requested; no disputed successful acceptance result inferred. Independent canonical donor math and stale-donor rejection verified; D13 local SQL now clamps cap to zero and rejects positive creation without writes. Evidence docs/evidence/G3/D12/RESULT.md and logs. No remote migration.
 
@@ -328,3 +366,5 @@ PASS:85 domain tests in3 suites, including8 properties ×500 cases at fixed seed
 G0A/G1/V1 retained; G0B affected rules remain OPEN, G2 onward unpassed. All source decisions unchanged. D05-extension due/overdue pacing returns a typed block; D26 negative factual cash errors explicitly. D17 onboarding, D22 drift budget and other disputed lifecycle semantics are not invented. No contract, UI, provider, DB, root config/dependency/lock or frozen-source changes; no migrations/deployment.
 
 Lead recommendation: safeWeekly exists in typed SpendingPace but not the strict FinancialSnapshot schema; coordinate a versioned contract change before API/UI use, not an ad hoc field or UI formula. Next recipient PHRON-02 Platform, PH-11/P02-DATA prepared only: resume, inspect Engine outputs, and identify D11/schema approvals before dependent persistence. Prior Git commit approval review was unavailable due to usage limit and did not execute; renewed authorized attempt succeeded. Initial staged whitespace check found formatting in captured logs; trailing whitespace only was normalized before commit. Record-only status/handoff commit follows; inspect actual Git tip on resume.
+
+Final verification 2026-10-09: all 20 commands in docs/evidence/G3/CLOSURE/runs.json completed with exit 0. Sources (all five hashes), typecheck, lint and Next.js build PASS. No remote migration or deployment. G3 remains BLOCKED for the explicitly documented unmet requirements; no completion commit or PH19 advancement.

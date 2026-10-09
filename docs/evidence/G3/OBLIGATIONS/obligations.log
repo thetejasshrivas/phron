@@ -1,0 +1,16 @@
+PASS ordinary partial/full settlement debits cash and unpaid equally; no discretionary debit
+PASS durable replay, concurrent identical IDs and changed input rejection
+PASS ordinary obligation settlement preserves separately tracked card liability
+PASS distinct concurrent payments cannot overdraw the obligation
+PASS zero negative numeric overflow and overpayment fail without state changes
+PASS foreign and forged parents, submitted identity, anonymous and direct writes denied
+PASS payment date must be in active cycle; legacy card obligations stay on their dedicated path
+PASS old unpaid obligation can be paid now without editing the closed cycle or marking new dues paid
+PASS D26 factual payment retains negative cash and zero spending permission
+PASS RLS isolates payment history and account cascade deletes only its own records
+PASS forced cycle_obligations failure rolls back all effects and permits stable retry
+PASS forced pay_cycles failure rolls back all effects and permits stable retry
+PASS forced financial_profiles failure rolls back all effects and permits stable retry
+PASS forced obligation_cash_payments failure rolls back all effects and permits stable retry
+PASS forced operation_log failure rolls back all effects and permits stable retry
+15 passed; 0 failed; 15 total

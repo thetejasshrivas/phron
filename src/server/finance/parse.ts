@@ -33,12 +33,13 @@ export const parseOnboarding = (value:unknown) => validateMutationEnvelope(value
       return {name:text(o.name,1,100),amount,unpaid,isCreditCardLegacy:o.isCreditCardLegacy};
     })};
 });
-export const parseSpend = (value:unknown) => validateMutationEnvelope(value,(input):ManualSpendInput=>{
+export function parseSpendInput(input:unknown):ManualSpendInput {
   const v=record(input,['bucketId','amount','merchantOrPayee','rawText','paymentMethod','transactionDate']);
   if(v.paymentMethod!=='cash' && v.paymentMethod!=='upi' && v.paymentMethod!=='debit') throw new TypeError('VALIDATION');
   return {bucketId:uuid(v.bucketId),amount:money(v.amount,true),merchantOrPayee:text(v.merchantOrPayee,1,100),
     rawText:text(v.rawText,0,280),paymentMethod:v.paymentMethod,transactionDate:financialDate(v.transactionDate)};
-});
+}
+export const parseSpend = (value:unknown) => validateMutationEnvelope(value,parseSpendInput);
 export function parseFinanceResult(value:unknown, allowEmpty=false):ApiResult<FinanceMutationData|null> {
   if(!value || typeof value!=='object') throw new TypeError('INVALID_RESULT');
   const result=value as Record<string,unknown>;

@@ -30,8 +30,13 @@ describe("approved ledger and margins", () => {
     expect(calculateCash({ opening: 1800000n, confirmedInflows: 0n, cashOutflows: 0n, signedDrift: 200000n })).toBe(2000000n);
     expect(calculateCash({ opening: 2000000n, confirmedInflows: 0n, cashOutflows: 150000n, signedDrift: -100000n })).toBe(1750000n);
   });
-  test("negative factual cash is unresolved D26, not invented zero", () => {
-    expect(() => calculateCash({ opening: 100000n, confirmedInflows: 0n, cashOutflows: 150000n, signedDrift: 0n })).toThrow("D26");
+  test("D26 preserves factual negative cash, clamps permission to zero, and enters distress", () => {
+    const cash = calculateCash({ opening: 100000n, confirmedInflows: 0n, cashOutflows: 150000n, signedDrift: 0n });
+    expect(cash).toBe(-50000n);
+    const margins = calculateMargins({ ...healthy, cash, unpaidObligations: 50000n, goalHeld:0n });
+    expect(margins.marginLiquid).toBe(-100000n);
+    expect(margins.safePool).toBe(0n);
+    expect(classifyHealth({ ...health, cash, safePool: margins.safePool })).toBe("C");
   });
   test("PRD18.1 independent worked example", () => {
     expect(calculateMargins(Object.freeze(healthy))).toEqual({ discretionaryPool: 3900000n, marginBudget: 2500000n, marginLiquid: 2300000n, safePool: 2300000n });
@@ -55,9 +60,13 @@ describe("approved ledger and margins", () => {
   test.each([[100n,3,33n,99n],[100n,1,100n,100n],[1n,31,0n,0n],[0n,7,0n,0n]])("daily floor then weekly %s/%s", (pool, days, daily, weekly) => expect(calculateSts(pool, days)).toEqual({ safeDaily: daily, safeWeekly: weekly }));
   test("rejects negative inputs and zero baseline", () => {
     expect(() => calculateMargins({ ...healthy, goalHeld: -1n })).toThrow();
-    expect(() => calculateCash({ opening: -1n, confirmedInflows: 0n, cashOutflows: 0n, signedDrift: 0n })).toThrow();
+    expect(() => calculateCash({ opening: 0n, confirmedInflows: -1n, cashOutflows: 0n, signedDrift: 0n })).toThrow();
     expect(() => calculateSts(-1n, 7)).toThrow();
     expect(() => classifyHealth({ ...health, sustainableIncome: 0n })).toThrow();
+  });
+  test("D26 carries factual negative balances into the next ledger opening", () => {
+    expect(calculateCash({ opening: 0n, confirmedInflows: 0n, cashOutflows: 1n, signedDrift: 0n })).toBe(-1n);
+    expect(calculateCash({ opening: -1n, confirmedInflows: 0n, cashOutflows: 0n, signedDrift: 0n })).toBe(-1n);
   });
 });
 

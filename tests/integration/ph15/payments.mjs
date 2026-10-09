@@ -96,10 +96,16 @@ try {
       assert.equal((await pay({...input,legacy:[{cycleObligationId:id,amount:'100001'}]})).error.code,'VALIDATION');
       assert.equal(await ownedCount('card_liability_payments'),'0');
     }],
-    ['D26 insufficient factual cash stays unavailable without writes',async()=>{
+    ['D26 factual tracked-card settlement may debit cash below zero exactly once',async()=>{
       const bought=await purchase(); await sql(`update public.financial_profiles set current_liquid_balance_paise=1 where user_id=${literal(a.id)};`);
-      assert.equal((await pay(paymentInput(bought.data.transactionId))).error.code,'UNAVAILABLE');
-      assert.equal(await ownedCount('card_liability_payments'),'0');
+      const input=paymentInput(bought.data.transactionId); const op=randomUUID(); const revision=(await state()).snapshot.revision;
+      const paid=await pay(input,op,revision); assert.equal(paid.ok,true);
+      assert.equal(paid.data.snapshot.money.cash,'-99999');
+      assert.equal(paid.data.snapshot.money.accruedCardReserve,'150000');
+      assert.equal(paid.data.snapshot.money.spent,'250000');
+      assert.equal(paid.data.snapshot.money.safePool,'0'); assert.equal(paid.data.snapshot.health,'C');
+      assert.deepEqual(await pay(input,op,revision),paid);
+      assert.equal(await ownedCount('card_liability_payments'),'1');
     }],
     ['CC16 same-ID concurrent requests commit once',async()=>{
       const bought=await purchase(); const input=paymentInput(bought.data.transactionId); const op=randomUUID();

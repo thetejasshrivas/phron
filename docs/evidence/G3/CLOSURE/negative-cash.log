@@ -1,0 +1,3 @@
+PASS D26 factual spend below declared cash is saved once; negative cash, zero STS, State C and want-goal lock are canonical
+PASS D26 negative closing cash rolls over without truncation or double salary credit
+2 passed; 0 failed; 2 total

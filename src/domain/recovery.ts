@@ -1,4 +1,4 @@
-import { nonnegativePaise, positiveInteger } from "./money";
+import { nonnegativePaise, paise, positiveInteger } from "./money";
 
 /** PRD18.3; a proposal does not change budgets or health (D16). */
 export function overspend(allocation: bigint, spent: bigint): bigint {
@@ -67,9 +67,23 @@ export function goalPace(target: bigint, accumulated: bigint, totalDays: number,
     status: saved >= amount ? "COMPLETED" : saved >= expected ? "ON_TRACK" : "BEHIND"};
 }
 
+/** D07b cash branch: accumulated contributions remain history; only their held reserve is consumed. */
+export function cashFundedGoalPurchase(input: {
+  readonly status: "ON_TRACK" | "BEHIND" | "COMPLETED" | "CANCELLED";
+  readonly held: bigint;
+  readonly currentAccumulated: bigint;
+}): { readonly cashDelta: bigint; readonly heldDelta: bigint; readonly discretionarySpentDelta: 0n; readonly currentAccumulatedDelta: 0n } {
+  const held = nonnegativePaise(input.held);
+  const accumulated = nonnegativePaise(input.currentAccumulated);
+  if (input.status !== "COMPLETED" || held === 0n || held > accumulated) {
+    throw new RangeError("Completed goal with a held reserve required");
+  }
+  return { cashDelta: -held, heldDelta: -held, discretionarySpentDelta: 0n, currentAccumulatedDelta: 0n };
+}
+
 /** D21-v1 cash branch only; not credit evidence, cap authorization or a ledger mutation. */
 export function hasCashPaymentCapacity(cash: bigint, unpaid: bigint, cardReserve: bigint, deficit: bigint): boolean {
   const needed = nonnegativePaise(deficit);
   if (needed === 0n) throw new RangeError("Deficit must be positive");
-  return nonnegativePaise(cash) - nonnegativePaise(unpaid) - nonnegativePaise(cardReserve) >= needed;
+  return paise(cash) - nonnegativePaise(unpaid) - nonnegativePaise(cardReserve) >= needed;
 }

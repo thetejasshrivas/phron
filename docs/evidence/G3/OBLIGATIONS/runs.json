@@ -1,0 +1,93 @@
+[
+  {
+    "name": "unit",
+    "command": "node node_modules/jest/bin/jest.js --config jest.config.mjs --selectProjects unit --runInBand",
+    "started": "2026-10-09T18:45:44.295Z",
+    "finished": "2026-10-09T18:45:45.724Z",
+    "exitCode": 0
+  },
+  {
+    "name": "contracts",
+    "command": "node node_modules/jest/bin/jest.js --config jest.config.mjs --selectProjects integration --runInBand",
+    "started": "2026-10-09T18:45:45.725Z",
+    "finished": "2026-10-09T18:45:46.870Z",
+    "exitCode": 0
+  },
+  {
+    "name": "domain",
+    "command": "node scripts/domain-coverage.mjs",
+    "started": "2026-10-09T18:45:46.871Z",
+    "finished": "2026-10-09T18:45:53.305Z",
+    "exitCode": 0
+  },
+  {
+    "name": "obligations",
+    "command": "node tests/integration/ph18/obligations.mjs",
+    "started": "2026-10-09T18:45:53.306Z",
+    "finished": "2026-10-09T18:46:10.248Z",
+    "exitCode": 0
+  },
+  {
+    "name": "cycle",
+    "command": "node tests/integration/ph17/cycle.mjs",
+    "started": "2026-10-09T18:46:10.248Z",
+    "finished": "2026-10-09T18:46:37.158Z",
+    "exitCode": 0
+  },
+  {
+    "name": "cards",
+    "command": "node tests/integration/ph15/lifecycle.mjs",
+    "started": "2026-10-09T18:46:37.158Z",
+    "finished": "2026-10-09T18:47:28.069Z",
+    "exitCode": 0
+  },
+  {
+    "name": "payments",
+    "command": "node tests/integration/ph15/payments.mjs",
+    "started": "2026-10-09T18:47:28.069Z",
+    "finished": "2026-10-09T18:48:01.278Z",
+    "exitCode": 0
+  },
+  {
+    "name": "security",
+    "command": "node tests/security/ph14-local.mjs",
+    "started": "2026-10-09T18:48:01.278Z",
+    "finished": "2026-10-09T18:48:10.246Z",
+    "exitCode": 0
+  },
+  {
+    "name": "ai-boundary",
+    "command": "node tests/security/fit13-adversarial.mjs",
+    "started": "2026-10-09T18:48:10.247Z",
+    "finished": "2026-10-09T18:48:14.061Z",
+    "exitCode": 0
+  },
+  {
+    "name": "sources",
+    "command": "node scripts/verify-sources.mjs",
+    "started": "2026-10-09T18:48:14.061Z",
+    "finished": "2026-10-09T18:48:14.115Z",
+    "exitCode": 0
+  },
+  {
+    "name": "typecheck",
+    "command": "node node_modules/typescript/bin/tsc --noEmit",
+    "started": "2026-10-09T18:48:14.116Z",
+    "finished": "2026-10-09T18:48:15.863Z",
+    "exitCode": 0
+  },
+  {
+    "name": "lint",
+    "command": "node node_modules/eslint/bin/eslint.js . --max-warnings=0",
+    "started": "2026-10-09T18:48:15.863Z",
+    "finished": "2026-10-09T18:48:20.333Z",
+    "exitCode": 0
+  },
+  {
+    "name": "build",
+    "command": "node scripts/next.mjs build",
+    "started": "2026-10-09T18:48:20.334Z",
+    "finished": "2026-10-09T18:48:25.947Z",
+    "exitCode": 0
+  }
+]

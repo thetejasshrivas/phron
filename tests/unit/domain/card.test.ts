@@ -169,10 +169,12 @@ describe("card boundary validation and exact correction limits", () => {
     expect(margin(paid).marginLiquid).toBe(margin(initial).marginLiquid);
     expect(applyCardEffects(paid, paymentChange(context, [purchase], [legacy], legacy.id, null))).toEqual(initial);
   });
-  test("pure plan application rejects deficit/overflow rather than inventing money", () => {
-    const frozen = Object.freeze({ ...initial, cash: 1n });
-    expect(() => applyCardEffects(frozen, settle(payment))).toThrow("D26");
+  test("D26 records tracked settlement even when factual cash crosses zero", () => {
+    const frozen = Object.freeze({ ...initial, cash: 1n, cardReserve:100000n });
+    expect(applyCardEffects(frozen, settle(payment))).toMatchObject({ cash: -99999n, cardReserve: 0n, spent: frozen.spent });
     expect(frozen.cash).toBe(1n);
+  });
+  test("pure plan application rejects invalid deficits in non-cash invariants and overflow", () => {
     expect(() => applyCardEffects(initial, change(purchase, null))).toThrow();
     expect(() => applyCardEffects({ ...initial, cardReserve: 0n }, settle(payment))).toThrow();
     expect(() => applyCardEffects({ ...initial, unpaidObligations: 0n }, settle({ ...payment, allocations: [], legacyAmount: 1n }))).toThrow();

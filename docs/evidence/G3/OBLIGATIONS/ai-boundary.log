@@ -1,0 +1,3 @@
+PASS FIT-13 adversarial model-shaped authority fields cannot mutate deterministic financial state
+PASS FIT13 ingestion adapter and hostile generated outputs leave ordinary-user database unchanged
+2 passed; 0 failed; 2 total

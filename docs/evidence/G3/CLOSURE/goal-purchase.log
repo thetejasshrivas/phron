@@ -1,0 +1,6 @@
+PASS Scenario17 cash execution releases held reserve, debits cash once, and preserves contribution/spend history
+PASS completed reserve is single-use; incomplete and zero-held goals are denied
+PASS two ordinary users isolate goals; anonymous and direct writes are denied
+PASS stable operation replay, concurrent replay, and changed request protection are durable
+PASS forced intermediate failure rolls back cash, reserve, purchase record, revision, and replay
+5 passed; 0 failed; 5 total

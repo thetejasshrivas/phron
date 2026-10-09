@@ -30,6 +30,22 @@ try {
       assert.equal(r.ok,true);
       assert.deepEqual(r.data.buckets.map(b => b.allocation), ['1','0','0','0','0']);
     }],
+    ['PRD18.8/D27 SQL matches independent zero-floor, quotient, and starter-remainder fixtures', async () => {
+      for (const [pool, allocations] of [
+        ['7', ['2','2','1','1','1']],
+        ['4', ['1','1','1','1','0']],
+        ['101', ['31','25','20','15','10']],
+      ]) {
+        const u = await auth.user();
+        const r = await rpc(u.client, 'phron_onboard', { ...initial, declaredCash: pool, obligations: [] });
+        assert.equal(r.ok, true);
+        assert.equal(r.data.snapshot.money.discretionaryPool, pool);
+        assert.equal(r.data.snapshot.money.safeDaily, (BigInt(pool) / BigInt(r.data.snapshot.remainingSpendingDays)).toString());
+        assert.equal(r.data.snapshot.money.safeWeekly, (BigInt(r.data.snapshot.money.safeDaily) * BigInt(Math.min(7, r.data.snapshot.remainingSpendingDays))).toString());
+        assert.deepEqual(r.data.buckets.map(b => b.allocation), allocations);
+        assert.equal(r.data.buckets.reduce((sum, bucket) => sum + BigInt(bucket.allocation), 0n), BigInt(pool));
+      }
+    }],
     ['D17 negative liquidity permits distressed onboarding', async () => {
       const u = await auth.user();
       const r = await rpc(u.client,'phron_onboard',{...initial,declaredCash:'40000'});

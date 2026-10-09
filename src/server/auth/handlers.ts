@@ -4,6 +4,7 @@ import { errorHttpStatus, errorResult, type ErrorCode } from '@/contracts/snapsh
 import { parseFinanceResult, parseOnboarding, parseSpend } from '@/server/finance/parse';
 import { parseCardPayment } from '@/server/finance/card';
 import { parseCardLifecycle, parseCardRecords } from '@/contracts/card';
+import { parseObligationPayment } from '@/contracts/obligation';
 import { sameOriginMutation, trustedOrigin } from './policy';
 
 function privateResponse(response:NextResponse) {
@@ -74,11 +75,11 @@ async function boundedJSON(request:NextRequest):Promise<unknown> {
   } finally { reader.releaseLock(); }
   return JSON.parse(Buffer.concat(chunks).toString('utf8'));
 }
-async function mutate(request:NextRequest,kind:'onboard'|'spend'|'card_payment'|'card_lifecycle') {
+async function mutate(request:NextRequest,kind:'onboard'|'spend'|'card_payment'|'card_lifecycle'|'obligation_payment') {
   return perform(request,true,async context=>{
     if(!await verified(context)) return failure('UNAUTHENTICATED');
     let parsed;
-    try {const body=await boundedJSON(request);parsed=kind==='onboard'?parseOnboarding(body):kind==='spend'?parseSpend(body):kind==='card_payment'?parseCardPayment(body):parseCardLifecycle(body);} catch {return failure('VALIDATION');}
+    try {const body=await boundedJSON(request);parsed=kind==='onboard'?parseOnboarding(body):kind==='spend'?parseSpend(body):kind==='card_payment'?parseCardPayment(body):kind==='obligation_payment'?parseObligationPayment(body):parseCardLifecycle(body);} catch {return failure('VALIDATION');}
     const {data,error}=await context.client.rpc(kind==='onboard'?'phron_onboard':kind==='spend'?'phron_manual_spend':`phron_${kind}`,{
       p_operation_id:parsed.operationId,p_expected_revision:parsed.expectedVersion,p_input:parsed.input,
     });
@@ -91,6 +92,7 @@ export const onboarding=(request:NextRequest)=>mutate(request,'onboard');
 export const manualSpend=(request:NextRequest)=>mutate(request,'spend');
 
 export const cardPayment=(request:NextRequest)=>mutate(request,'card_payment');
+export const obligationPayment=(request:NextRequest)=>mutate(request,'obligation_payment');
 export const cardLifecycle=(request:NextRequest)=>mutate(request,'card_lifecycle');
 export const cardRecords=(request:NextRequest)=>perform(request,false,async context=>{
  if(!await verified(context))return failure('UNAUTHENTICATED');

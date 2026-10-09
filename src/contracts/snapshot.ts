@@ -3,7 +3,7 @@ import { decodePaise, type Paise } from "./money";
 
 const moneyFields = [
   "sustainableIncome", "cash", "unpaidObligations", "accruedCardReserve", "goalCycle", "goalHeld",
-  "discretionaryPool", "spent", "marginBudget", "marginLiquid", "safePool", "safeDaily",
+  "discretionaryPool", "spent", "marginBudget", "marginLiquid", "safePool", "safeDaily", "safeWeekly",
 ] as const;
 export type SnapshotMoney = Readonly<Record<(typeof moneyFields)[number], Paise> & { cycleIncome: Paise | null }>;
 /** Transport of canonical outputs; computations and authoritative persistence come in PH-10/11. */

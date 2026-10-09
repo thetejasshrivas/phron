@@ -1,6 +1,6 @@
 import { test, expect } from "@jest/globals";
 import fc from "fast-check";
-import { commitmentCapacity, goalSchedule, planRecovery } from "@/domain/recovery";
+import { cashFundedGoalPurchase, commitmentCapacity, goalSchedule, planRecovery } from "@/domain/recovery";
 import { calculateMargins } from "@/domain/core";
 const options = {seed:160407,numRuns:500};
 const amount = fc.bigInt({min:0n,max:10000000000000000n});
@@ -48,4 +48,21 @@ test("FIT07 held reserves reduce liquidity and never increase permission",()=>{
   expect(result.marginLiquid).toBe(cash-held);
   expect(result.safePool).toBe(cash>held?cash-held:0n);
  }),options);
+});
+test("D07b FIT01/FIT03 cash-goal execution conserves reserve release and never invents permission",()=>{
+ fc.assert(fc.property(
+  fc.bigInt({min:1n,max:10000000000000000n}),
+  fc.bigInt({min:0n,max:10000000000000000n}),
+  (held,surplus)=>{
+   const cash=held+surplus;
+   const effects=cashFundedGoalPurchase({status:"COMPLETED",held,currentAccumulated:held});
+   expect(effects.cashDelta).toBe(-held);
+   expect(effects.heldDelta).toBe(-held);
+   expect(effects.discretionarySpentDelta).toBe(0n);
+   expect(effects.currentAccumulatedDelta).toBe(0n);
+   const before=calculateMargins({cycleIncome:0n,totalObligations:0n,commitmentDue:0n,goalCycle:0n,spent:0n,cash,unpaidObligations:0n,cardReserve:0n,goalHeld:held});
+   const after=calculateMargins({cycleIncome:0n,totalObligations:0n,commitmentDue:0n,goalCycle:0n,spent:0n,cash:cash+effects.cashDelta,unpaidObligations:0n,cardReserve:0n,goalHeld:held+effects.heldDelta});
+   expect(after.marginLiquid).toBe(before.marginLiquid);
+   expect(after.safePool).toBe(before.safePool);
+  }),{seed:70717,numRuns:1000});
 });

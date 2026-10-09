@@ -37,7 +37,7 @@ export async function run(cases) {
   let failed = 0;
   for (const [name, execute] of cases) {
     try { await execute(); console.log('PASS ' + name); }
-    catch (error) { failed++; console.log('FAIL ' + name + ': ' + (error instanceof Error && /^[A-Z_]+$/.test(error.message) ? error.message : 'ASSERTION_FAILED')); }
+    catch (error) { failed++; console.log('FAIL ' + name + ': ' + (error instanceof Error && /^[A-Z0-9_]+$/.test(error.message) ? error.message : 'ASSERTION_FAILED')); }
   }
   console.log(`${cases.length - failed} passed; ${failed} failed; ${cases.length} total`);
   if (failed) process.exitCode = 1;

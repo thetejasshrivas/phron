@@ -1,3 +1,98 @@
+# PH-18 / Gate G3 final audit — 2026-10-10 IST
+
+**Verdict: PASS — Gate G3 PASSED and PH-18 COMPLETE.** Tejas approved G3-DF-01-v1; its State C accounting behavior is covered by pure domain fixtures and ordinary-user local persistence tests. The final complete verification run is recorded in [runs.json](CLOSURE/runs.json): all 20 commands exited 0. Source hashes, typecheck, lint and build passed. Local synthetic Supabase only; no remote migration or deployment.
+
+| Requirement | Current disposition | Evidence |
+| --- | --- | --- |
+| Generated mixed domain sequences | PASS: 1000 sequences, seed 181802 | CLOSURE/domain.log; tests/property/mixed-lifecycle.test.ts |
+| Generated ordinary-user database sequence parity | PASS: 20 sequences, seed 181801 | CLOSURE/mixed-sequences.log; independent ledger/domain/snapshot model; all required operation witnesses |
+| FIT13 provider-free AI output boundary | PASS for deterministic boundary | 1000 arbitrary JSON, 300 hostile actual-handler requests, 100 hostile SQL requests; CLOSURE/unit.log, contracts.log, ai-boundary.log |
+| Negative cash across cycle boundaries | PASS; corrected unsigned preconditions | CLOSURE/negative-cash.log and domain.log |
+| Goal-purchase FIT01 conservation | PASS; corrected missing cycle cash outflow | CLOSURE/goal-purchase.log; local-only corrective migration |
+| All implemented TypeScript math coverage | PASS: 100% line/statement/branch/function over ten files | CLOSURE/domain.log; SQL is verified with independent fixtures, not claimed as TS coverage |
+| PRD §18.1–18.9, FIT-01–FIT-14, Scenarios 6–17 and CC-01–CC-16 audit crosswalk | PASS for approved G3 scope; exact function/RPC and fixture mapping | SECTION18_MATRIX.md; CLOSURE and prior named scenario evidence |
+| Ordinary non-card obligation payment and State C Firefight | PASS: 16/16 cases; preserves factual cash/debt deltas, no discretionary spend, RLS/replay/rollback | CLOSURE/obligations.log |
+| §18.6 State C and FR-DIST-03 | PASS under approved G3-DF-01-v1: separate informational margin sources, no cash quarantine; explicit obligation payment remains factual | CLOSURE/obligations.log; `firefight.test.ts`; DECISIONS G3-DF-01-v1 |
+
+The ordinary cash obligation path and approved Firefight accounting behavior close the Part 8 settlement and §18.6 audit items. The essential-allowance and cash-above-unpaid figures remain separate; they are not summed into spend permission or reserved from physical cash. Card-funded goal execution and insufficient-funding semantics remain OPEN under D07b and are explicitly outside this G3 closure scope.
+
+Commands, actual exit codes and full outputs: [CLOSURE/runs.json](CLOSURE/runs.json). Detailed scope, counts, failing tests and fixes: [CLOSURE/RESULT.md](CLOSURE/RESULT.md) and [RED.md](CLOSURE/RED.md). The corrected [Section18 matrix](SECTION18_MATRIX.md) distinguishes implemented arithmetic, SQL fixture evidence, and missing requirements. Final source/lint/typecheck/build verdicts are recorded only by completed runs.json entries.
+
+No remote migration, provider call or release occurred. PH-19 is the next eligible phase; this audit does not claim PH-19 provider integration is implemented.
+
+---
+# Historical G3 audit snapshots follow; the 2026-10-10 PASS section above is authoritative.
+
+# Current PH-18 / Gate G3 audit — Section 18 traceability verification — 2026-10-09 IST
+
+**Verdict: BLOCKED — Gate G3 NOT PASSED; PH-18 not complete; no PH-19 handoff.**
+Current base commit is `6358f65` (D15-v1) with D26 and D07b source/tests/evidence
+in the working tree. Frozen source hash remains
+`d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994`.
+Unrelated `New Text Document.txt` remains untouched and excluded.
+
+D26-v1 and D07b-v1 are locally verified. D26 preserves factual negative cash,
+the D01 zero floor and D02 State C response. D07b's approved cash-only branch
+now consumes a completed goal's held reserve and cash exactly once, with no
+second discretionary debit. The complete current Section 18 map is
+[SECTION18_MATRIX.md](SECTION18_MATRIX.md): it maps every 18.1–18.9 equation to
+typed bigint math and the authoritative local RPC/function/trigger, including
+the newly persisted `safeWeekly` SQL calculation and independent onboarding
+remainder parity. See [D26 results](D26/RESULT.md) and [D07b results](D07b/RESULT.md).
+The earlier D15/D14/D12 entries below are historical snapshots superseded by
+this current audit where stated; they do not override current decisions or
+newer executed evidence.
+
+## Historical verification matrix — superseded by the 2026-10-10 continuation above
+
+| Evidence | Result |
+| --- | --- |
+| `npm test` | PASS: 311 unit + 74 integration/contract |
+| TypeScript domain coverage | PASS: 182 tests/13 suites; 100% statements/lines/branches/functions over eight collected domain files |
+| Section 18 traceability / SQL parity | PASS for implemented approved scope — [matrix](SECTION18_MATRIX.md), weekly STS and onboarding remainder SQL fixtures |
+| PH-17 cycle/reconciliation | PASS: 28 cases |
+| PH-16 recovery/Scenario 9 | PASS: 18 cases |
+| PH-16 commitment/D13 | PASS: 19 cases |
+| PH-16 cancellation | PASS: 9 cases |
+| PH-18 distress/D14 | PASS: 9 cases |
+| Card lifecycle/payment | PASS: 46 + 18 cases; CC-01–16 |
+| Security/RLS | PASS: 16 cases |
+| D26 negative-cash persistence | PASS: 1 ordinary-user case |
+| D07b cash-goal persistence | PASS: 5 ordinary-user cases: exact cash/reserve release, no B_spent debit, replay/concurrency, rollback and tenant/RLS denial |
+| FIT-13 adversarial request | PASS: 1 strict-RPC hostile-payload case; no AI output adapter exists, so the required model-output boundary proof remains incomplete |
+| Source hashes/typecheck/lint/build | PASS |
+
+The D26 and D07b transaction results are recorded in [D26/RESULT.md](D26/RESULT.md)
+and [D07b/RESULT.md](D07b/RESULT.md).
+The D26 migration is local only. Existing local migration history is incomplete;
+`migration up --local` tried to recreate PH-12 `read_snapshot()`, so D26 was
+applied transactionally with local-container `psql`. No remote DB action ran.
+
+## Gate checklist against current evidence
+
+| Criterion | Status | Evidence / remaining limit |
+| --- | --- | --- |
+| D01, D03-v2/clearance, D04–D07-v2, D10, D12–D16, D21/D22, D26 approvals and scoped tests | PASS for tested scoped branches | Current decisions and PH-16–18 local suites; deferred D07-card/funding remain OPEN and excluded |
+| Section 18 math traceability and implemented SQL parity | PASS | [Matrix](SECTION18_MATRIX.md) maps 18.1–18.9 to exact bigint/domain and PostgreSQL authorities; independent SQL fixtures cover weekly STS and non-divisible onboarding allocations |
+| FIT-01 through FIT-12, FIT-14 | PASS or PARTIAL by clause | Detailed current statuses below; FIT-01 and FIT-14 retain full-sequence/global-coverage limits |
+| FIT-13 | PARTIAL | Hostile AI-shaped RPC payloads cannot smuggle authority fields; there is no AI output adapter to test at the model-output boundary |
+| CC-01 through CC-16 | PASS local | 46 lifecycle + 18 payment cases, golden Scenario 15 and local SQL persistence |
+| Scenarios 6–16 | PASS in scoped accounting fixtures | See PH-17, recovery/commitment, and card evidence; no additional visual/browser claims |
+| Scenario 17 | PASS for approved cash branch | Completion/remainder and cash purchase/replay pass locally; card-funded/insufficient-funding remain OPEN and are not inferred |
+| Generated mixed financial-state sequences | BLOCKED | No property-driven database state machine spanning rollover/reconciliation/recovery/goals/payments |
+| Build/source/security gates | PASS | Commands and environment in D26/RESULT.md |
+
+**Current G3 blockers:** (1) true FIT-13 model-output boundary proof; (2)
+generated mixed-operation state-sequence parity. These are not regressions or
+failures in the executed suites. No PH-18
+COMPLETE/G3 PASSED status is supportable yet.
+
+**Next one action:** resolve the FIT-13 gate-sequencing gap: the required actual
+AI output boundary does not yet exist, while PH-19 is gated behind G3. Deferred
+card funding and insufficient-funding cases remain OPEN.
+
+---
+
 ## D15-v1 verified — 2026-10-09 IST
 
 D14 committed as e29fbb47734777df8b635775442b6b95b6346380. D15 exact terms and explicit zero-floor-aware recomputation approval recorded. Eight independent unit fixtures, three1000-case properties and three ordinary-user positive-drift RPC fixtures verify liquidity-bound growth, budget ceiling and zero-floor cases without changing canonical production equations. Evidence docs/evidence/G3/D15/RESULT.md and adjacent logs.
@@ -167,3 +262,5 @@ D13-v1 is now APPROVED; earlier D13-OPEN findings are historical. Pure domain ne
 D12-v1 exact Scenario9 approval recorded in amendments/D12-v1.md. D12-Shopping conflict remains pending: “remaining spent₹2,200” conflicts with D16 allowance-only trimming (₹2,800 allowance/₹2,000 spent/₹800 remaining). Approval was requested; no disputed successful acceptance result inferred. Independent canonical donor math and stale-donor rejection verified; D13 local SQL now clamps cap to zero and rejects positive creation without writes. Evidence docs/evidence/G3/D12/RESULT.md and logs. No remote migration.
 
 PASS291unit+74integration;156domain/100% implemented coverage;21commitment cases;16security;17recovery cases;types/lint/five source hashes. Immediate next decision is D12-Shopping clarification; then full canonical acceptance proof and D14 distress-floor semantics. G3 remains BLOCKED and PH19 queued.
+
+Final verification 2026-10-09: all 20 commands in docs/evidence/G3/CLOSURE/runs.json completed with exit 0. Sources (all five hashes), typecheck, lint and Next.js build PASS. No remote migration or deployment. G3 remains BLOCKED for the explicitly documented unmet requirements; no completion commit or PH19 advancement.

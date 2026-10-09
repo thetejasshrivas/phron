@@ -1,5 +1,11 @@
 # Contracts
 
+## PH-18 provider-free AI boundary
+
+`src/server/finance/ai-output.ts::ingestAiSpendOutput` accepts bounded JSON text and server-established owned bucket IDs. It validates the existing exact manual-spend input shape and returns an immutable `{kind: 'draft', input}`. It has no database capability, operation ID, revision, user identity, confidence-based authority or arbitrary RPC selection. Unknown fields are rejected. SQL-like merchant text is inert data. A draft is not a mutation envelope and cannot be submitted directly to the authenticated mutation handler.
+
+Only a separate application intent can supply the existing operation envelope to `manualSpend`, which verifies authentication/origin, parses inputs and calls the fixed ordinary-user RPC for ownership/revision/cycle revalidation and deterministic accounting. This harness does not approve PH-19's unresolved extraction schema, payment-method inference, confidence policy, provider payloads or automatic-save routing (D08/D09/D18 remain OPEN).
+
 Version and approved decision references: NOT_STARTED
 Money representation: exact integer paise; JSON encoding specified
 Dates: Asia/Kolkata date-only financial boundaries
@@ -21,7 +27,7 @@ Money: internal math uses `bigint`; JSON money is a canonical signed base-10 str
 
 Date transport: validated `YYYY-MM-DD` date-only values in the financial Asia/Kolkata calendar, years 0001–9999. UTC construction is used only to validate calendar components, never to infer IST financial dates from an instant. Payday, overdue pacing and cycle boundaries remain domain work; D05-extension is OPEN.
 
-Snapshot: `FinancialSnapshot` v1 has `currency: INR`, exact decimal-string revision, cycle identifier, financial as-of date, server-assigned A/B/C health, integer remaining spending days, and a read-only money record. Money fields: sustainableIncome, nullable cycleIncome, cash, unpaidObligations, accruedCardReserve, goalCycle, goalHeld, discretionaryPool, spent, marginBudget, marginLiquid, safePool and safeDaily. `parseSnapshot` rejects unknown/missing fields and invalid representations. It preserves supplied canonical values and health rather than recomputing them. PH-10 owns the source functions; PH-11 owns authoritative persistence. No snapshot endpoint currently serves financial data, and no synthetic fixture is shown to users as an actual balance.
+Snapshot: `FinancialSnapshot` v1 has `currency: INR`, exact decimal-string revision, cycle identifier, financial as-of date, server-assigned A/B/C health, integer remaining spending days, and a read-only money record. Money fields: sustainableIncome, nullable cycleIncome, cash, unpaidObligations, accruedCardReserve, goalCycle, goalHeld, discretionaryPool, spent, marginBudget, marginLiquid, safePool, safeDaily and safeWeekly. `parseSnapshot` rejects unknown/missing fields and invalid representations. It preserves supplied canonical values and health rather than recomputing them. PH-10 owns the source functions; PH-11 owns authoritative persistence. No snapshot endpoint currently serves financial data, and no synthetic fixture is shown to users as an actual balance.
 
 Requests: `SnapshotRequest` describes a cycle-scoped read. `MutationEnvelope<T>` binds validated operation ID, expected state revision and an operation-specific input parser. There is no submitted top-level user identity; each future input parser must also reject submitted identity and validate its own shape. Mutating operation schemas, extraction schema and outbound allowlist are not frozen while D09/D11/D18/privacy decisions remain OPEN; no generic write endpoint is exposed.
 

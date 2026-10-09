@@ -1,0 +1,18 @@
+declare const jest:typeof import('@jest/globals').jest;
+import {test,expect,beforeEach} from '@jest/globals';
+import {NextRequest} from 'next/server';
+import {obligationPayment} from '@/server/auth/handlers';
+import {parseObligationPayment} from '@/contracts/obligation';
+import {requestClient} from '@/lib/supabase/request';
+jest.mock('@/lib/supabase/request',()=>({requestClient:jest.fn()}));
+const rpc=jest.fn<(...args:unknown[])=>Promise<unknown>>(),getUser=jest.fn<(...args:unknown[])=>Promise<unknown>>();
+const id='11111111-1111-4111-8111-111111111111';
+const body={operationId:id,expectedVersion:'1',input:{cycleObligationId:id,amount:'101',paymentDate:'2026-10-10'}};
+const request=(value:unknown=body,origin='https://phron.example')=>new NextRequest('https://phron.example/api/finance/obligation-payment',{method:'POST',headers:{origin,'content-type':'application/json'},body:JSON.stringify(value)});
+beforeEach(()=>{process.env.PHRON_APP_ORIGIN='https://phron.example';getUser.mockResolvedValue({data:{user:{id:'verified',is_anonymous:false}},error:null});rpc.mockResolvedValue({data:{ok:false,error:{code:'VERSION_CONFLICT'}},error:null});jest.mocked(requestClient).mockReturnValue({client:{auth:{getUser},rpc},finish:(r:Response)=>r} as unknown as ReturnType<typeof requestClient>);});
+test('ordinary payment authenticates and forwards exact strings to only the fixed RPC',async()=>{const r=await obligationPayment(request());expect(r.status).toBe(409);expect(r.headers.get('cache-control')).toContain('no-store');expect(rpc).toHaveBeenCalledWith('phron_obligation_payment',{p_operation_id:id,p_expected_revision:'1',p_input:body.input});});
+test.each(['absent','expired','forged','anonymous'])('rejects %s session',async kind=>{getUser.mockResolvedValue({data:{user:kind==='anonymous'?{id:'a',is_anonymous:true}:null},error:null});expect((await obligationPayment(request())).status).toBe(401);expect(rpc).not.toHaveBeenCalled();});
+test('cross-origin and forged model/user authority are rejected before mutation',async()=>{expect((await obligationPayment(request(body,'https://evil.example'))).status).toBe(403);for(const field of ['user_id','cash','budget','approved'])expect((await obligationPayment(request({...body,input:{...body.input,[field]:'forged'}}))).status).toBe(400);expect(rpc).not.toHaveBeenCalled();});
+test.each([0,-1,1.5,'0','-1','01','1.5','9223372036854775808'])('invalid amount %s rejected',amount=>expect(()=>parseObligationPayment({...body,input:{...body.input,amount}})).toThrow());
+test('exact unsafe-sized paise and invalid parent/date/object shapes',()=>{expect(parseObligationPayment({...body,input:{...body.input,amount:'9007199254740993'}}).input.amount).toBe('9007199254740993');for(const input of [null,[],{...body.input,cycleObligationId:'bad'},{...body.input,paymentDate:'2026-02-30'}])expect(()=>parseObligationPayment({...body,input})).toThrow();});
+test('database failure cannot report saving success or leak private error',async()=>{rpc.mockResolvedValue({data:null,error:{message:'private diagnostic'}});const r=await obligationPayment(request());expect(r.status).toBe(503);expect(await r.text()).not.toContain('private diagnostic');});

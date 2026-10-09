@@ -133,8 +133,7 @@ export function paymentChange(context: CardContext, purchases: readonly Purchase
 }
 /** Apply once inside the caller's atomic transaction. Never clamps factual cash or creates credit capacity. */
 export function applyCardEffects(state: CardLedger, effects: CardEffects): CardLedger {
-  const cash = paise(nonnegativePaise(state.cash) + paise(effects.cash));
-  if (cash < 0n) throw new RangeError("D26 unresolved: factual cash deficit");
+  const cash = paise(paise(state.cash) + paise(effects.cash));
   return { cash, spent: nonnegativePaise(nonnegativePaise(state.spent) + paise(effects.spent)),
     cardReserve: nonnegativePaise(nonnegativePaise(state.cardReserve) + paise(effects.cardReserve)),
     unpaidObligations: nonnegativePaise(nonnegativePaise(state.unpaidObligations) + paise(effects.unpaidObligations)) };

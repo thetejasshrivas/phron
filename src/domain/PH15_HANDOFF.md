@@ -23,8 +23,8 @@ requires persistence evidence and resolution of affected open semantics; it is n
   returns zero effects; changed payload fails. Allocation order is immaterial. Payment record IDs
   are distinct from new correction/reversal operation IDs. This is not a durable replay store.
 - applyCardEffects(ledger, effects) returns a new exact bigint ledger, never mutating inputs.
-  Apply once. Negative factual cash raises an explicit D26 error; other negative reserve/spend/
-  unpaid values and signed64 overflow are rejected. No unaffordable-factual-spend policy is inferred.
+  Apply once. Approved D26-v1 preserves signed factual cash after outflows; negative reserve/spend/
+  unpaid values and signed64 overflow are rejected. Margins/health apply D01/D02 to the result.
 
 Internal money is bigint paise with existing signed64 validation. Opaque identity/cycle/bucket strings
 are references, not authentication or date validation. Existing shared contracts retain exact decimal
@@ -65,8 +65,9 @@ PASS; typecheck and lint PASS. No persistence, browser or deployment claim for t
 D10 remains OPEN: PRD FR-TXN-05/06, AC-TXN-05 and 19.4 disagree on immediate logging/undo timing;
 21.2 supplies correction effects. Example: a saved Rs 1200 spend is undone within six seconds.
 The math is reversible here, but no persistence delay, undo timer or date eligibility is selected.
-D26 remains OPEN: factual Rs 1500 cash outflow with only Rs 1000 declared cannot satisfy nonnegative
-cash. The helper reports the unresolved deficit; it does not invent credit or discard the event.
+D26-v1 is now APPROVED: factual Rs 1500 cash outflow with only Rs 1000 declared produces −Rs 500
+cash, zero S_pool and State C when liquidity is below obligations/card reserve. This does not invent
+credit or discard the event; implementation/evidence are tracked in the Lead G3 audit.
 D05-extension delayed cycle boundaries, D07 card/funding, D20 bucket history, D21 recovery capacity,
 D22 drift budget, and other existing OPEN decisions retain their scope. Report affected work to Lead.
 No new decision approval is inferred from the PH-15 instruction.

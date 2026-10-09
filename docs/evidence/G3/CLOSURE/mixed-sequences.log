@@ -1,0 +1,2 @@
+PASS mixed lifecycle SQL/domain/reference parity: 20 generated sequences, seed 181801
+{"purchase":148,"settlement":75,"recovery":62,"rollover":120,"contribution":60,"goalPurchase":20,"replay":40}

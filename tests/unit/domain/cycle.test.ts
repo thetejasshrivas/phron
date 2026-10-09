@@ -16,5 +16,10 @@ test.each([5500000n,6000000n,6500000n])("D04 actual credited salary %s keeps ope
 test("invalid recalls, negative and unsafe amounts rejected",()=>{
  expect(()=>reconciliation(100n,50n,51n)).toThrow();expect(()=>reconciliation(100n,101n,1n)).toThrow();
  expect(()=>reconciliation(1 as unknown as bigint,1n,0n)).toThrow();
- expect(()=>salaryOpening(0n,0n,0n,0n,0n)).toThrow();expect(()=>salaryOpening(-1n,1n,0n,0n,0n)).toThrow();
+ expect(()=>salaryOpening(0n,0n,0n,0n,0n)).toThrow();
+});
+
+test('D26 negative closing cash remains factual at rollover and reconciliation',()=>{
+ expect(salaryOpening(-100n,50n,0n,0n,0n).cash).toBe(-50n);
+ expect(reconciliation(-100n,0n,0n).residualDrift).toBe(100n);
 });

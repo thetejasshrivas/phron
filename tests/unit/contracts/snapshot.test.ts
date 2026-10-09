@@ -4,7 +4,7 @@ import { parseSnapshot, errorResult, errorHttpStatus } from "@/contracts/snapsho
 const money = {
   sustainableIncome: "6000000", cycleIncome: null, cash: "9007199254740993", unpaidObligations: "0",
   accruedCardReserve: "0", goalCycle: "0", goalHeld: "0", discretionaryPool: "100",
-  spent: "0", marginBudget: "-1", marginLiquid: "100", safePool: "0", safeDaily: "0",
+  spent: "0", marginBudget: "-1", marginLiquid: "100", safePool: "0", safeDaily: "0", safeWeekly: "0",
 };
 const wire = { schemaVersion: 1, currency: "INR", revision: "9007199254740993", cycleId: "cycle-1", asOfDate: "2026-10-06", health: "B", remainingSpendingDays: 1, money };
 test("decodes a JSON snapshot without changing authoritative values or inferring health", () => {
