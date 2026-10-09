@@ -1,6 +1,6 @@
 # PH-18 / Gate G3 final verification — 2026-10-10 IST
 
-**PASS — Gate G3 criteria verified for PH-18; Step PH-18 COMPLETE.** Final command matrix: [docs/evidence/G3/CLOSURE/runs.json](evidence/G3/CLOSURE/runs.json); every one of 20 commands exited 0 on the local Windows environment with pinned project tools and isolated synthetic Supabase Docker database. No remote schema changes, provider calls, deployment, or secrets involved.
+**PASS — Gate G3 criteria verified for PH-18; Step PH-18 COMPLETE.** Verified implementation and evidence commit: `7f61660ef0854bd28c559f024c5cd31762b1db62`. Final command matrix: [docs/evidence/G3/CLOSURE/runs.json](evidence/G3/CLOSURE/runs.json); every one of 20 commands exited 0 on the local Windows environment with pinned project tools and isolated synthetic Supabase Docker database. No remote schema changes, provider calls, deployment, or secrets involved.
 
 | Check | Result | Evidence |
 | --- | --- | --- |
