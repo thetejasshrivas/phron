@@ -1,3 +1,16 @@
+# PH-18 / Gate G3 audit — 2026-10-08 IST
+
+**G3 BLOCKED; PH-18 not complete.** Candidate56568aa029745a5b7bcf3b4c9f19a245a23c07aa on main. Formal source-by-ID audit: [G3/AUDIT.md](evidence/G3/AUDIT.md); exact commands and counts: [G3/RUNS.md](evidence/G3/RUNS.md). Frozen sources unchanged, five hashes PASS. Unrelated user note untouched. No application changes.
+
+Fresh PASS:284 unit +74 integration/contract;148 domain tests with100% implemented TS-domain line/branch/function/statement coverage (398 lines,279 branches,67 functions);30 cycle,46 card lifecycle,25 payment,17 commitment,16 recovery,9 cancellation,16 security local cases. Typecheck/lint/build PASS. Eighteen properties x500 generated examples; no failing seed. Counts overlap where described in RUNS; no blanket full-PRD coverage claim.
+
+Required gaps: D12/D13/D14/D15/D26 financial semantics remain OPEN; Scenario9 cannot be certified from supplemental donor inputs. Approved D07b cash goal execution lacks implementation/evidence. SQL-only onboarding math is outside Jest's denominator. FIT13 adversarial AI-output proof and full mixed-lifecycle sequence/parity proof are absent. Playbook Section8/Part14 require all criteria and decisions closed; passing current suites cannot waive those requirements.
+
+CC01–16 and Scenario15 golden/zero-floor accounting PASS locally; detailed FIT01–14, Scenarios6–17 and approved decision matrices are in AUDIT.md. Some complete scenario/UI outcomes are not proved by accounting-only fixtures. Existing PH16/17 scoped completion is preserved; G3 is not added to passed gates. No remote migration/deployment, live provider, new browser or phone test.
+
+Next one action: resolve D13's nonpositive projected-cap semantics with Tejas before affected implementation. PH19/P04-AI handoff remains queued until G3 passes or an explicit gate-scope amendment resolves the sequencing; none inferred.
+
+---
 # Test results
 
 
@@ -163,3 +176,18 @@ Normal/reduced375/768/1280 evidence and expanded editor captures are adjacent to
 Remote migration/deployment, full18scenario release matrix, G3–G6, physical phone and V3 review
 NOT RUN here. Existing V1/V2 approvals retain their original named revisions. Full local result
 does not certify a production-ready release or approve OPEN financial semantics.
+
+## D13 follow-up — 2026-10-08 IST
+
+D13-v1 is now APPROVED; earlier D13-OPEN findings are historical. Pure domain negative/equality cap fixtures and1000-case property now PASS;290unit+74integration,155domain/100% implemented coverage,types/lint/source hashes PASS. Evidence: docs/evidence/G3/D13/RESULT.md. SQL still returns UNAVAILABLE for negative projections; no new persistence parity claim. G3 remains BLOCKED. Next founder decision: D12 Scenario9 donor capacities/floors and health classification; preserve remaining G3 findings and approved cash-goal/FIT13/sequence coverage work.
+
+## D12-v1 / D13 database follow-up — 2026-10-09 IST
+
+D12-v1 exact Scenario9 approval recorded in amendments/D12-v1.md. D12-Shopping conflict remains pending: “remaining spent₹2,200” conflicts with D16 allowance-only trimming (₹2,800 allowance/₹2,000 spent/₹800 remaining). Approval was requested; no disputed successful acceptance result inferred. Independent canonical donor math and stale-donor rejection verified; D13 local SQL now clamps cap to zero and rejects positive creation without writes. Evidence docs/evidence/G3/D12/RESULT.md and logs. No remote migration.
+
+PASS291unit+74integration;156domain/100% implemented coverage;21commitment cases;16security;17recovery cases;types/lint/five source hashes. Immediate next decision is D12-Shopping clarification; then full canonical acceptance proof and D14 distress-floor semantics. G3 remains BLOCKED and PH19 queued.
+## D12 clarified / D13 parity verified — 2026-10-09 IST
+
+D12-Shopping is explicitly resolved; Shopping280000 allowance/200000 spent/80000 remaining, Entertainment140000/100000/40000. Canonical RPC acceptance covers80000 deficit, preserves StateA and canonical money/baselines; stable replay and stale donor rejection pass. D13 zero-cap SQL/domain parity passes. Latest evidence docs/evidence/G3/D12-clarified/RESULT.md.
+
+PASS291unit+74integration,156domain/100% implemented coverage,18recovery,21commitment,16security,types/lint/five source hashes. G3 remains BLOCKED for D14/D15/D26 and missing goal-cash/FIT13/full lifecycle evidence. Next exact action: resolve D14 floors versus distress permission/restoration. No remote changes or PH19 advance. Historical pending D12/D13 statements below are superseded.

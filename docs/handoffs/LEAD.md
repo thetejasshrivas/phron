@@ -1,3 +1,19 @@
+## D12 clarified / D13 parity verified — 2026-10-09 IST
+
+D12-Shopping is explicitly resolved; Shopping280000 allowance/200000 spent/80000 remaining, Entertainment140000/100000/40000. Canonical RPC acceptance covers80000 deficit, preserves StateA and canonical money/baselines; stable replay and stale donor rejection pass. D13 zero-cap SQL/domain parity passes. Latest evidence docs/evidence/G3/D12-clarified/RESULT.md.
+
+PASS291unit+74integration,156domain/100% implemented coverage,18recovery,21commitment,16security,types/lint/five source hashes. G3 remains BLOCKED for D14/D15/D26 and missing goal-cash/FIT13/full lifecycle evidence. Next exact action: resolve D14 floors versus distress permission/restoration. No remote changes or PH19 advance. Historical pending D12/D13 statements below are superseded.
+
+---
+# Current Lead handoff — PH-18 G3 BLOCKED
+
+2026-10-08 IST; audited candidate56568aa029745a5b7bcf3b4c9f19a245a23c07aa/main. Single writer; audit-only docs/evidence changes; unrelated user note untouched. All fresh suites pass (284unit+74integration,148domain/100% implemented coverage,159local financial/security cases), types/lint/build/source hashes PASS. See docs/evidence/G3/AUDIT.md, RUNS.md and docs/TEST_RESULTS.md for exact matrices/counts.
+
+Do not advance to PH19 or mark G3 passed. Playbook Section8/Part14 require closed relevant decisions and full proofs. D12/D13/D14/D15/D26 remain OPEN; approved cash goal purchase, FIT13 adversarial boundary and full lifecycle/SQL math coverage evidence are missing. Existing PH16/17 scoped completions remain valid but do not waive G3. First next action: resolve D13 nonpositive projected-cap behavior with one explicit founder decision. Continue independent audit remediation only; do not invent rules or change gate scope. PH19/P04-AI is queued, not handed off.
+
+Historical handoffs below are superseded for current step/gate status.
+
+---
 # Current Lead handoff — PH-17 COMPLETE → PH-18 / Gate G3
 
 2026-10-08 IST. Single active writer PHRON-00 Lead, W:/AI Product Sprint/Phron, main. PH17 implementation revision is the commit containing tests/integration/ph17/evidence/RESULT.md; inspect git log and status on resume. Unrelated New Text Document.txt remains untouched. Historical handoffs below do not override this entry.
@@ -174,3 +190,13 @@ Tejas explicitly accepted PH16 completion scope and directed advancement. PH16 C
 Read PRD15.10/15.11/18.7/19.8/19.9, Scenarios6–8/13–14/16, D04/D05/D06/D10 and current contracts before implementation. D04 actual credited cycle salary/baseline separation, D05 IST/calendar convention and D06 once-only residual cash drift are already APPROVED; do not ask to reapprove them.
 
 First action: resolve D05-extension with one founder decision on overdue pacing, delayed-confirmation cycle boundaries and unpaid carry. Then address D03-clearance, D22 drift budget effects, D15 bounded STS effects and D26 insufficient factual cash as they become dependent. Preserve outstanding tracked reserves, held goals, baseline bucket restoration, stable operation IDs and current-cycle edit restrictions. No salary credit or rollover on date arrival alone. Existing open decisions remain open; completion scope approval is not an amendment to their financial rules.
+
+## D13 follow-up — 2026-10-08 IST
+
+D13-v1 is now APPROVED; earlier D13-OPEN findings are historical. Pure domain negative/equality cap fixtures and1000-case property now PASS;290unit+74integration,155domain/100% implemented coverage,types/lint/source hashes PASS. Evidence: docs/evidence/G3/D13/RESULT.md. SQL still returns UNAVAILABLE for negative projections; no new persistence parity claim. G3 remains BLOCKED. Next founder decision: D12 Scenario9 donor capacities/floors and health classification; preserve remaining G3 findings and approved cash-goal/FIT13/sequence coverage work.
+
+## D12-v1 / D13 database follow-up — 2026-10-09 IST
+
+D12-v1 exact Scenario9 approval recorded in amendments/D12-v1.md. D12-Shopping conflict remains pending: “remaining spent₹2,200” conflicts with D16 allowance-only trimming (₹2,800 allowance/₹2,000 spent/₹800 remaining). Approval was requested; no disputed successful acceptance result inferred. Independent canonical donor math and stale-donor rejection verified; D13 local SQL now clamps cap to zero and rejects positive creation without writes. Evidence docs/evidence/G3/D12/RESULT.md and logs. No remote migration.
+
+PASS291unit+74integration;156domain/100% implemented coverage;21commitment cases;16security;17recovery cases;types/lint/five source hashes. Immediate next decision is D12-Shopping clarification; then full canonical acceptance proof and D14 distress-floor semantics. G3 remains BLOCKED and PH19 queued.

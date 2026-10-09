@@ -1,0 +1,94 @@
+
+> phron@0.1.0 test:domain:coverage
+> node scripts/domain-coverage.mjs
+
+FAIL tests/unit/domain/recovery.test.ts
+  ● PH16 approved recovery math › FIT06 Scenario12 active carried lock, no inferred clearing event
+
+    RangeError: D13 unresolved: negative projected cap
+
+      73 |   return nonnegativePaise(cash) - nonnegativePaise(unpaid) - nonnegativePaise(cardReserve) >= needed;
+      74 | }
+    > 75 |
+         | ^
+
+      at commitmentCapacity (src/domain/recovery.ts:75:31)
+      at Object.<anonymous> (tests/unit/domain/recovery.test.ts:91:63)
+
+  ● PH16 approved recovery math › D13 FIT05 nonpositive projection 100n minus 101n prohibits positive commitment
+
+    RangeError: D13 unresolved: negative projected cap
+
+      73 |   return nonnegativePaise(cash) - nonnegativePaise(unpaid) - nonnegativePaise(cardReserve) >= needed;
+      74 | }
+    > 75 |
+         | ^
+
+      at commitmentCapacity (src/domain/recovery.ts:75:31)
+      at tests/unit/domain/recovery.test.ts:119:67
+
+  ● PH16 approved recovery math › D13 FIT05 nonpositive projection 3500000n minus 3800000n prohibits positive commitment
+
+    RangeError: D13 unresolved: negative projected cap
+
+      73 |   return nonnegativePaise(cash) - nonnegativePaise(unpaid) - nonnegativePaise(cardReserve) >= needed;
+      74 | }
+    > 75 |
+         | ^
+
+      at commitmentCapacity (src/domain/recovery.ts:75:31)
+      at tests/unit/domain/recovery.test.ts:119:67
+
+  ● PH16 approved recovery math › D13 FIT05 nonpositive projection 0n minus 9223372036854775807n prohibits positive commitment
+
+    RangeError: D13 unresolved: negative projected cap
+
+      73 |   return nonnegativePaise(cash) - nonnegativePaise(unpaid) - nonnegativePaise(cardReserve) >= needed;
+      74 | }
+    > 75 |
+         | ^
+
+      at commitmentCapacity (src/domain/recovery.ts:75:31)
+      at tests/unit/domain/recovery.test.ts:119:67
+
+FAIL tests/property/recovery.test.ts
+  ● Test suite failed to run
+
+      x Expected '}', got '<eof>'
+        ,-[W:\AI Product Sprint\Phron\tests\property\recovery.test.ts:50:6]
+     48 |   expect(result.safePool).toBe(cash>held?cash-held:0n);
+     49 |  }),options);
+     50 | });
+        `----
+      x Expected ',', got '<eof>'
+        ,-[W:\AI Product Sprint\Phron\tests\property\recovery.test.ts:50:6]
+     48 |   expect(result.safePool).toBe(cash>held?cash-held:0n);
+     49 |  }),options);
+     50 | });
+        `----
+
+
+    Caused by:
+        Syntax Error
+
+      at Object.transformSync (node_modules/next/src/build/swc/index.ts:1660:25)
+      at transformSync (node_modules/next/src/build/swc/index.ts:1810:19)
+      at Object.process (node_modules/next/src/build/swc/jest-transformer.ts:109:25)
+
+-------------|---------|----------|---------|---------|-------------------
+File         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+-------------|---------|----------|---------|---------|-------------------
+All files    |     100 |      100 |     100 |     100 |
+ card.ts     |     100 |      100 |     100 |     100 |
+ core.ts     |     100 |      100 |     100 |     100 |
+ cycle.ts    |     100 |      100 |     100 |     100 |
+ dates.ts    |     100 |      100 |     100 |     100 |
+ money.ts    |     100 |      100 |     100 |     100 |
+ recovery.ts |     100 |      100 |     100 |     100 |
+-------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 2 failed, 6 passed, 8 total
+Tests:       4 failed, 146 passed, 150 total
+Snapshots:   0 total
+Time:        2.372 s
+Ran all test suites.

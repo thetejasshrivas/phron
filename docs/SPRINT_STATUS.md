@@ -5,27 +5,51 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: PH17 implementation commit containing tests/integration/ph17/evidence/RESULT.md
+commit: 56568aa029745a5b7bcf3b4c9f19a245a23c07aa
 dirty_files: ["New Text Document.txt (untouched user work)"]
 active_chat: PHRON-00 Lead
 phase: 3
 current_step: PH-18
-step_state: READY
+step_state: BLOCKED
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
-approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D10-v1, D11-v1, D16-v1, D17-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1]
+approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D10-v1, D11-v1, D16-v1, D17-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1]
 completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17]
 passed_gates: [G0A, G1, V1, G2, V2]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: PENDING}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb"}
-blocking_decisions: [ D07-card, D07-funding, D08, D09, D12, D13, D14, D15, D18, D19, D20, D23, D24, D25, D26]
-latest_evidence: tests/integration/ph17/evidence/RESULT.md
+blocking_decisions: [ D07-card, D07-funding, D08, D09, D14, D15, D18, D19, D20, D23, D24, D25, D26]
+latest_evidence: docs/evidence/G3/AUDIT.md
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
-migration_state: PH11_PH12_REMOTE_APPLIED; PH15_PH16_PH17_LOCAL_ONLY_VERIFIED_NOT_REMOTE
+migration_state: PH11_PH12_REMOTE_APPLIED; PH15_PH16_PH17_PH18_LOCAL_ONLY_VERIFIED_NOT_REMOTE
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: PH-18 / Gate G3 — Financial Lifecycle Audit
-last_updated_ist: 2026-10-08
+next_action: Resolve D14 recovery floors versus distress permission and restoration
+last_updated_ist: 2026-10-09
 ```
+
+
+## D12 clarified / D13 parity verified — 2026-10-09 IST
+
+D12-Shopping is explicitly resolved; Shopping280000 allowance/200000 spent/80000 remaining, Entertainment140000/100000/40000. Canonical RPC acceptance covers80000 deficit, preserves StateA and canonical money/baselines; stable replay and stale donor rejection pass. D13 zero-cap SQL/domain parity passes. Latest evidence docs/evidence/G3/D12-clarified/RESULT.md.
+
+PASS291unit+74integration,156domain/100% implemented coverage,18recovery,21commitment,16security,types/lint/five source hashes. G3 remains BLOCKED for D14/D15/D26 and missing goal-cash/FIT13/full lifecycle evidence. Next exact action: resolve D14 floors versus distress permission/restoration. No remote changes or PH19 advance. Historical pending D12/D13 statements below are superseded.
+
+## D12-v1 / D13 database follow-up — 2026-10-09 IST
+
+D12-v1 exact Scenario9 approval recorded in amendments/D12-v1.md. D12-Shopping conflict remains pending: “remaining spent₹2,200” conflicts with D16 allowance-only trimming (₹2,800 allowance/₹2,000 spent/₹800 remaining). Approval was requested; no disputed successful acceptance result inferred. Independent canonical donor math and stale-donor rejection verified; D13 local SQL now clamps cap to zero and rejects positive creation without writes. Evidence docs/evidence/G3/D12/RESULT.md and logs. No remote migration.
+
+PASS291unit+74integration;156domain/100% implemented coverage;21commitment cases;16security;17recovery cases;types/lint/five source hashes. Immediate next decision is D12-Shopping clarification; then full canonical acceptance proof and D14 distress-floor semantics. G3 remains BLOCKED and PH19 queued.
+## D13-v1 APPROVED / domain verified — 2026-10-08 IST
+
+Exact terms recorded in DECISIONS and amendments/D13-v1.md. Domain capacity now clamps nonpositive projections to zero. Six added unit cases and one seeded1000-case property cover zero/negative/equality/large values, rounded-zero positive projections, no positive admissible request and preserved uncovered deficit. PASS290unit+74integration;155domain tests/100% implemented coverage;typecheck/lint/source hashes. Evidence docs/evidence/G3/D13/RESULT.md. TDD negative fixtures failed first; test syntax failure and correction recorded honestly.
+
+G3 remains BLOCKED. D13 semantics are closed; SQL negative-projection guard still returns UNAVAILABLE and persistence parity is pending (no DB changes/tests this turn). Next founder decision is D12 Scenario9 explicit donor capacities/floors and health classification. D14/D15/D26 and other G3 findings remain open. Historical D13-OPEN statements below are superseded only by this scoped approval/evidence.
+
+## PH-18 / Gate G3 audited — BLOCKED — 2026-10-08 IST
+
+Candidate56568aa; all executed tests PASS:284unit+74integration,148domain/100% implemented TS coverage,159 local financial/security cases (30cycle,46lifecycle,25payment,17commitment,16recovery,9cancellation,16security), types/lint/build/five hashes. Full matrices and evidence: docs/evidence/G3/AUDIT.md and RUNS.md; docs/TEST_RESULTS.md.
+
+G3 NOT PASSED: relevant D12/D13/D14/D15/D26 remain OPEN; approved goal cash execution and FIT13 malicious-AI-output proof missing;100% implemented TS coverage does not cover all Section18 math/SQL/lifecycle sequences. PH18 remains current and BLOCKED; no PH19 handoff or implementation. PH17 scoped completion and earlier passed gates remain unchanged. Next action is explicit D13 resolution, then remaining audit findings. No product, remote or deployment changes.
 
 ## PH-17 COMPLETE — 2026-10-08 IST
 

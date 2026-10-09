@@ -16,6 +16,29 @@ const baseline=()=>sql(`select jsonb_agg(jsonb_build_array(id,monthly_allocation
 try{
  assert.equal((await rpc(b.client,'phron_onboard',initial)).ok,true);
  const cases=[
+ ['D12 clarified Scenario9 acceptance preserves spent, floors and healthy active recovery',async input=>{
+  const entertainment=input.trims[0].bucketId,shopping=input.trims[1].bucketId;
+  await sql(`update public.cycle_buckets set allocation_paise=200000,spent_paise=100000,floor_paise=40000 where user_id=${literal(a.id)} and bucket_id=${literal(entertainment)};update public.cycle_buckets set allocation_paise=300000,spent_paise=200000,floor_paise=80000 where user_id=${literal(a.id)} and bucket_id=${literal(shopping)};update public.cycle_buckets set floor_paise=50000 where user_id=${literal(a.id)} and bucket_id=${literal(input.sourceBucketId)};update public.financial_profiles set current_liquid_balance_paise=1000000 where user_id=${literal(a.id)};update public.pay_cycles set opening_cash_paise=1420000,opening_budget_paise=1370000,spent_paise=420000,cash_outflows_paise=420000 where user_id=${literal(a.id)} and active`);
+  const before=await state(),base=await baseline(),op=randomUUID();
+  assert.equal(before.snapshot.health,'A');assert.equal(before.snapshot.money.safePool,'950000');
+  const result=await accept(input,op,before.snapshot.revision);assert.equal(result.ok,true);
+  const after=await state();assert.equal(after.snapshot.health,'A');assert.deepEqual(after.snapshot.money,before.snapshot.money);assert.equal(await baseline(),base);
+  for(const [id,allocation,spent,remaining] of [[shopping,'280000','200000',80000n],[entertainment,'140000','100000',40000n]]){
+   const bucket=after.buckets.find(x=>x.id===id);assert.equal(bucket.allocation,allocation);assert.equal(bucket.spent,spent);assert.equal(BigInt(bucket.allocation)-BigInt(bucket.spent),remaining);
+  }
+  assert.equal(await sql(`select deficit_amount_paise||':'||recovered_paise||':'||status from public.recovery_plans where user_id=${literal(a.id)} and id=${literal(op)}`),'80000:80000:ACCEPTED');
+  assert.deepEqual(await accept(input,op,before.snapshot.revision),result);
+  assert.equal(after.buckets.find(x=>x.id===input.sourceBucketId).allocation,'40000');
+ }],
+ ['D12 canonical donor balances are revalidated before accepting stale 600/200 trims',async input=>{
+  const entertainment=input.trims[0].bucketId,shopping=input.trims[1].bucketId;
+  await sql(`update public.cycle_buckets set allocation_paise=200000,spent_paise=100000,floor_paise=40000 where user_id=${literal(a.id)} and bucket_id=${literal(entertainment)};update public.cycle_buckets set allocation_paise=300000,spent_paise=200000,floor_paise=80000 where user_id=${literal(a.id)} and bucket_id=${literal(shopping)};update public.cycle_buckets set floor_paise=50000 where user_id=${literal(a.id)} and bucket_id=${literal(input.sourceBucketId)}`);
+  assert.equal(await sql(`select allocation_paise-spent_paise-floor_paise from public.cycle_buckets where user_id=${literal(a.id)} and bucket_id=${literal(entertainment)}`),'60000');
+  assert.equal(await sql(`select allocation_paise-spent_paise-floor_paise from public.cycle_buckets where user_id=${literal(a.id)} and bucket_id=${literal(shopping)}`),'20000');
+  await sql(`update public.cycle_buckets set spent_paise=spent_paise+1 where user_id=${literal(a.id)} and bucket_id=${literal(entertainment)}`);
+  const before=await state(),op=randomUUID();assert.equal((await accept(input,op,before.snapshot.revision)).error.code,'VERSION_CONFLICT');assert.deepEqual(await state(),before);
+  assert.equal(await sql(`select count(*) from public.recovery_plans where user_id=${literal(a.id)}`),'0');
+ }],
  ['D16 exact donor trims preserve baseline, cash, goals and source allowance',async input=>{
   const before=await state(),base=await baseline();const r=await accept(input,randomUUID(),before.snapshot.revision);assert.equal(r.ok,true);
   const after=await state();assert.equal(await baseline(),base);assert.deepEqual(after.snapshot.money,before.snapshot.money);

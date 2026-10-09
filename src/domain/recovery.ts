@@ -41,8 +41,9 @@ export function commitmentCapacity(income: bigint, obligations: bigint, createdT
   const projected = nonnegativePaise(income) - nonnegativePaise(obligations);
   const created = nonnegativePaise(createdThisCycle);
   if (typeof carriedActive !== "boolean") throw new TypeError("Expected explicit carried-active state");
-  if (projected < 0n) throw new RangeError("D13 unresolved: negative projected cap");
-  const available = projected * 15n / 100n - created;
+  // D13-v1: a nonpositive projection creates zero new capacity, never fictional debt.
+  const cap = (projected > 0n ? projected : 0n) * 15n / 100n;
+  const available = cap - created;
   return carriedActive || available < 0n ? 0n : available;
 }
 /** Fixed schedule basis: do not rebase accumulatedAtStart each month or distribute remainder early. */

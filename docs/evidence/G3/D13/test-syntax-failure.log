@@ -1,0 +1,45 @@
+
+> phron@0.1.0 test:domain:coverage
+> node scripts/domain-coverage.mjs
+
+FAIL tests/property/recovery.test.ts
+  ● Test suite failed to run
+
+      x Expected '}', got '<eof>'
+        ,-[W:\AI Product Sprint\Phron\tests\property\recovery.test.ts:50:6]
+     48 |   expect(result.safePool).toBe(cash>held?cash-held:0n);
+     49 |  }),options);
+     50 | });
+        `----
+      x Expected ',', got '<eof>'
+        ,-[W:\AI Product Sprint\Phron\tests\property\recovery.test.ts:50:6]
+     48 |   expect(result.safePool).toBe(cash>held?cash-held:0n);
+     49 |  }),options);
+     50 | });
+        `----
+
+
+    Caused by:
+        Syntax Error
+
+      at Object.transformSync (node_modules/next/src/build/swc/index.ts:1660:25)
+      at transformSync (node_modules/next/src/build/swc/index.ts:1810:19)
+      at Object.process (node_modules/next/src/build/swc/jest-transformer.ts:109:25)
+
+-------------|---------|----------|---------|---------|-------------------
+File         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+-------------|---------|----------|---------|---------|-------------------
+All files    |     100 |      100 |     100 |     100 |
+ card.ts     |     100 |      100 |     100 |     100 |
+ core.ts     |     100 |      100 |     100 |     100 |
+ cycle.ts    |     100 |      100 |     100 |     100 |
+ dates.ts    |     100 |      100 |     100 |     100 |
+ money.ts    |     100 |      100 |     100 |     100 |
+ recovery.ts |     100 |      100 |     100 |     100 |
+-------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 1 failed, 7 passed, 8 total
+Tests:       150 passed, 150 total
+Snapshots:   0 total
+Time:        2.241 s
+Ran all test suites.

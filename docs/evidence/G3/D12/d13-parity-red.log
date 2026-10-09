@@ -1,0 +1,22 @@
+FAIL D13 zero cap at baseline 1999999 rejects positive creation without writes: ASSERTION_FAILED
+PASS D13 zero cap at baseline 2000000 rejects positive creation without writes
+PASS D13 zero cap at baseline 2000001 rejects positive creation without writes
+PASS D13 zero cap at baseline 2000006 rejects positive creation without writes
+PASS Scenarios10/11: exact 250000 acceptance under 600000 cap, no cash created
+PASS D03 multi-event same-cycle cap permits second acceptance
+PASS cap exactly reached; one paise above rejected atomically
+PASS Scenario12 carried commitment locks even with unused cumulative cap
+PASS D21 cash equality accepted; reserved cash one paise below denied
+PASS tracked executed purchase qualifies without surplus cash; canonical reserve unchanged
+PASS identical concurrent intent persists once and audit is tenant-isolated
+PASS unexhausted donor capacity prevents premature commitment
+PASS executed cash or deleted purchase cannot serve as tracked-card evidence
+PASS stable-ID durable replay and changed body mismatch
+PASS concurrent acceptance and stale retries cannot exceed cap
+PASS tenant source/purchase denial and no direct table writes
+PASS anonymous, unsafe money and submitted identity denied
+PASS forced next_cycle_commitments failure rolls back all effects
+PASS forced pay_cycles failure rolls back all effects
+PASS forced financial_profiles failure rolls back all effects
+PASS forced operation_log failure rolls back all effects
+20 passed; 1 failed; 21 total

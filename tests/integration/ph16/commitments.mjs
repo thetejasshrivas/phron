@@ -15,6 +15,16 @@ async function setup(){
 try {
  assert.equal((await rpc(b.client,'phron_onboard',initial)).ok,true);
  const cases=[
+ ...['1999999','2000000','2000001','2000006'].map(income=>[`D13 zero cap at baseline ${income} rejects positive creation without writes`,async input=>{
+  await sql(`update public.financial_profiles set sustainable_net_income_paise=${income} where user_id=${literal(a.id)}`);
+  const before=await state(),op=randomUUID();
+  const result=await accept({...input,amount:'1'},op,before.snapshot.revision);
+  assert.equal(result.ok,false);assert.equal(result.error.code,'VALIDATION');
+  assert.deepEqual(await state(),before);
+  assert.equal(await sql(`select count(*) from public.next_cycle_commitments where user_id=${literal(a.id)}`),'0');
+  assert.equal(await sql(`select count(*) from public.operation_log where user_id=${literal(a.id)} and operation_id=${literal(op)}`),'0');
+  assert.equal(await sql(`select new_commitment_paise from public.pay_cycles where user_id=${literal(a.id)} and active`),'0');
+ }]),
  ['Scenarios10/11: exact 250000 acceptance under 600000 cap, no cash created',async input=>{
   await sql(`insert into public.goals(user_id,name,target_amount_paise,current_accumulated_paise,monthly_contribution_paise,target_date,date_type,status,held_paise) values(${literal(a.id)},'Synthetic fixed phone',3000000,0,500000,'2026-10-10','FIXED','ON_TRACK',0)`);
   const before=await state(),op=randomUUID();const r=await accept(input,op,before.snapshot.revision);assert.equal(r.ok,true);

@@ -2,6 +2,14 @@ import { describe, test, expect } from "@jest/globals";
 import { hasCashPaymentCapacity, commitmentCapacity, goalSchedule, goalPace, overspend, planRecovery } from "@/domain/recovery";
 
 describe("PH16 approved recovery math", () => {
+  test("D12-v1 canonical donor capacities cover the exact Dining deficit",()=>{
+    const deficit=overspend(40000n,120000n);
+    expect(deficit).toBe(80000n);
+    expect(planRecovery(deficit,[
+      {category:"entertainment",balance:100000n,floor:40000n},
+      {category:"shopping",balance:100000n,floor:80000n}
+    ])).toEqual({cuts:[{category:"entertainment",amount:60000n},{category:"shopping",amount:20000n}],uncovered:0n});
+  });
   test("overspend is positive excess only", () => {
     expect(overspend(40000n, 120000n)).toBe(80000n);
     expect(overspend(120000n, 40000n)).toBe(0n);
@@ -40,7 +48,22 @@ describe("PH16 approved recovery math", () => {
   test("FIT06 Scenario12 active carried lock, no inferred clearing event", () => {
     expect(commitmentCapacity(4000000n,0n,0n,true)).toBe(0n);
     expect(commitmentCapacity(4000000n,0n,0n,false)).toBe(600000n);
-    expect(() => commitmentCapacity(100n,101n,0n,false)).toThrow("D13");
+    expect(commitmentCapacity(100n,101n,0n,false)).toBe(0n);
+  });
+  test.each([[0n,0n],[100n,100n],[100n,101n],[3500000n,3800000n],[0n,9223372036854775807n]])("D13 FIT05 nonpositive projection %s minus %s prohibits positive commitment", (income,obligations) => {
+    for (const carried of [false,true]) {
+      expect(commitmentCapacity(income,obligations,0n,carried)).toBe(0n);
+      expect(commitmentCapacity(income,obligations,1n,carried)).toBe(0n);
+    }
+    const recovery=planRecovery(80000n,[{category:"entertainment",balance:30000n,floor:20000n}]);
+    expect(recovery).toEqual({cuts:[{category:"entertainment",amount:10000n}],uncovered:70000n});
+    // A positive request cannot fit zero capacity; the residual remains unresolved, never future debt.
+    expect(recovery.uncovered > commitmentCapacity(income,obligations,0n,false)).toBe(true);
+  });
+  test("D13 cap floors sub-paisa percentages and preserves first positive cap",()=>{
+    expect(commitmentCapacity(101n,100n,0n,false)).toBe(0n);
+    expect(commitmentCapacity(106n,100n,0n,false)).toBe(0n);
+    expect(commitmentCapacity(107n,100n,0n,false)).toBe(1n);
   });
   test("D07-v2 final-cycle remainder and completed goals", () => {
     expect([1,2,3].map(i=>goalSchedule(100n,0n,3,i))).toEqual([33n,33n,34n]);

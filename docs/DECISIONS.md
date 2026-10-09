@@ -283,34 +283,39 @@ Owner: PHRON-00 Lead
 ## D12
 
 Decision ID: D12
-Status: OPEN
-Source clauses: 41/42/43; Scenarios 1/2/9; AC-REC-01/02
-Issue: Claimed counts and fixtures incomplete or inconsistent
-Counterexample: Scenario 2 cash balance lacks opening-cash derivation
-Affected steps and gates: PH-10–24;PH-22; dependent gate remains blocked
-Proposed resolution: Use actual 60 FR/47 AC definitions; specify Scenario 1 unpaid reserve, Scenario 2 ₹90k opening−₹50k spending=₹40k cash, Scenario 9 recomputed health, donor capacities and rounding. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
-Required tests: all mappings; canonical fixtures; NOT_RUN
-Owner: PHRON-00 Lead
+Status: APPROVED — D12-v1; D12-Shopping RESOLVED
+Founder: explicit Tejas approval and clarification2026-10-09 IST.
+Source: Scenario9, PRD18.4/18.6, D16-v1. Frozen PRD unchanged.
+
+## Exact founder clarification — 2026-10-09 IST
+
+1. Shopping Trim Math:
+   - Starting: Allocation ₹3,000, Spent ₹2,000, Floor ₹800.
+   - Available capacity: ₹1,000 - ₹800 = ₹200.
+   - Recovery trim: ₹200 reduction to current-cycle allowance -> New Allocation is ₹2,800, Spent remains ₹2,000, Remaining allowance is ₹800 (exactly at floor).
+2. Entertainment Trim Math:
+   - Starting: Allocation ₹2,000, Spent ₹1,000, Floor ₹400.
+   - Recovery trim: ₹600 reduction to allowance -> New Allocation is ₹1,400, Spent remains ₹1,000, Remaining allowance is ₹400 (at floor).
+3. Dining Out Deficit: ₹800 deficit fully covered by ₹600 + ₹200 trims. Health state remains State A (Healthy) with Active Recovery Plan.
+
+This explicit clarification resolves D12-Shopping and supersedes the original “remaining spent ₹2,200” wording below. D16 allowance-only changes and baseline preservation remain effective. D02 structural/liquidity distress rules are unchanged; the canonical healthy fixture assumes sustainable income exceeds obligations. No global distress-floor or goal-execution rule is inferred.
+Exact original terms and history: [D12-v1](amendments/D12-v1.md). Scope is Scenario9; earlier Scenario1/2 and count issues are not silently amended. Tests: canonical600/200 trims, donor floors, unchanged spent/baselines/cash, positive pool/StateA, accepted recovery audit, stable replay and stale-donor rejection. Owner: PHRON-00 Lead.
 
 ## D13
 
 Decision ID: D13
-Status: OPEN
-Source clauses: 18.5;FIT-05/06
-Issue: Literal negative cap incompatible with zero commitments
-Counterexample: ₹35k income−₹38k obligations gives −₹450 cap
-Affected steps and gates: PH-10/16/17/18; dependent gate remains blocked
-Proposed resolution: Nonnegative new capacity; revise bound without erasing carried commitments. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
-Required tests: negative/zero/positive projection; NOT_RUN
-Owner: PHRON-00 Lead
+Status: APPROVED — D13-v1
+Founder: Tejas; explicit approval2026-10-08 IST.
+Source clauses:18.5;FIT-05/06. Frozen PRD unchanged.
+
+Exact approved terms:
+1. Zero-Floor Clamping: When P_disc_projected <= 0 (O_total >= I_sustainable), Commitment_Cap_max is clamped strictly to 0 paise:
+   Commitment_Cap_max = max(0, floor(0.150 * max(0, P_disc_projected)))
+2. Absolute Prohibition on Future Commitments: When Commitment_Cap_max = 0, no next-cycle commitments can be proposed or accepted (C_next_cycle = 0).
+3. Unresolvable Shortfall: Any overspend deficit exceeding available trimmable capacity is flagged as an unresolvable shortfall requiring goal adjustments without manufacturing future budget debt.
+
+Amendment: [D13-v1](amendments/D13-v1.md). Pure domain zero/negative/equality/one-paisa/large-integer fixtures and property evidence: docs/evidence/G3/D13/. Persistence still needs D13 response/parity verification; approval is not an executed acceptance test. Other G3 blockers remain unchanged.
+Owner: PHRON-00 Lead.
 
 ## D14
 

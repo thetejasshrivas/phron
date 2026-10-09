@@ -4,6 +4,15 @@ import { commitmentCapacity, goalSchedule, planRecovery } from "@/domain/recover
 import { calculateMargins } from "@/domain/core";
 const options = {seed:160407,numRuns:500};
 const amount = fc.bigInt({min:0n,max:10000000000000000n});
+test("D13 FIT05 nonpositive projections allow no positive future commitment",()=>{
+ fc.assert(fc.property(amount,amount,amount,fc.boolean(),fc.bigInt({min:1n,max:10000000000000000n}),(income,excess,created,carried,request)=>{
+  const capacity=commitmentCapacity(income,income+excess,created,carried);
+  expect(capacity).toBe(0n);
+  expect(request<=capacity).toBe(false);
+  const recovery=planRecovery(request,[]);
+  expect(recovery).toEqual({cuts:[],uncovered:request});
+ }),{seed:180013,numRuns:1000});
+});
 test("FIT04 trim conservation and donor floors",()=>{
  fc.assert(fc.property(amount,amount,amount,(deficit,balance,floor)=>{
   const plan=planRecovery(deficit,[{category:"entertainment",balance,floor}]);
