@@ -1,3 +1,15 @@
+# PH25 → PH26 handoff — 2026-10-11 IST
+
+Audited repository W:/AI Product Sprint/Phron, main028c332ceed636b1402b902f5fe31a1927257c1b. QA evidence commit is separate: resolve `git log -1 --format=%H -- docs/evidence/PH25/RESULT.md`. One active writer; no application/dependency/formula/migration/remote changes; source hashes verified. Scratch New Text Document.txt untouched. PH25 audit finished with findings; G5/G0B OPEN, V3 PENDING. PH26 has NOT begun.
+
+[PH25 report](../evidence/PH25/RESULT.md), [all retained timing samples](../evidence/PH25/measurements-all-valid.json), [latest focus evidence](../evidence/PH25/focus-detail/home-A-375-keyboard.json) and BUGS govern. Local production timing passes:8TTFV0.928–1.274s,24Home0.193–0.972s,8manual0.099–0.123s,2memory-capture0.315–0.345s; LCP232ms, EventTiming32ms, CLS0.023025max. Main77PASS/6FAIL and focus26PASS/4FAIL remain visible; native calendar outer CSS predicates include false positives, but mobile bottom navigation really hides coach/date/method focus. State/surface contrast18/18+15/15, reduced-motion, charts, tab reachability, modal exits, responsive375overflow0, offline/failure drills pass. Build/lint/typecheck/source hashes0. No fresh full financial regression rerun; PH24 baseline remains prior evidence. No audible AT, physical phone, field vitals, live-provider or hosted current-candidate verification claimed.
+
+**Next one action, pending operator authorization:** PH26 / Experience: read DESIGN/MOTION, PH25 RESULT and PH25-A11Y-01 in BUGS; fix fixed-bottom-navigation focus visibility at375 without financial/contract changes. Retest coach details, manual purchase date/method, all surfaces at375/768/1280, native dialogs and reduced motion. Inspect generic container labels and audible screen-reader behavior separately. Prepare a named final V3 revision with screenshots for Tejas; do not self-approve V3 or Gate G5. No deployment or remote migration is included. Use `node tests/e2e/ph25/audit.mjs --final` and `--focus-detail`; ordinary local Auth/RPC fixtures, loopback Supabase55321/container supabase_db_phron-ph11-local, no provider keys. Retain diagnostic failures rather than weakening focus tests; distinguish native internal indicator from actual obscuration.
+
+Dependency/dev advisories(24entries,5high19moderate;production0) and process-local limiter limitations remain release assessment items. Old hosted preview0f28e49 is not this candidate. This handoff authorizes no PH26 code work until operator signal.
+
+---
+
 # PH24 remediation handoff — 2026-10-10 IST
 
 Local remediation COMPLETE at main, base caec5424 plus verified diff; resolve final commit using `git log -1`. PRIV01 resolved; rate policy explicitly10requests/60s/verified-auth-user/process, typed429 and Retry-After. No global Vercel quota guarantee. Dependency findings documented/deferred with trusted config controls;24dev entries,0production entries; no forced upgrade or founder release exception.

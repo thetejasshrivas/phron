@@ -1,0 +1,104 @@
+{
+  "key": "contrast-modal-375",
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "nodes": [
+        [
+          "#delete-title"
+        ],
+        [
+          "dialog[aria-labelledby=\"delete-title\"] > p"
+        ]
+      ]
+    }
+  ],
+  "passes": [
+    "aria-allowed-attr",
+    "aria-conditional-attr",
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "aria-prohibited-attr",
+    "aria-valid-attr-value",
+    "aria-valid-attr",
+    "autocomplete-valid",
+    "button-name",
+    "color-contrast",
+    "duplicate-id-aria",
+    "form-field-multiple-labels",
+    "label",
+    "meta-viewport",
+    "nested-interactive",
+    "target-size"
+  ],
+  "contrastPasses": [
+    {
+      "target": [
+        "dialog[aria-labelledby=\"delete-title\"] > label"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[autocomplete=\"off\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "dialog[aria-labelledby=\"delete-title\"] > .dialog-actions > .text-action"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    }
+  ],
+  "contrastReview": [
+    {
+      "selector": "#delete-title",
+      "fg": "rgb(35, 59, 46)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 11.044079324767358,
+      "required": 3,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    },
+    {
+      "selector": "dialog[aria-labelledby=\"delete-title\"] > p",
+      "fg": "rgb(35, 59, 46)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 11.044079324767358,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    }
+  ]
+}

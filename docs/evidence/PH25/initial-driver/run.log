@@ -1,0 +1,61 @@
+FAIL first-value-375: locator.fill: Timeout 9000ms exceeded.
+Call log:
+[2m  - waiting for getByLabel('Current liquid cash')[22m
+
+FAIL returning-375-cold-0: expect(locator).toBeVisible() failed
+
+Locator: getByText('Confirmed records loaded.', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Err
+FAIL returning-375-warm-0: expect(locator).toBeVisible() failed
+
+Locator: getByText('Confirmed records loaded.', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Err
+FAIL returning-375-warm-0: expect(locator).toBeVisible() failed
+
+Locator: getByText('Confirmed records loaded.', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Err
+FAIL capture-375: locator.evaluate: Timeout 9000ms exceeded.
+Call log:
+[2m  - waiting for locator('.manual-capture-panel')[22m
+
+FAIL lab-vitals-375: Cannot read properties of undefined (reading 'maxTwoFrameInputPaintMs')
+FAIL first-value-1280: locator.fill: Timeout 9000ms exceeded.
+Call log:
+[2m  - waiting for getByLabel('Current liquid cash')[22m
+
+FAIL returning-1280-cold-0: expect(locator).toBeVisible() failed
+
+Locator: getByText('Confirmed records loaded.', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Err
+FAIL returning-1280-warm-0: expect(locator).toBeVisible() failed
+
+Locator: getByText('Confirmed records loaded.', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Err
+FAIL returning-1280-warm-0: expect(locator).toBeVisible() failed
+
+Locator: getByText('Confirmed records loaded.', { exact: true })
+Expected: visible
+Timeout: 5000ms
+Err
+FAIL capture-1280: locator.evaluate: Timeout 9000ms exceeded.
+Call log:
+[2m  - waiting for locator('.manual-capture-panel')[22m
+
+FAIL lab-vitals-1280: Cannot read properties of undefined (reading 'maxTwoFrameInputPaintMs')
+PASS home-A-375-responsive
+PASS home-A-375-axe
+FAIL audit runtime locator.click: Timeout 9000ms exceeded.
+Call log:
+[2m  - waiting for locator('details:not([open])>summary').nth(3)[22m
+
+2 PASS; 13 FAIL; 15 total

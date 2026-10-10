@@ -1,0 +1,801 @@
+{
+  "head": "028c332ceed636b1402b902f5fe31a1927257c1b",
+  "environment": {
+    "os": "win32",
+    "release": "10.0.26200",
+    "cpu": "AMD Ryzen AI 7 350 w/ Radeon 860M              ",
+    "logicalProcessors": 16,
+    "memoryGB": 23,
+    "browser": "155.0.4283.45",
+    "browserMode": "isolated headless installed Edge",
+    "network": "loopback, unthrottled; no external providers",
+    "cpuThrottling": 1,
+    "origin": "http://127.0.0.1:3111",
+    "database": "persistent local Supabase55321",
+    "axeVersion": "4.14.0"
+  },
+  "checks": [
+    {
+      "name": "home-A-375-responsive",
+      "status": "PASS",
+      "durationMs": 84.21949999999924,
+      "width": 375,
+      "scroll": 375
+    },
+    {
+      "name": "home-A-375-axe",
+      "status": "PASS",
+      "durationMs": 259.9989999999998,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 2
+    },
+    {
+      "name": "home-A-375-expanded-labels",
+      "status": "PASS",
+      "durationMs": 156.6911999999993,
+      "axeChecksPassed": 26,
+      "incompleteChecks": 2
+    },
+    {
+      "name": "home-A-375-keyboard",
+      "status": "FAIL",
+      "durationMs": 645.4807000000001,
+      "reason": "invisible/missing focus indicator\n\n4 !== 0\n"
+    },
+    {
+      "name": "home-A-375-live-announcements",
+      "status": "PASS",
+      "durationMs": 17.92740000000049,
+      "namedTextboxes": 4
+    },
+    {
+      "name": "visualize-375-responsive",
+      "status": "PASS",
+      "durationMs": 58.912100000001374,
+      "width": 375,
+      "scroll": 375
+    },
+    {
+      "name": "visualize-375-axe",
+      "status": "PASS",
+      "durationMs": 190.3866999999991,
+      "axeChecksPassed": 26,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "visualize-375-keyboard",
+      "status": "PASS",
+      "durationMs": 75.3098000000009,
+      "expectedControls": 9,
+      "uniqueFocused": 9
+    },
+    {
+      "name": "visualize-375-chart-equivalents",
+      "status": "PASS",
+      "durationMs": 12.53440000000046,
+      "tables": 2,
+      "keyboardScrollable": true
+    },
+    {
+      "name": "manage-375-responsive",
+      "status": "PASS",
+      "durationMs": 85.77890000000116,
+      "width": 375,
+      "scroll": 375
+    },
+    {
+      "name": "manage-375-axe",
+      "status": "PASS",
+      "durationMs": 210.72420000000056,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 0
+    },
+    {
+      "name": "manage-375-keyboard",
+      "status": "FAIL",
+      "durationMs": 745.8335000000006,
+      "reason": "invisible/missing focus indicator\n\n4 !== 0\n"
+    },
+    {
+      "name": "manage-375-account-modal",
+      "status": "PASS",
+      "durationMs": 158.02080000000024,
+      "backgroundExcluded": true,
+      "browserChromeMayReceiveFocus": true,
+      "escapeReturnsFocus": true,
+      "deletionNotExecuted": true
+    },
+    {
+      "name": "bucket-modal-375",
+      "status": "PASS",
+      "durationMs": 133.40550000000076,
+      "backgroundExcluded": true,
+      "escapeReturnsFocus": true,
+      "noMutation": true
+    },
+    {
+      "name": "zoom-375",
+      "status": "PASS",
+      "durationMs": 82.40350000000035,
+      "method": "320CSS reflow floor (187CSS earlier stress run below WCAG minimum)"
+    },
+    {
+      "name": "home-A-1280-responsive",
+      "status": "PASS",
+      "durationMs": 91.67529999999897,
+      "width": 1280,
+      "scroll": 1280
+    },
+    {
+      "name": "home-A-1280-axe",
+      "status": "PASS",
+      "durationMs": 222.42329999999856,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 2
+    },
+    {
+      "name": "home-A-1280-expanded-labels",
+      "status": "PASS",
+      "durationMs": 159.5694999999996,
+      "axeChecksPassed": 26,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "home-A-1280-keyboard",
+      "status": "FAIL",
+      "durationMs": 813.2711999999992,
+      "reason": "invisible/missing focus indicator\n\n4 !== 0\n"
+    },
+    {
+      "name": "home-A-1280-live-announcements",
+      "status": "PASS",
+      "durationMs": 23.115999999998166,
+      "namedTextboxes": 4
+    },
+    {
+      "name": "visualize-1280-responsive",
+      "status": "PASS",
+      "durationMs": 70.73329999999987,
+      "width": 1280,
+      "scroll": 1280
+    },
+    {
+      "name": "visualize-1280-axe",
+      "status": "PASS",
+      "durationMs": 167.8109000000004,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "visualize-1280-keyboard",
+      "status": "PASS",
+      "durationMs": 62.61200000000099,
+      "expectedControls": 10,
+      "uniqueFocused": 10
+    },
+    {
+      "name": "visualize-1280-chart-equivalents",
+      "status": "PASS",
+      "durationMs": 11.34820000000036,
+      "tables": 2,
+      "keyboardScrollable": true
+    },
+    {
+      "name": "manage-1280-responsive",
+      "status": "PASS",
+      "durationMs": 119.43840000000273,
+      "width": 1280,
+      "scroll": 1280
+    },
+    {
+      "name": "manage-1280-axe",
+      "status": "PASS",
+      "durationMs": 232.100400000003,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 0
+    },
+    {
+      "name": "manage-1280-keyboard",
+      "status": "FAIL",
+      "durationMs": 895.1571000000004,
+      "reason": "invisible/missing focus indicator\n\n4 !== 0\n"
+    },
+    {
+      "name": "manage-1280-account-modal",
+      "status": "PASS",
+      "durationMs": 143.4369000000006,
+      "backgroundExcluded": true,
+      "browserChromeMayReceiveFocus": true,
+      "escapeReturnsFocus": true,
+      "deletionNotExecuted": true
+    },
+    {
+      "name": "bucket-modal-1280",
+      "status": "PASS",
+      "durationMs": 148.32430000000022,
+      "backgroundExcluded": true,
+      "escapeReturnsFocus": true,
+      "noMutation": true
+    },
+    {
+      "name": "zoom-1280",
+      "status": "PASS",
+      "durationMs": 108.45380000000296,
+      "method": "200% zoom-equivalent half CSS viewport, not actual browser zoom"
+    }
+  ],
+  "measurements": [],
+  "accessibility": [
+    {
+      "key": "home-A-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".goal-tank > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-A-375-expanded",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".goal-tank > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "select-name",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "visualize-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "text[x=\"0\"]"
+            ],
+            [
+              "text[x=\"490\"]"
+            ],
+            [
+              ".week-matrix > caption"
+            ],
+            [
+              ".week-matrix > tbody > tr:nth-child(1) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(1) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(1) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(1) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(1) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(7) > strong"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "html-has-lang",
+        "html-lang-valid",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "scrollable-region-focusable",
+        "summary-name",
+        "svg-img-alt",
+        "target-size",
+        "td-headers-attr",
+        "th-has-data-cells"
+      ]
+    },
+    {
+      "key": "manage-375",
+      "violations": [],
+      "incomplete": [],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "select-name",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "manage-375-modal",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "#delete-title"
+            ],
+            [
+              "dialog[aria-labelledby=\"delete-title\"] > p"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "autocomplete-valid",
+        "button-name",
+        "color-contrast",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "label",
+        "meta-viewport",
+        "nested-interactive",
+        "target-size"
+      ]
+    },
+    {
+      "key": "bucket-modal-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "#reallocate-ffe84f53-c82c-4a38-b6b6-7a135d16aa52"
+            ],
+            [
+              ".bucket-editor:nth-child(1) > dialog > p:nth-child(2)"
+            ],
+            [
+              ".bucket-editor:nth-child(1) > dialog > p[role=\"status\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "color-contrast",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "meta-viewport",
+        "nested-interactive",
+        "select-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-A-1280",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".goal-tank > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-A-1280-expanded",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "select-name",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "visualize-1280",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "text[x=\"0\"]"
+            ],
+            [
+              "text[x=\"490\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "html-has-lang",
+        "html-lang-valid",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "summary-name",
+        "svg-img-alt",
+        "target-size",
+        "td-headers-attr",
+        "th-has-data-cells"
+      ]
+    },
+    {
+      "key": "manage-1280",
+      "violations": [],
+      "incomplete": [],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "select-name",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "manage-1280-modal",
+      "violations": [],
+      "incomplete": [],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "autocomplete-valid",
+        "button-name",
+        "color-contrast",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "label",
+        "meta-viewport",
+        "nested-interactive",
+        "target-size"
+      ]
+    },
+    {
+      "key": "bucket-modal-1280",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "#reallocate-6bbcba77-ebfc-4289-abfa-0c4d9f81e806"
+            ],
+            [
+              ".bucket-editor:nth-child(1) > dialog > p:nth-child(2)"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "color-contrast",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "meta-viewport",
+        "nested-interactive",
+        "select-name",
+        "target-size"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+PASS home-A-375-responsive
+PASS home-A-375-axe
+PASS contrast-visualize-375
+PASS contrast-manage-375
+PASS contrast-modal-375
+PASS home-A-768-responsive
+PASS home-A-768-axe
+PASS contrast-visualize-768
+PASS contrast-manage-768
+PASS contrast-modal-768
+PASS home-A-1280-responsive
+PASS home-A-1280-axe
+PASS contrast-visualize-1280
+PASS contrast-manage-1280
+PASS contrast-modal-1280
+15 PASS; 0 FAIL; 15 total

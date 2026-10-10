@@ -1,0 +1,2021 @@
+{
+  "key": "contrast-manage-768",
+  "violations": [],
+  "incomplete": [],
+  "passes": [
+    "aria-allowed-attr",
+    "aria-conditional-attr",
+    "aria-deprecated-role",
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "aria-prohibited-attr",
+    "aria-required-attr",
+    "aria-roles",
+    "aria-valid-attr-value",
+    "aria-valid-attr",
+    "button-name",
+    "bypass",
+    "color-contrast",
+    "document-title",
+    "duplicate-id-aria",
+    "form-field-multiple-labels",
+    "html-has-lang",
+    "html-lang-valid",
+    "label",
+    "link-name",
+    "meta-viewport",
+    "nested-interactive",
+    "select-name",
+    "summary-name",
+    "target-size"
+  ],
+  "contrastPasses": [
+    {
+      "target": [
+        ".home-brand"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "28.5pt (38px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".brand-note"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "nav > a[href$=\"home\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "a[href$=\"visualize\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "a[href$=\"manage\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "form[action=\"/api/auth/logout\"] > .text-action"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "h1"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "28.8pt (38.4px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "header > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".surface-feedback > p[role=\"status\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".surface-feedback > .text-action"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#manage-buckets"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "19.5pt (26px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".section-heading > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-buckets\"] > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(1) > summary > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "18.0pt (24px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(1) > summary > strong"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(1) > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(1) > form > fieldset > label:nth-child(1)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[value=\"Groceries\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(1) > form > fieldset > label:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[value=\"12000.00\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(1) > form > fieldset > label:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(1) > form > fieldset > label:nth-child(3) > input[name=\"floor\"][value=\"0.00\"][inputmode=\"decimal\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(1) > form > fieldset > .capture-button"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#d8f36a",
+          "contrastRatio": 9.75,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(1) > .danger-action.text-action[type=\"button\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#933f30",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 6.4,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(1) > dialog > label > select"
+      ],
+      "checks": []
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(2) > summary > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "18.0pt (24px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(2) > summary > strong"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(2) > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(2) > form > fieldset > label:nth-child(1)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[value=\"Dining\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(2) > form > fieldset > label:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[value=\"10000.00\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(2) > form > fieldset > label:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(2) > form > fieldset > label:nth-child(3) > input[name=\"floor\"][value=\"0.00\"][inputmode=\"decimal\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(2) > form > fieldset > .capture-button"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#d8f36a",
+          "contrastRatio": 9.75,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(2) > .danger-action.text-action[type=\"button\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#933f30",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 6.4,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(2) > dialog > label > select"
+      ],
+      "checks": []
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(3) > summary > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "18.0pt (24px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(3) > summary > strong"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(3) > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(3) > form > fieldset > label:nth-child(1)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[value=\"Shopping\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(3) > form > fieldset > label:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[value=\"8000.00\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(3) > form > fieldset > label:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(3) > form > fieldset > label:nth-child(3) > input[name=\"floor\"][value=\"0.00\"][inputmode=\"decimal\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(3) > form > fieldset > .capture-button"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#d8f36a",
+          "contrastRatio": 9.75,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(3) > .danger-action.text-action[type=\"button\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#933f30",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 6.4,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(3) > dialog > label > select"
+      ],
+      "checks": []
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(4) > summary > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "18.0pt (24px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(4) > summary > strong"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(4) > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(4) > form > fieldset > label:nth-child(1)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[value=\"Transit\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(4) > form > fieldset > label:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[value=\"6000.00\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(4) > form > fieldset > label:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(4) > form > fieldset > label:nth-child(3) > input[name=\"floor\"][value=\"0.00\"][inputmode=\"decimal\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(4) > form > fieldset > .capture-button"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#d8f36a",
+          "contrastRatio": 9.75,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(4) > .danger-action.text-action[type=\"button\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#933f30",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 6.4,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(4) > dialog > label > select"
+      ],
+      "checks": []
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(5) > summary > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "18.0pt (24px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(5) > summary > strong"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(5) > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(5) > form > fieldset > label:nth-child(1)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[value=\"Entertainment\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(5) > form > fieldset > label:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[value=\"4000.00\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(5) > form > fieldset > label:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(5) > form > fieldset > label:nth-child(3) > input[name=\"floor\"][value=\"0.00\"][inputmode=\"decimal\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(5) > form > fieldset > .capture-button"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#d8f36a",
+          "contrastRatio": 9.75,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(5) > .danger-action.text-action[type=\"button\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#933f30",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 6.4,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(5) > dialog > label > select"
+      ],
+      "checks": []
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-buckets\"] > .new-config > summary"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".new-config > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-buckets\"] > .new-config > form > fieldset > label:nth-child(1)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[placeholder=\"Pet care\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-buckets\"] > .new-config > form > fieldset > label:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[name=\"monthly\"][value=\"0.00\"][inputmode=\"decimal\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-buckets\"] > .new-config > form > fieldset > label:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".new-config > form > fieldset > label:nth-child(3) > input[name=\"floor\"][value=\"0.00\"][inputmode=\"decimal\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-buckets\"] > .new-config > form > fieldset > .capture-button"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#d8f36a",
+          "contrastRatio": 9.75,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#manage-goals"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "19.5pt (26px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-goals\"] > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".goal-editor > summary > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "18.0pt (24px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".goal-editor > summary > strong"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".goal-editor > form > fieldset > label:nth-child(1)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[value=\"Synthetic milestone\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".goal-editor > form > fieldset > label:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[value=\"30000.00\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".goal-editor > form > fieldset > label:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[value=\"2027-01-08\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".goal-editor > form > fieldset > label:nth-child(4)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".goal-editor > form > fieldset > label:nth-child(4) > select[name=\"dateType\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".goal-editor > form > fieldset > label:nth-child(5)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".goal-editor > form > fieldset > label:nth-child(5) > select[name=\"kind\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".goal-editor > form > fieldset > .capture-button"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#d8f36a",
+          "contrastRatio": 9.75,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "fieldset > .danger-action.text-action[type=\"button\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#933f30",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 6.4,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-goals\"] > .new-config > summary"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-goals\"] > .new-config > form > fieldset > label:nth-child(1)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-goals\"] > .new-config > form > fieldset > label:nth-child(1) > input[maxlength=\"100\"][name=\"name\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-goals\"] > .new-config > form > fieldset > label:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".new-config > form > fieldset > label:nth-child(2) > input[name=\"target\"][inputmode=\"decimal\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-goals\"] > .new-config > form > fieldset > label:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".new-config > form > fieldset > label:nth-child(3) > input[min=\"2026-10-10\"][type=\"date\"][name=\"targetDate\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".new-config > form > fieldset > label:nth-child(4)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".new-config > form > fieldset > label:nth-child(4) > select[name=\"dateType\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".new-config > form > fieldset > label:nth-child(5)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".new-config > form > fieldset > label:nth-child(5) > select[name=\"kind\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".new-config > form > fieldset > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-goals\"] > .new-config > form > fieldset > .capture-button"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#d8f36a",
+          "contrastRatio": 9.75,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#manage-obligations"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "19.5pt (26px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-obligations\"] > p:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".obligation-editor > summary > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "18.0pt (24px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".obligation-editor > summary > strong"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".obligation-editor > form > fieldset > label:nth-child(1)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[value=\"Synthetic rent\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".obligation-editor > form > fieldset > label:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[value=\"20000.00\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".obligation-editor > form > fieldset > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".obligation-editor > form > fieldset > .capture-button"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#d8f36a",
+          "contrastRatio": 9.75,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".tracked-reserve"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".tracked-reserve > strong"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-obligations\"] > .new-config > summary"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-obligations\"] > .new-config > form > fieldset > label:nth-child(1)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[placeholder=\"Rent\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-obligations\"] > .new-config > form > fieldset > label:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".new-config > form > fieldset > label:nth-child(2) > input[name=\"amount\"][inputmode=\"decimal\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-obligations\"] > .new-config > form > fieldset > label:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "select[name=\"legacy\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "section[aria-labelledby=\"manage-obligations\"] > .new-config > form > fieldset > .capture-button"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#d8f36a",
+          "contrastRatio": 9.75,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#settings-title"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "19.5pt (26px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".account-settings > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".account-settings > .danger-action.text-action"
+      ],
+      "checks": [
+        {
+          "fgColor": "#933f30",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 6.4,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[autocomplete=\"off\"]"
+      ],
+      "checks": []
+    },
+    {
+      "target": [
+        "footer"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    }
+  ],
+  "contrastReview": []
+}

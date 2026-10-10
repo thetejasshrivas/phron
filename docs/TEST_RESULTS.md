@@ -1,3 +1,11 @@
+# PH25 performance/accessibility audit — executed with findings
+
+2026-10-10–11 IST, main application028c332ceed636b1402b902f5fe31a1927257c1b; local persistent Supabase and production Edge runtime,375/768/1280. [Full report](evidence/PH25/RESULT.md) and [all valid measurements](evidence/PH25/measurements-all-valid.json) govern.8TTFV samples0.928–1.274s;24returning loads0.193–0.972s;8manual saves0.099–0.123s;2local-memory Quick Captures0.315–0.345s; LCPmax232ms, EventTiming interaction proxy32ms, CLSmax0.023025. All requested performance targets PASS for this unthrottled loopback lab; no field/provider/OAuth timing claim.
+
+Main browser audit77PASS/6FAIL(exit1), focus supplement26PASS/4FAIL(exit1); native date host-outline predicates include desktop false positives, retained honestly. Confirmed PH25-A11Y-01 is mobile navigation obscuring focused controls. Contrast18/18 and surface contrast15/15 PASS(exit0); labels/roles scans0automated violations with disclosed manual-review advisories. All keyboard controls reached;6reduced-motion surface +2save,2offline,2failure drills PASS,375global overflow0. Actual audible screen-reader and browser zoom NOT RUN. Fresh lint/typecheck/source verifier/build PASS; application unchanged, prior PH24 unit/domain/RLS counts not re-executed. PH25 execution finished with findings; G5OPEN/V3PENDING; PH26 not started.
+
+---
+
 # PH-24 remediation — COMPLETE locally / G5 OPEN
 
 2026-10-10 IST. Base main caec5424b5e44b4de3f3fdff7259ffbf17a673c2 plus the verified remediation diff. Frozen sources, package/lockfile, financial formulas, migrations and remote settings are unchanged. Tejas explicitly authorized privacy repair, process-local capture throttling and dependency disposition. One active writer; unrelated New Text Document.txt untouched.

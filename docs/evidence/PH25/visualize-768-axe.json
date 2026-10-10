@@ -1,0 +1,84 @@
+{
+  "key": "visualize-768",
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "nodes": [
+        [
+          "text[x=\"0\"]"
+        ],
+        [
+          "text[x=\"490\"]"
+        ],
+        [
+          ".week-matrix > caption"
+        ],
+        [
+          "tr:nth-child(1) > td:nth-child(6)"
+        ],
+        [
+          "tr:nth-child(1) > td:nth-child(7) > strong"
+        ],
+        [
+          "tr:nth-child(2) > td:nth-child(6)"
+        ],
+        [
+          "tr:nth-child(2) > td:nth-child(7) > strong"
+        ],
+        [
+          "tr:nth-child(3) > td:nth-child(6)"
+        ],
+        [
+          "tr:nth-child(3) > td:nth-child(7) > strong"
+        ],
+        [
+          "tr:nth-child(4) > td:nth-child(6)"
+        ],
+        [
+          "tr:nth-child(4) > td:nth-child(7) > strong"
+        ],
+        [
+          "tr:nth-child(5) > td:nth-child(6)"
+        ],
+        [
+          "tr:nth-child(5) > td:nth-child(7) > strong"
+        ],
+        [
+          "tr:nth-child(6) > td:nth-child(6)"
+        ],
+        [
+          "tr:nth-child(6) > td:nth-child(7) > strong"
+        ]
+      ]
+    }
+  ],
+  "passes": [
+    "aria-allowed-attr",
+    "aria-conditional-attr",
+    "aria-deprecated-role",
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "aria-prohibited-attr",
+    "aria-required-attr",
+    "aria-roles",
+    "aria-valid-attr-value",
+    "aria-valid-attr",
+    "button-name",
+    "bypass",
+    "color-contrast",
+    "document-title",
+    "duplicate-id-aria",
+    "html-has-lang",
+    "html-lang-valid",
+    "link-name",
+    "meta-viewport",
+    "nested-interactive",
+    "scrollable-region-focusable",
+    "summary-name",
+    "svg-img-alt",
+    "target-size",
+    "td-headers-attr",
+    "th-has-data-cells"
+  ]
+}

@@ -1,0 +1,118 @@
+PASS first-value-375
+PASS returning-375-cold-1
+PASS returning-375-warm-2
+PASS returning-375-warm-3
+PASS capture-375
+PASS lab-vitals-375
+PASS first-value-1280
+PASS returning-1280-cold-6
+PASS returning-1280-warm-7
+PASS returning-1280-warm-8
+PASS capture-1280
+PASS lab-vitals-1280
+PASS home-A-375-responsive
+PASS home-A-375-axe
+PASS home-A-375-expanded-labels
+FAIL home-A-375-keyboard: locator.focus: Timeout 9000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Skip to content', exact: true })[22m
+
+PASS home-A-375-live-announcements
+PASS visualize-375-responsive
+PASS visualize-375-axe
+PASS visualize-375-keyboard
+PASS visualize-375-chart-equivalents
+PASS manage-375-responsive
+PASS manage-375-axe
+FAIL manage-375-keyboard: invisible/missing focus indicator
+
+2 !== 0
+
+FAIL manage-375-account-modal: Expected values to be strictly equal:
+
+false !== true
+
+FAIL zoom-375: {"width":187,"scroll":227}
+PASS home-B-375-responsive
+PASS home-B-375-axe
+PASS home-C-375-responsive
+PASS home-C-375-axe
+PASS home-A-768-responsive
+PASS home-A-768-axe
+PASS home-A-768-expanded-labels
+FAIL home-A-768-keyboard: locator.focus: Timeout 9000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Skip to content', exact: true })[22m
+
+PASS home-A-768-live-announcements
+PASS visualize-768-responsive
+PASS visualize-768-axe
+PASS visualize-768-keyboard
+PASS visualize-768-chart-equivalents
+PASS manage-768-responsive
+PASS manage-768-axe
+FAIL manage-768-keyboard: invisible/missing focus indicator
+
+2 !== 0
+
+FAIL manage-768-account-modal: Expected values to be strictly equal:
+
+false !== true
+
+PASS zoom-768
+PASS home-B-768-responsive
+PASS home-B-768-axe
+PASS home-C-768-responsive
+PASS home-C-768-axe
+PASS home-A-1280-responsive
+PASS home-A-1280-axe
+PASS home-A-1280-expanded-labels
+FAIL home-A-1280-keyboard: locator.focus: Timeout 9000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('link', { name: 'Skip to content', exact: true })[22m
+
+PASS home-A-1280-live-announcements
+PASS visualize-1280-responsive
+PASS visualize-1280-axe
+PASS visualize-1280-keyboard
+PASS visualize-1280-chart-equivalents
+PASS manage-1280-responsive
+PASS manage-1280-axe
+FAIL manage-1280-keyboard: invisible/missing focus indicator
+
+2 !== 0
+
+FAIL manage-1280-account-modal: Expected values to be strictly equal:
+
+false !== true
+
+PASS zoom-1280
+PASS home-B-1280-responsive
+PASS home-B-1280-axe
+PASS home-C-1280-responsive
+PASS home-C-1280-axe
+PASS reduced-home-375
+PASS reduced-visualize-375
+PASS reduced-manage-375
+PASS reduced-capture-375
+FAIL offline-375: expect(locator).toBeVisible() failed
+
+Locator: getByRole('alert').filter({ hasText: 'No internet connection.' })
+Expected: visible
+Error: st
+FAIL failed-save-375: locator.fill: Timeout 9000ms exceeded.
+Call log:
+[2m  - waiting for locator('form.manual-spend').getByLabel('Amount · ₹', { exact: true })
+PASS reduced-home-1280
+PASS reduced-visualize-1280
+PASS reduced-manage-1280
+PASS reduced-capture-1280
+FAIL offline-1280: expect(locator).toBeVisible() failed
+
+Locator: getByRole('alert').filter({ hasText: 'No internet connection.' })
+Expected: visible
+Error: st
+FAIL failed-save-1280: locator.fill: Timeout 9000ms exceeded.
+Call log:
+[2m  - waiting for locator('form.manual-spend').getByLabel('Amount · ₹', { exact: true })
+64 PASS; 14 FAIL; 78 total

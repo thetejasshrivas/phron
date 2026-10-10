@@ -1,0 +1,64 @@
+{
+  "application": "028c332ceed636b1402b902f5fe31a1927257c1b",
+  "commands": [
+    {
+      "command": "node tests/e2e/ph25/audit.mjs --final",
+      "exitCode": 1,
+      "pass": 77,
+      "fail": 6,
+      "evidence": "final/run.log"
+    },
+    {
+      "command": "node tests/e2e/ph25/audit.mjs --focus-detail",
+      "exitCode": 1,
+      "pass": 26,
+      "fail": 4,
+      "evidence": "focus-detail/run.log"
+    },
+    {
+      "command": "node tests/e2e/ph25/audit.mjs --contrast-detail",
+      "exitCode": 0,
+      "pass": 18,
+      "fail": 0,
+      "evidence": "contrast-detail/run.log"
+    },
+    {
+      "command": "node tests/e2e/ph25/audit.mjs --contrast-surfaces",
+      "exitCode": 0,
+      "pass": 15,
+      "fail": 0,
+      "evidence": "contrast-surfaces/run.log"
+    },
+    {
+      "command": "npm run lint",
+      "exitCode": 0,
+      "evidence": "lint.log"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "evidence": "typecheck.log"
+    },
+    {
+      "command": "npm run verify:sources",
+      "exitCode": 0,
+      "evidence": "sources.log"
+    },
+    {
+      "command": "production build inside each harness run",
+      "exitCode": 0,
+      "evidence": "final/build.log"
+    },
+    {
+      "command": "PH24 read-only secrets scanner with in-memory output directory PH25",
+      "exitCode": 0,
+      "evidence": "secrets-results.json"
+    },
+    {
+      "command": "docker ps --filter name=supabase_db_phron-ph11-local and listener3111 check",
+      "exitCode": 0,
+      "result": "database Up12hours healthy; audit server stopped"
+    }
+  ],
+  "note": "Counters overlap; keyboard diagnostic failures retained; report distinguishes native host false positives from actual mobile focus occlusion."
+}

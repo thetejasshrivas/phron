@@ -1,0 +1,706 @@
+{
+  "head": "028c332ceed636b1402b902f5fe31a1927257c1b",
+  "environment": {
+    "os": "win32",
+    "release": "10.0.26200",
+    "cpu": "AMD Ryzen AI 7 350 w/ Radeon 860M              ",
+    "logicalProcessors": 16,
+    "memoryGB": 23,
+    "browser": "155.0.4283.45",
+    "browserMode": "isolated headless installed Edge",
+    "network": "loopback, unthrottled; no external providers",
+    "cpuThrottling": 1,
+    "origin": "http://127.0.0.1:3111",
+    "database": "persistent local Supabase55321",
+    "axeVersion": "4.14.0"
+  },
+  "checks": [
+    {
+      "name": "home-A-375-responsive",
+      "status": "PASS",
+      "durationMs": 93.73139999999876,
+      "width": 375,
+      "scroll": 375
+    },
+    {
+      "name": "home-A-375-axe",
+      "status": "PASS",
+      "durationMs": 251.19330000000082,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 2
+    },
+    {
+      "name": "home-A-375-expanded-labels",
+      "status": "PASS",
+      "durationMs": 158.2597999999998,
+      "axeChecksPassed": 26,
+      "incompleteChecks": 2
+    },
+    {
+      "name": "home-A-375-keyboard",
+      "status": "FAIL",
+      "durationMs": 295.39869999999974,
+      "reason": "invisible/missing focus indicator\n\n2 !== 0\n"
+    },
+    {
+      "name": "home-A-375-live-announcements",
+      "status": "PASS",
+      "durationMs": 22.09979999999996,
+      "namedTextboxes": 4
+    },
+    {
+      "name": "visualize-375-responsive",
+      "status": "PASS",
+      "durationMs": 56.1260999999995,
+      "width": 375,
+      "scroll": 375
+    },
+    {
+      "name": "visualize-375-axe",
+      "status": "PASS",
+      "durationMs": 175.99099999999999,
+      "axeChecksPassed": 26,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "visualize-375-keyboard",
+      "status": "PASS",
+      "durationMs": 38.41539999999986,
+      "expectedControls": 9,
+      "uniqueFocused": 9
+    },
+    {
+      "name": "visualize-375-chart-equivalents",
+      "status": "PASS",
+      "durationMs": 10.26220000000103,
+      "tables": 2,
+      "keyboardScrollable": true
+    },
+    {
+      "name": "manage-375-responsive",
+      "status": "PASS",
+      "durationMs": 84.04889999999978,
+      "width": 375,
+      "scroll": 375
+    },
+    {
+      "name": "manage-375-axe",
+      "status": "PASS",
+      "durationMs": 211.58599999999933,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 0
+    },
+    {
+      "name": "manage-375-keyboard",
+      "status": "FAIL",
+      "durationMs": 311.3625000000011,
+      "reason": "invisible/missing focus indicator\n\n2 !== 0\n"
+    },
+    {
+      "name": "manage-375-account-modal",
+      "status": "PASS",
+      "durationMs": 161.7468000000008,
+      "focusContained": true,
+      "escapeReturnsFocus": true,
+      "deletionNotExecuted": true
+    },
+    {
+      "name": "zoom-375",
+      "status": "PASS",
+      "durationMs": 87.44930000000022,
+      "method": "320CSS reflow floor (187CSS earlier stress run below WCAG minimum)"
+    },
+    {
+      "name": "home-A-1280-responsive",
+      "status": "PASS",
+      "durationMs": 160.02199999999903,
+      "width": 1280,
+      "scroll": 1280
+    },
+    {
+      "name": "home-A-1280-axe",
+      "status": "PASS",
+      "durationMs": 233.28700000000026,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 2
+    },
+    {
+      "name": "home-A-1280-expanded-labels",
+      "status": "PASS",
+      "durationMs": 158.1962999999996,
+      "axeChecksPassed": 26,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "home-A-1280-keyboard",
+      "status": "FAIL",
+      "durationMs": 323.65909999999894,
+      "reason": "invisible/missing focus indicator\n\n2 !== 0\n"
+    },
+    {
+      "name": "home-A-1280-live-announcements",
+      "status": "PASS",
+      "durationMs": 18.428200000000288,
+      "namedTextboxes": 4
+    },
+    {
+      "name": "visualize-1280-responsive",
+      "status": "PASS",
+      "durationMs": 93.8693000000003,
+      "width": 1280,
+      "scroll": 1280
+    },
+    {
+      "name": "visualize-1280-axe",
+      "status": "PASS",
+      "durationMs": 205.0627000000004,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "visualize-1280-keyboard",
+      "status": "PASS",
+      "durationMs": 49.65869999999995,
+      "expectedControls": 10,
+      "uniqueFocused": 10
+    },
+    {
+      "name": "visualize-1280-chart-equivalents",
+      "status": "PASS",
+      "durationMs": 11.895000000000437,
+      "tables": 2,
+      "keyboardScrollable": true
+    },
+    {
+      "name": "manage-1280-responsive",
+      "status": "PASS",
+      "durationMs": 105.4936000000016,
+      "width": 1280,
+      "scroll": 1280
+    },
+    {
+      "name": "manage-1280-axe",
+      "status": "PASS",
+      "durationMs": 218.83989999999903,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 0
+    },
+    {
+      "name": "manage-1280-keyboard",
+      "status": "FAIL",
+      "durationMs": 394.642399999997,
+      "reason": "invisible/missing focus indicator\n\n2 !== 0\n"
+    },
+    {
+      "name": "manage-1280-account-modal",
+      "status": "PASS",
+      "durationMs": 140.6815999999999,
+      "focusContained": true,
+      "escapeReturnsFocus": true,
+      "deletionNotExecuted": true
+    },
+    {
+      "name": "zoom-1280",
+      "status": "PASS",
+      "durationMs": 104.73579999999856,
+      "method": "200% zoom-equivalent half CSS viewport, not actual browser zoom"
+    }
+  ],
+  "measurements": [],
+  "accessibility": [
+    {
+      "key": "home-A-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".goal-tank > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-A-375-expanded",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".goal-tank > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "select-name",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "visualize-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "text[x=\"0\"]"
+            ],
+            [
+              "text[x=\"490\"]"
+            ],
+            [
+              ".week-matrix > caption"
+            ],
+            [
+              ".week-matrix > tbody > tr:nth-child(1) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(1) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(1) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(1) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(1) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(7) > strong"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "html-has-lang",
+        "html-lang-valid",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "scrollable-region-focusable",
+        "summary-name",
+        "svg-img-alt",
+        "target-size",
+        "td-headers-attr",
+        "th-has-data-cells"
+      ]
+    },
+    {
+      "key": "manage-375",
+      "violations": [],
+      "incomplete": [],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "select-name",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "manage-375-modal",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "#delete-title"
+            ],
+            [
+              "dialog[aria-labelledby=\"delete-title\"] > p"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "autocomplete-valid",
+        "button-name",
+        "color-contrast",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "label",
+        "meta-viewport",
+        "nested-interactive",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-A-1280",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".goal-tank > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-A-1280-expanded",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "select-name",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "visualize-1280",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "text[x=\"0\"]"
+            ],
+            [
+              "text[x=\"490\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "html-has-lang",
+        "html-lang-valid",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "summary-name",
+        "svg-img-alt",
+        "target-size",
+        "td-headers-attr",
+        "th-has-data-cells"
+      ]
+    },
+    {
+      "key": "manage-1280",
+      "violations": [],
+      "incomplete": [],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "select-name",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "manage-1280-modal",
+      "violations": [],
+      "incomplete": [],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "autocomplete-valid",
+        "button-name",
+        "color-contrast",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "label",
+        "meta-viewport",
+        "nested-interactive",
+        "target-size"
+      ]
+    }
+  ]
+}

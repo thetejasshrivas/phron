@@ -1,0 +1,43 @@
+PASS home-A-375-responsive
+PASS home-A-375-axe
+PASS home-A-375-expanded-labels
+FAIL home-A-375-keyboard: invisible/missing focus indicator
+
+10 !== 0
+
+PASS home-A-375-live-announcements
+PASS visualize-375-responsive
+PASS visualize-375-axe
+PASS visualize-375-keyboard
+PASS visualize-375-chart-equivalents
+PASS manage-375-responsive
+PASS manage-375-axe
+FAIL manage-375-keyboard: invisible/missing focus indicator
+
+4 !== 0
+
+PASS manage-375-account-modal
+PASS bucket-modal-375
+PASS zoom-375
+PASS home-A-1280-responsive
+PASS home-A-1280-axe
+PASS home-A-1280-expanded-labels
+FAIL home-A-1280-keyboard: invisible/missing focus indicator
+
+4 !== 0
+
+PASS home-A-1280-live-announcements
+PASS visualize-1280-responsive
+PASS visualize-1280-axe
+PASS visualize-1280-keyboard
+PASS visualize-1280-chart-equivalents
+PASS manage-1280-responsive
+PASS manage-1280-axe
+FAIL manage-1280-keyboard: invisible/missing focus indicator
+
+4 !== 0
+
+PASS manage-1280-account-modal
+PASS bucket-modal-1280
+PASS zoom-1280
+26 PASS; 4 FAIL; 30 total

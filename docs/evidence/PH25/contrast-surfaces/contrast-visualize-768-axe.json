@@ -1,0 +1,1378 @@
+{
+  "key": "contrast-visualize-768",
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "nodes": [
+        [
+          "text[x=\"0\"]"
+        ],
+        [
+          "text[x=\"490\"]"
+        ],
+        [
+          ".week-matrix > caption"
+        ],
+        [
+          "tr:nth-child(1) > td:nth-child(6)"
+        ],
+        [
+          "tr:nth-child(1) > td:nth-child(7) > strong"
+        ],
+        [
+          "tr:nth-child(2) > td:nth-child(6)"
+        ],
+        [
+          "tr:nth-child(2) > td:nth-child(7) > strong"
+        ],
+        [
+          "tr:nth-child(3) > td:nth-child(6)"
+        ],
+        [
+          "tr:nth-child(3) > td:nth-child(7) > strong"
+        ],
+        [
+          "tr:nth-child(4) > td:nth-child(6)"
+        ],
+        [
+          "tr:nth-child(4) > td:nth-child(7) > strong"
+        ],
+        [
+          "tr:nth-child(5) > td:nth-child(6)"
+        ],
+        [
+          "tr:nth-child(5) > td:nth-child(7) > strong"
+        ],
+        [
+          "tr:nth-child(6) > td:nth-child(6)"
+        ],
+        [
+          "tr:nth-child(6) > td:nth-child(7) > strong"
+        ]
+      ]
+    }
+  ],
+  "passes": [
+    "aria-allowed-attr",
+    "aria-conditional-attr",
+    "aria-deprecated-role",
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "aria-prohibited-attr",
+    "aria-required-attr",
+    "aria-roles",
+    "aria-valid-attr-value",
+    "aria-valid-attr",
+    "button-name",
+    "bypass",
+    "color-contrast",
+    "document-title",
+    "duplicate-id-aria",
+    "html-has-lang",
+    "html-lang-valid",
+    "link-name",
+    "meta-viewport",
+    "nested-interactive",
+    "scrollable-region-focusable",
+    "summary-name",
+    "svg-img-alt",
+    "target-size",
+    "td-headers-attr",
+    "th-has-data-cells"
+  ],
+  "contrastPasses": [
+    {
+      "target": [
+        ".home-brand"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "28.5pt (38px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".brand-note"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "nav > a[href$=\"home\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "a[href$=\"visualize\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "a[href$=\"manage\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "form > button"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "h1"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "28.8pt (38.4px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "header > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "p[role=\"status\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".surface-feedback > button"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".cycle-context"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#split-title"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "19.5pt (26px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".section-heading > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".category-bar:nth-child(2) > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".category-bar:nth-child(2) > strong"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".category-bar:nth-child(3) > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".category-bar:nth-child(3) > strong"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".category-bar:nth-child(4) > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".category-bar:nth-child(4) > strong"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".category-bar:nth-child(5) > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".category-bar:nth-child(5) > strong"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".category-bar:nth-child(6) > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".category-bar:nth-child(6) > strong"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".category-bar:nth-child(7) > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".category-bar:nth-child(7) > strong"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#burn-title"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "19.5pt (26px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".burn-chart > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".chart-legend > span:nth-child(1)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".chart-legend > span:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "summary"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "div[aria-label=\"Exact daily figures\"] > table > caption"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "div[aria-label=\"Exact daily figures\"] > table > thead > tr > th[scope=\"col\"]:nth-child(1)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "div[aria-label=\"Exact daily figures\"] > table > thead > tr > th[scope=\"col\"]:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "div[aria-label=\"Exact daily figures\"] > table > thead > tr > th[scope=\"col\"]:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "div[aria-label=\"Exact daily figures\"] > table > tbody > tr > th[scope=\"row\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "div[aria-label=\"Exact daily figures\"] > table > tbody > tr > td:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "div[aria-label=\"Exact daily figures\"] > table > tbody > tr > td:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#matrix-title"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "19.5pt (26px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".week-matrix > thead > tr > th[scope=\"col\"]:nth-child(1)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".week-matrix > thead > tr > th[scope=\"col\"]:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".week-matrix > thead > tr > th[scope=\"col\"]:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "th[scope=\"col\"]:nth-child(4)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "th[scope=\"col\"]:nth-child(5)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "th[scope=\"col\"]:nth-child(6)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "th[scope=\"col\"]:nth-child(7)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".week-matrix > tbody > tr:nth-child(1) > th[scope=\"row\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".week-matrix > tbody > tr:nth-child(1) > td:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".week-matrix > tbody > tr:nth-child(1) > td:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(1) > td:nth-child(4)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(1) > td:nth-child(5)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(2) > th[scope=\"row\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(2) > td:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(2) > td:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(2) > td:nth-child(4)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(2) > td:nth-child(5)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(3) > th[scope=\"row\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(3) > td:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(3) > td:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(3) > td:nth-child(4)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(3) > td:nth-child(5)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(4) > th[scope=\"row\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(4) > td:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(4) > td:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(4) > td:nth-child(4)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(4) > td:nth-child(5)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(5) > th[scope=\"row\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(5) > td:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(5) > td:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(5) > td:nth-child(4)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(5) > td:nth-child(5)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(6) > th[scope=\"row\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(6) > td:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(6) > td:nth-child(3)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(6) > td:nth-child(4)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "tr:nth-child(6) > td:nth-child(5)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "footer"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    }
+  ],
+  "contrastReview": [
+    {
+      "selector": "text[x=\"0\"]",
+      "fg": "rgb(83, 99, 83)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 5.851534139530546,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    },
+    {
+      "selector": "text[x=\"490\"]",
+      "fg": "rgb(83, 99, 83)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 5.851534139530546,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    },
+    {
+      "selector": ".week-matrix > caption",
+      "fg": "rgb(83, 99, 83)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 5.851534139530546,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    },
+    {
+      "selector": "tr:nth-child(1) > td:nth-child(6)",
+      "fg": "rgb(35, 59, 46)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 11.044079324767358,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    },
+    {
+      "selector": "tr:nth-child(1) > td:nth-child(7) > strong",
+      "fg": "rgb(35, 59, 46)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 11.044079324767358,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    },
+    {
+      "selector": "tr:nth-child(2) > td:nth-child(6)",
+      "fg": "rgb(35, 59, 46)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 11.044079324767358,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    },
+    {
+      "selector": "tr:nth-child(2) > td:nth-child(7) > strong",
+      "fg": "rgb(35, 59, 46)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 11.044079324767358,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    },
+    {
+      "selector": "tr:nth-child(3) > td:nth-child(6)",
+      "fg": "rgb(35, 59, 46)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 11.044079324767358,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    },
+    {
+      "selector": "tr:nth-child(3) > td:nth-child(7) > strong",
+      "fg": "rgb(35, 59, 46)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 11.044079324767358,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    },
+    {
+      "selector": "tr:nth-child(4) > td:nth-child(6)",
+      "fg": "rgb(35, 59, 46)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 11.044079324767358,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    },
+    {
+      "selector": "tr:nth-child(4) > td:nth-child(7) > strong",
+      "fg": "rgb(35, 59, 46)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 11.044079324767358,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    },
+    {
+      "selector": "tr:nth-child(5) > td:nth-child(6)",
+      "fg": "rgb(35, 59, 46)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 11.044079324767358,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    },
+    {
+      "selector": "tr:nth-child(5) > td:nth-child(7) > strong",
+      "fg": "rgb(35, 59, 46)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 11.044079324767358,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    },
+    {
+      "selector": "tr:nth-child(6) > td:nth-child(6)",
+      "fg": "rgb(35, 59, 46)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 11.044079324767358,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    },
+    {
+      "selector": "tr:nth-child(6) > td:nth-child(7) > strong",
+      "fg": "rgb(35, 59, 46)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 11.044079324767358,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    }
+  ]
+}

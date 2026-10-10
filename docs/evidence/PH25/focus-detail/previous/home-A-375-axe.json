@@ -1,0 +1,49 @@
+{
+  "key": "home-A-375",
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "nodes": [
+        [
+          ".ledger-list"
+        ]
+      ]
+    },
+    {
+      "id": "color-contrast",
+      "nodes": [
+        [
+          ".goal-tank > span[aria-hidden=\"true\"]"
+        ]
+      ]
+    }
+  ],
+  "passes": [
+    "aria-allowed-attr",
+    "aria-conditional-attr",
+    "aria-deprecated-role",
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "aria-prohibited-attr",
+    "aria-required-attr",
+    "aria-roles",
+    "aria-valid-attr-value",
+    "aria-valid-attr",
+    "button-name",
+    "bypass",
+    "color-contrast",
+    "document-title",
+    "duplicate-id-aria",
+    "form-field-multiple-labels",
+    "html-has-lang",
+    "html-lang-valid",
+    "label",
+    "link-name",
+    "meta-viewport",
+    "nested-interactive",
+    "role-img-alt",
+    "summary-name",
+    "target-size"
+  ]
+}

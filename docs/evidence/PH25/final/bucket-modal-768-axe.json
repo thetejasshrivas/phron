@@ -1,0 +1,37 @@
+{
+  "key": "bucket-modal-768",
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "nodes": [
+        [
+          "#reallocate-05ee46ad-70c3-4c41-9040-c16f68e4d341"
+        ],
+        [
+          ".bucket-editor:nth-child(1) > dialog > p:nth-child(2)"
+        ]
+      ]
+    }
+  ],
+  "passes": [
+    "aria-allowed-attr",
+    "aria-conditional-attr",
+    "aria-deprecated-role",
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "aria-prohibited-attr",
+    "aria-required-attr",
+    "aria-roles",
+    "aria-valid-attr-value",
+    "aria-valid-attr",
+    "button-name",
+    "color-contrast",
+    "duplicate-id-aria",
+    "form-field-multiple-labels",
+    "meta-viewport",
+    "nested-interactive",
+    "select-name",
+    "target-size"
+  ]
+}

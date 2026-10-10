@@ -1,0 +1,162 @@
+{
+  "expected": 10,
+  "visits": [
+    {
+      "index": 20,
+      "tag": "A",
+      "id": "",
+      "text": "Skip to content",
+      "html": "<a class=\"skip-home\" href=\"#surface-main\">Skip to content</a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none"
+    },
+    {
+      "index": 22,
+      "tag": "A",
+      "id": "",
+      "text": "phron↗",
+      "html": "<a class=\"home-brand\" href=\"/home\">phron<span aria-hidden=\"true\">↗</span></a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none"
+    },
+    {
+      "index": 26,
+      "tag": "A",
+      "id": "",
+      "text": "Your day",
+      "html": "<a href=\"/home\">Your day</a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none"
+    },
+    {
+      "index": 27,
+      "tag": "A",
+      "id": "",
+      "text": "Visualize spending",
+      "html": "<a href=\"/visualize\" aria-current=\"page\">Visualize spending</a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none"
+    },
+    {
+      "index": 28,
+      "tag": "A",
+      "id": "",
+      "text": "Buckets & settings",
+      "html": "<a href=\"/manage\">Buckets &amp; settings</a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none"
+    },
+    {
+      "index": 31,
+      "tag": "BUTTON",
+      "id": "",
+      "text": "Sign out",
+      "html": "<button class=\"text-action\">Sign out</button>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none"
+    },
+    {
+      "index": 38,
+      "tag": "BUTTON",
+      "id": "",
+      "text": "Refresh confirmed records ↗",
+      "html": "<button class=\"text-action\">Refresh confirmed records ↗</button>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none"
+    },
+    {
+      "index": 92,
+      "tag": "SUMMARY",
+      "id": "",
+      "text": "Read exact daily figures",
+      "html": "<summary>Read exact daily figures</summary>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none"
+    },
+    {
+      "index": 93,
+      "tag": "DIV",
+      "id": "",
+      "text": "Exact daily figures",
+      "html": "<div class=\"table-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Exact daily figures\"><table><caption>Exact cumulative paise shown as INR</caption><thead><tr><th scope=\"col\">Cycle day</th><th scope=\"c",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none"
+    },
+    {
+      "index": 109,
+      "tag": "DIV",
+      "id": "",
+      "text": "Category by cycle week",
+      "html": "<div class=\"table-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Category by cycle week\"><table class=\"week-matrix\"><caption>Blocks are relative to 2026-10-10, never calendar weeks. Tracked purchases ",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none"
+    },
+    {
+      "index": 17,
+      "tag": "BODY",
+      "id": "",
+      "text": "Skip to contentphron↗Money, in perspective.Your dayVisualize spendingBuckets & s",
+      "html": "<body><div hidden=\"\"><!--$--><!--/$--></div><div class=\"phron-home surface-shell\"><a class=\"skip-home\" href=\"#surface-main\">Skip to content</a><aside class=\"home-sidebar\"><a class=\"home-brand\" href=\"/",
+      "visible": true,
+      "focusVisible": false,
+      "outline": "none",
+      "outlineWidth": "3px",
+      "shadow": "none"
+    },
+    {
+      "index": 20,
+      "tag": "A",
+      "id": "",
+      "text": "Skip to content",
+      "html": "<a class=\"skip-home\" href=\"#surface-main\">Skip to content</a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none"
+    },
+    {
+      "index": 22,
+      "tag": "A",
+      "id": "",
+      "text": "phron↗",
+      "html": "<a class=\"home-brand\" href=\"/home\">phron<span aria-hidden=\"true\">↗</span></a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none"
+    }
+  ],
+  "bad": []
+}

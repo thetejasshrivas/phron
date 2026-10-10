@@ -1,0 +1,1073 @@
+{
+  "head": "028c332ceed636b1402b902f5fe31a1927257c1b",
+  "environment": {
+    "os": "win32",
+    "release": "10.0.26200",
+    "cpu": "AMD Ryzen AI 7 350 w/ Radeon 860M              ",
+    "logicalProcessors": 16,
+    "memoryGB": 23,
+    "browser": "155.0.4283.45",
+    "browserMode": "isolated headless installed Edge",
+    "network": "loopback, unthrottled; no external providers",
+    "cpuThrottling": 1,
+    "origin": "http://127.0.0.1:3111",
+    "database": "persistent local Supabase55321",
+    "axeVersion": "4.14.0"
+  },
+  "checks": [
+    {
+      "name": "first-value-375",
+      "status": "PASS",
+      "durationMs": 1189.6024000000007,
+      "ms": 1189.5065000000004
+    },
+    {
+      "name": "returning-375-cold-1",
+      "status": "PASS",
+      "durationMs": 2196.6004999999986,
+      "ms": 972.2384000000002
+    },
+    {
+      "name": "returning-375-warm-2",
+      "status": "PASS",
+      "durationMs": 1533.5738999999994,
+      "ms": 320.01990000000114
+    },
+    {
+      "name": "returning-375-warm-3",
+      "status": "PASS",
+      "durationMs": 1528.9970999999987,
+      "ms": 311.0371000000014
+    },
+    {
+      "name": "capture-375",
+      "status": "PASS",
+      "durationMs": 1578.148000000001,
+      "feedbackMs": 100.29539999999906,
+      "numberVisibleAfterResponseMs": 14.265600000000632
+    },
+    {
+      "name": "lab-vitals-375",
+      "status": "PASS",
+      "durationMs": 0.16480000000046857,
+      "interactionProxy": "trusted input to second requestAnimationFrame; EventTiming recorded separately"
+    },
+    {
+      "name": "first-value-1280",
+      "status": "PASS",
+      "durationMs": 1158.7796999999991,
+      "ms": 1158.754399999998
+    },
+    {
+      "name": "returning-1280-cold-6",
+      "status": "PASS",
+      "durationMs": 1557.503499999999,
+      "ms": 336.03999999999724
+    },
+    {
+      "name": "returning-1280-warm-7",
+      "status": "PASS",
+      "durationMs": 1538.4866000000002,
+      "ms": 323.13870000000315
+    },
+    {
+      "name": "returning-1280-warm-8",
+      "status": "PASS",
+      "durationMs": 1557.8415000000023,
+      "ms": 340.1444999999985
+    },
+    {
+      "name": "capture-1280",
+      "status": "PASS",
+      "durationMs": 1463.1453000000001,
+      "feedbackMs": 103.44889999999941,
+      "numberVisibleAfterResponseMs": 15.104499999997643
+    },
+    {
+      "name": "lab-vitals-1280",
+      "status": "PASS",
+      "durationMs": 0.038499999998748535,
+      "interactionProxy": "trusted input to second requestAnimationFrame; EventTiming recorded separately"
+    },
+    {
+      "name": "audit runtime",
+      "status": "FAIL",
+      "reason": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at fixture (file:///W:/AI%20Product%20Sprint/Phron/tests/e2e/ph25/audit.mjs:29:203)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///W:/AI%20Product%20Sprint/Phron/tests/e2e/ph25/audit.mjs:88:11"
+    }
+  ],
+  "measurements": [
+    {
+      "kind": "first-value",
+      "width": 375,
+      "ms": 1189.5065000000004,
+      "authExcluded": true
+    },
+    {
+      "kind": "returning",
+      "width": 375,
+      "mode": "cold",
+      "ms": 972.2384000000002,
+      "lcpMs": 124,
+      "cls": 0.023024747067901235,
+      "maxEventTimingMs": 0,
+      "eventTimingSamples": 0,
+      "maxTwoFrameInputPaintMs": null,
+      "longTasks": [],
+      "ttfbMs": 70.80000001192093,
+      "resources": [
+        {
+          "path": "/_next/static/chunks/0ec9-6crucv_2.css",
+          "transferBytes": 1319,
+          "decodedBytes": 1019,
+          "duration": 3.5999999940395355
+        },
+        {
+          "path": "/_next/static/chunks/43mvp2cwbfze4.css",
+          "transferBytes": 6828,
+          "decodedBytes": 29879,
+          "duration": 5.0999999940395355
+        },
+        {
+          "path": "/_next/static/chunks/3l04zcqx63h3y.js",
+          "transferBytes": 6163,
+          "decodedBytes": 16797,
+          "duration": 8
+        },
+        {
+          "path": "/_next/static/chunks/20pkwklkbp1q4.js",
+          "transferBytes": 48803,
+          "decodedBytes": 183339,
+          "duration": 12.700000017881393
+        },
+        {
+          "path": "/_next/static/chunks/1rj7ns8rte9vc.js",
+          "transferBytes": 71928,
+          "decodedBytes": 229156,
+          "duration": 15.300000011920929
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-03h4qq07e4vwr.js",
+          "transferBytes": 4138,
+          "decodedBytes": 9688,
+          "duration": 9.699999988079071
+        },
+        {
+          "path": "/_next/static/chunks/3fntmmi971322.js",
+          "transferBytes": 3961,
+          "decodedBytes": 14377,
+          "duration": 10
+        },
+        {
+          "path": "/_next/static/chunks/2_4wj_h8rcvwu.js",
+          "transferBytes": 5282,
+          "decodedBytes": 13678,
+          "duration": 10.199999988079071
+        },
+        {
+          "path": "/_next/static/chunks/368p8zln1h27m.js",
+          "transferBytes": 15145,
+          "decodedBytes": 54588,
+          "duration": 13.599999994039536
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 162.5
+        },
+        {
+          "path": "/api/finance/state",
+          "transferBytes": 1337,
+          "decodedBytes": 1037,
+          "duration": 163.19999998807907
+        },
+        {
+          "path": "/icon.svg",
+          "transferBytes": 502,
+          "decodedBytes": 202,
+          "duration": 12.400000005960464
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 452,
+          "decodedBytes": 152,
+          "duration": 92.69999998807907
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 2936,
+          "decodedBytes": 2636,
+          "duration": 182.60000002384186
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 117.5
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 191.5
+        }
+      ]
+    },
+    {
+      "kind": "returning",
+      "width": 375,
+      "mode": "warm",
+      "ms": 320.01990000000114,
+      "lcpMs": 104,
+      "cls": 0.023024747067901235,
+      "maxEventTimingMs": 0,
+      "eventTimingSamples": 0,
+      "maxTwoFrameInputPaintMs": null,
+      "longTasks": [],
+      "ttfbMs": 59.599999994039536,
+      "resources": [
+        {
+          "path": "/_next/static/chunks/0ec9-6crucv_2.css",
+          "transferBytes": 0,
+          "decodedBytes": 1019,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/43mvp2cwbfze4.css",
+          "transferBytes": 0,
+          "decodedBytes": 29879,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3l04zcqx63h3y.js",
+          "transferBytes": 0,
+          "decodedBytes": 16797,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/20pkwklkbp1q4.js",
+          "transferBytes": 0,
+          "decodedBytes": 183339,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/1rj7ns8rte9vc.js",
+          "transferBytes": 0,
+          "decodedBytes": 229156,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-03h4qq07e4vwr.js",
+          "transferBytes": 0,
+          "decodedBytes": 9688,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3fntmmi971322.js",
+          "transferBytes": 0,
+          "decodedBytes": 14377,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/2_4wj_h8rcvwu.js",
+          "transferBytes": 0,
+          "decodedBytes": 13678,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/368p8zln1h27m.js",
+          "transferBytes": 0,
+          "decodedBytes": 54588,
+          "duration": 0
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 78.10000002384186
+        },
+        {
+          "path": "/api/finance/state",
+          "transferBytes": 1337,
+          "decodedBytes": 1037,
+          "duration": 78.2999999821186
+        },
+        {
+          "path": "/icon.svg",
+          "transferBytes": 502,
+          "decodedBytes": 202,
+          "duration": 9.200000017881393
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 452,
+          "decodedBytes": 152,
+          "duration": 58.400000005960464
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 2936,
+          "decodedBytes": 2636,
+          "duration": 74.69999998807907
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 69.80000001192093
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 70.2000000178814
+        }
+      ]
+    },
+    {
+      "kind": "returning",
+      "width": 375,
+      "mode": "warm",
+      "ms": 311.0371000000014,
+      "lcpMs": 88,
+      "cls": 0.021540724022633746,
+      "maxEventTimingMs": 0,
+      "eventTimingSamples": 0,
+      "maxTwoFrameInputPaintMs": null,
+      "longTasks": [],
+      "ttfbMs": 58.599999994039536,
+      "resources": [
+        {
+          "path": "/_next/static/chunks/0ec9-6crucv_2.css",
+          "transferBytes": 0,
+          "decodedBytes": 1019,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/43mvp2cwbfze4.css",
+          "transferBytes": 0,
+          "decodedBytes": 29879,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3l04zcqx63h3y.js",
+          "transferBytes": 0,
+          "decodedBytes": 16797,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/20pkwklkbp1q4.js",
+          "transferBytes": 0,
+          "decodedBytes": 183339,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/1rj7ns8rte9vc.js",
+          "transferBytes": 0,
+          "decodedBytes": 229156,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-03h4qq07e4vwr.js",
+          "transferBytes": 0,
+          "decodedBytes": 9688,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3fntmmi971322.js",
+          "transferBytes": 0,
+          "decodedBytes": 14377,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/2_4wj_h8rcvwu.js",
+          "transferBytes": 0,
+          "decodedBytes": 13678,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/368p8zln1h27m.js",
+          "transferBytes": 0,
+          "decodedBytes": 54588,
+          "duration": 0
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 126.7999999821186
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 2936,
+          "decodedBytes": 2636,
+          "duration": 124.89999997615814
+        },
+        {
+          "path": "/api/finance/state",
+          "transferBytes": 1337,
+          "decodedBytes": 1037,
+          "duration": 125.30000001192093
+        },
+        {
+          "path": "/icon.svg",
+          "transferBytes": 502,
+          "decodedBytes": 202,
+          "duration": 8.399999976158142
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 60.5
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 65
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 452,
+          "decodedBytes": 152,
+          "duration": 58.099999994039536
+        }
+      ]
+    },
+    {
+      "kind": "capture",
+      "width": 375,
+      "feedbackMs": 100.29539999999906,
+      "numberVisibleAfterResponseMs": 14.265600000000632,
+      "lcpMs": 88,
+      "cls": 0.021540724022633746,
+      "maxEventTimingMs": 32,
+      "eventTimingSamples": 6,
+      "maxTwoFrameInputPaintMs": 29.900000005960464,
+      "longTasks": [],
+      "ttfbMs": 58.599999994039536,
+      "resources": [
+        {
+          "path": "/_next/static/chunks/0ec9-6crucv_2.css",
+          "transferBytes": 0,
+          "decodedBytes": 1019,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/43mvp2cwbfze4.css",
+          "transferBytes": 0,
+          "decodedBytes": 29879,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3l04zcqx63h3y.js",
+          "transferBytes": 0,
+          "decodedBytes": 16797,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/20pkwklkbp1q4.js",
+          "transferBytes": 0,
+          "decodedBytes": 183339,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/1rj7ns8rte9vc.js",
+          "transferBytes": 0,
+          "decodedBytes": 229156,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-03h4qq07e4vwr.js",
+          "transferBytes": 0,
+          "decodedBytes": 9688,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3fntmmi971322.js",
+          "transferBytes": 0,
+          "decodedBytes": 14377,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/2_4wj_h8rcvwu.js",
+          "transferBytes": 0,
+          "decodedBytes": 13678,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/368p8zln1h27m.js",
+          "transferBytes": 0,
+          "decodedBytes": 54588,
+          "duration": 0
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 126.7999999821186
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 2936,
+          "decodedBytes": 2636,
+          "duration": 124.89999997615814
+        },
+        {
+          "path": "/api/finance/state",
+          "transferBytes": 1337,
+          "decodedBytes": 1037,
+          "duration": 125.30000001192093
+        },
+        {
+          "path": "/icon.svg",
+          "transferBytes": 502,
+          "decodedBytes": 202,
+          "duration": 8.399999976158142
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 60.5
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 65
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 452,
+          "decodedBytes": 152,
+          "duration": 58.099999994039536
+        },
+        {
+          "path": "/api/finance/spend",
+          "transferBytes": 1375,
+          "decodedBytes": 1075,
+          "duration": 58.79999998211861
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 111.30000001192093
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 725,
+          "decodedBytes": 425,
+          "duration": 112.80000001192093
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 3182,
+          "decodedBytes": 2882,
+          "duration": 111.59999999403954
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 101.09999999403954
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 102.10000002384186
+        }
+      ]
+    },
+    {
+      "kind": "first-value",
+      "width": 1280,
+      "ms": 1158.754399999998,
+      "authExcluded": true
+    },
+    {
+      "kind": "returning",
+      "width": 1280,
+      "mode": "cold",
+      "ms": 336.03999999999724,
+      "lcpMs": 104,
+      "cls": 0.013040398830837673,
+      "maxEventTimingMs": 0,
+      "eventTimingSamples": 0,
+      "maxTwoFrameInputPaintMs": null,
+      "longTasks": [],
+      "ttfbMs": 62.900000005960464,
+      "resources": [
+        {
+          "path": "/_next/static/chunks/0ec9-6crucv_2.css",
+          "transferBytes": 1319,
+          "decodedBytes": 1019,
+          "duration": 2.699999988079071
+        },
+        {
+          "path": "/_next/static/chunks/43mvp2cwbfze4.css",
+          "transferBytes": 6828,
+          "decodedBytes": 29879,
+          "duration": 3.699999988079071
+        },
+        {
+          "path": "/_next/static/chunks/3l04zcqx63h3y.js",
+          "transferBytes": 6163,
+          "decodedBytes": 16797,
+          "duration": 6.5
+        },
+        {
+          "path": "/_next/static/chunks/20pkwklkbp1q4.js",
+          "transferBytes": 48803,
+          "decodedBytes": 183339,
+          "duration": 10
+        },
+        {
+          "path": "/_next/static/chunks/1rj7ns8rte9vc.js",
+          "transferBytes": 71928,
+          "decodedBytes": 229156,
+          "duration": 12.900000005960464
+        },
+        {
+          "path": "/_next/static/chunks/2_4wj_h8rcvwu.js",
+          "transferBytes": 5282,
+          "decodedBytes": 13678,
+          "duration": 7.5999999940395355
+        },
+        {
+          "path": "/_next/static/chunks/3fntmmi971322.js",
+          "transferBytes": 3961,
+          "decodedBytes": 14377,
+          "duration": 6.699999988079071
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-03h4qq07e4vwr.js",
+          "transferBytes": 4138,
+          "decodedBytes": 9688,
+          "duration": 7.199999988079071
+        },
+        {
+          "path": "/_next/static/chunks/368p8zln1h27m.js",
+          "transferBytes": 15145,
+          "decodedBytes": 54588,
+          "duration": 10.899999976158142
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 86.89999997615814
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 2936,
+          "decodedBytes": 2636,
+          "duration": 166.90000000596046
+        },
+        {
+          "path": "/api/finance/state",
+          "transferBytes": 1337,
+          "decodedBytes": 1037,
+          "duration": 167.2000000178814
+        },
+        {
+          "path": "/icon.svg",
+          "transferBytes": 502,
+          "decodedBytes": 202,
+          "duration": 8.199999988079071
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 206.19999998807907
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 206.7000000178814
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 452,
+          "decodedBytes": 152,
+          "duration": 205.5
+        }
+      ]
+    },
+    {
+      "kind": "returning",
+      "width": 1280,
+      "mode": "warm",
+      "ms": 323.13870000000315,
+      "lcpMs": 216,
+      "cls": 0.01334758792453342,
+      "maxEventTimingMs": 0,
+      "eventTimingSamples": 0,
+      "maxTwoFrameInputPaintMs": null,
+      "longTasks": [],
+      "ttfbMs": 59.10000002384186,
+      "resources": [
+        {
+          "path": "/_next/static/chunks/0ec9-6crucv_2.css",
+          "transferBytes": 0,
+          "decodedBytes": 1019,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/43mvp2cwbfze4.css",
+          "transferBytes": 0,
+          "decodedBytes": 29879,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3l04zcqx63h3y.js",
+          "transferBytes": 0,
+          "decodedBytes": 16797,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/20pkwklkbp1q4.js",
+          "transferBytes": 0,
+          "decodedBytes": 183339,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/1rj7ns8rte9vc.js",
+          "transferBytes": 0,
+          "decodedBytes": 229156,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-03h4qq07e4vwr.js",
+          "transferBytes": 0,
+          "decodedBytes": 9688,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3fntmmi971322.js",
+          "transferBytes": 0,
+          "decodedBytes": 14377,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/2_4wj_h8rcvwu.js",
+          "transferBytes": 0,
+          "decodedBytes": 13678,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/368p8zln1h27m.js",
+          "transferBytes": 0,
+          "decodedBytes": 54588,
+          "duration": 0
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 110.60000002384186
+        },
+        {
+          "path": "/api/finance/state",
+          "transferBytes": 1337,
+          "decodedBytes": 1037,
+          "duration": 108
+        },
+        {
+          "path": "/icon.svg",
+          "transferBytes": 502,
+          "decodedBytes": 202,
+          "duration": 6
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 452,
+          "decodedBytes": 152,
+          "duration": 87
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 2936,
+          "decodedBytes": 2636,
+          "duration": 58.400000005960464
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 63.69999998807907
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 64
+        }
+      ]
+    },
+    {
+      "kind": "returning",
+      "width": 1280,
+      "mode": "warm",
+      "ms": 340.1444999999985,
+      "lcpMs": 180,
+      "cls": 0.01334758792453342,
+      "maxEventTimingMs": 0,
+      "eventTimingSamples": 0,
+      "maxTwoFrameInputPaintMs": null,
+      "longTasks": [],
+      "ttfbMs": 64,
+      "resources": [
+        {
+          "path": "/_next/static/chunks/0ec9-6crucv_2.css",
+          "transferBytes": 0,
+          "decodedBytes": 1019,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/43mvp2cwbfze4.css",
+          "transferBytes": 0,
+          "decodedBytes": 29879,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3l04zcqx63h3y.js",
+          "transferBytes": 0,
+          "decodedBytes": 16797,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/20pkwklkbp1q4.js",
+          "transferBytes": 0,
+          "decodedBytes": 183339,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/1rj7ns8rte9vc.js",
+          "transferBytes": 0,
+          "decodedBytes": 229156,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-03h4qq07e4vwr.js",
+          "transferBytes": 0,
+          "decodedBytes": 9688,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3fntmmi971322.js",
+          "transferBytes": 0,
+          "decodedBytes": 14377,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/2_4wj_h8rcvwu.js",
+          "transferBytes": 0,
+          "decodedBytes": 13678,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/368p8zln1h27m.js",
+          "transferBytes": 0,
+          "decodedBytes": 54588,
+          "duration": 0
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 83.80000001192093
+        },
+        {
+          "path": "/api/finance/state",
+          "transferBytes": 1337,
+          "decodedBytes": 1037,
+          "duration": 68.5
+        },
+        {
+          "path": "/icon.svg",
+          "transferBytes": 502,
+          "decodedBytes": 202,
+          "duration": 7.299999982118607
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 452,
+          "decodedBytes": 152,
+          "duration": 61.69999998807907
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 2936,
+          "decodedBytes": 2636,
+          "duration": 109.7000000178814
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 61.599999994039536
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 81
+        }
+      ]
+    },
+    {
+      "kind": "capture",
+      "width": 1280,
+      "feedbackMs": 103.44889999999941,
+      "numberVisibleAfterResponseMs": 15.104499999997643,
+      "lcpMs": 180,
+      "cls": 0.01334758792453342,
+      "maxEventTimingMs": 32,
+      "eventTimingSamples": 6,
+      "maxTwoFrameInputPaintMs": 29.5,
+      "longTasks": [],
+      "ttfbMs": 64,
+      "resources": [
+        {
+          "path": "/_next/static/chunks/0ec9-6crucv_2.css",
+          "transferBytes": 0,
+          "decodedBytes": 1019,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/43mvp2cwbfze4.css",
+          "transferBytes": 0,
+          "decodedBytes": 29879,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3l04zcqx63h3y.js",
+          "transferBytes": 0,
+          "decodedBytes": 16797,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/20pkwklkbp1q4.js",
+          "transferBytes": 0,
+          "decodedBytes": 183339,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/1rj7ns8rte9vc.js",
+          "transferBytes": 0,
+          "decodedBytes": 229156,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-03h4qq07e4vwr.js",
+          "transferBytes": 0,
+          "decodedBytes": 9688,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3fntmmi971322.js",
+          "transferBytes": 0,
+          "decodedBytes": 14377,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/2_4wj_h8rcvwu.js",
+          "transferBytes": 0,
+          "decodedBytes": 13678,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/368p8zln1h27m.js",
+          "transferBytes": 0,
+          "decodedBytes": 54588,
+          "duration": 0
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 83.80000001192093
+        },
+        {
+          "path": "/api/finance/state",
+          "transferBytes": 1337,
+          "decodedBytes": 1037,
+          "duration": 68.5
+        },
+        {
+          "path": "/icon.svg",
+          "transferBytes": 502,
+          "decodedBytes": 202,
+          "duration": 7.299999982118607
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 452,
+          "decodedBytes": 152,
+          "duration": 61.69999998807907
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 2936,
+          "decodedBytes": 2636,
+          "duration": 109.7000000178814
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 61.599999994039536
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 81
+        },
+        {
+          "path": "/api/finance/spend",
+          "transferBytes": 1375,
+          "decodedBytes": 1075,
+          "duration": 57.80000001192093
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 65.7000000178814
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 725,
+          "decodedBytes": 425,
+          "duration": 64.5
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 3182,
+          "decodedBytes": 2882,
+          "duration": 63.400000005960464
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 66.59999999403954
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 131.2000000178814
+        }
+      ]
+    }
+  ],
+  "accessibility": []
+}

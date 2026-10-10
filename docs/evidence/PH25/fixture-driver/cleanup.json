@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "removedSyntheticFixtureCount": 1,
+  "target": "pinned local container only",
+  "selection": "exact synthetic merchant plus failed-run timestamp window and synthetic email pattern",
+  "remoteChanges": false
+}

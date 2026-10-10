@@ -1,0 +1,2500 @@
+{
+  "head": "028c332ceed636b1402b902f5fe31a1927257c1b",
+  "environment": {
+    "os": "win32",
+    "release": "10.0.26200",
+    "cpu": "AMD Ryzen AI 7 350 w/ Radeon 860M              ",
+    "logicalProcessors": 16,
+    "memoryGB": 23,
+    "browser": "155.0.4283.45",
+    "browserMode": "isolated headless installed Edge",
+    "network": "loopback, unthrottled; no external providers",
+    "cpuThrottling": 1,
+    "origin": "http://127.0.0.1:3111",
+    "database": "persistent local Supabase55321",
+    "axeVersion": "4.14.0"
+  },
+  "checks": [
+    {
+      "name": "first-value-375",
+      "status": "PASS",
+      "durationMs": 1273.7487999999994,
+      "ms": 1273.6403999999993
+    },
+    {
+      "name": "returning-375-cold-1",
+      "status": "PASS",
+      "durationMs": 1583.824199999999,
+      "ms": 360.47519999999895
+    },
+    {
+      "name": "returning-375-warm-2",
+      "status": "PASS",
+      "durationMs": 1539.5957999999991,
+      "ms": 322.2459999999992
+    },
+    {
+      "name": "returning-375-warm-3",
+      "status": "PASS",
+      "durationMs": 1399.248599999999,
+      "ms": 192.5659999999989
+    },
+    {
+      "name": "capture-375",
+      "status": "PASS",
+      "durationMs": 1494.4445000000014,
+      "feedbackMs": 123.38929999999891,
+      "numberVisibleAfterResponseMs": 12.468199999999342
+    },
+    {
+      "name": "lab-vitals-375",
+      "status": "PASS",
+      "durationMs": 0.15890000000035798,
+      "interactionProxy": "trusted input to second requestAnimationFrame; EventTiming recorded separately"
+    },
+    {
+      "name": "first-value-1280",
+      "status": "PASS",
+      "durationMs": 927.622800000001,
+      "ms": 927.5962
+    },
+    {
+      "name": "returning-1280-cold-6",
+      "status": "PASS",
+      "durationMs": 1557.6859000000004,
+      "ms": 336.83439999999973
+    },
+    {
+      "name": "returning-1280-warm-7",
+      "status": "PASS",
+      "durationMs": 1556.0093000000015,
+      "ms": 337.2374999999993
+    },
+    {
+      "name": "returning-1280-warm-8",
+      "status": "PASS",
+      "durationMs": 1536.2232999999978,
+      "ms": 321.0493999999999
+    },
+    {
+      "name": "capture-1280",
+      "status": "PASS",
+      "durationMs": 1476.3780000000006,
+      "feedbackMs": 105.31850000000122,
+      "numberVisibleAfterResponseMs": 10.143400000000838
+    },
+    {
+      "name": "lab-vitals-1280",
+      "status": "PASS",
+      "durationMs": 0.03979999999864958,
+      "interactionProxy": "trusted input to second requestAnimationFrame; EventTiming recorded separately"
+    },
+    {
+      "name": "home-A-375-responsive",
+      "status": "PASS",
+      "durationMs": 74.15710000000036,
+      "width": 375,
+      "scroll": 375
+    },
+    {
+      "name": "home-A-375-axe",
+      "status": "PASS",
+      "durationMs": 269.28619999999864,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 2
+    },
+    {
+      "name": "home-A-375-expanded-labels",
+      "status": "PASS",
+      "durationMs": 154.20839999999953,
+      "axeChecksPassed": 26,
+      "incompleteChecks": 2
+    },
+    {
+      "name": "home-A-375-keyboard",
+      "status": "FAIL",
+      "durationMs": 267.48809999999867,
+      "reason": "invisible/missing focus indicator\n\n2 !== 0\n"
+    },
+    {
+      "name": "home-A-375-live-announcements",
+      "status": "PASS",
+      "durationMs": 20.616399999998976,
+      "namedTextboxes": 4
+    },
+    {
+      "name": "visualize-375-responsive",
+      "status": "PASS",
+      "durationMs": 54.08799999999974,
+      "width": 375,
+      "scroll": 375
+    },
+    {
+      "name": "visualize-375-axe",
+      "status": "PASS",
+      "durationMs": 179.928100000001,
+      "axeChecksPassed": 26,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "visualize-375-keyboard",
+      "status": "PASS",
+      "durationMs": 38.39129999999932,
+      "expectedControls": 9,
+      "uniqueFocused": 9
+    },
+    {
+      "name": "visualize-375-chart-equivalents",
+      "status": "PASS",
+      "durationMs": 12.510999999998603,
+      "tables": 2,
+      "keyboardScrollable": true
+    },
+    {
+      "name": "manage-375-responsive",
+      "status": "PASS",
+      "durationMs": 85.84749999999985,
+      "width": 375,
+      "scroll": 375
+    },
+    {
+      "name": "manage-375-axe",
+      "status": "PASS",
+      "durationMs": 235.8963999999978,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 0
+    },
+    {
+      "name": "manage-375-keyboard",
+      "status": "FAIL",
+      "durationMs": 340.1216999999997,
+      "reason": "invisible/missing focus indicator\n\n2 !== 0\n"
+    },
+    {
+      "name": "manage-375-account-modal",
+      "status": "PASS",
+      "durationMs": 153.71929999999702,
+      "focusContained": true,
+      "escapeReturnsFocus": true,
+      "deletionNotExecuted": true
+    },
+    {
+      "name": "zoom-375",
+      "status": "PASS",
+      "durationMs": 85.1736000000019,
+      "method": "320CSS reflow floor (187CSS earlier stress run below WCAG minimum)"
+    },
+    {
+      "name": "home-B-375-responsive",
+      "status": "PASS",
+      "durationMs": 76.06629999999859,
+      "width": 375,
+      "scroll": 375
+    },
+    {
+      "name": "home-B-375-axe",
+      "status": "PASS",
+      "durationMs": 233.66229999999632,
+      "axeChecksPassed": 27,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "home-C-375-responsive",
+      "status": "PASS",
+      "durationMs": 75.0685999999987,
+      "width": 375,
+      "scroll": 375
+    },
+    {
+      "name": "home-C-375-axe",
+      "status": "PASS",
+      "durationMs": 215.43560000000434,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "home-A-768-responsive",
+      "status": "PASS",
+      "durationMs": 74.5196999999971,
+      "width": 768,
+      "scroll": 768
+    },
+    {
+      "name": "home-A-768-axe",
+      "status": "PASS",
+      "durationMs": 223.80450000000565,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "home-A-768-expanded-labels",
+      "status": "PASS",
+      "durationMs": 151.48660000000382,
+      "axeChecksPassed": 26,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "home-A-768-keyboard",
+      "status": "FAIL",
+      "durationMs": 269.91449999999895,
+      "reason": "invisible/missing focus indicator\n\n2 !== 0\n"
+    },
+    {
+      "name": "home-A-768-live-announcements",
+      "status": "PASS",
+      "durationMs": 19.763200000001234,
+      "namedTextboxes": 4
+    },
+    {
+      "name": "visualize-768-responsive",
+      "status": "PASS",
+      "durationMs": 67.68139999999403,
+      "width": 768,
+      "scroll": 768
+    },
+    {
+      "name": "visualize-768-axe",
+      "status": "PASS",
+      "durationMs": 213.3541999999943,
+      "axeChecksPassed": 26,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "visualize-768-keyboard",
+      "status": "PASS",
+      "durationMs": 34.69180000000051,
+      "expectedControls": 10,
+      "uniqueFocused": 10
+    },
+    {
+      "name": "visualize-768-chart-equivalents",
+      "status": "PASS",
+      "durationMs": 7.9988999999986845,
+      "tables": 2,
+      "keyboardScrollable": true
+    },
+    {
+      "name": "manage-768-responsive",
+      "status": "PASS",
+      "durationMs": 87.33230000000185,
+      "width": 768,
+      "scroll": 768
+    },
+    {
+      "name": "manage-768-axe",
+      "status": "PASS",
+      "durationMs": 234.59049999999843,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 0
+    },
+    {
+      "name": "manage-768-keyboard",
+      "status": "FAIL",
+      "durationMs": 358.3185000000012,
+      "reason": "invisible/missing focus indicator\n\n2 !== 0\n"
+    },
+    {
+      "name": "manage-768-account-modal",
+      "status": "PASS",
+      "durationMs": 138.77820000000065,
+      "focusContained": true,
+      "escapeReturnsFocus": true,
+      "deletionNotExecuted": true
+    },
+    {
+      "name": "zoom-768",
+      "status": "PASS",
+      "durationMs": 96.95020000000659,
+      "method": "200% zoom-equivalent half CSS viewport, not actual browser zoom"
+    },
+    {
+      "name": "home-B-768-responsive",
+      "status": "PASS",
+      "durationMs": 80.0769999999975,
+      "width": 768,
+      "scroll": 768
+    },
+    {
+      "name": "home-B-768-axe",
+      "status": "PASS",
+      "durationMs": 235.8796000000002,
+      "axeChecksPassed": 27,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "home-C-768-responsive",
+      "status": "PASS",
+      "durationMs": 90.56310000000667,
+      "width": 768,
+      "scroll": 768
+    },
+    {
+      "name": "home-C-768-axe",
+      "status": "PASS",
+      "durationMs": 233.44719999999506,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "home-A-1280-responsive",
+      "status": "PASS",
+      "durationMs": 92.30860000000393,
+      "width": 1280,
+      "scroll": 1280
+    },
+    {
+      "name": "home-A-1280-axe",
+      "status": "PASS",
+      "durationMs": 226.2425000000003,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 2
+    },
+    {
+      "name": "home-A-1280-expanded-labels",
+      "status": "PASS",
+      "durationMs": 155.56360000000132,
+      "axeChecksPassed": 26,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "home-A-1280-keyboard",
+      "status": "FAIL",
+      "durationMs": 304.53139999999985,
+      "reason": "invisible/missing focus indicator\n\n2 !== 0\n"
+    },
+    {
+      "name": "home-A-1280-live-announcements",
+      "status": "PASS",
+      "durationMs": 17.953300000001036,
+      "namedTextboxes": 4
+    },
+    {
+      "name": "visualize-1280-responsive",
+      "status": "PASS",
+      "durationMs": 94.23519999999553,
+      "width": 1280,
+      "scroll": 1280
+    },
+    {
+      "name": "visualize-1280-axe",
+      "status": "PASS",
+      "durationMs": 200.29859999999462,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "visualize-1280-keyboard",
+      "status": "PASS",
+      "durationMs": 42.3833999999988,
+      "expectedControls": 10,
+      "uniqueFocused": 10
+    },
+    {
+      "name": "visualize-1280-chart-equivalents",
+      "status": "PASS",
+      "durationMs": 13.743600000001607,
+      "tables": 2,
+      "keyboardScrollable": true
+    },
+    {
+      "name": "manage-1280-responsive",
+      "status": "PASS",
+      "durationMs": 102.46059999999852,
+      "width": 1280,
+      "scroll": 1280
+    },
+    {
+      "name": "manage-1280-axe",
+      "status": "PASS",
+      "durationMs": 226.46570000000065,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 0
+    },
+    {
+      "name": "manage-1280-keyboard",
+      "status": "FAIL",
+      "durationMs": 393.8993999999948,
+      "reason": "invisible/missing focus indicator\n\n2 !== 0\n"
+    },
+    {
+      "name": "manage-1280-account-modal",
+      "status": "PASS",
+      "durationMs": 167.3292999999976,
+      "focusContained": true,
+      "escapeReturnsFocus": true,
+      "deletionNotExecuted": true
+    },
+    {
+      "name": "zoom-1280",
+      "status": "PASS",
+      "durationMs": 101.58939999999711,
+      "method": "200% zoom-equivalent half CSS viewport, not actual browser zoom"
+    },
+    {
+      "name": "home-B-1280-responsive",
+      "status": "PASS",
+      "durationMs": 101.02240000000165,
+      "width": 1280,
+      "scroll": 1280
+    },
+    {
+      "name": "home-B-1280-axe",
+      "status": "PASS",
+      "durationMs": 231.7998000000007,
+      "axeChecksPassed": 27,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "home-C-1280-responsive",
+      "status": "PASS",
+      "durationMs": 97.00500000000466,
+      "width": 1280,
+      "scroll": 1280
+    },
+    {
+      "name": "home-C-1280-axe",
+      "status": "PASS",
+      "durationMs": 213.3367999999973,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "reduced-home-375",
+      "status": "PASS",
+      "durationMs": 70.05230000000302,
+      "nonessentialInterpolations": 0
+    },
+    {
+      "name": "reduced-visualize-375",
+      "status": "PASS",
+      "durationMs": 59.961199999997916,
+      "nonessentialInterpolations": 0
+    },
+    {
+      "name": "reduced-manage-375",
+      "status": "PASS",
+      "durationMs": 66.51120000000083,
+      "nonessentialInterpolations": 0
+    },
+    {
+      "name": "reduced-capture-375",
+      "status": "PASS",
+      "durationMs": 369.2921999999962,
+      "feedbackMs": 104.41629999999714,
+      "numberVisibleAfterResponseMs": 12.789100000001781
+    },
+    {
+      "name": "offline-375",
+      "status": "PASS",
+      "durationMs": 82.1533999999956,
+      "draftRetained": true
+    },
+    {
+      "name": "failed-save-375",
+      "status": "PASS",
+      "durationMs": 145.4988000000012,
+      "controlledFailure": true,
+      "ledgerUnchanged": true
+    },
+    {
+      "name": "reduced-home-1280",
+      "status": "PASS",
+      "durationMs": 98.61679999999615,
+      "nonessentialInterpolations": 0
+    },
+    {
+      "name": "reduced-visualize-1280",
+      "status": "PASS",
+      "durationMs": 75.67160000000149,
+      "nonessentialInterpolations": 0
+    },
+    {
+      "name": "reduced-manage-1280",
+      "status": "PASS",
+      "durationMs": 79.82180000000517,
+      "nonessentialInterpolations": 0
+    },
+    {
+      "name": "reduced-capture-1280",
+      "status": "PASS",
+      "durationMs": 287.0017999999982,
+      "feedbackMs": 99.74010000000999,
+      "numberVisibleAfterResponseMs": 10.188200000004144
+    },
+    {
+      "name": "offline-1280",
+      "status": "PASS",
+      "durationMs": 96.35040000001027,
+      "draftRetained": true
+    },
+    {
+      "name": "failed-save-1280",
+      "status": "PASS",
+      "durationMs": 144.69089999998687,
+      "controlledFailure": true,
+      "ledgerUnchanged": true
+    }
+  ],
+  "measurements": [
+    {
+      "kind": "first-value",
+      "width": 375,
+      "ms": 1273.6403999999993,
+      "authExcluded": true
+    },
+    {
+      "kind": "returning",
+      "width": 375,
+      "mode": "cold",
+      "ms": 360.47519999999895,
+      "lcpMs": 116,
+      "cls": 0.023024747067901235,
+      "maxEventTimingMs": 0,
+      "eventTimingSamples": 0,
+      "maxTwoFrameInputPaintMs": null,
+      "longTasks": [],
+      "ttfbMs": 71.09999999403954,
+      "resources": [
+        {
+          "path": "/_next/static/chunks/0ec9-6crucv_2.css",
+          "transferBytes": 1319,
+          "decodedBytes": 1019,
+          "duration": 4.5999999940395355
+        },
+        {
+          "path": "/_next/static/chunks/43mvp2cwbfze4.css",
+          "transferBytes": 6828,
+          "decodedBytes": 29879,
+          "duration": 7
+        },
+        {
+          "path": "/_next/static/chunks/3l04zcqx63h3y.js",
+          "transferBytes": 6163,
+          "decodedBytes": 16797,
+          "duration": 7.199999988079071
+        },
+        {
+          "path": "/_next/static/chunks/20pkwklkbp1q4.js",
+          "transferBytes": 48803,
+          "decodedBytes": 183339,
+          "duration": 12.800000011920929
+        },
+        {
+          "path": "/_next/static/chunks/1rj7ns8rte9vc.js",
+          "transferBytes": 71928,
+          "decodedBytes": 229156,
+          "duration": 15.199999988079071
+        },
+        {
+          "path": "/_next/static/chunks/2_4wj_h8rcvwu.js",
+          "transferBytes": 5282,
+          "decodedBytes": 13678,
+          "duration": 9.700000017881393
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-03h4qq07e4vwr.js",
+          "transferBytes": 4138,
+          "decodedBytes": 9688,
+          "duration": 9
+        },
+        {
+          "path": "/_next/static/chunks/368p8zln1h27m.js",
+          "transferBytes": 15145,
+          "decodedBytes": 54588,
+          "duration": 11.599999994039536
+        },
+        {
+          "path": "/_next/static/chunks/3fntmmi971322.js",
+          "transferBytes": 3961,
+          "decodedBytes": 14377,
+          "duration": 9.599999994039536
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 80.90000000596046
+        },
+        {
+          "path": "/api/finance/state",
+          "transferBytes": 1337,
+          "decodedBytes": 1037,
+          "duration": 81.69999998807907
+        },
+        {
+          "path": "/icon.svg",
+          "transferBytes": 502,
+          "decodedBytes": 202,
+          "duration": 12.800000011920929
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 452,
+          "decodedBytes": 152,
+          "duration": 74.5
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 2936,
+          "decodedBytes": 2636,
+          "duration": 77.19999998807907
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 66.09999999403954
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 67
+        }
+      ]
+    },
+    {
+      "kind": "returning",
+      "width": 375,
+      "mode": "warm",
+      "ms": 322.2459999999992,
+      "lcpMs": 112,
+      "cls": 0.023024747067901235,
+      "maxEventTimingMs": 0,
+      "eventTimingSamples": 0,
+      "maxTwoFrameInputPaintMs": null,
+      "longTasks": [],
+      "ttfbMs": 64,
+      "resources": [
+        {
+          "path": "/_next/static/chunks/0ec9-6crucv_2.css",
+          "transferBytes": 0,
+          "decodedBytes": 1019,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/43mvp2cwbfze4.css",
+          "transferBytes": 0,
+          "decodedBytes": 29879,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3l04zcqx63h3y.js",
+          "transferBytes": 0,
+          "decodedBytes": 16797,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/20pkwklkbp1q4.js",
+          "transferBytes": 0,
+          "decodedBytes": 183339,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/1rj7ns8rte9vc.js",
+          "transferBytes": 0,
+          "decodedBytes": 229156,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-03h4qq07e4vwr.js",
+          "transferBytes": 0,
+          "decodedBytes": 9688,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3fntmmi971322.js",
+          "transferBytes": 0,
+          "decodedBytes": 14377,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/2_4wj_h8rcvwu.js",
+          "transferBytes": 0,
+          "decodedBytes": 13678,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/368p8zln1h27m.js",
+          "transferBytes": 0,
+          "decodedBytes": 54588,
+          "duration": 0
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 78.30000001192093
+        },
+        {
+          "path": "/api/finance/state",
+          "transferBytes": 1337,
+          "decodedBytes": 1037,
+          "duration": 75.69999998807907
+        },
+        {
+          "path": "/icon.svg",
+          "transferBytes": 502,
+          "decodedBytes": 202,
+          "duration": 8.900000005960464
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 452,
+          "decodedBytes": 152,
+          "duration": 107.59999999403954
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 2936,
+          "decodedBytes": 2636,
+          "duration": 108.40000000596046
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 64.19999998807907
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 65.19999998807907
+        }
+      ]
+    },
+    {
+      "kind": "returning",
+      "width": 375,
+      "mode": "warm",
+      "ms": 192.5659999999989,
+      "lcpMs": 92,
+      "cls": 0.021540724022633746,
+      "maxEventTimingMs": 0,
+      "eventTimingSamples": 0,
+      "maxTwoFrameInputPaintMs": null,
+      "longTasks": [],
+      "ttfbMs": 57.5,
+      "resources": [
+        {
+          "path": "/_next/static/chunks/0ec9-6crucv_2.css",
+          "transferBytes": 0,
+          "decodedBytes": 1019,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/43mvp2cwbfze4.css",
+          "transferBytes": 0,
+          "decodedBytes": 29879,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3l04zcqx63h3y.js",
+          "transferBytes": 0,
+          "decodedBytes": 16797,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/20pkwklkbp1q4.js",
+          "transferBytes": 0,
+          "decodedBytes": 183339,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/1rj7ns8rte9vc.js",
+          "transferBytes": 0,
+          "decodedBytes": 229156,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-03h4qq07e4vwr.js",
+          "transferBytes": 0,
+          "decodedBytes": 9688,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3fntmmi971322.js",
+          "transferBytes": 0,
+          "decodedBytes": 14377,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/2_4wj_h8rcvwu.js",
+          "transferBytes": 0,
+          "decodedBytes": 13678,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/368p8zln1h27m.js",
+          "transferBytes": 0,
+          "decodedBytes": 54588,
+          "duration": 0
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 100.10000002384186
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 2936,
+          "decodedBytes": 2636,
+          "duration": 98.40000000596046
+        },
+        {
+          "path": "/api/finance/state",
+          "transferBytes": 1337,
+          "decodedBytes": 1037,
+          "duration": 98.59999999403954
+        },
+        {
+          "path": "/icon.svg",
+          "transferBytes": 502,
+          "decodedBytes": 202,
+          "duration": 7.300000011920929
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 64.80000001192093
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 70.2000000178814
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 452,
+          "decodedBytes": 152,
+          "duration": 69.2999999821186
+        }
+      ]
+    },
+    {
+      "kind": "capture",
+      "width": 375,
+      "feedbackMs": 123.38929999999891,
+      "numberVisibleAfterResponseMs": 12.468199999999342,
+      "lcpMs": 92,
+      "cls": 0.021540724022633746,
+      "maxEventTimingMs": 32,
+      "eventTimingSamples": 6,
+      "maxTwoFrameInputPaintMs": 29.69999998807907,
+      "longTasks": [],
+      "ttfbMs": 57.5,
+      "resources": [
+        {
+          "path": "/_next/static/chunks/0ec9-6crucv_2.css",
+          "transferBytes": 0,
+          "decodedBytes": 1019,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/43mvp2cwbfze4.css",
+          "transferBytes": 0,
+          "decodedBytes": 29879,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3l04zcqx63h3y.js",
+          "transferBytes": 0,
+          "decodedBytes": 16797,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/20pkwklkbp1q4.js",
+          "transferBytes": 0,
+          "decodedBytes": 183339,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/1rj7ns8rte9vc.js",
+          "transferBytes": 0,
+          "decodedBytes": 229156,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-03h4qq07e4vwr.js",
+          "transferBytes": 0,
+          "decodedBytes": 9688,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3fntmmi971322.js",
+          "transferBytes": 0,
+          "decodedBytes": 14377,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/2_4wj_h8rcvwu.js",
+          "transferBytes": 0,
+          "decodedBytes": 13678,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/368p8zln1h27m.js",
+          "transferBytes": 0,
+          "decodedBytes": 54588,
+          "duration": 0
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 100.10000002384186
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 2936,
+          "decodedBytes": 2636,
+          "duration": 98.40000000596046
+        },
+        {
+          "path": "/api/finance/state",
+          "transferBytes": 1337,
+          "decodedBytes": 1037,
+          "duration": 98.59999999403954
+        },
+        {
+          "path": "/icon.svg",
+          "transferBytes": 502,
+          "decodedBytes": 202,
+          "duration": 7.300000011920929
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 64.80000001192093
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 70.2000000178814
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 452,
+          "decodedBytes": 152,
+          "duration": 69.2999999821186
+        },
+        {
+          "path": "/api/finance/spend",
+          "transferBytes": 1375,
+          "decodedBytes": 1075,
+          "duration": 86.19999998807907
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 104.40000000596046
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 725,
+          "decodedBytes": 425,
+          "duration": 103.5
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 3182,
+          "decodedBytes": 2882,
+          "duration": 105
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 64.80000001192093
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 64.19999998807907
+        }
+      ]
+    },
+    {
+      "kind": "first-value",
+      "width": 1280,
+      "ms": 927.5962,
+      "authExcluded": true
+    },
+    {
+      "kind": "returning",
+      "width": 1280,
+      "mode": "cold",
+      "ms": 336.83439999999973,
+      "lcpMs": 196,
+      "cls": 0.01334758792453342,
+      "maxEventTimingMs": 0,
+      "eventTimingSamples": 0,
+      "maxTwoFrameInputPaintMs": null,
+      "longTasks": [],
+      "ttfbMs": 58.5,
+      "resources": [
+        {
+          "path": "/_next/static/chunks/0ec9-6crucv_2.css",
+          "transferBytes": 1319,
+          "decodedBytes": 1019,
+          "duration": 2.600000023841858
+        },
+        {
+          "path": "/_next/static/chunks/43mvp2cwbfze4.css",
+          "transferBytes": 6828,
+          "decodedBytes": 29879,
+          "duration": 3
+        },
+        {
+          "path": "/_next/static/chunks/3l04zcqx63h3y.js",
+          "transferBytes": 6163,
+          "decodedBytes": 16797,
+          "duration": 7.9000000059604645
+        },
+        {
+          "path": "/_next/static/chunks/3fntmmi971322.js",
+          "transferBytes": 3961,
+          "decodedBytes": 14377,
+          "duration": 9.800000011920929
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-03h4qq07e4vwr.js",
+          "transferBytes": 4138,
+          "decodedBytes": 9688,
+          "duration": 9
+        },
+        {
+          "path": "/_next/static/chunks/2_4wj_h8rcvwu.js",
+          "transferBytes": 5282,
+          "decodedBytes": 13678,
+          "duration": 10
+        },
+        {
+          "path": "/_next/static/chunks/20pkwklkbp1q4.js",
+          "transferBytes": 48803,
+          "decodedBytes": 183339,
+          "duration": 11.800000011920929
+        },
+        {
+          "path": "/_next/static/chunks/1rj7ns8rte9vc.js",
+          "transferBytes": 71928,
+          "decodedBytes": 229156,
+          "duration": 13.700000017881393
+        },
+        {
+          "path": "/_next/static/chunks/368p8zln1h27m.js",
+          "transferBytes": 15145,
+          "decodedBytes": 54588,
+          "duration": 12.700000017881393
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 72.2000000178814
+        },
+        {
+          "path": "/api/finance/state",
+          "transferBytes": 1337,
+          "decodedBytes": 1037,
+          "duration": 75.30000001192093
+        },
+        {
+          "path": "/icon.svg",
+          "transferBytes": 502,
+          "decodedBytes": 202,
+          "duration": 7.800000011920929
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 452,
+          "decodedBytes": 152,
+          "duration": 64
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 2936,
+          "decodedBytes": 2636,
+          "duration": 67.09999999403954
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 68.30000001192093
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 67.59999999403954
+        }
+      ]
+    },
+    {
+      "kind": "returning",
+      "width": 1280,
+      "mode": "warm",
+      "ms": 337.2374999999993,
+      "lcpMs": 192,
+      "cls": 0.01334758792453342,
+      "maxEventTimingMs": 0,
+      "eventTimingSamples": 0,
+      "maxTwoFrameInputPaintMs": null,
+      "longTasks": [],
+      "ttfbMs": 58.099999994039536,
+      "resources": [
+        {
+          "path": "/_next/static/chunks/0ec9-6crucv_2.css",
+          "transferBytes": 0,
+          "decodedBytes": 1019,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/43mvp2cwbfze4.css",
+          "transferBytes": 0,
+          "decodedBytes": 29879,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3l04zcqx63h3y.js",
+          "transferBytes": 0,
+          "decodedBytes": 16797,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/20pkwklkbp1q4.js",
+          "transferBytes": 0,
+          "decodedBytes": 183339,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/1rj7ns8rte9vc.js",
+          "transferBytes": 0,
+          "decodedBytes": 229156,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-03h4qq07e4vwr.js",
+          "transferBytes": 0,
+          "decodedBytes": 9688,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3fntmmi971322.js",
+          "transferBytes": 0,
+          "decodedBytes": 14377,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/2_4wj_h8rcvwu.js",
+          "transferBytes": 0,
+          "decodedBytes": 13678,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/368p8zln1h27m.js",
+          "transferBytes": 0,
+          "decodedBytes": 54588,
+          "duration": 0
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 74.60000002384186
+        },
+        {
+          "path": "/api/finance/state",
+          "transferBytes": 1337,
+          "decodedBytes": 1037,
+          "duration": 76.60000002384186
+        },
+        {
+          "path": "/icon.svg",
+          "transferBytes": 502,
+          "decodedBytes": 202,
+          "duration": 10.099999994039536
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 452,
+          "decodedBytes": 152,
+          "duration": 66.40000000596046
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 2936,
+          "decodedBytes": 2636,
+          "duration": 70
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 61.30000001192093
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 62.30000001192093
+        }
+      ]
+    },
+    {
+      "kind": "returning",
+      "width": 1280,
+      "mode": "warm",
+      "ms": 321.0493999999999,
+      "lcpMs": 172,
+      "cls": 0.01334758792453342,
+      "maxEventTimingMs": 0,
+      "eventTimingSamples": 0,
+      "maxTwoFrameInputPaintMs": null,
+      "longTasks": [],
+      "ttfbMs": 56.5,
+      "resources": [
+        {
+          "path": "/_next/static/chunks/0ec9-6crucv_2.css",
+          "transferBytes": 0,
+          "decodedBytes": 1019,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/43mvp2cwbfze4.css",
+          "transferBytes": 0,
+          "decodedBytes": 29879,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3l04zcqx63h3y.js",
+          "transferBytes": 0,
+          "decodedBytes": 16797,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/20pkwklkbp1q4.js",
+          "transferBytes": 0,
+          "decodedBytes": 183339,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/1rj7ns8rte9vc.js",
+          "transferBytes": 0,
+          "decodedBytes": 229156,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-03h4qq07e4vwr.js",
+          "transferBytes": 0,
+          "decodedBytes": 9688,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3fntmmi971322.js",
+          "transferBytes": 0,
+          "decodedBytes": 14377,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/2_4wj_h8rcvwu.js",
+          "transferBytes": 0,
+          "decodedBytes": 13678,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/368p8zln1h27m.js",
+          "transferBytes": 0,
+          "decodedBytes": 54588,
+          "duration": 0
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 72.60000002384186
+        },
+        {
+          "path": "/api/finance/state",
+          "transferBytes": 1337,
+          "decodedBytes": 1037,
+          "duration": 71.09999999403954
+        },
+        {
+          "path": "/icon.svg",
+          "transferBytes": 502,
+          "decodedBytes": 202,
+          "duration": 7.5999999940395355
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 452,
+          "decodedBytes": 152,
+          "duration": 75.7000000178814
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 2936,
+          "decodedBytes": 2636,
+          "duration": 87.09999999403954
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 68.7000000178814
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 90.89999997615814
+        }
+      ]
+    },
+    {
+      "kind": "capture",
+      "width": 1280,
+      "feedbackMs": 105.31850000000122,
+      "numberVisibleAfterResponseMs": 10.143400000000838,
+      "lcpMs": 172,
+      "cls": 0.01334758792453342,
+      "maxEventTimingMs": 32,
+      "eventTimingSamples": 6,
+      "maxTwoFrameInputPaintMs": 29.200000017881393,
+      "longTasks": [],
+      "ttfbMs": 56.5,
+      "resources": [
+        {
+          "path": "/_next/static/chunks/0ec9-6crucv_2.css",
+          "transferBytes": 0,
+          "decodedBytes": 1019,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/43mvp2cwbfze4.css",
+          "transferBytes": 0,
+          "decodedBytes": 29879,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3l04zcqx63h3y.js",
+          "transferBytes": 0,
+          "decodedBytes": 16797,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/20pkwklkbp1q4.js",
+          "transferBytes": 0,
+          "decodedBytes": 183339,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/1rj7ns8rte9vc.js",
+          "transferBytes": 0,
+          "decodedBytes": 229156,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/turbopack-03h4qq07e4vwr.js",
+          "transferBytes": 0,
+          "decodedBytes": 9688,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/3fntmmi971322.js",
+          "transferBytes": 0,
+          "decodedBytes": 14377,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/2_4wj_h8rcvwu.js",
+          "transferBytes": 0,
+          "decodedBytes": 13678,
+          "duration": 0
+        },
+        {
+          "path": "/_next/static/chunks/368p8zln1h27m.js",
+          "transferBytes": 0,
+          "decodedBytes": 54588,
+          "duration": 0
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 72.60000002384186
+        },
+        {
+          "path": "/api/finance/state",
+          "transferBytes": 1337,
+          "decodedBytes": 1037,
+          "duration": 71.09999999403954
+        },
+        {
+          "path": "/icon.svg",
+          "transferBytes": 502,
+          "decodedBytes": 202,
+          "duration": 7.5999999940395355
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 452,
+          "decodedBytes": 152,
+          "duration": 75.7000000178814
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 2936,
+          "decodedBytes": 2636,
+          "duration": 87.09999999403954
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 68.7000000178814
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 90.89999997615814
+        },
+        {
+          "path": "/api/finance/spend",
+          "transferBytes": 1375,
+          "decodedBytes": 1075,
+          "duration": 66.2999999821186
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 144.80000001192093
+        },
+        {
+          "path": "/api/finance/card-records",
+          "transferBytes": 725,
+          "decodedBytes": 425,
+          "duration": 90.09999999403954
+        },
+        {
+          "path": "/api/finance/surfaces",
+          "transferBytes": 3182,
+          "decodedBytes": 2882,
+          "duration": 142.80000001192093
+        },
+        {
+          "path": "/api/finance/obligation-records",
+          "transferBytes": 346,
+          "decodedBytes": 46,
+          "duration": 136.5
+        },
+        {
+          "path": "/api/finance/recovery-preview",
+          "transferBytes": 375,
+          "decodedBytes": 75,
+          "duration": 137.09999999403954
+        }
+      ]
+    }
+  ],
+  "accessibility": [
+    {
+      "key": "home-A-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".goal-tank > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-A-375-expanded",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".goal-tank > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "select-name",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "visualize-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "text[x=\"0\"]"
+            ],
+            [
+              "text[x=\"490\"]"
+            ],
+            [
+              ".week-matrix > caption"
+            ],
+            [
+              ".week-matrix > tbody > tr:nth-child(1) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(1) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(1) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(1) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(1) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(7) > strong"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "html-has-lang",
+        "html-lang-valid",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "scrollable-region-focusable",
+        "summary-name",
+        "svg-img-alt",
+        "target-size",
+        "td-headers-attr",
+        "th-has-data-cells"
+      ]
+    },
+    {
+      "key": "manage-375",
+      "violations": [],
+      "incomplete": [],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "select-name",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "manage-375-modal",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "#delete-title"
+            ],
+            [
+              "dialog[aria-labelledby=\"delete-title\"] > p"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "autocomplete-valid",
+        "button-name",
+        "color-contrast",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "label",
+        "meta-viewport",
+        "nested-interactive",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-B-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".recovery-proposals"
+            ],
+            [
+              ".ledger-list"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "list",
+        "listitem",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-C-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-A-768",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-A-768-expanded",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "select-name",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "visualize-768",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "text[x=\"0\"]"
+            ],
+            [
+              "text[x=\"490\"]"
+            ],
+            [
+              ".week-matrix > caption"
+            ],
+            [
+              "tr:nth-child(1) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(1) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(7) > strong"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(7) > strong"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "html-has-lang",
+        "html-lang-valid",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "scrollable-region-focusable",
+        "summary-name",
+        "svg-img-alt",
+        "target-size",
+        "td-headers-attr",
+        "th-has-data-cells"
+      ]
+    },
+    {
+      "key": "manage-768",
+      "violations": [],
+      "incomplete": [],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "select-name",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "manage-768-modal",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "dialog[aria-labelledby=\"delete-title\"] > p"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "autocomplete-valid",
+        "button-name",
+        "color-contrast",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "label",
+        "meta-viewport",
+        "nested-interactive",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-B-768",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".recovery-proposals"
+            ],
+            [
+              ".ledger-list"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "list",
+        "listitem",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-C-768",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-A-1280",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".goal-tank > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-A-1280-expanded",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "select-name",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "visualize-1280",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "text[x=\"0\"]"
+            ],
+            [
+              "text[x=\"490\"]"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "html-has-lang",
+        "html-lang-valid",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "summary-name",
+        "svg-img-alt",
+        "target-size",
+        "td-headers-attr",
+        "th-has-data-cells"
+      ]
+    },
+    {
+      "key": "manage-1280",
+      "violations": [],
+      "incomplete": [],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "select-name",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "manage-1280-modal",
+      "violations": [],
+      "incomplete": [],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "autocomplete-valid",
+        "button-name",
+        "color-contrast",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "label",
+        "meta-viewport",
+        "nested-interactive",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-B-1280",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".recovery-proposals"
+            ],
+            [
+              ".ledger-list"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "list",
+        "listitem",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "summary-name",
+        "target-size"
+      ]
+    },
+    {
+      "key": "home-C-1280",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "summary-name",
+        "target-size"
+      ]
+    }
+  ]
+}

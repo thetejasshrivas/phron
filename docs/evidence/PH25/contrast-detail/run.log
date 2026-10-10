@@ -1,0 +1,19 @@
+PASS home-A-375-responsive
+PASS home-A-375-axe
+PASS home-B-375-responsive
+PASS home-B-375-axe
+PASS home-C-375-responsive
+PASS home-C-375-axe
+PASS home-A-768-responsive
+PASS home-A-768-axe
+PASS home-B-768-responsive
+PASS home-B-768-axe
+PASS home-C-768-responsive
+PASS home-C-768-axe
+PASS home-A-1280-responsive
+PASS home-A-1280-axe
+PASS home-B-1280-responsive
+PASS home-B-1280-axe
+PASS home-C-1280-responsive
+PASS home-C-1280-axe
+18 PASS; 0 FAIL; 18 total

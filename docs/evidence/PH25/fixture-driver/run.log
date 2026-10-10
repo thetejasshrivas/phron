@@ -1,0 +1,17 @@
+PASS first-value-375
+PASS returning-375-cold-1
+PASS returning-375-warm-2
+PASS returning-375-warm-3
+PASS capture-375
+PASS lab-vitals-375
+PASS first-value-1280
+PASS returning-1280-cold-6
+PASS returning-1280-warm-7
+PASS returning-1280-warm-8
+PASS capture-1280
+PASS lab-vitals-1280
+FAIL audit runtime Expected values to be strictly equal:
+
+false !== true
+
+12 PASS; 1 FAIL; 13 total

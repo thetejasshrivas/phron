@@ -1,0 +1,464 @@
+{
+  "expected": 9,
+  "uniqueFocused": 9,
+  "coverageComplete": true,
+  "visits": [
+    {
+      "index": 20,
+      "tag": "A",
+      "id": "",
+      "text": "Skip to content",
+      "html": "<a class=\"skip-home\" href=\"#surface-main\">Skip to content</a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 0,
+        "y": 12,
+        "width": 131.234375,
+        "height": 49
+      },
+      "centerHit": true
+    },
+    {
+      "index": 22,
+      "tag": "A",
+      "id": "",
+      "text": "phron↗",
+      "html": "<a class=\"home-brand\" href=\"/home\">phron<span aria-hidden=\"true\">↗</span></a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 20,
+        "y": 18,
+        "width": 98.1875,
+        "height": 31
+      },
+      "centerHit": true
+    },
+    {
+      "index": 26,
+      "tag": "A",
+      "id": "",
+      "text": "Your day",
+      "html": "<a href=\"/home\">Your day</a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 20,
+        "y": 57,
+        "width": 66.9375,
+        "height": 44
+      },
+      "centerHit": true
+    },
+    {
+      "index": 27,
+      "tag": "A",
+      "id": "",
+      "text": "Visualize spending",
+      "html": "<a href=\"/visualize\" aria-current=\"page\">Visualize spending</a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 90.9375,
+        "y": 57,
+        "width": 127.8125,
+        "height": 44
+      },
+      "centerHit": true
+    },
+    {
+      "index": 28,
+      "tag": "A",
+      "id": "",
+      "text": "Buckets & settings",
+      "html": "<a href=\"/manage\">Buckets &amp; settings</a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 222.75,
+        "y": 57,
+        "width": 118.71875,
+        "height": 44
+      },
+      "centerHit": true
+    },
+    {
+      "index": 38,
+      "tag": "BUTTON",
+      "id": "",
+      "text": "Refresh confirmed records ↗",
+      "html": "<button class=\"text-action\">Refresh confirmed records ↗</button>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 181.40625,
+        "y": 317.03125,
+        "width": 153.515625,
+        "height": 35
+      },
+      "centerHit": true
+    },
+    {
+      "index": 92,
+      "tag": "SUMMARY",
+      "id": "",
+      "text": "Read exact daily figures",
+      "html": "<summary>Read exact daily figures</summary>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 20,
+        "y": 426.640625,
+        "width": 335,
+        "height": 46.5
+      },
+      "centerHit": true
+    },
+    {
+      "index": 93,
+      "tag": "DIV",
+      "id": "",
+      "text": "Exact daily figures",
+      "html": "<div class=\"table-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Exact daily figures\"><table><caption>Exact cumulative paise shown as INR</caption><thead><tr><th scope=\"col\">Cycle day</th><th scope=\"c",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 20,
+        "y": 473.140625,
+        "width": 335,
+        "height": 147.1875
+      },
+      "centerHit": true
+    },
+    {
+      "index": 109,
+      "tag": "DIV",
+      "id": "",
+      "text": "Category by cycle week",
+      "html": "<div class=\"table-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Category by cycle week\"><table class=\"week-matrix\"><caption>Blocks are relative to 2026-10-10, never calendar weeks. Tracked purchases ",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 20,
+        "y": 493.515625,
+        "width": 335,
+        "height": 406.375
+      },
+      "centerHit": true
+    },
+    {
+      "index": 17,
+      "tag": "BODY",
+      "id": "",
+      "text": "Skip to contentphron↗Money, in perspective.Your dayVisualize spendingBuckets & s",
+      "html": "<body><div hidden=\"\"><!--$--><!--/$--></div><div class=\"phron-home surface-shell\"><a class=\"skip-home\" href=\"#surface-main\">Skip to content</a><aside class=\"home-sidebar\"><a class=\"home-brand\" href=\"/",
+      "visible": true,
+      "focusVisible": false,
+      "outline": "none",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 0,
+        "y": -1026,
+        "width": 375,
+        "height": 2203.390625
+      },
+      "centerHit": true
+    },
+    {
+      "index": 20,
+      "tag": "A",
+      "id": "",
+      "text": "Skip to content",
+      "html": "<a class=\"skip-home\" href=\"#surface-main\">Skip to content</a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 0,
+        "y": 12,
+        "width": 131.234375,
+        "height": 49
+      },
+      "centerHit": true
+    },
+    {
+      "index": 22,
+      "tag": "A",
+      "id": "",
+      "text": "phron↗",
+      "html": "<a class=\"home-brand\" href=\"/home\">phron<span aria-hidden=\"true\">↗</span></a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 20,
+        "y": 18,
+        "width": 98.1875,
+        "height": 31
+      },
+      "centerHit": true
+    },
+    {
+      "index": 26,
+      "tag": "A",
+      "id": "",
+      "text": "Your day",
+      "html": "<a href=\"/home\">Your day</a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 20,
+        "y": 57,
+        "width": 66.9375,
+        "height": 44
+      },
+      "centerHit": true
+    },
+    {
+      "index": 27,
+      "tag": "A",
+      "id": "",
+      "text": "Visualize spending",
+      "html": "<a href=\"/visualize\" aria-current=\"page\">Visualize spending</a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 90.9375,
+        "y": 57,
+        "width": 127.8125,
+        "height": 44
+      },
+      "centerHit": true
+    },
+    {
+      "index": 28,
+      "tag": "A",
+      "id": "",
+      "text": "Buckets & settings",
+      "html": "<a href=\"/manage\">Buckets &amp; settings</a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 222.75,
+        "y": 57,
+        "width": 118.71875,
+        "height": 44
+      },
+      "centerHit": true
+    },
+    {
+      "index": 38,
+      "tag": "BUTTON",
+      "id": "",
+      "text": "Refresh confirmed records ↗",
+      "html": "<button class=\"text-action\">Refresh confirmed records ↗</button>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 181.40625,
+        "y": 317.03125,
+        "width": 153.515625,
+        "height": 35
+      },
+      "centerHit": true
+    },
+    {
+      "index": 92,
+      "tag": "SUMMARY",
+      "id": "",
+      "text": "Read exact daily figures",
+      "html": "<summary>Read exact daily figures</summary>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 20,
+        "y": 426.640625,
+        "width": 335,
+        "height": 46.5
+      },
+      "centerHit": true
+    },
+    {
+      "index": 93,
+      "tag": "DIV",
+      "id": "",
+      "text": "Exact daily figures",
+      "html": "<div class=\"table-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Exact daily figures\"><table><caption>Exact cumulative paise shown as INR</caption><thead><tr><th scope=\"col\">Cycle day</th><th scope=\"c",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 20,
+        "y": 473.140625,
+        "width": 335,
+        "height": 147.1875
+      },
+      "centerHit": true
+    },
+    {
+      "index": 109,
+      "tag": "DIV",
+      "id": "",
+      "text": "Category by cycle week",
+      "html": "<div class=\"table-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Category by cycle week\"><table class=\"week-matrix\"><caption>Blocks are relative to 2026-10-10, never calendar weeks. Tracked purchases ",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 20,
+        "y": 493.515625,
+        "width": 335,
+        "height": 406.375
+      },
+      "centerHit": true
+    },
+    {
+      "index": 17,
+      "tag": "BODY",
+      "id": "",
+      "text": "Skip to contentphron↗Money, in perspective.Your dayVisualize spendingBuckets & s",
+      "html": "<body><div hidden=\"\"><!--$--><!--/$--></div><div class=\"phron-home surface-shell\"><a class=\"skip-home\" href=\"#surface-main\">Skip to content</a><aside class=\"home-sidebar\"><a class=\"home-brand\" href=\"/",
+      "visible": true,
+      "focusVisible": false,
+      "outline": "none",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 0,
+        "y": -1026,
+        "width": 375,
+        "height": 2203.390625
+      },
+      "centerHit": true
+    },
+    {
+      "index": 20,
+      "tag": "A",
+      "id": "",
+      "text": "Skip to content",
+      "html": "<a class=\"skip-home\" href=\"#surface-main\">Skip to content</a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 0,
+        "y": 12,
+        "width": 131.234375,
+        "height": 49
+      },
+      "centerHit": true
+    },
+    {
+      "index": 22,
+      "tag": "A",
+      "id": "",
+      "text": "phron↗",
+      "html": "<a class=\"home-brand\" href=\"/home\">phron<span aria-hidden=\"true\">↗</span></a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 20,
+        "y": 18,
+        "width": 98.1875,
+        "height": 31
+      },
+      "centerHit": true
+    },
+    {
+      "index": 26,
+      "tag": "A",
+      "id": "",
+      "text": "Your day",
+      "html": "<a href=\"/home\">Your day</a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 20,
+        "y": 57,
+        "width": 66.9375,
+        "height": 44
+      },
+      "centerHit": true
+    },
+    {
+      "index": 27,
+      "tag": "A",
+      "id": "",
+      "text": "Visualize spending",
+      "html": "<a href=\"/visualize\" aria-current=\"page\">Visualize spending</a>",
+      "visible": true,
+      "focusVisible": true,
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "shadow": "none",
+      "rect": {
+        "x": 90.9375,
+        "y": 57,
+        "width": 127.8125,
+        "height": 44
+      },
+      "centerHit": true
+    }
+  ],
+  "bad": []
+}

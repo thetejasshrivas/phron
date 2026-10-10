@@ -1,0 +1,138 @@
+import assert from 'node:assert/strict';
+import os from 'node:os';
+import {execFileSync,spawn} from 'node:child_process';
+import {once} from 'node:events';
+import {mkdirSync,writeFileSync} from 'node:fs';
+import {createRequire} from 'node:module';
+import {randomUUID} from 'node:crypto';
+import {createServerClient} from '@supabase/ssr';
+import {chromium,expect} from '@playwright/test';
+import {localAuth,initial,rpc} from '../../integration/ph11/auth-local.mjs';
+import {sql,literal} from '../../integration/ph11/local.mjs';
+
+const require=createRequire(import.meta.url),out=process.argv.includes('--contrast-surfaces')?'docs/evidence/PH25/contrast-surfaces':process.argv.includes('--contrast-detail')?'docs/evidence/PH25/contrast-detail':process.argv.includes('--focus-detail')?'docs/evidence/PH25/focus-detail':process.argv.includes('--final')?'docs/evidence/PH25/final':'docs/evidence/PH25',origin='http://127.0.0.1:3111';
+mkdirSync(out,{recursive:true});
+const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
+const config=JSON.parse(execFileSync('C:/Users/thete/AppData/Local/Temp/phron-supabase-cli-2.119.0/supabase.exe',['status','-o','json'],{encoding:'utf8',stdio:['ignore','pipe','ignore']}));
+assert.equal(config.API_URL,'http://127.0.0.1:55321');
+const env={...process.env,PHRON_APP_ORIGIN:origin,NEXT_PUBLIC_SUPABASE_URL:config.API_URL,NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:config.ANON_KEY,SUPABASE_SERVICE_ROLE_KEY:config.SERVICE_ROLE_KEY,GEMINI_API_KEY:'',GROQ_API_KEY:'',NEXT_TELEMETRY_DISABLED:'1'};delete env.DATABASE_URL;
+const redact=text=>String(text).replace(/eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+/g,'[SESSION_REDACTED]').replaceAll(config.SERVICE_ROLE_KEY,'[LOCAL_KEY_REDACTED]').replaceAll(config.ANON_KEY,'[PUBLIC_KEY_REDACTED]');
+const activeAuth=new Set();const checks=[],measurements=[],accessibility=[];let browser,server;
+function save(){writeFileSync(out+'/audit.json',JSON.stringify({head,environment:{os:os.platform(),release:os.release(),cpu:os.cpus()[0]?.model,logicalProcessors:os.cpus().length,memoryGB:Math.round(os.totalmem()/1024**3),browser:browser?.version(),browserMode:'isolated headless installed Edge',network:'loopback, unthrottled; no external providers',cpuThrottling:1,origin,database:'persistent local Supabase55321',axeVersion:require('axe-core/package.json').version},checks,measurements,accessibility},null,2)+'\n');}
+async function check(name,test){const start=performance.now();try{const detail=await test();checks.push({name,status:'PASS',durationMs:performance.now()-start,...detail});console.log('PASS '+name);}catch(error){checks.push({name,status:'FAIL',durationMs:performance.now()-start,reason:redact(error.message).slice(0,1200)});console.log('FAIL '+name+': '+redact(error.message).slice(0,140));}save();}
+const normal={...initial,declaredCash:'4000000',obligations:[{name:'Synthetic rent',amount:'2000000',unpaid:'0',isCreditCardLegacy:false}]};
+async function fixture(width,{onboard=true,state='A',motion='no-preference'}={}){
+ const auth=localAuth(),user=await auth.user();activeAuth.add(auth);
+ const input=state==='B'?{...normal,declaredCash:'7000000',obligations:[{name:'Synthetic rent',amount:'2000000',unpaid:'2000000',isCreditCardLegacy:false}]}:state==='C'?{...initial,declaredCash:'25000'}:normal;
+ if(onboard)assert.equal((await rpc(user.client,'phron_onboard',input)).ok,true);
+ if(onboard&&state==='A'){const current=(await user.client.rpc('phron_current_state')).data;const bucket=current.data.buckets.find(b=>b.name==='Dining');assert.equal((await rpc(user.client,'phron_card_lifecycle',{action:'create',amount:'15000',bucketId:bucket.id,transactionDate:current.data.snapshot.asOfDate,merchantOrPayee:'Synthetic existing spend',paymentMethod:'cash',legacyObligationId:null},randomUUID(),current.data.snapshot.revision)).ok,true);}
+ if(onboard&&state==='A'){let current=(await user.client.rpc('phron_current_state')).data;assert.equal((await rpc(user.client,'phron_reconcile',{reportedCash:current.data.snapshot.money.cash,recalledAmount:'0',bucketId:null},randomUUID(),current.data.snapshot.revision)).ok,true);current=(await user.client.rpc('phron_current_state')).data;const date=new Date(current.data.snapshot.asOfDate+'T00:00:00Z');date.setUTCDate(date.getUTCDate()+90);assert.equal((await rpc(user.client,'phron_surface_config',{action:'goal',id:null,name:'Synthetic milestone',target:'3000000',targetDate:date.toISOString().slice(0,10),dateType:'FLEXIBLE',kind:'WANT'},randomUUID(),current.data.snapshot.revision)).ok,true);}
+ if(state==='B'){const current=(await user.client.rpc('phron_current_state')).data;const bucket=current.data.buckets.find(b=>b.name==='Shopping');assert.equal((await rpc(user.client,'phron_card_lifecycle',{action:'create',amount:'5000000',bucketId:bucket.id,transactionDate:current.data.snapshot.asOfDate,merchantOrPayee:'Synthetic exhaustion',paymentMethod:'cash',legacyObligationId:null},randomUUID(),current.data.snapshot.revision)).ok,true);}
+ const jar=new Map(),sdk=createServerClient(config.API_URL,config.ANON_KEY,{cookies:{getAll:()=>[...jar].map(([name,value])=>({name,value})),setAll:rows=>rows.forEach(({name,value})=>jar.set(name,value))}});
+ assert.equal((await sdk.auth.setSession((await user.client.auth.getSession()).data.session)).error,null);
+ const context=await browser.newContext({viewport:{width,height:900},reducedMotion:motion,hasTouch:width===375});await context.addCookies([...jar].map(([name,value])=>({name,value,url:origin})));
+ await context.addInitScript(()=>{
+  window.__lab={lcp:[],shifts:[],events:[],paint:[],longTasks:[]};
+  for(const [type,key] of [['largest-contentful-paint','lcp'],['layout-shift','shifts'],['event','events'],['longtask','longTasks']]){
+   try{new PerformanceObserver(list=>{for(const e of list.getEntries())window.__lab[key].push({name:e.name,start:e.startTime,duration:e.duration,value:e.value,hadRecentInput:e.hadRecentInput,interactionId:e.interactionId,size:e.size});}).observe({type,buffered:true,...(type==='event'?{durationThreshold:16}:{})});}catch{}
+  }
+  for(const name of ['click','keydown'])document.addEventListener(name,e=>{if(e.isTrusted){const start=performance.now();requestAnimationFrame(()=>requestAnimationFrame(()=>window.__lab.paint.push({type:name,duration:performance.now()-start})));}},true);
+ });
+ const page=await context.newPage();page.setDefaultTimeout(9000);const errors=[];page.on('pageerror',e=>errors.push(redact(e.message)));
+ return {auth,user,context,page,errors,width,state,motion};
+}
+async function dispose(f){await f.context.close();await f.auth.cleanup();activeAuth.delete(f.auth);}
+async function ready(f,path='/home'){await f.page.goto(origin+path);if(path==='/home')await expect(f.page.getByText('Confirmed records loaded.',{exact:true})).toBeVisible();else await expect(f.page.getByText('Confirmed records loaded.',{exact:true})).toBeVisible();}
+async function sample(f){await f.page.waitForTimeout(1200);return f.page.evaluate(()=>{
+ const entries=window.__lab;let session=0,max=0,first=0,last=0;
+ for(const e of entries.shifts.filter(e=>!e.hadRecentInput)){if(e.start-last>1000||e.start-first>5000){session=0;first=e.start;}session+=e.value;last=e.start;max=Math.max(max,session);}
+ const nav=performance.getEntriesByType('navigation')[0];
+ return {lcpMs:entries.lcp.at(-1)?.start??null,cls:max,maxEventTimingMs:Math.max(0,...entries.events.filter(e=>e.interactionId).map(e=>e.duration)),eventTimingSamples:entries.events.filter(e=>e.interactionId).length,maxTwoFrameInputPaintMs:entries.paint.length?Math.max(...entries.paint.map(e=>e.duration)):null,longTasks:entries.longTasks,ttfbMs:nav.responseStart,resources:performance.getEntriesByType('resource').map(e=>({path:new URL(e.name).pathname,transferBytes:e.transferSize,decodedBytes:e.decodedBodySize,duration:e.duration}))};
+ });}
+async function capture(f,payee='Synthetic performance coffee'){
+ if(await f.page.getByRole('button',{name:'Expand capture',exact:true}).count())await f.page.getByRole('button',{name:'Expand capture',exact:true}).click();
+ const details=f.page.locator('.manual-capture-panel');if(!await details.evaluate(e=>e.open))await details.locator('summary').click();
+ const form=f.page.locator('form.manual-spend');await form.getByLabel('Amount · ₹',{exact:true}).fill('1.50');await form.getByLabel('Merchant or payee').fill(payee);await form.locator('[name=bucket]').selectOption({label:'Dining'});await form.locator('[name=method]').selectOption('cash');
+ const before=await f.page.getByTestId('safe-daily').innerText();const response=f.page.waitForResponse(r=>r.url().endsWith('/api/finance/spend')&&r.request().method()==='POST');const started=performance.now();
+ await form.getByRole('button',{name:'Save spend',exact:true}).click();const received=await response,serverReceived=performance.now();assert.equal(received.status(),200);
+ await expect(f.page.locator('.capture-notice [role=status]')).toContainText('Spend saved.');const feedbackMs=performance.now()-started;
+ await expect(f.page.getByTestId('safe-daily')).not.toHaveText(before);const numberVisibleMs=performance.now()-serverReceived;
+ await expect(f.page.locator('.purchase-record').filter({hasText:payee})).toBeVisible();
+ return {feedbackMs,numberVisibleAfterResponseMs:numberVisibleMs};
+}
+async function naturalCapture(f){
+ const current=(await f.user.client.rpc('phron_current_state')).data;const bucket=current.data.buckets.find(b=>b.name==='Dining');
+ await sql(`insert into public.merchant_memory(user_id,merchant_key,bucket_id) values(${literal(f.user.id)},'synthetic performance cafe',${literal(bucket.id)})`);
+ if(await f.page.getByRole('button',{name:'Expand capture',exact:true}).count())await f.page.getByRole('button',{name:'Expand capture',exact:true}).click();
+ await f.page.locator('#natural-capture-text').fill('1.50 Synthetic performance cafe cash');const before=await f.page.getByTestId('safe-daily').innerText();const response=f.page.waitForResponse(r=>r.url().endsWith('/api/finance/ingest')&&r.request().method()==='POST');const start=performance.now();await f.page.getByRole('button',{name:'Capture spend',exact:true}).click();const received=await response;assert.equal(received.status(),200);assert.equal((await received.json()).provider,'local_memory');await expect(f.page.locator('#natural-capture-feedback')).toContainText('Your entry is saved.');await expect(f.page.getByTestId('safe-daily')).not.toHaveText(before);return {feedbackMs:performance.now()-start,path:'ordinary-user merchant-memory intercept; external providers not called'};
+}
+async function axe(f,key){await f.page.addScriptTag({path:require.resolve('axe-core')});const report=await f.page.evaluate(async()=>window.axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}}));
+ const result={key,violations:report.violations.map(v=>({id:v.id,impact:v.impact,description:v.description,helpUrl:v.helpUrl,nodes:v.nodes.map(n=>({target:n.target,html:n.html,failureSummary:n.failureSummary,checks:n.any.map(a=>({id:a.id,data:a.data}))}))})),incomplete:report.incomplete.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)})),passes:report.passes.map(v=>v.id)};result.contrastPasses=report.passes.filter(v=>v.id==='color-contrast').flatMap(v=>v.nodes.map(n=>({target:n.target,checks:n.any.filter(c=>c.data?.contrastRatio!==undefined).map(c=>c.data)})));
+ const selectors=report.incomplete.filter(v=>v.id==='color-contrast').flatMap(v=>v.nodes.map(n=>n.target)).filter(t=>t.length===1&&typeof t[0]==='string').map(t=>t[0]);
+ result.contrastReview=await f.page.evaluate(selectors=>{
+  const rgb=value=>{const m=value.match(/[\d.]+/g);return m?m.slice(0,3).map(Number):null;};
+  const luminance=color=>color.map(c=>c/255).map(c=>c<=0.04045?c/12.92:((c+0.055)/1.055)**2.4).reduce((sum,c,i)=>sum+c*[0.2126,0.7152,0.0722][i],0);
+  return selectors.map(selector=>{const e=document.querySelector(selector);if(!e)return {selector,status:'NOT_FOUND'};const s=getComputedStyle(e);let parent=e,bg='rgb(255,255,255)';while(parent){const p=getComputedStyle(parent);if(p.backgroundColor!=='rgba(0, 0, 0, 0)'&&p.backgroundColor!=='transparent'){bg=p.backgroundColor;break;}parent=parent.parentElement;}const fg=e instanceof SVGElement?s.fill:s.color;const a=rgb(fg),b=rgb(bg);const ratio=a&&b?(Math.max(luminance(a),luminance(b))+0.05)/(Math.min(luminance(a),luminance(b))+0.05):null;const required=parseFloat(s.fontSize)>=24||(parseFloat(s.fontSize)>=18.6667&&parseFloat(s.fontWeight)>=700)?3:4.5;const decorative=!!e.closest('[aria-hidden=true]');return {selector,fg,bg,ratio,required,decorative,status:ratio===null?'NEEDS_REVIEW':ratio>=required?'PASS':'FAIL',method:'computed solid foreground and nearest solid background; decorative goal overlay separately marked'};});
+ },selectors);
+ accessibility.push(result);writeFileSync(out+'/'+key+'-axe.json',JSON.stringify(result,null,2)+'\n');save();assert.ok(result.contrastReview.filter(r=>!r.decorative).every(r=>r.status==='PASS'),'incomplete contrast review failed');assert.equal(result.violations.length,0,JSON.stringify(result.violations.map(v=>({id:v.id,count:v.nodes.length}))));return {axeChecksPassed:result.passes.length,incompleteChecks:result.incomplete.length};}
+async function keyboard(f,key){
+ const expected=await f.page.locator('a[href],button,input,select,textarea,summary,[tabindex="0"]').evaluateAll(elements=>elements.filter(e=>e.getClientRects().length&&!e.disabled&&e.tabIndex>=0).length);
+ await f.page.locator('.skip-home').focus();await f.page.keyboard.press('Shift+Tab');const visits=[],bad=[];
+ for(let i=0;i<expected*2+6;i++){await f.page.keyboard.press('Tab');const item=await f.page.evaluate(()=>{const e=document.activeElement,s=getComputedStyle(e),r=e.getBoundingClientRect();return {index:[...document.querySelectorAll('*')].indexOf(e),tag:e.tagName,id:e.id,text:(e.getAttribute('aria-label')||e.labels?.[0]?.textContent||e.textContent||'').trim().slice(0,80),html:e.outerHTML.slice(0,200),visible:r.width>0&&r.height>0,focusVisible:e.matches(':focus-visible'),outline:s.outlineStyle,outlineWidth:s.outlineWidth,shadow:s.boxShadow,rect:{x:r.x,y:r.y,width:r.width,height:r.height},centerHit:e.contains(document.elementFromPoint(Math.max(0,Math.min(innerWidth-1,r.x+r.width/2)),Math.max(0,Math.min(innerHeight-1,r.y+r.height/2))))};});visits.push(item);if(item.tag!=='BODY'&&(!item.visible||!item.centerHit||(item.outline==='none'&&item.shadow==='none'))){bad.push(item);await f.page.screenshot({path:out+'/'+key+'-'+item.index+'-focus.png',fullPage:true});await f.page.screenshot({path:out+'/'+key+'-'+item.index+'-viewport.png'});}}
+ const uniqueFocused=new Set(visits.filter(v=>v.tag!=='BODY').map(v=>v.index)).size;writeFileSync(out+'/'+key+'-keyboard.json',JSON.stringify({expected,uniqueFocused,coverageComplete:uniqueFocused>=expected,visits,bad},null,2)+'\n');assert.equal(bad.length,0,'invisible/missing focus indicator');const unique=new Set(visits.filter(v=>v.tag!=='BODY').map(v=>v.index));assert.ok(unique.size>=expected,`keyboard coverage ${unique.size}/${expected}`);return {expectedControls:expected,uniqueFocused:unique.size};
+}
+async function responsive(f,key){const dimensions=await f.page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth}));await f.page.screenshot({path:out+'/'+key+'.png',fullPage:true});assert.ok(dimensions.scroll<=dimensions.width,JSON.stringify(dimensions));return dimensions;}
+
+try{
+ try{await fetch(origin+'/api/health');throw new Error('PORT_OCCUPIED');}catch(e){if(e.message==='PORT_OCCUPIED')throw e;}
+ const built=execFileSync(process.execPath,['scripts/next.mjs','build'],{env,encoding:'utf8',stdio:['ignore','pipe','pipe']});writeFileSync(out+'/build.log',redact(built));
+ server=spawn(process.execPath,['node_modules/next/dist/bin/next','start','--hostname','127.0.0.1','--port','3111'],{env,stdio:'ignore'});
+ for(let i=0;i<80;i++){try{if((await fetch(origin+'/api/health')).ok)break;}catch{}if(i===79)throw new Error('SERVER_UNAVAILABLE');await new Promise(r=>setTimeout(r,250));}
+ browser=await chromium.launch({channel:'msedge',headless:true});
+ for(const width of (process.argv.includes('--focus-detail')||process.argv.includes('--contrast-detail')||process.argv.includes('--contrast-surfaces'))?[]:[375,1280]){
+  const f=await fixture(width,{onboard:false});try{
+   await check(`first-value-${width}`,async()=>{const start=performance.now();await f.page.goto(origin+'/onboarding');await f.page.getByLabel('Monthly take-home salary').fill('60000');await f.page.getByLabel('Cash available now').fill('40000');await f.page.locator('[name=anchor]').fill(String(initial.salaryCreditDay));await f.page.locator('[name=privacy-consent]').check();await f.page.getByRole('button',{name:'Save my starting point'}).click();await f.page.getByRole('link',{name:'Continue to Home'}).click();await expect(f.page.getByTestId('safe-daily')).toBeVisible();await expect(f.page.getByText('Confirmed records loaded.',{exact:true})).toBeVisible();const ms=performance.now()-start;measurements.push({kind:'first-value',width,ms,authExcluded:true});assert.ok(ms<120_000);return {ms};});
+   for(const mode of ['cold','warm','warm'])await check(`returning-${width}-${mode}-${measurements.length}`,async()=>{if(mode==='cold'){const cdp=await f.context.newCDPSession(f.page);await cdp.send('Network.clearBrowserCache');await cdp.detach();}const start=performance.now();await ready(f);const ms=performance.now()-start;const vitals=await sample(f);measurements.push({kind:'returning',width,mode,ms,...vitals});assert.ok(ms<1000,`returning ${ms}ms`);return {ms};});
+   await check(`capture-${width}`,async()=>{const timing=await capture(f);const vitals=await sample(f);measurements.push({kind:'capture',width,...timing,...vitals});assert.ok(timing.feedbackMs<5000);return timing;});
+   await check(`quick-capture-${width}`,async()=>{const timing=await naturalCapture(f);measurements.push({kind:'quick-capture',width,...timing});assert.ok(timing.feedbackMs<5000);return timing;});
+   await check(`lab-vitals-${width}`,async()=>{const loads=measurements.filter(m=>m.kind==='returning'&&m.width===width),capture=measurements.find(m=>m.kind==='capture'&&m.width===width);assert.ok(loads.every(m=>m.lcpMs!==null&&m.lcpMs<=2500),'LCP missing/exceeds2500ms');assert.ok(loads.every(m=>m.cls<=0.1),'CLS exceeds0.1');assert.ok(capture?.maxTwoFrameInputPaintMs!==null&&capture.maxTwoFrameInputPaintMs<=200,'input-to-two-frame paint exceeds200ms');return {interactionProxy:'trusted input to second requestAnimationFrame; EventTiming recorded separately'};});
+  }finally{await dispose(f);}
+ }
+ for(const width of process.argv.includes('--focus-detail')?[375,1280]:[375,768,1280])for(const state of (process.argv.includes('--focus-detail')||process.argv.includes('--contrast-surfaces'))?['A']:['A','B','C']){
+  const f=await fixture(width,{state});try{await ready(f);assert.equal((await f.user.client.rpc('phron_current_state')).data.data.snapshot.health,state);
+   const key=`home-${state}-${width}`;await check(key+'-responsive',()=>responsive(f,key));await check(key+'-axe',()=>axe(f,key));
+   if(process.argv.includes('--contrast-surfaces'))for(const path of ['/visualize','/manage']){
+    await ready(f,path);for(const summary of await f.page.locator('details>summary').all())if(!await summary.evaluate(e=>e.parentElement.open))await summary.click();
+    await check(`contrast-${path.slice(1)}-${width}`,()=>axe(f,`contrast-${path.slice(1)}-${width}`));
+    if(path==='/manage'){await f.page.getByRole('button',{name:'Delete account',exact:true}).click();await check(`contrast-modal-${width}`,()=>axe(f,`contrast-modal-${width}`));await f.page.keyboard.press('Escape');}
+   }
+   if(state==='A'&&!process.argv.includes('--contrast-detail')&&!process.argv.includes('--contrast-surfaces')){
+    if(await f.page.getByRole('button',{name:'Expand capture',exact:true}).count())await f.page.getByRole('button',{name:'Expand capture',exact:true}).click();
+    for(const summary of await f.page.locator('details>summary').all())if(!await summary.evaluate(e=>e.parentElement.open))await summary.click();
+    if(await f.page.getByRole('button',{name:'Expand capture',exact:true}).count())await f.page.getByRole('button',{name:'Expand capture',exact:true}).click();
+    const manual=f.page.locator('.manual-capture-panel');if(!await manual.evaluate(e=>e.open))await manual.locator('summary').press('Enter');
+    await check(key+'-expanded-labels',()=>axe(f,key+'-expanded'));await check(key+'-keyboard',()=>keyboard(f,key));
+    await check(key+'-live-announcements',async()=>{assert.ok(await f.page.locator('[role=status]').count());assert.ok(await f.page.locator('[role=alert]').count());const cdp=await f.context.newCDPSession(f.page),tree=await cdp.send('Accessibility.getFullAXTree');await cdp.detach();writeFileSync(out+'/'+key+'-ax.json',JSON.stringify(tree,null,2)+'\n');assert.ok(tree.nodes.some(n=>n.role?.value==='textbox'&&n.name?.value));return {namedTextboxes:tree.nodes.filter(n=>n.role?.value==='textbox'&&n.name?.value).length};});
+    for(const path of ['/visualize','/manage']){
+     await ready(f,path);const key2=path.slice(1)+'-'+width;
+     for(const summary of await f.page.locator('details>summary').all())if(!await summary.evaluate(e=>e.parentElement.open))await summary.click();
+     await check(key2+'-responsive',()=>responsive(f,key2));await check(key2+'-axe',()=>axe(f,key2));await check(key2+'-keyboard',()=>keyboard(f,key2));
+     if(path==='/visualize')await check(key2+'-chart-equivalents',async()=>{await expect(f.page.getByRole('table')).toHaveCount(2);await expect(f.page.getByRole('region',{name:'Category by cycle week'})).toBeVisible();await expect(f.page.getByRole('region',{name:'Exact daily figures'})).toBeVisible();const region=f.page.getByRole('region',{name:'Category by cycle week'});await region.focus();const before=await region.evaluate(e=>({left:e.scrollLeft,width:e.clientWidth,scroll:e.scrollWidth}));await f.page.keyboard.press('ArrowRight');await f.page.waitForTimeout(120);const after=await region.evaluate(e=>e.scrollLeft);if(before.scroll>before.width)assert.ok(after>before.left,'matrix did not scroll on ArrowRight');return {tables:2,scrollBefore:before.left,scrollAfter:after,scrollRequired:before.scroll>before.width};});
+     if(path==='/manage')await check(key2+'-account-modal',async()=>{await f.page.getByRole('button',{name:'Delete account',exact:true}).click();const dialog=f.page.getByRole('dialog',{name:'Delete your PHRON account?'});await expect(dialog).toBeVisible();await f.page.getByLabel('Type DELETE MY ACCOUNT').fill('DELETE MY ACCOUNT');for(let i=0;i<10;i++){await f.page.keyboard.press('Tab');assert.equal(await f.page.evaluate(()=>document.activeElement===document.body||!!document.activeElement.closest('dialog')),true);}await axe(f,key2+'-modal');await f.page.keyboard.press('Escape');await expect(dialog).not.toBeVisible();await expect(f.page.getByRole('button',{name:'Delete account',exact:true})).toBeFocused();return {backgroundExcluded:true,browserChromeMayReceiveFocus:true,escapeReturnsFocus:true,deletionNotExecuted:true};});
+    }
+    await check(`bucket-modal-${width}`,async()=>{await f.page.getByRole('button',{name:'Delete bucket and reallocate',exact:true}).first().click();const dialog=f.page.getByRole('dialog');await expect(dialog).toBeVisible();await dialog.getByLabel('Required target bucket').selectOption({index:1});for(let i=0;i<10;i++){await f.page.keyboard.press('Tab');assert.equal(await f.page.evaluate(()=>document.activeElement===document.body||!!document.activeElement.closest('dialog')),true);}await axe(f,`bucket-modal-${width}`);await f.page.keyboard.press('Escape');await expect(dialog).not.toBeVisible();await expect(f.page.getByRole('button',{name:'Delete bucket and reallocate',exact:true}).first()).toBeFocused();return {backgroundExcluded:true,escapeReturnsFocus:true,noMutation:true};});
+    await check(`zoom-${width}`,async()=>{const cdp=await f.context.newCDPSession(f.page);await cdp.send('Emulation.setDeviceMetricsOverride',{width:Math.max(320,Math.floor(width/2)),height:450,deviceScaleFactor:1,mobile:false});await responsive(f,'zoom-'+width);await cdp.detach();return {method:width===375?'320CSS reflow floor (187CSS earlier stress run below WCAG minimum)':'200% zoom-equivalent half CSS viewport, not actual browser zoom'};});
+   }
+  }finally{await dispose(f);}
+ }
+ for(const width of (process.argv.includes('--focus-detail')||process.argv.includes('--contrast-detail')||process.argv.includes('--contrast-surfaces'))?[]:[375,1280]){
+  const f=await fixture(width,{motion:'reduce'});try{
+   for(const path of ['/home','/visualize','/manage']){await ready(f,path);await check(`reduced-${path.slice(1)}-${width}`,async()=>{const moving=await f.page.evaluate(()=>[...document.querySelectorAll('.phron-home *')].filter(e=>e.getClientRects().length).filter(e=>{const s=getComputedStyle(e);return s.animationName!=='none'||s.transitionDuration.split(',').some(v=>parseFloat(v)>0);}).map(e=>({tag:e.tagName,class:e.className})));assert.deepEqual(moving,[]);await responsive(f,`reduced-${path.slice(1)}-${width}`);return {nonessentialInterpolations:0};});}
+   await ready(f);await check(`reduced-capture-${width}`,async()=>{const timing=await capture(f,'Synthetic reduced motion coffee');assert.ok(timing.feedbackMs<5000);return timing;});
+   await check(`offline-${width}`,async()=>{if(await f.page.getByRole('button',{name:'Expand capture',exact:true}).count())await f.page.getByRole('button',{name:'Expand capture',exact:true}).click();await f.page.locator('#natural-capture-text').fill('Synthetic offline draft');await f.context.setOffline(true);await expect(f.page.locator('.offline-notice')).toBeVisible();await expect(f.page.getByRole('button',{name:'Capture spend',exact:true})).toBeDisabled();await expect(f.page.locator('#natural-capture-text')).toHaveValue('Synthetic offline draft');await f.context.setOffline(false);return {draftRetained:true};});
+   await check(`failed-save-${width}`,async()=>{await f.page.route('**/api/finance/spend',route=>route.fulfill({status:503,contentType:'application/json',body:JSON.stringify({ok:false,error:{code:'UNAVAILABLE'}})}));const details=f.page.locator('.manual-capture-panel');if(!await details.evaluate(e=>e.open))await details.locator('summary').click();const form=f.page.locator('form.manual-spend');await form.getByLabel('Amount · ₹',{exact:true}).fill('1.00');await form.getByLabel('Merchant or payee').fill('Synthetic failed save');await form.locator('[name=bucket]').selectOption({label:'Dining'});await form.locator('[name=method]').selectOption('cash');const before=(await f.user.client.rpc('phron_current_state')).data;await form.getByRole('button',{name:'Save spend',exact:true}).click();await expect(f.page.locator('.capture-notice [role=alert]')).toContainText('not confirmed');assert.deepEqual((await f.user.client.rpc('phron_current_state')).data,before);return {controlledFailure:true,ledgerUnchanged:true};});
+  }finally{await dispose(f);}
+ }
+}catch(error){checks.push({name:'audit runtime',status:'FAIL',reason:redact(error.stack).slice(0,1200)});console.log('FAIL audit runtime '+redact(error.message));}
+finally{for(const auth of activeAuth)await auth.cleanup();save();if(browser)await browser.close();if(server){const ended=once(server,'exit');server.kill();await ended;}}
+console.log(`${checks.filter(c=>c.status==='PASS').length} PASS; ${checks.filter(c=>c.status==='FAIL').length} FAIL; ${checks.length} total`);process.exitCode=checks.some(c=>c.status==='FAIL')?1:0;

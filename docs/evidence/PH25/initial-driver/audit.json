@@ -1,0 +1,154 @@
+{
+  "head": "028c332ceed636b1402b902f5fe31a1927257c1b",
+  "environment": {
+    "os": "win32",
+    "release": "10.0.26200",
+    "cpu": "AMD Ryzen AI 7 350 w/ Radeon 860M              ",
+    "logicalProcessors": 16,
+    "memoryGB": 23,
+    "browser": "155.0.4283.45",
+    "browserMode": "isolated headless installed Edge",
+    "network": "loopback, unthrottled; no external providers",
+    "cpuThrottling": 1,
+    "origin": "http://127.0.0.1:3111",
+    "database": "persistent local Supabase55321",
+    "axeVersion": "4.14.0"
+  },
+  "checks": [
+    {
+      "name": "first-value-375",
+      "status": "FAIL",
+      "durationMs": 9385.7847,
+      "reason": "locator.fill: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Current liquid cash')\u001b[22m\n"
+    },
+    {
+      "name": "returning-375-cold-0",
+      "status": "FAIL",
+      "durationMs": 5173.757700000002,
+      "reason": "expect(locator).toBeVisible() failed\n\nLocator: getByText('Confirmed records loaded.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByText('Confirmed records loaded.', { exact: true }) with timeout 5000ms\n  - waiting for getByText('Confirmed records loaded.', { exact: true })\n"
+    },
+    {
+      "name": "returning-375-warm-0",
+      "status": "FAIL",
+      "durationMs": 5161.5749,
+      "reason": "expect(locator).toBeVisible() failed\n\nLocator: getByText('Confirmed records loaded.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByText('Confirmed records loaded.', { exact: true }) with timeout 5000ms\n  - waiting for getByText('Confirmed records loaded.', { exact: true })\n"
+    },
+    {
+      "name": "returning-375-warm-0",
+      "status": "FAIL",
+      "durationMs": 5166.563199999997,
+      "reason": "expect(locator).toBeVisible() failed\n\nLocator: getByText('Confirmed records loaded.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByText('Confirmed records loaded.', { exact: true }) with timeout 5000ms\n  - waiting for getByText('Confirmed records loaded.', { exact: true })\n"
+    },
+    {
+      "name": "capture-375",
+      "status": "FAIL",
+      "durationMs": 9015.1996,
+      "reason": "locator.evaluate: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.manual-capture-panel')\u001b[22m\n"
+    },
+    {
+      "name": "lab-vitals-375",
+      "status": "FAIL",
+      "durationMs": 0.2077999999964959,
+      "reason": "Cannot read properties of undefined (reading 'maxTwoFrameInputPaintMs')"
+    },
+    {
+      "name": "first-value-1280",
+      "status": "FAIL",
+      "durationMs": 9179.277799999996,
+      "reason": "locator.fill: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Current liquid cash')\u001b[22m\n"
+    },
+    {
+      "name": "returning-1280-cold-0",
+      "status": "FAIL",
+      "durationMs": 5176.722599999994,
+      "reason": "expect(locator).toBeVisible() failed\n\nLocator: getByText('Confirmed records loaded.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByText('Confirmed records loaded.', { exact: true }) with timeout 5000ms\n  - waiting for getByText('Confirmed records loaded.', { exact: true })\n"
+    },
+    {
+      "name": "returning-1280-warm-0",
+      "status": "FAIL",
+      "durationMs": 5156.776699999995,
+      "reason": "expect(locator).toBeVisible() failed\n\nLocator: getByText('Confirmed records loaded.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByText('Confirmed records loaded.', { exact: true }) with timeout 5000ms\n  - waiting for getByText('Confirmed records loaded.', { exact: true })\n"
+    },
+    {
+      "name": "returning-1280-warm-0",
+      "status": "FAIL",
+      "durationMs": 5152.472100000006,
+      "reason": "expect(locator).toBeVisible() failed\n\nLocator: getByText('Confirmed records loaded.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByText('Confirmed records loaded.', { exact: true }) with timeout 5000ms\n  - waiting for getByText('Confirmed records loaded.', { exact: true })\n"
+    },
+    {
+      "name": "capture-1280",
+      "status": "FAIL",
+      "durationMs": 9009.435500000007,
+      "reason": "locator.evaluate: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.manual-capture-panel')\u001b[22m\n"
+    },
+    {
+      "name": "lab-vitals-1280",
+      "status": "FAIL",
+      "durationMs": 0.10400000000663567,
+      "reason": "Cannot read properties of undefined (reading 'maxTwoFrameInputPaintMs')"
+    },
+    {
+      "name": "home-A-375-responsive",
+      "status": "PASS",
+      "durationMs": 159.14519999999902,
+      "width": 375,
+      "scroll": 375
+    },
+    {
+      "name": "home-A-375-axe",
+      "status": "PASS",
+      "durationMs": 229.07140000000072,
+      "axeChecksPassed": 25,
+      "incompleteChecks": 1
+    },
+    {
+      "name": "audit runtime",
+      "status": "FAIL",
+      "reason": "locator.click: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('details:not([open])>summary').nth(3)\u001b[22m\n\n    at W:\\AI Product Sprint\\Phron\\tests\\e2e\\ph25\\audit.mjs:90:98"
+    }
+  ],
+  "measurements": [],
+  "accessibility": [
+    {
+      "key": "home-A-375",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": [
+            [
+              ".ledger-list"
+            ]
+          ]
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "role-img-alt",
+        "summary-name",
+        "target-size"
+      ]
+    }
+  ]
+}
