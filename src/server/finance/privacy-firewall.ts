@@ -13,12 +13,17 @@ type SafeAnalyticsEvent = { readonly name: AnalyticsEventName; readonly properti
 
 const UUID = /\b[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\b/i;
 const EMAIL = /\b[\w.!#$%&'*+/=?^`{|}~-]+@[\w-]+(?:\.[\w-]+)+\b/i;
-const SENSITIVE_LABEL = /\b(?:monthly\s+net\s+income|net\s+income|salary|income|liquid\s+(?:cash\s+)?balance|current\s+balance|bank\s+balance|cash\s+balance|balance\s+(?:is|of|:)|total\s+(?:outstanding\s+)?debt|outstanding\s+debt|credit\s+card\s+debt|obligations?)\b/i;
+const SENSITIVE_LABEL = /\b(?:monthly\s+net\s+income|net\s+income|salary|income|(?:current\s+)?liquid\s+(?:cash\s+)?balance|current\s+balance|bank\s+balance|cash\s+balance|balance\s+(?:is|of|:)|total\s+(?:outstanding\s+)?debt|outstanding\s+debt|credit\s+card\s+debt|debt\s+obligations?|obligations?|user\s+(?:id|uuid)|email(?:\s+address)?)\b/i;
 const INVESTMENT_ADVICE = /\b(?:stocks?|shares?|mutual\s+funds?|invest(?:ment|ing)?|portfolio|crypto(?:currency)?|credit\s+advice|which\s+fund)\b/i;
 
 /** Conservative guard for user text: keep private context on-device/server-local. */
 export function hasSensitiveOutboundContext(text: string): boolean {
-  return EMAIL.test(text) || UUID.test(text) || SENSITIVE_LABEL.test(text);
+  // Normalize only the guard's view; never rewrite merchant text sent for extraction.
+  const labels = text.normalize('NFKC')
+    .replace(/([A-Z])([A-Z][a-z])/g, '$1 $2')
+    .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
+    .replace(/[_-]+/g, ' ');
+  return EMAIL.test(text) || UUID.test(text) || SENSITIVE_LABEL.test(labels);
 }
 
 /** Deterministic refusal before extraction; never forwards advice requests to a model. */

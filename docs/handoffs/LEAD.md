@@ -1,3 +1,13 @@
+# PH24 remediation handoff — 2026-10-10 IST
+
+Local remediation COMPLETE at main, base caec5424 plus verified diff; resolve final commit using `git log -1`. PRIV01 resolved; rate policy explicitly10requests/60s/verified-auth-user/process, typed429 and Retry-After. No global Vercel quota guarantee. Dependency findings documented/deferred with trusted config controls;24dev entries,0production entries; no forced upgrade or founder release exception.
+
+Executed458unit/152integration;202math tests with100% four-metric coverage;40privacy assertions,115auth/purge,91RPC,6HTTP burst/auth,16security,2FIT13,5ingestion,25payment,46card cases PASS; lint/typecheck/build/source hashes and secrets0findings PASS. Counts overlap. Exact command exits in docs/evidence/PH24/remediation/command-exits.json and RESULT.md; original failures retained at root.
+
+G5/G0B OPEN, V3 PENDING. PH25 NOT STARTED. No formulas/DB migration/lockfile/remote/provider/deployment change; scratch untouched. Next one action: Lead reviews documented residual risks before authorizing PH25. No founder taste approval is inferred.
+
+---
+
 # PH-24 security audit — EXECUTED / BLOCKED — 2026-10-10 IST
 
 PH23 remediation committed **6efdab11f4a6b76ed0bf006c9a6eb24a116a6e6c**; PH24 blocked-audit evidence is committed separately (resolve `git log -1 --format=%H -- docs/evidence/PH24/RESULT.md`);36 canonical +4 reduced pairs remain passed at that application revision. PH24 ran immediately under explicit user authorization.115 real local auth/RLS/HTTP/purge checks and91 RPC role checks PASS across23 populated public user-owned tables/24public financial RPCs; user A deletion clears all23 plusauth/sessions, denies retained access and preserves B. Private pilot/safety grants denied; secret scan0findings,1166tracked files/1259history blobs/18client files. Existing security16/FIT13 2/ingestion5/payment25/card46 PASS. Fresh425unit/138mocked contracts andlint/types/build/source hashes PASS; counts overlap.

@@ -5,7 +5,7 @@ import {randomUUID,createHmac} from 'node:crypto';
 import {mkdirSync,writeFileSync} from 'node:fs';
 import {createServerClient} from '@supabase/ssr';
 import {localAuth,initial,rpc} from '../integration/ph11/auth-local.mjs';
-const out='docs/evidence/PH24';mkdirSync(out,{recursive:true});const auth=localAuth(),checks=[];
+const out=process.argv.includes('--remediation')?'docs/evidence/PH24/remediation':'docs/evidence/PH24';mkdirSync(out,{recursive:true});const auth=localAuth(),checks=[];
 const cfg=JSON.parse(execFileSync('C:/Users/thete/AppData/Local/Temp/phron-supabase-cli-2.119.0/supabase.exe',['status','-o','json'],{encoding:'utf8',stdio:['ignore','pipe','ignore']}));assert.equal(cfg.API_URL,'http://127.0.0.1:55321');
 const origin='http://127.0.0.1:3110';const env={...process.env,PHRON_APP_ORIGIN:origin,NEXT_PUBLIC_SUPABASE_URL:cfg.API_URL,NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:cfg.ANON_KEY,SUPABASE_SERVICE_ROLE_KEY:cfg.SERVICE_ROLE_KEY,GEMINI_API_KEY:'',GROQ_API_KEY:'',NEXT_TELEMETRY_DISABLED:'1'};delete env.DATABASE_URL;
 let server;
@@ -20,8 +20,8 @@ try{
  for(const bad of [{...body,text:'x'.repeat(281)},{...body,user_id:a.id},{...body,text:'<script>alert(1)</script>'}])assert.equal((await post(bad)).status,400);pass('capture bounds, forged identity and script-only input rejected');
  assert.equal((await post(JSON.stringify({...body,text:'x'.repeat(70000)}))).status,400);pass('request body over 65536 bytes rejected');
  const before=(await a.client.rpc('phron_current_state')).data;
- const counts={};for(let i=0;i<20;i++){const response=await post({...body,operationId:randomUUID()});counts[response.status]=(counts[response.status]??0)+1;}
- assert.deepEqual((await a.client.rpc('phron_current_state')).data,before);checks.push({name:'capture application rate limiter',status:counts[429]?'PASS':'FAIL',observedStatuses:counts,reason:counts[429]?'rate boundary observed':'20 distinct authenticated attempts accepted; source inspection finds no application limiter; provider429 handling is separate'});if(!counts[429])process.exitCode=1;
+ const counts={};for(let i=0;i<20;i++){const response=await post({...body,operationId:randomUUID()});counts[response.status]=(counts[response.status]??0)+1;if(response.status===429){const payload=await response.json();assert.equal(payload.kind,'manual_fallback');assert.equal(payload.reason,'rate_limited');assert.equal(payload.openManualEntry,true);assert.ok(payload.retryAfterSeconds>0&&payload.retryAfterSeconds<=60);assert.equal(response.headers.get('retry-after'),String(payload.retryAfterSeconds));assert.match(response.headers.get('cache-control'),/no-store/);}}
+ assert.deepEqual(counts,{200:10,429:10});assert.deepEqual((await a.client.rpc('phron_current_state')).data,before);pass('capture application rate limiter: ten allowed, ten typed429, ledger unchanged',{observedStatuses:counts});
  if(cfg.JWT_SECRET){
   const parts=session.access_token.split('.');const payload=JSON.parse(Buffer.from(parts[1],'base64url'));payload.exp=1;parts[1]=Buffer.from(JSON.stringify(payload)).toString('base64url');parts[2]=createHmac('sha256',cfg.JWT_SECRET).update(parts[0]+'.'+parts[1]).digest('base64url');const expired=parts.join('.');
   const expiredJar=[...jar].map(([k,v])=>{assert.ok(v.startsWith('base64-'));const data=JSON.parse(Buffer.from(v.slice(7),'base64url'));data.access_token=expired;data.refresh_token=randomUUID();data.expires_at=1;return k+'=base64-'+Buffer.from(JSON.stringify(data)).toString('base64url');}).join('; ');

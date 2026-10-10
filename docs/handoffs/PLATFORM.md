@@ -1,3 +1,13 @@
+# PH24 remediation handoff — 2026-10-10 IST
+
+Local remediation COMPLETE at main, base caec5424 plus verified diff; resolve final commit using `git log -1`. PRIV01 resolved; rate policy explicitly10requests/60s/verified-auth-user/process, typed429 and Retry-After. No global Vercel quota guarantee. Dependency findings documented/deferred with trusted config controls;24dev entries,0production entries; no forced upgrade or founder release exception.
+
+Executed458unit/152integration;202math tests with100% four-metric coverage;40privacy assertions,115auth/purge,91RPC,6HTTP burst/auth,16security,2FIT13,5ingestion,25payment,46card cases PASS; lint/typecheck/build/source hashes and secrets0findings PASS. Counts overlap. Exact command exits in docs/evidence/PH24/remediation/command-exits.json and RESULT.md; original failures retained at root.
+
+G5/G0B OPEN, V3 PENDING. PH25 NOT STARTED. No formulas/DB migration/lockfile/remote/provider/deployment change; scratch untouched. Next one action: Lead reviews documented residual risks before authorizing PH25. No founder taste approval is inferred.
+
+---
+
 # PH-15 Lead addendum — D10-v1 approved; resume Platform lifecycle
 
 2026-10-08 IST. Tejas explicitly approved D10. Exact terms:

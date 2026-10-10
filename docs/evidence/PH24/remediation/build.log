@@ -1,0 +1,50 @@
+▲ Next.js 16.3.8 (Turbopack)
+- Environments: .env.local
+✓ Running next.config.ts took 20ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 890ms
+  Running TypeScript ...
+  Finished TypeScript in 1506ms ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/10) ...
+  Generating static pages using 15 workers (2/10)
+  Generating static pages using 15 workers (4/10)
+  Generating static pages using 15 workers (7/10)
+✓ Generating static pages using 15 workers (10/10) in 163ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/account
+├ ƒ /api/auth/google
+├ ƒ /api/auth/logout
+├ ƒ /api/finance/card-lifecycle
+├ ƒ /api/finance/card-payment
+├ ƒ /api/finance/card-records
+├ ƒ /api/finance/ingest
+├ ƒ /api/finance/ingest/confirm-category
+├ ƒ /api/finance/ingest/swap
+├ ƒ /api/finance/obligation-payment
+├ ƒ /api/finance/obligation-records
+├ ƒ /api/finance/reconciliation-preview
+├ ƒ /api/finance/recovery-preview
+├ ƒ /api/finance/spend
+├ ƒ /api/finance/state
+├ ƒ /api/finance/surfaces
+├ ƒ /api/health
+├ ƒ /api/onboarding
+├ ƒ /auth/callback
+├ ƒ /home
+├ ○ /icon.svg
+├ ƒ /manage
+├ ƒ /onboarding
+├ ƒ /sign-in
+└ ƒ /visualize
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand

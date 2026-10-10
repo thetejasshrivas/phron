@@ -1,0 +1,22 @@
+Running one project: unit
+FAIL unit tests/unit/server/capture-rate-limit.test.ts
+  ● Test suite failed to run
+
+    Cannot find module '../../../src/server/finance/capture-rate-limit' from 'tests/unit/server/capture-rate-limit.test.ts'
+
+      4 | it('permits ten requests, denies the eleventh, and isolates users', () => {
+      5 |   const limit = createCaptureRateLimiter(() => 0);
+    > 6 |   for (let i = 0; i < 10; i++) expect(limit.consume('A')).toEqual({ allowed: true });
+        |                           ^
+      7 |   expect(limit.consume('A')).toEqual({ allowed: false, retryAfterSeconds: 60 });
+      8 |   expect(limit.consume('B')).toEqual({ allowed: true });
+      9 | });
+
+      at Resolver._throwModNotFoundError (node_modules/jest-resolve/build/index.js:1031:11)
+      at Object.<anonymous> (tests/unit/server/capture-rate-limit.test.ts:6:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.354 s
+Ran all test suites within paths "tests/unit/server/capture-rate-limit.test.ts".

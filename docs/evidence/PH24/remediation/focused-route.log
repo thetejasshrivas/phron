@@ -1,0 +1,6 @@
+Running one project: integration
+Test Suites: 1 passed, 1 total
+Tests:       35 passed, 35 total
+Snapshots:   0 total
+Time:        0.698 s
+Ran all test suites within paths "tests/integration/ph19/ingest-route.test.ts".

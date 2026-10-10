@@ -1,0 +1,9 @@
+phron@0.1.0 W:\AI Product Sprint\Phron
+└─┬ jest@30.5.2
+  └─┬ @jest/core@30.5.2
+    └─┬ @jest/transform@30.5.2
+      └─┬ babel-plugin-istanbul@8.0.0
+        └─┬ @istanbuljs/load-nyc-config@1.1.0
+          └─┬ js-yaml@3.15.2
+            └─┬ argparse@1.0.10
+              └── sprintf-js@1.0.3

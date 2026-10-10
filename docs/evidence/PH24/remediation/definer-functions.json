@@ -1,0 +1,323 @@
+[
+  {
+    "args": null,
+    "name": "pilot_distress",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "op",
+      "expected",
+      "input"
+    ],
+    "name": "ingest_confirm_category",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "op",
+      "expected",
+      "input"
+    ],
+    "name": "accept_commitment",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": null,
+    "name": "phron_recovery_context",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "public",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "op",
+      "expected",
+      "input"
+    ],
+    "name": "obligation_payment",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "id",
+      "name"
+    ],
+    "name": "phron_active_custom_buckets",
+    "config": [
+      "search_path=\"\""
+    ],
+    "schema": "public",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": null,
+    "name": "phron_obligation_records",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "public",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "op",
+      "expected",
+      "input"
+    ],
+    "name": "surface_config",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "op",
+      "expected",
+      "input"
+    ],
+    "name": "surface_lifecycle",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "op",
+      "expected",
+      "input"
+    ],
+    "name": "execute_goal_cash_purchase",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "op",
+      "expected",
+      "input"
+    ],
+    "name": "ingest_mutate",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "op",
+      "expected",
+      "input"
+    ],
+    "name": "ingest_swap",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "op",
+      "expected",
+      "input"
+    ],
+    "name": "reclassify_drift",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": null,
+    "name": "surface_source",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "op",
+      "expected",
+      "input"
+    ],
+    "name": "surface_goal_purchase",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "kind",
+      "op",
+      "expected",
+      "input"
+    ],
+    "name": "cycle_mutation",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "kind",
+      "op",
+      "expected",
+      "input"
+    ],
+    "name": "mutate",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "op",
+      "expected",
+      "input"
+    ],
+    "name": "card_payment",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": null,
+    "name": "card_records",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "op",
+      "expected",
+      "input"
+    ],
+    "name": "card_lifecycle",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "op",
+      "expected",
+      "input"
+    ],
+    "name": "cancel_goal",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": [
+      "op",
+      "expected",
+      "input"
+    ],
+    "name": "accept_recovery",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  },
+  {
+    "args": null,
+    "name": "current_state",
+    "config": [
+      "search_path=\"\"",
+      "lock_timeout=2s"
+    ],
+    "schema": "phron_private",
+    "definer": true,
+    "anonExecute": false
+  }
+]

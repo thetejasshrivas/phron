@@ -1,0 +1,115 @@
+PASS buckets: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS buckets: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS buckets: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS buckets: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS card_liability_payments: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS card_liability_payments: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS card_liability_payments: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS card_liability_payments: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS card_payment_allocations: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS card_payment_allocations: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS card_payment_allocations: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS card_payment_allocations: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS cycle_buckets: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS cycle_buckets: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS cycle_buckets: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS cycle_buckets: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS cycle_obligations: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS cycle_obligations: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS cycle_obligations: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS cycle_obligations: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS financial_profiles: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS financial_profiles: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS financial_profiles: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS financial_profiles: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goal_purchases: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goal_purchases: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goal_purchases: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goal_purchases: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goal_recovery_extensions: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goal_recovery_extensions: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goal_recovery_extensions: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goal_recovery_extensions: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goal_releases: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goal_releases: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goal_releases: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goal_releases: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goal_reservations: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goal_reservations: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goal_reservations: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goal_reservations: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goals: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goals: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goals: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS goals: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS merchant_memory: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS merchant_memory: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS merchant_memory: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS merchant_memory: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS next_cycle_commitments: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS next_cycle_commitments: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS next_cycle_commitments: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS next_cycle_commitments: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS obligation_cash_payments: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS obligation_cash_payments: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS obligation_cash_payments: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS obligation_cash_payments: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS obligation_payment_allocations: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS obligation_payment_allocations: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS obligation_payment_allocations: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS obligation_payment_allocations: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS obligations: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS obligations: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS obligations: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS obligations: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS operation_log: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS operation_log: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS operation_log: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS operation_log: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS pay_cycles: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS pay_cycles: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS pay_cycles: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS pay_cycles: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS reconciliation_allocations: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS reconciliation_allocations: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS reconciliation_allocations: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS reconciliation_allocations: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS reconciliations: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS reconciliations: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS reconciliations: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS reconciliations: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS recovery_plans: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS recovery_plans: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS recovery_plans: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS recovery_plans: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS transactions: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS transactions: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS transactions: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS transactions: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS users: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS users: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS users: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS users: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied
+PASS all direct CRUD probes leave both users relational state unchanged
+PASS all application definer functions: anonymous EXECUTE revoked and fixed search_path
+PASS signed-out and anonymous-auth financial read RPC denied
+PASS ordinary User B guessed User A bucket rejected by financial RPC without mutation
+PASS production build
+PASS /api/finance/state: absent/anonymous/forged denied, ordinary A/B private reads
+PASS /api/finance/surfaces: absent/anonymous/forged denied, ordinary A/B private reads
+PASS /api/finance/card-records: absent/anonymous/forged denied, ordinary A/B private reads
+PASS /api/finance/recovery-preview: absent/anonymous/forged denied, ordinary A/B private reads
+PASS /api/finance/obligation-records: absent/anonymous/forged denied, ordinary A/B private reads
+PASS /api/onboarding: absent/anonymous/forged identity and foreign Origin denied
+PASS /api/finance/spend: absent/anonymous/forged identity and foreign Origin denied
+PASS /api/finance/card-payment: absent/anonymous/forged identity and foreign Origin denied
+PASS /api/finance/card-lifecycle: absent/anonymous/forged identity and foreign Origin denied
+PASS /api/finance/obligation-payment: absent/anonymous/forged identity and foreign Origin denied
+PASS /api/finance/surfaces: absent/anonymous/forged identity and foreign Origin denied
+PASS /api/finance/reconciliation-preview: absent/anonymous/forged identity and foreign Origin denied
+PASS /api/finance/ingest: absent/anonymous/forged identity and foreign Origin denied
+PASS /api/finance/ingest/swap: absent/anonymous/forged identity and foreign Origin denied
+PASS /api/finance/ingest/confirm-category: absent/anonymous/forged identity and foreign Origin denied
+PASS account deletion denies anonymous callers and forged target user
+PASS authenticated account deletion purges all 23 populated tables, auth identity/sessions, refuses stale cookies/refresh and preserves User B
+PASS runner-owned synthetic accounts cleaned; app server stopped

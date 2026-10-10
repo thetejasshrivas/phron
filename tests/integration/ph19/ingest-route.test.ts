@@ -5,6 +5,8 @@ import { requestClient } from '@/lib/supabase/request';
 
 jest.mock('@/lib/supabase/request', () => ({ requestClient: jest.fn() }));
 jest.mock('@/server/finance/providers', () => ({ extractWithFallback: jest.fn() }));
+jest.mock('@/server/finance/capture-rate-limit', () => ({ captureRateLimiter: { consume: jest.fn() } }));
+import { captureRateLimiter } from '@/server/finance/capture-rate-limit';
 import { extractWithFallback } from '@/server/finance/providers';
 const mockGetUser = jest.fn<(...args: unknown[]) => Promise<unknown>>();
 const mockRpc = jest.fn<(...args: unknown[]) => Promise<unknown>>();
@@ -35,6 +37,24 @@ function request(body: unknown) {
 }
 
 describe('PH-19 ingestion route boundary', () => {
+  it.each(['monthly_net_income', 'monthlyNetIncome', 'liquid_balance', 'liquidBalance', 'current_liquid_balance', 'currentLiquidBalance', 'total_debt', 'totalDebt', 'debt_obligation', 'debtObligation', 'user_id', 'userId', 'email'])('blocks %s before memory, ledger or provider access', async label => {
+    const response = await POST(request({ text: `${label}: PRIVATE_SENTINEL coffee 1.50 cash`, operationId: 'a1b2c3d4-0000-4000-8000-000000000000', disclosureAccepted: true }));
+    expect(await response.json()).toEqual({ kind: 'manual_fallback', reason: 'sensitive_context', openManualEntry: true });
+    expect(mockRpc).not.toHaveBeenCalled();
+    expect(mockSelect).not.toHaveBeenCalled();
+    expect(mockExtract).not.toHaveBeenCalled();
+  });
+  it('returns a private typed 429 with retry delay before any ledger or provider call', async () => {
+    jest.mocked(captureRateLimiter.consume).mockReturnValueOnce({ allowed: false, retryAfterSeconds: 27 });
+    const response = await POST(request({ text: '1.50 Cafe cash', operationId: 'a1b2c3d4-0000-4000-8000-000000000000', disclosureAccepted: true }));
+    expect(response.status).toBe(429);
+    expect(response.headers.get('retry-after')).toBe('27');
+    expect(response.headers.get('cache-control')).toContain('no-store');
+    expect(await response.json()).toEqual({ kind: 'manual_fallback', reason: 'rate_limited', openManualEntry: true, retryAfterSeconds: 27 });
+    expect(captureRateLimiter.consume).toHaveBeenCalledWith('user-a');
+    expect(mockRpc).not.toHaveBeenCalled();
+    expect(mockExtract).not.toHaveBeenCalled();
+  });
   it('literal canonical shopping context in the PRD shorthand does not require a fabricated merchant',async()=>{
     mockExtract.mockResolvedValueOnce({kind:'extracted',provider:'gemini',transactions:[{amountPaise:'45000',merchantOrPayee:'Zomato',candidateCategory:'Dining Out & Social',isEstimated:false,relativeDateOffsetDays:0},{amountPaise:'200000',merchantOrPayee:'Clothes',candidateCategory:'Shopping & Personal',isEstimated:false,relativeDateOffsetDays:0}]});
     const result=await (await POST(request({text:'450 zomato and 2k clothes cash',operationId:'a1b2c3d4-0000-4000-8000-000000000000',disclosureAccepted:true}))).json();
@@ -65,6 +85,7 @@ describe('PH-19 ingestion route boundary', () => {
     expect(mockRpc.mock.calls.some(([name])=>name==='phron_ingest_spend')).toBe(false);
   });
   beforeEach(() => {
+    jest.mocked(captureRateLimiter.consume).mockReset().mockReturnValue({ allowed: true });
     process.env.PHRON_APP_ORIGIN = 'http://127.0.0.1:3100';
     delete process.env.GEMINI_API_KEY; delete process.env.GROQ_API_KEY;
     mockGetUser.mockReset().mockResolvedValue({ data: { user: { id: 'user-a', is_anonymous: false } }, error: null });

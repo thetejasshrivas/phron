@@ -9,6 +9,7 @@ import { sanitizeCaptureText } from '@/server/finance/ingestion-input';
 import { extractWithFallback } from '@/server/finance/providers';
 import { hasSensitiveOutboundContext, isRestrictedAdviceRequest } from '@/server/finance/privacy-firewall';
 import { parseFinanceResult } from '@/server/finance/parse';
+import { captureRateLimiter, type CaptureThrottledResponse } from '@/server/finance/capture-rate-limit';
 
 export const dynamic = 'force-dynamic';
 const MAX_BODY_BYTES = 16_384;
@@ -100,6 +101,13 @@ export async function POST(request: NextRequest) {
     let input: Input;
     try { input = await parseBody(request); } catch { return context.finish(failure('VALIDATION')); }
     if (!input.text) return context.finish(failure('VALIDATION'));
+    const limit = captureRateLimiter.consume(auth.user.id);
+    if (!limit.allowed) {
+      const body: CaptureThrottledResponse = { kind: 'manual_fallback', reason: 'rate_limited', openManualEntry: true, retryAfterSeconds: limit.retryAfterSeconds };
+      const response = reply(body, 429);
+      response.headers.set('Retry-After', String(limit.retryAfterSeconds));
+      return context.finish(response);
+    }
     // Keep an independently identifiable spend prefix, never the injected
     // instruction suffix. Pure advice still follows the refusal below.
     const spendPrefix=input.text.split(/\s+(?:and\s+)?ignore\s+(?:all\s+)?previous\s+instructions\b/iu)[0]!.trim();

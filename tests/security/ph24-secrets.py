@@ -1,7 +1,7 @@
 """Read-only repository/history/client scan. Reports locations, never values."""
-import base64,hashlib,json,re,subprocess
+import base64,hashlib,json,re,subprocess,sys
 from pathlib import Path
-root=Path.cwd().resolve();out=root/'docs/evidence/PH24';out.mkdir(parents=True,exist_ok=True)
+root=Path.cwd().resolve();out=root/('docs/evidence/PH24/remediation' if '--remediation' in sys.argv else 'docs/evidence/PH24');out.mkdir(parents=True,exist_ok=True)
 private=[]
 for name in ['.env.local','.env.test']:
  p=root/name

@@ -1,3 +1,15 @@
+# Current PH24 remediation disposition — 2026-10-10 IST
+
+| ID | Current status | Evidence / limits |
+| --- | --- | --- |
+| PH24-PRIV-01 / P1 | RESOLVED | Normalized spaced/snake/camel/uppercase financial and identity labels;40/40 adapter assertions PASS,35route tests PASS including13 guard cases; no sensitive provider calls. |
+| PH24-RATE-01 / P1 | RESOLVED for approved process-local policy | Verified auth-ID key,10requests/60s, typed429/Retry-After; actual production burst10allowed/10denied with ledger unchanged. Restart/multiple-instance limitation explicitly documented; no distributed guarantee. |
+| PH24-DEP-01 / P2 | DOCUMENTED; residual tooling risk deferred upstream |24entries remain installed, production closure0entries. Trusted-tooling controls and incompatible npm downgrade disposition in evidence/PH24/DEPENDENCY_AUDIT.md; no founder release exception inferred. |
+
+[evidence/PH24/remediation/RESULT.md](evidence/PH24/remediation/RESULT.md) governs the current scoped disposition. Historical OPEN findings below remain as original reproductions. G5/G0B OPEN, V3 PENDING; PH25 not begun.
+
+---
+
 # Current PH-24 findings — OPEN
 
 Audited main application6efdab1,2026-10-10; PH23 defects remain resolved. Current release audit is BLOCKED; [executed report](evidence/PH24/RESULT.md).

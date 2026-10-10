@@ -1,0 +1,260 @@
+Running one project: unit
+FAIL unit tests/unit/server/privacy-labels.test.ts
+  ● keeps protected label monthly_net_income local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label monthlyNetIncome local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label MONTHLY_NET_INCOME local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label liquid_balance local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label liquidBalance local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label LIQUID_BALANCE local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label current_liquid_balance local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label currentLiquidBalance local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label CURRENT_LIQUID_BALANCE local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label total_debt local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label totalDebt local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label TOTAL_DEBT local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label debt_obligation local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label debtObligation local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label DEBT_OBLIGATION local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label user_id local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label user id local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label userId local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label USER_ID local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label email local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label email local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label email local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+  ● keeps protected label EMAIL local
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at tests/unit/server/privacy-labels.test.ts:22:124
+
+Test Suites: 1 failed, 1 total
+Tests:       23 failed, 6 passed, 29 total
+Snapshots:   0 total
+Time:        0.404 s
+Ran all test suites within paths "tests/unit/server/privacy-labels.test.ts".

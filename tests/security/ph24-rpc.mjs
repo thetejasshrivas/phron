@@ -3,7 +3,7 @@ import {randomUUID} from 'node:crypto';
 import {mkdirSync,writeFileSync} from 'node:fs';
 import {localAuth,initial,rpc} from '../integration/ph11/auth-local.mjs';
 import {sql} from '../integration/ph11/local.mjs';
-const auth=localAuth(),checks=[],out='docs/evidence/PH24';mkdirSync(out,{recursive:true});
+const auth=localAuth(),checks=[],out=process.argv.includes('--remediation')?'docs/evidence/PH24/remediation':'docs/evidence/PH24';mkdirSync(out,{recursive:true});
 try{
  const a=await auth.user(),b=await auth.user(),anonymous=auth.client(),anonymousAuth=await auth.anonymous();
  assert.equal((await rpc(a.client,'phron_onboard',initial)).ok,true);assert.equal((await rpc(b.client,'phron_onboard',initial)).ok,true);

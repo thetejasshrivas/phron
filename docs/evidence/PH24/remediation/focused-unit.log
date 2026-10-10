@@ -1,0 +1,7 @@
+Running one project: unit
+
+Test Suites: 2 passed, 2 total
+Tests:       33 passed, 33 total
+Snapshots:   0 total
+Time:        0.393 s
+Ran all test suites within paths "tests/unit/server/privacy-labels.test.ts", "tests/unit/server/capture-rate-limit.test.ts".

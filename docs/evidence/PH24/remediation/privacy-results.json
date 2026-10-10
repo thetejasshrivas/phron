@@ -1,0 +1,259 @@
+{
+  "head": "caec5424b5e44b4de3f3fdff7259ffbf17a673c2",
+  "transport": "captured synthetic fetch at actual TypeScript adapter; no external request",
+  "results": [
+    {
+      "name": "gemini strict outgoing HTTP allowlist / unknown context omitted",
+      "status": "PASS",
+      "requests": 1,
+      "providerBodies": [
+        {
+          "provider": "gemini",
+          "keys": [
+            "contents",
+            "generationConfig"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "groq strict outgoing HTTP allowlist / unknown context omitted",
+      "status": "PASS",
+      "requests": 1,
+      "providerBodies": [
+        {
+          "provider": "groq",
+          "keys": [
+            "max_tokens",
+            "messages",
+            "model",
+            "response_format",
+            "temperature"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gemini-retry-groq strict outgoing HTTP allowlist / unknown context omitted",
+      "status": "PASS",
+      "requests": 3,
+      "providerBodies": [
+        {
+          "provider": "gemini",
+          "keys": [
+            "contents",
+            "generationConfig"
+          ]
+        },
+        {
+          "provider": "gemini",
+          "keys": [
+            "contents",
+            "generationConfig"
+          ]
+        },
+        {
+          "provider": "groq",
+          "keys": [
+            "max_tokens",
+            "messages",
+            "model",
+            "response_format",
+            "temperature"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "capture-sensitive-text: monthly net income 73197",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: current liquid balance 83219",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: total debt 94327",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: ph24-private@example.test",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: 123e4567-e89b-42d3-a456-426614174000",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: monthly_net_income: 73197",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: current_liquid_balance: 83219",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: total_debt: 94327",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: monthly_net_income: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: monthly net income: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: monthlyNetIncome: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: MONTHLY_NET_INCOME: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: liquid_balance: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: liquid balance: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: liquidBalance: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: LIQUID_BALANCE: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: current_liquid_balance: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: current liquid balance: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: currentLiquidBalance: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: CURRENT_LIQUID_BALANCE: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: total_debt: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: total debt: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: totalDebt: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: TOTAL_DEBT: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: debt_obligation: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: debt obligation: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: debtObligation: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: DEBT_OBLIGATION: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: user_id: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: user id: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: userId: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: USER_ID: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: email: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: email: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: email: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: EMAIL: PRIVATE_SENTINEL",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "telemetry exact projection drops text/amount/merchant/context and coach is local",
+      "status": "PASS",
+      "telemetryFields": [
+        "input_type",
+        "confidence",
+        "is_estimated",
+        "is_credit_card"
+      ],
+      "externalCoachCalls": 0
+    }
+  ]
+}

@@ -1,3 +1,9 @@
+## PH24-RATE-POLICY-v1 — APPROVED by explicit operator instruction, 2026-10-10 IST
+
+Tejas requested a lightweight in-memory sliding-window capture limiter (maximum10requests/minute per authenticated user) returning a typed429. Implemented10valid authenticated ingestion requests per60seconds keyed only by verified server identity; rejected attempts do not extend the window. Privacy/financial boundaries remain unchanged. This explicit instruction authorizes the process-local scope instead of the earlier audit's shared-counter recommendation. It does not authorize a paid service or silently establish a global serverless limit. Restart/replica limitations and residual release assessment are recorded in PH24 evidence. No PRD amendment or remote policy change is inferred.
+
+---
+
 # Decisions
 
 ## G3-DF-01-v1 — Debt Firefight accounting semantics

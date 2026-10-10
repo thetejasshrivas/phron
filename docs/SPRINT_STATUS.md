@@ -5,29 +5,70 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: 6efdab11f4a6b76ed0bf006c9a6eb24a116a6e6c # PH23 committed application; PH24 audit records separate
-working_tree_state: PH23 remediation committed; PH24 blocked-audit records sealed in separate evidence commit; unrelated scratch untouched
+commit: caec5424b5e44b4de3f3fdff7259ffbf17a673c2 # remediation base; resolve final PH24 commit through git log
+working_tree_state: PH24 local remediation verified; source and lockfile unchanged; unrelated scratch untouched
 dirty_files: ["New Text Document.txt (untouched user work)"] # resolve current HEAD/status on resume
-active_chat: PHRON-00 Lead & QA / PH-24 security audit (single active writer)
+active_chat: PHRON-00 Lead / PH-24 Platform remediation (single active writer)
 phase: "5 (Journeys and Quality)"
 current_step: PH-24
-step_state: PH-23 COMPLETE; PH-24 / P05-SECURITY AUDIT EXECUTED — BLOCKED; not COMPLETE
+step_state: PH-24 local audit/remediation COMPLETE; G5 OPEN; PH25 NOT STARTED
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
 approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D08-v1, D09-v1, D10-v1, D11-v1, D16-v1, D17-v1, D18-v1, D19-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1, D14-v1, D15-v1, D26-v1, G3-DF-01-v1, PH21-BUCKET-v1, PH21-GOAL-v1, PH21-OBLIGATION-v1, PH21-CHART-v1, D20-v1, G4-FLEX-DATE-01-v1, G4-CUSTOM-RECOVERY-01-v1, D23-v1, D24-v1, G4-GOAL-CALENDAR-01-v1, PH23-SC02-v1]
-completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17, PH-18, PH-19, PH-20, PH-21, PH-22, PH-23]
+completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17, PH-18, PH-19, PH-20, PH-21, PH-22, PH-23, PH-24]
 passed_gates: [G0A, G1, V1, G2, V2, G3, G4]
 open_gates: [G0B, G5]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: PENDING}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb"}
-blocking_decisions: ["PH24-RATE-01 exact application rate/window policy if unspecified", "PH24-DEP-01 safe dependency disposition"] # PRIV-01 is a reproduced implementation defect, not a source amendment
+blocking_decisions: [] # scoped fixes verified; residual tooling/distributed-limit risks remain documented for release review
 latest_evidence: docs/evidence/PH24/RESULT.md
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
 migration_state: PH11_PH12_REMOTE_APPLIED; PH15_THROUGH_PH22_CANDIDATES_LOCAL_ONLY_VERIFIED_NOT_REMOTE
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers", "2026-10-10: Tejas approved PH21 typed contracts, server/API handlers, local-only migration and integration tests for goals, reconciliation, buckets and authenticated account deletion; no remote rollout"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Platform resolves PH24-PRIV-01 with failing sentinel tests; PH25 not started
+next_action: Lead reviews dependency disposition and per-process limiter limits before authorizing PH25; PH25 not started
 last_updated_ist: 2026-10-10
 ```
+
+# PH-24 remediation — COMPLETE locally / G5 OPEN
+
+2026-10-10 IST. Base main caec5424b5e44b4de3f3fdff7259ffbf17a673c2 plus the verified remediation diff. Frozen sources, package/lockfile, financial formulas, migrations and remote settings are unchanged. Tejas explicitly authorized privacy repair, process-local capture throttling and dependency disposition. One active writer; unrelated New Text Document.txt untouched.
+
+## Changes and executed verification
+
+The privacy guard normalizes its inspection view using NFKC, camel/acronym word boundaries and underscore/hyphen separators. It checks all seven named financial/identity label families, actual emails and UUIDs. Original spend text is never rewritten by this guard. The endpoint and both provider adapters stop sensitive text before any provider attempt and return sensitive_context manual fallback. Normal synthetic spend text remains eligible. There are no live provider calls in this verification.
+
+Capture ingestion uses the **verified server-auth user ID** for a10-request/60-second sliding window, after origin/auth/body validation and before any financial read or provider call. Rejected attempts do not extend the window. Response429 is typed manual_fallback/rate_limited/openManualEntry/retryAfterSeconds with Retry-After and private/no-store headers. Stable IDs do not bypass the rate limit and no ledger mutation occurs when rejected. Existing Home non-2xx handling preserves the draft and offers retry/manual controls; this change does not claim a new automatic429 dialog interaction.
+
+This is the lightweight in-memory policy explicitly requested by Tejas. It applies **per process**, resets on restart/cold start, and is not shared across Vercel replicas. Expired entries are pruned on requests. It is not a global provider-quota guarantee; distributed enforcement remains a release assessment item. No database counter, paid service or remote change was introduced.
+
+| Command / area | Actual result | Exit / evidence under remediation/ |
+| --- | --- | --- |
+| Focused privacy variants, before fix |23FAIL/6PASS; original guard misses label styles |1; privacy-red.log |
+| Limiter tests before new module |Import/module failure; not claimed as a behavioral red proof |1; rate-red.log; original HTTP audit also proves missing limiter |
+| Focused new privacy/limiter tests |33PASS |0; focused-unit.log |
+| Focused ingestion-route suite |35PASS |0; focused-route.log |
+| npm run check |458unit/38suites;152integration/16suites;458tracked contract-coverage tests; lint/typecheck/build/source verification PASS |0; check.log |
+| Six collected transport contracts |100% statements/branches/functions/lines |0; check.log |
+| npm run test:domain:coverage |202tests/21suites;100% statements/branches/functions/lines across10 audited math files |0; domain.log |
+| Privacy adapter sentinels and telemetry |40PASS/0FAIL, including all three original failures plus28 label-style cases; zero outbound calls for sensitive captures |0; privacy-results.json/privacy.log |
+| Public RLS/auth/deletion |115PASS;23/23 populated public tables purged, stale access denied, B unchanged |0; local-results.json/local.log |
+| Financial RPC role/authority isolation |91PASS |0; rpc-results.json/rpc.log |
+| Actual production HTTP burst/auth bounds |6PASS; exactly10HTTP200+10typed429; no ledger change; signed expired/logout denied |0; http-results.json/http.log |
+| Existing security/FIT13/ingestion |16/2/5PASS |0; security-regression.log/fit13.log/ingestion.log |
+| Payment/card lifecycle |25/46PASS |0; payments.log/cards.log |
+| Repository/history/client secrets |0findings,0privileged public identifiers, env example empty |0; secrets-results.json/secrets.log |
+| Full dependency audit |24entries:5high/19moderate; two root tooling advisories |1 expected; dependency-audit.json/log |
+| Production-only dependency audit |0entries |0; dependency-production-audit.json/log |
+
+Counts overlap; they are not added into a combined coverage score. All assertions and original failures are retained; no test exclusions/skips were used. The focused test red/green logs and original root audit coexist. Local persistent Supabase55321/container supabase_db_phron-ph11-local; ordinary synthetic A/B/anonymous sessions exercise security operations. Admin only seeds/cleans synthetic fixtures and performs the existing authenticated caller-only account deletion. Test production servers3109/3110 stopped after completion; no remote migrations/deployments/accounts touched.
+
+## Disposition and limits
+
+PH24-PRIV-01 **RESOLVED**, PH24-RATE-01 **RESOLVED for requested per-process policy**. PH24-DEP-01 **DOCUMENTED / upstream patch deferred** with trusted tooling controls, not patched or founder risk-accepted; see [DEPENDENCY_AUDIT.md](../DEPENDENCY_AUDIT.md). G5/G0B remain OPEN and V3 PENDING. PH25 has not started. Live provider quotas/retention, multi-instance quota guarantees, hosted deployment and browser reruns are NOT RUN here; previous PH23 browser proofs are preserved, not relabeled as a new run.
+
+Next one action: Lead reviews the dependency disposition and process-local limiter limitation before authorizing PH25. PH24 local remediation is finished; no production-readiness claim is made.
+
+---
 
 ## PH-24 security audit — EXECUTED / BLOCKED — 2026-10-10 IST
 

@@ -7,7 +7,7 @@ import {createServerClient} from '@supabase/ssr';
 import {localAuth,initial,rpc} from '../integration/ph11/auth-local.mjs';
 import {sql,literal,verifyLocalContainer} from '../integration/ph11/local.mjs';
 
-const out='docs/evidence/PH24';mkdirSync(out,{recursive:true});verifyLocalContainer();
+const out=process.argv.includes('--remediation')?'docs/evidence/PH24/remediation':'docs/evidence/PH24';mkdirSync(out,{recursive:true});verifyLocalContainer();
 const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
 const config=JSON.parse(execFileSync('C:/Users/thete/AppData/Local/Temp/phron-supabase-cli-2.119.0/supabase.exe',['status','-o','json'],{encoding:'utf8',stdio:['ignore','pipe','ignore']}));assert.equal(config.API_URL,'http://127.0.0.1:55321');
 const origin='http://127.0.0.1:3109',auth=localAuth(),aAuth=localAuth(),checks=[];

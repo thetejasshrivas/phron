@@ -1,0 +1,18 @@
+{
+  "npm run check": 0,
+  "npm run test:domain:coverage": 0,
+  "node tests/security/ph24-privacy.mjs --remediation": 0,
+  "node tests/security/ph24-local.mjs --remediation": 0,
+  "node tests/security/ph24-rpc.mjs --remediation": 0,
+  "node tests/security/ph24-http.mjs --remediation": 0,
+  "node tests/security/ph14-local.mjs": 0,
+  "node tests/security/fit13-adversarial.mjs": 0,
+  "node tests/integration/ph19/ingestion.mjs": 0,
+  "node tests/integration/ph15/payments.mjs": 0,
+  "node tests/integration/ph15/lifecycle.mjs": 0,
+  "python tests/security/ph24-secrets.py --remediation": 0,
+  "npm audit --json": 1,
+  "npm audit --omit=dev --json": 0,
+  "privacy variant red test before fix": 1,
+  "limiter module red test before implementation": 1
+}
