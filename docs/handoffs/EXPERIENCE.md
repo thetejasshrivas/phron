@@ -1,3 +1,31 @@
+# PH-21 COMPLETE locally → Lead / PH-22 P-GATE G4
+
+2026-10-10 IST. Repository `W:/AI Product Sprint/Phron`; main. Implementation/evidence commit `adc452b46bf00aa02ffa764f6db2281ef1717236`; this handoff/status documentation commit follows. Inspect actual HEAD and dirty files on resume; two pre-existing untracked user files remain (`New Text Document.txt`, `tests/unit/contracts/obligation.test.ts`). Frozen PRD hash `d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994`; all five sources verified.
+
+## State and ownership
+
+One active authorized Lead chat fulfilled Experience and narrow approved cross-owner PH21 contract/server/API/local-SQL/integration scope. G0A/G1/V1/G2/V2/G3 retained; G0B remains OPEN; V3 pending PH26. PH21 is locally implemented/verified; PH22 has NOT started. No new deployment, remote migration, install or provider call. Old hosted Preview is still PH14 and cannot be claimed as PH21.
+
+Approved scoped records: PH21-BUCKET-v1 baseline-only allocation changes at confirmed rollover, immediate display names and constrained floors/custom zero active allowance; PH21-GOAL-v1 funded first floor-rounded reserve on creation with preserved history/future contributions; PH21-OBLIGATION-v1 monthly baseline and immutable classification/past payment protection; PH21-CHART-v1 exact current safe pool reference with no permission claim. D07-card/funding, bucket deletion, voice privacy and other OPEN records remain unresolved and unavailable. No new financial formula.
+
+## Exact contract and click path
+
+Protected `/home`, `/visualize`, `/manage` require fresh SSR identity and an owned profile; missing profile routes to `/onboarding`. Contracts/import boundary and every POST shape are documented in docs/CONTRACTS.md and src/contracts/surfaces.ts. GET `/api/finance/surfaces` is private/no-store. POST uses stable UUIDv4, expected revision and one strict SurfaceAction; all finance operations use ordinary user RPCs. Account DELETE is the only server-admin exception, fixed to fresh verified caller, strict typed confirmation and global sign-out before hard purge. Expired surface auth clears retained data. No secrets or caller user IDs enter the client.
+
+Tejas/QA click path in an approved locally configured or future rolled-out environment: Sign in → Onboarding if needed → Your day → Enter a spend manually → exact amount, payee, bucket and payment method → Save spend → reload → open the recent purchase → correct/delete/Undo within6seconds. Check your balance → actual balance/recall/category → Confirm balance. Visualize spending → category distribution, exact daily table and cycle-relative matrix including allocation and obligation rows. Buckets & settings → edit saved baselines, create zero-active custom bucket; after3logged buckets or balance check → add a funded goal (target/date/fixed-flexible/purpose) → confirm reserve → Home goal tank → refresh; future schedule edit/cancel preserves history. Settings → Delete account → type DELETE MY ACCOUNT → Permanently delete (synthetic accounts only for destructive QA).
+
+The temporary browser proof app at `127.0.0.1:3106` was stopped after testing. Reproduce via `node tests/integration/ph21/browser-local.mjs` (launches isolated local production app, creates ordinary synthetic sessions, providers absent/mocked, cleans up). It is not a public preview or lasting manual-review URL. Do not point ordinary operators at remote schema that lacks the candidate. Local-only SQL: supabase/migrations/20261010160000_ph21_surfaces.sql, target pinned `supabase_db_phron-ph11-local`, API55321. Routine rerun does not reapply schema; apply-local --refresh-candidate replaces only approved local candidate functions when needed.
+
+## Verification and next action
+
+400 unit/115 integration,198 domain/property/100% all collected math coverage,100% contract coverage,13 ordinary surface DB cases,lint/types/build/source5 PASS. Ten browser checks/eighteen views at375/768/1280 normal/reduced and actual drain; unchanged full financial regressions pass. Workspace counts include the preserved untracked obligation test; do not silently commit or remove it. Full commands/exits/failures/limits in docs/evidence/PH21/RESULT.md and logs. V3 not self-approved; physicalphone/fullscreenreader/performance/liveprovider checks not run.
+
+One next eligible action, after operator signal: **PH-22 / Lead — P-GATE G4**. Read verified sources/status/decisions/contracts and this handoff; inventory every actual P0 FR/AC ID with code+test evidence, assess OPEN/unsupported branches and absent controls honestly, and record PASS/FAIL/BLOCKED/NOT RUN by ID. Do not declare G4 passed from summary counts or deploy remote migrations as part of that audit.
+
+---
+
+Prior handoffs retained:
+
 # Experience handoff — PH-13 COMPLETE → PHRON-04 QA / PH-14
 
 2026-10-07 IST. main implementation 0fc19a81fb9168c9c1349e2e342d9138a3581547; existing uncommitted PH12 proxy/tests/Platform docs/evidence and New Text Document.txt preserved. Do P-RESUME; source5 hashes PASS. G0A/G1/V1 retained; G2/V2/V3 pending. No chat messaged or advanced automatically.

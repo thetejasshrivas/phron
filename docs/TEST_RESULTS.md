@@ -1,3 +1,17 @@
+# PH-21 surface verification — 2026-10-10 IST
+
+Implementation/evidence commit: `adc452b46bf00aa02ffa764f6db2281ef1717236`, main; local synthetic Supabase only. Step PH-21 COMPLETE locally; G3 remains PASSED, V3 PENDING. No new hosted preview or remote migration.
+
+PASS 400 unit, 115 integration/contracts, 198 domain/property /100% coverage across ten implemented domain files; contract coverage100%; thirteen ordinary-user configuration/read/purge cases; lint/typecheck/build and five source hashes. Ten real local browser journey checks, eighteen responsive normal/reduced views and intermediate confirmed spend drain. Existing lifecycle46, payment25, cycle33, recovery18, commitment21, cancellation9, distress9, goal5, ingestion5, security16 and FIT13-2 database cases PASS. Counts overlap. Full evidence, commands/exits and corrected failures: [evidence/PH21/RESULT.md](evidence/PH21/RESULT.md), final-runs.json, runs.json and browser.json. All final commands exit0; earlier broad-run lint failure is retained honestly.
+
+Meaningful checks: original active allocations/dated obligation payments; same-user RLS and anonymous/forged-parent denial; zero-active custom buckets; reservation/edit/cancellation history/replay; forced rollback and concurrent revision conflict; five-day transaction-logging inactivity not reset by configuration; State C effective floor override and completed WANT execution denial; populated payment/merchant/raw-text/goal cascade with revoked sessions. Browser verifies save/refresh/edit/delete/Undo, reconcile, rename/goal, offline and Scenario18 fallback, second-user isolation and native account deletion.
+
+Limits: actual workspace counts include untouched untracked `tests/unit/contracts/obligation.test.ts`. No fresh-clone equivalence, live Gemini/Groq, remote second Google user, physical phone, full screen-reader/accessibility/performance certification, measured goal-fill duration or founder V3 approval. These remain separate from locally executed proof. Next operator action is PH-22 / P-GATE G4, not started.
+
+---
+
+Earlier evidence retained as history:
+
 # PH-18 / Gate G3 final verification — 2026-10-10 IST
 
 **PASS — Gate G3 criteria verified for PH-18; Step PH-18 COMPLETE.** Verified implementation and evidence commit: `7f61660ef0854bd28c559f024c5cd31762b1db62`. Final command matrix: [docs/evidence/G3/CLOSURE/runs.json](evidence/G3/CLOSURE/runs.json); every one of 20 commands exited 0 on the local Windows environment with pinned project tools and isolated synthetic Supabase Docker database. No remote schema changes, provider calls, deployment, or secrets involved.
