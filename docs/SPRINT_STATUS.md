@@ -5,26 +5,26 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: 8dd24a9
-working_tree_state: PH-19 implementation committed; unrelated untracked files preserved
+commit: 41471ab0149a72f1280f089051532773ee25fd80 (PH-19 implementation and evidence)
+working_tree_state: PH-19 D18-v1 implementation committed; unrelated untracked files preserved
 dirty_files: ["New Text Document.txt (untouched user work)", "tests/unit/contracts/obligation.test.ts (excluded from PH-19 commit)"]
 active_chat: PHRON-00 Lead
 phase: 4
 current_step: PH-19
-step_state: IN_PROGRESS
+step_state: COMPLETE
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
 approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D08-v1, D09-v1, D10-v1, D11-v1, D16-v1, D17-v1, D18-v1, D19-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1, D14-v1, D15-v1, D26-v1, G3-DF-01-v1]
-completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17, PH-18]
+completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17, PH-18, PH-19]
 passed_gates: [G0A, G1, V1, G2, V2, G3]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: PENDING}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb"}
-blocking_decisions: [D07-card, D07-funding, D18-custom-bucket-mapping, D20, D23, D24, D25]
+blocking_decisions: [D07-card, D07-funding, D20, D23, D24, D25]
 latest_evidence: docs/evidence/PH19/RESULT.md
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
-migration_state: PH11_PH12_REMOTE_APPLIED; PH15_PH16_PH17_PH18_LOCAL_ONLY_VERIFIED_NOT_REMOTE; PH19_LOCAL_ONLY_VERIFIED_NOT_REMOTE
+migration_state: PH11_PH12_REMOTE_APPLIED; PH15_PH16_PH17_PH18_LOCAL_ONLY_VERIFIED_NOT_REMOTE; PH19_CANDIDATES_LOCAL_ONLY_VERIFIED_NOT_REMOTE
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Resolve D18 custom-category mapping and complete or explicitly disposition live provider/account verification before PH-19 closure; no remote migration
+next_action: PH-20 / P04-PRIVACY after operator start signal; provider keys, quotas and retention remain a separate manual smoke check per approved D18-v1; no remote migration
 last_updated_ist: 2026-10-10
 ```
 
@@ -397,3 +397,13 @@ Direct endpoint inspection found no DB URL/host/port in `.env.local` or process 
 ### PH-19 local runtime resumed — 2026-10-10 IST
 
 Docker Desktop was started by Tejas. With approved access to the exact `desktop-linux` context, `docker ps` exited 0 and showed `supabase_db_phron-ph11-local`. Local apply first exposed a missing temporary `phron_writer` schema-create grant and rolled back (exit 1); after matching the scoped grant/revoke pattern in prior migrations, `node tests/integration/ph19/apply-local.mjs` exited 0. Integration exposed ambiguous replay column/variable names; corrected function definitions were installed from the candidate in the same verified local DB. Final `node tests/integration/ph19/ingestion.mjs`: **4 passed, 0 failed**, covering forced RLS and grants, identical stable-ID replay with one ledger/transaction mutation, ordinary-user cross-tenant denial, and full forced rollback plus same-ID retry. Syntax checks, `npm run verify:sources`, and `git diff --check` passed. Final migration SHA-256: `AB25418AE02D857C2A54F6DFD0D1B58FDBE500D6D162FC3892F4A43A930DF39A`. Local PH-19 schema/RLS and requested integration parity PASS. Overall PH-19 remains IN_PROGRESS for remaining provider/account, browser and acceptance checks; no remote database was contacted. Details: docs/evidence/PH19/RESULT.md.
+
+## PH-19 / D18-v1 completion — 2026-10-10 IST
+
+**Step PH-19: COMPLETE.** D18-v1 is approved and recorded in `docs/DECISIONS.md` and `docs/amendments/D18-v1.md`. Custom category memory, active custom-bucket name/alias matching, Low-confidence category selection, stable operation replay, and atomic category-confirmation persistence are implemented. The previously open D18 custom mapping item is closed. D07-card, D07-funding, D20, D23, D24 and D25 remain OPEN and outside this step.
+
+Verification: `npm run check` PASS (382 unit + 104 contract/integration tests; source verification, lint, typecheck, 100% configured contract coverage, production build). Domain coverage PASS (198 tests; 100% statements/branches/functions/lines across ten collected modules). Local PH-19 migration PASS; ordinary-user local database PASS 5/5 including custom spend + memory, replay, tenant denial and forced rollback. Focused D18 route/contract tests PASS 11/11. Scenario 18 and D18 browser flow PASS: provider-unavailable manual fallback, ambiguous item category selection, custom bucket save, merchant-memory persistence and refresh; zero browser errors. Evidence: `docs/evidence/PH19/D18-v1.json`, `docs/evidence/PH19/scenario18-browser.json`, and `docs/evidence/PH19/scenario18-manual-fallback.png`. Frozen PRD hash remains unchanged. Migration SHA-256 `9353a64b11143866405cafed132cc8a8b478f3fe5f16960a3bd043c597dda7cc`; local-only, never remote.
+
+Live AI provider keys, account quotas and retention controls: **NOT RUN / NOT VERIFIED**, expressly deferred to a separate manual smoke by D18-v1 and not a deterministic PH-19 blocker. No provider call, remote migration, account setting change or deployment occurred.
+
+Next eligible guided action: **PH-20 / P04-PRIVACY**, after operator start signal. Prior PH-19 in-progress/open-mapping entries above are historical and superseded by this completion record.

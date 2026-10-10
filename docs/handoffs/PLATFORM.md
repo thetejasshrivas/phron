@@ -311,3 +311,17 @@ Final local gates PASS: `npm run check` (381 unit, 98 integration/contract, 100%
 PH-19 remains IN_PROGRESS. D18 custom category-to-bucket mapping is OPEN; approval covers amount representation only. Live synthetic Gemini/Groq failover timing and project quota/privacy verification are NOT RUN/UNVERIFIED because credentials/account evidence are unavailable. Next action is to resolve D18 mapping scope and complete or explicitly disposition the live provider/account acceptance item. Do not mark PH-19 complete or start PH-20 before that closure evidence. No remote migration, provider call, account setting change or deployment occurred.
 
 PH-19 implementation and evidence commit: `8dd24a9` (`feat(ph19): add verified ingestion fallback`). `git diff --check` passed before staging and the staged diff passed `git diff --cached --check`. This handoff/status record is being committed separately. Unrelated untracked `New Text Document.txt` and `tests/unit/contracts/obligation.test.ts` were left untouched and unstaged.
+
+# PH-19 completion handoff — D18-v1 — 2026-10-10 IST
+
+PH-19 is COMPLETE after D18-v1 approval. The frozen source remains PRD 1.2.1-FROZEN with SHA-256 `d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994`.
+
+Implemented: active per-user custom-bucket read RPC; deterministic exact name/alias matching; High-confidence custom merchant-memory interception before provider calls; Low-confidence “Needs a Category” client card; category confirmation through `phron_ingest_confirm_category`, which uses the ordinary authenticated user context, validates current bucket/cycle and identity in the existing spend mutation, and upserts merchant memory atomically. Stable operation ID replay returns the prior result; a different payload under the same ID is rejected by the underlying replay fingerprint. The confirmation UI preserves its operation ID and selected category on failure for retry. Missing payment method requires explicit user selection.
+
+Migration `supabase/migrations/20261010120000_ph19_d18_category_memory.sql` is a local candidate only, SHA-256 `9353a64b11143866405cafed132cc8a8b478f3fe5f16960a3bd043c597dda7cc`. Applied/reapplied to the pinned local `phron-ph11-local` test database, not remotely. Ordinary-user DB suite: 5/5 PASS, including custom spend+memory, replay, isolation, forged cross-tenant rejection, and rollback. Jest: 382 unit +104 contract/integration PASS; focused D18 API tests 11/11; 198 domain tests with 100% measured line/statement/branch/function coverage across ten collected modules. `npm run check`, `npm run test:domain:coverage`, and `git diff --check` PASS. Scenario18/D18 browser test passes with keys stripped and synthetic account; fallback remains no-save, category selection saves custom bucket and memory, and refresh retains state. No browser errors.
+
+Provider key/quota/retention live smoke remains NOT RUN and is separate/nonblocking under approved D18-v1. No provider call, remote migration, deployment or account setting change occurred. D07-card/D07-funding/D20/D23/D24/D25 remain OPEN.
+
+Next eligible action: PH-20 / P04-PRIVACY, after operator start signal. Read current status and this handoff; preserve unrelated untracked files `New Text Document.txt` and `tests/unit/contracts/obligation.test.ts`.
+
+PH-19 implementation/evidence commit: `41471ab0149a72f1280f089051532773ee25fd80`.
