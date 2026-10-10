@@ -219,32 +219,28 @@ Owner: PHRON-00 Lead
 ## D08
 
 Decision ID: D08
-Status: OPEN
+Status: APPROVED — D08-v1, 2026-10-10 IST
 Source clauses: 0.3(13);12/13;26.1/26.2; PRIV
 Issue: AI outbound context and retention conflict
 Counterexample: Coach receives ₹1,200 financial delta despite ban
 Affected steps and gates: PH-19/20/24/27; dependent gate remains blocked
-Proposed resolution: Approve separate payload allowlists and truthful provider notices; no real sensitive financial API calls before resolution. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
+Exact approved wording: [D08-v1](amendments/D08-v1.md). Tejas selected “Approve disclosed free-tier extraction calls with sanitized text”; approval is for disclosure-gated PH-19 extraction only.
+Founder approval and date IST: Tejas explicit selection, 2026-10-10 IST.
+Amendment version or implementation-only classification: D08-v1 scoped privacy amendment; frozen PRD unchanged.
 Required tests: AC-AI-02;FIT-13; outbound and purge; NOT_RUN
 Owner: PHRON-00 Lead
 
 ## D09
 
 Decision ID: D09
-Status: OPEN
+Status: APPROVED — D09-v1, 2026-10-10 IST
 Source clauses: 19.4;24;25
 Issue: Extraction omits method; confidence and P2P routing ambiguous
 Counterexample: bhai 500: payment method and purpose unknown
 Affected steps and gates: PH-15/19/21/23; dependent gate remains blocked
-Proposed resolution: Explicit pending method; deterministic confidence tiers; P2P amount estimate distinct from unknown purpose. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
+Exact approved wording: [D09-v1](amendments/D09-v1.md). Tejas selected “Approve explicit-only method; missing method blocks direct save.”
+Founder approval and date IST: Tejas explicit selection, 2026-10-10 IST.
+Amendment version or implementation-only classification: D09-v1 scoped extraction/routing amendment; frozen PRD unchanged.
 Required tests: AC-TXN-01–04/06; FIT-12/13; NOT_RUN
 Owner: PHRON-00 Lead
 
@@ -381,33 +377,31 @@ Owner: PHRON-00 Lead
 ## D18
 
 Decision ID: D18
-Status: OPEN
+Status: APPROVED — D18-v1, 2026-10-10 IST (amount representation only)
 Source clauses: 24 extraction schema
 Issue: Amount units and custom categories conflict
 Counterexample: ₹0.50 or Pet Care rejected by minimum/category enum
 Affected steps and gates: PH-06/19/21; dependent gate remains blocked
-Proposed resolution: Exact positive integer paise; authorized mapped buckets; explicit custom local choice. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
+Exact approved wording: [D18-v1](amendments/D18-v1.md). Tejas approved decimal-rupee strings converted exactly to paise, rejecting exponents and amounts with more than two decimals. This resolves amount representation only; category-to-custom-bucket mapping remains open.
+Founder approval and date IST: Tejas explicit selection, 2026-10-10 IST.
+Amendment version or implementation-only classification: D18-v1 amount-representation amendment; frozen PRD unchanged.
 Required tests: FIT-14; sub-rupee/custom cases; NOT_RUN
 Owner: PHRON-00 Lead
 
 ## D19
 
 Decision ID: D19
-Status: OPEN
+Status: APPROVED
 Source clauses: AI timeouts; performance; Scenario 18
 Issue: Retries and fallback exceed total response target
 Counterexample: Four-second primary plus four-second fallback exceeds five seconds
 Affected steps and gates: PH-19/23/25; dependent gate remains blocked
-Proposed resolution: Shared four-second provider budget with bounded primary/retry and late-response abort; measure persistence separately. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
-Required tests: AC-AI-01; Scenario 18; timeout/retry; NOT_RUN
+Proposed resolution: A shared four-second budget for each provider, including any Gemini retry, with late-response abort; sequential Gemini and Groq calls may take approximately eight seconds total before persistence. Persistence time is measured separately. This scopes only provider timeout behavior.
+Alternatives and impact: A single four-second total budget would prevent a full primary-plus-fallback attempt. A provider-scoped budget retains fallback while bounding the extraction phase at approximately eight seconds.
+Exact approved wording: [D19-v1](amendments/D19-v1.md). Tejas explicitly approved four seconds per provider; total extraction may reach about eight seconds.
+Founder approval and date IST: Tejas explicit reply, 2026-10-10 IST.
+Amendment version or implementation-only classification: D19-v1 provider timeout amendment; frozen PRD unchanged.
+Required tests: AC-AI-01; Scenario 18; timeout/retry; mocked provider tests PASS; live provider timing NOT_RUN
 Owner: PHRON-00 Lead
 
 ## D20

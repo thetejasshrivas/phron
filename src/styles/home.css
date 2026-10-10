@@ -228,3 +228,20 @@
 .undo-toast .text-action{color:var(--accent);padding:8px;min-height:44px}.undo-toast small{font-size:11px}
 @keyframes undo-arrive{from{opacity:.7}to{opacity:1}}
 @media(max-width:767px){.ledger-form fieldset{grid-template-columns:minmax(0,1fr)}.card-reserve{font-size:17px}.card-ledger .section-heading{align-items:start}.purchase-record summary{align-items:start}.undo-toast{bottom:16px;gap:10px}.card-ledger .section-heading h2{font-size:27px}}
+
+/* PH-19: natural-language capture remains subordinate to confirmed money controls. */
+.natural-capture{grid-column:1/-1;display:grid!important;gap:10px;padding:16px 0 4px;border-top:1px solid var(--line);min-width:0}
+.natural-capture label{font-size:12px;color:var(--muted)}
+.natural-capture textarea{width:100%;resize:vertical;min-height:68px;background:var(--canvas);border:1px solid #72866d;border-radius:7px;padding:12px;color:var(--ink);font:inherit;line-height:1.5}
+.natural-capture-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:11px;color:var(--muted)}
+.natural-capture [role=status]{min-height:1.5em;line-height:1.5;margin:0!important}
+.ai-disclosure,.clarification-list,.swap-offer,.manual-entry-dialog{padding:14px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 7px 7px 0;display:grid;gap:10px}
+.ai-disclosure h3,.manual-entry-dialog h2{font-size:15px;margin:0}
+.ai-disclosure p,.manual-entry-dialog p{max-width:72ch;line-height:1.55;margin:0!important}
+.ai-disclosure>div,.swap-offer{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.swap-offer{border-left-color:#bd8142;font-size:12px}
+.swap-offer small{width:100%;color:var(--muted)}
+.natural-capture button:disabled{opacity:.55;cursor:wait}
+.natural-capture :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+@media(max-width:767px){.natural-capture{padding-top:14px}.natural-capture-actions{align-items:stretch}.natural-capture-actions .capture-button{min-height:46px}.ai-disclosure>div{align-items:stretch;flex-direction:column}.ai-disclosure button{min-height:44px}.swap-offer{align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){.natural-capture *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}

@@ -1,0 +1,19 @@
+{
+  "scenario": "18",
+  "result": "PASS",
+  "environment": "local isolated Supabase; synthetic ordinary user; Gemini/Groq keys removed from test process",
+  "route": {
+    "status": 200,
+    "body": {
+      "kind": "manual_fallback",
+      "reason": "provider_unavailable",
+      "openManualEntry": true
+    }
+  },
+  "home": "manual-entry dialog shown with nothing-saved copy",
+  "snapshotUnchanged": true,
+  "manualSave": "ordinary-user cash spend accepted once; cash/spent deltas verified; refreshed snapshot identical",
+  "browserErrors": 0,
+  "command": "node tests/integration/ph19/browser-fallback.mjs",
+  "exitCode": 0
+}
