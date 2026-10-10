@@ -5,25 +5,26 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: 7f61660ef0854bd28c559f024c5cd31762b1db62
-dirty_files: ["New Text Document.txt (untouched user work; excluded from PH-18 commit)"]
+commit: 8dd24a9
+working_tree_state: PH-19 implementation committed; unrelated untracked files preserved
+dirty_files: ["New Text Document.txt (untouched user work)", "tests/unit/contracts/obligation.test.ts (excluded from PH-19 commit)"]
 active_chat: PHRON-00 Lead
 phase: 4
 current_step: PH-19
-step_state: READY
+step_state: IN_PROGRESS
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
-approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D10-v1, D11-v1, D16-v1, D17-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1, D14-v1, D15-v1, D26-v1, G3-DF-01-v1]
+approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D08-v1, D09-v1, D10-v1, D11-v1, D16-v1, D17-v1, D18-v1, D19-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1, D14-v1, D15-v1, D26-v1, G3-DF-01-v1]
 completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17, PH-18]
 passed_gates: [G0A, G1, V1, G2, V2, G3]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: PENDING}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb"}
-blocking_decisions: [D07-card, D07-funding, D08, D09, D18, D19, D20, D23, D24, D25]
-latest_evidence: docs/evidence/G3/CLOSURE/runs.json
+blocking_decisions: [D07-card, D07-funding, D18-custom-bucket-mapping, D20, D23, D24, D25]
+latest_evidence: docs/evidence/PH19/RESULT.md
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
-migration_state: PH11_PH12_REMOTE_APPLIED; PH15_PH16_PH17_PH18_LOCAL_ONLY_VERIFIED_NOT_REMOTE
+migration_state: PH11_PH12_REMOTE_APPLIED; PH15_PH16_PH17_PH18_LOCAL_ONLY_VERIFIED_NOT_REMOTE; PH19_LOCAL_ONLY_VERIFIED_NOT_REMOTE
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Begin PH-19 / P04-AI; keep card-funded goal and insufficient-funding rules OPEN as scoped under D07b
+next_action: Resolve D18 custom-category mapping and complete or explicitly disposition live provider/account verification before PH-19 closure; no remote migration
 last_updated_ist: 2026-10-10
 ```
 
@@ -368,3 +369,31 @@ G0A/G1/V1 retained; G0B affected rules remain OPEN, G2 onward unpassed. All sour
 Lead recommendation: safeWeekly exists in typed SpendingPace but not the strict FinancialSnapshot schema; coordinate a versioned contract change before API/UI use, not an ad hoc field or UI formula. Next recipient PHRON-02 Platform, PH-11/P02-DATA prepared only: resume, inspect Engine outputs, and identify D11/schema approvals before dependent persistence. Prior Git commit approval review was unavailable due to usage limit and did not execute; renewed authorized attempt succeeded. Initial staged whitespace check found formatting in captured logs; trailing whitespace only was normalized before commit. Record-only status/handoff commit follows; inspect actual Git tip on resume.
 
 Final verification 2026-10-09: all 20 commands in docs/evidence/G3/CLOSURE/runs.json completed with exit 0. Sources (all five hashes), typecheck, lint and Next.js build PASS. No remote migration or deployment. G3 remains BLOCKED for the explicitly documented unmet requirements; no completion commit or PH19 advancement.
+
+## PH-19 current implementation record — 2026-10-10 IST
+
+PH-19 / P04-AI is IN_PROGRESS. D08-v1, D09-v1, D18-v1 (amount only), and D19-v1 are APPROVED. Implemented capture sanitizer, exact paise extraction schema, mocked Gemini/Groq adapter and timeout/fallback, deterministic method/confidence routing, user-scoped merchant-memory interception, ordinary-user endpoints, local candidate migration, corpus and Home interactions. Source manifest and frozen PRD remain unchanged.
+
+PASS: source hashes, lint, strict typecheck, 381 unit + 98 integration tests, domain coverage tool (198 tests, all ten implemented math modules at 100%), Next production build and whitespace check. PASS: contract coverage threshold, 100% statements/lines/branches/functions. An initial combined run hit transient Windows EPERM in Next prerender; subsequent standalone build and complete `npm run check` both passed. SQL migration/local RLS and rollback tests, live Gemini/Groq tests/account limits, and browser smoke are NOT RUN. Local DB runtime unavailable; provider keys absent. PH-19 completion and any new gate are not claimed. Details and commands: docs/evidence/PH19/RESULT.md.
+
+Open: D18 custom-category mapping; D07b goal card funding/insufficient funding; other previously open D20/D23/D24/D25. Next one action is to establish an isolated local Postgres/Supabase runtime and verify this candidate migration locally under ordinary user credentials. No remote migration is authorized by this implementation task.
+
+## PH-19 local database verification retest — 2026-10-10 IST
+
+The PH-11 local Supabase harness was found and reused. The local CLI binary exists in its temporary cache, but no PostgreSQL/Supabase listener is active and Docker cannot reach the desktop-linux engine. `docker desktop start` exits 1 because the Docker Desktop install registry key is absent. Added PH-19 local apply and ordinary-user integration runners with local-container guards. Both syntax checks pass; `node tests/integration/ph19/apply-local.mjs` exits 1 and `node tests/integration/ph19/ingestion.mjs` exits 1 at the local runtime guard before any SQL/Auth/user changes. Candidate migration SHA-256 `CDCC78B1D2EEDF546E33DCB04C87828FEB3B0761C69AAE94491AD562403ED0E7`. **Local PH-19 database parity is NOT VERIFIED / NOT SATISFIED.** No remote database was contacted. See docs/evidence/PH19/RESULT.md.
+
+### PH-19 Scenario 18 browser and final verification — 2026-10-10 IST
+
+This record supersedes earlier PH-19 runtime/browser NOT RUN statements above. The pinned local database migration and ordinary-user integration are now verified locally (migration apply exit 0; ingestion 4/4). `node tests/integration/ph19/browser-fallback.mjs` exit 0: with Gemini/Groq keys removed, the real ingestion endpoint returned manual fallback; Home displayed its no-save dialog; the canonical snapshot remained unchanged until the user entered a manual cash spend. That spend changed ledger cash and discretionary spend by exactly 5,000 paise, and refresh returned the same snapshot. Zero browser errors. Evidence: `docs/evidence/PH19/scenario18-browser.json` and `scenario18-manual-fallback.png`.
+
+Fresh gates: `npm run check` exit 0 (381 unit + 98 contract/integration tests, source hashes, lint, typecheck, 100% configured contract coverage and production build); `npm run test:domain:coverage` exit 0 (198 tests, 100% statements/branches/functions/lines across ten collected implemented modules); focused provider/corpus tests 7/7; PH-19 SQL integration 4/4. Counts overlap. Migration SHA-256 `AB25418AE02D857C2A54F6DFD0D1B58FDBE500D6D162FC3892F4A43A930DF39A`; local-only, not remote.
+
+**PH-19 remains IN_PROGRESS.** D18's custom category-to-bucket mapping remains OPEN; only amount representation was approved. Live synthetic provider failover timing and actual provider account quota/privacy settings are NOT RUN/UNVERIFIED. Next action: resolve D18 mapping scope and complete or explicitly disposition live provider/account verification before PH-19 closure and PH-20. No remote migration, account change or deployment occurred.
+
+Latest retry: Docker `ps` and `ps -a` both exit 1: `failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.` `node tests/integration/ph19/apply-local.mjs` and `node tests/integration/ph19/ingestion.mjs` both exit 1 at the local guard with the same diagnostic. No containers could be inspected or started; no SQL was applied. PH-19 remains IN_PROGRESS and local database parity NOT VERIFIED. See docs/evidence/PH19/RESULT.md for exact command evidence.
+
+Direct endpoint inspection found no DB URL/host/port in `.env.local` or process environment. Its non-loopback Supabase browser URL was not used. Configured local Supabase ports 55322 (Postgres) and 55321 (API/Auth), plus 5432, 54322 and 55320, all refuse loopback connections. Phase 3 runners require the verified Docker container and expose no direct-host fallback. Latest PH-19 apply and ingestion attempts exit 1 before SQL/Auth setup. Required Windows action: install/repair and launch Docker Desktop, then wait for its Linux engine to show Running. PH-19 stays IN_PROGRESS; parity NOT VERIFIED.
+
+### PH-19 local runtime resumed — 2026-10-10 IST
+
+Docker Desktop was started by Tejas. With approved access to the exact `desktop-linux` context, `docker ps` exited 0 and showed `supabase_db_phron-ph11-local`. Local apply first exposed a missing temporary `phron_writer` schema-create grant and rolled back (exit 1); after matching the scoped grant/revoke pattern in prior migrations, `node tests/integration/ph19/apply-local.mjs` exited 0. Integration exposed ambiguous replay column/variable names; corrected function definitions were installed from the candidate in the same verified local DB. Final `node tests/integration/ph19/ingestion.mjs`: **4 passed, 0 failed**, covering forced RLS and grants, identical stable-ID replay with one ledger/transaction mutation, ordinary-user cross-tenant denial, and full forced rollback plus same-ID retry. Syntax checks, `npm run verify:sources`, and `git diff --check` passed. Final migration SHA-256: `AB25418AE02D857C2A54F6DFD0D1B58FDBE500D6D162FC3892F4A43A930DF39A`. Local PH-19 schema/RLS and requested integration parity PASS. Overall PH-19 remains IN_PROGRESS for remaining provider/account, browser and acceptance checks; no remote database was contacted. Details: docs/evidence/PH19/RESULT.md.
