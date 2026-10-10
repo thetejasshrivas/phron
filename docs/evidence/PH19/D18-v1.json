@@ -1,0 +1,32 @@
+{
+  "decision": "D18-v1",
+  "result": "PASS",
+  "date": "2026-10-10",
+  "source": {
+    "prd": "1.2.1-FROZEN",
+    "sha256": "d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994"
+  },
+  "migration": {
+    "path": "supabase/migrations/20261010120000_ph19_d18_category_memory.sql",
+    "sha256": "9353a64b11143866405cafed132cc8a8b478f3fe5f16960a3bd043c597dda7cc",
+    "environment": "pinned isolated local Supabase container only; no remote database contacted"
+  },
+  "checks": [
+    { "command": "npm run check", "exitCode": 0, "result": "PASS: 382 unit tests, 104 integration/contract tests, source hashes, lint, typecheck, 100% configured contract coverage, Next production build" },
+    { "command": "npm run test:domain:coverage", "exitCode": 0, "result": "PASS: 198 tests; 100% statement, branch, function and line coverage across ten collected implemented domain modules" },
+    { "command": "node tests/integration/ph19/apply-d18-local.mjs", "exitCode": 0, "result": "PASS: D18 migration applied/reapplied to pinned local database" },
+    { "command": "node tests/integration/ph19/ingestion.mjs", "exitCode": 0, "result": "PASS: 5/5 local ordinary-user cases, including custom category selection, merchant memory, stable replay, tenant denial and rollback" },
+    { "command": "node_modules/.bin/jest --config jest.config.mjs --selectProjects integration --runInBand --runTestsByPath tests/integration/ph19/ingest-route.test.ts tests/integration/ph19/confirm-category.test.ts", "exitCode": 0, "result": "PASS: 11/11 D18 ingestion and category-confirmation boundary tests" },
+    { "command": "node tests/integration/ph19/browser-fallback.mjs", "exitCode": 0, "result": "PASS: Scenario 18 manual fallback plus category clarification, custom-bucket selection, ordinary-user save and refresh; no browser errors" },
+    { "command": "git diff --check", "exitCode": 0, "result": "PASS" }
+  ],
+  "coverage": {
+    "merchantMemoryCustomBucketHighConfidence": "PASS: tests/integration/ph19/ingest-route.test.ts and local user flow",
+    "literalActiveCustomBucketHighConfidence": "PASS: tests/integration/ph19/ingest-route.test.ts",
+    "ambiguousLowConfidenceCategorySelection": "PASS: tests/integration/ph19/ingest-route.test.ts and browser flow",
+    "customCategoryConfirmedAndRemembered": "PASS: ordinary-user local database and browser flow",
+    "crossTenantCustomBucketAndMemoryDenial": "PASS: ordinary-user local database test"
+  },
+  "providerAccountSmoke": "NOT RUN; D18-v1 explicitly separates live keys, quotas, and retention checks into manual smoke verification and does not block deterministic PH-19 completion.",
+  "remoteMigration": "NOT AUTHORIZED OR ATTEMPTED"
+}

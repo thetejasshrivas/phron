@@ -6,6 +6,7 @@ import { resolve } from 'node:path';
 import { createServerClient } from '@supabase/ssr';
 import { chromium, expect } from '@playwright/test';
 import { localAuth, initial, rpc } from '../ph11/auth-local.mjs';
+import { literal, sql } from '../ph11/local.mjs';
 
 const origin = 'http://127.0.0.1:3106';
 const cli = process.env.PHRON_TEST_CLI ?? 'C:/Users/thete/AppData/Local/Temp/phron-supabase-cli-2.119.0/supabase.exe';
@@ -41,6 +42,9 @@ try {
   const user = await auth.user();
   const profile = await rpc(user.client, 'phron_onboard', initial);
   assert.equal(profile.ok, true);
+  const seeded = await requestState(user.client);
+  const customBucketId = await sql(`insert into public.buckets(user_id,name,tier,monthly_allocation_paise,hard_floor_paise,priority_rank,is_custom) values (${literal(user.id)},'Pet Care','DISCRETIONARY',10000,0,5,true) returning id`);
+  await sql(`insert into public.cycle_buckets(user_id,cycle_id,bucket_id,allocation_paise,floor_paise,spent_paise) values (${literal(user.id)},${literal(seeded.snapshot.cycleId)},${literal(customBucketId)},10000,0,0)`);
   const jar = new Map();
   const sdk = createServerClient(config.API_URL, config.ANON_KEY, {
     cookies: {
@@ -68,7 +72,7 @@ try {
   let fallbackResponse;
   page.on('response', async response => {
     if (new URL(response.url()).pathname === '/api/finance/ingest') {
-      try { fallbackResponse = { status: response.status(), body: await response.json() }; } catch { /* retain only valid JSON evidence */ }
+      try { const body = await response.json(); if (!fallbackResponse && body.kind === 'manual_fallback') fallbackResponse = { status: response.status(), body }; } catch { /* retain only valid JSON evidence */ }
     }
   });
 
@@ -97,23 +101,45 @@ try {
   const after = (await request('/api/finance/state')).data.snapshot;
   assert.equal(BigInt(after.money.cash), BigInt(before.money.cash) - 5000n);
   assert.equal(BigInt(after.money.spent), BigInt(before.money.spent) + 5000n);
+  await page.route('**/api/finance/ingest', route => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ kind: 'routed', provider: 'mock', openManualEntry: false, outcomes: [{ kind: 'clarification', confidence: 'LOW', operationId: '11111111-1111-4111-8111-111111111111', transactionDate: after.asOfDate, paymentMethod: 'cash', transaction: { amountPaise: '250', merchantOrPayee: 'Unlisted Vendor', candidateCategory: 'Unknown', isEstimated: false, relativeDateOffsetDays: 0 } }] }) }));
+  const capture = page.getByLabel('Quick capture · up to 280 characters');
+  await capture.fill('Unlisted Vendor 2.50 cash');
+  await page.getByRole('button', { name: 'Capture spend' }).click();
+  const clarification = page.getByLabel('Needs a category');
+  await expect(clarification.getByText('Unlisted Vendor', { exact: false })).toBeVisible();
+  await clarification.getByLabel('Choose a bucket').selectOption(customBucketId);
+  const categorySave = page.waitForResponse(response => new URL(response.url()).pathname === '/api/finance/ingest/confirm-category' && response.request().method() === 'POST');
+  await clarification.getByRole('button', { name: 'Save category and spend' }).click();
+  assert.equal((await categorySave).status(), 200);
+  await expect(page.getByText('Category saved. This merchant will use it next time.')).toBeVisible();
+  const afterCategory = (await request('/api/finance/state')).data.snapshot;
+  assert.equal(BigInt(afterCategory.money.spent), BigInt(after.money.spent) + 250n);
+  const remembered = await user.client.from('merchant_memory').select('bucket_id').eq('merchant_key', 'Unlisted Vendor');
+  assert.equal(remembered.error, null); assert.deepEqual(remembered.data, [{ bucket_id: customBucketId }]);
+  await page.unroute('**/api/finance/ingest');
   await page.reload();
   await expect(page.locator('form.manual-spend').getByLabel('Merchant or payee')).toBeVisible();
-  assert.deepEqual((await request('/api/finance/state')).data.snapshot, after);
+  assert.deepEqual((await request('/api/finance/state')).data.snapshot, afterCategory);
   assert.deepEqual(errors, []);
   const evidenceDir = resolve('docs/evidence/PH19');
   mkdirSync(evidenceDir, { recursive: true });
   await page.screenshot({ path: resolve(evidenceDir, 'scenario18-manual-fallback.png'), fullPage: true });
   writeFileSync(resolve(evidenceDir, 'scenario18-browser.json'), JSON.stringify({
     scenario: '18', result: 'PASS', environment: 'local isolated Supabase; synthetic ordinary user; Gemini/Groq keys removed from test process',
-    route: fallbackResponse, home: 'manual-entry dialog shown with nothing-saved copy', snapshotUnchanged: true,
+    route: fallbackResponse, home: 'manual-entry dialog shown with nothing-saved copy; ambiguous extraction displayed Needs a Category and user selected custom bucket', snapshotUnchanged: true,
     manualSave: 'ordinary-user cash spend accepted once; cash/spent deltas verified; refreshed snapshot identical',
+    categoryConfirmation: 'ordinary-user category confirmation saved custom-bucket spend and merchant memory once; refresh retained canonical snapshot',
     browserErrors: errors.length, command: 'node tests/integration/ph19/browser-fallback.mjs', exitCode: 0,
   }, null, 2) + '\n');
-  console.log('PASS PH-19 Scenario 18 browser: unconfigured providers return manual fallback; Home opens manual entry; manual save persists exactly once through refresh; no browser errors');
+  console.log('PASS PH-19 Scenario 18 and D18 browser: unconfigured providers return manual fallback; Home supports user category selection and custom merchant memory; save persists through refresh; no browser errors');
 } finally {
   if (context) await context.close();
   if (browser) await browser.close();
   if (server) { const ended = once(server, 'exit'); server.kill(); await ended; }
   await auth.cleanup();
+}
+
+async function requestState(client) {
+  const { data, error } = await client.rpc('phron_current_state');
+  assert.equal(error, null); assert.equal(data.ok, true); return data.data;
 }

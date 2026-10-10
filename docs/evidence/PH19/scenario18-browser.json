@@ -10,9 +10,10 @@
       "openManualEntry": true
     }
   },
-  "home": "manual-entry dialog shown with nothing-saved copy",
+  "home": "manual-entry dialog shown with nothing-saved copy; ambiguous extraction displayed Needs a Category and user selected custom bucket",
   "snapshotUnchanged": true,
   "manualSave": "ordinary-user cash spend accepted once; cash/spent deltas verified; refreshed snapshot identical",
+  "categoryConfirmation": "ordinary-user category confirmation saved custom-bucket spend and merchant memory once; refresh retained canonical snapshot",
   "browserErrors": 0,
   "command": "node tests/integration/ph19/browser-fallback.mjs",
   "exitCode": 0

@@ -19,6 +19,28 @@ const singleCategoryMerchants: Record<string, ExtractionCategory> = {
 };
 const multiCategoryMerchants = new Set(['blinkit', 'amazon', 'zepto', 'instamart']);
 
+function normalizedPhrase(value: string) {
+  return value.normalize('NFKC').toLocaleLowerCase('en-IN').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+}
+
+/** Match only a whole literal phrase from the caller's active custom buckets. */
+export function matchNamedCustomBucket<T extends { readonly id: string; readonly name: string; readonly isCustom: boolean; readonly aliases?: readonly string[] }>(
+  text: string,
+  buckets: readonly T[],
+): T | null {
+  const normalizedText = ` ${normalizedPhrase(text)} `;
+  const matches = buckets.filter((bucket) => {
+    if (!bucket.isCustom) return false;
+    return [bucket.name, ...(bucket.aliases ?? [])].some((candidate) => {
+      const phrase = normalizedPhrase(candidate);
+      if (!phrase) return false;
+      return normalizedText.includes(` ${phrase} `);
+    });
+  });
+  const unique = new Map(matches.map((bucket) => [bucket.id, bucket]));
+  return unique.size === 1 ? [...unique.values()][0]! : null;
+}
+
 export function parseRupeesToPaise(value: unknown): string {
   if (typeof value !== 'string' || value.length > 24) throw new TypeError('VALIDATION');
   const match = /^(0|[1-9][0-9]*)(?:\.([0-9]{1,2}))?$/.exec(value);

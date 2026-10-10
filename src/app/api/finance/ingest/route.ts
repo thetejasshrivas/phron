@@ -4,7 +4,7 @@ import { parseCardRecords } from '@/contracts/card';
 import { errorHttpStatus, errorResult, type ErrorCode } from '@/contracts/snapshot';
 import { requestClient } from '@/lib/supabase/request';
 import { sameOriginMutation, trustedOrigin } from '@/server/auth/policy';
-import { classifyExtraction, explicitPaymentMethod, parseRupeesToPaise, type ExtractionCategory, type ExtractedTransaction } from '@/server/finance/extraction';
+import { classifyExtraction, explicitPaymentMethod, matchNamedCustomBucket, parseRupeesToPaise, type ExtractionCategory, type ExtractedTransaction } from '@/server/finance/extraction';
 import { sanitizeCaptureText } from '@/server/finance/ingestion-input';
 import { extractWithFallback } from '@/server/finance/providers';
 import { parseFinanceResult } from '@/server/finance/parse';
@@ -97,12 +97,26 @@ export async function POST(request: NextRequest) {
     const memory = await context.client.from('merchant_memory').select('merchant_key,bucket_id');
     if (memory.error || !Array.isArray(memory.data)) return context.finish(reply({ kind: 'manual_fallback', reason: 'merchant_memory_unavailable', openManualEntry: true }));
     const match = localMemoryMatch(input.text, memory.data as { merchant_key: string; bucket_id: string }[]);
-    let transactions: readonly ExtractedTransaction[]; let provider = 'local_memory';
+    let customBucket: { id: string; name: string } | null = null;
+    if (!match) {
+      const customRows = await context.client.rpc('phron_active_custom_buckets');
+      if (customRows.error || !Array.isArray(customRows.data)) return context.finish(reply({ kind: 'manual_fallback', reason: 'custom_bucket_unavailable', openManualEntry: true }));
+      const activeIds = new Set(current.buckets.map((bucket) => bucket.id));
+      customBucket = matchNamedCustomBucket(input.text, (customRows.data as { id: string; name: string }[])
+        .filter((bucket) => activeIds.has(bucket.id))
+        .map((bucket) => ({ id: bucket.id, name: bucket.name, isCustom: true })));
+    }
+    let transactions: readonly ExtractedTransaction[]; let provider = match ? 'local_memory' : 'gemini';
     if (match) {
       if (!match.amount) return context.finish(reply({ kind: 'manual_fallback', reason: 'amount_unavailable', openManualEntry: true }));
       const bucket = current.buckets.find((item) => item.id === match.bucket_id);
       if (!bucket) return context.finish(reply({ kind: 'manual_fallback', reason: 'merchant_memory_unavailable', openManualEntry: true }));
       transactions = [{ amountPaise: match.amount, merchantOrPayee: match.merchant_key, candidateCategory: categoryForBucket(bucket.name), isEstimated: false, relativeDateOffsetDays: 0 }];
+    } else if (customBucket) {
+      const amount = localAmount(input.text);
+      if (!amount) return context.finish(reply({ kind: 'manual_fallback', reason: 'amount_unavailable', openManualEntry: true }));
+      provider = 'custom_bucket';
+      transactions = [{ amountPaise: amount, merchantOrPayee: customBucket.name, candidateCategory: 'Unknown', isEstimated: false, relativeDateOffsetDays: 0 }];
     } else {
       if (!input.disclosureAccepted) return context.finish(reply({ kind: 'disclosure_required', version: 'D08-v1', disclosure: DISCLOSURE }));
       const parsed = await extractWithFallback(input.text, {
@@ -118,14 +132,17 @@ export async function POST(request: NextRequest) {
     let latestState = current;
     for (let index = 0; index < transactions.length; index += 1) {
       const item = transactions[index]!;
-      const route = classifyExtraction({ merchantOrPayee: item.merchantOrPayee, candidateCategory: item.candidateCategory, isEstimated: item.isEstimated, localMemoryHit: !!match, sourceText: input.text });
-      const bucketId = match?.bucket_id ?? bucketFor(item.candidateCategory, latestState.buckets);
+      const selectedBucketId = match?.bucket_id ?? customBucket?.id;
+      const route = selectedBucketId
+        ? { confidence: 'HIGH' as const, action: 'DIRECT_COMMIT' as const }
+        : classifyExtraction({ merchantOrPayee: item.merchantOrPayee, candidateCategory: item.candidateCategory, isEstimated: item.isEstimated, localMemoryHit: false, sourceText: input.text });
+      const bucketId = selectedBucketId ?? bucketFor(item.candidateCategory, latestState.buckets);
       const date = dayOffset(latestState.snapshot.asOfDate, item.relativeDateOffsetDays);
-      if (route.action === 'CLARIFY') { outcomes.push({ kind: 'clarification', confidence: route.confidence, transaction: item }); continue; }
+      const opId = operationId(input.operationId, index);
+      if (route.action === 'CLARIFY') { outcomes.push({ kind: 'clarification', confidence: 'LOW', operationId: opId, transactionDate: date, paymentMethod: method, transaction: item }); continue; }
       if (!bucketId) { outcomes.push({ kind: 'manual_fallback', reason: 'category_unavailable', openManualEntry: true, transaction: item }); continue; }
       if (!method) { outcomes.push({ kind: 'method_confirmation', transaction: item, confidence: route.confidence }); continue; }
       if (date < latestState.cycleStart || date > latestState.snapshot.asOfDate) { outcomes.push({ kind: 'manual_fallback', reason: 'date_outside_active_cycle', openManualEntry: true, transaction: item }); continue; }
-      const opId = operationId(input.operationId, index);
       const payload = { action: method === 'card' ? 'create' : 'spend', amount: item.amountPaise, bucketId, transactionDate: date,
         merchantOrPayee: item.merchantOrPayee, paymentMethod: method, legacyObligationId: null, rawText: input.text,
         confidenceTier: route.confidence, isEstimated: item.isEstimated };

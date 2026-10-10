@@ -9,6 +9,7 @@ import { extractWithFallback } from '@/server/finance/providers';
 const mockGetUser = jest.fn<(...args: unknown[]) => Promise<unknown>>();
 const mockRpc = jest.fn<(...args: unknown[]) => Promise<unknown>>();
 const mockSelect = jest.fn<(...args: unknown[]) => Promise<unknown>>();
+const mockCustomBuckets = jest.fn<(...args: unknown[]) => Promise<unknown>>();
 const factory = jest.mocked(requestClient);
 const mockExtract = jest.mocked(extractWithFallback);
 
@@ -42,12 +43,15 @@ describe('PH-19 ingestion route boundary', () => {
       const name = args[0] as string;
       if (name === 'phron_current_state') return { data: financeResult('1'), error: null };
       if (name === 'phron_card_records') return { data: cardRecords(), error: null };
+      if (name === 'phron_active_custom_buckets') return mockCustomBuckets();
       if (name === 'phron_ingest_spend') return { data: financeResult('2', transactionId), error: null };
       return { data: null, error: null };
     });
     mockSelect.mockReset().mockResolvedValue({ data: [{ merchant_key: 'Zomato', bucket_id: bucketId }], error: null });
+    mockCustomBuckets.mockReset().mockResolvedValue({ data: [], error: null });
     mockExtract.mockReset().mockResolvedValue({ kind: 'extracted', provider: 'gemini', transactions: [{ amountPaise: '50000', merchantOrPayee: 'Amazon', candidateCategory: 'Shopping & Personal', isEstimated: false, relativeDateOffsetDays: 0 }] });
-    factory.mockReturnValue({ client: { auth: { getUser: mockGetUser }, rpc: mockRpc, from: () => ({ select: mockSelect }) }, finish: (response: NextResponse) => response } as unknown as ReturnType<typeof requestClient>);
+    factory.mockReturnValue({ client: { auth: { getUser: mockGetUser }, rpc: mockRpc, from: (table: string) => table === 'merchant_memory'
+      ? { select: mockSelect } : { select: () => ({ eq: () => mockCustomBuckets() }) } }, finish: (response: NextResponse) => response } as unknown as ReturnType<typeof requestClient>);
   });
 
   it('checks user-scoped exact merchant memory before providers, then saves via the fixed ordinary-user RPC', async () => {
@@ -73,12 +77,56 @@ describe('PH-19 ingestion route boundary', () => {
     expect(mockRpc.mock.calls.some(([name]) => name === 'phron_ingest_spend')).toBe(false);
   });
 
+  it('routes a user memory alias to its custom bucket at high confidence before provider access', async () => {
+    const customId = 'be47746d-11a6-47b8-be80-9476bee47008';
+    mockSelect.mockResolvedValueOnce({ data: [{ merchant_key: 'Vet Clinic', bucket_id: customId }], error: null });
+    mockRpc.mockImplementation(async (...args: unknown[]) => {
+      const name = args[0] as string;
+      if (name === 'phron_current_state') return { data: { ...financeResult('1'), data: { ...financeResult('1').data, buckets: [...financeResult('1').data.buckets, { id: customId, name: 'Pet Care', allocation: '10000', spent: '0' }] } }, error: null };
+      if (name === 'phron_card_records') return { data: cardRecords(), error: null };
+      if (name === 'phron_active_custom_buckets') return { data: [{ id: customId, name: 'Pet Care' }], error: null };
+      if (name === 'phron_ingest_spend') return { data: financeResult('2', transactionId), error: null };
+      return { data: null, error: null };
+    });
+    const response = await POST(request({ text: '₹500 Vet Clinic cash', operationId: 'a1b2c3d4-0000-4000-8000-000000000000', disclosureAccepted: false }));
+    expect(await response.json()).toMatchObject({ kind: 'routed', provider: 'local_memory', outcomes: [{ kind: 'committed', confidence: 'HIGH', bucketId: customId }] });
+    expect(mockExtract).not.toHaveBeenCalled();
+    expect(mockRpc.mock.calls.find(([name]) => name === 'phron_ingest_spend')?.[1]).toMatchObject({ p_input: { bucketId: customId, confidenceTier: 'HIGH' } });
+  });
+
+  it('maps a literal active custom bucket name before providers and commits with high confidence', async () => {
+    const customId = 'be47746d-11a6-47b8-be80-9476bee47008';
+    mockSelect.mockResolvedValueOnce({ data: [], error: null });
+    mockCustomBuckets.mockResolvedValueOnce({ data: [{ id: customId, name: 'Pet Care', is_custom: true }], error: null });
+    mockRpc.mockImplementation(async (...args: unknown[]) => {
+      const name = args[0] as string;
+      if (name === 'phron_current_state') return { data: { ...financeResult('1'), data: { ...financeResult('1').data, buckets: [...financeResult('1').data.buckets, { id: customId, name: 'Pet Care', allocation: '10000', spent: '0' }] } }, error: null };
+      if (name === 'phron_card_records') return { data: cardRecords(), error: null };
+      if (name === 'phron_active_custom_buckets') return { data: [{ id: customId, name: 'Pet Care' }], error: null };
+      if (name === 'phron_ingest_spend') return { data: financeResult('2', transactionId), error: null };
+      return { data: null, error: null };
+    });
+    const response = await POST(request({ text: '₹150 Pet Care cash', operationId: 'a1b2c3d4-0000-4000-8000-000000000000', disclosureAccepted: false }));
+    expect(await response.json()).toMatchObject({ kind: 'routed', provider: 'custom_bucket', outcomes: [{ kind: 'committed', confidence: 'HIGH', bucketId: customId }] });
+    expect(mockExtract).not.toHaveBeenCalled();
+    expect(mockRpc.mock.calls.find(([name]) => name === 'phron_ingest_spend')?.[1]).toMatchObject({ p_input: { amount: '15000', bucketId: customId, confidenceTier: 'HIGH' } });
+  });
+
+  it('returns an explicit low-confidence category-selection card for ambiguous spend', async () => {
+    mockSelect.mockResolvedValueOnce({ data: [], error: null });
+    mockExtract.mockResolvedValueOnce({ kind: 'extracted', provider: 'gemini', transactions: [{ amountPaise: '25000', merchantOrPayee: 'Pet Clinic', candidateCategory: 'Unknown', isEstimated: false, relativeDateOffsetDays: 0 }] });
+    const response = await POST(request({ text: 'Pet Clinic 250 cash', operationId: 'a1b2c3d4-0000-4000-8000-000000000000', disclosureAccepted: true }));
+    expect(await response.json()).toMatchObject({ kind: 'routed', outcomes: [{ kind: 'clarification', confidence: 'LOW', operationId: expect.any(String), paymentMethod: 'cash', transaction: { merchantOrPayee: 'Pet Clinic', amountPaise: '25000' } }] });
+    expect(mockRpc.mock.calls.some(([name]) => name === 'phron_ingest_spend')).toBe(false);
+  });
+
   it('routes a multi-category merchant at medium confidence and returns the database swap expiry', async () => {
     mockSelect.mockResolvedValueOnce({ data: [], error: null });
     mockRpc.mockImplementation(async (...args: unknown[]) => {
       const name = args[0] as string;
       if (name === 'phron_current_state') return { data: financeResult('1'), error: null };
       if (name === 'phron_card_records') return { data: cardRecords(), error: null };
+      if (name === 'phron_active_custom_buckets') return { data: [], error: null };
       if (name === 'phron_ingest_spend') return { data: { ...financeResult('2', transactionId), categorySwapExpiresAt: '2026-10-11T00:00:00.000Z' }, error: null };
       return { data: null, error: null };
     });

@@ -44,6 +44,8 @@ try {
   const before = await state();
   const bucketId = before.buckets[0].id;
   const foreignBucketId = (await state(b)).buckets[0].id;
+  const customBucketId = await sql(`insert into public.buckets(user_id,name,tier,monthly_allocation_paise,hard_floor_paise,priority_rank,is_custom) values (${literal(a.id)},'Pet Care','DISCRETIONARY',10000,0,5,true) returning id`);
+  await sql(`insert into public.cycle_buckets(user_id,cycle_id,bucket_id,allocation_paise,floor_paise,spent_paise) values (${literal(a.id)},${literal(before.snapshot.cycleId)},${literal(customBucketId)},10000,0,0)`);
   await sql(`insert into public.merchant_memory(user_id,merchant_key,bucket_id) values (${literal(a.id)},'PH19 local merchant',${literal(bucketId)});`);
 
   const cases = [
@@ -63,6 +65,12 @@ try {
       assert.ok((await b.client.from('merchant_memory').update({ bucket_id: foreignBucketId }).eq('user_id', a.id).eq('merchant_key', 'PH19 local merchant')).error);
       assert.ok((await a.client.from('merchant_memory').insert({ user_id: a.id, merchant_key: 'forged direct write', bucket_id: bucketId })).error);
       assert.ok((await a.client.from('operation_log').select('operation_id')).error);
+      const ownCustom = await a.client.rpc('phron_active_custom_buckets');
+      const foreignCustom = await b.client.rpc('phron_active_custom_buckets');
+      assert.equal(ownCustom.error, null); assert.deepEqual(ownCustom.data, [{ id: customBucketId, name: 'Pet Care' }]);
+      assert.equal(foreignCustom.error, null); assert.deepEqual(foreignCustom.data, []);
+      assert.equal(await sql("select has_function_privilege('authenticated','public.phron_active_custom_buckets()','EXECUTE')"), 't');
+      assert.equal(await sql("select has_function_privilege('anon','public.phron_active_custom_buckets()','EXECUTE')"), 'f');
     }],
     ['ordinary-user ingestion replay returns the same result and mutates once', async () => {
       const initialState = await state(); const op = randomUUID(); const input = regularInput(bucketId);
@@ -77,6 +85,21 @@ try {
       const owned = await a.client.from('transactions').select('id').eq('id', results[0].data.transactionId);
       assert.equal(owned.error, null); assert.equal(owned.data.length, 1);
     }],
+    ['ordinary-user category confirmation saves custom spend and merchant memory once across stable-ID replay', async () => {
+      const initialState = await state(); const op = randomUUID();
+      const input = { amount: '25000', merchantOrPayee: 'Pet Clinic', bucketId: customBucketId, paymentMethod: 'cash', transactionDate: today, rawText: 'Pet Clinic 250 cash', isEstimated: false };
+      const args = { p_operation_id: op, p_expected_revision: initialState.snapshot.revision, p_input: input };
+      const first = await a.client.rpc('phron_ingest_confirm_category', args);
+      assert.equal(first.error, null); assert.equal(first.data.ok, true);
+      assert.equal(first.data.data.buckets.find(item => item.id === customBucketId).spent, '25000');
+      const replay = await a.client.rpc('phron_ingest_confirm_category', args);
+      assert.equal(replay.error, null); assert.deepEqual(replay.data, first.data);
+      assert.equal(await countOperation(op), '1'); assert.equal(await countTransactions(op), '1');
+      const memory = await a.client.from('merchant_memory').select('bucket_id').eq('merchant_key', 'Pet Clinic');
+      assert.equal(memory.error, null); assert.deepEqual(memory.data, [{ bucket_id: customBucketId }]);
+      const deniedMemory = await b.client.from('merchant_memory').select('bucket_id').eq('merchant_key', 'Pet Clinic');
+      assert.equal(deniedMemory.error, null); assert.deepEqual(deniedMemory.data, []);
+    }],
     ['another ordinary user cannot read or mutate the first user ingestion transaction', async () => {
       const op = await sql(`select operation_id from public.operation_log where user_id=${literal(a.id)} and kind='ingest' order by created_at desc limit 1`);
       const tx = await sql(`select id from public.transactions where user_id=${literal(a.id)} and operation_id=${literal(op)} and not is_deleted`);
@@ -85,6 +108,9 @@ try {
       const bBefore = await state(b);
       const denied = await mutate(b, regularInput(bucketId), op, bBefore.snapshot.revision);
       assert.equal(denied.ok, false); assert.equal(denied.error.code, 'NOT_FOUND');
+      const forged = await b.client.rpc('phron_ingest_confirm_category', { p_operation_id: randomUUID(), p_expected_revision: bBefore.snapshot.revision,
+        p_input: { amount: '250', merchantOrPayee: 'Forged vendor', bucketId: customBucketId, paymentMethod: 'cash', transactionDate: today, rawText: 'Forged vendor 2.50 cash', isEstimated: false } });
+      assert.equal(forged.error, null); assert.equal(forged.data.ok, false); assert.equal(forged.data.error.code, 'NOT_FOUND');
       assert.deepEqual(await state(b), bBefore);
       assert.equal(await countTransactions(op), '1');
     }],

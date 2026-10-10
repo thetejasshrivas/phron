@@ -377,15 +377,15 @@ Owner: PHRON-00 Lead
 ## D18
 
 Decision ID: D18
-Status: APPROVED — D18-v1, 2026-10-10 IST (amount representation only)
+Status: APPROVED — D18-v1, 2026-10-10 IST (amount representation, category routing, and provider-verification disposition)
 Source clauses: 24 extraction schema
 Issue: Amount units and custom categories conflict
 Counterexample: ₹0.50 or Pet Care rejected by minimum/category enum
 Affected steps and gates: PH-06/19/21; dependent gate remains blocked
-Exact approved wording: [D18-v1](amendments/D18-v1.md). Tejas approved decimal-rupee strings converted exactly to paise, rejecting exponents and amounts with more than two decimals. This resolves amount representation only; category-to-custom-bucket mapping remains open.
+Exact approved wording: [D18-v1](amendments/D18-v1.md). Tejas additionally approved exact user-scoped memory routing to standard/custom buckets at High confidence; standard enum fallback for unremembered inputs; deterministic matching of active custom bucket names/aliases; Low-confidence “Needs a Category” selection with future merchant-memory save; and separating live provider key/quota/retention checks from deterministic CI. This closes the D18 custom-category mapping disposition for PH-19. Provider account checks remain a separate manual verification and are not claimed complete.
 Founder approval and date IST: Tejas explicit selection, 2026-10-10 IST.
-Amendment version or implementation-only classification: D18-v1 amount-representation amendment; frozen PRD unchanged.
-Required tests: FIT-14; sub-rupee/custom cases; NOT_RUN
+Amendment version or implementation-only classification: D18-v1 scoped amendment; frozen PRD unchanged.
+Required tests: FIT-14; sub-rupee/custom cases; deterministic corpus and Scenario 18 PASS; D18 mapping fixtures and local ordinary-user persistence PASS.
 Owner: PHRON-00 Lead
 
 ## D19

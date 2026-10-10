@@ -18,7 +18,8 @@ export function HomeSurface({view,session}:{view:ReturnType<HomeSession['getSnap
  const [message,setMessage]=useState('');const formRef=useRef<HTMLFormElement>(null);const submittedFields=useRef('');
  const [naturalText,setNaturalText]=useState('');const [naturalPhase,setNaturalPhase]=useState<'idle'|'pending'|'retry'|'success'>('idle');
  const [naturalMessage,setNaturalMessage]=useState('');const [disclosure,setDisclosure]=useState('');const [disclosureAccepted,setDisclosureAccepted]=useState(false);
- const [clarifications,setClarifications]=useState<readonly string[]>([]);const [swapOffers,setSwapOffers]=useState<readonly {transactionId:string;bucketId:string;expiresAt:string}[]>([]);
+ type CategoryClarification={operationId:string;transaction:{amountPaise:string;merchantOrPayee:string;isEstimated:boolean};transactionDate:string;paymentMethod:string|null;sourceText:string;selectedBucketId:string;selectedMethod:string;error:string};
+ const [clarifications,setClarifications]=useState<readonly CategoryClarification[]>([]);const [categorySaving,setCategorySaving]=useState<string|null>(null);const [swapOffers,setSwapOffers]=useState<readonly {transactionId:string;bucketId:string;expiresAt:string}[]>([]);
  const [manualDialog,setManualDialog]=useState(false);const naturalIntent=useRef<{text:string;operationId:string}|null>(null);
  const naturalInputRef=useRef<HTMLTextAreaElement>(null);const manualAmountRef=useRef<HTMLInputElement>(null);
  const swapRetry=useRef<{operationId:string;transactionId:string;bucketId:string;expectedVersion:Revision}|null>(null);const [swapMessage,setSwapMessage]=useState('');
@@ -57,8 +58,13 @@ export function HomeSurface({view,session}:{view:ReturnType<HomeSession['getSnap
    if(result.kind==='routed'&&Array.isArray(result.outcomes)){
     const offers=result.outcomes.filter((item:unknown)=>!!item&&typeof item==='object'&&(item as {kind?:unknown}).kind==='committed'&&(item as {categorySwapAvailable?:unknown}).categorySwapAvailable===true&&(item as {transactionId?:unknown}).transactionId&&typeof (item as {bucketId?:unknown}).bucketId==='string'&&typeof (item as {categorySwapExpiresAt?:unknown}).categorySwapExpiresAt==='string').map((item:{transactionId:string;bucketId:string;categorySwapExpiresAt:string})=>({transactionId:item.transactionId,bucketId:item.bucketId,expiresAt:item.categorySwapExpiresAt}));
     const needsManual=result.openManualEntry===true||result.outcomes.some((item:unknown)=>!!item&&typeof item==='object'&&['manual_fallback','method_confirmation'].includes(String((item as {kind?:unknown}).kind)));
-    const needsClarification=result.outcomes.filter((item:unknown)=>!!item&&typeof item==='object'&&(item as {kind?:unknown}).kind==='clarification').map((item:{transaction?:{merchantOrPayee?:unknown}})=>typeof item.transaction?.merchantOrPayee==='string'?item.transaction.merchantOrPayee:'This entry');
-    setSwapOffers(offers);setClarifications(needsClarification);setNaturalPhase('success');
+    const sourceText=intent.text;
+    const needsClarification=result.outcomes.filter((item:unknown)=>!!item&&typeof item==='object'&&(item as {kind?:unknown}).kind==='clarification').flatMap((item:unknown)=>{
+     if(!item||typeof item!=='object')return[];const row=item as {operationId?:unknown;transactionDate?:unknown;paymentMethod?:unknown;transaction?:{amountPaise?:unknown;merchantOrPayee?:unknown;isEstimated?:unknown}};
+     if(typeof row.operationId!=='string'||typeof row.transactionDate!=='string'||typeof row.transaction?.amountPaise!=='string'||typeof row.transaction.merchantOrPayee!=='string'||typeof row.transaction.isEstimated!=='boolean')return[];
+     return[{operationId:row.operationId,transactionDate:row.transactionDate,paymentMethod:typeof row.paymentMethod==='string'?row.paymentMethod:null,transaction:{amountPaise:row.transaction.amountPaise,merchantOrPayee:row.transaction.merchantOrPayee,isEstimated:row.transaction.isEstimated},sourceText,selectedBucketId:'',selectedMethod:typeof row.paymentMethod==='string'?row.paymentMethod:'',error:''}];
+    });
+    setSwapOffers(offers);setClarifications(items=>[...items,...needsClarification]);setNaturalPhase('success');
     setNaturalMessage(needsManual?'Some details need your attention. No unconfirmed item was saved.':needsClarification.length?'Saved clear items; these entries still need a category.':'Your entry is saved. Buckets and daily perspective are updating.');
     naturalIntent.current=null;setNaturalText('');await session.refresh();
     if(needsManual){setManualDialog(true);window.setTimeout(()=>manualAmountRef.current?.focus(),0);}
@@ -80,6 +86,16 @@ export function HomeSurface({view,session}:{view:ReturnType<HomeSession['getSnap
    const result=await response.json();if(!response.ok||result.ok!==true)throw new Error('not confirmed');
    swapRetry.current=null;setSwapOffers(items=>items.filter(item=>item.transactionId!==transactionId));setSwapMessage('Category updated.');await session.refresh();
   }catch{setSwapMessage('Change not confirmed. Retry the same category choice.');}
+ }
+ async function confirmCategory(item:CategoryClarification) {
+  if(!data||categorySaving||!item.selectedBucketId||!item.selectedMethod)return;
+  setCategorySaving(item.operationId);setClarifications(items=>items.map(entry=>entry.operationId===item.operationId?{...entry,error:''}:entry));
+  try{
+   const response=await fetch('/api/finance/ingest/confirm-category',{method:'POST',headers:{'content-type':'application/json'},credentials:'same-origin',cache:'no-store',body:JSON.stringify({operationId:item.operationId,expectedVersion:data.snapshot.revision,input:{amount:item.transaction.amountPaise,merchantOrPayee:item.transaction.merchantOrPayee,bucketId:item.selectedBucketId,paymentMethod:item.selectedMethod,transactionDate:item.transactionDate,rawText:item.sourceText,isEstimated:item.transaction.isEstimated}})});
+   const result=await response.json();if(!response.ok||result.ok!==true)throw new Error('not confirmed');
+   setClarifications(items=>items.filter(entry=>entry.operationId!==item.operationId));setNaturalMessage('Category saved. This merchant will use it next time.');await session.refresh();
+  }catch{setClarifications(items=>items.map(entry=>entry.operationId===item.operationId?{...entry,error:'Not saved. Your choice is still here; retry to confirm it.'}:entry));}
+  finally{setCategorySaving(null);}
  }
  return <div className="phron-home">
   <a className="skip-home" href="#home-main" onClick={e=>navigate(e,'home-main')}>Skip to your day</a>
@@ -107,7 +123,7 @@ export function HomeSurface({view,session}:{view:ReturnType<HomeSession['getSnap
      <p id="natural-capture-feedback" role="status" aria-live="polite">{naturalMessage}</p>
      {naturalPhase==='retry'&&<button className="text-action" type="button" onClick={()=>void sendNatural(disclosureAccepted)}>Retry same entry ↗</button>}
      {disclosure&&<section className="ai-disclosure" aria-labelledby="ai-disclosure-title"><h3 id="ai-disclosure-title">Before using external AI</h3><p>{disclosure}</p><div><button className="capture-button" type="button" onClick={()=>{setDisclosureAccepted(true);void sendNatural(true);}}>Continue with this entry</button><button className="text-action" type="button" onClick={()=>{setDisclosure('');setNaturalMessage('Manual entry stays available below.');setManualDialog(true);manualAmountRef.current?.focus();}}>Use manual entry</button></div></section>}
-     {clarifications.length>0&&<div className="clarification-list" aria-label="Needs a category">{clarifications.map((item,index)=><p key={`${item}-${index}`}><strong>Needs a category:</strong> {item}. Choose a purpose in manual entry before saving.</p>)}</div>}
+     {clarifications.length>0&&<div className="clarification-list" aria-label="Needs a category">{clarifications.map(item=><div className="category-clarification" key={item.operationId}><p><strong>Needs a category:</strong> {item.transaction.merchantOrPayee} · {formatMoney(item.transaction.amountPaise as Parameters<typeof formatMoney>[0])}</p><label>Choose a bucket<select value={item.selectedBucketId} disabled={categorySaving===item.operationId} onChange={event=>setClarifications(items=>items.map(entry=>entry.operationId===item.operationId?{...entry,selectedBucketId:event.target.value}:entry))}><option value="">Select category</option>{data?.buckets.map(bucket=><option key={bucket.id} value={bucket.id}>{bucket.name}</option>)}</select></label>{!item.paymentMethod&&<label>Paid with<select value={item.selectedMethod} disabled={categorySaving===item.operationId} onChange={event=>setClarifications(items=>items.map(entry=>entry.operationId===item.operationId?{...entry,selectedMethod:event.target.value}:entry))}><option value="">Choose payment method</option><option value="cash">Cash</option><option value="upi">UPI</option><option value="debit">Debit card</option><option value="card">Tracked credit card</option></select></label>}<button className="capture-button" type="button" disabled={!item.selectedBucketId||!item.selectedMethod||categorySaving===item.operationId} onClick={()=>void confirmCategory(item)}>{categorySaving===item.operationId?'Saving…':'Save category and spend'}</button>{item.error&&<p role="alert">{item.error}</p>}</div>)}</div>}
      {swapOffers.map(offer=><div className="swap-offer" key={offer.transactionId}><span>Category not quite right?</span>{data?.buckets.filter(bucket=>bucket.id!==offer.bucketId).map(bucket=><button className="text-action" type="button" key={bucket.id} disabled={swapMessage==='Saving…'} onClick={()=>void swapCategory(offer.transactionId,bucket.id)}>Switch to {bucket.name}</button>)}<small>Available until {new Date(offer.expiresAt).toLocaleString()}</small></div>)}
      {swapMessage&&<p role="status">{swapMessage}</p>}
     </form>

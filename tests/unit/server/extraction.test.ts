@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { parseExtraction, classifyExtraction, explicitPaymentMethod, parseRupeesToPaise } from '@/server/finance/extraction';
+import { parseExtraction, classifyExtraction, explicitPaymentMethod, matchNamedCustomBucket, parseRupeesToPaise } from '@/server/finance/extraction';
 
 describe('PH-19 extraction validation and deterministic routing', () => {
   it.each([
@@ -28,6 +28,19 @@ describe('PH-19 extraction validation and deterministic routing', () => {
     expect(classifyExtraction({ merchantOrPayee: 'Rahul', candidateCategory: 'Unallocated / Lent', isEstimated: false, localMemoryHit: false, sourceText: 'Rahul 500' })).toEqual({ confidence: 'LOW', action: 'CLARIFY' });
     expect(classifyExtraction({ merchantOrPayee: '', candidateCategory: 'Unknown', isEstimated: false, localMemoryHit: false, sourceText: '500' })).toEqual({ confidence: 'LOW', action: 'CLARIFY' });
     expect(classifyExtraction({ merchantOrPayee: 'Cafe', candidateCategory: 'Dining Out & Social', isEstimated: false, localMemoryHit: true, sourceText: '450 Cafe' })).toEqual({ confidence: 'HIGH', action: 'DIRECT_COMMIT' });
+  });
+
+  it('maps literal active custom bucket names and aliases deterministically, avoiding partial or ambiguous matches', () => {
+    const buckets = [
+      { id: 'pet', name: 'Pet Care', isCustom: true, aliases: ['Vet Clinic'] },
+      { id: 'home', name: 'Home Supplies', isCustom: true },
+      { id: 'groceries', name: 'Groceries', isCustom: false },
+    ];
+    expect(matchNamedCustomBucket('₹500 Pet Care cash', buckets)).toMatchObject({ id: 'pet', name: 'Pet Care' });
+    expect(matchNamedCustomBucket('Vet Clinic ₹500 UPI', buckets)).toMatchObject({ id: 'pet' });
+    expect(matchNamedCustomBucket('Pet Careful ₹500 cash', buckets)).toBeNull();
+    expect(matchNamedCustomBucket('Pet Care and Home Supplies ₹500 cash', buckets)).toBeNull();
+    expect(matchNamedCustomBucket('Groceries ₹500 cash', buckets)).toBeNull();
   });
 
   it('detects only explicit payment methods and does not default missing method to cash', () => {

@@ -111,3 +111,23 @@ Scenario 18 browser proof: **PASS**, command `node tests/integration/ph19/browse
 Fresh repository verification: `npm run check` exit 0 — source hashes, lint, typecheck, 381 unit tests, 98 contract/integration tests, 100% configured contract coverage, and production build. `npm run test:domain:coverage` exit 0 — 198 tests, 100% statements, branches, functions and lines across the ten collected implemented domain modules. Focused provider/corpus tests: 7/7 pass. PH-19 local ordinary-user SQL suite rerun: 4/4 pass. These counts overlap and are not additive. The migration SHA-256 remains `AB25418AE02D857C2A54F6DFD0D1B58FDBE500D6D162FC3892F4A43A930DF39A`; it has been applied only to the pinned isolated local database, never remotely.
 
 **PH-19 remains IN_PROGRESS.** The exact product blocker is D18's unresolved category-to-custom-bucket mapping; only D18 amount representation is approved, so no custom mapping behavior may be inferred. Live synthetic Gemini/Groq failover timing and actual project quota/privacy settings also remain NOT RUN/UNVERIFIED because no provider credentials or account verification were available. To advance to PH-20, resolve the D18 mapping scope and complete or explicitly disposition the live provider/account verification required by the P04-AI acceptance record. No remote migration, account change, or deployment occurred.
+
+### D18-v1 approval and PH-19 completion — 2026-10-10 IST
+
+Tejas approved D18-v1 category semantics and provider-verification disposition. The exact five approved terms are in `docs/amendments/D18-v1.md` and status is recorded in `docs/DECISIONS.md`. Implemented per-user active-custom-bucket RPC, deterministic literal name/alias matching, exact user merchant-memory routing at HIGH, explicit LOW “Needs a Category” UI, and category confirmation that saves the selected spend and merchant memory atomically under the ordinary authenticated RPC. Unknown inputs remain uncommitted until the user chooses a bucket (and payment method if missing); the operation ID remains stable through retry. Frozen PRD and package lock are unchanged.
+
+Fresh checks, all exit 0:
+
+| Command | Result |
+|---|---|
+| `npm run check` | 382 unit + 104 contract/integration tests; source hashes, lint, typecheck, 100% configured contract coverage and Next production build PASS |
+| `npm run test:domain:coverage` | 198 tests; 100% statements, branches, functions and lines across ten collected implemented domain files |
+| `node tests/integration/ph19/apply-d18-local.mjs` | D18 candidate migration applied/reapplied on pinned `phron-ph11-local` only |
+| `node tests/integration/ph19/ingestion.mjs` | 5/5 ordinary-user DB cases PASS: custom-category spend+memory, stable replay, RLS scoping, cross-user denial and rollback |
+| Focused D18 Jest boundary suite | 11/11 PASS for extraction route and category-confirmation endpoint |
+| `node tests/integration/ph19/browser-fallback.mjs` | Scenario 18 provider-unavailable fallback plus D18 low-confidence category selection, custom bucket save, merchant-memory persistence and refresh PASS; no browser errors |
+| `git diff --check` | PASS |
+
+The frozen PRD SHA-256 remains `d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994`. D18 migration SHA-256: `9353a64b11143866405cafed132cc8a8b478f3fe5f16960a3bd043c597dda7cc`. Full machine-readable runs and scope: `docs/evidence/PH19/D18-v1.json`. Live provider keys, quotas and retention settings remain NOT RUN and are expressly a separate manual smoke check under D18-v1, so they do not block deterministic PH-19. No remote migration or provider call occurred.
+
+**PH-19: COMPLETE.** Next eligible guided action: PH-20 / P04-PRIVACY after operator start signal.
