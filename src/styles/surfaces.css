@@ -119,3 +119,10 @@
 .capture-toggle{justify-self:end;min-height:44px}
 #capture-content[hidden]{display:none!important}
 .commitment-badge{border-left:3px solid var(--ink);padding:12px;background:var(--surface);font-variant-numeric:tabular-nums}
+
+/* Native date segments retain the host ring when focus moves to the picker. */
+.phron-home input[type=date]:focus-within{outline:3px solid var(--ink);outline-offset:4px}
+@media(max-width:767px){
+ /* Keep the entire focused control and its ring above the wrapped mobile nav. */
+ .phron-home .home-main :is(a,button,input,select,textarea,summary,[tabindex]){scroll-margin-block:16px 140px}
+}
