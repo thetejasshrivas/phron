@@ -1,3 +1,12 @@
+# PH-24 security audit — EXECUTED / BLOCKED — 2026-10-10 IST
+
+PH23 remediation committed **6efdab11f4a6b76ed0bf006c9a6eb24a116a6e6c**;36 canonical +4 reduced pairs remain passed at that application revision. PH24 ran immediately under explicit user authorization.115 real local auth/RLS/HTTP/purge checks and91 RPC role checks PASS across23 populated public user-owned tables/24public financial RPCs; user A deletion clears all23 plusauth/sessions, denies retained access and preserves B. Private pilot/safety grants denied; secret scan0findings,1166tracked files/1259history blobs/18client files. Existing security16/FIT13 2/ingestion5/payment25/card46 PASS. Fresh425unit/138mocked contracts andlint/types/build/source hashes PASS; counts overlap.
+
+**FAIL:** privacy sentinels9PASS/3FAIL (underscore global labels reach provider adapter); HTTP5PASS/1FAIL (no application capture limiter). npm audit24entries:5high propagated braces/tooling entries,19moderate,0critical; no runtime web exploit proved, mitigation/disposition pending. [PH24 exact report](evidence/PH24/RESULT.md), [table matrix](evidence/PH24/TABLE_MATRIX.md), BUGS and per-command artifacts govern. No application code/migration/dependency/remote/provider/account-setting change; synthetic admin only fixtures/caller-only purge. PH24 BLOCKED, G5/G0B OPEN/V3 PENDING; PH25 not started. Next one action: Platform fixes PRIV-01 using failing sentinel regressions before rerunning audit.
+
+
+---
+
 # Latest: PH-23 regression closure — PASS
 
 2026-10-10 IST; main e305ea4f94556298c61c3d53cf5d13f13ce475c9 **plus uncommitted repair diff**. Final canonical batch **36/36 PASS** at375/1280, native actions with no collapse workaround. Supplementary effective normal-motion50 PASS; focused6 PASS; reduced-motion4 PASS. Fresh425 unit,138 mocked integration,202 domain/property with100% collected mathematical coverage; contract coverage100%, lint/typecheck/source hashes/production build/diffcheck PASS. Counts overlap. [Repair report](evidence/PH23/remediation/RESULT.md) and [final36-row matrix](evidence/PH23/remediation/SCENARIOS.md) supersede the failed audit below. Frozen source unchanged. PH23 COMPLETE locally; G5 OPEN/V3 PENDING. No install, deployment, remote migration or provider call. Original failures preserved. First-use live provider accuracy remains NOT RUN; remembered merchant prefix/injection routes and real manual fallback/save/refresh pass. Scratch untouched; candidate not committed.

@@ -1,0 +1,8 @@
+{
+  "diffCheck": 0,
+  "artifactSessionPatterns": 0,
+  "applicationChangesDuringAudit": false,
+  "sourceHashes": "all five match",
+  "scratch": "untouched",
+  "PH23Commit": "6efdab11f4a6b76ed0bf006c9a6eb24a116a6e6c"
+}

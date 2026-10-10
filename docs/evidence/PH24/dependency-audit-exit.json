@@ -1,0 +1,5 @@
+{
+  "exitCode": 1,
+  "command": "npm audit --json",
+  "noFix": true
+}

@@ -1,0 +1,637 @@
+[
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "buckets",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "card_liability_payments",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "card_payment_allocations",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "cycle_buckets",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "cycle_obligations",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "financial_profiles",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "goal_purchases",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "goal_recovery_extensions",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": true,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "goal_releases",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "goal_reservations",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "goals",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "merchant_memory",
+    "policies": [
+      {
+        "name": "merchant_memory_caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "merchant_memory_own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": true,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "next_cycle_commitments",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "obligation_cash_payments",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "obligation_payment_allocations",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "obligations",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "operation_log",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "pay_cycles",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "reconciliation_allocations",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "reconciliations",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "recovery_plans",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "user_id",
+    "table": "transactions",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  },
+  {
+    "rls": true,
+    "owner": "id",
+    "table": "users",
+    "policies": [
+      {
+        "name": "caller_owned",
+        "check": "((( SELECT auth.uid() AS uid) = id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "roles": [
+          "18597"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "*"
+      },
+      {
+        "name": "own_read",
+        "check": null,
+        "roles": [
+          "16444"
+        ],
+        "using": "((( SELECT auth.uid() AS uid) = id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+        "command": "r"
+      }
+    ],
+    "anonSelect": false,
+    "authenticatedSelect": false,
+    "authenticatedWrites": false
+  }
+]

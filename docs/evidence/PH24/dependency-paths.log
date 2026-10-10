@@ -1,0 +1,17 @@
+phron@0.1.0 W:\AI Product Sprint\Phron
+├─┬ eslint-config-next@16.3.8
+│ └─┬ @next/eslint-plugin-next@16.3.8
+│   └─┬ fast-glob@3.3.1
+│     └─┬ micromatch@4.0.8
+│       └── braces@3.0.3
+├─┬ eslint@9.39.5
+│ └─┬ @eslint/eslintrc@3.3.7
+│   └─┬ js-yaml@4.3.2
+│     └── argparse@2.0.1
+└─┬ jest@30.5.2
+  └─┬ @jest/core@30.5.2
+    └─┬ @jest/transform@30.5.2
+      └─┬ babel-plugin-istanbul@8.0.0
+        └─┬ @istanbuljs/load-nyc-config@1.1.0
+          └─┬ js-yaml@3.15.2
+            └── argparse@1.0.10

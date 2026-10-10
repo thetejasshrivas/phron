@@ -1,0 +1,33 @@
+{
+  "environment": "local production build with ordinary user session, provider keys empty",
+  "checks": [
+    {
+      "name": "capture bounds, forged identity and script-only input rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "request body over 65536 bytes rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "capture application rate limiter",
+      "status": "FAIL",
+      "observedStatuses": {
+        "200": 20
+      },
+      "reason": "20 distinct authenticated attempts accepted; source inspection finds no application limiter; provider429 handling is separate"
+    },
+    {
+      "name": "correctly signed expired synthetic JWT with invalid refresh denied",
+      "status": "PASS"
+    },
+    {
+      "name": "globally logged-out session denied",
+      "status": "PASS"
+    },
+    {
+      "name": "all primary protected pages redirect signed-out requests",
+      "status": "PASS"
+    }
+  ]
+}

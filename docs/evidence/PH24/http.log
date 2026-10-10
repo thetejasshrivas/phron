@@ -1,0 +1,5 @@
+PASS capture bounds, forged identity and script-only input rejected
+PASS request body over 65536 bytes rejected
+PASS correctly signed expired synthetic JWT with invalid refresh denied
+PASS globally logged-out session denied
+PASS all primary protected pages redirect signed-out requests

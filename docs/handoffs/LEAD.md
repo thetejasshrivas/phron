@@ -1,3 +1,14 @@
+# PH-24 security audit — EXECUTED / BLOCKED — 2026-10-10 IST
+
+PH23 remediation committed **6efdab11f4a6b76ed0bf006c9a6eb24a116a6e6c**; PH24 blocked-audit evidence is committed separately (resolve `git log -1 --format=%H -- docs/evidence/PH24/RESULT.md`);36 canonical +4 reduced pairs remain passed at that application revision. PH24 ran immediately under explicit user authorization.115 real local auth/RLS/HTTP/purge checks and91 RPC role checks PASS across23 populated public user-owned tables/24public financial RPCs; user A deletion clears all23 plusauth/sessions, denies retained access and preserves B. Private pilot/safety grants denied; secret scan0findings,1166tracked files/1259history blobs/18client files. Existing security16/FIT13 2/ingestion5/payment25/card46 PASS. Fresh425unit/138mocked contracts andlint/types/build/source hashes PASS; counts overlap.
+
+**FAIL:** privacy sentinels9PASS/3FAIL (underscore global labels reach provider adapter); HTTP5PASS/1FAIL (no application capture limiter). npm audit24entries:5high propagated braces/tooling entries,19moderate,0critical; no runtime web exploit proved, mitigation/disposition pending. [PH24 exact report](../evidence/PH24/RESULT.md), [table matrix](../evidence/PH24/TABLE_MATRIX.md), BUGS and per-command artifacts govern. No application code/migration/dependency/remote/provider/account-setting change; synthetic admin only fixtures/caller-only purge. PH24 BLOCKED, G5/G0B OPEN/V3 PENDING; PH25 not started. Next one action: Platform fixes PRIV-01 using failing sentinel regressions before rerunning audit.
+
+
+Operator authorization covered audits, not blanket dependency repairs. Platform should implement PRIV-01 under existing §26/D08, present exact rate policy for RATE-01 if unspecified, and Lead reviews dependency disposition. No PH25 authorization inferred. Resolve exact current HEAD on resume; report application auditedSHA separately from documentation commit.
+
+---
+
 # PH-23 committed closure → PH-24 authorized
 
 2026-10-10 IST. Tejas explicitly authorized committing the verified remediation and immediately executing PH24 / P05-SECURITY. This record is sealed with PH23 code/evidence; find the exact closure SHA with `git log -1 --format=%H -- docs/evidence/PH23/remediation/RESULT.md`. Base parent e305ea4; 36 canonical +4 reduced PASS, 425 unit/138 mocked integration, domain/contract100%, lint/types/build/source hashes PASS. One writer, unrelated scratch untouched. PH24 ordinary-user RLS/RPC/deletion/privacy/secret audit IN PROGRESS; no remote changes/deployment/install. G5/G0B OPEN and V3 PENDING. Read latest SPRINT_STATUS and PH24 evidence on resume; earlier pending-authorization text below is historical.

@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import {mkdirSync,writeFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {source} from '../integration/ph18/source-loader.mjs';
+const {extractWithFallback}=source('server/finance/providers');
+const {createSafeAnalyticsEvent}=source('server/finance/privacy-firewall');
+const {generateCoachResponse}=source('server/finance/coach');
+const out='docs/evidence/PH24';mkdirSync(out,{recursive:true});const results=[];
+async function check(name,test){try{const details=await test();results.push({name,status:'PASS',...details});console.log('PASS '+name);}catch{results.push({name,status:'FAIL',reason:'SYNTHETIC_SENTINEL_ASSERTION'});console.log('FAIL '+name);process.exitCode=1;}}
+const extra={monthly_net_income:'PH24_PRIVATE_INCOME',current_liquid_balance:'PH24_PRIVATE_CASH',total_debt:'PH24_PRIVATE_DEBT',email:'ph24-private@example.test',user_uuid:'123e4567-e89b-42d3-a456-426614174000'};
+const answer=JSON.stringify({transactions:[{amount:'1.50',merchant_or_payee:'Synthetic Cafe',candidate_category:'Dining Out & Social',is_estimated:false,relative_date_offset_days:0}]});
+for(const scenario of ['gemini','groq','gemini-retry-groq'])await check(scenario+' strict outgoing HTTP allowlist / unknown context omitted',async()=>{
+ const requests=[];const fetcher=async(url,init)=>{const body=JSON.parse(init.body);requests.push({provider:String(url).includes('googleapis')?'gemini':'groq',body});const bad=scenario==='gemini-retry-groq'&&String(url).includes('googleapis');return new Response(JSON.stringify(String(url).includes('googleapis')?{candidates:[{content:{parts:[{text:bad?'{':answer}]}}]}:{choices:[{message:{content:answer}}]}),{status:200,headers:{'content-type':'application/json'}});};
+ const r=await extractWithFallback('Synthetic Cafe 1.50 cash',{...extra,geminiApiKey:scenario==='groq'?undefined:'PH24_SYNTHETIC',groqApiKey:'PH24_SYNTHETIC',fetcher});assert.equal(r.kind,'extracted');assert.equal(requests.length,scenario==='gemini-retry-groq'?3:1);
+ for(const request of requests){const serialized=JSON.stringify(request.body);for(const value of Object.values(extra))assert.ok(!serialized.includes(value));for(const key of Object.keys(extra))assert.ok(!serialized.includes(key));assert.deepEqual(Object.keys(request.body).sort(),request.provider==='gemini'?['contents','generationConfig']:['max_tokens','messages','model','response_format','temperature']);assert.ok(!serialized.includes('tools'));}
+ return {requests:requests.length,providerBodies:requests.map(r=>({provider:r.provider,keys:Object.keys(r.body).sort()}))};
+});
+for(const text of ['monthly net income 73197 coffee 1.50 cash','current liquid balance 83219 coffee 1.50 cash','total debt 94327 coffee 1.50 cash','ph24-private@example.test coffee 1.50 cash','123e4567-e89b-42d3-a456-426614174000 coffee 1.50 cash','monthly_net_income: 73197 coffee 1.50 cash','current_liquid_balance: 83219 coffee 1.50 cash','total_debt: 94327 coffee 1.50 cash'])await check('capture-sensitive-text: '+text.split(' coffee')[0],async()=>{
+ let calls=0;const result=await extractWithFallback(text,{geminiApiKey:'PH24_SYNTHETIC',groqApiKey:'PH24_SYNTHETIC',fetcher:async()=>{calls++;return new Response('{}',{status:500});}});assert.equal(calls,0);assert.deepEqual(result,{kind:'manual_fallback',reason:'sensitive_context'});return {outboundCalls:calls};
+});
+await check('telemetry exact projection drops text/amount/merchant/context and coach is local',async()=>{const event=createSafeAnalyticsEvent('transaction_logged',{input_type:'manual',confidence:'high',is_estimated:false,is_credit_card:false,...extra,raw_text:'PH24_RAW',merchant:'PH24_MERCHANT',amount_paise:'150'});assert.deepEqual(event,{name:'transaction_logged',properties:{input_type:'manual',confidence:'high',is_estimated:false,is_credit_card:false}});for(const value of Object.values(extra))assert.ok(!JSON.stringify(event).includes(value));const coach=generateCoachResponse({overspendDeficitPaise:'150',weeklyCategoryTrims:[],goalPaceStatus:'ON_TRACK'});assert.equal(typeof coach,'string');return {telemetryFields:Object.keys(event.properties),externalCoachCalls:0};});
+writeFileSync(out+'/privacy-results.json',JSON.stringify({head:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),transport:'captured synthetic fetch at actual TypeScript adapter; no external request',results},null,2)+'\n');

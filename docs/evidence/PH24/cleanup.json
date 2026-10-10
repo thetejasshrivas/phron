@@ -1,0 +1,5 @@
+{
+  "priorFailedHarnessSyntheticOwnersRemoved": 1,
+  "correlatedAnonymousFixturesRemoved": 1,
+  "scope": "only PH24_FIXTURE operation marker plus exact synthetic goal/email; anonymous unique adjacent creation and no profile; unrelated accounts untouched"
+}

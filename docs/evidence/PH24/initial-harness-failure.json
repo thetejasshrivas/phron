@@ -1,0 +1,12 @@
+{
+  "head": "6efdab11f4a6b76ed0bf006c9a6eb24a116a6e6c",
+  "environment": "local production Next + persistent Supabase55321, ordinary A/B/anonymous users; admin only isolated fixtures/deletion",
+  "checks": [
+    {
+      "name": "audit assertion",
+      "status": "FAIL",
+      "reason": "ERR_ASSERTION",
+      "location": "at file:///W:/AI%20Product%20Sprint/Phron/tests/security/ph24-local.mjs:53:85"
+    }
+  ]
+}

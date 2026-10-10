@@ -1,0 +1,119 @@
+{
+  "head": "6efdab11f4a6b76ed0bf006c9a6eb24a116a6e6c",
+  "transport": "captured synthetic fetch at actual TypeScript adapter; no external request",
+  "results": [
+    {
+      "name": "gemini strict outgoing HTTP allowlist / unknown context omitted",
+      "status": "PASS",
+      "requests": 1,
+      "providerBodies": [
+        {
+          "provider": "gemini",
+          "keys": [
+            "contents",
+            "generationConfig"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "groq strict outgoing HTTP allowlist / unknown context omitted",
+      "status": "PASS",
+      "requests": 1,
+      "providerBodies": [
+        {
+          "provider": "groq",
+          "keys": [
+            "max_tokens",
+            "messages",
+            "model",
+            "response_format",
+            "temperature"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gemini-retry-groq strict outgoing HTTP allowlist / unknown context omitted",
+      "status": "PASS",
+      "requests": 3,
+      "providerBodies": [
+        {
+          "provider": "gemini",
+          "keys": [
+            "contents",
+            "generationConfig"
+          ]
+        },
+        {
+          "provider": "gemini",
+          "keys": [
+            "contents",
+            "generationConfig"
+          ]
+        },
+        {
+          "provider": "groq",
+          "keys": [
+            "max_tokens",
+            "messages",
+            "model",
+            "response_format",
+            "temperature"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "capture-sensitive-text: monthly net income 73197",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: current liquid balance 83219",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: total debt 94327",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: ph24-private@example.test",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: 123e4567-e89b-42d3-a456-426614174000",
+      "status": "PASS",
+      "outboundCalls": 0
+    },
+    {
+      "name": "capture-sensitive-text: monthly_net_income: 73197",
+      "status": "FAIL",
+      "reason": "SYNTHETIC_SENTINEL_ASSERTION"
+    },
+    {
+      "name": "capture-sensitive-text: current_liquid_balance: 83219",
+      "status": "FAIL",
+      "reason": "SYNTHETIC_SENTINEL_ASSERTION"
+    },
+    {
+      "name": "capture-sensitive-text: total_debt: 94327",
+      "status": "FAIL",
+      "reason": "SYNTHETIC_SENTINEL_ASSERTION"
+    },
+    {
+      "name": "telemetry exact projection drops text/amount/merchant/context and coach is local",
+      "status": "PASS",
+      "telemetryFields": [
+        "input_type",
+        "confidence",
+        "is_estimated",
+        "is_credit_card"
+      ],
+      "externalCoachCalls": 0
+    }
+  ]
+}

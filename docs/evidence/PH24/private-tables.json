@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "rls": false,
+      "table": "commitment_safety",
+      "anonWrite": false,
+      "authWrite": false,
+      "anonSelect": false,
+      "authSelect": false
+    },
+    {
+      "rls": true,
+      "table": "pilot_distress_events",
+      "anonWrite": false,
+      "authWrite": false,
+      "anonSelect": false,
+      "authSelect": false
+    },
+    {
+      "rls": true,
+      "table": "pilot_members",
+      "anonWrite": false,
+      "authWrite": false,
+      "anonSelect": false,
+      "authSelect": false
+    }
+  ],
+  "scope": "metadata grants; pilot tables RLS; global commitment_safety is admin-only and not user-owned"
+}

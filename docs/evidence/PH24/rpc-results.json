@@ -1,0 +1,549 @@
+{
+  "scope": "ordinary signed-out, anonymous-auth, A/B; actual pinned local public RPC inventory",
+  "checks": [
+    {
+      "rpc": "phron_accept_commitment",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_accept_commitment",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_accept_commitment",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_accept_commitment",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_accept_recovery",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_accept_recovery",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_accept_recovery",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_accept_recovery",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_active_custom_buckets",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_active_custom_buckets",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_active_custom_buckets",
+      "role": "B",
+      "status": "PASS",
+      "denial": "read output contains no User A identifiers"
+    },
+    {
+      "rpc": "phron_cancel_goal",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_cancel_goal",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_cancel_goal",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_cancel_goal",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_card_lifecycle",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_card_lifecycle",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_card_lifecycle",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_card_lifecycle",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_card_payment",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_card_payment",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_card_payment",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_card_payment",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_card_records",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_card_records",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_card_records",
+      "role": "B",
+      "status": "PASS",
+      "denial": "read output contains no User A identifiers"
+    },
+    {
+      "rpc": "phron_confirm_salary",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_confirm_salary",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_confirm_salary",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_confirm_salary",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_current_state",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_current_state",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_current_state",
+      "role": "B",
+      "status": "PASS",
+      "denial": "read output contains no User A identifiers"
+    },
+    {
+      "rpc": "phron_execute_goal_cash_purchase",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_execute_goal_cash_purchase",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_execute_goal_cash_purchase",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_execute_goal_cash_purchase",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_ingest_category_swap",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_ingest_category_swap",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_ingest_category_swap",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_ingest_category_swap",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_ingest_confirm_category",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_ingest_confirm_category",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_ingest_confirm_category",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_ingest_confirm_category",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_ingest_spend",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_ingest_spend",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_ingest_spend",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_ingest_spend",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_manual_spend",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_manual_spend",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_manual_spend",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_manual_spend",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_obligation_payment",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_obligation_payment",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_obligation_payment",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_obligation_payment",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_obligation_records",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_obligation_records",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_obligation_records",
+      "role": "B",
+      "status": "PASS",
+      "denial": "read output contains no User A identifiers"
+    },
+    {
+      "rpc": "phron_onboard",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_onboard",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_onboard",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_onboard",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_reclassify_drift",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_reclassify_drift",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_reclassify_drift",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_reclassify_drift",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_reconcile",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_reconcile",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_reconcile",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_reconcile",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_recovery_context",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_recovery_context",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_recovery_context",
+      "role": "B",
+      "status": "PASS",
+      "denial": "read output contains no User A identifiers"
+    },
+    {
+      "rpc": "phron_surface_config",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_surface_config",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_surface_config",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_surface_config",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_surface_goal_purchase",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_surface_goal_purchase",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_surface_goal_purchase",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_surface_goal_purchase",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_surface_lifecycle",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_surface_lifecycle",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_surface_lifecycle",
+      "role": "A",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_surface_lifecycle",
+      "role": "B",
+      "status": "PASS",
+      "denial": "forged authority fields rejected"
+    },
+    {
+      "rpc": "phron_surface_source",
+      "role": "signed-out",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_surface_source",
+      "role": "anonymous-auth",
+      "status": "PASS",
+      "denial": "permission or unauthenticated/no rows"
+    },
+    {
+      "rpc": "phron_surface_source",
+      "role": "B",
+      "status": "PASS",
+      "denial": "read output contains no User A identifiers"
+    },
+    {
+      "name": "all 24 RPC probes leave both canonical states unchanged",
+      "status": "PASS"
+    }
+  ]
+}

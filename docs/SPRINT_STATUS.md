@@ -5,13 +5,13 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: e305ea4f94556298c61c3d53cf5d13f13ce475c9 # base HEAD; PH23 closure commit parent; resolve git log -1 -- docs/evidence/PH23/remediation/RESULT.md
-working_tree_state: PH23 remediation being committed; PH24 audit authorized; scratch untouched
-dirty_files: ["PH23 Home/RecoveryCard/style and ingestion/recovery read/contract repairs", "tests/integration/ph19 and ph23", "tests/e2e/ph23 (new)", "docs/status/design/decisions/evidence/handoffs", "New Text Document.txt (untouched user work)"]
+commit: 6efdab11f4a6b76ed0bf006c9a6eb24a116a6e6c # PH23 committed application; PH24 audit records separate
+working_tree_state: PH23 remediation committed; PH24 blocked-audit records sealed in separate evidence commit; unrelated scratch untouched
+dirty_files: ["New Text Document.txt (untouched user work)"] # resolve current HEAD/status on resume
 active_chat: PHRON-00 Lead & QA / PH-24 security audit (single active writer)
 phase: "5 (Journeys and Quality)"
 current_step: PH-24
-step_state: PH-23 COMPLETE; PH-24 / P05-SECURITY AUTHORIZED — IN PROGRESS
+step_state: PH-23 COMPLETE; PH-24 / P05-SECURITY AUDIT EXECUTED — BLOCKED; not COMPLETE
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
 approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D08-v1, D09-v1, D10-v1, D11-v1, D16-v1, D17-v1, D18-v1, D19-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1, D14-v1, D15-v1, D26-v1, G3-DF-01-v1, PH21-BUCKET-v1, PH21-GOAL-v1, PH21-OBLIGATION-v1, PH21-CHART-v1, D20-v1, G4-FLEX-DATE-01-v1, G4-CUSTOM-RECOVERY-01-v1, D23-v1, D24-v1, G4-GOAL-CALENDAR-01-v1, PH23-SC02-v1]
 completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17, PH-18, PH-19, PH-20, PH-21, PH-22, PH-23]
@@ -19,15 +19,21 @@ passed_gates: [G0A, G1, V1, G2, V2, G3, G4]
 open_gates: [G0B, G5]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: PENDING}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb"}
-blocking_decisions: [] # PH23 source fixture resolved by explicit user scope; unrelated open items remain in DECISIONS
-latest_evidence: docs/evidence/PH23/remediation/RESULT.md
+blocking_decisions: ["PH24-RATE-01 exact application rate/window policy if unspecified", "PH24-DEP-01 safe dependency disposition"] # PRIV-01 is a reproduced implementation defect, not a source amendment
+latest_evidence: docs/evidence/PH24/RESULT.md
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
 migration_state: PH11_PH12_REMOTE_APPLIED; PH15_THROUGH_PH22_CANDIDATES_LOCAL_ONLY_VERIFIED_NOT_REMOTE
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers", "2026-10-10: Tejas approved PH21 typed contracts, server/API handlers, local-only migration and integration tests for goals, reconciliation, buckets and authenticated account deletion; no remote rollout"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Execute PH-24 local ordinary-user security/privacy audit; no PH-25 advance
+next_action: Platform resolves PH24-PRIV-01 with failing sentinel tests; PH25 not started
 last_updated_ist: 2026-10-10
 ```
+
+## PH-24 security audit — EXECUTED / BLOCKED — 2026-10-10 IST
+
+PH23 remediation committed **6efdab11f4a6b76ed0bf006c9a6eb24a116a6e6c**;36 canonical +4 reduced pairs remain passed at that application revision. PH24 ran immediately under explicit user authorization.115 real local auth/RLS/HTTP/purge checks and91 RPC role checks PASS across23 populated public user-owned tables/24public financial RPCs; user A deletion clears all23 plusauth/sessions, denies retained access and preserves B. Private pilot/safety grants denied; secret scan0findings,1166tracked files/1259history blobs/18client files. Existing security16/FIT13 2/ingestion5/payment25/card46 PASS. Fresh425unit/138mocked contracts andlint/types/build/source hashes PASS; counts overlap.
+
+**FAIL:** privacy sentinels9PASS/3FAIL (underscore global labels reach provider adapter); HTTP5PASS/1FAIL (no application capture limiter). npm audit24entries:5high propagated braces/tooling entries,19moderate,0critical; no runtime web exploit proved, mitigation/disposition pending. [PH24 exact report](evidence/PH24/RESULT.md), [table matrix](evidence/PH24/TABLE_MATRIX.md), BUGS and per-command artifacts govern. No application code/migration/dependency/remote/provider/account-setting change; synthetic admin only fixtures/caller-only purge. PH24 BLOCKED, G5/G0B OPEN/V3 PENDING; PH25 not started. Next one action: Platform fixes PRIV-01 using failing sentinel regressions before rerunning audit.
 
 ## PH-23 / Lead & Experience — COMPLETE locally — 2026-10-10 IST
 

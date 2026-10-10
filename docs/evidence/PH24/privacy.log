@@ -1,0 +1,12 @@
+PASS gemini strict outgoing HTTP allowlist / unknown context omitted
+PASS groq strict outgoing HTTP allowlist / unknown context omitted
+PASS gemini-retry-groq strict outgoing HTTP allowlist / unknown context omitted
+PASS capture-sensitive-text: monthly net income 73197
+PASS capture-sensitive-text: current liquid balance 83219
+PASS capture-sensitive-text: total debt 94327
+PASS capture-sensitive-text: ph24-private@example.test
+PASS capture-sensitive-text: 123e4567-e89b-42d3-a456-426614174000
+FAIL capture-sensitive-text: monthly_net_income: 73197
+FAIL capture-sensitive-text: current_liquid_balance: 83219
+FAIL capture-sensitive-text: total_debt: 94327
+PASS telemetry exact projection drops text/amount/merchant/context and coach is local

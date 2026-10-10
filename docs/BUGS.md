@@ -1,3 +1,16 @@
+# Current PH-24 findings — OPEN
+
+Audited main application6efdab1,2026-10-10; PH23 defects remain resolved. Current release audit is BLOCKED; [executed report](evidence/PH24/RESULT.md).
+
+- **PH24-PRIV-01 / P1 / Platform / OPEN:** user text `monthly_net_income: 73197 coffee 1.50 cash` (and current_liquid_balance/total_debt variants) reaches actual Gemini/Groq adapter fetch; expect zero outbound calls.3 independent synthetic probes FAIL. No actual network request. Regex accepts whitespace labels only. Fix normalization/detection before any provider attempt; retain strict allowlist and typed amount/category behavior. Evidence tests/security/ph24-privacy.mjs, privacy-results.json.
+- **PH24-RATE-01 / P1 / Platform / OPEN:**20 distinct ordinary authenticated capture attempts return200, no shared application limiter in source. Provider429 fallback is separate; no real quotas exercised. Add an explicitly specified rate/window policy and persistent limiter with user isolation/replay behavior; no inferred threshold/paid overflow. Evidence http-results.json; Playbook Part9/request-bounds audit.
+- **PH24-DEP-01 / P2 disposition pending / Lead / OPEN:** npm audit5high package entries rooted in braces<=3.0.3 through ESLint Next glob stack,19moderate. Tooling path present; no web-input-to-braces path identified; current reviewed advisory has no patched version. Record mitigation/reachability disposition rather than blind auto-fix/downgrade. Evidence dependency-audit.json, dependency-paths.log, report links.
+
+All23-table purge passed; cleanup failure was a corrected driver double-delete, not an account-purge application bug. No app patches were made during QA. Historical findings follow.
+
+
+---
+
 # Current PH-23 defect disposition — RESOLVED
 
 2026-10-10 IST; repaired uncommitted candidate based on main e305ea4. Original reproductions below are preserved historical evidence; “OPEN” within them is superseded only for these four scoped items.
