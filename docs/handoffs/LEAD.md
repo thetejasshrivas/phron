@@ -1,3 +1,13 @@
+# PH27 / Release preparation handoff — 2026-10-11 IST
+
+Tejas explicitly accepts **PHRON-V3-01 /36ca738**. V3 ACCEPTED; G5 PASSED; PH26 COMPLETE; Phase6/current PH27. [Acceptance](../evidence/V3/ACCEPTANCE.md), [specification](../DEPLOYMENT.md), [preflight](../evidence/PH27/PREFLIGHT.md). Application target36ca7380dfb2235d5556242f59c93da18c98bf04; branchmain/repositoryW:/AI Product Sprint/Phron. Resolve documentation HEAD from git log; application/package/lock/SQL/source equality checked, source5/5PASS. Scratch untouched.
+
+24SQL candidates pinned in exact required forward order with hashes. Local healthy container supabase_db_phron-ph11-local; ledger onlyPH11, later direct-SQL test proof preserved. Remote historicalPH11/12 only; reconcile schema/ledger before any pendingDDL. No migration/deployment executed/authorized this step. Preview-only build guard retained; former bootstrap flag must not authorize full financial Production. D25/G0B/account/provider checks remain OPEN; G6requires actual candidate/phone smoke. D07card/funding still unavailable, no invented rule. Prior PH26 test counts/evidence unchanged, no full rerun for documentation changes.
+
+**Next one action:** Tejas opens existing Supabase Phron organization Billing/Usage and reports Free, active/unpaused and below-limit database/egress/MAU/storage statuses only. Then verify the remaining account/environment/backup/authorization items sequentially. Do not startPH28 or promoteProduction based on V3 acceptance. All earlier records below are historical.
+
+---
+
 # PH26 final review handoff — 2026-10-11 IST
 
 Repository W:/AI Product Sprint/Phron, main. PHRON-V3-01 application `36ca7380dfb2235d5556242f59c93da18c98bf04`; evidence commit separate, resolve git log on docs/evidence/PH26/RESULT.md. PH25-A11Y-01 RESOLVED. Native CSS7lines: mobile scroll margin and native date focus-within; no finance/server/DB/contract/dependency change. Strong independent red evidence retained, final83/83focus/accessibility/performance checks PASS at375/768/1280. Ponytail duplicated readiness branch removed, separate bounded Impeccable context fallback preserves accepted foundation. Platform goal test fixture corrected without changing exact assertions; adds six-cycle500000paise against seven-cycle428571;6/6PASS. Original failures remain.

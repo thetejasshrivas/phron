@@ -1,3 +1,13 @@
+# PH27 founder sign-off / Gate G5 closure — 2026-10-11 IST
+
+Tejas explicitly states: **“Tejas accepts V3 — PHRON-V3-01 at commit 36ca738.”** Full application SHA `36ca7380dfb2235d5556242f59c93da18c98bf04`; [sign-off](evidence/V3/ACCEPTANCE.md). V3 ACCEPTED, PH26 COMPLETE and G5 PASSED. This is human approval of the shown visual revision, not automated taste approval.
+
+Technical evidence remains the executed [PH26 release report](evidence/PH26/RESULT.md):458 unit,152 mocked integration,202 domain; collected domain/contract coverage100%;50 browser journey pairs;83 final focus/accessibility/performance checks; SQL/RLS/privacy/card/cycle suites, lint/typecheck/build PASS. Counts overlap. Original failures/rerun corrections remain preserved. Physical phone, audible AT, field vitals, live provider quotas/retention and hosted36ca738 smoke are not relabeled as executed.
+
+PH27 documentation-only verification: source hashes5/5 PASS; application/package/SQL/source tree equals36ca738 (exit0); git diff --check PASS before edits and again before commit. Existing Docker containers running/healthy, read-only local migration ledger has20261006104126 only; local direct-SQL evidence governs later candidates. No database writes or full-suite rerun in this documentation step. [Release preflight](evidence/PH27/PREFLIGHT.md) separates public constraints from pending account checks. G0B OPEN; G6/G7 pending.
+
+---
+
 # PH26 release re-verification / V3 package — 2026-10-11 IST
 
 Application36ca7380dfb2235d5556242f59c93da18c98bf04. PH25-A11Y-01 RESOLVED: final83/83browser/performance/accessibility checks PASS, stronger full-focus geometry,375/768/1280.50/50canonical+additional journey pairs PASS.458unit,152mocked integration,202domain cases PASS;6contracts/10math files100% statements/branches/functions/lines. Local payment25/card46/cancellation9/recovery18/commitment21/cycle33 and remaining selected SQL suites PASS;20mixed sequences seed181801 PASS.115RLS/auth/deletion,91RPC,40privacy,6HTTP,16security,2FIT13 PASS. Counts overlap; [report and command index](evidence/PH26/RESULT.md) govern.
