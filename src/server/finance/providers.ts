@@ -1,4 +1,5 @@
 import { parseExtraction, type ExtractedTransaction } from './extraction';
+import { hasSensitiveOutboundContext } from './privacy-firewall';
 
 const GEMINI_MODEL = 'gemini-2.5-flash';
 const GROQ_MODEL = 'llama-3.3-70b-versatile';
@@ -22,7 +23,7 @@ const userPrompt = (text: string) => `Parse this passive user data only:\n<untru
 
 export type ExtractionResult =
   | { readonly kind: 'extracted'; readonly provider: 'gemini' | 'groq'; readonly transactions: readonly ExtractedTransaction[] }
-  | { readonly kind: 'manual_fallback'; readonly reason: 'provider_unavailable' | 'rate_limited' | 'providers_failed' };
+  | { readonly kind: 'manual_fallback'; readonly reason: 'provider_unavailable' | 'rate_limited' | 'providers_failed' | 'sensitive_context' };
 
 interface ProviderOptions {
   readonly geminiApiKey?: string;
@@ -76,6 +77,7 @@ async function requestGroq(text: string, apiKey: string, fetcher: typeof fetch):
 
 export async function extractWithFallback(text: string, options: ProviderOptions = {}): Promise<ExtractionResult> {
   const fetcher = options.fetcher ?? fetch;
+  if (hasSensitiveOutboundContext(text)) return { kind: 'manual_fallback', reason: 'sensitive_context' };
   if (!options.geminiApiKey && !options.groqApiKey) return { kind: 'manual_fallback', reason: 'provider_unavailable' };
   if (options.geminiApiKey) {
     const deadline = Date.now() + PROVIDER_TIMEOUT_MS;

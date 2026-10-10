@@ -7,6 +7,7 @@ import { sameOriginMutation, trustedOrigin } from '@/server/auth/policy';
 import { classifyExtraction, explicitPaymentMethod, matchNamedCustomBucket, parseRupeesToPaise, type ExtractionCategory, type ExtractedTransaction } from '@/server/finance/extraction';
 import { sanitizeCaptureText } from '@/server/finance/ingestion-input';
 import { extractWithFallback } from '@/server/finance/providers';
+import { hasSensitiveOutboundContext, isRestrictedAdviceRequest } from '@/server/finance/privacy-firewall';
 import { parseFinanceResult } from '@/server/finance/parse';
 
 export const dynamic = 'force-dynamic';
@@ -92,6 +93,8 @@ export async function POST(request: NextRequest) {
     let input: Input;
     try { input = await parseBody(request); } catch { return context.finish(failure('VALIDATION')); }
     if (!input.text) return context.finish(failure('VALIDATION'));
+    if (isRestrictedAdviceRequest(input.text)) return context.finish(reply({ kind: 'refused', reason: 'financial_advice', message: 'I can help record a spend, but I cannot recommend investments, funds, stocks, or credit products.' }));
+    if (hasSensitiveOutboundContext(input.text)) return context.finish(reply({ kind: 'manual_fallback', reason: 'sensitive_context', openManualEntry: true }));
 
     const current = await readCurrent(context.client);
     const memory = await context.client.from('merchant_memory').select('merchant_key,bucket_id');

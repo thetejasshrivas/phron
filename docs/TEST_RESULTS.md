@@ -321,3 +321,21 @@ D12-Shopping is explicitly resolved; Shopping280000 allowance/200000 spent/80000
 PASS291unit+74integration,156domain/100% implemented coverage,18recovery,21commitment,16security,types/lint/five source hashes. G3 remains BLOCKED for D14/D15/D26 and missing goal-cash/FIT13/full lifecycle evidence. Next exact action: resolve D14 floors versus distress permission/restoration. No remote changes or PH19 advance. Historical pending D12/D13 statements below are superseded.
 
 Final verification 2026-10-09: all 20 commands in docs/evidence/G3/CLOSURE/runs.json completed with exit 0. Sources (all five hashes), typecheck, lint and Next.js build PASS. No remote migration or deployment. G3 remains BLOCKED for the explicitly documented unmet requirements; no completion commit or PH19 advancement.
+# PH-20 / Privacy Firewall verification — 2026-10-10 IST
+
+**Status: implementation checks PASS; aggregate `npm run check` has an environment-level prerender filesystem failure.** This does not establish an application-code defect: two combined runs passed source verification, lint, typecheck, all tests, and contract coverage, then failed while Next.js attempted to create `W:\AI Product Sprint\Phron\.next\server\app\_not-found.segments\_not-found` with `EPERM: operation not permitted, mkdir`. Standalone `npm run build` subsequently passed twice on the same source tree.
+
+| Check | Result |
+|---|---|
+| Unit tests | PASS — 392 tests |
+| Integration tests | PASS — 106 tests |
+| Typecheck | PASS — `npm run typecheck` |
+| Lint | PASS — `npm run lint`, zero warnings |
+| Standalone production build | PASS — `npm run build`, Next.js 16.3.8 |
+| Source manifest | PASS — all five hashes, frozen PRD unchanged |
+| Contract coverage | PASS — 100% statement/branch/function/line over five collected contract modules |
+| Focused privacy/provider tests | PASS — 16 unit tests |
+| Focused ingestion boundary tests | PASS — 10 integration tests |
+| `git diff --check` | PASS |
+
+The firewall blocks sensitive financial and identity-bearing capture strings before outbound extraction; Gemini/Groq request constructors use explicit body shapes; restricted investment/credit advice receives a fixed refusal; deterministic coach copy remains local; analytics projection drops unapproved keys and values. Live provider quotas and Groq retention controls were not checked. Exact scope and command evidence: [PH-20 result](evidence/PH20/RESULT.md).

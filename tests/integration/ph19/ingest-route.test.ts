@@ -70,6 +70,22 @@ describe('PH-19 ingestion route boundary', () => {
     expect(mockRpc.mock.calls.some(([name]) => name === 'phron_ingest_spend')).toBe(false);
   });
 
+  it('keeps salary, liquidity, debt and identity sentinels typed in capture text out of provider requests', async () => {
+    const text = 'Monthly net income ₹60,000, current liquid balance ₹20,000, total debt ₹9,000; email tejas@example.test UUID 123e4567-e89b-42d3-a456-426614174000; coffee ₹150 cash';
+    const response = await POST(request({ text, operationId: 'a1b2c3d4-0000-4000-8000-000000000000', disclosureAccepted: true }));
+    expect(await response.json()).toMatchObject({ kind: 'manual_fallback', reason: 'sensitive_context', openManualEntry: true });
+    expect(mockExtract).not.toHaveBeenCalled();
+    expect(mockRpc.mock.calls.some(([name]) => name === 'phron_ingest_spend')).toBe(false);
+  });
+
+  it('refuses stock and credit advice before reading financial state or calling an extraction provider', async () => {
+    const response = await POST(request({ text: 'Which mutual fund should I invest in?', operationId: 'a1b2c3d4-0000-4000-8000-000000000000', disclosureAccepted: true }));
+    expect(await response.json()).toMatchObject({ kind: 'refused', reason: 'financial_advice' });
+    expect(mockExtract).not.toHaveBeenCalled();
+    expect(mockRpc).not.toHaveBeenCalled();
+    expect(mockSelect).not.toHaveBeenCalled();
+  });
+
   it('does not default an exact-memory hit with missing payment method to cash', async () => {
     const response = await POST(request({ text: '₹450 Zomato', operationId: 'a1b2c3d4-0000-4000-8000-000000000000', disclosureAccepted: false }));
     expect(await response.json()).toMatchObject({ kind: 'routed', outcomes: [{ kind: 'method_confirmation' }] });
