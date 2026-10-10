@@ -1,0 +1,2226 @@
+{
+  "tables": [
+    {
+      "key": "public.buckets",
+      "rls": true,
+      "force_rls": true,
+      "owner": "postgres"
+    },
+    {
+      "key": "public.card_liability_payments",
+      "rls": true,
+      "force_rls": true,
+      "owner": "postgres"
+    },
+    {
+      "key": "public.card_payment_allocations",
+      "rls": true,
+      "force_rls": true,
+      "owner": "postgres"
+    },
+    {
+      "key": "public.cycle_buckets",
+      "rls": true,
+      "force_rls": true,
+      "owner": "postgres"
+    },
+    {
+      "key": "public.cycle_obligations",
+      "rls": true,
+      "force_rls": true,
+      "owner": "postgres"
+    },
+    {
+      "key": "public.financial_profiles",
+      "rls": true,
+      "force_rls": true,
+      "owner": "postgres"
+    },
+    {
+      "key": "public.obligations",
+      "rls": true,
+      "force_rls": true,
+      "owner": "postgres"
+    },
+    {
+      "key": "public.operation_log",
+      "rls": true,
+      "force_rls": true,
+      "owner": "postgres"
+    },
+    {
+      "key": "public.pay_cycles",
+      "rls": true,
+      "force_rls": true,
+      "owner": "postgres"
+    },
+    {
+      "key": "public.transactions",
+      "rls": true,
+      "force_rls": true,
+      "owner": "postgres"
+    },
+    {
+      "key": "public.users",
+      "rls": true,
+      "force_rls": true,
+      "owner": "postgres"
+    }
+  ],
+  "columns": [
+    {
+      "key": "public.buckets.id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": "gen_random_uuid()"
+    },
+    {
+      "key": "public.buckets.user_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.buckets.name",
+      "type": "character varying",
+      "udt": "varchar",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.buckets.tier",
+      "type": "character varying",
+      "udt": "varchar",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.buckets.monthly_allocation_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.buckets.hard_floor_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": "0"
+    },
+    {
+      "key": "public.buckets.current_spent_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": "0"
+    },
+    {
+      "key": "public.buckets.priority_rank",
+      "type": "integer",
+      "udt": "int4",
+      "nullable": "NO",
+      "default": "2"
+    },
+    {
+      "key": "public.buckets.is_custom",
+      "type": "boolean",
+      "udt": "bool",
+      "nullable": "NO",
+      "default": "false"
+    },
+    {
+      "key": "public.card_liability_payments.id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.card_liability_payments.user_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.card_liability_payments.cycle_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.card_liability_payments.amount_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.card_liability_payments.payment_date",
+      "type": "date",
+      "udt": "date",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.card_liability_payments.is_deleted",
+      "type": "boolean",
+      "udt": "bool",
+      "nullable": "NO",
+      "default": "false"
+    },
+    {
+      "key": "public.card_liability_payments.created_at",
+      "type": "timestamp with time zone",
+      "udt": "timestamptz",
+      "nullable": "NO",
+      "default": "now()"
+    },
+    {
+      "key": "public.card_payment_allocations.id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": "gen_random_uuid()"
+    },
+    {
+      "key": "public.card_payment_allocations.user_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.card_payment_allocations.payment_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.card_payment_allocations.purchase_transaction_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.card_payment_allocations.amount_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.cycle_buckets.id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": "gen_random_uuid()"
+    },
+    {
+      "key": "public.cycle_buckets.user_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.cycle_buckets.cycle_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.cycle_buckets.bucket_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.cycle_buckets.allocation_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.cycle_buckets.floor_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": "0"
+    },
+    {
+      "key": "public.cycle_buckets.spent_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": "0"
+    },
+    {
+      "key": "public.cycle_obligations.id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": "gen_random_uuid()"
+    },
+    {
+      "key": "public.cycle_obligations.user_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.cycle_obligations.cycle_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.cycle_obligations.obligation_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.cycle_obligations.due_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.cycle_obligations.unpaid_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.financial_profiles.id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": "gen_random_uuid()"
+    },
+    {
+      "key": "public.financial_profiles.user_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.financial_profiles.sustainable_net_income_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.financial_profiles.salary_credit_day",
+      "type": "integer",
+      "udt": "int4",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.financial_profiles.current_liquid_balance_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.financial_profiles.is_salary_confirmed_this_cycle",
+      "type": "boolean",
+      "udt": "bool",
+      "nullable": "NO",
+      "default": "false"
+    },
+    {
+      "key": "public.financial_profiles.revision",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": "0"
+    },
+    {
+      "key": "public.financial_profiles.created_at",
+      "type": "timestamp with time zone",
+      "udt": "timestamptz",
+      "nullable": "NO",
+      "default": "now()"
+    },
+    {
+      "key": "public.financial_profiles.updated_at",
+      "type": "timestamp with time zone",
+      "udt": "timestamptz",
+      "nullable": "NO",
+      "default": "now()"
+    },
+    {
+      "key": "public.obligations.id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": "gen_random_uuid()"
+    },
+    {
+      "key": "public.obligations.user_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.obligations.name",
+      "type": "character varying",
+      "udt": "varchar",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.obligations.amount_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.obligations.is_paid_this_cycle",
+      "type": "boolean",
+      "udt": "bool",
+      "nullable": "NO",
+      "default": "false"
+    },
+    {
+      "key": "public.obligations.is_credit_card_legacy",
+      "type": "boolean",
+      "udt": "bool",
+      "nullable": "NO",
+      "default": "false"
+    },
+    {
+      "key": "public.obligations.created_at",
+      "type": "timestamp with time zone",
+      "udt": "timestamptz",
+      "nullable": "NO",
+      "default": "now()"
+    },
+    {
+      "key": "public.operation_log.user_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.operation_log.operation_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.operation_log.kind",
+      "type": "text",
+      "udt": "text",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.operation_log.fingerprint",
+      "type": "text",
+      "udt": "text",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.operation_log.result",
+      "type": "jsonb",
+      "udt": "jsonb",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.operation_log.created_at",
+      "type": "timestamp with time zone",
+      "udt": "timestamptz",
+      "nullable": "NO",
+      "default": "now()"
+    },
+    {
+      "key": "public.pay_cycles.id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": "gen_random_uuid()"
+    },
+    {
+      "key": "public.pay_cycles.user_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.pay_cycles.opened_on",
+      "type": "date",
+      "udt": "date",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.pay_cycles.expected_payday",
+      "type": "date",
+      "udt": "date",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.pay_cycles.active",
+      "type": "boolean",
+      "udt": "bool",
+      "nullable": "NO",
+      "default": "true"
+    },
+    {
+      "key": "public.pay_cycles.budget_basis",
+      "type": "text",
+      "udt": "text",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.pay_cycles.opening_budget_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.pay_cycles.cycle_income_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "YES",
+      "default": null
+    },
+    {
+      "key": "public.pay_cycles.opening_cash_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.pay_cycles.confirmed_inflows_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": "0"
+    },
+    {
+      "key": "public.pay_cycles.cash_outflows_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": "0"
+    },
+    {
+      "key": "public.pay_cycles.residual_drift_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": "0"
+    },
+    {
+      "key": "public.pay_cycles.spent_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": "0"
+    },
+    {
+      "key": "public.pay_cycles.goal_cycle_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": "0"
+    },
+    {
+      "key": "public.pay_cycles.goal_held_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": "0"
+    },
+    {
+      "key": "public.pay_cycles.carried_commitment_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": "0"
+    },
+    {
+      "key": "public.pay_cycles.new_commitment_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": "0"
+    },
+    {
+      "key": "public.transactions.id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": "gen_random_uuid()"
+    },
+    {
+      "key": "public.transactions.user_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.transactions.cycle_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.transactions.bucket_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.transactions.operation_id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.transactions.amount_paise",
+      "type": "bigint",
+      "udt": "int8",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.transactions.merchant_or_payee",
+      "type": "character varying",
+      "udt": "varchar",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.transactions.raw_text",
+      "type": "character varying",
+      "udt": "varchar",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.transactions.is_estimated",
+      "type": "boolean",
+      "udt": "bool",
+      "nullable": "NO",
+      "default": "false"
+    },
+    {
+      "key": "public.transactions.is_credit_card_spend",
+      "type": "boolean",
+      "udt": "bool",
+      "nullable": "NO",
+      "default": "false"
+    },
+    {
+      "key": "public.transactions.confidence_tier",
+      "type": "character varying",
+      "udt": "varchar",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.transactions.transaction_date",
+      "type": "date",
+      "udt": "date",
+      "nullable": "NO",
+      "default": "(timezone('Asia/Kolkata'::text, now()))::date"
+    },
+    {
+      "key": "public.transactions.is_deleted",
+      "type": "boolean",
+      "udt": "bool",
+      "nullable": "NO",
+      "default": "false"
+    },
+    {
+      "key": "public.transactions.created_at",
+      "type": "timestamp with time zone",
+      "udt": "timestamptz",
+      "nullable": "NO",
+      "default": "now()"
+    },
+    {
+      "key": "public.users.id",
+      "type": "uuid",
+      "udt": "uuid",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.users.email",
+      "type": "character varying",
+      "udt": "varchar",
+      "nullable": "NO",
+      "default": null
+    },
+    {
+      "key": "public.users.display_name",
+      "type": "character varying",
+      "udt": "varchar",
+      "nullable": "YES",
+      "default": null
+    },
+    {
+      "key": "public.users.health_state",
+      "type": "character varying",
+      "udt": "varchar",
+      "nullable": "NO",
+      "default": "'STATE_A_HEALTHY'::character varying"
+    },
+    {
+      "key": "public.users.onboarding_step",
+      "type": "integer",
+      "udt": "int4",
+      "nullable": "NO",
+      "default": "1"
+    },
+    {
+      "key": "public.users.created_at",
+      "type": "timestamp with time zone",
+      "udt": "timestamptz",
+      "nullable": "NO",
+      "default": "now()"
+    },
+    {
+      "key": "public.users.updated_at",
+      "type": "timestamp with time zone",
+      "udt": "timestamptz",
+      "nullable": "NO",
+      "default": "now()"
+    }
+  ],
+  "constraints": [
+    {
+      "key": "public.buckets.buckets_current_spent_paise_check",
+      "definition": "CHECK (current_spent_paise >= 0)"
+    },
+    {
+      "key": "public.buckets.buckets_hard_floor_paise_check",
+      "definition": "CHECK (hard_floor_paise >= 0)"
+    },
+    {
+      "key": "public.buckets.buckets_monthly_allocation_paise_check",
+      "definition": "CHECK (monthly_allocation_paise >= 0)"
+    },
+    {
+      "key": "public.buckets.buckets_pkey",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "key": "public.buckets.buckets_tier_check",
+      "definition": "CHECK (tier::text = ANY (ARRAY['OBLIGATION'::character varying, 'DISCRETIONARY'::character varying, 'MILESTONE'::character varying]::text[]))"
+    },
+    {
+      "key": "public.buckets.buckets_user_id_fkey",
+      "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.buckets.buckets_user_id_id_key",
+      "definition": "UNIQUE (user_id, id)"
+    },
+    {
+      "key": "public.card_liability_payments.card_liability_payments_amount_paise_check",
+      "definition": "CHECK (amount_paise > 0)"
+    },
+    {
+      "key": "public.card_liability_payments.card_liability_payments_pkey",
+      "definition": "PRIMARY KEY (user_id, id)"
+    },
+    {
+      "key": "public.card_liability_payments.card_liability_payments_user_id_cycle_id_fkey",
+      "definition": "FOREIGN KEY (user_id, cycle_id) REFERENCES pay_cycles(user_id, id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.card_liability_payments.card_liability_payments_user_id_fkey",
+      "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.card_liability_payments.card_liability_payments_user_id_id_fkey",
+      "definition": "FOREIGN KEY (user_id, id) REFERENCES operation_log(user_id, operation_id) DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "key": "public.card_payment_allocations.allocations_purchase_owner",
+      "definition": "FOREIGN KEY (user_id, purchase_transaction_id) REFERENCES transactions(user_id, id) DEFERRABLE"
+    },
+    {
+      "key": "public.card_payment_allocations.card_payment_allocations_amount_paise_check",
+      "definition": "CHECK (amount_paise > 0)"
+    },
+    {
+      "key": "public.card_payment_allocations.card_payment_allocations_pkey",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "key": "public.card_payment_allocations.card_payment_allocations_user_id_fkey",
+      "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.card_payment_allocations.card_payment_allocations_user_id_id_key",
+      "definition": "UNIQUE (user_id, id)"
+    },
+    {
+      "key": "public.card_payment_allocations.card_payment_allocations_user_id_payment_id_fkey",
+      "definition": "FOREIGN KEY (user_id, payment_id) REFERENCES card_liability_payments(user_id, id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.card_payment_allocations.card_payment_allocations_user_id_payment_id_purchase_transa_key",
+      "definition": "UNIQUE (user_id, payment_id, purchase_transaction_id)"
+    },
+    {
+      "key": "public.cycle_buckets.cycle_buckets_allocation_paise_check",
+      "definition": "CHECK (allocation_paise >= 0)"
+    },
+    {
+      "key": "public.cycle_buckets.cycle_buckets_floor_paise_check",
+      "definition": "CHECK (floor_paise >= 0)"
+    },
+    {
+      "key": "public.cycle_buckets.cycle_buckets_pkey",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "key": "public.cycle_buckets.cycle_buckets_spent_paise_check",
+      "definition": "CHECK (spent_paise >= 0)"
+    },
+    {
+      "key": "public.cycle_buckets.cycle_buckets_user_id_bucket_id_fkey",
+      "definition": "FOREIGN KEY (user_id, bucket_id) REFERENCES buckets(user_id, id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.cycle_buckets.cycle_buckets_user_id_cycle_id_bucket_id_key",
+      "definition": "UNIQUE (user_id, cycle_id, bucket_id)"
+    },
+    {
+      "key": "public.cycle_buckets.cycle_buckets_user_id_cycle_id_fkey",
+      "definition": "FOREIGN KEY (user_id, cycle_id) REFERENCES pay_cycles(user_id, id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.cycle_buckets.cycle_buckets_user_id_fkey",
+      "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.cycle_buckets.cycle_buckets_user_id_id_key",
+      "definition": "UNIQUE (user_id, id)"
+    },
+    {
+      "key": "public.cycle_obligations.cycle_obligations_check",
+      "definition": "CHECK (unpaid_paise >= 0 AND unpaid_paise <= due_paise)"
+    },
+    {
+      "key": "public.cycle_obligations.cycle_obligations_due_paise_check",
+      "definition": "CHECK (due_paise > 0)"
+    },
+    {
+      "key": "public.cycle_obligations.cycle_obligations_pkey",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "key": "public.cycle_obligations.cycle_obligations_user_id_cycle_id_fkey",
+      "definition": "FOREIGN KEY (user_id, cycle_id) REFERENCES pay_cycles(user_id, id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.cycle_obligations.cycle_obligations_user_id_cycle_id_obligation_id_key",
+      "definition": "UNIQUE (user_id, cycle_id, obligation_id)"
+    },
+    {
+      "key": "public.cycle_obligations.cycle_obligations_user_id_fkey",
+      "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.cycle_obligations.cycle_obligations_user_id_id_key",
+      "definition": "UNIQUE (user_id, id)"
+    },
+    {
+      "key": "public.cycle_obligations.cycle_obligations_user_id_obligation_id_fkey",
+      "definition": "FOREIGN KEY (user_id, obligation_id) REFERENCES obligations(user_id, id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.financial_profiles.financial_profiles_current_liquid_balance_paise_check",
+      "definition": "CHECK (current_liquid_balance_paise >= 0)"
+    },
+    {
+      "key": "public.financial_profiles.financial_profiles_pkey",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "key": "public.financial_profiles.financial_profiles_revision_check",
+      "definition": "CHECK (revision >= 0)"
+    },
+    {
+      "key": "public.financial_profiles.financial_profiles_salary_credit_day_check",
+      "definition": "CHECK (salary_credit_day >= 1 AND salary_credit_day <= 31)"
+    },
+    {
+      "key": "public.financial_profiles.financial_profiles_sustainable_net_income_paise_check",
+      "definition": "CHECK (sustainable_net_income_paise > 0)"
+    },
+    {
+      "key": "public.financial_profiles.financial_profiles_user_id_fkey",
+      "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.financial_profiles.financial_profiles_user_id_id_key",
+      "definition": "UNIQUE (user_id, id)"
+    },
+    {
+      "key": "public.financial_profiles.financial_profiles_user_id_key",
+      "definition": "UNIQUE (user_id)"
+    },
+    {
+      "key": "public.obligations.obligations_amount_paise_check",
+      "definition": "CHECK (amount_paise > 0)"
+    },
+    {
+      "key": "public.obligations.obligations_pkey",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "key": "public.obligations.obligations_user_id_fkey",
+      "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.obligations.obligations_user_id_id_key",
+      "definition": "UNIQUE (user_id, id)"
+    },
+    {
+      "key": "public.operation_log.operation_log_operation_id_check",
+      "definition": "CHECK (operation_id::text ~ '^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$'::text)"
+    },
+    {
+      "key": "public.operation_log.operation_log_pkey",
+      "definition": "PRIMARY KEY (user_id, operation_id)"
+    },
+    {
+      "key": "public.operation_log.operation_log_user_id_fkey",
+      "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_budget_basis_check",
+      "definition": "CHECK (budget_basis = ANY (ARRAY['declared_initial'::text, 'confirmed_salary'::text]))"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_carried_commitment_paise_check",
+      "definition": "CHECK (carried_commitment_paise >= 0)"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_cash_outflows_paise_check",
+      "definition": "CHECK (cash_outflows_paise >= 0)"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_check",
+      "definition": "CHECK (expected_payday >= opened_on)"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_check1",
+      "definition": "CHECK (budget_basis = 'declared_initial'::text AND cycle_income_paise IS NULL OR budget_basis = 'confirmed_salary'::text AND cycle_income_paise IS NOT NULL)"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_confirmed_inflows_paise_check",
+      "definition": "CHECK (confirmed_inflows_paise >= 0)"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_cycle_income_paise_check",
+      "definition": "CHECK (cycle_income_paise >= 0)"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_goal_cycle_paise_check",
+      "definition": "CHECK (goal_cycle_paise >= 0)"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_goal_held_paise_check",
+      "definition": "CHECK (goal_held_paise >= 0)"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_new_commitment_paise_check",
+      "definition": "CHECK (new_commitment_paise >= 0)"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_opening_budget_paise_check",
+      "definition": "CHECK (opening_budget_paise >= 0)"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_opening_cash_paise_check",
+      "definition": "CHECK (opening_cash_paise >= 0)"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_pkey",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_spent_paise_check",
+      "definition": "CHECK (spent_paise >= 0)"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_user_id_fkey",
+      "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_user_id_id_key",
+      "definition": "UNIQUE (user_id, id)"
+    },
+    {
+      "key": "public.transactions.transactions_amount_paise_check",
+      "definition": "CHECK (amount_paise > 0)"
+    },
+    {
+      "key": "public.transactions.transactions_bucket_owner",
+      "definition": "FOREIGN KEY (user_id, bucket_id) REFERENCES buckets(user_id, id) DEFERRABLE"
+    },
+    {
+      "key": "public.transactions.transactions_confidence_tier_check",
+      "definition": "CHECK (confidence_tier::text = ANY (ARRAY['HIGH'::character varying, 'MEDIUM'::character varying, 'LOW'::character varying]::text[]))"
+    },
+    {
+      "key": "public.transactions.transactions_cycle_bucket_owner",
+      "definition": "FOREIGN KEY (user_id, cycle_id, bucket_id) REFERENCES cycle_buckets(user_id, cycle_id, bucket_id) DEFERRABLE"
+    },
+    {
+      "key": "public.transactions.transactions_pkey",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "key": "public.transactions.transactions_user_id_cycle_id_fkey",
+      "definition": "FOREIGN KEY (user_id, cycle_id) REFERENCES pay_cycles(user_id, id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.transactions.transactions_user_id_fkey",
+      "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.transactions.transactions_user_id_id_key",
+      "definition": "UNIQUE (user_id, id)"
+    },
+    {
+      "key": "public.transactions.transactions_user_id_operation_id_fkey",
+      "definition": "FOREIGN KEY (user_id, operation_id) REFERENCES operation_log(user_id, operation_id) DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "key": "public.transactions.transactions_user_id_operation_id_key",
+      "definition": "UNIQUE (user_id, operation_id)"
+    },
+    {
+      "key": "public.users.users_email_key",
+      "definition": "UNIQUE (email)"
+    },
+    {
+      "key": "public.users.users_health_state_check",
+      "definition": "CHECK (health_state::text = ANY (ARRAY['STATE_A_HEALTHY'::character varying, 'STATE_B_BUDGET_EXHAUSTED'::character varying, 'STATE_C_DISTRESS'::character varying]::text[]))"
+    },
+    {
+      "key": "public.users.users_id_fkey",
+      "definition": "FOREIGN KEY (id) REFERENCES auth.users(id) ON DELETE CASCADE"
+    },
+    {
+      "key": "public.users.users_onboarding_step_check",
+      "definition": "CHECK (onboarding_step >= 1 AND onboarding_step <= 2)"
+    },
+    {
+      "key": "public.users.users_pkey",
+      "definition": "PRIMARY KEY (id)"
+    }
+  ],
+  "policies": [
+    {
+      "key": "public.buckets.caller_owned",
+      "command": "ALL",
+      "roles": [
+        "phron_writer"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))"
+    },
+    {
+      "key": "public.buckets.own_read",
+      "command": "SELECT",
+      "roles": [
+        "authenticated"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": null
+    },
+    {
+      "key": "public.card_liability_payments.caller_owned",
+      "command": "ALL",
+      "roles": [
+        "phron_writer"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))"
+    },
+    {
+      "key": "public.card_liability_payments.own_read",
+      "command": "SELECT",
+      "roles": [
+        "authenticated"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": null
+    },
+    {
+      "key": "public.card_payment_allocations.caller_owned",
+      "command": "ALL",
+      "roles": [
+        "phron_writer"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))"
+    },
+    {
+      "key": "public.card_payment_allocations.own_read",
+      "command": "SELECT",
+      "roles": [
+        "authenticated"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": null
+    },
+    {
+      "key": "public.cycle_buckets.caller_owned",
+      "command": "ALL",
+      "roles": [
+        "phron_writer"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))"
+    },
+    {
+      "key": "public.cycle_buckets.own_read",
+      "command": "SELECT",
+      "roles": [
+        "authenticated"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": null
+    },
+    {
+      "key": "public.cycle_obligations.caller_owned",
+      "command": "ALL",
+      "roles": [
+        "phron_writer"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))"
+    },
+    {
+      "key": "public.cycle_obligations.own_read",
+      "command": "SELECT",
+      "roles": [
+        "authenticated"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": null
+    },
+    {
+      "key": "public.financial_profiles.caller_owned",
+      "command": "ALL",
+      "roles": [
+        "phron_writer"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))"
+    },
+    {
+      "key": "public.financial_profiles.own_read",
+      "command": "SELECT",
+      "roles": [
+        "authenticated"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": null
+    },
+    {
+      "key": "public.obligations.caller_owned",
+      "command": "ALL",
+      "roles": [
+        "phron_writer"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))"
+    },
+    {
+      "key": "public.obligations.own_read",
+      "command": "SELECT",
+      "roles": [
+        "authenticated"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": null
+    },
+    {
+      "key": "public.operation_log.caller_owned",
+      "command": "ALL",
+      "roles": [
+        "phron_writer"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))"
+    },
+    {
+      "key": "public.pay_cycles.caller_owned",
+      "command": "ALL",
+      "roles": [
+        "phron_writer"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))"
+    },
+    {
+      "key": "public.pay_cycles.own_read",
+      "command": "SELECT",
+      "roles": [
+        "authenticated"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": null
+    },
+    {
+      "key": "public.transactions.caller_owned",
+      "command": "ALL",
+      "roles": [
+        "phron_writer"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": "((( SELECT auth.uid() AS uid) = user_id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))"
+    },
+    {
+      "key": "public.transactions.own_read",
+      "command": "SELECT",
+      "roles": [
+        "authenticated"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = user_id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": null
+    },
+    {
+      "key": "public.users.caller_owned",
+      "command": "ALL",
+      "roles": [
+        "phron_writer"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": "((( SELECT auth.uid() AS uid) = id) AND (( SELECT (auth.jwt() ->> 'role'::text)) = 'authenticated'::text) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))"
+    },
+    {
+      "key": "public.users.own_read",
+      "command": "SELECT",
+      "roles": [
+        "authenticated"
+      ],
+      "using": "((( SELECT auth.uid() AS uid) = id) AND (NOT COALESCE(( SELECT ((auth.jwt() ->> 'is_anonymous'::text))::boolean AS bool), false)))",
+      "with_check": null
+    }
+  ],
+  "routines": [
+    {
+      "key": "phron_private.caller_claims()",
+      "definition_md5": "2431c8eeb5eb94ee3ae8c10249eab811",
+      "owner": "phron_writer",
+      "definer": false,
+      "config": [
+        "search_path=\"\""
+      ],
+      "acl": "{phron_writer=X/phron_writer}"
+    },
+    {
+      "key": "phron_private.caller_id()",
+      "definition_md5": "4227a7cc0b627e026b8979a0ef98d183",
+      "owner": "phron_writer",
+      "definer": false,
+      "config": [
+        "search_path=\"\""
+      ],
+      "acl": "{phron_writer=X/phron_writer}"
+    },
+    {
+      "key": "phron_private.current_state()",
+      "definition_md5": "6c5f2535f52d16eaaaa4a9b5427510b9",
+      "owner": "phron_writer",
+      "definer": true,
+      "config": [
+        "search_path=\"\"",
+        "lock_timeout=2s"
+      ],
+      "acl": "{phron_writer=X/phron_writer,authenticated=X/phron_writer}"
+    },
+    {
+      "key": "phron_private.keys(v jsonb, expected text[])",
+      "definition_md5": "972277e62bf2133254c9d758d4ea7a75",
+      "owner": "phron_writer",
+      "definer": false,
+      "config": [
+        "search_path=\"\""
+      ],
+      "acl": "{phron_writer=X/phron_writer}"
+    },
+    {
+      "key": "phron_private.money(v jsonb)",
+      "definition_md5": "963016c52d365d56e0532f0f34241db5",
+      "owner": "phron_writer",
+      "definer": false,
+      "config": [
+        "search_path=\"\""
+      ],
+      "acl": "{phron_writer=X/phron_writer}"
+    },
+    {
+      "key": "phron_private.mutate(kind text, op uuid, expected text, input jsonb)",
+      "definition_md5": "289c6080d2506e0d9e60b7665f1b4ed9",
+      "owner": "phron_writer",
+      "definer": true,
+      "config": [
+        "search_path=\"\"",
+        "lock_timeout=2s"
+      ],
+      "acl": "{phron_writer=X/phron_writer,authenticated=X/phron_writer}"
+    },
+    {
+      "key": "phron_private.read_snapshot()",
+      "definition_md5": "ac766a04ec63fd97507992bc0d8ce79f",
+      "owner": "phron_writer",
+      "definer": false,
+      "config": [
+        "search_path=\"\""
+      ],
+      "acl": "{phron_writer=X/phron_writer}"
+    },
+    {
+      "key": "phron_private.snapshot()",
+      "definition_md5": "89273d403894ab894da33ff085db71de",
+      "owner": "phron_writer",
+      "definer": false,
+      "config": [
+        "search_path=\"\""
+      ],
+      "acl": "{phron_writer=X/phron_writer}"
+    },
+    {
+      "key": "public.phron_current_state()",
+      "definition_md5": "8093de04e83505c10d096addde29b7db",
+      "owner": "postgres",
+      "definer": false,
+      "config": [
+        "search_path=\"\""
+      ],
+      "acl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+    },
+    {
+      "key": "public.phron_manual_spend(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+      "definition_md5": "429b631e3d64e19349aa34a5785e4bc0",
+      "owner": "postgres",
+      "definer": false,
+      "config": [
+        "search_path=\"\""
+      ],
+      "acl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+    },
+    {
+      "key": "public.phron_onboard(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+      "definition_md5": "444a15bb36cf0a9c066dd207834985c7",
+      "owner": "postgres",
+      "definer": false,
+      "config": [
+        "search_path=\"\""
+      ],
+      "acl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+    }
+  ],
+  "triggers": null,
+  "grants": [
+    {
+      "key": "public.buckets.phron_writer.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.buckets.phron_writer.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.buckets.phron_writer.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.buckets.postgres.DELETE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.buckets.postgres.INSERT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.buckets.postgres.REFERENCES",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.buckets.postgres.SELECT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.buckets.postgres.TRIGGER",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.buckets.postgres.TRUNCATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.buckets.postgres.UPDATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.buckets.service_role.DELETE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.buckets.service_role.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.buckets.service_role.REFERENCES",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.buckets.service_role.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.buckets.service_role.TRIGGER",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.buckets.service_role.TRUNCATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.buckets.service_role.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.card_liability_payments.phron_writer.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.card_liability_payments.postgres.DELETE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.card_liability_payments.postgres.INSERT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.card_liability_payments.postgres.REFERENCES",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.card_liability_payments.postgres.SELECT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.card_liability_payments.postgres.TRIGGER",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.card_liability_payments.postgres.TRUNCATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.card_liability_payments.postgres.UPDATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.card_liability_payments.service_role.DELETE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.card_liability_payments.service_role.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.card_liability_payments.service_role.REFERENCES",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.card_liability_payments.service_role.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.card_liability_payments.service_role.TRIGGER",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.card_liability_payments.service_role.TRUNCATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.card_liability_payments.service_role.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.card_payment_allocations.phron_writer.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.card_payment_allocations.postgres.DELETE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.card_payment_allocations.postgres.INSERT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.card_payment_allocations.postgres.REFERENCES",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.card_payment_allocations.postgres.SELECT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.card_payment_allocations.postgres.TRIGGER",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.card_payment_allocations.postgres.TRUNCATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.card_payment_allocations.postgres.UPDATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.card_payment_allocations.service_role.DELETE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.card_payment_allocations.service_role.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.card_payment_allocations.service_role.REFERENCES",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.card_payment_allocations.service_role.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.card_payment_allocations.service_role.TRIGGER",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.card_payment_allocations.service_role.TRUNCATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.card_payment_allocations.service_role.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_buckets.phron_writer.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_buckets.phron_writer.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_buckets.phron_writer.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_buckets.postgres.DELETE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.cycle_buckets.postgres.INSERT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.cycle_buckets.postgres.REFERENCES",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.cycle_buckets.postgres.SELECT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.cycle_buckets.postgres.TRIGGER",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.cycle_buckets.postgres.TRUNCATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.cycle_buckets.postgres.UPDATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.cycle_buckets.service_role.DELETE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_buckets.service_role.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_buckets.service_role.REFERENCES",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_buckets.service_role.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_buckets.service_role.TRIGGER",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_buckets.service_role.TRUNCATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_buckets.service_role.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_obligations.phron_writer.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_obligations.phron_writer.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_obligations.phron_writer.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_obligations.postgres.DELETE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.cycle_obligations.postgres.INSERT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.cycle_obligations.postgres.REFERENCES",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.cycle_obligations.postgres.SELECT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.cycle_obligations.postgres.TRIGGER",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.cycle_obligations.postgres.TRUNCATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.cycle_obligations.postgres.UPDATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.cycle_obligations.service_role.DELETE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_obligations.service_role.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_obligations.service_role.REFERENCES",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_obligations.service_role.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_obligations.service_role.TRIGGER",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_obligations.service_role.TRUNCATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.cycle_obligations.service_role.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.financial_profiles.phron_writer.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.financial_profiles.phron_writer.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.financial_profiles.phron_writer.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.financial_profiles.postgres.DELETE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.financial_profiles.postgres.INSERT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.financial_profiles.postgres.REFERENCES",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.financial_profiles.postgres.SELECT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.financial_profiles.postgres.TRIGGER",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.financial_profiles.postgres.TRUNCATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.financial_profiles.postgres.UPDATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.financial_profiles.service_role.DELETE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.financial_profiles.service_role.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.financial_profiles.service_role.REFERENCES",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.financial_profiles.service_role.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.financial_profiles.service_role.TRIGGER",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.financial_profiles.service_role.TRUNCATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.financial_profiles.service_role.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.obligations.phron_writer.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.obligations.phron_writer.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.obligations.phron_writer.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.obligations.postgres.DELETE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.obligations.postgres.INSERT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.obligations.postgres.REFERENCES",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.obligations.postgres.SELECT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.obligations.postgres.TRIGGER",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.obligations.postgres.TRUNCATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.obligations.postgres.UPDATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.obligations.service_role.DELETE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.obligations.service_role.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.obligations.service_role.REFERENCES",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.obligations.service_role.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.obligations.service_role.TRIGGER",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.obligations.service_role.TRUNCATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.obligations.service_role.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.operation_log.phron_writer.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.operation_log.phron_writer.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.operation_log.postgres.DELETE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.operation_log.postgres.INSERT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.operation_log.postgres.REFERENCES",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.operation_log.postgres.SELECT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.operation_log.postgres.TRIGGER",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.operation_log.postgres.TRUNCATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.operation_log.postgres.UPDATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.operation_log.service_role.DELETE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.operation_log.service_role.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.operation_log.service_role.REFERENCES",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.operation_log.service_role.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.operation_log.service_role.TRIGGER",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.operation_log.service_role.TRUNCATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.operation_log.service_role.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.pay_cycles.phron_writer.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.pay_cycles.phron_writer.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.pay_cycles.phron_writer.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.pay_cycles.postgres.DELETE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.pay_cycles.postgres.INSERT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.pay_cycles.postgres.REFERENCES",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.pay_cycles.postgres.SELECT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.pay_cycles.postgres.TRIGGER",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.pay_cycles.postgres.TRUNCATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.pay_cycles.postgres.UPDATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.pay_cycles.service_role.DELETE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.pay_cycles.service_role.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.pay_cycles.service_role.REFERENCES",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.pay_cycles.service_role.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.pay_cycles.service_role.TRIGGER",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.pay_cycles.service_role.TRUNCATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.pay_cycles.service_role.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.transactions.phron_writer.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.transactions.phron_writer.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.transactions.phron_writer.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.transactions.postgres.DELETE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.transactions.postgres.INSERT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.transactions.postgres.REFERENCES",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.transactions.postgres.SELECT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.transactions.postgres.TRIGGER",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.transactions.postgres.TRUNCATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.transactions.postgres.UPDATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.transactions.service_role.DELETE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.transactions.service_role.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.transactions.service_role.REFERENCES",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.transactions.service_role.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.transactions.service_role.TRIGGER",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.transactions.service_role.TRUNCATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.transactions.service_role.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.users.phron_writer.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.users.phron_writer.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.users.phron_writer.UPDATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.users.postgres.DELETE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.users.postgres.INSERT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.users.postgres.REFERENCES",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.users.postgres.SELECT",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.users.postgres.TRIGGER",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.users.postgres.TRUNCATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.users.postgres.UPDATE",
+      "grantable": "YES"
+    },
+    {
+      "key": "public.users.service_role.DELETE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.users.service_role.INSERT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.users.service_role.REFERENCES",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.users.service_role.SELECT",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.users.service_role.TRIGGER",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.users.service_role.TRUNCATE",
+      "grantable": "NO"
+    },
+    {
+      "key": "public.users.service_role.UPDATE",
+      "grantable": "NO"
+    }
+  ],
+  "indexes": [
+    {
+      "key": "public.buckets.buckets_pkey",
+      "definition": "CREATE UNIQUE INDEX buckets_pkey ON public.buckets USING btree (id)"
+    },
+    {
+      "key": "public.buckets.buckets_user_id_id_key",
+      "definition": "CREATE UNIQUE INDEX buckets_user_id_id_key ON public.buckets USING btree (user_id, id)"
+    },
+    {
+      "key": "public.card_liability_payments.card_liability_payments_pkey",
+      "definition": "CREATE UNIQUE INDEX card_liability_payments_pkey ON public.card_liability_payments USING btree (user_id, id)"
+    },
+    {
+      "key": "public.card_liability_payments.card_payments_cycle_parent",
+      "definition": "CREATE INDEX card_payments_cycle_parent ON public.card_liability_payments USING btree (user_id, cycle_id)"
+    },
+    {
+      "key": "public.card_payment_allocations.card_allocations_purchase_parent",
+      "definition": "CREATE INDEX card_allocations_purchase_parent ON public.card_payment_allocations USING btree (user_id, purchase_transaction_id)"
+    },
+    {
+      "key": "public.card_payment_allocations.card_payment_allocations_pkey",
+      "definition": "CREATE UNIQUE INDEX card_payment_allocations_pkey ON public.card_payment_allocations USING btree (id)"
+    },
+    {
+      "key": "public.card_payment_allocations.card_payment_allocations_user_id_id_key",
+      "definition": "CREATE UNIQUE INDEX card_payment_allocations_user_id_id_key ON public.card_payment_allocations USING btree (user_id, id)"
+    },
+    {
+      "key": "public.card_payment_allocations.card_payment_allocations_user_id_payment_id_purchase_transa_key",
+      "definition": "CREATE UNIQUE INDEX card_payment_allocations_user_id_payment_id_purchase_transa_key ON public.card_payment_allocations USING btree (user_id, payment_id, purchase_transaction_id)"
+    },
+    {
+      "key": "public.cycle_buckets.cycle_buckets_parent",
+      "definition": "CREATE INDEX cycle_buckets_parent ON public.cycle_buckets USING btree (user_id, bucket_id)"
+    },
+    {
+      "key": "public.cycle_buckets.cycle_buckets_pkey",
+      "definition": "CREATE UNIQUE INDEX cycle_buckets_pkey ON public.cycle_buckets USING btree (id)"
+    },
+    {
+      "key": "public.cycle_buckets.cycle_buckets_user_id_cycle_id_bucket_id_key",
+      "definition": "CREATE UNIQUE INDEX cycle_buckets_user_id_cycle_id_bucket_id_key ON public.cycle_buckets USING btree (user_id, cycle_id, bucket_id)"
+    },
+    {
+      "key": "public.cycle_buckets.cycle_buckets_user_id_id_key",
+      "definition": "CREATE UNIQUE INDEX cycle_buckets_user_id_id_key ON public.cycle_buckets USING btree (user_id, id)"
+    },
+    {
+      "key": "public.cycle_obligations.cycle_obligations_parent",
+      "definition": "CREATE INDEX cycle_obligations_parent ON public.cycle_obligations USING btree (user_id, obligation_id)"
+    },
+    {
+      "key": "public.cycle_obligations.cycle_obligations_pkey",
+      "definition": "CREATE UNIQUE INDEX cycle_obligations_pkey ON public.cycle_obligations USING btree (id)"
+    },
+    {
+      "key": "public.cycle_obligations.cycle_obligations_user_id_cycle_id_obligation_id_key",
+      "definition": "CREATE UNIQUE INDEX cycle_obligations_user_id_cycle_id_obligation_id_key ON public.cycle_obligations USING btree (user_id, cycle_id, obligation_id)"
+    },
+    {
+      "key": "public.cycle_obligations.cycle_obligations_user_id_id_key",
+      "definition": "CREATE UNIQUE INDEX cycle_obligations_user_id_id_key ON public.cycle_obligations USING btree (user_id, id)"
+    },
+    {
+      "key": "public.financial_profiles.financial_profiles_pkey",
+      "definition": "CREATE UNIQUE INDEX financial_profiles_pkey ON public.financial_profiles USING btree (id)"
+    },
+    {
+      "key": "public.financial_profiles.financial_profiles_user_id_id_key",
+      "definition": "CREATE UNIQUE INDEX financial_profiles_user_id_id_key ON public.financial_profiles USING btree (user_id, id)"
+    },
+    {
+      "key": "public.financial_profiles.financial_profiles_user_id_key",
+      "definition": "CREATE UNIQUE INDEX financial_profiles_user_id_key ON public.financial_profiles USING btree (user_id)"
+    },
+    {
+      "key": "public.obligations.obligations_pkey",
+      "definition": "CREATE UNIQUE INDEX obligations_pkey ON public.obligations USING btree (id)"
+    },
+    {
+      "key": "public.obligations.obligations_user_id_id_key",
+      "definition": "CREATE UNIQUE INDEX obligations_user_id_id_key ON public.obligations USING btree (user_id, id)"
+    },
+    {
+      "key": "public.operation_log.operation_log_pkey",
+      "definition": "CREATE UNIQUE INDEX operation_log_pkey ON public.operation_log USING btree (user_id, operation_id)"
+    },
+    {
+      "key": "public.pay_cycles.one_active_cycle_per_user",
+      "definition": "CREATE UNIQUE INDEX one_active_cycle_per_user ON public.pay_cycles USING btree (user_id) WHERE active"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_pkey",
+      "definition": "CREATE UNIQUE INDEX pay_cycles_pkey ON public.pay_cycles USING btree (id)"
+    },
+    {
+      "key": "public.pay_cycles.pay_cycles_user_id_id_key",
+      "definition": "CREATE UNIQUE INDEX pay_cycles_user_id_id_key ON public.pay_cycles USING btree (user_id, id)"
+    },
+    {
+      "key": "public.transactions.transactions_bucket_parent",
+      "definition": "CREATE INDEX transactions_bucket_parent ON public.transactions USING btree (user_id, bucket_id)"
+    },
+    {
+      "key": "public.transactions.transactions_cycle_parent",
+      "definition": "CREATE INDEX transactions_cycle_parent ON public.transactions USING btree (user_id, cycle_id, bucket_id)"
+    },
+    {
+      "key": "public.transactions.transactions_pkey",
+      "definition": "CREATE UNIQUE INDEX transactions_pkey ON public.transactions USING btree (id)"
+    },
+    {
+      "key": "public.transactions.transactions_user_id_id_key",
+      "definition": "CREATE UNIQUE INDEX transactions_user_id_id_key ON public.transactions USING btree (user_id, id)"
+    },
+    {
+      "key": "public.transactions.transactions_user_id_operation_id_key",
+      "definition": "CREATE UNIQUE INDEX transactions_user_id_operation_id_key ON public.transactions USING btree (user_id, operation_id)"
+    },
+    {
+      "key": "public.users.users_email_key",
+      "definition": "CREATE UNIQUE INDEX users_email_key ON public.users USING btree (email)"
+    },
+    {
+      "key": "public.users.users_pkey",
+      "definition": "CREATE UNIQUE INDEX users_pkey ON public.users USING btree (id)"
+    }
+  ]
+}

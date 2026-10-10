@@ -1,0 +1,15 @@
+{
+  "build_guard_red": 1,
+  "build_guard_green": 0,
+  "npm_run_check": 0,
+  "domain_coverage": 0,
+  "production_build_sandbox": 1,
+  "production_build_host": 0,
+  "sources": 0,
+  "remote_catalog_query": "SUCCESS_READ_ONLY",
+  "remote_full_parity": "FAIL_22_PENDING",
+  "remote_ddl": "NOT_RUN",
+  "deployment": "NOT_RUN",
+  "source_application_base": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+  "release_config_commit": "f4857268a7bc2d31c7f006ae8c098ce63e33bf26"
+}

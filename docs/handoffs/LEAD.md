@@ -1,3 +1,13 @@
+# PH27 production preparation / migration blocker — 2026-10-11 IST
+
+Release configuration f4857268a7bc2d31c7f006ae8c098ce63e33bf26; accepted app base36ca7380dfb2235d5556242f59c93da18c98bf04 unchanged. Production guard requires exact HTTPS PHRON_APP_ORIGIN, no inert bootstrap bypass;10testsPASS.458unit/152mocked integration/202domain, collected contract/domain100%, lint/types/source/build PASS; host Production build PASS after documented EPERM. Resolve final documentation HEAD via git log. Scratch untouched.
+
+Supabase Free/active/belowlimits confirmed by Tejas. Read-only remote PostgreSQL17.11/11tableRLS verified. PH11/PH12logical migrations map to server20261007075021/20261007075032; baseline SQL normalized/full comparisons match.22pending migrations, missing12public+3private tables and44functions; full parityFAIL. No DDL/account changes/data loss/finance mutations/deployment. [Audit](../evidence/PH27/REMOTE_RECONCILIATION.md), [conditional Production command + PH28 checklist](../DEPLOYMENT.md). G5/V3remainPASSED, G0B/D25/G6pending.
+
+Next one action: review and authorize pinned22pending remote SQL only after secure backup/restore readiness. Then apply sequentially and verify ordinary-user RLS/RPC before deploy. No fabricated deployment of unchanged36ca738: the guard change is newconfigcommitf485726. Do not startPH28 before actualdeployment, or infer a global Production release authorization from configuration/audit task.
+
+---
+
 # PH27 / Release preparation handoff — 2026-10-11 IST
 
 Tejas explicitly accepts **PHRON-V3-01 /36ca738**. V3 ACCEPTED; G5 PASSED; PH26 COMPLETE; Phase6/current PH27. [Acceptance](../evidence/V3/ACCEPTANCE.md), [specification](../DEPLOYMENT.md), [preflight](../evidence/PH27/PREFLIGHT.md). Application target36ca7380dfb2235d5556242f59c93da18c98bf04; branchmain/repositoryW:/AI Product Sprint/Phron. Resolve documentation HEAD from git log; application/package/lock/SQL/source equality checked, source5/5PASS. Scratch untouched.

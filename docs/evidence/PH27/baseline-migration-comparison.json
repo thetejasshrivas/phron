@@ -1,0 +1,22 @@
+[
+  {
+    "local_file": "20261006104126_ph11_core_transactions.sql",
+    "remote_version": "20261007075021",
+    "logical_name": "ph11_core_transactions",
+    "remote_md5": "002abe6ffe41138ce240edfe6c33dbfa",
+    "local_md5_raw": "b0dada329d69c585bd0bcabc97056c01",
+    "local_md5_lf": "b0dada329d69c585bd0bcabc97056c01",
+    "matches_raw": false,
+    "matches_lf": false
+  },
+  {
+    "local_file": "20261007060205_ph12_authorized_snapshot_read.sql",
+    "remote_version": "20261007075032",
+    "logical_name": "ph12_authorized_snapshot_read",
+    "remote_md5": "6b65e12b723245b1825f17307eb3e6f3",
+    "local_md5_raw": "6b65e12b723245b1825f17307eb3e6f3",
+    "local_md5_lf": "6b65e12b723245b1825f17307eb3e6f3",
+    "matches_raw": true,
+    "matches_lf": true
+  }
+]

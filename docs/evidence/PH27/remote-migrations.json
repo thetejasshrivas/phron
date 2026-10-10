@@ -1,0 +1,16 @@
+{
+  "project": "kavuwjngrtqavtmxyvsq",
+  "readOnly": true,
+  "rows": [
+    {
+      "version": "20261007075021",
+      "name": "ph11_core_transactions",
+      "recorded_sql_md5": "002abe6ffe41138ce240edfe6c33dbfa"
+    },
+    {
+      "version": "20261007075032",
+      "name": "ph12_authorized_snapshot_read",
+      "recorded_sql_md5": "6b65e12b723245b1825f17307eb3e6f3"
+    }
+  ]
+}

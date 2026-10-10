@@ -1,0 +1,18 @@
+✔ Preview remains supported (236.3916ms)
+✔ Production accepts an explicit HTTPS application origin (257.9968ms)
+✔ Production rejects unsafe or absent origin: missing (47.3ms)
+✔ Production rejects unsafe or absent origin: http://phron.example (50.8373ms)
+✔ Production rejects unsafe or absent origin: https://user:password@phron.example (44.1719ms)
+✔ Production rejects unsafe or absent origin: https://phron.example/path (47.0449ms)
+✔ Production rejects unsafe or absent origin: https://phron.example?next=x (45.8623ms)
+✔ Production rejects unsafe or absent origin: https://localhost (43.6923ms)
+✔ Former inert bootstrap flag cannot bypass production origin validation (47.3023ms)
+✔ Unknown deployment environment is rejected (44.7727ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 934.938

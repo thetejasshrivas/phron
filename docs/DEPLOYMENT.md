@@ -1,3 +1,46 @@
+# PH27 Production candidate update — 2026-10-11 IST
+
+**Production guard lifted and tested; deployment HOLD due to missing remote schema.** This update supersedes the earlier Preview-only preparation statement below.
+
+- Accepted visual/financial application base: **36ca7380dfb2235d5556242f59c93da18c98bf04**.
+- Actual production-capable release configuration: **f4857268a7bc2d31c7f006ae8c098ce63e33bf26**, main. It changes only the build script and ten guard tests. Commit36ca738 itself still contains the Preview-only guard; it cannot be described as the revised production-capable commit. Product src,24SQL files, package/lock and frozen sources remain byte-identical to36ca738.
+- Tejas confirms current Supabase **Free / active / below limits**, recorded from explicit PH27 message. Read-only connector confirms Phron project PostgreSQL17.11,11/11existing public tables RLS active. **Full schema parity FAIL:** onlyPH11/12applied,22pending candidates. [Complete reconciliation](evidence/PH27/REMOTE_RECONCILIATION.md) and [object differences](evidence/PH27/schema-diff.json). No DDL/data loss/finance writes; data preservation established only for our read-only audit, not for unexecuted future migrations.
+- Production guard now accepts VERCEL_ENV=production only with a validated exact HTTPS PHRON_APP_ORIGIN (no path/query/credentials/loopback); Preview behavior preserved, Node24/npm11.19 retained. Former skeleton bootstrap flag retired. Existing npm run build:preview name retained as the shared Vercel deployment build command; no package/lock change or extra flag needed.
+- Fresh458unit/152mocked integration/202domain plus10guard cases PASS; collected contract/domain100%, lint/types/build/source hashes PASS. Production-mode build initially hit known Windows _not-found EPERM; authorized host rerun PASS with synthetic origin, not live deployment settings.
+
+## Ordered remote operation plan — pending authorization
+
+Target existing Phron kavuwjngrtqavtmxyvsq only. First verify access-controlled off-repository backup and restore coverage without exposing secrets/data. Do not export to committed evidence. Map initial local PH11/12 files to actual remote versions20261007075021/20261007075032: PH11 normalized SQL matches; PH12 raw SQL hash matches. Retain both remote ledger entries; no duplicate replay or blind db push.
+
+Then, only with authorization, apply manifest orders3–24 sequentially with the exact pinned SHA256s below, stopping at any error. Each file's own transaction boundary governs; don't wrap nested BEGIN/COMMIT blindly. Record successful versions before continuing, preserve failed-file rollback, and inspect updated table RLS/policies/foreign-key constraints/RPC signatures/grants. No fixture inserts, fault triggers, pilot enrollment, direct user-role writes or remote reset. Prove ordinary A/B/anonymous access and core conservation under synthetic accounts after schema completion. Full candidate schema is required before uploading an app that calls these RPCs.
+
+## Conditional single deployment command
+
+**DO NOT RUN YET.** Once remote parity/RLS, backup readiness, Vercel zero-cost eligibility/Usage, six Production environment names, actual canonical HTTPS origin and exact Supabase callback, provider disposition and release authorization are verified, run from the correctly linked tts-1e31/phron checkout whose build inputs match f485726:
+
+```powershell
+vercel deploy --prod --scope tts-1e31 --meta phronReleaseCandidate=f4857268a7bc2d31c7f006ae8c098ce63e33bf26 --meta phronVisualRevision=36ca7380dfb2235d5556242f59c93da18c98bf04
+```
+
+Use the already-approved pinned CLI62.4.0 if available; CLI availability/login/link must be reverified (no globally available vercel command found in this shell; no install attempted). The CLI uploads actual checkout files; metadata does not check out a SHA. Verify tracked build-input equality/upload manifest first, exclude docs/env/scratch with .vercelignore, and record actual Git HEAD separately. This command targets Production and assigns configured Production domains; exact project domains/protection and origin must be reviewed beforehand. No --skip-domain, --public, bootstrap flag, env values or secrets passed in command. No command executed here. [Official deploy flags](https://vercel.com/docs/cli/deploy) support --prod/scope/metadata; [environment variables](https://vercel.com/docs/environment-variables) require correct environment scope/redeployment. Hobby remains personal/non-commercial only; current purpose and Vercel limits are not verified by a Supabase account check.
+
+## PH28 — immediately after successful deployment
+
+1. Record deployment URL/ID, actual source/Git/release-base commits, build Node/npm/Next versions,24migration dispositions and environment NAMES; inspect privacy-safe build/runtime logs. Verify exact Production origin/callback and intended domain/protection. No public secrets/test fixtures/source/env paths.
+2. GET /api/health returns200 exact {"status":"ok"},Cache-Control:no-store, no session/secret echo; POST returns405. Root/sign-in and authenticated Home/Visualize/Manage respond cleanly; finance endpoints deny absent/expired/forged sessions. Distinguish Vercel protection access from app authentication.
+3. Disposable ordinary UserA: Google sign-in → Onboarding if no profile → consent/start values → Home; one manual cash spend → saved feedback/authoritative bucket drain+Daily/WeeklySTS → refresh identical saved state. No service-role for finance.
+4. Test extraction with isolated synthetic input and configured provider only after quota/privacy checks; manual fallback when unconfigured/timeout/rate-limited must retain draft and save once. Verify hostile/global-field sentinels never reach external adapter and output cannot mutate balances.
+5. Scenario15: tracked purchase preserves cash; partial/full payment debits cash/releases accrued once; stable retry adds no duplicate; mixed legacy/tracked bill debits cash once; rollover preserves unpaid card liability and historical payment rules.
+6. Ordinary UserB cannot read/mutate A's profile/spends/goals/payments via UI/API/guessed IDs. Confirm rollback/error/retry without false success, no cross-user cache and no duplicate mutations.
+7. Logout terminates access; authenticated Settings deletion of a disposable caller purges all public/private dependencies and session, denies old token/session and preserves the other user. Admin key confined to caller deletion; never printed.
+8. Tejas repeats sign-in/onboard/save/refresh and primary navigation on an actual phone; record device/browser, exact URL/revision and observed result. Local375px captures do not substitute. Keep pilot invitations closed and G6pending until all live/phone checks pass. On failure stop rollout and use the reviewed forward-repair/compatible-app rollback plan below.
+
+Next one action: review/authorize the exact22pending remote migrations with verified backup readiness. No remote migration/deployment authorized or executed by this audit-only request; production configuration preparation was explicitly authorized. No paid option introduced.
+
+---
+
+# Historical PH27 specification (superseded where noted above)
+
 # PH27 release candidate specification — 2026-10-11 IST
 
 **Preparation complete; deployment readiness PENDING.** V3 PHRON-V3-01 ACCEPTED by Tejas at `36ca7380dfb2235d5556242f59c93da18c98bf04`; G5 PASSED. No deployment or remote SQL executed in PH27. This section supersedes historical readiness/pending statements below; historical artifacts remain unchanged.

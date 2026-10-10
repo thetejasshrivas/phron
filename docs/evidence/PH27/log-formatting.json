@@ -1,0 +1,35 @@
+{
+  "note": "Trailing whitespace, terminal blank lines and BOM normalized for clean git diff; all result/error text retained. No test rerun or assertion change.",
+  "logs": [
+    {
+      "file": "build-guard-green.log",
+      "original_sha256": "dd53ab690a11d3a555d0b849c7c3881c804533c7bdca4eb7185c95b71492db0f",
+      "normalized_sha256": "dd53ab690a11d3a555d0b849c7c3881c804533c7bdca4eb7185c95b71492db0f"
+    },
+    {
+      "file": "build-guard-red.log",
+      "original_sha256": "183971a38bbf34b109eaac1e58707398116a93bfee9bf324fde42eda987ad785",
+      "normalized_sha256": "c7ca2e1f24721f9d61f463e1d6da78779f3ef52f85ff2d72e7fac96717ca960f"
+    },
+    {
+      "file": "domain-coverage.log",
+      "original_sha256": "20e54a2a4e86acbb5968c9aa1c6b6932f65f01c29e5c4c228dc1aec704d9adf7",
+      "normalized_sha256": "c683126eb850297cf4511ae01dd834ed1e59d8f1f2ac9ea09594d1735ac8f69d"
+    },
+    {
+      "file": "production-build-host.log",
+      "original_sha256": "5662a7119545b7a7f363ab5de9cb7fd2e0af71eba55ac6a0a9c14fdb4072f230",
+      "normalized_sha256": "f2576424bbe328b57ffb38e43a3d1f6094ec3dca75051b37be648f732a7282f6"
+    },
+    {
+      "file": "production-build.log",
+      "original_sha256": "9ec2c84bbad2aad43bc269d80fa103f1f030b50d6a3cfac8b63b7f9dcf7e4031",
+      "normalized_sha256": "d62cf772cb114431a08a018914aa065f6410ae92076ec8b81322af8558cf0c73"
+    },
+    {
+      "file": "release-check.log",
+      "original_sha256": "b3e0143ef57a3577935c166969be465b52271fb3960e5a9cf00f0984cde7d8ba",
+      "normalized_sha256": "709f7e9cdc686218be198dfe4e652072570dc5d5ec9317c4c945375267c50e01"
+    }
+  ]
+}

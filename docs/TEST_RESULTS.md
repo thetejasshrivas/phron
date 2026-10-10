@@ -1,3 +1,9 @@
+# PH27 production preparation and read-only remote audit — 2026-10-11 IST
+
+[Executed report](evidence/PH27/REMOTE_RECONCILIATION.md):10/10build guard tests;458unit/152mocked integration;202domain; collected contracts/math100%; lint/types/source/build PASS, exits0. Production-mode Windows EPERM exit1 retained; host rerun exit0. Application base36ca738unchanged; configuration f485726. Remote11tableRLS PASS;2logical migrations applied under server timestamps;22pending. Complete schema parity FAIL. No remote DDL/data writes, ordinary-user remote mutation suite, hosted deployment or phone check; these are not claimed PASS. Supabase Free/active/below limits is explicit operator confirmation. G5/V3 acceptance stands; G0B/G6remain pending.
+
+---
+
 # PH27 founder sign-off / Gate G5 closure — 2026-10-11 IST
 
 Tejas explicitly states: **“Tejas accepts V3 — PHRON-V3-01 at commit 36ca738.”** Full application SHA `36ca7380dfb2235d5556242f59c93da18c98bf04`; [sign-off](evidence/V3/ACCEPTANCE.md). V3 ACCEPTED, PH26 COMPLETE and G5 PASSED. This is human approval of the shown visual revision, not automated taste approval.
