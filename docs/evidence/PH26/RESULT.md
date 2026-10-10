@@ -49,6 +49,10 @@ From final/audit.json on36ca738 after the other suites finished:2TTFV samples1.0
 
 Reduced-motion6surface/2save checks, offline2 and controlled503feedback2 pass. Axescans0automated violations; native modal Escape/containment/return focus and chart exact tables/matrix keyboard scroll pass. Contrast remains within verified thresholds. No accidental global horizontal overflow375/768/1280. Actual audible NVDA/Narrator, physical-phone and actual browser text zoom remain NOT RUN; existing generic-container ARIA manual-review advisories are not called certification. Full dev dependency tree24advisory entries(5high/19moderate), production-only0 at PH24; unchanged dependency/lockfile disposition remains, no new audit/upgrade or release exception. Process-local rate limiter is not a distributed quota guarantee. D07card/funding and live provider/Groq account checks remain separately open.
 
+## Closeout
+
+[Closeout record](release/closeout.json): git diff/check clean; staged secret scan0findings/0privileged public identifiers, env example empty. App test ports3108/3109/3110/3111 stopped. V3 gallery200, finance path404; synthetic evidence assets only. Initial sandbox gallery was unreachable(Windows10013/10060); stopped and relaunched through authorized host execution. Scratch untouched.
+
 ## Founder review and next action
 
 **[PHRON-V3-01 review package](../V3/README.md)** and [local gallery](http://127.0.0.1:3112/index.html): Home, Visualize Spending and Buckets & Settings; Healthy, Budget Exhausted and Distress;375/1280.18full-page images plus6Home metric viewport images. Synthetic fixture truth, not fake in-memory finance. Gallery serves only this evidence folder onloopback, with no app/finance endpoint. Audit app servers are stopped; gallery remains for Tejas review. Old hosted preview0f28e49 does not represent this candidate.

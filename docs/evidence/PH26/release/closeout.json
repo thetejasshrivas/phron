@@ -1,0 +1,20 @@
+{
+  "application": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+  "gitDiffCheck": "PASS exit0",
+  "secretScan": "PASS exit0;0findings/0privilegedPublicIdentifiers;envExampleEmpty true",
+  "appTestPorts": {
+    "3108": "stopped",
+    "3109": "stopped",
+    "3110": "stopped",
+    "3111": "stopped"
+  },
+  "gallery": {
+    "origin": "http://127.0.0.1:3112",
+    "indexStatus": 200,
+    "financePathStatus": 404,
+    "scope": "synthetic evidence assets only"
+  },
+  "founderV3": "PENDING",
+  "PH27": "NOT STARTED",
+  "note": "Sandbox-hosted gallery was unreachable (Windows10013/10060). It was stopped and relaunched with authorized host execution, no proxy; loopback checks succeeded."
+}
