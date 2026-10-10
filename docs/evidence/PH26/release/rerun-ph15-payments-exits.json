@@ -1,0 +1,14 @@
+{
+  "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+  "environment": "existing isolated local Supabase55321; ordinary A/B/anonymous credentials; no remote migrations; output-only temporary adapters removed after each command",
+  "results": [
+    {
+      "command": "node tests/integration/ph15/payments.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 36746.3664,
+      "evidence": "docs/evidence/PH26/release/integration-ph15-payments.log",
+      "status": "PASS"
+    }
+  ]
+}

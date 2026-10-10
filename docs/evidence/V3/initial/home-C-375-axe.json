@@ -1,0 +1,1472 @@
+{
+  "key": "home-C-375",
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "nodes": [
+        [
+          ".ledger-list"
+        ]
+      ]
+    }
+  ],
+  "passes": [
+    "aria-allowed-attr",
+    "aria-conditional-attr",
+    "aria-deprecated-role",
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "aria-prohibited-attr",
+    "aria-required-attr",
+    "aria-roles",
+    "aria-valid-attr-value",
+    "aria-valid-attr",
+    "button-name",
+    "bypass",
+    "color-contrast",
+    "document-title",
+    "duplicate-id-aria",
+    "form-field-multiple-labels",
+    "html-has-lang",
+    "html-lang-valid",
+    "label",
+    "link-name",
+    "meta-viewport",
+    "nested-interactive",
+    "role-img-alt",
+    "summary-name",
+    "target-size"
+  ],
+  "contrastPasses": [
+    {
+      "target": [
+        "#capture-title"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "12.0pt (16px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".capture-panel > div:nth-child(1) > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".capture-toggle"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "label[for=\"natural-capture-text\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#natural-capture-text"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".natural-capture-actions > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".manual-capture-panel > summary"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[placeholder=\"100.00\"]"
+      ],
+      "checks": []
+    },
+    {
+      "target": [
+        "input[maxlength=\"100\"]"
+      ],
+      "checks": []
+    },
+    {
+      "target": [
+        "select[name=\"bucket\"]"
+      ],
+      "checks": []
+    },
+    {
+      "target": [
+        "select[name=\"method\"]"
+      ],
+      "checks": []
+    },
+    {
+      "target": [
+        ".preview-bar > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".preview-bar > .text-action"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "header > div > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "7.5pt (10px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "h1"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "24.0pt (32px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#balance-title"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#balance-title > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[name=\"cash\"]"
+      ],
+      "checks": []
+    },
+    {
+      "target": [
+        ".obligation-payments > summary"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "select[name=\"obligation\"]"
+      ],
+      "checks": []
+    },
+    {
+      "target": [
+        "label:nth-child(2) > input[name=\"amount\"][inputmode=\"decimal\"]"
+      ],
+      "checks": []
+    },
+    {
+      "target": [
+        ".surface-feedback > p[role=\"status\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".surface-feedback > .text-action"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#sts-title"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f0e1da",
+          "contrastRatio": 9.49,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".state-label"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f0e1da",
+          "contrastRatio": 9.49,
+          "fontSize": "7.5pt (10px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sts-number"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f0e1da",
+          "contrastRatio": 9.49,
+          "fontSize": "33.0pt (44px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sts-number > span"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f0e1da",
+          "contrastRatio": 5.03,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".weekly-permission"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f0e1da",
+          "contrastRatio": 9.49,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "strong"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f0e1da",
+          "contrastRatio": 9.49,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sts-context"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f0e1da",
+          "contrastRatio": 9.49,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".pool-line > span:nth-child(1)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f0e1da",
+          "contrastRatio": 9.49,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".pool-line > span:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f0e1da",
+          "contrastRatio": 9.49,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".pool-note"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f0e1da",
+          "contrastRatio": 5.03,
+          "fontSize": "7.5pt (10px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".coach-sign"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "25.5pt (34px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".coach-label"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#coach-title"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "18.0pt (24px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".coach-panel > p:nth-child(4)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".coach-panel > .text-action"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#buckets-title"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "20.3pt (27px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#bucket-section > .section-heading > div > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".section-count"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "7.5pt (10px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(1) > .bucket-vessel[role=\"img\"] > .vessel-label[aria-hidden=\"true\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#edf0e6",
+          "contrastRatio": 10.48,
+          "fontSize": "7.5pt (10px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(1) > h3"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(1) > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(1) > small:nth-child(4)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(1) > small:nth-child(5)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(1) > small:nth-child(6)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(1) > small:nth-child(7)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(1) > .paused-label"
+      ],
+      "checks": [
+        {
+          "fgColor": "#933f30",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 6.4,
+          "fontSize": "7.5pt (10px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ochre:nth-child(2) > .bucket-vessel[role=\"img\"] > .vessel-label[aria-hidden=\"true\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#edf0e6",
+          "contrastRatio": 10.48,
+          "fontSize": "7.5pt (10px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ochre:nth-child(2) > h3"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ochre:nth-child(2) > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ochre:nth-child(2) > small:nth-child(4)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ochre:nth-child(2) > small:nth-child(5)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ochre:nth-child(2) > small:nth-child(6)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ochre:nth-child(2) > small:nth-child(7)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ochre:nth-child(2) > .paused-label"
+      ],
+      "checks": [
+        {
+          "fgColor": "#933f30",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 6.4,
+          "fontSize": "7.5pt (10px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(3) > .bucket-vessel[role=\"img\"] > .vessel-label[aria-hidden=\"true\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#edf0e6",
+          "contrastRatio": 10.48,
+          "fontSize": "7.5pt (10px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(3) > h3"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(3) > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(3) > small:nth-child(4)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(3) > small:nth-child(5)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(3) > small:nth-child(6)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(3) > small:nth-child(7)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(3) > .paused-label"
+      ],
+      "checks": [
+        {
+          "fgColor": "#933f30",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 6.4,
+          "fontSize": "7.5pt (10px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ochre:nth-child(4) > .bucket-vessel[role=\"img\"] > .vessel-label[aria-hidden=\"true\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#edf0e6",
+          "contrastRatio": 10.48,
+          "fontSize": "7.5pt (10px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ochre:nth-child(4) > h3"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ochre:nth-child(4) > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ochre:nth-child(4) > small:nth-child(4)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ochre:nth-child(4) > small:nth-child(5)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ochre:nth-child(4) > small:nth-child(6)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ochre:nth-child(4) > small:nth-child(7)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ochre:nth-child(4) > .paused-label"
+      ],
+      "checks": [
+        {
+          "fgColor": "#933f30",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 6.4,
+          "fontSize": "7.5pt (10px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(5) > .bucket-vessel[role=\"img\"] > .vessel-label[aria-hidden=\"true\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#edf0e6",
+          "contrastRatio": 10.48,
+          "fontSize": "7.5pt (10px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(5) > h3"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(5) > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(5) > small:nth-child(4)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(5) > small:nth-child(5)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(5) > small:nth-child(6)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(5) > small:nth-child(7)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "6.8pt (9px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".sage:nth-child(5) > .paused-label"
+      ],
+      "checks": [
+        {
+          "fgColor": "#933f30",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 6.4,
+          "fontSize": "7.5pt (10px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#records-title"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "20.3pt (27px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".card-ledger > .section-heading > div > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".card-reserve"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "12.8pt (17px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".card-reserve > small"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ledger-guidance"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ledger-list > .empty-line"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".ledger-payment > summary"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "11.3pt (15px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "input[min=\"2026-10-11\"]"
+      ],
+      "checks": []
+    },
+    {
+      "target": [
+        "#goals-title"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "20.3pt (27px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "3:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#goal-section > .section-heading > div > p"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "a[href$=\"manage#manage-goals\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "#goal-section > .empty-line"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "footer > span:nth-child(1)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "footer > span:nth-child(2)"
+      ],
+      "checks": [
+        {
+          "fgColor": "#536353",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 5.85,
+          "fontSize": "8.3pt (11px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "a[aria-current=\"location\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#e5edd8",
+          "contrastRatio": 10.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "bold",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "a[href$=\"#bucket-section\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "a[href$=\"#goal-section\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "a[href$=\"visualize\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        "a[href$=\"manage\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    }
+  ],
+  "contrastReview": []
+}

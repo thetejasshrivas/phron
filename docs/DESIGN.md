@@ -128,3 +128,12 @@ Evidence: evidence/G4/remediation/browser/browser.json and18 Home/Visualize/Mana
 ## PH23 capture and commitment repair — 2026-10-10
 
 Every open capture body uses normal document flow so it cannot cover recovery/history controls. Only the collapsed header remains pinned. Collapse/expand buttons preserve drafts; confirmed saves close the body automatically. The non-modal page backdrop closes capture on outside taps while the tapped underlying action still runs. A server-supplied, revision-matched commitment badge remains visible even after its recovery proposal is consumed. Accepted V1/V2 visual direction is retained; no automated V3 acceptance.
+
+
+## PH26 / PHRON-V3-01 — presented candidate, V3 PENDING
+
+2026-10-11 IST, application `36ca7380dfb2235d5556242f59c93da18c98bf04`. Accepted V1/V2 palette, typography, financial tanks, chart language and hierarchy retained. Native mobile focus scroll margin keeps controls/rings above wrapped navigation; native date segments retain a host ring via focus-within. No money calculation, copy claim, provider boundary, DB behavior, dependency or asset changed.
+
+Separate bounded Impeccable hardening pass read existing DESIGN/MOTION and craft floor; context launcher unavailable(exit127 with downloads disabled), direct-context fallback used. Inspection and correction stayed within incumbent design. No photo/font/model download. Final18screenshots:3surfaces × A/B/C ×375/1280, real local synthetic auth/data; [V3 review](evidence/V3/README.md). Agent batched inspection covers Home A375/B1280/C375, Visualize A375/C1280 and Management B375/A1280. This is viewport evidence, not physical phone or Tejas approval. Reduced-motion/keyboard/runtime proofs in PH26.
+
+One explicit founder action: “Tejas accepts V3 — PHRON-V3-01 at commit36ca738.” Until received, V3 remains PENDING and PH26 is not closed. No release/deployment authorization is inferred.

@@ -1,0 +1,35 @@
+PASS D17 declared budget persists instead of baseline salary
+PASS D27 baseline allocations match AC-BUCKET-01
+PASS D07a one-paisa pool is conserved
+PASS PRD18.8/D27 SQL matches independent zero-floor, quotient, and starter-remainder fixtures
+PASS D17 negative liquidity permits distressed onboarding
+PASS Exact unsafe integer survives storage and response
+PASS Onboarding replay preserves IDs and rejects changed body
+PASS Onboarding rejects forged identity and numeric money
+PASS Real anonymous Auth session cannot onboard
+PASS Signed-out RPC is denied
+PASS Forced onboarding failure at financial_profiles leaves no partial account
+PASS Forced onboarding failure at pay_cycles leaves no partial account
+PASS Forced onboarding failure at obligations leaves no partial account
+PASS Forced onboarding failure at cycle_obligations leaves no partial account
+PASS Forced onboarding failure at buckets leaves no partial account
+PASS Forced onboarding failure at cycle_buckets leaves no partial account
+PASS Forced onboarding failure at operation_log leaves no partial account
+17 passed; 0 failed; 17 total
+PASS D17 cash spend atomically updates ledger and keeps initial budget
+PASS Two real users see only owned rows and reject forged bucket
+PASS Duplicate spend replays original response without a second debit
+PASS Concurrent duplicate spend commits once
+PASS Concurrent different intents at one revision cannot both commit
+PASS User lock contention returns bounded retryable code without effects
+PASS Forced failure at transactions rolls back every spend effect
+PASS Forced failure at cycle_buckets rolls back every spend effect
+PASS Forced failure at buckets rolls back every spend effect
+PASS Forced failure at pay_cycles rolls back every spend effect
+PASS Forced failure at financial_profiles rolls back every spend effect
+PASS Forced failure at operation_log rolls back every spend effect
+12 passed; 0 failed; 12 total
+PASS D11 composite FK rejects a forged parent even with admin row access
+PASS D11 writer RLS WITH CHECK rejects a different owner
+PASS D11 payment dependencies protect parents and cascade only the deleted account
+3 passed; 0 failed; 3 total

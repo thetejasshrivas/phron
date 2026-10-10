@@ -1,0 +1,13 @@
+PASS D17 cash spend atomically updates ledger and keeps initial budget
+PASS Two real users see only owned rows and reject forged bucket
+PASS Duplicate spend replays original response without a second debit
+PASS Concurrent duplicate spend commits once
+PASS Concurrent different intents at one revision cannot both commit
+PASS User lock contention returns bounded retryable code without effects
+PASS Forced failure at transactions rolls back every spend effect
+PASS Forced failure at cycle_buckets rolls back every spend effect
+PASS Forced failure at buckets rolls back every spend effect
+PASS Forced failure at pay_cycles rolls back every spend effect
+PASS Forced failure at financial_profiles rolls back every spend effect
+PASS Forced failure at operation_log rolls back every spend effect
+12 passed; 0 failed; 12 total

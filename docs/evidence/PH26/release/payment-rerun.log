@@ -1,0 +1,1 @@
+PASS tests/integration/ph15/payments.mjs exit=0

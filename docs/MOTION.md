@@ -111,3 +111,10 @@ D20/Adjust Trims native dialogs support focus/Escape, pending operations prevent
 ## PH23 capture transitions and focus — 2026-10-10
 
 Collapse/expand uses immediate layout changes, with no animated money or overlay pointer interception. Escape closes capture and returns focus to its toggle. Outside-page taps close without preventing the underlying action; successful saves close only after confirmation. Failed/pending entries retain their values and stable operation identity. Existing reduced-motion rule remains effective; no new animation is introduced.
+
+
+## PH26 focus hardening — PHRON-V3-01 / V3 PENDING
+
+2026-10-11 IST, application `36ca7380dfb2235d5556242f59c93da18c98bf04`. At≤767px, focusable main controls have16px upper/140px lower scroll margin, leaving full outlines above110px wrapped Home navigation in the tested375px layout. Native date-field focus-within outlines all internal segments. Native browser focus scrolling is used; no JS listeners, scrolling animation, money interpolation or action delay added. Existing drain/fill/transitions and reduced-motion rules unchanged.
+
+Strengthened keyboard geometry requires entire target plus7px outline clearance above fixed navigation, center hit on the target, visible ring and complete Tab coverage. Red26PASS/4FAIL preserved; first CSS attempt removed overlap but date-ring diagnostics remained; final verification83/83PASS at375/768/1280 plus6reduced-surface/2save drills. Canonical values immediate. V3 screenshot review remains explicit Tejas action, not automated motion approval. See evidence/PH26 and evidence/V3.

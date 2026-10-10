@@ -1,6 +1,18 @@
+# PH26 current disposition — 2026-10-11 IST
+
+| ID | Status | Actual evidence |
+| --- | --- | --- |
+| PH25-A11Y-01 / P1 | RESOLVED at36ca738 | Native mobile scroll margin and date focus-within; stronger whole-control/outline geometry; final83/83PASS, all widths,0obscured keyboard targets. |
+| PH26-TEST-01 / P2 | RESOLVED (test fixture) | Hardcoded seven contributions with moving host date failed on payday. Correct independent seven/six fixtures retain exact428571/500000paise expectations;6/6PASS; no goal SQL/math change. Original failures archived. |
+| PH24-DEP-01 | Existing documented tooling disposition retained |24dev advisories/0production at PH24; no dependency change or new release exception. |
+
+[PH26 exact report](evidence/PH26/RESULT.md). Prior PH25 OPEN and diagnostic records below are historical. Wrapper syntax/output-report failures are archived driver issues, not financial application bugs. V3 PENDING and G5OPEN; no automated founder approval.
+
+---
+
 # PH25 current finding — 2026-10-11 IST
 
-**PH25-A11Y-01 / P1 / OPEN / Experience.** Application028c332,375x900, real local authenticated Home. Fixed mobile navigation obscures focused coach-details button and purchase-method selector completely, plus native purchase-date calendar indicator. All controls remain Tab-reachable; no application keyboard trap. Reproduction: onboard synthetic user A, open manual capture and recent transaction editor, Tab through coach details/date/method. Expected visible focused control above fixed navigation. Actual center hit is navigation; button y865.14,height35 and method y851.20,height44 lie under its overlay. Desktop768/1280 unaffected by this overlay. [Executed report](evidence/PH25/RESULT.md), [focus geometry](evidence/PH25/focus-detail/home-A-375-keyboard.json), [coach viewport](evidence/PH25/focus-detail/home-A-375-114-viewport.png), [method viewport](evidence/PH25/focus-detail/home-A-375-211-viewport.png).
+**PH25-A11Y-01 / P1 / RESOLVED in PH26 / Experience.** Application028c332,375x900, real local authenticated Home. Fixed mobile navigation obscures focused coach-details button and purchase-method selector completely, plus native purchase-date calendar indicator. All controls remain Tab-reachable; no application keyboard trap. Reproduction: onboard synthetic user A, open manual capture and recent transaction editor, Tab through coach details/date/method. Expected visible focused control above fixed navigation. Actual center hit is navigation; button y865.14,height35 and method y851.20,height44 lie under its overlay. Desktop768/1280 unaffected by this overlay. [Executed report](evidence/PH25/RESULT.md), [focus geometry](evidence/PH25/focus-detail/home-A-375-keyboard.json), [coach viewport](evidence/PH25/focus-detail/home-A-375-114-viewport.png), [method viewport](evidence/PH25/focus-detail/home-A-375-211-viewport.png).
 
 Fix in PH26: focus scroll spacing/reveal around fixed navigation, then375/768/1280 and reduced-motion retest. No application fix applied in PH25. Native date host CSS diagnostic failures on desktop are not separately filed as confirmed WCAG defects: internal calendar indicator is visible. Axe generic container-label advisories and audible screen-reader review remain manual-review limits. Local performance, state contrast, responsive overflow and reduced-motion checks pass; G5/V3 remain open.
 

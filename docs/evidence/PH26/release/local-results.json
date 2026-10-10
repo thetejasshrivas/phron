@@ -1,0 +1,676 @@
+{
+  "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+  "environment": "local production Next + persistent Supabase55321, ordinary A/B/anonymous users; admin only isolated fixtures/deletion",
+  "checks": [
+    {
+      "name": "buckets: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "buckets: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "buckets: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "buckets: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "card_liability_payments: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "card_liability_payments: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "card_liability_payments: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "card_liability_payments: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "card_payment_allocations: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "card_payment_allocations: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "card_payment_allocations: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "card_payment_allocations: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "cycle_buckets: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "cycle_buckets: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "cycle_buckets: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "cycle_buckets: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "cycle_obligations: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "cycle_obligations: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "cycle_obligations: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "cycle_obligations: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "financial_profiles: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "financial_profiles: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "financial_profiles: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "financial_profiles: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goal_purchases: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goal_purchases: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goal_purchases: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goal_purchases: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goal_recovery_extensions: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "owned rows returned",
+      "populatedControl": true
+    },
+    {
+      "name": "goal_recovery_extensions: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "owned rows returned",
+      "populatedControl": true
+    },
+    {
+      "name": "goal_recovery_extensions: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goal_recovery_extensions: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goal_releases: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goal_releases: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goal_releases: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goal_releases: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goal_reservations: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goal_reservations: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goal_reservations: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goal_reservations: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goals: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goals: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goals: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "goals: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "merchant_memory: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "owned rows returned",
+      "populatedControl": true
+    },
+    {
+      "name": "merchant_memory: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "owned rows returned",
+      "populatedControl": true
+    },
+    {
+      "name": "merchant_memory: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "merchant_memory: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "next_cycle_commitments: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "next_cycle_commitments: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "next_cycle_commitments: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "next_cycle_commitments: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "obligation_cash_payments: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "obligation_cash_payments: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "obligation_cash_payments: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "obligation_cash_payments: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "obligation_payment_allocations: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "obligation_payment_allocations: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "obligation_payment_allocations: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "obligation_payment_allocations: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "obligations: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "obligations: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "obligations: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "obligations: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "operation_log: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "operation_log: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "operation_log: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "operation_log: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "pay_cycles: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "pay_cycles: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "pay_cycles: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "pay_cycles: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "reconciliation_allocations: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "reconciliation_allocations: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "reconciliation_allocations: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "reconciliation_allocations: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "reconciliations: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "reconciliations: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "reconciliations: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "reconciliations: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "recovery_plans: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "recovery_plans: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "recovery_plans: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "recovery_plans: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "transactions: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "transactions: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "transactions: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "transactions: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "users: A SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "users: B SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "users: signed-out SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "users: anonymous-auth SELECT ownership/guessed IDs; INSERT forgery; UPDATE reassignment; DELETE denied",
+      "status": "PASS",
+      "ownRead": "denied by grant/policy",
+      "populatedControl": true
+    },
+    {
+      "name": "all direct CRUD probes leave both users relational state unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "all application definer functions: anonymous EXECUTE revoked and fixed search_path",
+      "status": "PASS",
+      "functions": 23
+    },
+    {
+      "name": "signed-out and anonymous-auth financial read RPC denied",
+      "status": "PASS"
+    },
+    {
+      "name": "ordinary User B guessed User A bucket rejected by financial RPC without mutation",
+      "status": "PASS"
+    },
+    {
+      "name": "production build",
+      "status": "PASS"
+    },
+    {
+      "name": "/api/finance/state: absent/anonymous/forged denied, ordinary A/B private reads",
+      "status": "PASS"
+    },
+    {
+      "name": "/api/finance/surfaces: absent/anonymous/forged denied, ordinary A/B private reads",
+      "status": "PASS"
+    },
+    {
+      "name": "/api/finance/card-records: absent/anonymous/forged denied, ordinary A/B private reads",
+      "status": "PASS"
+    },
+    {
+      "name": "/api/finance/recovery-preview: absent/anonymous/forged denied, ordinary A/B private reads",
+      "status": "PASS"
+    },
+    {
+      "name": "/api/finance/obligation-records: absent/anonymous/forged denied, ordinary A/B private reads",
+      "status": "PASS"
+    },
+    {
+      "name": "/api/onboarding: absent/anonymous/forged identity and foreign Origin denied",
+      "status": "PASS"
+    },
+    {
+      "name": "/api/finance/spend: absent/anonymous/forged identity and foreign Origin denied",
+      "status": "PASS"
+    },
+    {
+      "name": "/api/finance/card-payment: absent/anonymous/forged identity and foreign Origin denied",
+      "status": "PASS"
+    },
+    {
+      "name": "/api/finance/card-lifecycle: absent/anonymous/forged identity and foreign Origin denied",
+      "status": "PASS"
+    },
+    {
+      "name": "/api/finance/obligation-payment: absent/anonymous/forged identity and foreign Origin denied",
+      "status": "PASS"
+    },
+    {
+      "name": "/api/finance/surfaces: absent/anonymous/forged identity and foreign Origin denied",
+      "status": "PASS"
+    },
+    {
+      "name": "/api/finance/reconciliation-preview: absent/anonymous/forged identity and foreign Origin denied",
+      "status": "PASS"
+    },
+    {
+      "name": "/api/finance/ingest: absent/anonymous/forged identity and foreign Origin denied",
+      "status": "PASS"
+    },
+    {
+      "name": "/api/finance/ingest/swap: absent/anonymous/forged identity and foreign Origin denied",
+      "status": "PASS"
+    },
+    {
+      "name": "/api/finance/ingest/confirm-category: absent/anonymous/forged identity and foreign Origin denied",
+      "status": "PASS"
+    },
+    {
+      "name": "account deletion denies anonymous callers and forged target user",
+      "status": "PASS"
+    },
+    {
+      "name": "authenticated account deletion purges all 23 populated tables, auth identity/sessions, refuses stale cookies/refresh and preserves User B",
+      "status": "PASS",
+      "tables": [
+        "buckets",
+        "card_liability_payments",
+        "card_payment_allocations",
+        "cycle_buckets",
+        "cycle_obligations",
+        "financial_profiles",
+        "goal_purchases",
+        "goal_recovery_extensions",
+        "goal_releases",
+        "goal_reservations",
+        "goals",
+        "merchant_memory",
+        "next_cycle_commitments",
+        "obligation_cash_payments",
+        "obligation_payment_allocations",
+        "obligations",
+        "operation_log",
+        "pay_cycles",
+        "reconciliation_allocations",
+        "reconciliations",
+        "recovery_plans",
+        "transactions",
+        "users"
+      ]
+    },
+    {
+      "name": "runner-owned synthetic accounts cleaned; app server stopped",
+      "status": "PASS"
+    }
+  ]
+}

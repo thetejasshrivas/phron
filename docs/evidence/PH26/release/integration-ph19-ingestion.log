@@ -1,0 +1,6 @@
+PASS merchant memory and operation log have forced RLS and only intended user reads
+PASS ordinary-user ingestion replay returns the same result and mutates once
+PASS ordinary-user category confirmation saves custom spend and merchant memory once across stable-ID replay
+PASS another ordinary user cannot read or mutate the first user ingestion transaction
+PASS mid-execution exception rolls back ledger, transaction and replay log; stable retry then succeeds
+5 passed; 0 failed; 5 total

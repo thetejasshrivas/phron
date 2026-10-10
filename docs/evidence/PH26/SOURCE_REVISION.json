@@ -1,0 +1,10 @@
+{
+  "application": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+  "note": "Evidence/test-only changes after application commit; current product tree matches36ca738. Original before-commit83proof retained; final83,50journeys and V3 captures run on36ca738.",
+  "sha256": {
+    "src/styles/surfaces.css": "3954c4726bd9a593759f2ac5d162d5d738f1f0094919730fb3b3fdb0a5d7a925",
+    "tests/e2e/ph25/audit.mjs": "f48375ea3b5e24619f022a6b0b28f959c63858d9173b466fa09b7332e6dcfce3",
+    "tests/e2e/ph26/release.mjs": "d71637ed53b67177b8569152eb4f457d00973359e5dec620c44c7a3f826355ac",
+    "tests/integration/ph22/requirements.mjs": "46c3bf3e0f136c50f555c4dbd2a3ab4688110f3aca51322125bf4553bbd05659"
+  }
+}

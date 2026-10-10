@@ -1,0 +1,1 @@
+PASS tests/e2e/ph23/canonical.mjs exit=0

@@ -1,0 +1,47 @@
+PASS CC01 tracked purchase uses ordinary credentials; exact reserve and cash
+PASS CC09 amount/category correction conserves totals and drains correct bucket
+PASS CC10 D10 deletion reverses immediately; exact Undo/FIT08 and durable replay
+PASS CC11/14 paid purchase deletion/conversion/reduction guarded until reversal
+PASS CC12 payment correction reverses old allocation atomically and retains history
+PASS CC13/14 cash-card conversion preserves budget and liquidity
+PASS D10 date validation and historical purchase edits denied
+PASS D10 date-only edit within active cycle keeps every monetary value unchanged
+PASS CC15 actual legacy obligation cannot be backfilled as tracked spend; foreign provenance denied
+PASS strict paise, forged identity and foreign bucket rejected
+PASS tenant denial for read, correction, delete, Undo and payment reversal
+PASS concurrent identical IDs replay once; distinct stale intents conflict
+PASS failed payment correction restores original payment, cash and replay log
+PASS CC10 category-only correction preserves reserve/spend/cash exactly
+PASS cash deletion/Undo and conversion FIT08 preserve exact ledger
+PASS stale Undo cannot restore a later deletion; changed replay payload fails
+PASS CC13 historical purchase and payment edits denied, new-cycle settlement allowed
+PASS mixed bill reversal restores legacy reserve and cash once
+PASS payment correction replay remains durable after later reversal
+PASS CC16 concurrent payment vs deletion serializes; neither creates negative reserve
+PASS anonymous lifecycle and metadata access denied
+PASS forced deletion failure at transactions preserves rows, revision and replay
+PASS forced deletion failure at cycle_buckets preserves rows, revision and replay
+PASS forced deletion failure at buckets preserves rows, revision and replay
+PASS forced deletion failure at pay_cycles preserves rows, revision and replay
+PASS forced deletion failure at financial_profiles preserves rows, revision and replay
+PASS forced deletion failure at users preserves rows, revision and replay
+PASS forced deletion failure at operation_log preserves rows, revision and replay
+PASS forced correction failure at card_liability_payments restores original payment and all balances
+PASS forced correction failure at card_payment_allocations restores original payment and all balances
+PASS forced correction failure at obligation_payment_allocations restores original payment and all balances
+PASS forced correction failure at cycle_obligations restores original payment and all balances
+PASS forced correction failure at obligations restores original payment and all balances
+PASS forced correction failure at pay_cycles restores original payment and all balances
+PASS forced correction failure at financial_profiles restores original payment and all balances
+PASS forced correction failure at users restores original payment and all balances
+PASS forced correction failure at operation_log restores original payment and all balances
+PASS forced create failure at transactions rolls back all purchase effects
+PASS forced create failure at buckets rolls back all purchase effects
+PASS forced create failure at operation_log rolls back all purchase effects
+PASS forced update failure at transactions rolls back all purchase effects
+PASS forced update failure at buckets rolls back all purchase effects
+PASS forced update failure at operation_log rolls back all purchase effects
+PASS forced restore failure at transactions rolls back all purchase effects
+PASS forced restore failure at buckets rolls back all purchase effects
+PASS forced restore failure at operation_log rolls back all purchase effects
+46 passed; 0 failed; 46 total

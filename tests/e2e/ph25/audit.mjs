@@ -101,7 +101,7 @@ try{
  for(const width of (process.argv.includes('--v3')||process.argv.includes('--focus-detail'))?[375,1280]:[375,768,1280])for(const state of (process.argv.includes('--focus-detail')||process.argv.includes('--contrast-surfaces'))?['A']:['A','B','C']){
   const f=await fixture(width,{state});try{await ready(f);assert.equal((await f.user.client.rpc('phron_current_state')).data.data.snapshot.health,state);
    const key=`home-${state}-${width}`;await check(key+'-responsive',()=>responsive(f,key));await check(key+'-axe',()=>axe(f,key));
-   if(process.argv.includes('--v3')){for(const path of ['/visualize','/manage']){await ready(f,path);const surfaceKey=`${path.slice(1)}-${state}-${width}`;await check(surfaceKey+'-responsive',()=>responsive(f,surfaceKey));await check(surfaceKey+'-axe',()=>axe(f,surfaceKey));}continue;}
+   if(process.argv.includes('--v3')){await f.page.locator('.sts-panel').evaluate(e=>e.scrollIntoView({block:'start'}));await f.page.screenshot({path:out+'/'+key+'-metric-viewport.png'});for(const path of ['/visualize','/manage']){await ready(f,path);const surfaceKey=`${path.slice(1)}-${state}-${width}`;await check(surfaceKey+'-responsive',()=>responsive(f,surfaceKey));await check(surfaceKey+'-axe',()=>axe(f,surfaceKey));}continue;}
    if(process.argv.includes('--contrast-surfaces'))for(const path of ['/visualize','/manage']){
     await ready(f,path);for(const summary of await f.page.locator('details>summary').all())if(!await summary.evaluate(e=>e.parentElement.open))await summary.click();
     await check(`contrast-${path.slice(1)}-${width}`,()=>axe(f,`contrast-${path.slice(1)}-${width}`));

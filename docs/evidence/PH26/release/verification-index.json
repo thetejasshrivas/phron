@@ -1,0 +1,250 @@
+{
+  "application": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+  "note": "Original failures and rerun artifacts are preserved separately; exact case counters overlap and must not be added into a unique coverage score.",
+  "initialResults": [
+    {
+      "command": "node tests/integration/ph11/onboarding.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 41817.252700000005,
+      "evidence": "docs/evidence/PH26/release/integration-ph11-onboarding.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/integration/ph11/manual-spend.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 20093.756200000003,
+      "evidence": "docs/evidence/PH26/release/integration-ph11-manual-spend.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/integration/ph15/payments.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 1,
+      "durationMs": 36307.719,
+      "evidence": "docs/evidence/PH26/release/integration-ph15-payments-original-output-failure.log",
+      "status": "FAIL"
+    },
+    {
+      "command": "node tests/integration/ph15/lifecycle.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 55956.957999999984,
+      "evidence": "docs/evidence/PH26/release/integration-ph15-lifecycle.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/integration/ph16/cancellation.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 7786.970000000001,
+      "evidence": "docs/evidence/PH26/release/integration-ph16-cancellation.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/integration/ph16/recovery.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 20887.0784,
+      "evidence": "docs/evidence/PH26/release/integration-ph16-recovery.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/integration/ph16/commitments.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 27832.606499999994,
+      "evidence": "docs/evidence/PH26/release/integration-ph16-commitments.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/integration/ph17/cycle.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 31010.68180000002,
+      "evidence": "docs/evidence/PH26/release/integration-ph17-cycle.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/integration/ph18/distress.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 14663.695799999987,
+      "evidence": "docs/evidence/PH26/release/integration-ph18-distress.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/integration/ph18/d26.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 4815.158600000024,
+      "evidence": "docs/evidence/PH26/release/integration-ph18-d26.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/integration/ph18/goal-purchase.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 6488.404699999985,
+      "evidence": "docs/evidence/PH26/release/integration-ph18-goal-purchase.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/integration/ph18/obligations.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 19675.386,
+      "evidence": "docs/evidence/PH26/release/integration-ph18-obligations.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/integration/ph18/mixed-sequences.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 359361.624,
+      "evidence": "docs/evidence/PH26/release/integration-ph18-mixed-sequences.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/integration/ph19/ingestion.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 9659.209999999963,
+      "evidence": "docs/evidence/PH26/release/integration-ph19-ingestion.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/integration/ph21/surfaces.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 10548.75569999998,
+      "evidence": "docs/evidence/PH26/release/integration-ph21-surfaces.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/integration/ph22/lifecycle.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 6723.881300000008,
+      "evidence": "docs/evidence/PH26/release/integration-ph22-lifecycle.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/integration/ph22/multi-item.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 2640.3365999999223,
+      "evidence": "docs/evidence/PH26/release/integration-ph22-multi-item.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/integration/ph22/requirements.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 1,
+      "durationMs": 3547.8418999999994,
+      "evidence": "docs/evidence/PH26/release/integration-ph22-requirements-original-failure.log",
+      "status": "FAIL"
+    },
+    {
+      "command": "node tests/integration/ph22/safety.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 10794.238099999959,
+      "evidence": "docs/evidence/PH26/release/integration-ph22-safety.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/security/ph14-local.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 10986.799499999965,
+      "evidence": "docs/evidence/PH26/release/security-ph14-local.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/security/fit13-adversarial.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 4294.884600000107,
+      "evidence": "docs/evidence/PH26/release/security-fit13-adversarial.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/security/ph24-rpc.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 3277.7998999999836,
+      "evidence": "docs/evidence/PH26/release/security-ph24-rpc.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/security/ph24-privacy.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 321.8776000000071,
+      "evidence": "docs/evidence/PH26/release/security-ph24-privacy.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/security/ph24-local.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 28838.68069999991,
+      "evidence": "docs/evidence/PH26/release/security-ph24-local.log",
+      "status": "PASS"
+    },
+    {
+      "command": "node tests/security/ph24-http.mjs",
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "exitCode": 0,
+      "durationMs": 5408.9053999999305,
+      "evidence": "docs/evidence/PH26/release/security-ph24-http.log",
+      "status": "PASS"
+    }
+  ],
+  "reruns": [
+    {
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "environment": "existing isolated local Supabase55321; ordinary A/B/anonymous credentials; no remote migrations; output-only temporary adapters removed after each command",
+      "results": [
+        {
+          "command": "node tests/integration/ph15/payments.mjs",
+          "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+          "exitCode": 0,
+          "durationMs": 36746.3664,
+          "evidence": "docs/evidence/PH26/release/integration-ph15-payments.log",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "environment": "existing isolated local Supabase55321; ordinary A/B/anonymous credentials; no remote migrations; output-only temporary adapters removed after each command",
+      "results": [
+        {
+          "command": "node tests/integration/ph22/requirements.mjs",
+          "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+          "exitCode": 0,
+          "durationMs": 3829.7236,
+          "evidence": "docs/evidence/PH26/release/integration-ph22-requirements.log",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+      "environment": "existing isolated local Supabase55321; ordinary A/B/anonymous credentials; no remote migrations; output-only temporary adapters removed after each command",
+      "results": [
+        {
+          "command": "node tests/e2e/ph23/canonical.mjs",
+          "head": "36ca7380dfb2235d5556242f59c93da18c98bf04",
+          "exitCode": 0,
+          "durationMs": 228045.8847,
+          "evidence": "docs/evidence/PH26/release/e2e-ph23-canonical.log",
+          "status": "PASS"
+        }
+      ]
+    }
+  ]
+}

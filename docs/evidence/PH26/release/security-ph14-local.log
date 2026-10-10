@@ -1,0 +1,17 @@
+PASS second fresh ordinary user has no profile and sees no first-user data
+PASS second user onboarding owns distinct cycle and bucket identifiers
+PASS ordinary spend with concurrent identical retries debits exactly once
+PASS refresh returns saved spend and second-user values remain isolated
+PASS forged first-user bucket denied and both canonical states unchanged
+PASS ordinary direct table query cannot read another user profile
+PASS invalid spend retains exact saved state without a partial ledger update
+PASS positive controls then B denied A profile AND spend rows
+PASS independent exact margin, STS floor and bucket drain assertions
+PASS signed-out reads and mutation RPC denied
+PASS forced intermediate transactions failure rolls back all rows; same operation retries once
+PASS forced intermediate cycle_buckets failure rolls back all rows; same operation retries once
+PASS forced intermediate buckets failure rolls back all rows; same operation retries once
+PASS forced intermediate pay_cycles failure rolls back all rows; same operation retries once
+PASS forced intermediate financial_profiles failure rolls back all rows; same operation retries once
+PASS forced intermediate operation_log failure rolls back all rows; same operation retries once
+16 passed; 0 failed; 16 total

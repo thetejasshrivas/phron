@@ -1,0 +1,136 @@
+{
+  "key": "bucket-modal-768",
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "nodes": [
+        [
+          "#reallocate-1da6ef2c-9231-45ca-abd8-296bf0afff6f"
+        ],
+        [
+          ".bucket-editor:nth-child(1) > dialog > p:nth-child(2)"
+        ]
+      ]
+    }
+  ],
+  "passes": [
+    "aria-allowed-attr",
+    "aria-conditional-attr",
+    "aria-deprecated-role",
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "aria-prohibited-attr",
+    "aria-required-attr",
+    "aria-roles",
+    "aria-valid-attr-value",
+    "aria-valid-attr",
+    "button-name",
+    "color-contrast",
+    "duplicate-id-aria",
+    "form-field-multiple-labels",
+    "meta-viewport",
+    "nested-interactive",
+    "select-name",
+    "target-size"
+  ],
+  "contrastPasses": [
+    {
+      "target": [
+        ".bucket-editor:nth-child(1) > dialog > label"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(1) > dialog > label > select"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(1) > dialog > .dialog-actions > .text-action[type=\"button\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(1) > dialog > .dialog-actions > .capture-button[type=\"button\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#d8f36a",
+          "contrastRatio": 9.75,
+          "fontSize": "9.0pt (12px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    },
+    {
+      "target": [
+        ".bucket-editor:nth-child(1) > dialog > p[role=\"status\"]"
+      ],
+      "checks": [
+        {
+          "fgColor": "#233b2e",
+          "bgColor": "#f5f5ee",
+          "contrastRatio": 11.04,
+          "fontSize": "9.8pt (13px)",
+          "fontWeight": "normal",
+          "expectedContrastRatio": "4.5:1"
+        }
+      ]
+    }
+  ],
+  "contrastReview": [
+    {
+      "selector": "#reallocate-1da6ef2c-9231-45ca-abd8-296bf0afff6f",
+      "fg": "rgb(35, 59, 46)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 11.044079324767358,
+      "required": 3,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    },
+    {
+      "selector": ".bucket-editor:nth-child(1) > dialog > p:nth-child(2)",
+      "fg": "rgb(35, 59, 46)",
+      "bg": "rgb(245, 245, 238)",
+      "ratio": 11.044079324767358,
+      "required": 4.5,
+      "decorative": false,
+      "status": "PASS",
+      "method": "computed solid foreground and nearest solid background; decorative goal overlay separately marked"
+    }
+  ]
+}

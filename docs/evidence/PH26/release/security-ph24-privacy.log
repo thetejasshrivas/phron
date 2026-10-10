@@ -1,0 +1,40 @@
+PASS gemini strict outgoing HTTP allowlist / unknown context omitted
+PASS groq strict outgoing HTTP allowlist / unknown context omitted
+PASS gemini-retry-groq strict outgoing HTTP allowlist / unknown context omitted
+PASS capture-sensitive-text: monthly net income 73197
+PASS capture-sensitive-text: current liquid balance 83219
+PASS capture-sensitive-text: total debt 94327
+PASS capture-sensitive-text: ph24-private@example.test
+PASS capture-sensitive-text: 123e4567-e89b-42d3-a456-426614174000
+PASS capture-sensitive-text: monthly_net_income: 73197
+PASS capture-sensitive-text: current_liquid_balance: 83219
+PASS capture-sensitive-text: total_debt: 94327
+PASS capture-sensitive-text: monthly_net_income: PRIVATE_SENTINEL
+PASS capture-sensitive-text: monthly net income: PRIVATE_SENTINEL
+PASS capture-sensitive-text: monthlyNetIncome: PRIVATE_SENTINEL
+PASS capture-sensitive-text: MONTHLY_NET_INCOME: PRIVATE_SENTINEL
+PASS capture-sensitive-text: liquid_balance: PRIVATE_SENTINEL
+PASS capture-sensitive-text: liquid balance: PRIVATE_SENTINEL
+PASS capture-sensitive-text: liquidBalance: PRIVATE_SENTINEL
+PASS capture-sensitive-text: LIQUID_BALANCE: PRIVATE_SENTINEL
+PASS capture-sensitive-text: current_liquid_balance: PRIVATE_SENTINEL
+PASS capture-sensitive-text: current liquid balance: PRIVATE_SENTINEL
+PASS capture-sensitive-text: currentLiquidBalance: PRIVATE_SENTINEL
+PASS capture-sensitive-text: CURRENT_LIQUID_BALANCE: PRIVATE_SENTINEL
+PASS capture-sensitive-text: total_debt: PRIVATE_SENTINEL
+PASS capture-sensitive-text: total debt: PRIVATE_SENTINEL
+PASS capture-sensitive-text: totalDebt: PRIVATE_SENTINEL
+PASS capture-sensitive-text: TOTAL_DEBT: PRIVATE_SENTINEL
+PASS capture-sensitive-text: debt_obligation: PRIVATE_SENTINEL
+PASS capture-sensitive-text: debt obligation: PRIVATE_SENTINEL
+PASS capture-sensitive-text: debtObligation: PRIVATE_SENTINEL
+PASS capture-sensitive-text: DEBT_OBLIGATION: PRIVATE_SENTINEL
+PASS capture-sensitive-text: user_id: PRIVATE_SENTINEL
+PASS capture-sensitive-text: user id: PRIVATE_SENTINEL
+PASS capture-sensitive-text: userId: PRIVATE_SENTINEL
+PASS capture-sensitive-text: USER_ID: PRIVATE_SENTINEL
+PASS capture-sensitive-text: email: PRIVATE_SENTINEL
+PASS capture-sensitive-text: email: PRIVATE_SENTINEL
+PASS capture-sensitive-text: email: PRIVATE_SENTINEL
+PASS capture-sensitive-text: EMAIL: PRIVATE_SENTINEL
+PASS telemetry exact projection drops text/amount/merchant/context and coach is local

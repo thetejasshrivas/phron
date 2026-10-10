@@ -578,3 +578,10 @@ See amendments/PH23-SC02-v1.md and evidence/PH23/remediation/. Approval is the q
 ## PH23 remediation ownership — authorized single writer
 
 Tejas directly assigned Lead & Experience the capture/badge fixes, merchant-memory server boundary repair and canonical browser retest. This narrowly authorizes this active chat's Home/RecoveryCard/style, additive typed recovery read projection, ingestion route, integration/e2e tests and status/evidence changes. No domain formula, financial write RPC, database migration, provider/account setting, dependency or deployment change is included. No concurrent writer.
+
+
+## PH26 ownership — explicitly authorized single writer
+
+Tejas assigned Lead the PH25-A11Y-01 mobile focus UI repair, Ponytail diff review, full release verification and founder V3 package. This authorizes this chat's surfaces.css, additive browser/e2e QA harness and DESIGN/MOTION/evidence/status/handoff edits for PH26. No financial contracts/formulas, provider/security policy, database migration, dependency, remote setting or deployment change included. Founder V3 remains pending explicit acceptance of the named revision.
+
+PH26 release verification also corrects a date-dependent Platform test fixture in tests/integration/ph22/requirements.mjs, under the existing single-chat all-owner instruction and this explicit Lead full-release task. Exact seven-contribution money assertions remain; an independent six-contribution payday-boundary case is added. D05 keeps the expected payday prompt at today until confirmation. No goal formula, SQL RPC, contract, source amendment or schema changed. This records execution scope, not a new financial decision.

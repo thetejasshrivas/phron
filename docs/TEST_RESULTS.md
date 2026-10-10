@@ -1,3 +1,11 @@
+# PH26 release re-verification / V3 package — 2026-10-11 IST
+
+Application36ca7380dfb2235d5556242f59c93da18c98bf04. PH25-A11Y-01 RESOLVED: final83/83browser/performance/accessibility checks PASS, stronger full-focus geometry,375/768/1280.50/50canonical+additional journey pairs PASS.458unit,152mocked integration,202domain cases PASS;6contracts/10math files100% statements/branches/functions/lines. Local payment25/card46/cancellation9/recovery18/commitment21/cycle33 and remaining selected SQL suites PASS;20mixed sequences seed181801 PASS.115RLS/auth/deletion,91RPC,40privacy,6HTTP,16security,2FIT13 PASS. Counts overlap; [report and command index](evidence/PH26/RESULT.md) govern.
+
+Calendar fixture correction retains428571seven-cycle expectation, adds500000six-cycle payday expectation;6/6PASS. Original initial command failures and output-wrapper corrections preserved, no product money/SQL change. Build/lint/types/source hashes PASS. Repository/client secret scan and diff check recorded at closeout. [V3 package](evidence/V3/README.md):18full-page plus6Home metric viewport images,36/36capture scans PASS; application revision PHRON-V3-01/36ca738. Final local TTFV1.098–1.312s, capture0.101–0.265s, returning0.307–0.448s, LCP272ms/EventTiming32ms/CLS0.023025max. No field/real-phone/audible-screen-reader/live-provider/hosted-candidate claim. V3 PENDING explicit Tejas acceptance; G5/G0B OPEN; PH27 not started.
+
+---
+
 # PH25 performance/accessibility audit — executed with findings
 
 2026-10-10–11 IST, main application028c332ceed636b1402b902f5fe31a1927257c1b; local persistent Supabase and production Edge runtime,375/768/1280. [Full report](evidence/PH25/RESULT.md) and [all valid measurements](evidence/PH25/measurements-all-valid.json) govern.8TTFV samples0.928–1.274s;24returning loads0.193–0.972s;8manual saves0.099–0.123s;2local-memory Quick Captures0.315–0.345s; LCPmax232ms, EventTiming interaction proxy32ms, CLSmax0.023025. All requested performance targets PASS for this unthrottled loopback lab; no field/provider/OAuth timing claim.
