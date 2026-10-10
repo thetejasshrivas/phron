@@ -1,0 +1,66 @@
+{
+  "tables": {
+    "candidate_count": 26,
+    "remote_count": 26,
+    "missing_remote": [],
+    "remote_only": [],
+    "different": [],
+    "same_count": 26
+  },
+  "columns": {
+    "candidate_count": 197,
+    "remote_count": 197,
+    "missing_remote": [],
+    "remote_only": [],
+    "different": [],
+    "same_count": 197
+  },
+  "constraints": {
+    "candidate_count": 183,
+    "remote_count": 183,
+    "missing_remote": [],
+    "remote_only": [],
+    "different": [],
+    "same_count": 183
+  },
+  "policies": {
+    "candidate_count": 48,
+    "remote_count": 48,
+    "missing_remote": [],
+    "remote_only": [],
+    "different": [],
+    "same_count": 48
+  },
+  "routines": {
+    "candidate_count": 54,
+    "remote_count": 54,
+    "missing_remote": [],
+    "remote_only": [],
+    "different": [],
+    "same_count": 54
+  },
+  "triggers": {
+    "candidate_count": 4,
+    "remote_count": 4,
+    "missing_remote": [],
+    "remote_only": [],
+    "different": [],
+    "same_count": 4
+  },
+  "grants": {
+    "candidate_count": 405,
+    "remote_count": 405,
+    "missing_remote": [],
+    "remote_only": [],
+    "different": [],
+    "same_count": 405
+  },
+  "indexes": {
+    "candidate_count": 73,
+    "remote_count": 73,
+    "missing_remote": [],
+    "remote_only": [],
+    "different": [],
+    "same_count": 73
+  }
+}

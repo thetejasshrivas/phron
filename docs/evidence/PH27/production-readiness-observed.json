@@ -1,0 +1,27 @@
+{
+  "dateIST": "2026-10-11",
+  "method": "Read-only authenticated Chrome dashboard inspection; no Reveal Value, Save, Add URL, Add Variable or deployment action",
+  "supabase": {
+    "project": "kavuwjngrtqavtmxyvsq",
+    "plan": "Free (operator report and dashboard badge)",
+    "healthy": true,
+    "siteURL": "http://127.0.0.1:3100",
+    "redirectURLs": ["http://127.0.0.1:3100/auth/callback", "https://phron-hys7wn9wb-tts-1e31.vercel.app/auth/callback"],
+    "productionCallbackPresent": false
+  },
+  "vercel": {
+    "workspace": "tts-1e31",
+    "project": "phron",
+    "plan": "Hobby (current dashboard badge)",
+    "configuredProductionDomain": "phron-eight.vercel.app",
+    "domainDeploymentState": "No Deployment",
+    "observedVariables": [{"name":"NEXT_PUBLIC_SUPABASE_URL","scope":"Preview"},{"name":"NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY","scope":"Preview"}],
+    "productionVariableNamesPresent": [],
+    "requiredProductionNamesMissing": ["NEXT_PUBLIC_SUPABASE_URL", "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY", "PHRON_APP_ORIGIN", "SUPABASE_SERVICE_ROLE_KEY", "GEMINI_API_KEY", "GROQ_API_KEY"],
+    "valuesInspected": false,
+    "currentUsageAndEligiblePurpose": "NOT VERIFIED"
+  },
+  "originParity": "FAIL: no Production origin or callback configured",
+  "environmentNameReadiness": "FAIL: zero of six Production variable names present",
+  "productionDeploymentAuthorization": "NOT GRANTED in this migration/readiness task; explicit final deployment trigger remains pending"
+}

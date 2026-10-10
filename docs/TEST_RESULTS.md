@@ -1,3 +1,11 @@
+# PH27 authorized remote migration execution — 2026-10-11 IST
+
+22/22pending pinned SQL operations success:true;24logical entries mapped to actual server versions, initial2unchanged. [Report](evidence/PH27/REMOTE_ROLLOUT.md). Clean local replay oracle under observed hostedservice_role defaults matches remote100%:26tables/197columns/183constraints/48policies/54functions/4triggers/405grants/73indexes. Exact54definition hashes, ACL ordering only normalized.23/23publicRLS,69FKvalid, Auth cascade reaches23public+2privatepilot; singleton excluded correctly. Anonymous42501denial and authenticated/noidentity0profile assertion PASS. No actual remote financial mutation/account purge/session journey this step. Existing1user/1profile/4transactions/0payments counts preserved; no per-row equality claim.
+
+Production readiness **FAIL**: Vercel domainphron-eight.vercel.app No Deployment; zero of six required names configured for Production (only2Preview entries); Supabase SiteURLlocalhost and no Production callback. Dashboard read-only, no values revealed. No paid tool, settings change, provider call or deploy. Prior fullapplicationbattery retained, not rerun here; schema replay/metadata checks are new. G5/V3remainaccepted, G6pending.
+
+---
+
 # PH27 production preparation and read-only remote audit — 2026-10-11 IST
 
 [Executed report](evidence/PH27/REMOTE_RECONCILIATION.md):10/10build guard tests;458unit/152mocked integration;202domain; collected contracts/math100%; lint/types/source/build PASS, exits0. Production-mode Windows EPERM exit1 retained; host rerun exit0. Application base36ca738unchanged; configuration f485726. Remote11tableRLS PASS;2logical migrations applied under server timestamps;22pending. Complete schema parity FAIL. No remote DDL/data writes, ordinary-user remote mutation suite, hosted deployment or phone check; these are not claimed PASS. Supabase Free/active/below limits is explicit operator confirmation. G5/V3 acceptance stands; G0B/G6remain pending.

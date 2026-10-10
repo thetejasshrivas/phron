@@ -1,0 +1,785 @@
+{
+  "tables": {
+    "local_count": 26,
+    "remote_count": 26,
+    "missing_remote": [],
+    "remote_only": [],
+    "different": [],
+    "same_count": 26
+  },
+  "columns": {
+    "local_count": 197,
+    "remote_count": 197,
+    "missing_remote": [],
+    "remote_only": [],
+    "different": [],
+    "same_count": 197
+  },
+  "constraints": {
+    "local_count": 183,
+    "remote_count": 183,
+    "missing_remote": [],
+    "remote_only": [],
+    "different": [],
+    "same_count": 183
+  },
+  "policies": {
+    "local_count": 48,
+    "remote_count": 48,
+    "missing_remote": [],
+    "remote_only": [],
+    "different": [],
+    "same_count": 48
+  },
+  "routines": {
+    "local_count": 54,
+    "remote_count": 54,
+    "missing_remote": [],
+    "remote_only": [],
+    "different": [
+      {
+        "key": "public.phron_accept_commitment(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_accept_commitment(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "fbe7f4108608b2ad2b2705454237f8b7",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_accept_commitment(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "fbe7f4108608b2ad2b2705454237f8b7",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,service_role=X/postgres,authenticated=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_accept_recovery(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_accept_recovery(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "cc4b737b20e7126565c55c392f7d1f9f",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_accept_recovery(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "cc4b737b20e7126565c55c392f7d1f9f",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,service_role=X/postgres,authenticated=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_active_custom_buckets()",
+        "local": {
+          "key": "public.phron_active_custom_buckets()",
+          "definition_md5": "47704a648c7d228bf9860054aab916c0",
+          "owner": "postgres",
+          "definer": true,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_active_custom_buckets()",
+          "definition_md5": "47704a648c7d228bf9860054aab916c0",
+          "owner": "postgres",
+          "definer": true,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_cancel_goal(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_cancel_goal(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "ca9b9cdfb42b7ae65b722b9c643a028a",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_cancel_goal(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "ca9b9cdfb42b7ae65b722b9c643a028a",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,service_role=X/postgres,authenticated=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_card_lifecycle(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_card_lifecycle(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "35bdbfc750ab63ced28cb82ac0494560",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_card_lifecycle(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "35bdbfc750ab63ced28cb82ac0494560",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,service_role=X/postgres,authenticated=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_card_payment(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_card_payment(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "85c357c6d413ef4687670873a1c3fe38",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_card_payment(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "85c357c6d413ef4687670873a1c3fe38",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_card_records()",
+        "local": {
+          "key": "public.phron_card_records()",
+          "definition_md5": "8e1495fd4ef1009f7828dc5f317cdfc7",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_card_records()",
+          "definition_md5": "8e1495fd4ef1009f7828dc5f317cdfc7",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,service_role=X/postgres,authenticated=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_confirm_salary(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_confirm_salary(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "bf9125b5e8e24e6cf72d9f0b018312b1",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_confirm_salary(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "bf9125b5e8e24e6cf72d9f0b018312b1",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,service_role=X/postgres,authenticated=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_current_state()",
+        "local": {
+          "key": "public.phron_current_state()",
+          "definition_md5": "8093de04e83505c10d096addde29b7db",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_current_state()",
+          "definition_md5": "8093de04e83505c10d096addde29b7db",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_execute_goal_cash_purchase(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_execute_goal_cash_purchase(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "c1dfc377042f4e70f7ae25e2153a51ee",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_execute_goal_cash_purchase(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "c1dfc377042f4e70f7ae25e2153a51ee",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,service_role=X/postgres,authenticated=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_ingest_category_swap(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_ingest_category_swap(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "b295ba636d8fb5853a80978b649d880d",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_ingest_category_swap(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "b295ba636d8fb5853a80978b649d880d",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_ingest_confirm_category(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_ingest_confirm_category(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "9739e70ec33333d6a37a1f92012d5dda",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_ingest_confirm_category(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "9739e70ec33333d6a37a1f92012d5dda",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_ingest_spend(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_ingest_spend(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "f707894342898c25180440e36e3e03eb",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_ingest_spend(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "f707894342898c25180440e36e3e03eb",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_manual_spend(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_manual_spend(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "429b631e3d64e19349aa34a5785e4bc0",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_manual_spend(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "429b631e3d64e19349aa34a5785e4bc0",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_obligation_payment(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_obligation_payment(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "7f34e683340d5af699e2c957615c4f02",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_obligation_payment(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "7f34e683340d5af699e2c957615c4f02",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,service_role=X/postgres,authenticated=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_obligation_records()",
+        "local": {
+          "key": "public.phron_obligation_records()",
+          "definition_md5": "cf206757a21858e3da7682a0ac005a5a",
+          "owner": "phron_writer",
+          "definer": true,
+          "config": [
+            "search_path=\"\"",
+            "lock_timeout=2s"
+          ],
+          "acl": "{phron_writer=X/phron_writer,authenticated=X/phron_writer}"
+        },
+        "remote": {
+          "key": "public.phron_obligation_records()",
+          "definition_md5": "cf206757a21858e3da7682a0ac005a5a",
+          "owner": "phron_writer",
+          "definer": true,
+          "config": [
+            "search_path=\"\"",
+            "lock_timeout=2s"
+          ],
+          "acl": "{phron_writer=X/phron_writer,service_role=X/phron_writer,authenticated=X/phron_writer}"
+        }
+      },
+      {
+        "key": "public.phron_onboard(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_onboard(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "444a15bb36cf0a9c066dd207834985c7",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_onboard(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "444a15bb36cf0a9c066dd207834985c7",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres,service_role=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_reclassify_drift(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_reclassify_drift(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "a0f784c80a88d01a8f7408bbcb41d963",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_reclassify_drift(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "a0f784c80a88d01a8f7408bbcb41d963",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,service_role=X/postgres,authenticated=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_reconcile(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_reconcile(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "ec51278f937434060822927e6a62755a",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_reconcile(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "ec51278f937434060822927e6a62755a",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,service_role=X/postgres,authenticated=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_recovery_context()",
+        "local": {
+          "key": "public.phron_recovery_context()",
+          "definition_md5": "81aac8bdf1831955093d68381529b039",
+          "owner": "phron_writer",
+          "definer": true,
+          "config": [
+            "search_path=\"\"",
+            "lock_timeout=2s"
+          ],
+          "acl": "{phron_writer=X/phron_writer,authenticated=X/phron_writer}"
+        },
+        "remote": {
+          "key": "public.phron_recovery_context()",
+          "definition_md5": "81aac8bdf1831955093d68381529b039",
+          "owner": "phron_writer",
+          "definer": true,
+          "config": [
+            "search_path=\"\"",
+            "lock_timeout=2s"
+          ],
+          "acl": "{phron_writer=X/phron_writer,service_role=X/phron_writer,authenticated=X/phron_writer}"
+        }
+      },
+      {
+        "key": "public.phron_surface_config(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_surface_config(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "101a77b76eb243fbf124bb952d8cff8e",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_surface_config(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "101a77b76eb243fbf124bb952d8cff8e",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,service_role=X/postgres,authenticated=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_surface_goal_purchase(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_surface_goal_purchase(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "c6fb280d60844e0bee221b3c5bb1aba6",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_surface_goal_purchase(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "c6fb280d60844e0bee221b3c5bb1aba6",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,service_role=X/postgres,authenticated=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_surface_lifecycle(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+        "local": {
+          "key": "public.phron_surface_lifecycle(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "e11e0639f933cf8c976862a36c0c851d",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_surface_lifecycle(p_operation_id uuid, p_expected_revision text, p_input jsonb)",
+          "definition_md5": "e11e0639f933cf8c976862a36c0c851d",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,service_role=X/postgres,authenticated=X/postgres}"
+        }
+      },
+      {
+        "key": "public.phron_surface_source()",
+        "local": {
+          "key": "public.phron_surface_source()",
+          "definition_md5": "d1e3e8d0f7bd3a7c5d01b2fde9a0a118",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,authenticated=X/postgres}"
+        },
+        "remote": {
+          "key": "public.phron_surface_source()",
+          "definition_md5": "d1e3e8d0f7bd3a7c5d01b2fde9a0a118",
+          "owner": "postgres",
+          "definer": false,
+          "config": [
+            "search_path=\"\""
+          ],
+          "acl": "{postgres=X/postgres,service_role=X/postgres,authenticated=X/postgres}"
+        }
+      }
+    ],
+    "same_count": 30
+  },
+  "triggers": {
+    "local_count": 4,
+    "remote_count": 4,
+    "missing_remote": [],
+    "remote_only": [],
+    "different": [],
+    "same_count": 4
+  },
+  "grants": {
+    "local_count": 244,
+    "remote_count": 405,
+    "missing_remote": [],
+    "remote_only": [
+      "public.buckets.service_role.DELETE",
+      "public.buckets.service_role.INSERT",
+      "public.buckets.service_role.REFERENCES",
+      "public.buckets.service_role.SELECT",
+      "public.buckets.service_role.TRIGGER",
+      "public.buckets.service_role.TRUNCATE",
+      "public.buckets.service_role.UPDATE",
+      "public.card_liability_payments.service_role.DELETE",
+      "public.card_liability_payments.service_role.INSERT",
+      "public.card_liability_payments.service_role.REFERENCES",
+      "public.card_liability_payments.service_role.SELECT",
+      "public.card_liability_payments.service_role.TRIGGER",
+      "public.card_liability_payments.service_role.TRUNCATE",
+      "public.card_liability_payments.service_role.UPDATE",
+      "public.card_payment_allocations.service_role.DELETE",
+      "public.card_payment_allocations.service_role.INSERT",
+      "public.card_payment_allocations.service_role.REFERENCES",
+      "public.card_payment_allocations.service_role.SELECT",
+      "public.card_payment_allocations.service_role.TRIGGER",
+      "public.card_payment_allocations.service_role.TRUNCATE",
+      "public.card_payment_allocations.service_role.UPDATE",
+      "public.cycle_buckets.service_role.DELETE",
+      "public.cycle_buckets.service_role.INSERT",
+      "public.cycle_buckets.service_role.REFERENCES",
+      "public.cycle_buckets.service_role.SELECT",
+      "public.cycle_buckets.service_role.TRIGGER",
+      "public.cycle_buckets.service_role.TRUNCATE",
+      "public.cycle_buckets.service_role.UPDATE",
+      "public.cycle_obligations.service_role.DELETE",
+      "public.cycle_obligations.service_role.INSERT",
+      "public.cycle_obligations.service_role.REFERENCES",
+      "public.cycle_obligations.service_role.SELECT",
+      "public.cycle_obligations.service_role.TRIGGER",
+      "public.cycle_obligations.service_role.TRUNCATE",
+      "public.cycle_obligations.service_role.UPDATE",
+      "public.financial_profiles.service_role.DELETE",
+      "public.financial_profiles.service_role.INSERT",
+      "public.financial_profiles.service_role.REFERENCES",
+      "public.financial_profiles.service_role.SELECT",
+      "public.financial_profiles.service_role.TRIGGER",
+      "public.financial_profiles.service_role.TRUNCATE",
+      "public.financial_profiles.service_role.UPDATE",
+      "public.goal_purchases.service_role.DELETE",
+      "public.goal_purchases.service_role.INSERT",
+      "public.goal_purchases.service_role.REFERENCES",
+      "public.goal_purchases.service_role.SELECT",
+      "public.goal_purchases.service_role.TRIGGER",
+      "public.goal_purchases.service_role.TRUNCATE",
+      "public.goal_purchases.service_role.UPDATE",
+      "public.goal_recovery_extensions.service_role.DELETE",
+      "public.goal_recovery_extensions.service_role.INSERT",
+      "public.goal_recovery_extensions.service_role.REFERENCES",
+      "public.goal_recovery_extensions.service_role.SELECT",
+      "public.goal_recovery_extensions.service_role.TRIGGER",
+      "public.goal_recovery_extensions.service_role.TRUNCATE",
+      "public.goal_recovery_extensions.service_role.UPDATE",
+      "public.goal_releases.service_role.DELETE",
+      "public.goal_releases.service_role.INSERT",
+      "public.goal_releases.service_role.REFERENCES",
+      "public.goal_releases.service_role.SELECT",
+      "public.goal_releases.service_role.TRIGGER",
+      "public.goal_releases.service_role.TRUNCATE",
+      "public.goal_releases.service_role.UPDATE",
+      "public.goal_reservations.service_role.DELETE",
+      "public.goal_reservations.service_role.INSERT",
+      "public.goal_reservations.service_role.REFERENCES",
+      "public.goal_reservations.service_role.SELECT",
+      "public.goal_reservations.service_role.TRIGGER",
+      "public.goal_reservations.service_role.TRUNCATE",
+      "public.goal_reservations.service_role.UPDATE",
+      "public.goals.service_role.DELETE",
+      "public.goals.service_role.INSERT",
+      "public.goals.service_role.REFERENCES",
+      "public.goals.service_role.SELECT",
+      "public.goals.service_role.TRIGGER",
+      "public.goals.service_role.TRUNCATE",
+      "public.goals.service_role.UPDATE",
+      "public.merchant_memory.service_role.DELETE",
+      "public.merchant_memory.service_role.INSERT",
+      "public.merchant_memory.service_role.REFERENCES",
+      "public.merchant_memory.service_role.SELECT",
+      "public.merchant_memory.service_role.TRIGGER",
+      "public.merchant_memory.service_role.TRUNCATE",
+      "public.merchant_memory.service_role.UPDATE",
+      "public.next_cycle_commitments.service_role.DELETE",
+      "public.next_cycle_commitments.service_role.INSERT",
+      "public.next_cycle_commitments.service_role.REFERENCES",
+      "public.next_cycle_commitments.service_role.SELECT",
+      "public.next_cycle_commitments.service_role.TRIGGER",
+      "public.next_cycle_commitments.service_role.TRUNCATE",
+      "public.next_cycle_commitments.service_role.UPDATE",
+      "public.obligation_cash_payments.service_role.DELETE",
+      "public.obligation_cash_payments.service_role.INSERT",
+      "public.obligation_cash_payments.service_role.REFERENCES",
+      "public.obligation_cash_payments.service_role.SELECT",
+      "public.obligation_cash_payments.service_role.TRIGGER",
+      "public.obligation_cash_payments.service_role.TRUNCATE",
+      "public.obligation_cash_payments.service_role.UPDATE",
+      "public.obligation_payment_allocations.service_role.DELETE",
+      "public.obligation_payment_allocations.service_role.INSERT",
+      "public.obligation_payment_allocations.service_role.REFERENCES",
+      "public.obligation_payment_allocations.service_role.SELECT",
+      "public.obligation_payment_allocations.service_role.TRIGGER",
+      "public.obligation_payment_allocations.service_role.TRUNCATE",
+      "public.obligation_payment_allocations.service_role.UPDATE",
+      "public.obligations.service_role.DELETE",
+      "public.obligations.service_role.INSERT",
+      "public.obligations.service_role.REFERENCES",
+      "public.obligations.service_role.SELECT",
+      "public.obligations.service_role.TRIGGER",
+      "public.obligations.service_role.TRUNCATE",
+      "public.obligations.service_role.UPDATE",
+      "public.operation_log.service_role.DELETE",
+      "public.operation_log.service_role.INSERT",
+      "public.operation_log.service_role.REFERENCES",
+      "public.operation_log.service_role.SELECT",
+      "public.operation_log.service_role.TRIGGER",
+      "public.operation_log.service_role.TRUNCATE",
+      "public.operation_log.service_role.UPDATE",
+      "public.pay_cycles.service_role.DELETE",
+      "public.pay_cycles.service_role.INSERT",
+      "public.pay_cycles.service_role.REFERENCES",
+      "public.pay_cycles.service_role.SELECT",
+      "public.pay_cycles.service_role.TRIGGER",
+      "public.pay_cycles.service_role.TRUNCATE",
+      "public.pay_cycles.service_role.UPDATE",
+      "public.reconciliation_allocations.service_role.DELETE",
+      "public.reconciliation_allocations.service_role.INSERT",
+      "public.reconciliation_allocations.service_role.REFERENCES",
+      "public.reconciliation_allocations.service_role.SELECT",
+      "public.reconciliation_allocations.service_role.TRIGGER",
+      "public.reconciliation_allocations.service_role.TRUNCATE",
+      "public.reconciliation_allocations.service_role.UPDATE",
+      "public.reconciliations.service_role.DELETE",
+      "public.reconciliations.service_role.INSERT",
+      "public.reconciliations.service_role.REFERENCES",
+      "public.reconciliations.service_role.SELECT",
+      "public.reconciliations.service_role.TRIGGER",
+      "public.reconciliations.service_role.TRUNCATE",
+      "public.reconciliations.service_role.UPDATE",
+      "public.recovery_plans.service_role.DELETE",
+      "public.recovery_plans.service_role.INSERT",
+      "public.recovery_plans.service_role.REFERENCES",
+      "public.recovery_plans.service_role.SELECT",
+      "public.recovery_plans.service_role.TRIGGER",
+      "public.recovery_plans.service_role.TRUNCATE",
+      "public.recovery_plans.service_role.UPDATE",
+      "public.transactions.service_role.DELETE",
+      "public.transactions.service_role.INSERT",
+      "public.transactions.service_role.REFERENCES",
+      "public.transactions.service_role.SELECT",
+      "public.transactions.service_role.TRIGGER",
+      "public.transactions.service_role.TRUNCATE",
+      "public.transactions.service_role.UPDATE",
+      "public.users.service_role.DELETE",
+      "public.users.service_role.INSERT",
+      "public.users.service_role.REFERENCES",
+      "public.users.service_role.SELECT",
+      "public.users.service_role.TRIGGER",
+      "public.users.service_role.TRUNCATE",
+      "public.users.service_role.UPDATE"
+    ],
+    "different": [],
+    "same_count": 244
+  },
+  "indexes": {
+    "local_count": 73,
+    "remote_count": 73,
+    "missing_remote": [],
+    "remote_only": [],
+    "different": [],
+    "same_count": 73
+  }
+}

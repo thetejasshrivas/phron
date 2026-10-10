@@ -1,0 +1,51 @@
+{
+  "foreign_keys": 69,
+  "unvalidated_foreign_keys": 0,
+  "card_payment_constraints": [
+    {
+      "name": "allocations_purchase_owner",
+      "definition": "FOREIGN KEY (user_id, purchase_transaction_id) REFERENCES transactions(user_id, id) DEFERRABLE",
+      "validated": true
+    },
+    {
+      "name": "card_liability_payments_user_id_cycle_id_fkey",
+      "definition": "FOREIGN KEY (user_id, cycle_id) REFERENCES pay_cycles(user_id, id) ON DELETE CASCADE",
+      "validated": true
+    },
+    {
+      "name": "card_liability_payments_user_id_fkey",
+      "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE",
+      "validated": true
+    },
+    {
+      "name": "card_liability_payments_user_id_id_fkey",
+      "definition": "FOREIGN KEY (user_id, id) REFERENCES operation_log(user_id, operation_id) DEFERRABLE INITIALLY DEFERRED",
+      "validated": true
+    },
+    {
+      "name": "card_payment_allocations_user_id_fkey",
+      "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE",
+      "validated": true
+    },
+    {
+      "name": "card_payment_allocations_user_id_payment_id_fkey",
+      "definition": "FOREIGN KEY (user_id, payment_id) REFERENCES card_liability_payments(user_id, id) ON DELETE CASCADE",
+      "validated": true
+    },
+    {
+      "name": "obligation_allocations_parent",
+      "definition": "FOREIGN KEY (user_id, cycle_obligation_id) REFERENCES cycle_obligations(user_id, id) DEFERRABLE",
+      "validated": true
+    },
+    {
+      "name": "obligation_payment_allocations_user_id_fkey",
+      "definition": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE",
+      "validated": true
+    },
+    {
+      "name": "obligation_payment_allocations_user_id_payment_id_fkey",
+      "definition": "FOREIGN KEY (user_id, payment_id) REFERENCES card_liability_payments(user_id, id) ON DELETE CASCADE",
+      "validated": true
+    }
+  ]
+}

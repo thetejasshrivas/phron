@@ -1,0 +1,316 @@
+{
+  "project": "kavuwjngrtqavtmxyvsq",
+  "dateIST": "2026-10-11",
+  "release": "f4857268a7bc2d31c7f006ae8c098ce63e33bf26",
+  "authorization": "Explicit PH27 user instruction to apply the22pending pinned migrations; free-tier test database recovery posture acknowledged; no reset or data deletion authorized.",
+  "operations": [
+    {
+      "order": 3,
+      "file": "20261007164321_ph15_card_settlement.sql",
+      "sha256": "0e2b08e46d8b1325768ba02ffb0ea0ceb44acb768752a7f9764414a4ce328aab",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 4,
+      "file": "20261007222121_ph15_card_lifecycle.sql",
+      "sha256": "85384c0fc6bd88272a45bcbfd03d5927082a458206168f5e42bb2ce001b8d059",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 5,
+      "file": "20261008080545_ph16_goal_cancellation.sql",
+      "sha256": "071f45f297c2f82ec335c2d4ee552152980c518e40ca53dc3fa5088b1c67ec60",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 6,
+      "file": "20261008124355_ph16_recovery_acceptance.sql",
+      "sha256": "426b3735af4bec22bd82be97772136d7b9c844e1c4eb40003458be7f2944f2a7",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 7,
+      "file": "20261008125601_ph16_commitment_acceptance.sql",
+      "sha256": "057a5f5a358274eafd2658eee665d51e26fddf5bbb5b606f58a4946fab6f088c",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 8,
+      "file": "20261008131409_ph17_cycle_reconciliation.sql",
+      "sha256": "816843afaabe283b38f1b000684ff3582bb1ea37c9a3ed3ee8d0d52ec0035f65",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 9,
+      "file": "20261008132750_ph17_drift_reclassification.sql",
+      "sha256": "3d82872526451ce3aef1f82d77ff64bd468cab5bf83079c6c09ed889d52cf2f0",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 10,
+      "file": "20261008183014_ph18_nonpositive_commitment_cap.sql",
+      "sha256": "83d3bdd5025478564c855d608e5bed444e4ecabd2e144ab917dff6adb473c1fb",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 11,
+      "file": "20261009044907_ph18_distress_allowances.sql",
+      "sha256": "8c1c00cd9016f19f70b767294db8a89211c27f5e7f7e7492c1f50e72315cdbd3",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 12,
+      "file": "20261009115731_d26_negative_cash.sql",
+      "sha256": "987be2337fc00071b4a23c45b533506fe22e5c194d72e9113cfb74448c2f7ff6",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 13,
+      "file": "20261009122459_d07b_goal_cash_purchase.sql",
+      "sha256": "e6d191f7c10177f493ca54f74b7df2042717d626e09e7cf71a79047fd71b8d02",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 14,
+      "file": "20261009123923_p18_snapshot_weekly_sts.sql",
+      "sha256": "4cf2d3943bd253afc058fc288ef585f22602074d6da2ca95a1878e5e745a786f",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 15,
+      "file": "20261009125658_ph18_goal_cash_ledger.sql",
+      "sha256": "9ebd2a20fad201265cbb93258967f1ea514376653666f2b144bbad5a0d4bdb80",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 16,
+      "file": "20261009183837_ph18_ordinary_obligation_payment.sql",
+      "sha256": "bdf5bdd8743416cb07a047b5f0984d1f5076f7979817f05d1c00f1ff0c9e29d6",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 17,
+      "file": "20261010100000_ph19_ingestion.sql",
+      "sha256": "ab25418ae02d857c2a54f6dfd0d1b58fdbe500d6d162fc3892f4a43a930df39a",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 18,
+      "file": "20261010120000_ph19_d18_category_memory.sql",
+      "sha256": "9353a64b11143866405cafed132cc8a8b478f3fe5f16960a3bd043c597dda7cc",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 19,
+      "file": "20261010160000_ph21_surfaces.sql",
+      "sha256": "8f4e9476729c8106ae96b210396edfbc610d47d2f7fc3874637982c964e130f7",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 20,
+      "file": "20261010210000_ph22_bucket_goal_lifecycle.sql",
+      "sha256": "96023f584264319b78c53d8b2d1824b1ea875f134aefc7418d66a294f9eea5d5",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 21,
+      "file": "20261010213000_ph22_recovery_context.sql",
+      "sha256": "1732179b5245fe59410147cc9126d64a9f4ec45e1c28006b43e6b234c5401db3",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 22,
+      "file": "20261010220000_ph22_obligation_read.sql",
+      "sha256": "c615b87f885809369686a802a0255d60d170d7ac35368ad3df930446dd76f8f0",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 23,
+      "file": "20261010223000_ph22_ingestion_replay.sql",
+      "sha256": "3318e6fbf3f9fa1298e41e57a63d35dda5898d5d545f17d00017aecd64c470bf",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "order": 24,
+      "file": "20261010230000_ph22_commitment_safety.sql",
+      "sha256": "3b8ba278b7d84005d1ed6afe451e715a370e3a54a855418cc114820805a52eb6",
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true}"
+          }
+        ],
+        "isError": false
+      }
+    }
+  ]
+}

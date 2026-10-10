@@ -1,3 +1,29 @@
+# PH27 remote migrations COMPLETE — Production settings pending
+
+2026-10-11 IST; release **f4857268a7bc2d31c7f006ae8c098ce63e33bf26**, accepted app36ca738 unchanged. Tejas explicitly authorized all22pending migrations and acknowledged Free/test-database schema replay/forward repair posture. All22applied in pinned order to Phron kavuwjngrtqavtmxyvsq; initial2preserved. [Full executed report](evidence/PH27/REMOTE_ROLLOUT.md), [24file/server-version manifest](evidence/PH27/migration-manifest.json).
+
+**100%candidate-object parity PASS** against a clean24file local replay under observed hosted service-role defaults:26tables(23public/3private),197columns,183constraints,48policies,54functions,4triggers,405table grants,73indexes; zero missing/extra/changed after ACL ordering normalization only. All54function definitions match exact hashes. This is not an unexplained exclusion of raw differences; oracle adaptation and retained raw comparisons are documented.69FKs validated; all23public tables RLS-active;23public+2private pilot tables reachable by Auth-user cascade; shared safety singleton preserved. Anonymous read denied, authenticated/no-identity sees0profiles; no destructive remote account test or financial write performed. Before/after counts preserve1profile/4transactions; no raw financial rows exported or full per-row equality claim. No backup restore/data recovery exercise.
+
+## Backup posture acknowledgment
+
+Supabase Free/Healthy/within limits confirmed by Tejas; no live/pilot data per operator. Existing test rows were found and retained, so do not describe the database as literally empty. Tejas accepts no paid daily snapshot requirement for this test release; schema disaster repair uses pinned migrations/forward repairs. Replaying schema does not recover data. No reset/reseed/destructive down-migration authorized. A populated pilot must revisit access-controlled data export/restore readiness before onboarding live participants. Historical backup prerequisite paragraphs below are superseded only for this explicitly acknowledged test-database posture.
+
+## Actual Production readiness — NOT READY
+
+- Vercel configured Production domain: **https://phron-eight.vercel.app**, No Deployment. Current Hobby badge observed; fresh Usage and non-commercial purpose still pending.
+- Supabase Site URL stilllocalhost; onlylocalhost and oldPreview callbacks allowed. Production callback **https://phron-eight.vercel.app/auth/callback absent**. Do not deploy and assume OAuth will redirect correctly.
+- Vercel environment list has only two Preview public variables. **None of the six Production names is configured.** Configure NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,PHRON_APP_ORIGIN,SUPABASE_SERVICE_ROLE_KEY,GEMINI_API_KEY,GROQ_API_KEY privately for Production; origin must be https://phron-eight.vercel.app. No privileged NEXT_PUBLIC key. No values revealed/copied through chat. Provider quota/model/privacy disposition remains separate.
+
+Authorization status: **22migration rollout authorized/executed; production build guard authorized/prepared; actual Vercel Production deployment not yet authorized/executed.** The prior command remains conditional. No additional tool install, account security change, callback save, variable upload or paid resource occurred.
+
+**Next single dashboard action:** Vercel tts-1e31 → phron → Environment Variables: configure the six required names in Production privately; retain Preview config and report statuses only. Then exact Supabase Site URL/callback change requires its own per-action confirmation, followed by scope/usage/provider validation. Only after prerequisites PASS, final trigger can be: “Authorize Production deployment of release f485726 to tts-1e31/phron at https://phron-eight.vercel.app, followed by PH28live smoke; no paid upgrades.” Do not use that trigger as permission to deploy now.
+
+Conditional command and PH28checklist are below. Production smoke/Google save-refresh/two-user isolation/actual deletion/real-phone proof remain NOT RUN; G6notpassed. G0B/D25stillpending. PH27remainscurrent.
+
+---
+
+# Historical pre-rollout records (superseded above)
+
 # PH27 Production candidate update — 2026-10-11 IST
 
 **Production guard lifted and tested; deployment HOLD due to missing remote schema.** This update supersedes the earlier Preview-only preparation statement below.

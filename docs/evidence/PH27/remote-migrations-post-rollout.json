@@ -1,0 +1,100 @@
+{
+  "migrations": [
+    {
+      "version": "20261007075021",
+      "name": "ph11_core_transactions"
+    },
+    {
+      "version": "20261007075032",
+      "name": "ph12_authorized_snapshot_read"
+    },
+    {
+      "version": "20261010195416",
+      "name": "ph15_card_settlement"
+    },
+    {
+      "version": "20261010195423",
+      "name": "ph15_card_lifecycle"
+    },
+    {
+      "version": "20261010195429",
+      "name": "ph16_goal_cancellation"
+    },
+    {
+      "version": "20261010195437",
+      "name": "ph16_recovery_acceptance"
+    },
+    {
+      "version": "20261010195444",
+      "name": "ph16_commitment_acceptance"
+    },
+    {
+      "version": "20261010195450",
+      "name": "ph17_cycle_reconciliation"
+    },
+    {
+      "version": "20261010195506",
+      "name": "ph17_drift_reclassification"
+    },
+    {
+      "version": "20261010195512",
+      "name": "ph18_nonpositive_commitment_cap"
+    },
+    {
+      "version": "20261010195520",
+      "name": "ph18_distress_allowances"
+    },
+    {
+      "version": "20261010195525",
+      "name": "d26_negative_cash"
+    },
+    {
+      "version": "20261010195531",
+      "name": "d07b_goal_cash_purchase"
+    },
+    {
+      "version": "20261010195536",
+      "name": "p18_snapshot_weekly_sts"
+    },
+    {
+      "version": "20261010195541",
+      "name": "ph18_goal_cash_ledger"
+    },
+    {
+      "version": "20261010195546",
+      "name": "ph18_ordinary_obligation_payment"
+    },
+    {
+      "version": "20261010195558",
+      "name": "ph19_ingestion"
+    },
+    {
+      "version": "20261010195604",
+      "name": "ph19_d18_category_memory"
+    },
+    {
+      "version": "20261010195620",
+      "name": "ph21_surfaces"
+    },
+    {
+      "version": "20261010195626",
+      "name": "ph22_bucket_goal_lifecycle"
+    },
+    {
+      "version": "20261010195631",
+      "name": "ph22_recovery_context"
+    },
+    {
+      "version": "20261010195636",
+      "name": "ph22_obligation_read"
+    },
+    {
+      "version": "20261010195641",
+      "name": "ph22_ingestion_replay"
+    },
+    {
+      "version": "20261010195647",
+      "name": "ph22_commitment_safety"
+    }
+  ]
+}

@@ -1,3 +1,15 @@
+# PH27 remote rollout handoff — 2026-10-11 IST
+
+Release `f485726` (accepted application `36ca738`), branch `main`. All 22 authorized pending migrations were applied in order; the initial two were preserved. The manifest records all 24 server versions. Candidate schema parity passes against an independent clean local replay with observed hosted defaults: 23 public and three private tables, 54 exact function definitions, 69 validated foreign keys and 48 policies. All 23 public tables have RLS. Cascade paths reach those tables and the two private pilot tables; the global safety singleton remains separate. [Executed evidence](../evidence/PH27/REMOTE_ROLLOUT.md).
+
+Aggregate counts before and after remain one profile and four transactions. No reset, finance mutation, purge or paid backup was performed. Tejas acknowledged the free-tier test-database recovery posture. Migration replay restores schema, not existing data; per-row content equality was not established.
+
+Read-only dashboard verification found a localhost Supabase Site URL and only localhost/old Preview callbacks. Vercel's configured Production domain is `phron-eight.vercel.app`, with no deployment. Only two Preview variables exist; none of the six required Production names is configured. Deployment remains on hold. Migration execution and build preparation are authorized and complete; the actual Production deployment trigger remains pending. G0B, D25 and G6 remain pending.
+
+**Next one action:** Tejas privately configures the six required names for Production in Vercel's existing `phron` project, with `PHRON_APP_ORIGIN=https://phron-eight.vercel.app`, retaining Preview settings. Never share secret values in chat. Then verify the exact Auth callback/Site URL change with action-time confirmation, account/provider checks and the explicit release trigger before PH28 live smoke. Do not reapply migrations or describe the old Preview as this release. Source, application and build configuration remain unchanged; the unrelated scratch file is untouched.
+
+---
+
 # PH27 production preparation / migration blocker — 2026-10-11 IST
 
 Release configuration f4857268a7bc2d31c7f006ae8c098ce63e33bf26; accepted app base36ca7380dfb2235d5556242f59c93da18c98bf04 unchanged. Production guard requires exact HTTPS PHRON_APP_ORIGIN, no inert bootstrap bypass;10testsPASS.458unit/152mocked integration/202domain, collected contract/domain100%, lint/types/source/build PASS; host Production build PASS after documented EPERM. Resolve final documentation HEAD via git log. Scratch untouched.
