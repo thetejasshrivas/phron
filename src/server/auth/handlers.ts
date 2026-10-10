@@ -14,11 +14,11 @@ function privateResponse(response:NextResponse) {
 }
 function failure(code:ErrorCode) { return privateResponse(NextResponse.json(errorResult(code),{status:errorHttpStatus[code]})); }
 type Context=ReturnType<typeof requestClient>;
-async function verified(context:Context) {
+export async function verified(context:Context) {
   const {data,error}=await context.client.auth.getUser();
   return !error && data.user && !data.user.is_anonymous ? data.user : null;
 }
-async function perform(request:NextRequest, write:boolean, action:(context:Context)=>Promise<NextResponse>) {
+export async function perform(request:NextRequest, write:boolean, action:(context:Context)=>Promise<NextResponse>) {
   let context:Context|undefined;
   try {
     const origin=trustedOrigin(process.env.PHRON_APP_ORIGIN);
@@ -62,7 +62,7 @@ export async function financeState(request:NextRequest) {
     return NextResponse.json(result,{status:result.ok?200:errorHttpStatus[result.error.code]});
   });
 }
-async function boundedJSON(request:NextRequest):Promise<unknown> {
+export async function boundedJSON(request:NextRequest):Promise<unknown> {
   if(request.headers.get('content-type')?.split(';')[0]?.trim()!=='application/json' || !request.body) throw new TypeError('VALIDATION');
   const reader=request.body.getReader(); const chunks:Uint8Array[]=[]; let size=0;
   try {

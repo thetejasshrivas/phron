@@ -544,3 +544,40 @@ Decision: Accept PH16 core P0 completion and advance current_step to PH17 / P03-
 Status: APPROVED; explicit Tejas reply2026-10-08 IST.
 Exact approved wording: Carry unpaid prior-cycle obligations into the new cycle’s O_unpaid in addition to newly due obligations, preserving their history and debiting cash only on actual payment. Overdue carry does not increase the configured monthly O_total or get counted twice.
 Tests: old unpaid plus newly due, unchanged monthly baseline, repeated rollover/no duplication, actual payment only.
+
+
+# PH-21 scoped founder approvals
+
+Recorded from explicit Tejas replies, 2026-10-10 IST. Scope is limited to the named ambiguities.
+
+## PH21-BUCKET-v1 — Baseline-preserving bucket configuration
+
+Status: APPROVED — explicit Tejas reply, 2026-10-10 IST.
+
+Baseline-only allocation edits are effective at confirmed rollover; name edits apply immediately, and floor edits apply immediately only when they fit the existing baseline and current remaining allowance. Custom buckets start with zero active allowance until rollover. This preserves current STS and accepted recovery trims.
+
+Scope: PH-21 / PRD §28 surface behavior and the named setup/edit/reference ambiguity only. Frozen sources remain unchanged. Card-funded goal execution and insufficient-funding semantics remain OPEN; this amendment does not authorize remote SQL or deployment.
+
+## PH21-CHART-v1 — Current safe pool reference
+
+Status: APPROVED — explicit Tejas reply, 2026-10-10 IST.
+
+Approve a read-only linear reference based on the current canonical S_pool, spread across the displayed active-cycle days: pace(day) = floor(S_pool × day / displayed_day_count). Label it “Current safe pool reference,” with an explicit note that it is neither historical permission nor a new spending limit. This stays within the canonical pool, uses integer paise and leaves all STS formulas unchanged.
+
+Scope: PH-21 / PRD §28 surface behavior and the named setup/edit/reference ambiguity only. Frozen sources remain unchanged. Card-funded goal execution and insufficient-funding semantics remain OPEN; this amendment does not authorize remote SQL or deployment.
+
+## PH21-GOAL-v1 — Funded goal setup
+
+Status: APPROVED — explicit Tejas reply, 2026-10-10 IST.
+
+Reserve the first floor-rounded contribution immediately on confirmed creation (G_cycle and G_held increase, cash unchanged), then reserve future contributions at confirmed rollover. Count the current cycle plus expected paydays strictly before the deadline; assign remaining paise to the last cycle. Edits preserve accumulated/held history and take effect for future contributions. Insufficient funding and card-funded execution remain unavailable pending their separate decisions.
+
+Scope: PH-21 / PRD §28 surface behavior and the named setup/edit/reference ambiguity only. Frozen sources remain unchanged. Card-funded goal execution and insufficient-funding semantics remain OPEN; this amendment does not authorize remote SQL or deployment.
+
+## PH21-OBLIGATION-v1 — Obligation baseline edits
+
+Status: APPROVED — explicit Tejas reply, 2026-10-10 IST.
+
+Save name/amount/legacy classification as the monthly baseline for newly due obligations at the next confirmed rollover, while preserving existing cycle-obligation amounts, payments and overdue carry. No edit will debit cash or rewrite a past payment. Legacy/tracked classification is immutable after creation to prevent merging tracked reserves into obligations.
+
+Scope: PH-21 / PRD §28 surface behavior and the named setup/edit/reference ambiguity only. Frozen sources remain unchanged. Card-funded goal execution and insufficient-funding semantics remain OPEN; this amendment does not authorize remote SQL or deployment.

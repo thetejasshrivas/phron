@@ -1,0 +1,22 @@
+{
+  "checks": [
+    "all three surfaces deny anonymous sessions",
+    "microphone focuses text and records/sends no audio",
+    "manual save, refresh, edit, immediate delete and six-second Undo re-commit",
+    "ordinary-user signed balance reconciliation persists exactly",
+    "bucket display edit, funded goal creation, reserve and refresh without cash debit",
+    "offline disables saving and preserves confirmed data",
+    "Scenario 18 opens manual fallback with providers absent",
+    "ordinary second browser sees no first-user transactions or goals",
+    "authenticated local account deletion modal purges own synthetic identity and ends session",
+    "no client runtime exceptions across the three surfaces"
+  ],
+  "views": [],
+  "motion": [
+    {
+      "event": "cash spend drain",
+      "intermediate": true
+    }
+  ],
+  "environment": "isolated local ordinary-user sessions; mocked/absent providers; no remote database"
+}

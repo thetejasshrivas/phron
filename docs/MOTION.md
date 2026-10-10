@@ -85,3 +85,19 @@ identical numeric text, no overflow. Error, payment correction, reversal, lost-r
 Undo and expiry/refresh are tested in the ordinary-session browser journey. Toast DOM/timing
 proof is used; blank fixed-element screenshot artifacts are excluded. Evidence:
 tests/integration/ph15/evidence/lifecycle/RESULT.md and browser.json. No V3/physical-phone claim.
+
+
+## PH-21 motion matrix — local candidate
+
+| Element/event | Normal | Reduced | Evidence |
+|---|---|---|---|
+| Confirmed spend | Existing bucket liquid height drain; money remains exact and save unblocked | Immediate final tank level | Browser samples intermediate and final cash-spend drain |
+| Real goal reserve | Bottom-up goal fill, 650ms cubic-bezier(.22,1,.36,1), @starting-style zero | Immediate supplied level | Real saved reserve captures; reduced computed transition 0s |
+| Category chart | 650ms width transition to bounded supplied ratio | Immediate final width | Normal/reduced captures and exact value text |
+| Loading | Skeleton pulse/opacity | Static skeleton | CSS reduced-motion override; visible loading labels |
+| Save/error/retry | Live status/alert; canonical values retained; success survives post-save refresh | Same feedback without animated transition | Local browser reconciliation/refresh; stable-ID session tests |
+| Navigation/details | Native focus/disclosure; open form survives background reads | Same focus/state | Browser manual capture and balance check |
+| Delete/Undo | Immediate confirmed reversal, 6.0-second existing Undo window | Same timed action; no animation dependency | Browser delete and re-commit, existing lifecycle regressions |
+| Account deletion | Native modal focus and typed confirmation, pending blocks cancellation | Same dialog/feedback | Synthetic authenticated browser purge and route tests |
+
+All `prefers-reduced-motion: reduce` overrides cover animations, transitions and scrolling. Canonical values are never tweened. Motion is presentation after confirmed deterministic state; no optimistic money. Eighteen local screenshots cover all three routes × 375/768/1280 × normal/reduced. Goal fill runtime is shown as real saved levels and reduced CSS equivalence, not a measured fill-duration proof. V3 remains pending explicit Tejas review.

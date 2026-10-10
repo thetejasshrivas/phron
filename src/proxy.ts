@@ -31,4 +31,4 @@ export async function proxy(request:NextRequest) {
     return new NextResponse('Sign-in is temporarily unavailable.',{status:503,headers:{'cache-control':'private, no-store'}});
   }
 }
-export const config={matcher:['/','/home/:path*','/onboarding/:path*']};
+export const config={matcher:['/','/home/:path*','/onboarding/:path*','/visualize/:path*','/manage/:path*']};

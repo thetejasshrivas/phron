@@ -109,3 +109,12 @@ motion. Evidence: tests/integration/ph15/evidence/lifecycle/{browser.json,home-*
 
 This is functional/local visual evidence, not new Tejas taste acceptance, a physical-phone test,
 or a hosted card release. Prior V1/V2 approvals remain scoped to their named revisions; V3 pending.
+
+
+## PH-21 / SURFACES-PH21-01 — local candidate, V3 pending
+
+Continues accepted HOME-V1-02 / G2-V2-02: warm canvas, ink green, sage/ochre tanks, editorial serif headings and exact tabular INR values. Taste direction retained; separate Impeccable pass inspected six desktop/mobile views as one batch and corrected cramped mobile headings and a one-day chart with invisible single points. One confirmation inspection verified those corrections. This is implementation QA, not founder approval.
+
+Home uses compact pinned capture (expanded forms return to document flow), text-only microphone fallback, confirmed daily/weekly STS, local grounded coach, live draining buckets, real filling goals, due/on-demand balance check and existing correction/payment history. Saved baseline/floor targets remain distinct from current allowances. Manage is an editorial grid of expandable records, exact inputs, visible next-rollover semantics and native account-deletion dialog. Visualize uses green solid cumulative spend, dashed safe-pool reference, category bars, and readable exact tables. Matrix blocks are strictly cycle-relative. Zero-spend bars expose empty tracks rather than fabricated amounts; one-day series use distinct solid/hollow points. Horizontal table scrolling is keyboard accessible and contained within the page.
+
+No new downloaded image/font/icon package or paid asset. Microphone and charts are inline purpose-built SVG; static chart tables and explicit text remain available. Existing brand typography/assets retained. Accessible labels, scoped table headers, native details/dialog focus, status/alert regions, no personal localStorage and responsive 375/768/1280 layouts. Evidence: docs/evidence/PH21/browser.json and the 18 route/width/motion PNGs. No physical phone, screen-reader certification or new hosted preview is claimed. V3 stays PENDING for PH-26.

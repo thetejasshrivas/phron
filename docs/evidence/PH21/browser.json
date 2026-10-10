@@ -1,0 +1,131 @@
+{
+  "checks": [
+    "all three surfaces deny anonymous sessions",
+    "microphone focuses text and records/sends no audio",
+    "manual save, refresh, edit, immediate delete and six-second Undo re-commit",
+    "ordinary-user signed balance reconciliation persists exactly",
+    "bucket display edit, funded goal creation, reserve and refresh without cash debit",
+    "offline disables saving and preserves confirmed data",
+    "Scenario 18 opens manual fallback with providers absent",
+    "ordinary second browser sees no first-user transactions or goals",
+    "authenticated local account deletion modal purges own synthetic identity and ends session",
+    "no client runtime exceptions across the three surfaces"
+  ],
+  "views": [
+    {
+      "route": "home",
+      "width": 375,
+      "motion": "no-preference",
+      "file": "home-375-no-preference.png"
+    },
+    {
+      "route": "home",
+      "width": 375,
+      "motion": "reduce",
+      "file": "home-375-reduce.png"
+    },
+    {
+      "route": "home",
+      "width": 768,
+      "motion": "no-preference",
+      "file": "home-768-no-preference.png"
+    },
+    {
+      "route": "home",
+      "width": 768,
+      "motion": "reduce",
+      "file": "home-768-reduce.png"
+    },
+    {
+      "route": "home",
+      "width": 1280,
+      "motion": "no-preference",
+      "file": "home-1280-no-preference.png"
+    },
+    {
+      "route": "home",
+      "width": 1280,
+      "motion": "reduce",
+      "file": "home-1280-reduce.png"
+    },
+    {
+      "route": "visualize",
+      "width": 375,
+      "motion": "no-preference",
+      "file": "visualize-375-no-preference.png"
+    },
+    {
+      "route": "visualize",
+      "width": 375,
+      "motion": "reduce",
+      "file": "visualize-375-reduce.png"
+    },
+    {
+      "route": "visualize",
+      "width": 768,
+      "motion": "no-preference",
+      "file": "visualize-768-no-preference.png"
+    },
+    {
+      "route": "visualize",
+      "width": 768,
+      "motion": "reduce",
+      "file": "visualize-768-reduce.png"
+    },
+    {
+      "route": "visualize",
+      "width": 1280,
+      "motion": "no-preference",
+      "file": "visualize-1280-no-preference.png"
+    },
+    {
+      "route": "visualize",
+      "width": 1280,
+      "motion": "reduce",
+      "file": "visualize-1280-reduce.png"
+    },
+    {
+      "route": "manage",
+      "width": 375,
+      "motion": "no-preference",
+      "file": "manage-375-no-preference.png"
+    },
+    {
+      "route": "manage",
+      "width": 375,
+      "motion": "reduce",
+      "file": "manage-375-reduce.png"
+    },
+    {
+      "route": "manage",
+      "width": 768,
+      "motion": "no-preference",
+      "file": "manage-768-no-preference.png"
+    },
+    {
+      "route": "manage",
+      "width": 768,
+      "motion": "reduce",
+      "file": "manage-768-reduce.png"
+    },
+    {
+      "route": "manage",
+      "width": 1280,
+      "motion": "no-preference",
+      "file": "manage-1280-no-preference.png"
+    },
+    {
+      "route": "manage",
+      "width": 1280,
+      "motion": "reduce",
+      "file": "manage-1280-reduce.png"
+    }
+  ],
+  "motion": [
+    {
+      "event": "cash spend drain",
+      "intermediate": true
+    }
+  ],
+  "environment": "isolated local ordinary-user sessions; mocked/absent providers; no remote database"
+}

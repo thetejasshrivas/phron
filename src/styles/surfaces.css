@@ -1,0 +1,103 @@
+/* Extends HOME-V1-02: green editorial canvas, visible vessels, exact figures. */
+.phron-home{accent-color:var(--ink);caret-color:var(--ink);scrollbar-color:var(--sage) var(--canvas)}
+.phron-home ::selection{background:var(--accent);color:var(--ink)}
+.phron-home textarea,.phron-home input,.phron-home select{font:inherit;color:var(--ink);max-width:100%}
+.phron-home summary{cursor:pointer;min-height:44px;line-height:1.5;padding:12px 0}
+.phron-home summary:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.phron-home p{overflow-wrap:anywhere}
+.surface-header{padding:12px 0 36px;border-bottom:1px solid var(--line);margin-bottom:24px}
+.surface-header h1{font-size:clamp(36px,5vw,62px);max-width:17ch;text-wrap:balance}
+.surface-header p{max-width:65ch;line-height:1.7;margin-top:20px;color:var(--muted)}
+.surface-shell .section-heading h2{font:400 clamp(26px,3vw,36px)/1.2 Georgia,serif;letter-spacing:-.025em}
+.surface-feedback{display:flex;align-items:center;flex-wrap:wrap;gap:8px 20px;font-size:12px;min-height:48px;padding:12px 0;color:var(--muted)}
+.surface-feedback [role=alert],.offline-notice{color:var(--danger)}
+.offline-notice{padding:14px 0;line-height:1.6}
+.surface-skeleton{min-height:230px;background:var(--surface);border-radius:16px;animation:surface-load 1.8s ease-in-out infinite}
+@keyframes surface-load{50%{opacity:.55}}
+.weekly-permission{margin:4px 0 12px!important;font-size:14px;color:var(--ink);display:flex;gap:12px;align-items:center}
+.weekly-permission strong{font-variant-numeric:tabular-nums}
+.microphone-button{border:1px solid var(--ink);border-radius:8px;background:var(--surface);color:var(--ink);padding:10px;min-width:44px;min-height:44px}
+.phron-home .capture-panel{position:sticky;top:12px;z-index:3;background:var(--canvas);grid-template-columns:minmax(0,1fr);gap:4px!important}
+.phron-home .capture-panel:has(details[open]),.phron-home .capture-panel:has(.ai-disclosure),.phron-home .capture-panel:has(.clarification-list),.phron-home .capture-panel:has(.swap-offer){position:static}
+.phron-home .natural-capture{padding-top:8px;border:0;grid-column:1}
+.phron-home .natural-capture textarea{min-height:58px;resize:vertical}
+.manual-capture-panel{grid-column:1;border-top:1px solid var(--line);margin-top:6px}
+.manual-capture-panel summary{font-size:13px}
+.reconciliation-panel{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 0 24px;padding:8px 0}
+.reconciliation-panel summary{font-size:15px;font-weight:600}
+.reconciliation-panel summary span{font-size:12px;font-weight:400;color:var(--muted);display:inline-block;margin-left:16px}
+.reconciliation-panel p,.reconciliation-panel label{font-size:13px;line-height:1.6}
+.reconciliation-panel p{max-width:68ch;padding-bottom:12px}
+.reconciliation-due{background:var(--surface);border-radius:12px;padding:12px 20px}
+.phron-home fieldset{border:0;padding:0;margin:0;min-width:0}
+.reconciliation-panel fieldset,.management-section fieldset{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.reconciliation-panel label,.management-section label,.account-settings label{display:flex;flex-direction:column;gap:6px;font-size:13px}
+.reconciliation-panel input,.reconciliation-panel select,.management-section input,.management-section select,.account-settings input{min-width:0;background:var(--canvas);border:1px solid #72866d;border-radius:7px;padding:13px 12px;min-height:46px}
+.reconciliation-panel .capture-button,.management-section .capture-button{justify-self:start;align-self:end}
+.goal-card{display:grid;grid-template-columns:96px minmax(0,1fr);gap:20px;padding:22px 0;border-top:1px solid var(--line)}
+.goal-card h3{font:400 25px/1.2 Georgia,serif;letter-spacing:-.025em;margin-bottom:12px}
+.goal-card p{font-size:13px;line-height:1.7;margin:5px 0}
+.goal-tank{min-height:175px;border:1px solid var(--ink);border-radius:7px 7px 18px 18px;background:var(--surface);position:relative;overflow:hidden;align-self:stretch}
+.goal-fill{position:absolute;bottom:0;left:0;right:0;height:var(--level);background:var(--sage);transition:height 650ms cubic-bezier(.22,1,.36,1)}
+@starting-style{.goal-fill{height:0}}
+.goal-tank>span{position:absolute;bottom:15px;left:12px;right:12px;font-size:12px;font-weight:600;overflow-wrap:anywhere}
+.goal-card.behind .goal-fill{background:var(--ochre)}
+.split-chart,.burn-chart{padding:18px 0 34px;border-bottom:1px solid var(--line);margin-bottom:24px}
+.category-bar{display:grid;grid-template-columns:130px minmax(0,1fr) 125px;gap:20px;align-items:center;min-height:56px;font-size:13px}
+.category-bar strong{font-variant-numeric:tabular-nums;text-align:right}
+.bar-track{height:22px;background:var(--surface);border-radius:4px;overflow:hidden}
+.bar-track span{display:block;height:100%;background:var(--sage);transition:width 650ms cubic-bezier(.22,1,.36,1)}
+.bar-track .ochre{background:var(--ochre)}
+.cycle-context,.burn-chart>p{font-size:12px;line-height:1.6;color:var(--muted);max-width:68ch}
+.burn-chart svg{display:block;width:100%;max-width:800px;margin:24px 0;color:var(--ink)}
+.chart-axis{fill:none;stroke:var(--line);stroke-width:1}
+.actual-line{fill:none;stroke:var(--ink);stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.pace-line{fill:none;stroke:#536353;stroke-width:2;stroke-dasharray:7 5}
+.burn-chart text{font:11px Arial,sans-serif;fill:var(--muted)}
+.chart-legend{display:flex;gap:24px;flex-wrap:wrap;font-size:12px;margin-top:16px}
+.chart-legend span:before{content:'';display:inline-block;width:22px;border-top:3px solid var(--ink);margin-right:8px;vertical-align:middle}
+.chart-legend span+span:before{border-top:2px dashed var(--muted)}
+.table-scroll{overflow:auto;max-width:100%;scrollbar-gutter:stable}
+.table-scroll table{width:100%;border-collapse:collapse;text-align:left;font-size:13px;font-variant-numeric:tabular-nums}
+.table-scroll th,.table-scroll td{padding:16px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+.table-scroll thead{background:var(--surface)}
+.table-scroll caption{text-align:left;font-size:12px;color:var(--muted);padding:16px 0;white-space:normal;line-height:1.6}
+.management-section{padding-bottom:32px;margin-bottom:32px;border-bottom:1px solid var(--line)}
+.management-section>p,.bucket-editor>p{font-size:13px;line-height:1.7;color:var(--muted);max-width:68ch;margin-bottom:18px}
+.management-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.bucket-editor,.goal-editor,.obligation-editor{border-top:1px solid var(--line);padding:12px 0}
+.management-section summary span{display:block;font-family:Georgia,serif;font-size:24px;line-height:1.3}
+.management-section summary strong{font-size:12px;font-weight:400;color:var(--muted)}
+.management-section details[open]{padding-bottom:24px}
+.management-section fieldset p{grid-column:1/-1;font-size:12px;line-height:1.5}
+.new-config{margin-top:18px;background:var(--surface);padding:12px 20px;border-radius:12px}
+.new-config summary{font-weight:600}
+.new-config>p{font-size:13px;line-height:1.6;margin-bottom:16px}
+.tracked-reserve{padding:18px 0}
+.danger-action{color:var(--danger)!important}
+.danger-button{background:var(--danger);color:#fff;border-color:var(--danger)}
+.account-settings p{font-size:13px;line-height:1.6;margin-bottom:18px}
+.account-settings dialog{border:0;border-radius:16px;max-width:500px;width:calc(100% - 32px);background:var(--canvas);color:var(--ink);padding:28px;box-shadow:0 12px 48px #233b2e40}
+.account-settings dialog::backdrop{background:#233b2e99}
+.account-settings dialog h2{font:400 32px/1.2 Georgia,serif;margin-bottom:20px}
+.dialog-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px;align-items:center}
+@media(max-width:767px){
+ .phron-home .home-sidebar{flex-wrap:wrap;align-items:center;gap:8px}
+ .phron-home .home-sidebar nav{width:100%;margin-top:0;overflow-x:auto;white-space:nowrap;gap:4px}
+ .phron-home .home-sidebar nav a{flex-shrink:0;font-size:12px;padding:12px 10px}
+ .phron-home .home-sidebar .sidebar-bottom{display:none}
+ .surface-header{padding-top:0}.surface-header h1{font-size:38px}
+ .management-grid,.reconciliation-panel fieldset,.management-section fieldset{grid-template-columns:minmax(0,1fr)}
+ .category-bar{grid-template-columns:90px minmax(0,1fr) 85px;gap:10px;font-size:12px}
+ .category-bar strong{font-size:11px}
+ .goal-card{grid-template-columns:76px minmax(0,1fr);gap:16px}
+ .reconciliation-panel summary span{display:block;margin-left:0}
+ .chart-legend{gap:10px}
+ .phron-home .capture-panel{top:4px;padding:14px!important}
+ .phron-home .natural-capture-actions{align-items:center;flex-wrap:wrap}
+ .natural-capture-actions>.capture-button{flex:1}
+}
+@media(prefers-reduced-motion:reduce){.phron-home *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.actual-point{fill:var(--ink)}.pace-point{fill:var(--canvas);stroke:var(--ink);stroke-width:2}
+@media(max-width:600px){.surface-header{display:block!important}.surface-header h1{max-width:18ch}.surface-header p{margin-top:16px}}

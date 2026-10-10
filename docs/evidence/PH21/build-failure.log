@@ -1,0 +1,9 @@
+▲ Next.js 16.3.8 (Turbopack)
+- Environments: .env.local
+✓ Running next.config.ts took 21ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 385ms
+  Running TypeScript ...
+tests/integration/ph21/routes.test.ts(20,141): error TS7006: Parameter 'r' implicitly has an 'any' type.
+Failed to type check.

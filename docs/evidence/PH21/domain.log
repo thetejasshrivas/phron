@@ -1,0 +1,21 @@
+---------------|---------|----------|---------|---------|-------------------
+File           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+---------------|---------|----------|---------|---------|-------------------
+All files      |     100 |      100 |     100 |     100 |
+ card.ts       |     100 |      100 |     100 |     100 |
+ core.ts       |     100 |      100 |     100 |     100 |
+ cycle.ts      |     100 |      100 |     100 |     100 |
+ dates.ts      |     100 |      100 |     100 |     100 |
+ distress.ts   |     100 |      100 |     100 |     100 |
+ firefight.ts  |     100 |      100 |     100 |     100 |
+ money.ts      |     100 |      100 |     100 |     100 |
+ obligation.ts |     100 |      100 |     100 |     100 |
+ onboarding.ts |     100 |      100 |     100 |     100 |
+ recovery.ts   |     100 |      100 |     100 |     100 |
+---------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 18 passed, 18 total
+Tests:       198 passed, 198 total
+Snapshots:   0 total
+Time:        5.53 s, estimated 8 s
+Ran all test suites.

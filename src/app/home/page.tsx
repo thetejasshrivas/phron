@@ -2,6 +2,7 @@ import { Home } from "@/components/home/Home";
 import { requirePageUser } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import "@/styles/home.css";
+import "@/styles/surfaces.css";
 
 export const metadata = { title: "PHRON · Your day" };
 export const dynamic = 'force-dynamic';

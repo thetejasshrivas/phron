@@ -1,0 +1,58 @@
+[
+  {
+    "name": "unit",
+    "command": "node node_modules/jest/bin/jest.js --config jest.config.mjs --selectProjects unit --runInBand",
+    "started": "2026-10-10T08:52:37.707Z",
+    "finished": "2026-10-10T08:52:43.436Z",
+    "exitCode": 0
+  },
+  {
+    "name": "integration",
+    "command": "node node_modules/jest/bin/jest.js --config jest.config.mjs --selectProjects integration --runInBand",
+    "started": "2026-10-10T08:52:43.437Z",
+    "finished": "2026-10-10T08:52:44.607Z",
+    "exitCode": 0
+  },
+  {
+    "name": "domain",
+    "command": "node scripts/domain-coverage.mjs",
+    "started": "2026-10-10T08:52:44.607Z",
+    "finished": "2026-10-10T08:52:50.767Z",
+    "exitCode": 0
+  },
+  {
+    "name": "contract-coverage",
+    "command": "node node_modules/jest/bin/jest.js --config jest.config.mjs --selectProjects unit --runInBand --coverage",
+    "started": "2026-10-10T08:52:50.767Z",
+    "finished": "2026-10-10T08:53:00.669Z",
+    "exitCode": 0
+  },
+  {
+    "name": "surfaces",
+    "command": "node tests/integration/ph21/surfaces.mjs",
+    "started": "2026-10-10T08:53:00.669Z",
+    "finished": "2026-10-10T08:53:11.162Z",
+    "exitCode": 0
+  },
+  {
+    "name": "sources",
+    "command": "node scripts/verify-sources.mjs",
+    "started": "2026-10-10T08:53:11.162Z",
+    "finished": "2026-10-10T08:53:11.221Z",
+    "exitCode": 0
+  },
+  {
+    "name": "typecheck",
+    "command": "node node_modules/typescript/bin/tsc --noEmit",
+    "started": "2026-10-10T08:53:11.221Z",
+    "finished": "2026-10-10T08:53:12.292Z",
+    "exitCode": 0
+  },
+  {
+    "name": "lint",
+    "command": "node node_modules/eslint/bin/eslint.js . --max-warnings=0",
+    "started": "2026-10-10T08:53:12.293Z",
+    "finished": "2026-10-10T08:53:15.997Z",
+    "exitCode": 0
+  }
+]

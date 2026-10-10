@@ -1,0 +1,135 @@
+[
+  {
+    "name": "unit",
+    "command": "node node_modules/jest/bin/jest.js --config jest.config.mjs --selectProjects unit --runInBand",
+    "started": "2026-10-10T08:34:12.816Z",
+    "finished": "2026-10-10T08:34:19.218Z",
+    "exitCode": 0
+  },
+  {
+    "name": "integration",
+    "command": "node node_modules/jest/bin/jest.js --config jest.config.mjs --selectProjects integration --runInBand",
+    "started": "2026-10-10T08:34:19.219Z",
+    "finished": "2026-10-10T08:34:20.514Z",
+    "exitCode": 0
+  },
+  {
+    "name": "domain",
+    "command": "node scripts/domain-coverage.mjs",
+    "started": "2026-10-10T08:34:20.515Z",
+    "finished": "2026-10-10T08:34:28.809Z",
+    "exitCode": 0
+  },
+  {
+    "name": "contract-coverage",
+    "command": "node node_modules/jest/bin/jest.js --config jest.config.mjs --selectProjects unit --runInBand --coverage",
+    "started": "2026-10-10T08:34:28.809Z",
+    "finished": "2026-10-10T08:34:41.232Z",
+    "exitCode": 0
+  },
+  {
+    "name": "surfaces",
+    "command": "node tests/integration/ph21/surfaces.mjs",
+    "started": "2026-10-10T08:34:41.233Z",
+    "finished": "2026-10-10T08:34:49.493Z",
+    "exitCode": 0
+  },
+  {
+    "name": "ingestion",
+    "command": "node tests/integration/ph19/ingestion.mjs",
+    "started": "2026-10-10T08:34:49.494Z",
+    "finished": "2026-10-10T08:34:59.599Z",
+    "exitCode": 0
+  },
+  {
+    "name": "cycle",
+    "command": "node tests/integration/ph17/cycle.mjs",
+    "started": "2026-10-10T08:34:59.600Z",
+    "finished": "2026-10-10T08:35:31.143Z",
+    "exitCode": 0
+  },
+  {
+    "name": "cards",
+    "command": "node tests/integration/ph15/lifecycle.mjs",
+    "started": "2026-10-10T08:35:31.144Z",
+    "finished": "2026-10-10T08:36:31.418Z",
+    "exitCode": 0
+  },
+  {
+    "name": "payments",
+    "command": "node tests/integration/ph15/payments.mjs",
+    "started": "2026-10-10T08:36:31.419Z",
+    "finished": "2026-10-10T08:37:09.454Z",
+    "exitCode": 0
+  },
+  {
+    "name": "recovery",
+    "command": "node tests/integration/ph16/recovery.mjs",
+    "started": "2026-10-10T08:37:09.455Z",
+    "finished": "2026-10-10T08:37:30.181Z",
+    "exitCode": 0
+  },
+  {
+    "name": "commitments",
+    "command": "node tests/integration/ph16/commitments.mjs",
+    "started": "2026-10-10T08:37:30.181Z",
+    "finished": "2026-10-10T08:37:58.041Z",
+    "exitCode": 0
+  },
+  {
+    "name": "cancellation",
+    "command": "node tests/integration/ph16/cancellation.mjs",
+    "started": "2026-10-10T08:37:58.041Z",
+    "finished": "2026-10-10T08:38:06.408Z",
+    "exitCode": 0
+  },
+  {
+    "name": "distress",
+    "command": "node tests/integration/ph18/distress.mjs",
+    "started": "2026-10-10T08:38:06.409Z",
+    "finished": "2026-10-10T08:38:20.299Z",
+    "exitCode": 0
+  },
+  {
+    "name": "goals",
+    "command": "node tests/integration/ph18/goal-purchase.mjs",
+    "started": "2026-10-10T08:38:20.299Z",
+    "finished": "2026-10-10T08:38:26.570Z",
+    "exitCode": 0
+  },
+  {
+    "name": "security",
+    "command": "node tests/security/ph14-local.mjs",
+    "started": "2026-10-10T08:38:26.570Z",
+    "finished": "2026-10-10T08:38:37.934Z",
+    "exitCode": 0
+  },
+  {
+    "name": "ai-boundary",
+    "command": "node tests/security/fit13-adversarial.mjs",
+    "started": "2026-10-10T08:38:37.934Z",
+    "finished": "2026-10-10T08:38:42.351Z",
+    "exitCode": 0
+  },
+  {
+    "name": "sources",
+    "command": "node scripts/verify-sources.mjs",
+    "started": "2026-10-10T08:38:42.351Z",
+    "finished": "2026-10-10T08:38:42.411Z",
+    "exitCode": 0
+  },
+  {
+    "name": "typecheck",
+    "command": "node node_modules/typescript/bin/tsc --noEmit",
+    "started": "2026-10-10T08:38:42.411Z",
+    "finished": "2026-10-10T08:38:44.243Z",
+    "exitCode": 0
+  },
+  {
+    "name": "lint",
+    "command": "node node_modules/eslint/bin/eslint.js . --max-warnings=0",
+    "started": "2026-10-10T08:38:44.243Z",
+    "finished": "2026-10-10T08:38:49.673Z",
+    "exitCode": 1
+  }
+]
