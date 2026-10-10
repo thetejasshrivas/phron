@@ -1,0 +1,6 @@
+Running one project: integration
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.735 s
+Ran all test suites within paths "tests/integration/ph23/recovery-read.test.ts".

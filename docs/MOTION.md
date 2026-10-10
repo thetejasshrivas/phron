@@ -107,3 +107,7 @@ All `prefers-reduced-motion: reduce` overrides cover animations, transitions and
 Canonical numbers update after confirmed mutations; presentation interpolates tanks without interpolating permission. Browser observes intermediate normal cash drain; reduced-motion computed transition0s across375/768/1280. Actual Groceries→Dining canonical readable bucket update175.7ms local Edge (<=300ms), aggregate cash/spent unchanged.
 
 D20/Adjust Trims native dialogs support focus/Escape, pending operations prevent conflicting actions. Stable IDs retained on ambiguous retry; no optimistic ledger. Capture remains top-sticky/readable, visible microphone checking/listening/stop/text fallback; recognition never saves. Signed reconciliation review precedes explicit confirmation. Immediate delete reversal/6-second Undo/re-commit/refresh tested. Tab Capture→Coach→Buckets→Navigation passes. Evidence in G4/remediation/browser. V3 and later full accessibility/performance gates pending, no self-approval.
+
+## PH23 capture transitions and focus — 2026-10-10
+
+Collapse/expand uses immediate layout changes, with no animated money or overlay pointer interception. Escape closes capture and returns focus to its toggle. Outside-page taps close without preventing the underlying action; successful saves close only after confirmation. Failed/pending entries retain their values and stable operation identity. Existing reduced-motion rule remains effective; no new animation is introduced.

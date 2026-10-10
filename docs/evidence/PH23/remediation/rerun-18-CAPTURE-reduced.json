@@ -1,0 +1,460 @@
+{
+  "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+  "started": "2026-10-10T15:15:11.257Z",
+  "recorded": "2026-10-10T15:15:27.266Z",
+  "browser": "155.0.4283.45",
+  "captureWorkaround": false,
+  "environment": "Edge headless, Windows, local production Next/Supabase persistent ordinary-user sessions; fixture SQL only in pinned local container; providers empty; no remote calls",
+  "results": [
+    {
+      "id": 18,
+      "width": 375,
+      "title": "Actual absent-provider fallback saves manually",
+      "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+      "started": "2026-10-10T15:15:11.965Z",
+      "status": "PASS",
+      "steps": [
+        "open authenticated /home",
+        "submit synthetic bounded capture",
+        "save 123 rupees cash in Dining"
+      ],
+      "events": [
+        {
+          "at": "2026-10-10T15:15:14.927Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:14.946Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:14.947Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:15.012Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:15.018Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:15.090Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:15.104Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:15.191Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:15.297Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:15.560Z",
+          "path": "/api/finance/spend",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:15.639Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:15.646Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:15.648Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:15.721Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:15.727Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:15.992Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:15.996Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:16.005Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:16.076Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:16.082Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:16.156Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:16.169Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        }
+      ],
+      "observed": {
+        "ingestion": {
+          "kind": "manual_fallback",
+          "reason": "provider_unavailable",
+          "openManualEntry": true
+        },
+        "providerDrill": "real unconfigured adapters, no successful provider mocks"
+      },
+      "pageErrors": [],
+      "consoleWarnings": [],
+      "screenshot": "reduced-S18-375.png",
+      "durationMilliseconds": 4375.418099999999,
+      "finished": "2026-10-10T15:15:16.340Z"
+    },
+    {
+      "id": "CAPTURE",
+      "width": 375,
+      "title": "Native expanded entry, backdrop and keyboard controls",
+      "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+      "started": "2026-10-10T15:15:16.341Z",
+      "status": "PASS",
+      "steps": [
+        "open authenticated /home",
+        "save 100 rupees cash in Dining"
+      ],
+      "events": [
+        {
+          "at": "2026-10-10T15:15:18.688Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:18.693Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:18.707Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:18.778Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:18.779Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:18.853Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:18.854Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:19.443Z",
+          "path": "/api/finance/spend",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:19.555Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:19.556Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:19.559Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:19.625Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:19.682Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        }
+      ],
+      "observed": {
+        "reducedMotion": "preference and tank zero-duration transitions asserted"
+      },
+      "pageErrors": [],
+      "consoleWarnings": [],
+      "screenshot": "reduced-CAPTURE-375.png",
+      "durationMilliseconds": 3441.682499999999,
+      "finished": "2026-10-10T15:15:19.783Z"
+    },
+    {
+      "id": 18,
+      "width": 1280,
+      "title": "Actual absent-provider fallback saves manually",
+      "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+      "started": "2026-10-10T15:15:19.784Z",
+      "status": "PASS",
+      "steps": [
+        "open authenticated /home",
+        "submit synthetic bounded capture",
+        "save 123 rupees cash in Dining"
+      ],
+      "events": [
+        {
+          "at": "2026-10-10T15:15:22.170Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:22.170Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:22.188Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:22.238Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:22.320Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:22.419Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:22.425Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:22.595Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:22.718Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:22.933Z",
+          "path": "/api/finance/spend",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:23.004Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:23.005Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:23.010Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:23.074Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:23.074Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:23.352Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:23.357Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:23.364Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:23.431Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:23.434Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:23.515Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:23.515Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        }
+      ],
+      "observed": {
+        "ingestion": {
+          "kind": "manual_fallback",
+          "reason": "provider_unavailable",
+          "openManualEntry": true
+        },
+        "providerDrill": "real unconfigured adapters, no successful provider mocks"
+      },
+      "pageErrors": [],
+      "consoleWarnings": [],
+      "screenshot": "reduced-S18-1280.png",
+      "durationMilliseconds": 3936.7441,
+      "finished": "2026-10-10T15:15:23.721Z"
+    },
+    {
+      "id": "CAPTURE",
+      "width": 1280,
+      "title": "Native expanded entry, backdrop and keyboard controls",
+      "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+      "started": "2026-10-10T15:15:23.721Z",
+      "status": "PASS",
+      "steps": [
+        "open authenticated /home",
+        "save 100 rupees cash in Dining"
+      ],
+      "events": [
+        {
+          "at": "2026-10-10T15:15:26.154Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:26.179Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:26.180Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:26.253Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:26.258Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:26.331Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:26.333Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:26.932Z",
+          "path": "/api/finance/spend",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:27.006Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:27.031Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:27.034Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:27.099Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:15:27.142Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        }
+      ],
+      "observed": {
+        "reducedMotion": "preference and tank zero-duration transitions asserted"
+      },
+      "pageErrors": [],
+      "consoleWarnings": [],
+      "screenshot": "reduced-CAPTURE-1280.png",
+      "durationMilliseconds": 3544.901399999999,
+      "finished": "2026-10-10T15:15:27.266Z"
+    }
+  ]
+}

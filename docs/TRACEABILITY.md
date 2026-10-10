@@ -1,3 +1,51 @@
+# Current PH-23 repair traceability — PASS
+
+2026-10-10 IST; main e305ea4f94556298c61c3d53cf5d13f13ce475c9 **plus uncommitted repair diff**. Final canonical batch **36/36 PASS** at375/1280, native actions with no collapse workaround. Supplementary effective normal-motion50 PASS; focused6 PASS; reduced-motion4 PASS. Fresh425 unit,138 mocked integration,202 domain/property with100% collected mathematical coverage; contract coverage100%, lint/typecheck/source hashes/production build/diffcheck PASS. Counts overlap. [Repair report](evidence/PH23/remediation/RESULT.md) and [final36-row matrix](evidence/PH23/remediation/SCENARIOS.md) supersede the failed audit below. Frozen source unchanged.
+
+| Requirement / scenario | Updated disposition | Exact evidence |
+| --- | --- | --- |
+| Scenarios1–18 |36 PASS | remediation/canonical-final.json; approved PH23-SC02-v1 for Scenario2 |
+| FR-UX-01 / PH23-UI-01 | Required capture/native-pointer regression PASS | CAPTURE rows, scenarios9/15/16, reduced4; broader a11y deferredPH25 |
+| FR-BORR-02/03 / Scenario11 | Badge250000paise before/after reload PASS | S11 both widths, typed recovery-read7 fixtures |
+| FR-AI-01/03 / PH23-AI-01 / AC-AI-03 | Exact remembered prefix/hostile route PASS | prefix21 tests incl7 new; effective AC-AI-03 rows; no live provider claim |
+| AC-TXN-03 | Remembered Hinglish PASS; first-use provider category/is_estimated NOT RUN | effective AC-TXN-03; distinct scope retained |
+| FR-TXN-05/06 / FIT08 | Native edit/delete/Undo/expiry PASS both | finalS16; canonical saved amount awaited before reopening |
+| AC-GOAL-04 / Scenario17 | Completion/fill/cash execution PASS | finalS17, goal-fill96.66→100% asserted |
+| FR-AI-04 / Scenario18 | Real unconfigured-provider manual save/refresh PASS | finalS18 and Continue-control regression |
+| D20 / cascade deletion / AC-SAFE-01 | Supplementary ordinary-user flows PASS both | effective-results.json selecting originating runs |
+
+No formula/SQL change or founder visual approval. G5/G0B OPEN; PH24 next eligible only after authorization.
+
+---
+
+## Historical record — superseded where noted
+
+# Current PH-23 browser traceability — BLOCKED
+
+2026-10-10 IST; main `e305ea4f94556298c61c3d53cf5d13f13ce475c9`. This overlay supersedes any interpretation that the historical G4 PASS table below proves current full-browser acceptance. G4's original layer evidence is retained; no financial contract or source amendment changed. [36-row matrix](evidence/PH23/SCENARIOS.md), [actual runs](evidence/PH23/audit-results.json), [limitations](evidence/PH23/RESULT.md).
+
+| Requirement / scenario | Current browser disposition | Executed evidence and limit |
+| --- | --- | --- |
+| Scenarios1,3–10,12–18 | PASS both widths, qualified | Real saved-state/native flows; mobile9/15/16 require capture collapse; original obstruction OPEN. Approved clause-specific fixture/date translations recorded. |
+| Scenario2 / FR-DIST-02 / FIT01/02/10 | BLOCKED_SOURCE_CONFLICT both | Literal negativecash correctlyC; frozenexpectedB inconsistent; supplementalB notcanonical replacement. |
+| Scenario11 / FR-BORR-02/03 | FAIL both |250000paise saved/reloaded; required committed badge absent. |
+| AC-TXN-03 / FR-AI-01/03 | First-use category/is_estimated NOT RUN; remembered prefix FAIL | Same-user bhai mapping exposeslost500amount; no claim thatDining memory satisfiesfirst-useUnallocated/Lent AC. No successfulprovider mock orlive provider. |
+| AC-AI-03 / FR-AI-03 | FAIL both | Exact mixed spend/injection text returnsamount_unavailable viarememberedlunch; no unauthorizedwrite. |
+| AC-SAFE-01 | PASS both | Standaloneinvestment advice refused; nofinancial mutation. |
+| AC-GOAL-04 / FR-GOAL-04 | PASS both |96.66→100% tank +COMPLETEDbanner beforepurchase, cashreserveexecution afterconfirmedcontribution. |
+| D20-v1 / FR-BUCKET-05 | PASS both | Requiredtargetmodal, atomic transaction/activeallowance/baseline transfer, archive andrefresh. |
+| FR-TXN-05/06 / FIT08 | PASS collapsedcapture both |₹1000→400→1000 correction, immediate deletion, singleUndo and6sectoast expiry; mobileexpandedpanel defect remains. |
+| Scenario15 / CC01–16 / FIT12 | Browsergolden PASS both;46+25localDB regressionsPASS | Browserpurchase/partial/replay/mixed/reversal/rollover/oldpurchasepayment; otherCCbranches provedatDB layer, notclaimedall16browser clicks. |
+| FR-AUTH-04 / cascadepurge | PASS both | Settingsconfirmation,13populated tablesempty, rawtransactions/replay/memory removed, authrevoked/API401, UserB unchanged. |
+| FR-UX-01 / AC-ACC-01 | FAIL375expandedcapture path; fullaccessibilityNOT RUN | Native recovery/history/payment pointer intercepted; closed-panelpass isworkaroundonly. |
+| Scenario18 / FR-AI-04 | PASS both | Unconfiguredproviders andcontrolledbothHTTP500; realmanualsave+refresh. Timeout/rate-limitbrowserdrills NOT RUN. |
+
+PH23 notcomplete, G5notpassed. PH24/25/26/V3 await separately authorized work afterthese blockers. Allunit/contract/domain/build passes remain bounded layer evidence, not anall-browser verdict.
+
+---
+
+## Historical G4 register
+
 # Traceability — authoritative PH-22 G4 audit
 
 Gate G4 PASSED; PH-22 COMPLETE. 107/107 actual P0 IDs PASS (60 FR/47 unique AC), under explicitly named approved amendments and current deterministic/local evidence. Frozen source SHA256 d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994. [G4 audit](evidence/G4/AUDIT.md) and [verbatim machine register](evidence/G4/requirements.json) govern; initial failed audit remains preserved. This is not a release or PH23 full-journey claim.

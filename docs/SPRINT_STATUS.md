@@ -5,29 +5,49 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: PH-22 closure commit containing this status (run parent 9640871b21710b5b6d2f76d025b9713e6dda8d49; resolve git log -1 -- docs/evidence/G4/AUDIT.md)
-working_tree_state: Verified PH-22 implementation/evidence sealed by closure commit; New Text Document.txt preserved untracked
-dirty_files: ["New Text Document.txt (untouched untracked user work)"]
-active_chat: PHRON-00 Lead / PH-22 closure (single writer)
-phase: "4 (AI and Surfaces)"
-current_step: PH-23
-step_state: PH-22 COMPLETE; PH-23 PENDING OPERATOR AUTHORIZATION — NOT STARTED
+commit: e305ea4f94556298c61c3d53cf5d13f13ce475c9 # base HEAD; PH23 closure commit parent; resolve git log -1 -- docs/evidence/PH23/remediation/RESULT.md
+working_tree_state: PH23 remediation being committed; PH24 audit authorized; scratch untouched
+dirty_files: ["PH23 Home/RecoveryCard/style and ingestion/recovery read/contract repairs", "tests/integration/ph19 and ph23", "tests/e2e/ph23 (new)", "docs/status/design/decisions/evidence/handoffs", "New Text Document.txt (untouched user work)"]
+active_chat: PHRON-00 Lead & QA / PH-24 security audit (single active writer)
+phase: "5 (Journeys and Quality)"
+current_step: PH-24
+step_state: PH-23 COMPLETE; PH-24 / P05-SECURITY AUTHORIZED — IN PROGRESS
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
-approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D08-v1, D09-v1, D10-v1, D11-v1, D16-v1, D17-v1, D18-v1, D19-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1, D14-v1, D15-v1, D26-v1, G3-DF-01-v1, PH21-BUCKET-v1, PH21-GOAL-v1, PH21-OBLIGATION-v1, PH21-CHART-v1, D20-v1, G4-FLEX-DATE-01-v1, G4-CUSTOM-RECOVERY-01-v1, D23-v1, D24-v1, G4-GOAL-CALENDAR-01-v1]
-completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17, PH-18, PH-19, PH-20, PH-21, PH-22]
+approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D08-v1, D09-v1, D10-v1, D11-v1, D16-v1, D17-v1, D18-v1, D19-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1, D14-v1, D15-v1, D26-v1, G3-DF-01-v1, PH21-BUCKET-v1, PH21-GOAL-v1, PH21-OBLIGATION-v1, PH21-CHART-v1, D20-v1, G4-FLEX-DATE-01-v1, G4-CUSTOM-RECOVERY-01-v1, D23-v1, D24-v1, G4-GOAL-CALENDAR-01-v1, PH23-SC02-v1]
+completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17, PH-18, PH-19, PH-20, PH-21, PH-22, PH-23]
 passed_gates: [G0A, G1, V1, G2, V2, G3, G4]
-open_gates: [G0B]
+open_gates: [G0B, G5]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: PENDING}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb"}
-blocking_decisions: [] # G4 bounded scope; D07-card/D07-funding/D25 remain separate unavailable/manual checks
-latest_evidence: docs/evidence/G4/AUDIT.md
+blocking_decisions: [] # PH23 source fixture resolved by explicit user scope; unrelated open items remain in DECISIONS
+latest_evidence: docs/evidence/PH23/remediation/RESULT.md
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
 migration_state: PH11_PH12_REMOTE_APPLIED; PH15_THROUGH_PH22_CANDIDATES_LOCAL_ONLY_VERIFIED_NOT_REMOTE
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers", "2026-10-10: Tejas approved PH21 typed contracts, server/API handlers, local-only migration and integration tests for goals, reconciliation, buckets and authenticated account deletion; no remote rollout"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Operator authorizes PH-23 / QA full 18 canonical desktop/mobile product journeys; do not start without signal
+next_action: Execute PH-24 local ordinary-user security/privacy audit; no PH-25 advance
 last_updated_ist: 2026-10-10
 ```
+
+## PH-23 / Lead & Experience — COMPLETE locally — 2026-10-10 IST
+
+Final canonical36/36 PASS375/1280 without forced clicks or manual collapse workaround; effective supplementary normal50 PASS, focused6 PASS, reduced4 PASS. PH23-UI-01/02 andAI-01 repaired; Scenario2 fixture resolved by explicit user PH23-SC02-v1. Open body normal flow, outside-tap underlying actions, collapse/Escape/draft retention, fallback Continue focus, revision-matched commitment badge and strict remembered amount extraction verified.
+
+Fresh425 unit/36 suites,138 mocked integration/16 suites,202 domain/property/21 suites with100% statements/branches/functions/lines across10 implemented math files,100%6-contract coverage, lint/typecheck/production build/five source hashes/diffcheck PASS. Earlier card46/payment25/security16 local DB evidence retained, not rerun in this repair. Commands/counts overlap. [Repair report](evidence/PH23/remediation/RESULT.md), finalmatrix and exact run selection preserve original failed attempts/driver corrections.
+
+Base main e305ea4 plus uncommitted authorized implementation/docs/tests. No formula/DB migration/dependency/remote/deployment/provider/account change; scratch untouched. Ordinary synthetic SSR/user operations against persistent localhost Supabase; fixtures cleaned, app3108 stopped. PH23 COMPLETE for local canonical journey/repair scope; first-use live provider accuracy remains NOT RUN. G5/G0B OPEN; V3 PENDING, no physical phone/founder acceptance. Next eligible PH24 / P05-SECURITY PENDING OPERATOR AUTHORIZATION; PH24–26 NOT STARTED.
+
+## Historical initial PH-23 audit — superseded by verified repair above
+
+## PH-23 / P05-JOURNEYS — AUDIT EXECUTED / BLOCKED — 2026-10-10 IST
+
+Audited `main` at `e305ea4f94556298c61c3d53cf5d13f13ce475c9`, unchanged application. All 18 canonical scenario IDs executed at 375×900 and 1280×900 against real local persistent Supabase Auth/PostgreSQL: **32 PASS, 2 FAIL (Scenario 11), 2 source-blocked (Scenario 2)**. Mobile scenarios 9/15/16 pass only after explicitly closing expanded capture; the original obstruction remains OPEN. The primary 46 effective results are 38 PASS / 6 FAIL / 2 source-blocked. Additional controlled provider HTTP 500 fallback and separately labeled valid State B drills all pass (four pairs). No alternate fixture silently replaces Scenario 2.
+
+Open defects: mobile capture intercepts lower actions; accepted commitment lacks required dashboard badge; remembered-merchant text loses valid amount after leading words. Exact mixed prompt acceptance fails; first-use Hinglish category/is_estimated provider mapping is NOT RUN. Goal tank/milestone, advice refusal, D20 reallocation, golden card/retry/mixed settlement/rollover, edit/delete/6-second Undo and populated authenticated account deletion pass in their asserted paths. User B snapshot is unchanged after purge; expired user API returns 401.
+
+Fresh checks PASS: 425 unit / 36 suites; 124 mocked integration / 15 suites; 202 domain/property / 21 suites, 100% statements/branches/functions/lines across 10 implemented math files; 46 real local card lifecycle, 25 payment and 16 security cases; lint, typecheck, production build, all five source hashes and git diff --check. Counts overlap. Browser audit exits 1; green lower-layer tests do not close its failures. [Report](evidence/PH23/RESULT.md), [scenario matrix](evidence/PH23/SCENARIOS.md), [latest selected runs](evidence/PH23/audit-results.json), BUGS and QA handoff contain exact commands, limits, artifacts and times.
+
+QA-only files are uncommitted; HEAD, frozen sources, dependencies, application code and remote environment are unchanged. New Text Document.txt is untouched. Local test server stopped and synthetic fixtures cleaned. No deployment, remote migration, successful provider mock/live call, Google/operator account action or install. Gate G4's historical pass retained; PH-23 NOT COMPLETE, G5 NOT PASSED, G0B OPEN and V3 PENDING. PH24–26 have not begun. Next one action: Lead triage PH23-UI-01 and authorize the Experience repair/retest; obtain a separate explicit founder Scenario2 amendment before claiming that canonical fixture passes.
 
 ## PH-22 / Gate G4 — COMPLETE / PASSED — 2026-10-10 IST
 

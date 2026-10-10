@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "traceFiles": 16,
+  "textMembersScanned": 298,
+  "rawTracesRemaining": 0,
+  "scope": "JWT/base64 session pattern scan; serializer separately redacts credential/cookie/header fields; synthetic screenshot data only"
+}

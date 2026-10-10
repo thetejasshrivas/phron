@@ -1,0 +1,288 @@
+{
+  "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+  "started": "2026-10-10T14:33:38.750Z",
+  "recorded": "2026-10-10T14:33:48.003Z",
+  "browser": "155.0.4283.45",
+  "captureWorkaround": true,
+  "environment": "Edge headless, Windows, local production Next/Supabase persistent ordinary-user sessions; fixture SQL only in pinned local container; providers controlled HTTP500 only; no remote calls",
+  "results": [
+    {
+      "id": 18,
+      "width": 375,
+      "title": "Actual absent-provider fallback saves manually",
+      "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+      "started": "2026-10-10T14:33:39.715Z",
+      "status": "PASS",
+      "steps": [
+        "open authenticated /home",
+        "submit synthetic bounded capture",
+        "explicitly close manual capture before interacting with lower content (observed mobile workaround)",
+        "save 123 rupees cash in Dining"
+      ],
+      "events": [
+        {
+          "at": "2026-10-10T14:33:42.548Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:42.566Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:42.566Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:42.644Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:42.652Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:42.736Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:42.748Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:42.833Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:42.947Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:43.136Z",
+          "path": "/api/finance/spend",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:43.214Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:43.214Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:43.222Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:43.291Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:43.298Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:43.670Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:43.675Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:43.683Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:43.740Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:43.749Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:43.827Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:43.830Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        }
+      ],
+      "observed": {
+        "ingestion": {
+          "kind": "manual_fallback",
+          "reason": "providers_failed",
+          "openManualEntry": true
+        },
+        "providerDrill": "both real HTTP adapters return controlled500; all database/auth requests real"
+      },
+      "pageErrors": [],
+      "consoleWarnings": [],
+      "screenshot": "provider500-S18-375.png",
+      "durationMilliseconds": 4399.269399999999,
+      "finished": "2026-10-10T14:33:44.114Z"
+    },
+    {
+      "id": 18,
+      "width": 1280,
+      "title": "Actual absent-provider fallback saves manually",
+      "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+      "started": "2026-10-10T14:33:44.115Z",
+      "status": "PASS",
+      "steps": [
+        "open authenticated /home",
+        "submit synthetic bounded capture",
+        "explicitly close manual capture before interacting with lower content (observed mobile workaround)",
+        "save 123 rupees cash in Dining"
+      ],
+      "events": [
+        {
+          "at": "2026-10-10T14:33:46.425Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:46.425Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:46.439Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:46.530Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:46.533Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:46.622Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:46.625Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:46.787Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:46.897Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:47.081Z",
+          "path": "/api/finance/spend",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:47.153Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:47.157Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:47.158Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:47.227Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:47.230Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:47.531Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:47.536Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:47.541Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:47.610Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:47.613Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:47.687Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:33:47.689Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        }
+      ],
+      "observed": {
+        "ingestion": {
+          "kind": "manual_fallback",
+          "reason": "providers_failed",
+          "openManualEntry": true
+        },
+        "providerDrill": "both real HTTP adapters return controlled500; all database/auth requests real"
+      },
+      "pageErrors": [],
+      "consoleWarnings": [],
+      "screenshot": "provider500-S18-1280.png",
+      "durationMilliseconds": 3887.9281999999985,
+      "finished": "2026-10-10T14:33:48.003Z"
+    }
+  ]
+}

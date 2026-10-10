@@ -1,0 +1,144 @@
+Running one project: integration
+FAIL integration tests/integration/ph19/ingest-route.test.ts
+  ● PH-19 ingestion route boundary › remembered merchant keeps the whole amount after leading words: I paid 500 Zomato cash
+
+    expect(received).toMatchObject(expected)
+
+    - Expected  - 7
+    + Received  + 1
+
+      Object {
+    -   "kind": "routed",
+    -   "outcomes": Array [
+    -     Object {
+    -       "kind": "committed",
+    -     },
+    -   ],
+    -   "provider": "local_memory",
+    +   "kind": "manual_fallback",
+      }
+
+
+
+      at tests/integration/ph19/ingest-route.test.ts:318:38
+
+  ● PH-19 ingestion route boundary › remembered merchant keeps the whole amount after leading words: Zomato cost me 500 cash
+
+    expect(received).toMatchObject(expected)
+
+    - Expected  - 7
+    + Received  + 1
+
+      Object {
+    -   "kind": "routed",
+    -   "outcomes": Array [
+    -     Object {
+    -       "kind": "committed",
+    -     },
+    -   ],
+    -   "provider": "local_memory",
+    +   "kind": "manual_fallback",
+      }
+
+
+
+      at tests/integration/ph19/ingest-route.test.ts:318:38
+
+  ● PH-19 ingestion route boundary › checks user-scoped exact merchant memory before providers, then saves via the fixed ordinary-user RPC
+
+    expect(received).toMatchObject(expected)
+
+    - Expected  - 9
+    + Received  + 1
+
+      Object {
+    -   "kind": "routed",
+    -   "outcomes": Array [
+    -     Object {
+    -       "confidence": "HIGH",
+    -       "kind": "committed",
+    -       "transactionId": "8d59c6e3-7352-4b61-a8a2-cc08ae8bb917",
+    -     },
+    -   ],
+    -   "provider": "local_memory",
+    +   "kind": "manual_fallback",
+      }
+
+
+
+      at Object.<anonymous> (tests/integration/ph19/ingest-route.test.ts:357:53)
+
+  ● PH-19 ingestion route boundary › does not default an exact-memory hit with missing payment method to cash
+
+    expect(received).toMatchObject(expected)
+
+    - Expected  - 6
+    + Received  + 1
+
+      Object {
+    -   "kind": "routed",
+    -   "outcomes": Array [
+    -     Object {
+    -       "kind": "method_confirmation",
+    -     },
+    -   ],
+    +   "kind": "manual_fallback",
+      }
+
+
+
+      at Object.<anonymous> (tests/integration/ph19/ingest-route.test.ts:460:53)
+
+  ● PH-19 ingestion route boundary › routes a user memory alias to its custom bucket at high confidence before provider access
+
+    expect(received).toMatchObject(expected)
+
+    - Expected  - 9
+    + Received  + 1
+
+      Object {
+    -   "kind": "routed",
+    -   "outcomes": Array [
+    -     Object {
+    -       "bucketId": "be47746d-11a6-47b8-be80-9476bee47008",
+    -       "confidence": "HIGH",
+    -       "kind": "committed",
+    -     },
+    -   ],
+    -   "provider": "local_memory",
+    +   "kind": "manual_fallback",
+      }
+
+
+
+      at Object.<anonymous> (tests/integration/ph19/ingest-route.test.ts:529:53)
+
+  ● PH-19 ingestion route boundary › maps a literal active custom bucket name before providers and commits with high confidence
+
+    expect(received).toMatchObject(expected)
+
+    - Expected  - 9
+    + Received  + 1
+
+      Object {
+    -   "kind": "routed",
+    -   "outcomes": Array [
+    -     Object {
+    -       "bucketId": "be47746d-11a6-47b8-be80-9476bee47008",
+    -       "confidence": "HIGH",
+    -       "kind": "committed",
+    -     },
+    -   ],
+    -   "provider": "custom_bucket",
+    +   "kind": "manual_fallback",
+      }
+
+
+
+      at Object.<anonymous> (tests/integration/ph19/ingest-route.test.ts:611:53)
+
+Test Suites: 1 failed, 1 total
+Tests:       6 failed, 15 passed, 21 total
+Snapshots:   0 total
+Time:        0.684 s
+Ran all test suites within paths "tests/integration/ph19/ingest-route.test.ts".

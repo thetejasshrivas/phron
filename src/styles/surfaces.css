@@ -113,3 +113,9 @@
 .phron-home dialog p{font-size:13px;line-height:1.7;margin:14px 0}.phron-home dialog label{display:grid;gap:8px}.phron-home dialog select{min-height:44px;background:var(--canvas);border:1px solid var(--line);border-radius:7px;padding:10px}.phron-home dialog{max-height:85dvh;overflow:auto}.obligation-payments{border-top:1px solid var(--line);margin-top:16px;padding-top:8px}
 
 .milestone-ready{border-inline-start:3px solid var(--accent);padding:12px;background:var(--canvas);font-weight:600;}
+
+/* Expanded entry stays in normal flow; backdrop clicks never swallow actions. */
+.phron-home .capture-panel.capture-expanded{position:relative;top:auto;max-height:none;overflow:visible}
+.capture-toggle{justify-self:end;min-height:44px}
+#capture-content[hidden]{display:none!important}
+.commitment-badge{border-left:3px solid var(--ink);padding:12px;background:var(--surface);font-variant-numeric:tabular-nums}

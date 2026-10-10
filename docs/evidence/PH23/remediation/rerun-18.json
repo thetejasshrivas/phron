@@ -1,0 +1,156 @@
+{
+  "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+  "started": "2026-10-10T15:09:49.919Z",
+  "recorded": "2026-10-10T15:10:07.351Z",
+  "browser": "155.0.4283.45",
+  "captureWorkaround": false,
+  "environment": "Edge headless, Windows, local production Next/Supabase persistent ordinary-user sessions; fixture SQL only in pinned local container; providers empty; no remote calls",
+  "results": [
+    {
+      "id": 18,
+      "width": 375,
+      "title": "Actual absent-provider fallback saves manually",
+      "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+      "started": "2026-10-10T15:09:50.606Z",
+      "status": "FAIL",
+      "steps": [
+        "open authenticated /home",
+        "submit synthetic bounded capture"
+      ],
+      "events": [
+        {
+          "at": "2026-10-10T15:09:53.260Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:09:53.270Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:09:53.285Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:09:53.380Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:09:53.388Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:09:53.476Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:09:53.476Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:09:53.633Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:09:53.754Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        }
+      ],
+      "observed": {
+        "ingestion": {
+          "kind": "manual_fallback",
+          "reason": "provider_unavailable",
+          "openManualEntry": true
+        }
+      },
+      "failure": "expect(locator).toBeVisible() failed\n\nLocator:  locator('#capture-content')\nExpected: visible\nReceived: hidden\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toBeVisible\" locator('#capture-content') with timeout 5000ms\n  - waiting for locator('#capture-content')\n    14 × locator resolved to <div hidden=\"\" id=\"capture-content\">…</div>\n       - unexpected value \"hidden\"\n",
+      "pageErrors": [],
+      "consoleWarnings": [],
+      "screenshot": "S18-375.png",
+      "trace": "S18-375-trace.zip",
+      "durationMilliseconds": 8497.2083,
+      "finished": "2026-10-10T15:09:59.103Z"
+    },
+    {
+      "id": 18,
+      "width": 1280,
+      "title": "Actual absent-provider fallback saves manually",
+      "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+      "started": "2026-10-10T15:09:59.104Z",
+      "status": "FAIL",
+      "steps": [
+        "open authenticated /home",
+        "submit synthetic bounded capture"
+      ],
+      "events": [
+        {
+          "at": "2026-10-10T15:10:01.519Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:10:01.520Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:10:01.532Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:10:01.588Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:10:01.666Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:10:01.811Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:10:01.892Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:10:01.903Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T15:10:02.011Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        }
+      ],
+      "observed": {
+        "ingestion": {
+          "kind": "manual_fallback",
+          "reason": "provider_unavailable",
+          "openManualEntry": true
+        }
+      },
+      "failure": "expect(locator).toBeVisible() failed\n\nLocator:  locator('#capture-content')\nExpected: visible\nReceived: hidden\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toBeVisible\" locator('#capture-content') with timeout 5000ms\n  - waiting for locator('#capture-content')\n    14 × locator resolved to <div hidden=\"\" id=\"capture-content\">…</div>\n       - unexpected value \"hidden\"\n",
+      "pageErrors": [],
+      "consoleWarnings": [],
+      "screenshot": "S18-1280.png",
+      "trace": "S18-1280-trace.zip",
+      "durationMilliseconds": 8246.961599999999,
+      "finished": "2026-10-10T15:10:07.351Z"
+    }
+  ]
+}

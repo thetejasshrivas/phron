@@ -1,0 +1,7 @@
+FAIL AC-TXN-03-375 Cash Hinglish remembered-merchant intercept (3575ms)
+FAIL AC-AI-03-375 Exact legitimate lunch survives hostile instructions (3393ms)
+PASS ACCOUNT-375 Populated authenticated cascade deletion ends session and preserves second user (14588ms)
+FAIL AC-TXN-03-1280 Cash Hinglish remembered-merchant intercept (3959ms)
+FAIL AC-AI-03-1280 Exact legitimate lunch survives hostile instructions (3208ms)
+PASS ACCOUNT-1280 Populated authenticated cascade deletion ends session and preserves second user (13476ms)
+2 PASS; 4 FAIL; 6 total

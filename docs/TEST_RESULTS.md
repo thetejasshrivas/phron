@@ -1,3 +1,23 @@
+# Latest: PH-23 regression closure — PASS
+
+2026-10-10 IST; main e305ea4f94556298c61c3d53cf5d13f13ce475c9 **plus uncommitted repair diff**. Final canonical batch **36/36 PASS** at375/1280, native actions with no collapse workaround. Supplementary effective normal-motion50 PASS; focused6 PASS; reduced-motion4 PASS. Fresh425 unit,138 mocked integration,202 domain/property with100% collected mathematical coverage; contract coverage100%, lint/typecheck/source hashes/production build/diffcheck PASS. Counts overlap. [Repair report](evidence/PH23/remediation/RESULT.md) and [final36-row matrix](evidence/PH23/remediation/SCENARIOS.md) supersede the failed audit below. Frozen source unchanged. PH23 COMPLETE locally; G5 OPEN/V3 PENDING. No install, deployment, remote migration or provider call. Original failures preserved. First-use live provider accuracy remains NOT RUN; remembered merchant prefix/injection routes and real manual fallback/save/refresh pass. Scratch untouched; candidate not committed.
+
+---
+
+## Historical record — superseded where noted
+
+# Latest: PH-23 browser audit BLOCKED — 2026-10-10 IST
+
+Tested main `e305ea4f94556298c61c3d53cf5d13f13ce475c9` unchanged application. All18canonical IDs at375/1280 executed:32PASS /2FAIL(Scenario11) /2source-blocked(Scenario2). Mobile9/15/16 pass only after closing expanded capture; original obstruction remains OPEN. Primary46 effective results38PASS/6FAIL/2source-blocked; additional HTTP500 fallback and explicit different StateB fixtures4PASS. AC-GOAL-04 completion/tank andAC-SAFE-01 refusal PASS; mixed legitimate/injection prefix and remembered Hinglish amount FAIL; first-useAC-TXN-03 provider category/is_estimated path NOT RUN. D20 reallocation and populated native account purge PASS atbothwidths. Browser times, screenshots, redacted failure traces and original failures retained in [PH23 report](evidence/PH23/RESULT.md), [matrix](evidence/PH23/SCENARIOS.md), [effective results](evidence/PH23/audit-results.json).
+
+Fresh425unit/36suites,124mocked contracts/15suites,202domain/property/21suites with100% collected math statements/branches/functions/lines, localcard46/payment25/security16 PASS;lint/typecheck/productionbuild/fivehashes/diffcheck exit0. These counts overlap. Browser audit remainsfailed despite green lower-layer checks; no assertion/coverage threshold weakened. Three product defects plus one source conflict are OPEN inBUGS.md. Accountpurge proves13populated user-owned tables empty, authrevoked/API401 andUserB unchanged; allfinancial operations useordinary credentials.
+
+Local Nextproduction3108 + persistentSupabase55321 only; no fakecore DB, remotechanges, deployment, installs, realprovider/Google oroperatoraccount operation. External500 responses alone are controlled. G4 remainshistorically passed atthiscommit; these new findings preventPH23completion/G5pass. PH24–26/V3/physical-device/fulla11y/perf NOT RUN. QA-only changes uncommitted, scratch untouched. Next:Lead triagePH23-UI-01 repair/retest and resolveScenario2 viaexplicit founder decision. No automatic advance.
+
+---
+
+## Historical evidence (layer-scoped, retained)
+
 # Latest: PH-22 Gate G4 PASSED — 2026-10-10 IST
 
 107 actual P0 IDs PASS:60 FR/47 unique AC under named approved amendments. Final commands in evidence/G4/remediation/runs.json exit0:425 unit/36 suites;124 mocked integration/15 suites;202 domain/property/21 suites,100% statements/branches/functions/lines across10 mathematical files;425 tracked unit tests/36 suites and100% across6 collected contracts. Source hashes/lint/typecheck/production build PASS. Existing14 obligation tests reviewed/staged unchanged. Counts overlap.

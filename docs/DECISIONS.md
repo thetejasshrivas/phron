@@ -560,3 +560,15 @@ Exact wording: [G4-FLEX-DATE-01-v1](amendments/G4-FLEX-DATE-01-v1.md). Residual-
 ## G4-GOAL-CALENDAR-01-v1
 
 Status: APPROVED — explicit Tejas approval of exact proposed wording, 2026-10-10 IST. AC-GOAL-01 calendar example follows approved PH21-GOAL-v1 counting. [Clauses, exact counterexample and proposed wording](amendments/G4-GOAL-CALENDAR-01-v1.md). Implement the approved dated acceptance fixtures without changing formulas.
+
+## PH23-SC02-v1 — APPROVED — 2026-10-10 — Scenario 2 solvent fixture
+
+Explicit Tejas instruction in PH-23 remediation: “In Scenario 2 fixture, ensure liquid cash and unpaid commitments maintain M_liquid >= 0 per PRD §36.2 so State B (Budget Exhausted / Recovery Active) is tested without inadvertently creating liquidity distress (State C).”
+
+This authorizes correction of the conflicting Scenario 2 starting fixture only. Implementation uses ₹90,000 opening liquid cash, ₹50,000 opening discretionary budget, ₹30,000 unpaid obligations and a ₹50,000 cash spend. The saved result is ₹40,000 cash, M_budget ₹0, M_liquid ₹10,000, S_pool ₹0 and State B. The ₹90,000 precondition is the minimum opening cash that preserves the scenario's stated ₹40,000 post-spend cash, rather than silently leaving cash unchanged during an outflow. No accounting formula, other scenario, negative-cash rule or frozen file is changed. D02/D26 remain in force. PH23-SOURCE-02 is resolved for this scoped fixture under this explicit instruction; the original failed literal fixture remains historical evidence.
+
+See amendments/PH23-SC02-v1.md and evidence/PH23/remediation/. Approval is the quoted operator instruction; concrete test values are the documented implementation of that instruction, not a fabricated separate founder quote.
+
+## PH23 remediation ownership — authorized single writer
+
+Tejas directly assigned Lead & Experience the capture/badge fixes, merchant-memory server boundary repair and canonical browser retest. This narrowly authorizes this active chat's Home/RecoveryCard/style, additive typed recovery read projection, ingestion route, integration/e2e tests and status/evidence changes. No domain formula, financial write RPC, database migration, provider/account setting, dependency or deployment change is included. No concurrent writer.

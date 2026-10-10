@@ -48,3 +48,7 @@ export interface RecoveryProposal {
  flexible:{goalId:string;days:number;targetDate:FinancialDate}[];
  commitment:{amount:Paise;unresolved:Paise;paymentCapacity:boolean;purchaseIds:string[]};
 }
+/** Same-revision read-only commitment total, supplied by the existing user RPC. */
+export interface RecoveryPreviewData {
+ revision:Revision;nextCycleCommitted:Paise;proposals:RecoveryProposal[];
+}

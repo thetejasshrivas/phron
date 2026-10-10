@@ -1,0 +1,67 @@
+
+> phron@0.1.0 test:integration
+> jest --config jest.config.mjs --selectProjects integration --runInBand
+
+Running one project: integration
+FAIL integration tests/integration/ph23/recovery-read.test.ts
+  ● saved commitment is returned even with no remaining recovery proposals
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 503
+
+
+
+      at Object.<anonymous> (tests/integration/ph23/recovery-read.test.ts:96:43)
+
+  ● zero commitment remains exact and never fabricates a badge amount
+
+    expect(received).toMatchObject(expected)
+
+    - Expected  - 2
+    + Received  + 5
+
+      Object {
+    -   "data": Object {
+    -     "nextCycleCommitted": "0",
+    +   "error": Object {
+    +     "code": "UNAVAILABLE",
+    +     "message": "The service is temporarily unavailable.",
+    +     "retryable": true,
+        },
+    +   "ok": false,
+      }
+
+
+
+      at Object.<anonymous> (tests/integration/ph23/recovery-read.test.ts:108:55)
+
+  ● a newer context cannot be displayed against an older snapshot
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 409
+    Received: 503
+
+
+
+      at Object.<anonymous> (tests/integration/ph23/recovery-read.test.ts:116:49)
+
+  ● missing identity is denied before either financial RPC
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 401
+    Received: 503
+
+
+
+      at Object.<anonymous> (tests/integration/ph23/recovery-read.test.ts:125:49)
+
+
+Test Suites: 1 failed, 15 passed, 16 total
+Tests:       4 failed, 131 passed, 135 total
+Snapshots:   0 total
+Time:        1.707 s
+Ran all test suites.

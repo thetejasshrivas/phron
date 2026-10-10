@@ -1,0 +1,3 @@
+PASS S15-375 Card golden purchase/partial/replay/mixed/rollover (8786ms)
+PASS S15-1280 Card golden purchase/partial/replay/mixed/rollover (8585ms)
+2 PASS; 0 FAIL; 2 total

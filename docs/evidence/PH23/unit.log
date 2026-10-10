@@ -1,0 +1,11 @@
+
+> phron@0.1.0 test:unit
+> jest --config jest.config.mjs --selectProjects unit --runInBand
+
+Running one project: unit
+
+Test Suites: 36 passed, 36 total
+Tests:       425 passed, 425 total
+Snapshots:   0 total
+Time:        7.974 s
+Ran all test suites.

@@ -1,0 +1,5 @@
+PASS reduced-S18-375 Actual absent-provider fallback saves manually (4375ms)
+PASS reduced-CAPTURE-375 Native expanded entry, backdrop and keyboard controls (3442ms)
+PASS reduced-S18-1280 Actual absent-provider fallback saves manually (3937ms)
+PASS reduced-CAPTURE-1280 Native expanded entry, backdrop and keyboard controls (3545ms)
+4 PASS; 0 FAIL; 4 total

@@ -1,0 +1,28 @@
+{
+  "baseHead": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+  "candidate": "uncommitted application diff",
+  "canonical": {
+    "pass": 36,
+    "fail": 0,
+    "exit": 0
+  },
+  "focused": {
+    "pass": 6,
+    "fail": 0,
+    "exit": 0
+  },
+  "reduced": {
+    "pass": 4,
+    "fail": 0,
+    "exit": 0
+  },
+  "unit": 425,
+  "integrationMocked": 138,
+  "domain": 202,
+  "implementedMathCoveragePercent": 100,
+  "buildExit": 0,
+  "captureWorkaround": false,
+  "remoteChanges": false,
+  "gateG5": "OPEN",
+  "founderV3": "PENDING"
+}

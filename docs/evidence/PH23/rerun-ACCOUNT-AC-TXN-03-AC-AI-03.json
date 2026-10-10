@@ -1,0 +1,788 @@
+{
+  "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+  "started": "2026-10-10T14:39:37.661Z",
+  "recorded": "2026-10-10T14:40:20.770Z",
+  "browser": "155.0.4283.45",
+  "captureWorkaround": true,
+  "environment": "Edge headless, Windows, local production Next/Supabase persistent ordinary-user sessions; fixture SQL only in pinned local container; providers empty; no remote calls",
+  "results": [
+    {
+      "id": "AC-TXN-03",
+      "width": 375,
+      "title": "Cash Hinglish remembered-merchant intercept",
+      "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+      "started": "2026-10-10T14:39:38.567Z",
+      "status": "FAIL",
+      "steps": [
+        "open authenticated /home",
+        "submit synthetic bounded capture"
+      ],
+      "events": [
+        {
+          "at": "2026-10-10T14:39:41.233Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:41.248Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:41.253Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:41.306Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:41.317Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:41.389Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:41.393Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:41.791Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        }
+      ],
+      "observed": {
+        "ingestion": {
+          "kind": "manual_fallback",
+          "reason": "amount_unavailable",
+          "openManualEntry": true
+        }
+      },
+      "failure": "Remembered merchant should retain explicit500 cash amount without provider use\n+ actual - expected\n\n+ 'manual_fallback'\n- 'routed'\n",
+      "pageErrors": [],
+      "consoleWarnings": [],
+      "screenshot": "AC-TXN-03-375.png",
+      "trace": "AC-TXN-03-375-trace.zip",
+      "durationMilliseconds": 3574.5963,
+      "finished": "2026-10-10T14:39:42.141Z"
+    },
+    {
+      "id": "AC-AI-03",
+      "width": 375,
+      "title": "Exact legitimate lunch survives hostile instructions",
+      "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+      "started": "2026-10-10T14:39:42.142Z",
+      "status": "FAIL",
+      "steps": [
+        "open authenticated /home",
+        "submit synthetic bounded capture"
+      ],
+      "events": [
+        {
+          "at": "2026-10-10T14:39:44.636Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:44.640Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:44.661Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:44.719Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:44.722Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:44.793Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:44.794Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:45.257Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        }
+      ],
+      "observed": {
+        "ingestion": {
+          "kind": "manual_fallback",
+          "reason": "amount_unavailable",
+          "openManualEntry": true
+        }
+      },
+      "failure": "Expected500 lunch extraction plus explicit method confirmation, not lost legitimate spend\n+ actual - expected\n\n+ 'manual_fallback'\n- 'routed'\n",
+      "pageErrors": [],
+      "consoleWarnings": [],
+      "screenshot": "AC-AI-03-375.png",
+      "trace": "AC-AI-03-375-trace.zip",
+      "durationMilliseconds": 3393.3222000000005,
+      "finished": "2026-10-10T14:39:45.535Z"
+    },
+    {
+      "id": "ACCOUNT",
+      "width": 375,
+      "title": "Populated authenticated cascade deletion ends session and preserves second user",
+      "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+      "started": "2026-10-10T14:39:45.536Z",
+      "status": "PASS",
+      "steps": [
+        "open authenticated /home",
+        "explicitly close manual capture before interacting with lower content (observed mobile workaround)",
+        "save 100 rupees cash in Shopping",
+        "explicitly close manual capture before interacting with lower content (observed mobile workaround)",
+        "save 2500 rupees card in Shopping",
+        "confirm allocated tracked/legacy payment",
+        "submit synthetic bounded capture"
+      ],
+      "events": [
+        {
+          "at": "2026-10-10T14:39:50.196Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:50.210Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:50.210Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:50.293Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:50.295Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:50.383Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:50.383Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:50.655Z",
+          "path": "/api/finance/spend",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:50.815Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:50.824Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:50.824Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:50.951Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:50.955Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:51.406Z",
+          "path": "/api/finance/card-lifecycle",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:51.566Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:51.569Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:51.571Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:51.664Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:51.664Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:52.006Z",
+          "path": "/api/finance/card-payment",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:52.158Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:52.182Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:52.182Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:52.331Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:52.369Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:52.774Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:52.846Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:52.980Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:52.981Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:52.986Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:53.051Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:53.054Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:56.184Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:39:56.580Z",
+          "path": "/api/account",
+          "status": 200
+        }
+      ],
+      "observed": {
+        "ingestion": {
+          "kind": "routed",
+          "provider": "local_memory",
+          "outcomes": [
+            {
+              "kind": "committed",
+              "confidence": "HIGH",
+              "transactionId": "411af928-e5f8-4d5e-af08-abec4cd588de",
+              "bucketId": "df8f5204-1cb3-4d3f-b6cc-c2a56fd1fa91",
+              "categorySwapExpiresAt": null,
+              "categorySwapAvailable": false,
+              "snapshot": {
+                "schemaVersion": 1,
+                "currency": "INR",
+                "revision": "5",
+                "cycleId": "3308084c-0925-4d68-97fe-2b14c7453aa6",
+                "asOfDate": "2026-10-10",
+                "health": "A",
+                "remainingSpendingDays": 1,
+                "money": {
+                  "cash": "3785000",
+                  "spent": "265000",
+                  "goalHeld": "100000",
+                  "safePool": "3435000",
+                  "goalCycle": "0",
+                  "safeDaily": "3435000",
+                  "safeWeekly": "3435000",
+                  "cycleIncome": null,
+                  "marginBudget": "3535000",
+                  "marginLiquid": "3435000",
+                  "discretionaryPool": "3800000",
+                  "sustainableIncome": "6000000",
+                  "unpaidObligations": "100000",
+                  "accruedCardReserve": "150000"
+                }
+              }
+            }
+          ],
+          "openManualEntry": false
+        },
+        "purgedTables": [
+          "financial_profiles",
+          "pay_cycles",
+          "buckets",
+          "cycle_buckets",
+          "transactions",
+          "card_liability_payments",
+          "card_payment_allocations",
+          "obligation_payment_allocations",
+          "obligations",
+          "cycle_obligations",
+          "operation_log",
+          "goals",
+          "merchant_memory"
+        ],
+        "secondUser": "canonical snapshot unchanged",
+        "expiredSessionHttpStatus": 401
+      },
+      "pageErrors": [],
+      "consoleWarnings": [],
+      "screenshot": "ACCOUNT-375.png",
+      "durationMilliseconds": 14588.0577,
+      "finished": "2026-10-10T14:40:00.124Z"
+    },
+    {
+      "id": "AC-TXN-03",
+      "width": 1280,
+      "title": "Cash Hinglish remembered-merchant intercept",
+      "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+      "started": "2026-10-10T14:40:00.125Z",
+      "status": "FAIL",
+      "steps": [
+        "open authenticated /home",
+        "submit synthetic bounded capture"
+      ],
+      "events": [
+        {
+          "at": "2026-10-10T14:40:02.616Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:02.617Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:02.630Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:02.693Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:02.786Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:02.941Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:02.941Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:03.700Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        }
+      ],
+      "observed": {
+        "ingestion": {
+          "kind": "manual_fallback",
+          "reason": "amount_unavailable",
+          "openManualEntry": true
+        }
+      },
+      "failure": "Remembered merchant should retain explicit500 cash amount without provider use\n+ actual - expected\n\n+ 'manual_fallback'\n- 'routed'\n",
+      "pageErrors": [],
+      "consoleWarnings": [],
+      "screenshot": "AC-TXN-03-1280.png",
+      "trace": "AC-TXN-03-1280-trace.zip",
+      "durationMilliseconds": 3959.4573999999993,
+      "finished": "2026-10-10T14:40:04.084Z"
+    },
+    {
+      "id": "AC-AI-03",
+      "width": 1280,
+      "title": "Exact legitimate lunch survives hostile instructions",
+      "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+      "started": "2026-10-10T14:40:04.085Z",
+      "status": "FAIL",
+      "steps": [
+        "open authenticated /home",
+        "submit synthetic bounded capture"
+      ],
+      "events": [
+        {
+          "at": "2026-10-10T14:40:06.415Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:06.416Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:06.430Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:06.489Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:06.490Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:06.558Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:06.559Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:07.019Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        }
+      ],
+      "observed": {
+        "ingestion": {
+          "kind": "manual_fallback",
+          "reason": "amount_unavailable",
+          "openManualEntry": true
+        }
+      },
+      "failure": "Expected500 lunch extraction plus explicit method confirmation, not lost legitimate spend\n+ actual - expected\n\n+ 'manual_fallback'\n- 'routed'\n",
+      "pageErrors": [],
+      "consoleWarnings": [],
+      "screenshot": "AC-AI-03-1280.png",
+      "trace": "AC-AI-03-1280-trace.zip",
+      "durationMilliseconds": 3208.308799999999,
+      "finished": "2026-10-10T14:40:07.293Z"
+    },
+    {
+      "id": "ACCOUNT",
+      "width": 1280,
+      "title": "Populated authenticated cascade deletion ends session and preserves second user",
+      "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+      "started": "2026-10-10T14:40:07.294Z",
+      "status": "PASS",
+      "steps": [
+        "open authenticated /home",
+        "explicitly close manual capture before interacting with lower content (observed mobile workaround)",
+        "save 100 rupees cash in Shopping",
+        "explicitly close manual capture before interacting with lower content (observed mobile workaround)",
+        "save 2500 rupees card in Shopping",
+        "confirm allocated tracked/legacy payment",
+        "submit synthetic bounded capture"
+      ],
+      "events": [
+        {
+          "at": "2026-10-10T14:40:11.593Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:11.593Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:11.608Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:11.663Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:11.709Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:11.774Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:11.821Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:11.933Z",
+          "path": "/api/finance/spend",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.020Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.021Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.025Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.132Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.132Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.350Z",
+          "path": "/api/finance/card-lifecycle",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.416Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.418Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.423Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.536Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.536Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.709Z",
+          "path": "/api/finance/card-payment",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.859Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.862Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.863Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.984Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:12.985Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:13.436Z",
+          "path": "/api/finance/ingest",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:13.493Z",
+          "path": "/api/finance/state",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:13.611Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:13.616Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:13.616Z",
+          "path": "/api/finance/card-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:13.685Z",
+          "path": "/api/finance/obligation-records",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:13.728Z",
+          "path": "/api/finance/recovery-preview",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:16.794Z",
+          "path": "/api/finance/surfaces",
+          "status": 200
+        },
+        {
+          "at": "2026-10-10T14:40:17.174Z",
+          "path": "/api/account",
+          "status": 200
+        }
+      ],
+      "observed": {
+        "ingestion": {
+          "kind": "routed",
+          "provider": "local_memory",
+          "outcomes": [
+            {
+              "kind": "committed",
+              "confidence": "HIGH",
+              "transactionId": "0bff818d-ce2c-4e45-b65a-c27e28aa3844",
+              "bucketId": "003a6430-f88c-471a-83e8-82aed83fc702",
+              "categorySwapExpiresAt": null,
+              "categorySwapAvailable": false,
+              "snapshot": {
+                "schemaVersion": 1,
+                "currency": "INR",
+                "revision": "5",
+                "cycleId": "990eac28-921a-466c-9e70-9c302113cd27",
+                "asOfDate": "2026-10-10",
+                "health": "A",
+                "remainingSpendingDays": 1,
+                "money": {
+                  "cash": "3785000",
+                  "spent": "265000",
+                  "goalHeld": "100000",
+                  "safePool": "3435000",
+                  "goalCycle": "0",
+                  "safeDaily": "3435000",
+                  "safeWeekly": "3435000",
+                  "cycleIncome": null,
+                  "marginBudget": "3535000",
+                  "marginLiquid": "3435000",
+                  "discretionaryPool": "3800000",
+                  "sustainableIncome": "6000000",
+                  "unpaidObligations": "100000",
+                  "accruedCardReserve": "150000"
+                }
+              }
+            }
+          ],
+          "openManualEntry": false
+        },
+        "purgedTables": [
+          "financial_profiles",
+          "pay_cycles",
+          "buckets",
+          "cycle_buckets",
+          "transactions",
+          "card_liability_payments",
+          "card_payment_allocations",
+          "obligation_payment_allocations",
+          "obligations",
+          "cycle_obligations",
+          "operation_log",
+          "goals",
+          "merchant_memory"
+        ],
+        "secondUser": "canonical snapshot unchanged",
+        "expiredSessionHttpStatus": 401
+      },
+      "pageErrors": [],
+      "consoleWarnings": [],
+      "screenshot": "ACCOUNT-1280.png",
+      "durationMilliseconds": 13475.805399999997,
+      "finished": "2026-10-10T14:40:20.770Z"
+    }
+  ]
+}

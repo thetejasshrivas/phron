@@ -1,0 +1,7 @@
+PASS S16-375 Edit reversibility/delete/Undo/expiration (11873ms)
+PASS S18-375 Actual absent-provider fallback saves manually (3806ms)
+PASS CAPTURE-375 Native expanded entry, backdrop and keyboard controls (3319ms)
+PASS S16-1280 Edit reversibility/delete/Undo/expiration (10940ms)
+PASS S18-1280 Actual absent-provider fallback saves manually (4034ms)
+PASS CAPTURE-1280 Native expanded entry, backdrop and keyboard controls (3404ms)
+6 PASS; 0 FAIL; 6 total

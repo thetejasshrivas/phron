@@ -1,0 +1,5 @@
+PASS STATE-B-375 Supplemental consistent exhausted-budget fixture, not Scenario2 replacement (4393ms)
+FAIL ACCOUNT-375 Populated authenticated cascade deletion ends session and preserves second user (7345ms)
+PASS STATE-B-1280 Supplemental consistent exhausted-budget fixture, not Scenario2 replacement (3625ms)
+FAIL ACCOUNT-1280 Populated authenticated cascade deletion ends session and preserves second user (8010ms)
+2 PASS; 2 FAIL; 4 total

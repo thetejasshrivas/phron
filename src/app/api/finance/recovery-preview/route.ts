@@ -11,7 +11,8 @@ export const GET=(request:NextRequest)=>perform(request,false,async context=>{
  if(read.error||inputs.error||read.data?.ok!==true)return NextResponse.json(errorResult('UNAVAILABLE'),{status:503});
  const source=parseSurfaceSource(read.data.data),data=inputs.data as RecoveryContext & {revision:string};
  if(data.revision!==source.snapshot.revision)return NextResponse.json(errorResult('VERSION_CONFLICT'),{status:409});
- decodePaise(data.obligations);decodePaise(data.created);
+ decodePaise(data.obligations);
+ if(decodePaise(data.created)<0n)return NextResponse.json(errorResult('UNAVAILABLE'),{status:503});
  if(typeof data.commitmentsEnabled!=='boolean'||typeof data.carried!=='boolean'||!Array.isArray(data.covered)||!Array.isArray(data.purchases))return NextResponse.json(errorResult('UNAVAILABLE'),{status:503});
- return NextResponse.json({ok:true,data:{revision:source.snapshot.revision,proposals:projectRecovery(source,data)}});
+ return NextResponse.json({ok:true,data:{revision:source.snapshot.revision,nextCycleCommitted:data.created,proposals:projectRecovery(source,data)}});
 });

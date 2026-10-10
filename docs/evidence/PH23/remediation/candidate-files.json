@@ -1,0 +1,42 @@
+{
+  "baseHead": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+  "state": "uncommitted",
+  "files": [
+    {
+      "path": "src/components/home/Home.tsx",
+      "sha256": "d73a63b4ccc1ae1290da9c7888d8296644b5061470a8e11af3a3cfbbf3a33e7f"
+    },
+    {
+      "path": "src/components/surfaces/RecoveryCard.tsx",
+      "sha256": "34d86160bb5b00c96f96104af70a71908b6387e24995fd0d56b6f813044f57f4"
+    },
+    {
+      "path": "src/styles/surfaces.css",
+      "sha256": "41627e40f23486a693ce60273ac75b5b8ff494732a763b978a3810fc4d8a8a28"
+    },
+    {
+      "path": "src/app/api/finance/ingest/route.ts",
+      "sha256": "f2a37e4b41603b721787bac72e19c22d9de37f8e313f91c5046a2f72188bad38"
+    },
+    {
+      "path": "src/app/api/finance/recovery-preview/route.ts",
+      "sha256": "b9f9fbac1a0606ef4ac57db0778515d17f4e0eb4216bb10cf2e6f09da9b5379b"
+    },
+    {
+      "path": "src/contracts/surfaces.ts",
+      "sha256": "633540ea2b8159a7263d60b62ad595f64d20fa9ce3a40abe0e93d653cc872cae"
+    },
+    {
+      "path": "tests/integration/ph19/ingest-route.test.ts",
+      "sha256": "123fcb84821c27f5d4eeb4348cf71f9b4b729b64767d0c72f2f39d93c9423411"
+    },
+    {
+      "path": "tests/integration/ph23/recovery-read.test.ts",
+      "sha256": "4b8db4cfa762003c357d3fdfcbe8f341281ee5077f7730f86214a981a852af5f"
+    },
+    {
+      "path": "tests/e2e/ph23/canonical.mjs",
+      "sha256": "27446465f053b13ad3041a740df3a03dc6b8de2c3b2c4ba9393cb3c0a83e3215"
+    }
+  ]
+}

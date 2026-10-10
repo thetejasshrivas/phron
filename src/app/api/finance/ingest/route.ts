@@ -34,8 +34,11 @@ async function parseBody(request: NextRequest): Promise<Input> {
 function normalized(value: string) { return value.normalize('NFKC').toLocaleLowerCase('en-IN').replace(/[^\p{L}\p{N}]+/gu, ' ').trim(); }
 function escapeRegex(value: string) { return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 function localAmount(text: string): string | null {
-  const matches = [...text.matchAll(/(?:₹\s*|\brs\.?\s*|^\s*)([0-9]+(?:\.[0-9]{1,2})?)(?=\s|$|,)/giu)];
+  // A sole standalone amount may follow natural-language words. Never consume
+  // part of a signed number, exponent, identifier or over-precision decimal.
+  const matches = [...text.matchAll(/(?<![\p{L}\p{N}.+\-])(?:₹\s*|\brs\.?\s*)?([0-9]+(?:\.[0-9]{1,2})?)(?![\p{L}\p{N}.])/giu)];
   if (matches.length !== 1 || !matches[0]?.[1]) return null;
+  if (/[+\-]\s*(?:₹\s*|rs\.?\s*)?$/iu.test(text.slice(0,matches[0].index))) return null;
   try { return parseRupeesToPaise(matches[0][1]); } catch { return null; }
 }
 function localMemoryMatch(text: string, rows: readonly { merchant_key: string; bucket_id: string }[]) {

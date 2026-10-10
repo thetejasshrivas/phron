@@ -1,0 +1,7 @@
+{
+  "unit": 0,
+  "domain": 0,
+  "integration": 1,
+  "lint": 1,
+  "typecheck": 0
+}

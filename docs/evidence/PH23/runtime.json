@@ -1,0 +1,16 @@
+{
+  "recorded": "2026-10-10T14:47:23.605Z",
+  "head": "e305ea4f94556298c61c3d53cf5d13f13ce475c9",
+  "branch": "main",
+  "repository": "W:/AI Product Sprint/Phron",
+  "container": "supabase_db_phron-ph11-local",
+  "containerLastObserved": "running healthy",
+  "localApi": "http://127.0.0.1:55321",
+  "testOrigin": "http://127.0.0.1:3108",
+  "ownedTestServerStopped": true,
+  "normalFinancialOperations": "ordinary user credentials",
+  "remoteChanges": false,
+  "appChanges": false,
+  "committed": false,
+  "unrelatedScratch": "New Text Document.txt untouched"
+}

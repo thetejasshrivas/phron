@@ -83,6 +83,16 @@ describe('PH-19 ingestion route boundary', () => {
       ? { select: mockSelect } : { select: () => ({ eq: () => mockCustomBuckets() }) } }, finish: (response: NextResponse) => response } as unknown as ReturnType<typeof requestClient>);
   });
 
+  it.each(['I paid 500 Zomato cash','Zomato cost me 500 cash','I paid rs 500.25 Zomato cash'])('remembered merchant keeps the whole amount after leading words: %s',async text=>{
+    const result=await (await POST(request({text,operationId:'a1b2c3d4-0000-4000-8000-000000000000',disclosureAccepted:false}))).json();
+    expect(result).toMatchObject({kind:'routed',provider:'local_memory',outcomes:[{kind:'committed'}]});
+    expect(mockRpc.mock.calls.find(([name])=>name==='phron_ingest_spend')?.[1]).toMatchObject({p_input:{amount:text.includes('.25')?'50025':'50000',merchantOrPayee:'Zomato',paymentMethod:'cash'}});
+    expect(mockExtract).not.toHaveBeenCalled();
+  });
+  it.each(['I paid 500.123 Zomato cash','I paid -500 Zomato cash','I paid - 500 Zomato cash','I paid 1e3 Zomato cash'])('invalid remembered amounts never truncate or save: %s',async text=>{
+    const result=await (await POST(request({text,operationId:'a1b2c3d4-0000-4000-8000-000000000000',disclosureAccepted:false}))).json();
+    expect(result.kind).not.toBe('routed');expect(mockRpc.mock.calls.some(([name])=>name==='phron_ingest_spend')).toBe(false);
+  });
   it('checks user-scoped exact merchant memory before providers, then saves via the fixed ordinary-user RPC', async () => {
     const response = await POST(request({ text: '₹450 Zomato cash', operationId: 'a1b2c3d4-0000-4000-8000-000000000000', disclosureAccepted: false }));
     expect(response.status).toBe(200);

@@ -1,3 +1,23 @@
+# PH-23 committed closure → PH-24 authorized
+
+2026-10-10 IST. Tejas explicitly authorized committing the verified remediation and immediately executing PH24 / P05-SECURITY. This record is sealed with PH23 code/evidence; find the exact closure SHA with `git log -1 --format=%H -- docs/evidence/PH23/remediation/RESULT.md`. Base parent e305ea4; 36 canonical +4 reduced PASS, 425 unit/138 mocked integration, domain/contract100%, lint/types/build/source hashes PASS. One writer, unrelated scratch untouched. PH24 ordinary-user RLS/RPC/deletion/privacy/secret audit IN PROGRESS; no remote changes/deployment/install. G5/G0B OPEN and V3 PENDING. Read latest SPRINT_STATUS and PH24 evidence on resume; earlier pending-authorization text below is historical.
+
+---
+
+# PH-23 repair COMPLETE → PH-24 pending authorization
+
+2026-10-10 IST. Repo W:/AI Product Sprint/Phron; main; base HEAD e305ea4f94556298c61c3d53cf5d13f13ce475c9 plus uncommitted repaired diff. Read AGENTS, SOURCE_MANIFEST, SPRINT_STATUS, DECISIONS, CONTRACTS, DESIGN/MOTION and evidence/PH23/remediation/RESULT.md before work. Frozen PRD1.2.1 SHA256 d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994; all5 source hashes match. One writer, scratch untouched.
+
+Three regressions fixed and scoped Scenario2 instruction recorded PH23-SC02-v1. Final single canonical36 PASS at375/1280 native actions;50 effective normal,6 focused,4 reduced; fresh425unit/138mocked integration/202domain with100%10math files,100%6contracts, lint/typecheck/build PASS. Exact run source/failed history in repair report; no formula or SQL change. RecoveryPreviewData adds exact nextCycleCommitted from existing same-revision ordinary-user read. Prefix parser consumes only sole exact valid amount, explicit method/ownership/privacy protections unchanged. All open capture bodies normal flow; collapsed header sticky; no pointer-blocking modal backdrop. Continue manual fallback explicitly reopens/focuses.
+
+Local persistent Supabase55321 and synthetic SSR sessions; ordinary financial operations use user credentials. No remote migration/deployment/install/provider call. Test app3108 stopped, runner synthetic users cleaned. Hosted Preview remains oldPH14 and is not this repaired candidate. First-use live provider accuracy/Groq retention/quotas, D07b card/funding, full PH24 security/privacy/PH25accessibility/performance/PH26V3 and physical-phone proof remain separate. G0B/G5 OPEN; V3 pending. No independent founder visual approval inferred.
+
+PH23 local step COMPLETE. Next one action: operator authorizes PH24 / P05-SECURITY; do not start it automatically. Resume inspect actual branch/HEAD/dirty changes and latest evidence; no assumption of retained browser login. No staging/commit requested in this repair; candidate and previous QA evidence remain reviewable uncommitted.
+
+---
+
+## Historical record — superseded where noted
+
 # PH-22 COMPLETE / G4 PASSED → PH-23 / QA
 
 2026-10-10 IST. Repository W:/AI Product Sprint/Phron; branch main. This handoff is sealed in the closure commit alongside implementation/audit. Run parent9640871b21710b5b6d2f76d025b9713e6dda8d49; resolve `git log -1 --format=%H -- docs/evidence/G4/AUDIT.md`, inspect actual HEAD/status on resume. PRD1.2.1 SHA256 d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994, five sources unchanged. One writer; New Text Document.txt untouched/untracked.
