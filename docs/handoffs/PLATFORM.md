@@ -325,3 +325,15 @@ Provider key/quota/retention live smoke remains NOT RUN and is separate/nonblock
 Next eligible action: PH-20 / P04-PRIVACY, after operator start signal. Read current status and this handoff; preserve unrelated untracked files `New Text Document.txt` and `tests/unit/contracts/obligation.test.ts`.
 
 PH-19 implementation/evidence commit: `41471ab0149a72f1280f089051532773ee25fd80`.
+
+## PH-20 privacy firewall handoff — 2026-10-10 IST
+
+PH-20 implementation and evidence are committed as `d401439` (`feat(privacy): implement PH-20 firewall and local coach`). The transfer/status records are maintained in a follow-up documentation commit. The frozen PRD hash remains `d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994`.
+
+`src/server/finance/privacy-firewall.ts` supplies conservative sensitive-context detection, financial-advice refusal detection, and strict PRD §33 analytics projection. `src/server/finance/providers.ts` repeats the outbound guard immediately before Gemini/Groq requests. `src/app/api/finance/ingest/route.ts` refuses restricted financial advice before state/memory reads, and directs sensitive financial totals or identifiers to manual entry before external extraction. Normal provider payloads keep the fixed existing schemas and only the isolated capture string. No account state or deltas enter provider requests.
+
+`src/server/finance/coach.ts` is a deterministic local response renderer over precomputed string-paise deltas and goal pace status. It does not call Gemini/Groq. Output is plain text, bounded, and replaced with a fixed safe response for markup/control characters, prohibited/shaming terms, investment or credit advice, and invalid amounts. Current `phron_current_state` does not expose recovery trim or goal-pace inputs; do not derive or invent them in UI. A future client integration needs server-computed approved deltas and Experience ownership for any Home presentation change.
+
+Verification evidence is [docs/evidence/PH20/RESULT.md](../evidence/PH20/RESULT.md): source verification, lint, typecheck, all 392 unit and 106 integration tests, and 100% coverage for the five contract modules PASS; focused PH-20 tests 16/16 unit and 10/10 route integration PASS; standalone Next build PASS. The aggregate `npm run check` failed twice at Next prerender with a transient Windows EPERM creating the `_not-found` segment directory after every prior gate passed. No live provider/account checks or remote DB changes occurred. No telemetry emitter/SDK exists; only the strict analytics projection is implemented and tested.
+
+Next eligible action: PH-21 after operator start signal. Preserve unrelated `New Text Document.txt` and `tests/unit/contracts/obligation.test.ts` untracked user work.
