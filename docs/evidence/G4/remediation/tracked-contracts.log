@@ -1,0 +1,18 @@
+Running one project: unit
+---------------|---------|----------|---------|---------|-------------------
+File           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+---------------|---------|----------|---------|---------|-------------------
+All files      |     100 |      100 |     100 |     100 |
+ boundaries.ts |     100 |      100 |     100 |     100 |
+ card.ts       |     100 |      100 |     100 |     100 |
+ money.ts      |     100 |      100 |     100 |     100 |
+ obligation.ts |     100 |      100 |     100 |     100 |
+ snapshot.ts   |     100 |      100 |     100 |     100 |
+ surfaces.ts   |     100 |      100 |     100 |     100 |
+---------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 36 passed, 36 total
+Tests:       425 passed, 425 total
+Snapshots:   0 total
+Time:        14.15 s
+Ran all test suites within paths "tests/property/core.test.ts", "tests/property/cycle.test.ts", "tests/property/flexible-extension.test.ts", "tests/property/mixed-lifecycle.test.ts", "tests/property/obligation.test.ts", "tests/property/onboarding.test.ts", "tests/property/positive-drift.test.ts", "tests/property/recovery.test.ts", "tests/unit/contracts/boundaries.test.ts", "tests/unit/contracts/card.test.ts", "tests/unit/contracts/money.test.ts", "tests/unit/contracts/obligation.test.ts", "tests/unit/contracts/snapshot.test.ts", "tests/unit/domain/card.test.ts", "tests/unit/domain/core.test.ts", "tests/unit/domain/cycle.test.ts", "tests/unit/domain/dates.test.ts", "tests/unit/domain/distress.test.ts", "tests/unit/domain/firefight.test.ts", "tests/unit/domain/flexible-extension.test.ts", "tests/unit/domain/goal-calendar-fixture.test.ts", "tests/unit/domain/obligation.test.ts", "tests/unit/domain/onboarding.test.ts", "tests/unit/domain/positive-drift.test.ts", "tests/unit/domain/recovery.test.ts", "tests/unit/domain/signed-sequence.test.ts", "tests/unit/server/ai-output.test.ts", "tests/unit/server/extraction.test.ts", "tests/unit/server/ingestion-input.test.ts", "tests/unit/server/ph19-corpus.test.ts", "tests/unit/server/privacy-firewall.test.ts", "tests/unit/server/provider-pipeline.test.ts", "tests/unit/server/reconciliation-preview.test.ts", "tests/unit/server/recovery-preview.test.ts", "tests/unit/ui/completed-goal.test.ts", "tests/unit/ui/home-component.test.ts", "tests/unit/ui/home-session.test.ts", "tests/unit/ui/money-display.test.ts", "tests/unit/ui/on-device-dictation.test.ts", "tests/unit/ui/ph21-home.test.ts", "tests/unit/ui/ph21-projection.test.ts", "tests/unit/ui/ph21-session.test.ts", "tests/unit/ui/ph22-bucket-deletion.test.ts", "tests/unit/ui/ph22-consent.test.ts".

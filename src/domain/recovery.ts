@@ -1,5 +1,17 @@
 import { nonnegativePaise, paise, positiveInteger } from "./money";
 
+/** G4-FLEX-DATE-01: residual only, fixed 30-day basis, rounded up to whole weeks.
+ * null means unresolved funding; a proposal never releases reserves or creates debt.
+ * Return bigint days so an extreme input cannot become an unsafe JS number.
+ */
+export function flexibleExtensionDays(residual: bigint, monthlyContribution: bigint): bigint|null {
+  const amount=nonnegativePaise(residual), monthly=nonnegativePaise(monthlyContribution);
+  if(amount===0n)return 0n;
+  if(monthly===0n)return null;
+  const divisor=monthly*7n;
+  return 7n*((amount*30n+divisor-1n)/divisor);
+}
+
 /** PRD18.3; a proposal does not change budgets or health (D16). */
 export function overspend(allocation: bigint, spent: bigint): bigint {
   const delta = nonnegativePaise(spent) - nonnegativePaise(allocation);

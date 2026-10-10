@@ -13,6 +13,7 @@ export function Onboarding() {
   async function submit(event:FormEvent<HTMLFormElement>) {
     event.preventDefault(); if(busy) return;
     const form=new FormData(event.currentTarget);
+    if(!form.has('privacy-consent')){setMessage('Review and acknowledge the privacy notice before saving.');feedback.current?.focus();return;}
     try {
       if(!intent.current) intent.current={operationId:operationId(crypto.randomUUID()),expectedVersion:revision('0'),input:{
         sustainableIncome:rupeesToPaise(String(form.get('income'))), declaredCash:rupeesToPaise(String(form.get('cash'))),
@@ -37,7 +38,7 @@ export function Onboarding() {
   }
   return <main className="auth-shell"><div className="auth-topline"><p className="auth-eyebrow">PHRON / YOUR STARTING POINT</p><form action="/api/auth/logout" method="post"><button className="auth-link">Sign out</button></form></div>
     <h1>Start where<br/>you are.</h1><p>What’s available today matters more than a perfect month.</p>
-    <p className="auth-note">Development preview · fictional details only. No bank connection or AI processing.</p>
+    <p className="auth-note">Development preview · fictional details only. No bank connection. Onboarding totals are processed deterministically, without AI.</p>
     <p ref={feedback} tabIndex={-1} role="status" aria-live="polite" className={`auth-feedback ${retry?'auth-error':''}`}>{message}</p>
     {snapshot ? <div className="auth-receipt"><p className="auth-eyebrow">SAVED / REVISION {snapshot.revision}</p><h2>₹{displayPaise(snapshot.money.safeDaily)}<small> safe to spend today</small></h2>
       <p>Cash recorded: ₹{displayPaise(snapshot.money.cash)}. Your salary has not been credited.</p><p>Your Home uses these confirmed records. You can record a spend and return to the same saved perspective.</p><a className="auth-primary" href="/home">Continue to Home ↗</a></div>
@@ -53,6 +54,7 @@ export function Onboarding() {
         <button type="button" className="auth-secondary" disabled={count>=100} onClick={()=>setCount(count+1)}>+ Add a commitment</button>
         {count>0&&<button type="button" className="auth-link" onClick={()=>setCount(count-1)}>Remove last</button>}
       </div><p className="auth-note">Five starter buckets use the approved fixed allocation. Lifestyle questions are deferred.</p>
+      <div className="auth-note"><h2>Your information stays in perspective.</h2><p>No financial profile totals or identity are sent to AI providers. A later capture may send only sanitized spend text and category options to Gemini or Groq, after a separate provider notice. Free-tier providers may retain data or use it to improve their products; do not enter confidential information. Coaching stays local.</p><label className="auth-check"><input name="privacy-consent" type="checkbox" required/>I understand this privacy notice. I will separately choose whether to allow external extraction when capturing a spend.</label></div>
     </fieldset><button type="submit" className="auth-primary" disabled={busy}>{busy?'Saving…':retry?'Retry same save':'Save my starting point'} <span aria-hidden="true">↗</span></button>
     {retry&&<p><a href="/onboarding">Reload saved state</a> · <a href="/sign-in">Sign in again</a></p>}</form>}
   </main>;

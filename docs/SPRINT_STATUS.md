@@ -5,29 +5,51 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: adc452b46bf00aa02ffa764f6db2281ef1717236 (PH-21 implementation and verified evidence; status/handoff records follow separately)
-working_tree_state: PH-21 implementation and evidence committed; status/handoff documentation commit follows; two pre-existing untracked user files preserved
-dirty_files: ["New Text Document.txt (untouched user work)", "tests/unit/contracts/obligation.test.ts (untouched user work)"]
-active_chat: PHRON-00 Lead / PH-21 Experience (single authorized writer)
+commit: PH-22 closure commit containing this status (run parent 9640871b21710b5b6d2f76d025b9713e6dda8d49; resolve git log -1 -- docs/evidence/G4/AUDIT.md)
+working_tree_state: Verified PH-22 implementation/evidence sealed by closure commit; New Text Document.txt preserved untracked
+dirty_files: ["New Text Document.txt (untouched untracked user work)"]
+active_chat: PHRON-00 Lead / PH-22 closure (single writer)
 phase: "4 (AI and Surfaces)"
-current_step: PH-21
-step_state: COMPLETE — all three surfaces verified locally; final tests, lint, typecheck and production build pass; no remote rollout or V3 approval
+current_step: PH-23
+step_state: PH-22 COMPLETE; PH-23 PENDING OPERATOR AUTHORIZATION — NOT STARTED
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
-approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D08-v1, D09-v1, D10-v1, D11-v1, D16-v1, D17-v1, D18-v1, D19-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1, D14-v1, D15-v1, D26-v1, G3-DF-01-v1, PH21-BUCKET-v1, PH21-GOAL-v1, PH21-OBLIGATION-v1, PH21-CHART-v1]
-completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17, PH-18, PH-19, PH-20, PH-21]
-passed_gates: [G0A, G1, V1, G2, V2, G3]
+approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D08-v1, D09-v1, D10-v1, D11-v1, D16-v1, D17-v1, D18-v1, D19-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1, D14-v1, D15-v1, D26-v1, G3-DF-01-v1, PH21-BUCKET-v1, PH21-GOAL-v1, PH21-OBLIGATION-v1, PH21-CHART-v1, D20-v1, G4-FLEX-DATE-01-v1, G4-CUSTOM-RECOVERY-01-v1, D23-v1, D24-v1, G4-GOAL-CALENDAR-01-v1]
+completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17, PH-18, PH-19, PH-20, PH-21, PH-22]
+passed_gates: [G0A, G1, V1, G2, V2, G3, G4]
 open_gates: [G0B]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: PENDING}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb"}
-blocking_decisions: [D07-card, D07-funding, D20, D23, D24, D25]
-latest_evidence: docs/evidence/PH21/RESULT.md
+blocking_decisions: [] # G4 bounded scope; D07-card/D07-funding/D25 remain separate unavailable/manual checks
+latest_evidence: docs/evidence/G4/AUDIT.md
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
-migration_state: PH11_PH12_REMOTE_APPLIED; PH15_PH16_PH17_PH18_LOCAL_ONLY_VERIFIED_NOT_REMOTE; PH19_PH21_CANDIDATES_LOCAL_ONLY_VERIFIED_NOT_REMOTE
+migration_state: PH11_PH12_REMOTE_APPLIED; PH15_THROUGH_PH22_CANDIDATES_LOCAL_ONLY_VERIFIED_NOT_REMOTE
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers", "2026-10-10: Tejas approved PH21 typed contracts, server/API handlers, local-only migration and integration tests for goals, reconciliation, buckets and authenticated account deletion; no remote rollout"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: PH-22 / P-GATE G4 — PENDING OPERATOR SIGNAL; Lead audits every actual P0 ID and open decision; do not start automatically
+next_action: Operator authorizes PH-23 / QA full 18 canonical desktop/mobile product journeys; do not start without signal
 last_updated_ist: 2026-10-10
 ```
+
+## PH-22 / Gate G4 — COMPLETE / PASSED — 2026-10-10 IST
+
+107/107 actual P0 IDs PASS (60 FR/47 unique AC); zero required FAIL/BLOCKED/NOT RUN under explicitly approved amendments. [Closure audit](evidence/G4/AUDIT.md) and [actual-ID register](evidence/G4/REQUIREMENTS.md) supersede the preserved initial failed audit below.
+
+Final PASS:425 unit/36 suites;124 mocked integration/15 suites;202 domain/property/21 suites with100% statements/branches/functions/lines across10 collected mathematical files;425 tracked-only unit tests and100% across6 collected contracts. Five source hashes, lint, typecheck and production build exit0. Local DB17 suite commands PASS;243 case assertions after latest5-case requirements run supersedes initial4. Browser22 journeys/18 responsive375/768/1280 normal/reduced views plus State C; actual Groceries→Dining canonical readable display175.7ms locally; focus order/intermediate drain verified. Counts overlap.
+
+Approved D20 active-cycle reallocation, residual flexible-date rule, custom donor protection, D23 installed-local voice/fallback, D24 permanent new-only safety and goal-calendar clarification recorded. Ordinary-user replay/concurrency/rollback/isolation/regressions pass. Frozen sources/dependencies/lockfile/env unchanged. No remote migration/deployment/provider call/real pilot. Unrelated New Text Document.txt untouched; reviewed obligation tests included unchanged.
+
+PH23 / QA next eligible, PENDING OPERATOR AUTHORIZATION; NOT STARTED. G0B OPEN/V3 PENDING. D07b card/funding and D25 provider quotas/Groq retention remain separate; no inferred unavailable paths. Hosted Preview remains PH14 revision0f28e49, not this candidate. The closure commit contains this verified implementation/status/evidence; run metadata honestly names the pre-commit parent.
+
+## Historical initial PH-22 audit — superseded
+
+## PH-22 / P-GATE G4 — BLOCKED — 2026-10-10 IST
+
+Audited candidate 9640871b21710b5b6d2f76d025b9713e6dda8d49, unchanged PH21 application adc452b. 60 actual P0 FR +47 unique AC rows:80 PASS /14 FAIL /2 BLOCKED /11 NOT RUN. G4 NOT PASSED; PH22 NOT COMPLETE; PH23 not eligible. Every row has code/contract/test/evidence/owner references in [TRACEABILITY](TRACEABILITY.md) and [G4 audit](evidence/G4/AUDIT.md).
+
+Fresh PASS:  400 workspace unit/28 suites,115 mocked integration-contract/15 suites,198 domain/property/18 suites with 100% lines/branches/functions/statements across 10 implemented files; source hashes/lint/typecheck/standalone production build exit 0. Tracked-only386 unit tests pass27 suites but contract threshold FAIL exit 1:96.07% statements/lines,99.41% branches,97.05% functions; obligation.ts has no committed tests. The 14 obligation tests in preserved untracked user file were neither staged nor changed. Twelve independent audit probes pass, including observed counterexamples; source inventory finds 64 bound control declarations and zero unbound, without claiming exhaustive runtime proof.
+
+Required gaps: bucket deletion/reallocation D20; recovery proposals/accept/adjust and fixed/flexible goal branching; memory intercept swallowing multi-item capture; top single-line capture; sign-specific reconciliation prompts; mixed spend/injection handling; onboarding AI consent. Missing exact unlock/custom/goal/recovery/residual/StateC/keyboard/300ms proof remains NOT RUN. Automatic flexible extension has an unapproved general rounding rule (G4-FLEX-DATE-01 OPEN). Details and all actual exits: evidence/G4/runs.json, probes.json, controls.json, requirements.json.
+
+No app/source/migration/env/dependency edit, DB/provider/account interaction, install or deployment. Prior local DB/browser evidence remains explicitly prior PH21 proof, not newly run. G3 and earlier approved visual gates retained; G0B OPEN and V3 PENDING. Conditional gate-passed commit was not performed. One repair action: present existing D20 proposal to Tejas, then remediate/retest within approved scope; do not start PH23.
 
 ## PH-21 / P04-SURFACES — COMPLETE locally — 2026-10-10 IST
 

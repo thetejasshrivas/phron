@@ -1,0 +1,42 @@
+{
+  "recordedAt": "2026-10-10T13:28:52.581365+00:00",
+  "candidateParent": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+  "gate": "G4",
+  "verdict": "PASS",
+  "actualP0": {
+    "FR": 60,
+    "AC": 47,
+    "PASS": 107
+  },
+  "unit": 425,
+  "mockIntegration": 124,
+  "domainProperty": 202,
+  "coverageScope": "ten collected domain files and six collected contracts; 100% statement/branch/function/line",
+  "ordinaryLocalSuites": {
+    "ai-boundary": 2,
+    "cancellation": 9,
+    "cards": 46,
+    "commitments": 21,
+    "cycle": 33,
+    "distress": 9,
+    "goals": 5,
+    "ingestion": 5,
+    "lifecycle": 9,
+    "multi-item": 3,
+    "obligations": 16,
+    "payments": 25,
+    "recovery": 18,
+    "requirements-final": 5,
+    "safety": 8,
+    "security": 16,
+    "surfaces": 13
+  },
+  "ordinaryLocalCaseAssertions": 243,
+  "browserChecks": 22,
+  "responsiveNormalReducedViews": 18,
+  "categorySwapLocalMilliseconds": 175.69999998807907,
+  "remoteMigration": "NOT RUN / unauthorized",
+  "deployment": "NOT RUN / not requested",
+  "PH23": "NOT STARTED / pending operator",
+  "V3": "PENDING explicit founder review"
+}

@@ -1,0 +1,9 @@
+PASS ordinary and anonymous callers cannot enroll, mutate or re-enable private safety data
+PASS unenrolled distress after commitment does not count or disable
+PASS one enrolled post-commitment distress counts once, repeated state updates do not count twice
+PASS forced safety-event failure rolls back distress, ledger, operation and switch
+PASS second distinct enrolled post-commitment transition permanently disables new commitments
+PASS disabled safety preserves exact accepted replay and commitment history
+PASS disabled acceptance rejects without new operation writes; permanent flag cannot reset
+PASS accepted deduction and ordinary obligation payment remain available after disable
+8 passed; 0 failed; 8 total

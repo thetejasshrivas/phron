@@ -1,0 +1,14 @@
+PASS ordinary users read only their canonical surface records
+PASS obligation source returns original cycle allocation and actual ordinary payment once
+PASS bucket baseline edit preserves active allowance and has durable replay
+PASS cross-user parent IDs and forged identity are rejected
+PASS custom bucket starts with zero active allowance and does not manufacture money
+PASS goal unlock follows three buckets or reconciliation; creation reserves once
+PASS goal schedule edits preserve held funds and cancellation replays without double release
+PASS obligation baseline edit preserves outstanding amount and cash
+PASS forced intermediate failure rolls back config and operation record
+PASS concurrent edits serialize by revision, with only one acceptance
+PASS five-day logging inactivity is not hidden by unrelated configuration edits
+PASS State C source exposes overridden floors and refuses completed WANT execution
+PASS synthetic account purge cascades ingestion, payments, and goal parents
+13 passed; 0 failed; 13 total

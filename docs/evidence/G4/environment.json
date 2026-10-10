@@ -1,0 +1,16 @@
+{
+  "repository": "W:\\AI Product Sprint\\Phron",
+  "branch": "main",
+  "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+  "platform": "win32",
+  "node": "v24.21.0",
+  "packageManager": "npm@11.19.0",
+  "next": "16.3.8",
+  "typescript": "6.0.2",
+  "localDatabase": "Not contacted in PH22; prior PH21 ordinary-user local evidence reused",
+  "providers": "Mocked; no outbound provider or account checks",
+  "untouchedUntracked": [
+    "New Text Document.txt",
+    "tests/unit/contracts/obligation.test.ts"
+  ]
+}

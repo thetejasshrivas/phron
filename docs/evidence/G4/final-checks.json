@@ -1,0 +1,36 @@
+{
+  "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+  "recordedUtc": "2026-10-10T09:22:14.170Z",
+  "checks": [
+    {
+      "command": "node node_modules/eslint/bin/eslint.js . --max-warnings=0",
+      "exitCode": 0,
+      "scope": "Post-audit helper modules included; executed after their creation"
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0
+    },
+    {
+      "command": "node scripts/verify-sources.mjs",
+      "exitCode": 0,
+      "result": "All five source hashes match"
+    },
+    {
+      "check": "New G4 evidence trailing whitespace",
+      "result": "PASS"
+    },
+    {
+      "check": "Actual ID inventory",
+      "result": "107 unique:60 FR/47 AC, all otherwise-unmapped ACs included"
+    },
+    {
+      "check": "Application changes",
+      "result": "NONE"
+    },
+    {
+      "check": "Closure commit",
+      "result": "NOT PERFORMED; G4 condition not satisfied"
+    }
+  ]
+}

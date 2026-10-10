@@ -1,3 +1,31 @@
+# Latest: PH-22 Gate G4 PASSED — 2026-10-10 IST
+
+107 actual P0 IDs PASS:60 FR/47 unique AC under named approved amendments. Final commands in evidence/G4/remediation/runs.json exit0:425 unit/36 suites;124 mocked integration/15 suites;202 domain/property/21 suites,100% statements/branches/functions/lines across10 mathematical files;425 tracked unit tests/36 suites and100% across6 collected contracts. Source hashes/lint/typecheck/production build PASS. Existing14 obligation tests reviewed/staged unchanged. Counts overlap.
+
+Local ordinary-user DB17 suite commands PASS; latest requirements-final.log5 cases replaces initial4, yielding243 case assertions. Preserved cycle33/card46/payment25/recovery18/commitment21/cancel9/distress9/goal5/obligation16/security16/FIT13adversarial2; new safety8/lifecycle9/requirements5/multi-item3; existing surfaces13/ingestion5. No remote database.
+
+Browser22 journeys/18 normal/reduced375/768/1280 captures plus State C375/1280 PASS. Exact Groceries→Dining canonical readable spent175.7ms local production Edge (<=300ms), cash/aggregate spent preserved. Goal six eligible contributions500000; seven-contribution calendar first428571/final428574; completed cash execution/refresh; donor600/400, flexible14days, fixed capped1500/residual1500, signed reconciliation and Tab order proven. Synthetic local sessions, not a new live Google/hosted/physical-phone/provider-accuracy test.
+
+Initial failed audit/probes preserved as history. Earlier concurrent Next build lock was process collision; serial final build passes. Historical PH20 EPERM not reproduced. No required tests/thresholds weakened. V3 remains unaccepted/G0B OPEN. D07b card/funding and D25 quota/Groq retention separate scoped follow-ups. No deployment/provider call/real pilot. PH23 full18 product journeys are the next separately authorized step, NOT STARTED.
+
+[G4 audit](evidence/G4/AUDIT.md) and [107-row register](evidence/G4/REQUIREMENTS.md) are authoritative; exact logs/metadata in remediation/.
+
+---
+
+## Historical test records retained
+
+# PH-22 / G4 coverage audit — 2026-10-10 IST
+
+**G4 BLOCKED, not passed. PH22 not complete.** Candidate 9640871b21710b5b6d2f76d025b9713e6dda8d49. Actual requirement results80 PASS/14 FAIL/2 BLOCKED/11 NOT RUN. [Complete audit](evidence/G4/AUDIT.md) and [107-row register](evidence/G4/REQUIREMENTS.md).
+
+Fresh executed checks: unit400/28 suites PASS exit 0; integration/contracts115/15 suites PASS exit 0 (mocked); domain/property198/18 suites,100% collected domain statements/lines/branches/functions PASS exit 0; source verification/lint/typecheck/standalone build PASS exit 0. Twelve exact audit probes and64-control source inventory exit 0. Tracked-only unit386/27 suites passes, but contract coverage FAIL exit 1:96.07% statements/lines,99.41% branches,97.05% functions; obligation.ts0%. Fourteen extra workspace tests reside in an untouched untracked user file. Overall eight-check runner exit 1, threshold unchanged. [Commands/exits/timestamps](evidence/G4/runs.json).
+
+Coverage is for implemented domain files, not absent P0 branching or all product journeys. Named prior PH21 ordinary-user DB/browser evidence was inspected and reused without rerunning it; no new DB/live-provider/hosted/physical-phone claim. G4 lists missing controls, source gaps and required NOT RUN proof. No application changes or closure commit; PH23 remains pending.
+
+---
+
+Historical verification follows:
+
 # PH-21 surface verification — 2026-10-10 IST
 
 Implementation/evidence commit: `adc452b46bf00aa02ffa764f6db2281ef1717236`, main; local synthetic Supabase only. Step PH-21 COMPLETE locally; G3 remains PASSED, V3 PENDING. No new hosted preview or remote migration.

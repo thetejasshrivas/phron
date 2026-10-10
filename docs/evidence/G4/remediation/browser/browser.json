@@ -1,0 +1,152 @@
+{
+  "checks": [
+    "required onboarding privacy consent prevents unchecked write; ordinary 60000/20000/40000 fixture saves with explicit unpaid zero",
+    "three distinct ordinary manual spends unlock goals in the product",
+    "dated six-contribution goal reserves exactly 5000 rupees, with cash unchanged",
+    "completed cash-funded goal executes via visible action, releases reserve, debits cash once and preserves discretionary spending across refresh",
+    "visible exact Entertainment600/Shopping400 proposal, Adjust Trims dialog Escape, atomic Accept Plan and preserved State A",
+    "flexible residual1200 shows fourteen days and accepts without reserve, cash or commitment changes",
+    "fixed goal existing4500/new3000 shows capped1500 and explicit1500 residual; accepted cumulative cap6000",
+    "real State C canonical Home displays Firefight accounting and locked want-goals; local synthetic fixture, no founder taste approval",
+    "exact18000→20000 positive cash-only prompt and22000→19500 negative recall1500/residual1000 budget treatment persist once",
+    "all three surfaces deny anonymous sessions",
+    "microphone focuses text and records/sends no audio",
+    "manual save, refresh, edit, immediate delete and six-second Undo re-commit",
+    "ordinary-user signed balance reconciliation persists exactly",
+    "bucket display edit, funded goal creation, reserve and refresh without cash debit",
+    "offline disables saving and preserves confirmed data",
+    "Scenario 18 opens manual fallback with providers absent",
+    "actual Tab journey reaches capture, coach, bucket cards, navigation in order without a trap",
+    "exact Groceries→Dining ordinary category swap updates canonical bucket and readable spent value within300ms",
+    "D20 required target modal atomically archives active bucket, moves spend and preserves cash/spent/pool",
+    "ordinary second browser sees no first-user transactions or goals",
+    "authenticated local account deletion modal purges own synthetic identity and ends session",
+    "no client runtime exceptions across the three surfaces"
+  ],
+  "views": [
+    {
+      "route": "home",
+      "width": 375,
+      "motion": "no-preference",
+      "file": "home-375-no-preference.png"
+    },
+    {
+      "route": "home",
+      "width": 375,
+      "motion": "reduce",
+      "file": "home-375-reduce.png"
+    },
+    {
+      "route": "home",
+      "width": 768,
+      "motion": "no-preference",
+      "file": "home-768-no-preference.png"
+    },
+    {
+      "route": "home",
+      "width": 768,
+      "motion": "reduce",
+      "file": "home-768-reduce.png"
+    },
+    {
+      "route": "home",
+      "width": 1280,
+      "motion": "no-preference",
+      "file": "home-1280-no-preference.png"
+    },
+    {
+      "route": "home",
+      "width": 1280,
+      "motion": "reduce",
+      "file": "home-1280-reduce.png"
+    },
+    {
+      "route": "visualize",
+      "width": 375,
+      "motion": "no-preference",
+      "file": "visualize-375-no-preference.png"
+    },
+    {
+      "route": "visualize",
+      "width": 375,
+      "motion": "reduce",
+      "file": "visualize-375-reduce.png"
+    },
+    {
+      "route": "visualize",
+      "width": 768,
+      "motion": "no-preference",
+      "file": "visualize-768-no-preference.png"
+    },
+    {
+      "route": "visualize",
+      "width": 768,
+      "motion": "reduce",
+      "file": "visualize-768-reduce.png"
+    },
+    {
+      "route": "visualize",
+      "width": 1280,
+      "motion": "no-preference",
+      "file": "visualize-1280-no-preference.png"
+    },
+    {
+      "route": "visualize",
+      "width": 1280,
+      "motion": "reduce",
+      "file": "visualize-1280-reduce.png"
+    },
+    {
+      "route": "manage",
+      "width": 375,
+      "motion": "no-preference",
+      "file": "manage-375-no-preference.png"
+    },
+    {
+      "route": "manage",
+      "width": 375,
+      "motion": "reduce",
+      "file": "manage-375-reduce.png"
+    },
+    {
+      "route": "manage",
+      "width": 768,
+      "motion": "no-preference",
+      "file": "manage-768-no-preference.png"
+    },
+    {
+      "route": "manage",
+      "width": 768,
+      "motion": "reduce",
+      "file": "manage-768-reduce.png"
+    },
+    {
+      "route": "manage",
+      "width": 1280,
+      "motion": "no-preference",
+      "file": "manage-1280-no-preference.png"
+    },
+    {
+      "route": "manage",
+      "width": 1280,
+      "motion": "reduce",
+      "file": "manage-1280-reduce.png"
+    }
+  ],
+  "motion": [
+    {
+      "event": "cash spend drain",
+      "intermediate": true
+    },
+    {
+      "event": "canonical category swap",
+      "milliseconds": 175.69999998807907,
+      "limit": 300,
+      "environment": "local desktop Edge production build; no hosted/mobile latency claim"
+    }
+  ],
+  "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+  "started": "2026-10-10T13:16:29.824Z",
+  "environment": "isolated local ordinary-user sessions; mocked/absent providers; no remote database",
+  "finished": "2026-10-10T13:18:29.958Z"
+}

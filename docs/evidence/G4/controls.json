@@ -1,0 +1,628 @@
+{
+  "scope": [
+    "src/components/home/Home.tsx",
+    "src/components/home/CardLedger.tsx",
+    "src/components/surfaces/HomeDetails.tsx",
+    "src/components/surfaces/Manage.tsx",
+    "src/components/surfaces/Visualize.tsx",
+    "src/components/surfaces/shared.tsx"
+  ],
+  "controls": [
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 108,
+      "tag": "a",
+      "attributes": {
+        "className": "\"skip-home\"",
+        "href": "\"#home-main\"",
+        "onClick": "{e=>navigate(e,'home-main')}"
+      },
+      "binding": "\"#home-main\""
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 109,
+      "tag": "a",
+      "attributes": {
+        "className": "\"home-brand\"",
+        "href": "\"/home\""
+      },
+      "binding": "\"/home\""
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 110,
+      "tag": "a",
+      "attributes": {
+        "key": "{id}",
+        "href": "{`#${id}`}",
+        "aria-current": "{section===id?'location':undefined}",
+        "onClick": "{e=>navigate(e,id)}"
+      },
+      "binding": "{`#${id}`}"
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 110,
+      "tag": "a",
+      "attributes": {
+        "href": "\"/visualize\""
+      },
+      "binding": "\"/visualize\""
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 110,
+      "tag": "a",
+      "attributes": {
+        "href": "\"/manage\""
+      },
+      "binding": "\"/manage\""
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 111,
+      "tag": "button",
+      "attributes": {
+        "className": "\"text-action\""
+      },
+      "binding": "\"/api/auth/logout\""
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 114,
+      "tag": "button",
+      "attributes": {
+        "className": "\"text-action\"",
+        "disabled": "{locked||view.phase==='loading'}",
+        "onClick": "{()=>{setMessage('');void session.refresh();}}"
+      },
+      "binding": "{()=>{setMessage('');void session.refresh();}}"
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 118,
+      "tag": "a",
+      "attributes": {
+        "href": "\"/sign-in\""
+      },
+      "binding": "\"/sign-in\""
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 118,
+      "tag": "a",
+      "attributes": {
+        "href": "\"/onboarding\""
+      },
+      "binding": "\"/onboarding\""
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 127,
+      "tag": "button",
+      "attributes": {
+        "className": "\"text-action\"",
+        "onClick": "{()=>setDetails(!details)}",
+        "aria-expanded": "{details}"
+      },
+      "binding": "{()=>setDetails(!details)}"
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 132,
+      "tag": "button",
+      "attributes": {
+        "className": "\"microphone-button\"",
+        "type": "\"button\"",
+        "aria-label": "\"Microphone: use text entry\"",
+        "onClick": "{()=>{setNaturalMessage('Voice capture is not enabled. Type your entry here; no audio is recorded or sent.');naturalInputRef.current?.focus();}}"
+      },
+      "binding": "{()=>{setNaturalMessage('Voice capture is not enabled. Type your entry here; no audio is recorded or sent.');naturalInputRef.current?.focus();}}"
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 132,
+      "tag": "button",
+      "attributes": {
+        "className": "\"capture-button\"",
+        "type": "\"submit\"",
+        "disabled": "{offline||naturalPhase==='pending'||!naturalText.trim()}"
+      },
+      "binding": "{event=>{event.preventDefault();if(naturalPhase!=='pending'){naturalIntent.current={text:naturalText,operationId:naturalIntent.current?.text===naturalText?naturalIntent.current.operationId:crypto.randomUUID()};setNaturalMessage('');void sendNatural(disclosureAccepted);}}}"
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 134,
+      "tag": "button",
+      "attributes": {
+        "className": "\"text-action\"",
+        "type": "\"button\"",
+        "onClick": "{()=>void sendNatural(disclosureAccepted)}"
+      },
+      "binding": "{()=>void sendNatural(disclosureAccepted)}"
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 135,
+      "tag": "button",
+      "attributes": {
+        "className": "\"capture-button\"",
+        "type": "\"button\"",
+        "onClick": "{()=>{setDisclosureAccepted(true);void sendNatural(true);}}"
+      },
+      "binding": "{()=>{setDisclosureAccepted(true);void sendNatural(true);}}"
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 135,
+      "tag": "button",
+      "attributes": {
+        "className": "\"text-action\"",
+        "type": "\"button\"",
+        "onClick": "{()=>{setDisclosure('');setNaturalMessage('Manual entry stays available below.');setManualDialog(true);setManualOpen(true);manualAmountRef.current?.focus();}}"
+      },
+      "binding": "{()=>{setDisclosure('');setNaturalMessage('Manual entry stays available below.');setManualDialog(true);setManualOpen(true);manualAmountRef.current?.focus();}}"
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 136,
+      "tag": "button",
+      "attributes": {
+        "className": "\"capture-button\"",
+        "type": "\"button\"",
+        "disabled": "{!item.selectedBucketId||!item.selectedMethod||categorySaving===item.operationId}",
+        "onClick": "{()=>void confirmCategory(item)}"
+      },
+      "binding": "{()=>void confirmCategory(item)}"
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 137,
+      "tag": "button",
+      "attributes": {
+        "className": "\"text-action\"",
+        "type": "\"button\"",
+        "key": "{bucket.id}",
+        "disabled": "{offline||swapMessage==='Saving…'}",
+        "onClick": "{()=>void swapCategory(offer.transactionId,bucket.id)}"
+      },
+      "binding": "{()=>void swapCategory(offer.transactionId,bucket.id)}"
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 140,
+      "tag": "summary",
+      "attributes": {},
+      "binding": "native details disclosure"
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 146,
+      "tag": "button",
+      "attributes": {
+        "className": "\"capture-button\"",
+        "type": "\"submit\"",
+        "disabled": "{locked}"
+      },
+      "binding": "{capture}"
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 149,
+      "tag": "button",
+      "attributes": {
+        "className": "\"text-action\"",
+        "type": "\"button\"",
+        "onClick": "{()=>{setManualDialog(false);manualAmountRef.current?.focus();}}"
+      },
+      "binding": "{()=>{setManualDialog(false);manualAmountRef.current?.focus();}}"
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 150,
+      "tag": "button",
+      "attributes": {
+        "className": "\"text-action\"",
+        "onClick": "{()=>void session.retry()}"
+      },
+      "binding": "{()=>void session.retry()}"
+    },
+    {
+      "file": "src/components/home/Home.tsx",
+      "line": 151,
+      "tag": "button",
+      "attributes": {
+        "ref": "{undoRef}",
+        "className": "\"text-action\"",
+        "disabled": "{locked}",
+        "onClick": "{()=>void session.undo()}"
+      },
+      "binding": "{()=>void session.undo()}"
+    },
+    {
+      "file": "src/components/home/CardLedger.tsx",
+      "line": 18,
+      "tag": "button",
+      "attributes": {
+        "className": "\"text-action\"",
+        "onClick": "{()=>setAttempt(n=>n+1)}"
+      },
+      "binding": "{()=>setAttempt(n=>n+1)}"
+    },
+    {
+      "file": "src/components/home/CardLedger.tsx",
+      "line": 21,
+      "tag": "summary",
+      "attributes": {},
+      "binding": "native details disclosure"
+    },
+    {
+      "file": "src/components/home/CardLedger.tsx",
+      "line": 22,
+      "tag": "summary",
+      "attributes": {},
+      "binding": "native details disclosure"
+    },
+    {
+      "file": "src/components/home/CardLedger.tsx",
+      "line": 22,
+      "tag": "summary",
+      "attributes": {},
+      "binding": "native details disclosure"
+    },
+    {
+      "file": "src/components/home/CardLedger.tsx",
+      "line": 22,
+      "tag": "button",
+      "attributes": {
+        "type": "\"button\"",
+        "className": "\"text-action\"",
+        "disabled": "{disabled}",
+        "onClick": "{()=>void session.card({action:'payment_reverse',paymentId:p.id})}"
+      },
+      "binding": "{()=>void session.card({action:'payment_reverse',paymentId:p.id})}"
+    },
+    {
+      "file": "src/components/home/CardLedger.tsx",
+      "line": 33,
+      "tag": "summary",
+      "attributes": {},
+      "binding": "native details disclosure"
+    },
+    {
+      "file": "src/components/home/CardLedger.tsx",
+      "line": 41,
+      "tag": "button",
+      "attributes": {
+        "className": "\"capture-button\"",
+        "type": "\"submit\""
+      },
+      "binding": "{save}"
+    },
+    {
+      "file": "src/components/home/CardLedger.tsx",
+      "line": 42,
+      "tag": "button",
+      "attributes": {
+        "className": "\"text-action delete-purchase\"",
+        "disabled": "{disabled||paid}",
+        "onClick": "{()=>void session.card({action:'delete',transactionId:t.id})}"
+      },
+      "binding": "{()=>void session.card({action:'delete',transactionId:t.id})}"
+    },
+    {
+      "file": "src/components/home/CardLedger.tsx",
+      "line": 61,
+      "tag": "button",
+      "attributes": {
+        "className": "\"capture-button\"",
+        "type": "\"submit\""
+      },
+      "binding": "{save}"
+    },
+    {
+      "file": "src/components/surfaces/HomeDetails.tsx",
+      "line": 15,
+      "tag": "summary",
+      "attributes": {
+        "id": "\"balance-title\""
+      },
+      "binding": "native details disclosure"
+    },
+    {
+      "file": "src/components/surfaces/HomeDetails.tsx",
+      "line": 15,
+      "tag": "button",
+      "attributes": {
+        "className": "\"capture-button\""
+      },
+      "binding": "{reconcile}"
+    },
+    {
+      "file": "src/components/surfaces/HomeDetails.tsx",
+      "line": 16,
+      "tag": "summary",
+      "attributes": {},
+      "binding": "native details disclosure"
+    },
+    {
+      "file": "src/components/surfaces/HomeDetails.tsx",
+      "line": 16,
+      "tag": "button",
+      "attributes": {
+        "className": "\"capture-button\""
+      },
+      "binding": "{salary}"
+    },
+    {
+      "file": "src/components/surfaces/HomeDetails.tsx",
+      "line": 18,
+      "tag": "a",
+      "attributes": {
+        "className": "\"text-action\"",
+        "href": "\"/manage#manage-goals\""
+      },
+      "binding": "\"/manage#manage-goals\""
+    },
+    {
+      "file": "src/components/surfaces/HomeDetails.tsx",
+      "line": 18,
+      "tag": "button",
+      "attributes": {
+        "className": "\"text-action\"",
+        "disabled": "{locked}",
+        "onClick": "{()=>void save({action:'purchase_goal',goalId:goal.id})}"
+      },
+      "binding": "{()=>void save({action:'purchase_goal',goalId:goal.id})}"
+    },
+    {
+      "file": "src/components/surfaces/Manage.tsx",
+      "line": 28,
+      "tag": "summary",
+      "attributes": {},
+      "binding": "native details disclosure"
+    },
+    {
+      "file": "src/components/surfaces/Manage.tsx",
+      "line": 28,
+      "tag": "button",
+      "attributes": {
+        "className": "\"capture-button\""
+      },
+      "binding": "{e=>capture(e,'bucket',bucket.id)}"
+    },
+    {
+      "file": "src/components/surfaces/Manage.tsx",
+      "line": 28,
+      "tag": "summary",
+      "attributes": {},
+      "binding": "native details disclosure"
+    },
+    {
+      "file": "src/components/surfaces/Manage.tsx",
+      "line": 28,
+      "tag": "button",
+      "attributes": {
+        "className": "\"capture-button\""
+      },
+      "binding": "{e=>capture(e,'bucket',null)}"
+    },
+    {
+      "file": "src/components/surfaces/Manage.tsx",
+      "line": 29,
+      "tag": "summary",
+      "attributes": {},
+      "binding": "native details disclosure"
+    },
+    {
+      "file": "src/components/surfaces/Manage.tsx",
+      "line": 29,
+      "tag": "button",
+      "attributes": {
+        "className": "\"capture-button\""
+      },
+      "binding": "{e=>capture(e,'goal',goal.id)}"
+    },
+    {
+      "file": "src/components/surfaces/Manage.tsx",
+      "line": 29,
+      "tag": "button",
+      "attributes": {
+        "type": "\"button\"",
+        "className": "\"text-action danger-action\"",
+        "onClick": "{()=>void submit({action:'cancel_goal',goalId:goal.id})}"
+      },
+      "binding": "{()=>void submit({action:'cancel_goal',goalId:goal.id})}"
+    },
+    {
+      "file": "src/components/surfaces/Manage.tsx",
+      "line": 29,
+      "tag": "summary",
+      "attributes": {},
+      "binding": "native details disclosure"
+    },
+    {
+      "file": "src/components/surfaces/Manage.tsx",
+      "line": 29,
+      "tag": "button",
+      "attributes": {
+        "className": "\"capture-button\""
+      },
+      "binding": "{e=>capture(e,'goal',null)}"
+    },
+    {
+      "file": "src/components/surfaces/Manage.tsx",
+      "line": 30,
+      "tag": "summary",
+      "attributes": {},
+      "binding": "native details disclosure"
+    },
+    {
+      "file": "src/components/surfaces/Manage.tsx",
+      "line": 30,
+      "tag": "button",
+      "attributes": {
+        "className": "\"capture-button\""
+      },
+      "binding": "{e=>capture(e,'obligation',o.id)}"
+    },
+    {
+      "file": "src/components/surfaces/Manage.tsx",
+      "line": 30,
+      "tag": "summary",
+      "attributes": {},
+      "binding": "native details disclosure"
+    },
+    {
+      "file": "src/components/surfaces/Manage.tsx",
+      "line": 30,
+      "tag": "button",
+      "attributes": {
+        "className": "\"capture-button\""
+      },
+      "binding": "{e=>capture(e,'obligation',null)}"
+    },
+    {
+      "file": "src/components/surfaces/Manage.tsx",
+      "line": 37,
+      "tag": "button",
+      "attributes": {
+        "className": "\"text-action danger-action\"",
+        "disabled": "{disabled}",
+        "onClick": "{()=>dialog.current?.showModal()}"
+      },
+      "binding": "{()=>dialog.current?.showModal()}"
+    },
+    {
+      "file": "src/components/surfaces/Manage.tsx",
+      "line": 37,
+      "tag": "button",
+      "attributes": {
+        "className": "\"text-action\"",
+        "disabled": "{phase==='pending'}",
+        "onClick": "{()=>dialog.current?.close()}"
+      },
+      "binding": "{()=>dialog.current?.close()}"
+    },
+    {
+      "file": "src/components/surfaces/Manage.tsx",
+      "line": 37,
+      "tag": "button",
+      "attributes": {
+        "className": "\"capture-button danger-button\"",
+        "disabled": "{disabled||confirmation!=='DELETE MY ACCOUNT'||phase==='pending'}",
+        "onClick": "{()=>void remove()}"
+      },
+      "binding": "{()=>void remove()}"
+    },
+    {
+      "file": "src/components/surfaces/Visualize.tsx",
+      "line": 11,
+      "tag": "summary",
+      "attributes": {},
+      "binding": "native details disclosure"
+    },
+    {
+      "file": "src/components/surfaces/shared.tsx",
+      "line": 17,
+      "tag": "a",
+      "attributes": {
+        "className": "\"skip-home\"",
+        "href": "\"#surface-main\""
+      },
+      "binding": "\"#surface-main\""
+    },
+    {
+      "file": "src/components/surfaces/shared.tsx",
+      "line": 17,
+      "tag": "a",
+      "attributes": {
+        "className": "\"home-brand\"",
+        "href": "\"/home\""
+      },
+      "binding": "\"/home\""
+    },
+    {
+      "file": "src/components/surfaces/shared.tsx",
+      "line": 17,
+      "tag": "a",
+      "attributes": {
+        "href": "\"/home\""
+      },
+      "binding": "\"/home\""
+    },
+    {
+      "file": "src/components/surfaces/shared.tsx",
+      "line": 17,
+      "tag": "a",
+      "attributes": {
+        "href": "\"/visualize\"",
+        "aria-current": "{active==='visualize'?'page':undefined}"
+      },
+      "binding": "\"/visualize\""
+    },
+    {
+      "file": "src/components/surfaces/shared.tsx",
+      "line": 17,
+      "tag": "a",
+      "attributes": {
+        "href": "\"/manage\"",
+        "aria-current": "{active==='manage'?'page':undefined}"
+      },
+      "binding": "\"/manage\""
+    },
+    {
+      "file": "src/components/surfaces/shared.tsx",
+      "line": 17,
+      "tag": "button",
+      "attributes": {
+        "className": "\"text-action\""
+      },
+      "binding": "\"/api/auth/logout\""
+    },
+    {
+      "file": "src/components/surfaces/shared.tsx",
+      "line": 21,
+      "tag": "button",
+      "attributes": {
+        "disabled": "{offline}",
+        "className": "\"text-action\"",
+        "onClick": "{()=>void session.retry()}"
+      },
+      "binding": "{()=>void session.retry()}"
+    },
+    {
+      "file": "src/components/surfaces/shared.tsx",
+      "line": 21,
+      "tag": "button",
+      "attributes": {
+        "disabled": "{offline}",
+        "className": "\"text-action\"",
+        "onClick": "{()=>void session.review()}"
+      },
+      "binding": "{()=>void session.review()}"
+    },
+    {
+      "file": "src/components/surfaces/shared.tsx",
+      "line": 21,
+      "tag": "button",
+      "attributes": {
+        "className": "\"text-action\"",
+        "onClick": "{()=>void session.refresh()}"
+      },
+      "binding": "{()=>void session.refresh()}"
+    },
+    {
+      "file": "src/components/surfaces/shared.tsx",
+      "line": 21,
+      "tag": "a",
+      "attributes": {
+        "href": "\"/sign-in\""
+      },
+      "binding": "\"/sign-in\""
+    }
+  ],
+  "unbound": [],
+  "limitation": "Source-level binding inventory, including conditional controls. Not proof that every handler succeeds or a substitute for runtime keyboard/performance testing."
+}

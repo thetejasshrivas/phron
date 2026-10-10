@@ -1,0 +1,39 @@
+{
+  "checks": [
+    "required onboarding privacy consent prevents unchecked write; ordinary 60000/20000/40000 fixture saves with explicit unpaid zero",
+    "three distinct ordinary manual spends unlock goals in the product",
+    "dated six-contribution goal reserves exactly 5000 rupees, with cash unchanged",
+    "completed cash-funded goal executes via visible action, releases reserve, debits cash once and preserves discretionary spending across refresh",
+    "visible exact Entertainment600/Shopping400 proposal, Adjust Trims dialog Escape, atomic Accept Plan and preserved State A",
+    "flexible residual1200 shows fourteen days and accepts without reserve, cash or commitment changes",
+    "fixed goal existing4500/new3000 shows capped1500 and explicit1500 residual; accepted cumulative cap6000",
+    "real State C canonical Home displays Firefight accounting and locked want-goals; local synthetic fixture, no founder taste approval",
+    "all three surfaces deny anonymous sessions",
+    "microphone focuses text and records/sends no audio",
+    "manual save, refresh, edit, immediate delete and six-second Undo re-commit",
+    "ordinary-user signed balance reconciliation persists exactly",
+    "bucket display edit, funded goal creation, reserve and refresh without cash debit",
+    "offline disables saving and preserves confirmed data",
+    "Scenario 18 opens manual fallback with providers absent",
+    "D20 required target modal atomically archives active bucket, moves spend and preserves cash/spent/pool",
+    "actual Tab journey reaches capture, coach, bucket cards, navigation in order without a trap",
+    "ordinary category swap updates canonical bucket and readable spent value within300ms",
+    "ordinary second browser sees no first-user transactions or goals",
+    "authenticated local account deletion modal purges own synthetic identity and ends session",
+    "no client runtime exceptions across the three surfaces"
+  ],
+  "views": [],
+  "motion": [
+    {
+      "event": "cash spend drain",
+      "intermediate": true
+    },
+    {
+      "event": "canonical category swap",
+      "milliseconds": 212.30000001192093,
+      "limit": 300,
+      "environment": "local desktop Edge production build; no hosted/mobile latency claim"
+    }
+  ],
+  "environment": "isolated local ordinary-user sessions; mocked/absent providers; no remote database"
+}

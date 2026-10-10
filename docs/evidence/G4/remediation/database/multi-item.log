@@ -1,0 +1,4 @@
+PASS distinct multi-item records conserve cash and budget with exact independent expected totals
+PASS capture retry with freshly read revision replays both items, with no extra ledger writes
+PASS changed retry facts are rejected rather than reused or duplicated
+3 passed; 0 failed; 3 total

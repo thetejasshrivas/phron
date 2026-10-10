@@ -16,6 +16,13 @@ export type RouteAction = 'DIRECT_COMMIT' | 'COMMIT_WITH_SWAP' | 'CLARIFY';
 const singleCategoryMerchants: Record<string, ExtractionCategory> = {
   netflix: 'Entertainment & Subscriptions', uber: 'Transit & Commute',
   zomato: 'Dining Out & Social', starbucks: 'Dining Out & Social',
+  // Literal single-category context is deterministic, rather than an LLM's
+  // confidence claim. Ambiguous platforms and personal transfers stay separate.
+  clothes:'Shopping & Personal',kapde:'Shopping & Personal',shopping:'Shopping & Personal',
+  lunch:'Dining Out & Social',dinner:'Dining Out & Social',chai:'Dining Out & Social',
+  groceries:'Groceries & Essentials',kirana:'Groceries & Essentials',sabzi:'Groceries & Essentials',
+  metro:'Transit & Commute',auto:'Transit & Commute',cab:'Transit & Commute',taxi:'Transit & Commute',petrol:'Transit & Commute',parking:'Transit & Commute',
+  movie:'Entertainment & Subscriptions',bookmyshow:'Entertainment & Subscriptions',
 };
 const multiCategoryMerchants = new Set(['blinkit', 'amazon', 'zepto', 'instamart']);
 

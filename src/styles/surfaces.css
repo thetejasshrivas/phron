@@ -18,7 +18,7 @@
 .weekly-permission strong{font-variant-numeric:tabular-nums}
 .microphone-button{border:1px solid var(--ink);border-radius:8px;background:var(--surface);color:var(--ink);padding:10px;min-width:44px;min-height:44px}
 .phron-home .capture-panel{position:sticky;top:12px;z-index:3;background:var(--canvas);grid-template-columns:minmax(0,1fr);gap:4px!important}
-.phron-home .capture-panel:has(details[open]),.phron-home .capture-panel:has(.ai-disclosure),.phron-home .capture-panel:has(.clarification-list),.phron-home .capture-panel:has(.swap-offer){position:static}
+.phron-home .capture-panel{max-height:65dvh;overflow:auto;scrollbar-gutter:stable;margin-top:0;margin-bottom:24px}
 .phron-home .natural-capture{padding-top:8px;border:0;grid-column:1}
 .phron-home .natural-capture textarea{min-height:58px;resize:vertical}
 .manual-capture-panel{grid-column:1;border-top:1px solid var(--line);margin-top:6px}
@@ -77,9 +77,9 @@
 .danger-action{color:var(--danger)!important}
 .danger-button{background:var(--danger);color:#fff;border-color:var(--danger)}
 .account-settings p{font-size:13px;line-height:1.6;margin-bottom:18px}
-.account-settings dialog{border:0;border-radius:16px;max-width:500px;width:calc(100% - 32px);background:var(--canvas);color:var(--ink);padding:28px;box-shadow:0 12px 48px #233b2e40}
-.account-settings dialog::backdrop{background:#233b2e99}
-.account-settings dialog h2{font:400 32px/1.2 Georgia,serif;margin-bottom:20px}
+.phron-home dialog{border:0;border-radius:16px;max-width:500px;width:calc(100% - 32px);background:var(--canvas);color:var(--ink);padding:28px;box-shadow:0 12px 48px #233b2e40}
+.phron-home dialog::backdrop{background:#233b2e99}
+.phron-home dialog h2{font:400 32px/1.2 Georgia,serif;margin-bottom:20px}
 .dialog-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px;align-items:center}
 @media(max-width:767px){
  .phron-home .home-sidebar{flex-wrap:wrap;align-items:center;gap:8px}
@@ -101,3 +101,15 @@
 
 .actual-point{fill:var(--ink)}.pace-point{fill:var(--canvas);stroke:var(--ink);stroke-width:2}
 @media(max-width:600px){.surface-header{display:block!important}.surface-header h1{max-width:18ch}.surface-header p{margin-top:16px}}
+
+/* G4 keyboard/source order: Capture, Coach, buckets, then navigation. */
+.phron-home>.home-main{grid-column:2;grid-row:1}
+.phron-home>.home-sidebar{grid-column:1;grid-row:1}
+.natural-capture input[type=text]{width:100%;min-height:44px}
+@media(max-width:767px){.phron-home>.home-main{grid-column:1;grid-row:1;padding-bottom:190px}.phron-home>.home-sidebar{grid-column:1;grid-row:2}.phron-home:not(.surface-shell)>.home-sidebar{position:fixed;bottom:0;left:0;right:0;z-index:8;min-height:0;padding:8px 12px;background:var(--canvas);border-top:1px solid var(--line)}.phron-home:not(.surface-shell)>.home-sidebar .home-brand,.phron-home:not(.surface-shell)>.home-sidebar .brand-note,.phron-home:not(.surface-shell)>.home-sidebar .sidebar-bottom{display:none}.phron-home:not(.surface-shell)>.home-sidebar nav{margin-top:0;flex-wrap:wrap}}
+
+.recovery-proposal{border-top:1px solid var(--line);padding-top:18px;margin-top:18px;font-size:13px;line-height:1.6}.recovery-proposal h3{font-family:Georgia,serif;font-size:23px;font-weight:400}.recovery-proposal button{margin:12px 12px 0 0;min-height:44px}.recovery-proposal label{display:grid;gap:6px}.recovery-proposal select{width:100%;min-height:44px;background:var(--canvas);border:1px solid var(--line);padding:8px}
+
+.phron-home dialog p{font-size:13px;line-height:1.7;margin:14px 0}.phron-home dialog label{display:grid;gap:8px}.phron-home dialog select{min-height:44px;background:var(--canvas);border:1px solid var(--line);border-radius:7px;padding:10px}.phron-home dialog{max-height:85dvh;overflow:auto}.obligation-payments{border-top:1px solid var(--line);margin-top:16px;padding-top:8px}
+
+.milestone-ready{border-inline-start:3px solid var(--accent);padding:12px;background:var(--canvas);font-weight:600;}

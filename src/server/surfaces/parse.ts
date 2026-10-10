@@ -27,6 +27,11 @@ export function parseSurfaceSource(value:unknown):SurfaceSource{
 }
 export function parseSurfaceAction(value:unknown){return validateMutationEnvelope(value,(value):SurfaceAction=>{
  const action=(value as {action?:unknown}|null)?.action;
+ if(action==='obligation_payment'){const v=row(value,['action','cycleObligationId','amount','paymentDate']);if(decodePaise(v.amount)<=0n)throw new TypeError('VALIDATION');return {action,cycleObligationId:id(v.cycleObligationId),amount:money(v.amount),paymentDate:financialDate(v.paymentDate)};}
+ if(action==='delete_bucket'){const v=row(value,['action','sourceBucketId','targetBucketId']);if(v.sourceBucketId===v.targetBucketId)throw new TypeError('VALIDATION');return {action,sourceBucketId:id(v.sourceBucketId),targetBucketId:id(v.targetBucketId)};}
+ if(action==='extend_goal'){const v=row(value,['action','sourceBucketId','goalId']);return {action,sourceBucketId:id(v.sourceBucketId),goalId:id(v.goalId)};}
+ if(action==='recovery'){const v=row(value,['action','sourceBucketId','trims']);const trims=list(v.trims).map(t=>{const r=row(t,['bucketId','amount']);if(decodePaise(r.amount)<=0n)throw new TypeError('VALIDATION');return {bucketId:id(r.bucketId),amount:money(r.amount)};});if(!trims.length||trims.length>4||new Set(trims.map(t=>t.bucketId)).size!==trims.length)throw new TypeError('VALIDATION');return {action,sourceBucketId:id(v.sourceBucketId),trims};}
+ if(action==='commitment'){const v=row(value,['action','sourceBucketId','amount','purchaseId']);if(decodePaise(v.amount)<=0n)throw new TypeError('VALIDATION');return {action,sourceBucketId:id(v.sourceBucketId),amount:money(v.amount),purchaseId:v.purchaseId===null?null:id(v.purchaseId)};}
  if(action==='reconcile'){const v=row(value,['action','reportedCash','recalledAmount','bucketId']);return {action,reportedCash:money(v.reportedCash),recalledAmount:money(v.recalledAmount),bucketId:v.bucketId===null?null:id(v.bucketId)};}
  if(action==='salary'){const v=row(value,['action','cycleId','amount']);return {action,cycleId:id(v.cycleId),amount:money(v.amount)};}
  if(action==='cancel_goal'||action==='purchase_goal'){const v=row(value,['action','goalId']);return {action,goalId:id(v.goalId)};}

@@ -1,0 +1,121 @@
+[
+  {
+    "name": "safety",
+    "command": "node tests/integration/ph22/safety.mjs",
+    "started": "2026-10-10T13:07:28.027Z",
+    "finished": "2026-10-10T13:07:38.052Z",
+    "exitCode": 0
+  },
+  {
+    "name": "requirements",
+    "command": "node tests/integration/ph22/requirements.mjs",
+    "started": "2026-10-10T13:07:38.053Z",
+    "finished": "2026-10-10T13:07:41.222Z",
+    "exitCode": 0
+  },
+  {
+    "name": "lifecycle",
+    "command": "node tests/integration/ph22/lifecycle.mjs",
+    "started": "2026-10-10T13:07:41.222Z",
+    "finished": "2026-10-10T13:07:47.050Z",
+    "exitCode": 0
+  },
+  {
+    "name": "surfaces",
+    "command": "node tests/integration/ph21/surfaces.mjs",
+    "started": "2026-10-10T13:07:47.050Z",
+    "finished": "2026-10-10T13:07:57.546Z",
+    "exitCode": 0
+  },
+  {
+    "name": "ingestion",
+    "command": "node tests/integration/ph19/ingestion.mjs",
+    "started": "2026-10-10T13:07:57.546Z",
+    "finished": "2026-10-10T13:08:08.574Z",
+    "exitCode": 0
+  },
+  {
+    "name": "multi-item",
+    "command": "node tests/integration/ph22/multi-item.mjs",
+    "started": "2026-10-10T13:08:08.574Z",
+    "finished": "2026-10-10T13:08:11.232Z",
+    "exitCode": 0
+  },
+  {
+    "name": "cycle",
+    "command": "node tests/integration/ph17/cycle.mjs",
+    "started": "2026-10-10T13:08:11.232Z",
+    "finished": "2026-10-10T13:08:38.714Z",
+    "exitCode": 0
+  },
+  {
+    "name": "cards",
+    "command": "node tests/integration/ph15/lifecycle.mjs",
+    "started": "2026-10-10T13:08:38.714Z",
+    "finished": "2026-10-10T13:09:32.743Z",
+    "exitCode": 0
+  },
+  {
+    "name": "payments",
+    "command": "node tests/integration/ph15/payments.mjs",
+    "started": "2026-10-10T13:09:32.744Z",
+    "finished": "2026-10-10T13:10:10.245Z",
+    "exitCode": 0
+  },
+  {
+    "name": "recovery",
+    "command": "node tests/integration/ph16/recovery.mjs",
+    "started": "2026-10-10T13:10:10.246Z",
+    "finished": "2026-10-10T13:10:31.395Z",
+    "exitCode": 0
+  },
+  {
+    "name": "commitments",
+    "command": "node tests/integration/ph16/commitments.mjs",
+    "started": "2026-10-10T13:10:31.395Z",
+    "finished": "2026-10-10T13:11:00.997Z",
+    "exitCode": 0
+  },
+  {
+    "name": "cancellation",
+    "command": "node tests/integration/ph16/cancellation.mjs",
+    "started": "2026-10-10T13:11:00.997Z",
+    "finished": "2026-10-10T13:11:08.910Z",
+    "exitCode": 0
+  },
+  {
+    "name": "distress",
+    "command": "node tests/integration/ph18/distress.mjs",
+    "started": "2026-10-10T13:11:08.910Z",
+    "finished": "2026-10-10T13:11:23.462Z",
+    "exitCode": 0
+  },
+  {
+    "name": "goals",
+    "command": "node tests/integration/ph18/goal-purchase.mjs",
+    "started": "2026-10-10T13:11:23.462Z",
+    "finished": "2026-10-10T13:11:30.119Z",
+    "exitCode": 0
+  },
+  {
+    "name": "obligations",
+    "command": "node tests/integration/ph18/obligations.mjs",
+    "started": "2026-10-10T13:11:30.119Z",
+    "finished": "2026-10-10T13:11:49.829Z",
+    "exitCode": 0
+  },
+  {
+    "name": "security",
+    "command": "node tests/security/ph14-local.mjs",
+    "started": "2026-10-10T13:11:49.829Z",
+    "finished": "2026-10-10T13:11:59.803Z",
+    "exitCode": 0
+  },
+  {
+    "name": "ai-boundary",
+    "command": "node tests/security/fit13-adversarial.mjs",
+    "started": "2026-10-10T13:11:59.803Z",
+    "finished": "2026-10-10T13:12:04.034Z",
+    "exitCode": 0
+  }
+]

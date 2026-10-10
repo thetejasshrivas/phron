@@ -33,6 +33,15 @@ test('forged caller fields are rejected, exact operation ID reaches ordinary RPC
 test('cash goal execution selects the guarded RPC rather than an unverified mutation',async()=>{
  rpc.mockResolvedValue({data:{ok:false,error:{code:'UNAVAILABLE'}},error:null});await POST(req({...envelope,input:{action:'purchase_goal',goalId:'00000000-0000-4000-8000-000000000002'}}));expect(rpc.mock.calls[0]![0]).toBe('phron_surface_goal_purchase');
 });
+test.each([
+ [{action:'delete_bucket',sourceBucketId:'00000000-0000-4000-8000-000000000002',targetBucketId:'00000000-0000-4000-8000-000000000003'},'phron_surface_lifecycle'],
+ [{action:'extend_goal',sourceBucketId:'00000000-0000-4000-8000-000000000002',goalId:'00000000-0000-4000-8000-000000000003'},'phron_surface_lifecycle'],
+ [{action:'recovery',sourceBucketId:'00000000-0000-4000-8000-000000000002',trims:[{bucketId:'00000000-0000-4000-8000-000000000003',amount:'60000'}]},'phron_accept_recovery'],
+ [{action:'commitment',sourceBucketId:'00000000-0000-4000-8000-000000000002',amount:'150000',purchaseId:null},'phron_accept_commitment'],
+ [{action:'obligation_payment',cycleObligationId:'00000000-0000-4000-8000-000000000002',amount:'10000',paymentDate:'2026-10-10'},'phron_obligation_payment'],
+])('G4 action selects fixed ordinary-user RPC %s',async(input,name)=>{
+ rpc.mockResolvedValue({data:{ok:false,error:{code:'VERSION_CONFLICT'}},error:null});const response=await POST(req({...envelope,input}));expect(response.status).toBe(409);expect(rpc.mock.calls[0]?.[0]).toBe(name);expect(createClient).not.toHaveBeenCalled();
+});
 test('account deletion targets verified identity only and ends sessions first',async()=>{
  const result=await DELETE(req({confirmation:'DELETE MY ACCOUNT'}));expect(result.status).toBe(200);expect(remove).toHaveBeenCalledWith('verified-caller',false);expect(signOut).toHaveBeenCalledWith({scope:'global'});
  expect(signOut.mock.invocationCallOrder[0]!).toBeLessThan(remove.mock.invocationCallOrder[0]!);expect(result.headers.get('cache-control')).toContain('no-store');

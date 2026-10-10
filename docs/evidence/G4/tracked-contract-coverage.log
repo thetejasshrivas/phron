@@ -1,0 +1,22 @@
+Running one project: unit
+---------------|---------|----------|---------|---------|-------------------
+File           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+---------------|---------|----------|---------|---------|-------------------
+All files      |   96.07 |    99.41 |   97.05 |   96.07 |
+ boundaries.ts |     100 |      100 |     100 |     100 |
+ card.ts       |     100 |      100 |     100 |     100 |
+ money.ts      |     100 |      100 |     100 |     100 |
+ obligation.ts |       0 |        0 |       0 |       0 | 1-10
+ snapshot.ts   |     100 |      100 |     100 |     100 |
+ surfaces.ts   |     100 |      100 |     100 |     100 |
+---------------|---------|----------|---------|---------|-------------------
+Jest: Coverage for statements (96.07%) does not meet "global" threshold (100%)
+Jest: Coverage for branches (99.41%) does not meet "global" threshold (100%)
+Jest: Coverage for lines (96.07%) does not meet "global" threshold (100%)
+Jest: Coverage for functions (97.05%) does not meet "global" threshold (100%)
+
+Test Suites: 27 passed, 27 total
+Tests:       386 passed, 386 total
+Snapshots:   0 total
+Time:        9.971 s
+Ran all test suites within paths "tests/property/core.test.ts", "tests/property/cycle.test.ts", "tests/property/mixed-lifecycle.test.ts", "tests/property/obligation.test.ts", "tests/property/onboarding.test.ts", "tests/property/positive-drift.test.ts", "tests/property/recovery.test.ts", "tests/unit/contracts/boundaries.test.ts", "tests/unit/contracts/card.test.ts", "tests/unit/contracts/money.test.ts", "tests/unit/contracts/snapshot.test.ts", "tests/unit/domain/card.test.ts", "tests/unit/domain/core.test.ts", "tests/unit/domain/cycle.test.ts", "tests/unit/domain/dates.test.ts", "tests/unit/domain/distress.test.ts", "tests/unit/domain/firefight.test.ts", "tests/unit/domain/obligation.test.ts", "tests/unit/domain/onboarding.test.ts", "tests/unit/domain/positive-drift.test.ts", "tests/unit/domain/recovery.test.ts", "tests/unit/domain/signed-sequence.test.ts", "tests/unit/server/ai-output.test.ts", "tests/unit/server/extraction.test.ts", "tests/unit/server/ingestion-input.test.ts", "tests/unit/server/ph19-corpus.test.ts", "tests/unit/server/privacy-firewall.test.ts", "tests/unit/server/provider-pipeline.test.ts", "tests/unit/ui/home-component.test.ts", "tests/unit/ui/home-session.test.ts", "tests/unit/ui/money-display.test.ts", "tests/unit/ui/ph21-home.test.ts", "tests/unit/ui/ph21-projection.test.ts", "tests/unit/ui/ph21-session.test.ts".

@@ -1,0 +1,91 @@
+{
+  "description": "Exact TypeScript source execution, independent paise fixtures plus observed counterexamples; probe PASS is not requirement PASS.",
+  "cases": [
+    {
+      "ids": [
+        "AC-STS-01"
+      ],
+      "name": "20,000 budget versus 25,000 cash / 10 days",
+      "result": "PASS"
+    },
+    {
+      "ids": [
+        "AC-STS-02"
+      ],
+      "name": "10,000 binding cash / 10 days",
+      "result": "PASS"
+    },
+    {
+      "ids": [
+        "AC-STS-03"
+      ],
+      "name": "20,000 minus 500 / 10 days",
+      "result": "PASS"
+    },
+    {
+      "ids": [
+        "AC-ONB-02"
+      ],
+      "name": "25,000 declared less 5,000 unpaid / 15 days",
+      "result": "PASS"
+    },
+    {
+      "ids": [
+        "AC-BUCKET-01"
+      ],
+      "name": "40,000 starter conservation",
+      "result": "PASS"
+    },
+    {
+      "ids": [
+        "AC-GOAL-01"
+      ],
+      "name": "30,000 / six cycles floor contribution",
+      "result": "PASS"
+    },
+    {
+      "ids": [
+        "AC-GOAL-02"
+      ],
+      "name": "30,000 target / 60 days / 15,000 day30",
+      "result": "PASS"
+    },
+    {
+      "ids": [
+        "AC-GOAL-03"
+      ],
+      "name": "30,000 target / 60 days / 10,000 day30",
+      "result": "PASS"
+    },
+    {
+      "ids": [
+        "AC-CYCLE-03"
+      ],
+      "name": "31 anchor clamps February nonleap/leap",
+      "result": "PASS"
+    },
+    {
+      "ids": [
+        "AC-DIST-01",
+        "AC-DIST-02"
+      ],
+      "name": "liquid shortfall C / covered zero pool B",
+      "result": "PASS"
+    },
+    {
+      "ids": [
+        "AC-AI-03"
+      ],
+      "name": "counterexample: exact mixed injection string triggers whole-entry refusal guard",
+      "result": "PASS"
+    },
+    {
+      "ids": [
+        "FR-TXN-02",
+        "AC-TXN-02"
+      ],
+      "name": "counterexample: remembered Zomato intercepts multi-item text as one 450-rupee item",
+      "result": "PASS"
+    }
+  ]
+}

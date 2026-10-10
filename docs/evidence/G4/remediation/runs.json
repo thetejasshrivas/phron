@@ -1,0 +1,66 @@
+[
+  {
+    "name": "sources",
+    "command": "node scripts/verify-sources.mjs",
+    "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+    "started": "2026-10-10T13:18:55.087Z",
+    "finished": "2026-10-10T13:18:55.196Z",
+    "exitCode": 0
+  },
+  {
+    "name": "unit",
+    "command": "node node_modules/jest/bin/jest.js --config jest.config.mjs --selectProjects unit --runInBand",
+    "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+    "started": "2026-10-10T13:18:55.197Z",
+    "finished": "2026-10-10T13:19:03.213Z",
+    "exitCode": 0
+  },
+  {
+    "name": "integration",
+    "command": "node node_modules/jest/bin/jest.js --config jest.config.mjs --selectProjects integration --runInBand",
+    "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+    "started": "2026-10-10T13:19:03.214Z",
+    "finished": "2026-10-10T13:19:05.824Z",
+    "exitCode": 0
+  },
+  {
+    "name": "domain",
+    "command": "node scripts/domain-coverage.mjs",
+    "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+    "started": "2026-10-10T13:19:05.825Z",
+    "finished": "2026-10-10T13:19:14.848Z",
+    "exitCode": 0
+  },
+  {
+    "name": "contracts",
+    "command": "node node_modules/jest/bin/jest.js --config jest.config.mjs --selectProjects unit --runInBand --coverage",
+    "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+    "started": "2026-10-10T13:19:14.848Z",
+    "finished": "2026-10-10T13:19:29.956Z",
+    "exitCode": 0
+  },
+  {
+    "name": "lint",
+    "command": "node node_modules/eslint/bin/eslint.js . --max-warnings=0",
+    "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+    "started": "2026-10-10T13:19:29.956Z",
+    "finished": "2026-10-10T13:19:39.018Z",
+    "exitCode": 0
+  },
+  {
+    "name": "typecheck",
+    "command": "node node_modules/typescript/bin/tsc --noEmit",
+    "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+    "started": "2026-10-10T13:19:39.018Z",
+    "finished": "2026-10-10T13:19:41.143Z",
+    "exitCode": 0
+  },
+  {
+    "name": "build",
+    "command": "node scripts/next.mjs build",
+    "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+    "started": "2026-10-10T13:19:41.143Z",
+    "finished": "2026-10-10T13:19:47.168Z",
+    "exitCode": 0
+  }
+]

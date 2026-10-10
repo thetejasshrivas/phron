@@ -1,0 +1,66 @@
+[
+  {
+    "name": "sources",
+    "command": "node scripts/verify-sources.mjs",
+    "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+    "started": "2026-10-10T09:03:55.029Z",
+    "finished": "2026-10-10T09:03:55.092Z",
+    "exitCode": 0
+  },
+  {
+    "name": "unit",
+    "command": "node node_modules/jest/bin/jest.js --config jest.config.mjs --selectProjects unit --runInBand",
+    "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+    "started": "2026-10-10T09:03:55.093Z",
+    "finished": "2026-10-10T09:04:02.328Z",
+    "exitCode": 0
+  },
+  {
+    "name": "integration",
+    "command": "node node_modules/jest/bin/jest.js --config jest.config.mjs --selectProjects integration --runInBand",
+    "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+    "started": "2026-10-10T09:04:02.328Z",
+    "finished": "2026-10-10T09:04:04.767Z",
+    "exitCode": 0
+  },
+  {
+    "name": "domain",
+    "command": "node scripts/domain-coverage.mjs",
+    "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+    "started": "2026-10-10T09:04:04.767Z",
+    "finished": "2026-10-10T09:04:11.379Z",
+    "exitCode": 0
+  },
+  {
+    "name": "tracked-contract-coverage",
+    "command": "node node_modules/jest/bin/jest.js --config jest.config.mjs --selectProjects unit --runInBand --coverage --runTestsByPath tests/property/core.test.ts tests/property/cycle.test.ts tests/property/mixed-lifecycle.test.ts tests/property/obligation.test.ts tests/property/onboarding.test.ts tests/property/positive-drift.test.ts tests/property/recovery.test.ts tests/unit/contracts/boundaries.test.ts tests/unit/contracts/card.test.ts tests/unit/contracts/money.test.ts tests/unit/contracts/snapshot.test.ts tests/unit/domain/card.test.ts tests/unit/domain/core.test.ts tests/unit/domain/cycle.test.ts tests/unit/domain/dates.test.ts tests/unit/domain/distress.test.ts tests/unit/domain/firefight.test.ts tests/unit/domain/obligation.test.ts tests/unit/domain/onboarding.test.ts tests/unit/domain/positive-drift.test.ts tests/unit/domain/recovery.test.ts tests/unit/domain/signed-sequence.test.ts tests/unit/server/ai-output.test.ts tests/unit/server/extraction.test.ts tests/unit/server/ingestion-input.test.ts tests/unit/server/ph19-corpus.test.ts tests/unit/server/privacy-firewall.test.ts tests/unit/server/provider-pipeline.test.ts tests/unit/ui/home-component.test.ts tests/unit/ui/home-session.test.ts tests/unit/ui/money-display.test.ts tests/unit/ui/ph21-home.test.ts tests/unit/ui/ph21-projection.test.ts tests/unit/ui/ph21-session.test.ts",
+    "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+    "started": "2026-10-10T09:04:11.379Z",
+    "finished": "2026-10-10T09:04:22.173Z",
+    "exitCode": 1
+  },
+  {
+    "name": "lint",
+    "command": "node node_modules/eslint/bin/eslint.js . --max-warnings=0",
+    "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+    "started": "2026-10-10T09:04:22.174Z",
+    "finished": "2026-10-10T09:04:29.341Z",
+    "exitCode": 0
+  },
+  {
+    "name": "typecheck",
+    "command": "node node_modules/typescript/bin/tsc --noEmit",
+    "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+    "started": "2026-10-10T09:04:29.342Z",
+    "finished": "2026-10-10T09:04:30.878Z",
+    "exitCode": 0
+  },
+  {
+    "name": "build",
+    "command": "node scripts/next.mjs build",
+    "head": "9640871b21710b5b6d2f76d025b9713e6dda8d49",
+    "started": "2026-10-10T09:04:30.878Z",
+    "finished": "2026-10-10T09:04:36.448Z",
+    "exitCode": 0
+  }
+]

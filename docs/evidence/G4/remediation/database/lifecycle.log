@@ -1,0 +1,10 @@
+PASS three distinct buckets unlock goals only on the third ordinary-user spend
+PASS custom donor capacity stays protected while canonical recovery accepts exact600/400 trims
+PASS D20 atomic reallocation transfers trimmed active allowance, never baseline allowance
+PASS D20 cross-user parents, same target and direct table writes are denied
+PASS forced failure after reallocation reverses every write and leaves no replay record
+PASS concurrent bucket deletion serializes and rejects the stale second operation
+PASS AC-REC-02 flexible extension accepts residual once, with unchanged reserves and commitments
+PASS zero contribution is unresolved, not a fictional extension or commitment
+PASS extension forced failure rolls back date, audit, revision and operation record
+9 passed; 0 failed; 9 total

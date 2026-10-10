@@ -406,19 +406,9 @@ Owner: PHRON-00 Lead
 
 ## D20
 
-Decision ID: D20
-Status: OPEN
-Source clauses: bucket deletion; historical edit prohibition
-Issue: Delete conflicts with historical foreign keys
-Counterexample: Old-cycle transaction references deleted bucket
-Affected steps and gates: PH-11/15/21/23; dependent gate remains blocked
-Proposed resolution: Archive referenced historical bucket; physical delete only when unreferenced; explicit current-cycle reallocation. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
-Required tests: FIT-01/08/12; historic references; NOT_RUN
-Owner: PHRON-00 Lead
+Decision ID: D20-v1
+Status: APPROVED — explicit Tejas approval and explicit active-cycle supplement, 2026-10-10 IST.
+Exact approved terms: [D20-v1](amendments/D20-v1.md). Required one-target modal, atomic active-cycle transaction reassignment and baseline absorption. Transfer active allowance/spent without undoing trims, retain target floor and archive historical parent references. Frozen source unchanged.
 
 ## D21
 
@@ -457,35 +447,15 @@ Source: PRD18.7, D06-v1; Scenarios13/14. Tests: residual-only budget debit, posi
 
 ## D23
 
-Decision ID: D23
-Status: OPEN
-Source clauses: voice requirement; privacy claims
-Issue: Browser speech may send audio remotely
-Counterexample: Speech recognition uses a remote browser service
-Affected steps and gates: PH-19/20/21/24/25; dependent gate remains blocked
-Proposed resolution: Verify supported path, notice/consent and typed fallback; do not claim universal local recognition. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
-Required tests: audio path, permission denial, fallback; NOT_RUN
-Owner: PHRON-00 Lead
+Decision ID: D23-v1
+Status: APPROVED — explicit Tejas approval of exact proposed wording, 2026-10-10 IST.
+Exact approved wording and tests: [D23-v1](amendments/D23-v1.md). Only already-installed on-device browser recognition is permitted; no model downloads or remote audio. Unsupported/denied/error paths retain text. Recognition never saves a transaction.
 
 ## D24
 
-Decision ID: D24
-Status: OPEN
-Source clauses: 33/34/35
-Issue: Pilot duration, accuracy proxy and kill-switch scope unclear
-Counterexample: Week 2+3 metric called two-week extraction accuracy
-Affected steps and gates: PH-11/22/29/31; dependent gate remains blocked
-Proposed resolution: Label no-swap as proxy; independently labeled accuracy; define pilot users and persisted disable-new-only switch retaining old commitments. NON-NORMATIVE.
-Alternatives and impact: retain literal source and block dependent work, or approve an explicit scoped amendment. No alternative silently selected.
-Exact approved wording: NONE
-Founder approval and date IST: NONE
-Amendment version or implementation-only classification: NONE
-Required tests: metrics windows; switch persistence/history; NOT_RUN
-Owner: PHRON-00 Lead
+Decision ID: D24-v1
+Status: APPROVED — explicit Tejas approval of exact proposed wording, 2026-10-10 IST.
+Exact approved wording and evidence requirements: [D24-v1](amendments/D24-v1.md). Persistent disable-new-only safety switch, explicit admin enrollment, 21-day pilot/6–11 cohort retained, no-swap labeled proxy. No real pilot or remote migration authorized.
 
 ## D25
 
@@ -581,3 +551,12 @@ Status: APPROVED — explicit Tejas reply, 2026-10-10 IST.
 Save name/amount/legacy classification as the monthly baseline for newly due obligations at the next confirmed rollover, while preserving existing cycle-obligation amounts, payments and overdue carry. No edit will debit cash or rewrite a past payment. Legacy/tracked classification is immutable after creation to prevent merging tracked reserves into obligations.
 
 Scope: PH-21 / PRD §28 surface behavior and the named setup/edit/reference ambiguity only. Frozen sources remain unchanged. Card-funded goal execution and insufficient-funding semantics remain OPEN; this amendment does not authorize remote SQL or deployment.
+
+## G4-FLEX-DATE-01 — Flexible recovery deadline calculation
+
+Status: APPROVED — explicit Tejas approval of exact whole-week rule, 2026-10-10 IST.
+Exact wording: [G4-FLEX-DATE-01-v1](amendments/G4-FLEX-DATE-01-v1.md). Residual-only extension after protected donor exhaustion; zero monthly contribution stays unresolved; explicit atomic acceptance; no reserve/history/commitment change.
+
+## G4-GOAL-CALENDAR-01-v1
+
+Status: APPROVED — explicit Tejas approval of exact proposed wording, 2026-10-10 IST. AC-GOAL-01 calendar example follows approved PH21-GOAL-v1 counting. [Clauses, exact counterexample and proposed wording](amendments/G4-GOAL-CALENDAR-01-v1.md). Implement the approved dated acceptance fixtures without changing formulas.

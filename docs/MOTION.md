@@ -101,3 +101,9 @@ tests/integration/ph15/evidence/lifecycle/RESULT.md and browser.json. No V3/phys
 | Account deletion | Native modal focus and typed confirmation, pending blocks cancellation | Same dialog/feedback | Synthetic authenticated browser purge and route tests |
 
 All `prefers-reduced-motion: reduce` overrides cover animations, transitions and scrolling. Canonical values are never tweened. Motion is presentation after confirmed deterministic state; no optimistic money. Eighteen local screenshots cover all three routes × 375/768/1280 × normal/reduced. Goal fill runtime is shown as real saved levels and reduced CSS equivalence, not a measured fill-duration proof. V3 remains pending explicit Tejas review.
+
+## PH-22 G4 verified interactions — 2026-10-10 IST
+
+Canonical numbers update after confirmed mutations; presentation interpolates tanks without interpolating permission. Browser observes intermediate normal cash drain; reduced-motion computed transition0s across375/768/1280. Actual Groceries→Dining canonical readable bucket update175.7ms local Edge (<=300ms), aggregate cash/spent unchanged.
+
+D20/Adjust Trims native dialogs support focus/Escape, pending operations prevent conflicting actions. Stable IDs retained on ambiguous retry; no optimistic ledger. Capture remains top-sticky/readable, visible microphone checking/listening/stop/text fallback; recognition never saves. Signed reconciliation review precedes explicit confirmation. Immediate delete reversal/6-second Undo/re-commit/refresh tested. Tab Capture→Coach→Buckets→Navigation passes. Evidence in G4/remediation/browser. V3 and later full accessibility/performance gates pending, no self-approval.

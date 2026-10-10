@@ -71,6 +71,28 @@ describe('PH-19 provider extraction with mocked transport', () => {
     expect(fetcher).not.toHaveBeenCalled();
   });
 
+  it.each([
+    ['H01', [['450.00','Zomato'],['2000.00','clothes']], ['45000','200000']],
+    ['H02', [['68.00','milk'],['45.00','bread'],['90.00','eggs']], ['6800','4500','9000']],
+    ['H03', [['120.00','auto'],['20.00','chai']], ['12000','2000']],
+    ['H04', [['340.00','vegetables'],['180.00','fruits']], ['34000','18000']],
+    ['H05', [['250.00','lunch'],['40.00','metro']], ['25000','4000']],
+    ['H06', [['800.00','dinner'],['160.00','cab']], ['80000','16000']],
+    ['H07', [['30.00','two chai'],['30.00','samosa']], ['3000','3000']],
+    ['H08', [['1200.00','kirana'],['220.00','detergent']], ['120000','22000']],
+    ['H09', [['1500.00','petrol'],['50.00','parking']], ['150000','5000']],
+    ['H10', [['500.00','movie'],['280.00','popcorn']], ['50000','28000']],
+  ])('preserves every independently labeled mocked multi-item amount for %s', async (id, facts, paise) => {
+    const item=corpus.find(item=>item.id===id)!;
+    const payload=JSON.stringify({transactions:(facts as string[][]).map(([amount,merchant])=>({amount,merchant_or_payee:merchant,candidate_category:'Unknown',is_estimated:false,relative_date_offset_days:0}))});
+    const fetcher=jest.fn<typeof fetch>().mockResolvedValue(response(geminiPayload(payload)));
+    const result=await extractWithFallback(item.text,{geminiApiKey:'test-only',fetcher});
+    expect(result.kind).toBe('extracted');if(result.kind!=='extracted')throw new Error('FIXTURE_REJECTED');
+    expect(result.transactions.map(item=>item.amountPaise)).toEqual(paise);
+    expect(result.transactions.map(item=>item.merchantOrPayee)).toEqual((facts as string[][]).map(([,merchant])=>merchant));
+    expect(fetcher).toHaveBeenCalledTimes(1);
+  });
+
   it('runs every synthetic corpus case through the mocked provider and strict server validator', async () => {
     for (const item of corpus) {
       const fetcher = jest.fn<typeof fetch>().mockResolvedValue(response(geminiPayload(answer)));

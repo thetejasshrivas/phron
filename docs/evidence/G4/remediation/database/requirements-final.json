@@ -1,0 +1,8 @@
+{
+  "command": "node tests/integration/ph22/requirements.mjs",
+  "exitCode": 0,
+  "cases": 5,
+  "log": "requirements-final.log",
+  "recordedAt": "2026-10-10T13:24:48.568821+00:00",
+  "supersedes": "final-runs.json requirements entry (4 cases); approved calendar/payday1 fixtures executed separately"
+}

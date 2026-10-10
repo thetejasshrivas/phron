@@ -39,6 +39,10 @@ function localAmount(text: string): string | null {
   try { return parseRupeesToPaise(matches[0][1]); } catch { return null; }
 }
 function localMemoryMatch(text: string, rows: readonly { merchant_key: string; bucket_id: string }[]) {
+  if(/\b(?:yesterday|parso|ago|last\s+(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday))\b/iu.test(text))return null;
+  // An exact merchant shortcut is safe only for a single amount. Item-wise
+  // classification below can reuse memory after a multi-item extraction.
+  if ([...text.matchAll(/\b[0-9]+(?:\.[0-9]+)?(?:k)?\b/giu)].length > 1) return null;
   const candidates = rows.filter((row) => {
     const key = normalized(row.merchant_key);
     return key && new RegExp(`(?:^|[^\\p{L}\\p{N}])${escapeRegex(key).replace(/\s+/g, '\\s+')}(?:$|[^\\p{L}\\p{N}])`, 'iu').test(normalized(text));
@@ -93,6 +97,10 @@ export async function POST(request: NextRequest) {
     let input: Input;
     try { input = await parseBody(request); } catch { return context.finish(failure('VALIDATION')); }
     if (!input.text) return context.finish(failure('VALIDATION'));
+    // Keep an independently identifiable spend prefix, never the injected
+    // instruction suffix. Pure advice still follows the refusal below.
+    const spendPrefix=input.text.split(/\s+(?:and\s+)?ignore\s+(?:all\s+)?previous\s+instructions\b/iu)[0]!.trim();
+    if(spendPrefix!==input.text && /\b[0-9]+\b/u.test(spendPrefix) && !isRestrictedAdviceRequest(spendPrefix)) input={...input,text:spendPrefix};
     if (isRestrictedAdviceRequest(input.text)) return context.finish(reply({ kind: 'refused', reason: 'financial_advice', message: 'I can help record a spend, but I cannot recommend investments, funds, stocks, or credit products.' }));
     if (hasSensitiveOutboundContext(input.text)) return context.finish(reply({ kind: 'manual_fallback', reason: 'sensitive_context', openManualEntry: true }));
 
@@ -135,7 +143,8 @@ export async function POST(request: NextRequest) {
     let latestState = current;
     for (let index = 0; index < transactions.length; index += 1) {
       const item = transactions[index]!;
-      const selectedBucketId = match?.bucket_id ?? customBucket?.id;
+      const itemMemory=localMemoryMatch(`₹${item.amountPaise} ${item.merchantOrPayee}`,memory.data as {merchant_key:string;bucket_id:string}[]);
+      const selectedBucketId = match?.bucket_id ?? customBucket?.id ?? (current.buckets.some(b=>b.id===itemMemory?.bucket_id)?itemMemory?.bucket_id:undefined);
       const route = selectedBucketId
         ? { confidence: 'HIGH' as const, action: 'DIRECT_COMMIT' as const }
         : classifyExtraction({ merchantOrPayee: item.merchantOrPayee, candidateCategory: item.candidateCategory, isEstimated: item.isEstimated, localMemoryHit: false, sourceText: input.text });
@@ -144,7 +153,7 @@ export async function POST(request: NextRequest) {
       const opId = operationId(input.operationId, index);
       if (route.action === 'CLARIFY') { outcomes.push({ kind: 'clarification', confidence: 'LOW', operationId: opId, transactionDate: date, paymentMethod: method, transaction: item }); continue; }
       if (!bucketId) { outcomes.push({ kind: 'manual_fallback', reason: 'category_unavailable', openManualEntry: true, transaction: item }); continue; }
-      if (!method) { outcomes.push({ kind: 'method_confirmation', transaction: item, confidence: route.confidence }); continue; }
+      if (!method) { outcomes.push({ kind: 'method_confirmation', operationId:opId,transactionDate:date,bucketId,paymentMethod:null,transaction: item, confidence: route.confidence }); continue; }
       if (date < latestState.cycleStart || date > latestState.snapshot.asOfDate) { outcomes.push({ kind: 'manual_fallback', reason: 'date_outside_active_cycle', openManualEntry: true, transaction: item }); continue; }
       const payload = { action: method === 'card' ? 'create' : 'spend', amount: item.amountPaise, bucketId, transactionDate: date,
         merchantOrPayee: item.merchantOrPayee, paymentMethod: method, legacyObligationId: null, rawText: input.text,

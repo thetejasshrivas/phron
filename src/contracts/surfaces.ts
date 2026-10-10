@@ -26,6 +26,11 @@ export interface SurfaceData extends SurfaceSource {
   };
 }
 export type SurfaceAction =
+  | { action: 'obligation_payment'; cycleObligationId:string;amount:Paise;paymentDate:FinancialDate }
+  | { action: 'delete_bucket'; sourceBucketId: string; targetBucketId: string }
+  | { action: 'extend_goal'; sourceBucketId: string; goalId: string }
+  | { action: 'recovery'; sourceBucketId: string; trims: {bucketId:string;amount:Paise}[] }
+  | { action: 'commitment'; sourceBucketId: string; amount: Paise; purchaseId: string|null }
   | { action: 'reconcile'; reportedCash: Paise; recalledAmount: Paise; bucketId: string|null }
   | { action: 'salary'; cycleId: string; amount: Paise }
   | { action: 'cancel_goal'|'purchase_goal'; goalId: string }
@@ -33,3 +38,13 @@ export type SurfaceAction =
   | { action: 'goal'; id: string|null; name: string; target: Paise; targetDate: FinancialDate; dateType: 'FIXED'|'FLEXIBLE'; kind: 'WANT'|'NEED' }
   | { action: 'obligation'; id: string|null; name: string; amount: Paise; legacy: boolean };
 export interface SurfaceIntent { operationId: string; expectedVersion: Revision; input: SurfaceAction }
+export interface RecoveryContext {
+ obligations:Paise;created:Paise;carried:boolean;commitmentsEnabled:boolean;
+ covered:{bucketId:string;amount:Paise}[];
+ purchases:{id:string;bucketId:string;amount:Paise}[];
+}
+export interface RecoveryProposal {
+ sourceBucketId:string;name:string;deficit:Paise;trims:{bucketId:string;name:string;amount:Paise}[];residual:Paise;
+ flexible:{goalId:string;days:number;targetDate:FinancialDate}[];
+ commitment:{amount:Paise;unresolved:Paise;paymentCapacity:boolean;purchaseIds:string[]};
+}

@@ -1,3 +1,47 @@
+# PH-22 COMPLETE / G4 PASSED → PH-23 / QA
+
+2026-10-10 IST. Repository W:/AI Product Sprint/Phron; branch main. This handoff is sealed in the closure commit alongside implementation/audit. Run parent9640871b21710b5b6d2f76d025b9713e6dda8d49; resolve `git log -1 --format=%H -- docs/evidence/G4/AUDIT.md`, inspect actual HEAD/status on resume. PRD1.2.1 SHA256 d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994, five sources unchanged. One writer; New Text Document.txt untouched/untracked.
+
+Read AGENTS/SOURCE_MANIFEST/SPRINT_STATUS/DECISIONS/CONTRACTS/DESIGN/MOTION and this handoff. Current G4 audit,107-ID register, remediation/runs.json, tracked-contracts.json, database/final-runs.json plus requirements-final.log, browser/browser.json govern. Initial blocked records below are superseded history.
+
+107 actual P0 IDs PASS:60 FR/47 unique AC under named approved amendments. Final commands in evidence/G4/remediation/runs.json exit0:425 unit/36 suites;124 mocked integration/15 suites;202 domain/property/21 suites,100% statements/branches/functions/lines across10 mathematical files;425 tracked unit tests/36 suites and100% across6 collected contracts. Source hashes/lint/typecheck/production build PASS. Existing14 obligation tests reviewed/staged unchanged. Counts overlap.
+
+Local ordinary-user DB17 suite commands PASS; latest requirements-final.log5 cases replaces initial4, yielding243 case assertions. Preserved cycle33/card46/payment25/recovery18/commitment21/cancel9/distress9/goal5/obligation16/security16/FIT13adversarial2; new safety8/lifecycle9/requirements5/multi-item3; existing surfaces13/ingestion5. No remote database.
+
+Browser22 journeys/18 normal/reduced375/768/1280 captures plus State C375/1280 PASS. Exact Groceries→Dining canonical readable spent175.7ms local production Edge (<=300ms), cash/aggregate spent preserved. Goal six eligible contributions500000; seven-contribution calendar first428571/final428574; completed cash execution/refresh; donor600/400, flexible14days, fixed capped1500/residual1500, signed reconciliation and Tab order proven. Synthetic local sessions, not a new live Google/hosted/physical-phone/provider-accuracy test.
+
+Initial failed audit/probes preserved as history. Earlier concurrent Next build lock was process collision; serial final build passes. Historical PH20 EPERM not reproduced. No required tests/thresholds weakened. V3 remains unaccepted/G0B OPEN. D07b card/funding and D25 quota/Groq retention separate scoped follow-ups. No deployment/provider call/real pilot. PH23 full18 product journeys are the next separately authorized step, NOT STARTED.
+
+Approved D20 active supplement, G4-FLEX-DATE-01, G4-CUSTOM-RECOVERY-01, D23, D24, G4-GOAL-CALENDAR-01 are recorded in DECISIONS/amendments. D23 supported local recognition mock-tested; actual Edge text fallback verified, no remote audio/download. D24 only synthetic explicitly enrolled users; private admin fixture setup/reset is not an app reset API. Ordinary finance uses verified user context/RLS; privileged fixture administration and caller-only synthetic purge distinct.
+
+Local container supabase_db_phron-ph11-local, API127.0.0.1:55321; five PH22 migration candidates local-only. Existing hosted Preview PH14commit0f28e49 is not current. No env/secret/lock/dependency edits. G0A/G1/G2/G3/V1/V2 retained; G0B OPEN/V3 PENDING.
+
+**Next one action: operator authorizes PH-23 / QA full18 canonical desktop/mobile product journeys against this sealed revision. PH23 NOT STARTED.** Local path: /sign-in → ordinary authenticated /onboarding → required consent/Save → Continue to Home → manual or bounded capture → confirmed history; /visualize and /manage protected. Reproduce synthetic local proof with tests/integration/ph22/browser-local.mjs (empty provider keys, local-only fixtures). Do not point test runners at remote or infer current hosted parity. QA owns tests/e2e/security/evidence; source fixes follow ownership rules. Remote rollout/accessibility/performance/founderV3 require later authorized steps.
+
+---
+
+## Historical handoffs — superseded by closure above
+
+# PH-22 G4 BLOCKED → Lead remediation (not PH-23)
+
+2026-10-10 IST; repository W:/AI Product Sprint/Phron; main HEAD 9640871b21710b5b6d2f76d025b9713e6dda8d49. Frozen PRD1.2.1 hash d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994. One active writer. Audit only; no app edits or new remote/local DB mutation, install or deployment.
+
+Read applicable AGENTS, SOURCE_MANIFEST, SPRINT_STATUS, DECISIONS, CONTRACTS and this handoff on resume. The complete [G4 audit](../evidence/G4/AUDIT.md), [actual107-row register](../evidence/G4/REQUIREMENTS.md) and updated TRACEABILITY govern current findings, ahead of historical PH21 planning claims.
+
+G0A/G1/V1/G2/V2/G3 retained; G0B OPEN; G4 BLOCKED; V3 PENDING. PH21 complete locally, PH22 audit executed but step not complete. 80requirements PASS,14 FAIL,2 BLOCKED,11 NOT RUN. PH23 is not eligible.
+
+PASS:  400 workspace unit,115 mocked integration/contract,198 domain/property at100% collected domain coverage, source hashes/lint/typecheck/build. FAIL:  committed-file contract coverage,386 tracked tests pass but obligation.ts0%; untracked tests/unit/contracts/obligation.test.ts supplies14workspace tests. Original New Text Document.txt and that fixture remain untouched. Current dirty changes are audit docs/evidence only, intentionally not committed because user conditioned closure commit on gate pass.
+
+Missing product paths: deletion/reallocation D20; recovery proposal/accept/adjust; fixed-goal commitment UI; automatic flexible deadline extension; exact multi-item memory handling; top single-line capture; sign-specific recall/positive prompts; mixed injection retaining legitimate spend; onboarding AI consent. Missing proof: distinct-third-bucket unlock, dated goal reservation/completion/StateC, nonzero custom baseline, exact donor/residual examples, swap latency and required keyboard order. See audit for source clauses, counterexamples and owner. Financial core coverage cannot replace those checks.
+
+One next repair action: present existing D20 proposed archive/reallocation rule to Tejas for explicit approval; do not implement an unapproved deletion rule. G4-FLEX-DATE-01 also records the missing general flexible extension rounding rule for later explicit resolution. Independently approved remediation can follow under owner scope; no automatic PH23 start.
+
+The existing protected hosted Preview is still PH14 commit0f28e49; it cannot stand in for the current three-surface candidate. PH21 candidate migration remains local-only. Live provider account/quota/retention checks remain separate under D18/D25.
+
+---
+
+## Historical handoffs retained verbatim
+
 # PH-21 COMPLETE locally → Lead / PH-22 P-GATE G4
 
 2026-10-10 IST. Repository `W:/AI Product Sprint/Phron`; main. Implementation/evidence commit `adc452b46bf00aa02ffa764f6db2281ef1717236`; this handoff/status documentation commit follows. Inspect actual HEAD and dirty files on resume; two pre-existing untracked user files remain (`New Text Document.txt`, `tests/unit/contracts/obligation.test.ts`). Frozen PRD hash `d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994`; all five sources verified.

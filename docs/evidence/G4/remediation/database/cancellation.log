@@ -1,0 +1,10 @@
+PASS cancel releases exactly once, cash/history unchanged and canonical refresh persists
+PASS two ordinary users isolated; forged goal parent denied
+PASS anonymous denied and direct write denied
+PASS changed request replay and stale revision rejected
+PASS concurrent distinct requests release once
+PASS concurrent identical operation replays the same result
+PASS anonymous signed-in identity and submitted user identity rejected
+PASS forced intermediate failure rolls back goal, budget, revision and replay
+PASS RLS forced, restricted writer and caller-only policies installed
+9 passed; 0 failed; 9 total

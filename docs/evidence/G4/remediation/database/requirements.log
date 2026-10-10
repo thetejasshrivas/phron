@@ -1,0 +1,5 @@
+PASS AC-ONB-01 amended full salary/commitments/cash fixture uses explicit unpaid zero
+PASS AC-BUCKET-03 Pet Care baseline3000 and floor500 activate only at confirmed rollover
+PASS D20 archives historical parent while new current-cycle settlement of old tracked purchase remains valid
+PASS extension audit uses forced RLS, denies cross-identity and anonymous reads, forbids direct writes
+4 passed; 0 failed; 4 total
