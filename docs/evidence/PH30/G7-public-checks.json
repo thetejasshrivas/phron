@@ -1,0 +1,24 @@
+{
+  "dateIST": "2026-10-11",
+  "auditedHead": "c1d41a6ee99f28b9a82ee419b70ca8773e6bbe6f",
+  "repository": {
+    "url": "https://github.com/thetejasshrivas/phron",
+    "httpStatus": 200,
+    "public": true,
+    "remoteHead": "c1d41a6ee99f28b9a82ee419b70ca8773e6bbe6f",
+    "matching": true
+  },
+  "production": {
+    "url": "https://phron-eight.vercel.app",
+    "rootStatus": 200,
+    "googleEntry": true,
+    "healthStatus": 200,
+    "healthExact": true,
+    "cacheControl": "no-store"
+  },
+  "aheadBehind": "0\t0",
+  "untrackedBeforeAudit": [
+    "New Text Document.txt (untouched scratch)"
+  ],
+  "limits": "Read-only anonymous public checks. Prior PH28 ordinary-user/phone evidence retained; no new auth or finance operation."
+}

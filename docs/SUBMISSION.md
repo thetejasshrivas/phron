@@ -1,6 +1,6 @@
 # Submission package — PH-29
 
-Prepared 2026-10-11 IST from verified records. **PH29 documentation COMPLETE; actual submission NOT_SUBMITTED; G7 PENDING.** PH30 owns access, final format and sign-off. PH31 pilot has not started.
+Prepared 2026-10-11 IST from verified records. **PH29/PH30 COMPLETE; G7 PASSED for the operator-specified public-web package readiness. Actual submission NOT_SUBMITTED.** [Final audit](evidence/PH30/G7_AUDIT.md). PH31 is eligible but NOT_STARTED; deadline cutoff/destination and any later submission action remain operator-owned.
 
 ## Assignment and access
 
@@ -45,7 +45,7 @@ PH29 is documentation only, following 618b2fe; resolve its final hash with git l
 | Production |13 public +9 authenticated =22/22 PASS, exit0. Admin confined to authorized synthetic setup/cleanup/read-only purge proof; ordinary finance operations use SSR user credentials |
 | AI/fallback |150 chai →15000paise via Groq, LOW clarification/no silent save; explicit cash capture saves1200paise and refresh persists. Privacy intercept opens manual entry.50 case mock corpus is not measured real-user accuracy |
 | Phone |Tejas explicitly reports Google/onboarding/save-refresh/three surfaces/deletion PASS; automated synthetic sessions do not claim human Google consent |
-| Gates |V1/V2/V3 accepted, V3 PHRON-V3-01/36ca738; G3/G4/G5/G6 PASSED. G0B OPEN, G7 PENDING |
+| Gates |V1/V2/V3 accepted, V3 PHRON-V3-01/36ca738; G3/G4/G5/G6 PASSED. G0B OPEN, G7 PASSED (public-web package) |
 
 PH29 did not rerun app/DB/production suites: unchanged app inputs use the linked executed runs. Fresh documentation/source checks are recorded in the Lead handoff.
 
@@ -64,7 +64,7 @@ Public terms rechecked 2026-10-11, separate from account verification. Operator 
 
 **No pilot cohort, WADU, retention/accuracy percentage or habit-improvement result is claimed.** PH31's21 day pilot has not begun.
 
-## PH30 sign-off — pending execution
+## Remaining operator actions — package ready, submission not executed
 
 1. Confirm destination/exact October12 cutoff and whether source/video/deck is required.
 2. Open canonical URL signed out on evaluator device; verify intended evaluator Google audience eligibility. Do not silently change OAuth audience or embed credentials.
