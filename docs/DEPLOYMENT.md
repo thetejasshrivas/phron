@@ -1,3 +1,9 @@
+# PH27 Production deployment authorized — environment correction pending
+
+2026-10-11 IST. Tejas explicitly authorized deploying release f485726 to tts-1e31/phron. Read-only dashboard verification confirms Production Auth origin/callback, but NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY is Preview-only. Production has NEXT_PUBLIC_SUPABASE_ANON_KEY, which this release does not read. Upload held before execution; no deployment ID or live smoke claimed. [Preflight](evidence/PH27/PRODUCTION_PREFLIGHT.md). Next one action: privately configure the exact publishable-key name for Production, retaining Preview. Existing deployment authorization remains valid.
+
+---
+
 # PH27 remote migrations COMPLETE — Production settings pending
 
 2026-10-11 IST; release **f4857268a7bc2d31c7f006ae8c098ce63e33bf26**, accepted app36ca738 unchanged. Tejas explicitly authorized all22pending migrations and acknowledged Free/test-database schema replay/forward repair posture. All22applied in pinned order to Phron kavuwjngrtqavtmxyvsq; initial2preserved. [Full executed report](evidence/PH27/REMOTE_ROLLOUT.md), [24file/server-version manifest](evidence/PH27/migration-manifest.json).

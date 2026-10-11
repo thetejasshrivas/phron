@@ -1,3 +1,9 @@
+# PH27 authorized Production deployment preflight — HOLD
+
+Tejas explicitly authorizes deploying release f485726 to tts-1e31/phron. Source hashes and build-input equality PASS; actual Supabase Production Site URL/callback match phron-eight.vercel.app. Missing runtime name: NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY is Preview-only; Production ANON_KEY is not read by this release. No code change, deployment, secret reveal or remote write performed. [Evidence](../evidence/PH27/PRODUCTION_PREFLIGHT.md). Next one action: Tejas privately configures the required name for Production. Then verify scope and execute under the existing deployment authorization. PH27 remains active; PH28/G6 not complete. Scratch untouched.
+
+---
+
 # PH27 remote rollout handoff — 2026-10-11 IST
 
 Release `f485726` (accepted application `36ca738`), branch `main`. All 22 authorized pending migrations were applied in order; the initial two were preserved. The manifest records all 24 server versions. Candidate schema parity passes against an independent clean local replay with observed hosted defaults: 23 public and three private tables, 54 exact function definitions, 69 validated foreign keys and 48 policies. All 23 public tables have RLS. Cascade paths reach those tables and the two private pilot tables; the global safety singleton remains separate. [Executed evidence](../evidence/PH27/REMOTE_ROLLOUT.md).

@@ -11,7 +11,7 @@ dirty_files: ["New Text Document.txt (untouched user work)"] # resolve current H
 active_chat: PHRON-00 Lead / PH-27 (single active writer)
 phase: "6 (Release and Submission)"
 current_step: PH-27
-step_state: PH27 REMOTE22_APPLIED; SCHEMA_PARITY100_PASS; PRODUCTION_ENV_ORIGIN_MISSING; DEPLOYMENT HOLD
+step_state: PH27 PRODUCTION_DEPLOY_AUTHORIZED; AUTH_ORIGIN_CALLBACK_PASS; PUBLISHABLE_KEY_PRODUCTION_MISSING; UPLOAD_HOLD
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
 approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D08-v1, D09-v1, D10-v1, D11-v1, D16-v1, D17-v1, D18-v1, D19-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1, D14-v1, D15-v1, D26-v1, G3-DF-01-v1, PH21-BUCKET-v1, PH21-GOAL-v1, PH21-OBLIGATION-v1, PH21-CHART-v1, D20-v1, G4-FLEX-DATE-01-v1, G4-CUSTOM-RECOVERY-01-v1, D23-v1, D24-v1, G4-GOAL-CALENDAR-01-v1, PH23-SC02-v1]
 completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17, PH-18, PH-19, PH-20, PH-21, PH-22, PH-23, PH-24, PH-25, PH-26]
@@ -20,12 +20,12 @@ open_gates: [G0B, G6, G7]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: ACCEPTED}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb", V3: "PHRON-V3-01 /36ca7380dfb2235d5556242f59c93da18c98bf04 — ACCEPTED 2026-10-11"}
 blocking_decisions: [] # scoped fixes verified; residual tooling/distributed-limit risks remain documented for release review
-latest_evidence: docs/evidence/PH27/REMOTE_ROLLOUT.md
+latest_evidence: docs/evidence/PH27/PRODUCTION_PREFLIGHT.md
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: UNCHANGED_INERT_BOOTSTRAP_NO_ALIASES, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
 migration_state: ALL24_REMOTE_APPLIED; FIRST2_PRESERVED; NEXT22_AUTHORIZED_APPLIED_IN_PINNED_ORDER; CLEAN_REPLAY_PARITY100_PASS
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers", "2026-10-10: Tejas approved PH21 typed contracts, server/API handlers, local-only migration and integration tests for goals, reconciliation, buckets and authenticated account deletion; no remote rollout"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Tejas privately configures six required names for Production in Vercel tts-1e31/phron; no secrets in chat; retain Preview config
+next_action: Tejas privately configures NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY for Production; retain Preview; deployment already authorized after correction
 last_updated_ist: 2026-10-11
 ```
 
