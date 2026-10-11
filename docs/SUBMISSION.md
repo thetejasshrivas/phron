@@ -10,7 +10,7 @@ Tejas specifies “1 day, the final web product and public access.” Deadline d
 | --- | --- |
 | Live product | https://phron-eight.vercel.app — public root/health/Google entry PASS 375/1280 in PH28 |
 | Evaluator journey | Root → Continue with Google → consent/Onboarding → Home → Visualize Spending → Buckets & Settings. Personal routes require authentication; arbitrary evaluator Google audience eligibility NOT_VERIFIED |
-| Repository | Local W:/AI Product Sprint/Phron, main; git remote -v returned no remote on 2026-10-11. No repository URL or permission claim. Share/publish only if required and authorized in PH30 |
+| Repository | [Public GitHub repository](https://github.com/thetejasshrivas/phron). Tejas explicitly authorized origin configuration and main push on 2026-10-11. GitHub unauthenticated metadata confirms Public; synchronization is checked against origin/main after push. Local W:/AI Product Sprint/Phron |
 | Overview/setup | [README](../README.md) |
 | Demo | [Timed script](DEMO_SCRIPT.md); video NOT_RECORDED, no video URL |
 | Presentation | [Five-slide outline](DEMO_SCRIPT.md#presentation-outline); deck NOT_EXPORTED, no deck URL |
@@ -19,7 +19,7 @@ Tejas specifies “1 day, the final web product and public access.” Deadline d
 | Visual proof | [Accepted V3 gallery](evidence/V3/README.md), [release regression/accessibility](evidence/PH26/RESULT.md). Screenshots do not prove motion; no standalone shareable motion clip inventoried |
 | Authority/release | [Manifest](SOURCE_MANIFEST.md), [decisions](DECISIONS.md), [contracts](CONTRACTS.md), [Design](DESIGN.md), [Motion](MOTION.md), [deployment](DEPLOYMENT.md), [status](SPRINT_STATUS.md), [bugs](BUGS.md) |
 
-Local documentation links are checked. Public evidence/source hosting and signed-out archive/deck/video permission checks are NOT_RUN: no corresponding remote URLs exist. Public landing access does not make all artifacts public. Never embed credentials in shared material.
+Local documentation links are checked. GitHub repository visibility is Public by unauthenticated API; source/evidence are included in the authorized push. Signed-out archive/deck/video checks remain NOT_RUN because those artifacts have no URLs. Evaluator Google audience eligibility remains separate. Never embed credentials in shared material.
 
 ## Exact revisions
 

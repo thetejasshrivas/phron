@@ -1,3 +1,13 @@
+# PH30 GitHub publication — 2026-10-11 IST
+
+Tejas explicitly authorized origin https://github.com/thetejasshrivas/phron.git and git push -u origin main. Canonical browser URL: https://github.com/thetejasshrivas/phron. GitHub unauthenticated metadata returned200/private=false before publication; repo was empty. README and SUBMISSION now link the canonical public repository. Final published documentation SHA and synchronization are verified using git rev-parse HEAD, git ls-remote origin refs/heads/main and git status --short --branch after push. No force push, application change, deployment or remote SQL.
+
+Read-only repository/history/client secret scanner evidence: docs/evidence/PH30/secrets-results.json; reports only locations/kinds, no values. Only .env.example is tracked and it has empty values; .env.local and unrelated New Text Document.txt remain excluded. Source hashes and diff hygiene checked. App tests NOT RUN for documentation-only work; PH28 proofs retained.
+
+PH30/G7 not complete: intended evaluator Google access, exact submission destination/cutoff and actual Tejas submission remain pending. Next one action: Tejas opens the public repository and verifies intended evaluator sign-in on the live app. No PH31 started. Prior handoffs below historical.
+
+---
+
 # PH29 COMPLETE → PH30 / Lead and Tejas — 2026-10-11 IST
 
 Repository W:/AI Product Sprint/Phron, main; parent 618b2fe314fc18dbc27fe86b913406bcd6e73efe; final documentation commit resolved with git log -1. Live app remains e50cf4317c8d4eb9e5336f6d2189e61f66c1a5fa at https://phron-eight.vercel.app, deployment dpl_5ugpr2a6QNk5ZhiydzSHBoCogPiX.

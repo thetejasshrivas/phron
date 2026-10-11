@@ -1,5 +1,7 @@
 # PHRON
 
+**[Public GitHub repository](https://github.com/thetejasshrivas/phron)** · [Live product](https://phron-eight.vercel.app)
+
 PHRON helps salaried urban professionals in India see what they can spend today, capture everyday expenses, protect goals and recover before month-end shock. ICP v0 is people aged 22–32 in tier-1 cities earning ₹35,000–₹1,50,000 monthly, with regular paydays, fixed obligations and frequent UPI/card spending. PHRON is a P0 web product, not a lender or investment adviser.
 
 **[Open the live product](https://phron-eight.vercel.app)** → Continue with Google → consent and Step-1 onboarding → Home. The three surfaces are [Home](https://phron-eight.vercel.app/home), [Visualize Spending](https://phron-eight.vercel.app/visualize), and [Buckets & Settings](https://phron-eight.vercel.app/manage). Personal surfaces require sign-in. Evaluator Google audience eligibility still needs PH-30 verification; public landing availability does not establish access for every Google account.
