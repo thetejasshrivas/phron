@@ -12,7 +12,7 @@ assert.ok(process.env.SUPABASE_SERVICE_ROLE_KEY,'PRIVATE_SETUP_KEY_REQUIRED');
 const key=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 const options={auth:{persistSession:false,autoRefreshToken:false,detectSessionInUrl:false}};
 const admin=createClient(url,process.env.SUPABASE_SERVICE_ROLE_KEY,options);
-const out=process.argv.includes('--remediation')?'docs/evidence/PH28/remediation':'docs/evidence/PH28';mkdirSync(out,{recursive:true});
+const out=process.argv.includes('--ai-repair')?'docs/evidence/PH28/ai-repair':process.argv.includes('--remediation')?'docs/evidence/PH28/remediation':'docs/evidence/PH28';mkdirSync(out,{recursive:true});
 const checks=[],network=[],users=[];
 const tables=JSON.parse(readFileSync('docs/evidence/PH27/remote-catalog-post-rollout.json')).tables.filter(t=>t.key.startsWith('public.')).map(t=>t.key.slice(7));
 assert.equal(tables.length,23);
@@ -75,6 +75,12 @@ try{
   const forged=await mutate(b,'/api/finance/spend',{bucketId:as.buckets[0].id,amount:'1',merchantOrPayee:'PH28 Synthetic forged',rawText:'',paymentMethod:'cash',transactionDate:before.snapshot.asOfDate});assert.equal(forged.data.ok,false);assert.deepEqual(await read(b),before);
  });
  await check('live configured provider extraction: bounded synthetic text only',async()=>{
+  const baseline=await read(a);
+  const chai=await api(a,'/api/finance/ingest',{text:'150 chai',operationId:randomUUID(),disclosureAccepted:true});
+  writeFileSync(out+'/chai-result.json',JSON.stringify({http_status:chai.status,kind:chai.data.kind,reason:chai.data.reason,provider:chai.data.provider,outcomes:chai.data.outcomes?.map(x=>({kind:x.kind,confidence:x.confidence,amountPaise:x.transaction?.amountPaise})),source:'real deployed adapters; synthetic isolated prompt'},null,2));
+  assert.equal(chai.status,200);assert.equal(chai.data.kind,'routed');assert.ok(['gemini','groq'].includes(chai.data.provider));
+  assert.equal(chai.data.outcomes.length,1);assert.equal(chai.data.outcomes[0].transaction.amountPaise,'15000');
+  assert.equal(chai.data.outcomes[0].kind,'method_confirmation');assert.deepEqual(await read(a),baseline);
   const r=await api(a,'/api/finance/ingest',{text:'Starbucks coffee 12 cash',operationId:randomUUID(),disclosureAccepted:true});
   writeFileSync(out+'/provider-result.json',JSON.stringify({http_status:r.status,kind:r.data.kind,reason:r.data.reason,provider:r.data.provider,outcomes:r.data.outcomes?.map(x=>({kind:x.kind,confidence:x.confidence})),source:'deployed real adapters; no provider mock'},null,2));
   assert.equal(r.status,200);assert.equal(r.data.kind,'routed');assert.ok(['gemini','groq'].includes(r.data.provider));assert.ok(r.data.outcomes.length>0);

@@ -7,9 +7,11 @@ const PROVIDER_TIMEOUT_MS = 4_000;
 const MAX_RESPONSE_BYTES = 32_768;
 const categoryEnum = ['Groceries & Essentials', 'Dining Out & Social', 'Shopping & Personal', 'Transit & Commute', 'Entertainment & Subscriptions', 'Unallocated / Lent', 'Unknown'];
 const extractionSchema = {
-  type: 'OBJECT', required: ['transactions'], additionalProperties: false,
+  // REST responseSchema uses Google's Schema subset, not unrestricted JSON Schema.
+  // Unknown fields are still rejected by parseExtraction at the application boundary.
+  type: 'OBJECT', required: ['transactions'],
   properties: { transactions: { type: 'ARRAY', minItems: 1, maxItems: 10, items: {
-    type: 'OBJECT', required: ['amount', 'merchant_or_payee', 'candidate_category', 'is_estimated', 'relative_date_offset_days'], additionalProperties: false,
+    type: 'OBJECT', required: ['amount', 'merchant_or_payee', 'candidate_category', 'is_estimated', 'relative_date_offset_days'],
     properties: {
       amount: { type: 'STRING', description: 'Exact decimal rupees, no exponent, at most two fractional digits. Example: 12.50.' },
       merchant_or_payee: { type: 'STRING', description: 'Merchant or payee, at most 50 characters.' }, candidate_category: { type: 'STRING', enum: categoryEnum },

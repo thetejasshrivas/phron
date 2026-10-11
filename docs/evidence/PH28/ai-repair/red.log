@@ -1,0 +1,23 @@
+
+> phron@0.1.0 test:unit
+> jest --config jest.config.mjs --selectProjects unit --runInBand --runTestsByPath tests/unit/server/ph28-provider-wire.test.ts
+
+Running one project: unit
+FAIL unit tests/unit/server/ph28-provider-wire.test.ts
+  ● PH28 documented provider wire regression › sends only documented Gemini Schema fields recursively; retains strict local validation
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+
+
+      at check (tests/unit/server/ph28-provider-wire.test.ts:60:90)
+      at Object.<anonymous> (tests/unit/server/ph28-provider-wire.test.ts:64:9)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.357 s
+Ran all test suites within paths "tests/unit/server/ph28-provider-wire.test.ts".

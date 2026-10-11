@@ -3,7 +3,7 @@ import {mkdirSync,writeFileSync} from 'node:fs';
 import {chromium,expect} from '@playwright/test';
 
 const origin='https://phron-eight.vercel.app';
-const out=process.argv.includes('--remediation')?'docs/evidence/PH28/remediation':'docs/evidence/PH28';
+const out=process.argv.includes('--ai-repair')?'docs/evidence/PH28/ai-repair':process.argv.includes('--remediation')?'docs/evidence/PH28/remediation':'docs/evidence/PH28';
 mkdirSync(out,{recursive:true});
 const checks=[],network=[];
 async function check(name,action){
