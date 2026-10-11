@@ -525,3 +525,8 @@ Final verification 2026-10-09: all 20 commands in docs/evidence/G3/CLOSURE/runs.
 | `git diff --check` | PASS |
 
 The firewall blocks sensitive financial and identity-bearing capture strings before outbound extraction; Gemini/Groq request constructors use explicit body shapes; restricted investment/credit advice receives a fixed refusal; deterministic coach copy remains local; analytics projection drops unapproved keys and values. Live provider quotas and Groq retention controls were not checked. Exact scope and command evidence: [PH-20 result](evidence/PH20/RESULT.md).
+
+
+## PH30B visual-only verification — 2026-10-11 IST
+
+Parent ffb9751 plus wordmark diff.462unit/152integration PASS, lint/typecheck/build/source5PASS; focused PHRON Playwright7PASS. Default E2E1PASS/1FAIL due unchanged obsolete Coming-soon heading fixture; no all-green E2E claim. No financial/DB/provider/remote run. [Exact commands, limits and screenshots](evidence/PH30B/RESULT.md).

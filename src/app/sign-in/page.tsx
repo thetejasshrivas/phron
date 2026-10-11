@@ -1,8 +1,9 @@
+import { PhronLogo } from '@/components/brand/PhronLogo';
 import '@/styles/auth.css';
 export const dynamic='force-dynamic';
 export default async function SignIn({searchParams}:{searchParams:Promise<Record<string,string|string[]|undefined>>}) {
   const failed=(await searchParams).error==='callback';
-  return <main className="auth-shell"><p className="auth-eyebrow">PHRON / YOUR EVERYDAY MONEY</p>
+  return <main className="auth-shell"><div className="auth-brand"><PhronLogo /></div><p className="auth-eyebrow">PHRON / YOUR EVERYDAY MONEY</p>
     <h1>A little clarity.<br/>Room to breathe.</h1>
     <p>Sign in to begin with what you have, what is due, and what you can safely spend.</p>
     {failed && <p role="alert" className="auth-error">That sign-in link could not be used. Start again to get a fresh link.</p>}

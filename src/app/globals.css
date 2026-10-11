@@ -11,3 +11,10 @@ h1 { margin: 24px 0; font-family: Georgia, serif; font-size: clamp(2.7rem, 7vw, 
 h1 em { font-weight: 400; }
 .intro { max-width: 32ch; color: var(--quiet); font-size: 1.125rem; line-height: 1.6; }
 footer { color: var(--quiet); font-size: .8rem; border-top: 1px solid #c5c8be; padding-top: 24px; }
+
+/* Static cross-script wordmark; no font download, animation or product-copy replacement. */
+.phron-logo{display:inline-flex;vertical-align:middle;line-height:0;letter-spacing:normal;flex-shrink:0}
+.phron-logo svg{display:block;width:120px;height:auto;overflow:visible}
+.auth-brand .phron-logo svg{width:152px}
+.mobile-wordmark{display:none}
+@media(max-width:767px){.mobile-wordmark{display:block;margin-bottom:16px}}

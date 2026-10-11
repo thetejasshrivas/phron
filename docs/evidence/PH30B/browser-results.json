@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "width": 375,
+      "route": "/",
+      "status": "PASS",
+      "locator": "role=img name=PHRON; existing PHRON page title"
+    },
+    {
+      "width": 375,
+      "route": "/sign-in",
+      "status": "PASS",
+      "locator": "role=img name=PHRON; existing PHRON page title"
+    },
+    {
+      "width": 375,
+      "context": "isolated actual component + existing navigation CSS; no auth/finance fixture",
+      "status": "PASS",
+      "glyphBounds": [
+        {
+          "text": "फ़",
+          "x": 1.7330652475357056,
+          "y": -3.6096506118774414,
+          "width": 41.80884552001953,
+          "height": 55.7451286315918
+        },
+        {
+          "text": "₹",
+          "x": 49,
+          "y": -1.075780987739563,
+          "width": 23.022579193115234,
+          "height": 53.21125793457031
+        },
+        {
+          "text": "ON",
+          "x": 80,
+          "y": -1.075780987739563,
+          "width": 59.94184875488281,
+          "height": 53.21125793457031
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "route": "/",
+      "status": "PASS",
+      "locator": "role=img name=PHRON; existing PHRON page title"
+    },
+    {
+      "width": 1280,
+      "route": "/sign-in",
+      "status": "PASS",
+      "locator": "role=img name=PHRON; existing PHRON page title"
+    },
+    {
+      "width": 1280,
+      "context": "isolated actual component + existing navigation CSS; no auth/finance fixture",
+      "status": "PASS",
+      "glyphBounds": [
+        {
+          "text": "फ़",
+          "x": 1.7330652475357056,
+          "y": -3.6096506118774414,
+          "width": 41.80884552001953,
+          "height": 55.7451286315918
+        },
+        {
+          "text": "₹",
+          "x": 49,
+          "y": -1.075780987739563,
+          "width": 23.022579193115234,
+          "height": 53.21125793457031
+        },
+        {
+          "text": "ON",
+          "x": 80,
+          "y": -1.075780987739563,
+          "width": 59.94184875488281,
+          "height": 53.21125793457031
+        }
+      ]
+    },
+    {
+      "context": "reduced-motion static mark",
+      "status": "PASS"
+    }
+  ],
+  "limit": "Navigation uses isolated component markup; auth routes use real local production build. No new authenticated core journey claim."
+}

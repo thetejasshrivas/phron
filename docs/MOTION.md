@@ -118,3 +118,8 @@ Collapse/expand uses immediate layout changes, with no animated money or overlay
 2026-10-11 IST, application `36ca7380dfb2235d5556242f59c93da18c98bf04`. At≤767px, focusable main controls have16px upper/140px lower scroll margin, leaving full outlines above110px wrapped Home navigation in the tested375px layout. Native date-field focus-within outlines all internal segments. Native browser focus scrolling is used; no JS listeners, scrolling animation, money interpolation or action delay added. Existing drain/fill/transitions and reduced-motion rules unchanged.
 
 Strengthened keyboard geometry requires entire target plus7px outline clearance above fixed navigation, center hit on the target, visible ring and complete Tab coverage. Red26PASS/4FAIL preserved; first CSS attempt removed overlap but date-ring diagnostics remained; final verification83/83PASS at375/768/1280 plus6reduced-surface/2save drills. Canonical values immediate. V3 screenshot review remains explicit Tejas action, not automated motion approval. See evidence/PH26 and evidence/V3.
+
+
+## PH30B static wordmark
+
+The फ़₹ON mark never animates or interpolates. Normal/reduced-motion render identical final glyphs. No new click handler, tab stop, pending state or financial transition; existing drain/fill/focus behavior preserved. Accessible name PHRON; SVG hidden from accessibility tree. [Focused verification](evidence/PH30B/RESULT.md).

@@ -1,4 +1,5 @@
 'use client';
+import { PhronLogo } from '@/components/brand/PhronLogo';
 import { useEffect, useState, useSyncExternalStore, type ReactNode } from 'react';
 import { SurfaceSession } from '@/client/surface-session';
 export function useSurfaces(revision?:string){
@@ -14,7 +15,7 @@ export function useOffline(){
  return offline;
 }
 export function SurfaceShell({active,title,description,children}:{active:'visualize'|'manage';title:string;description:string;children:ReactNode}){
- return <div className="phron-home surface-shell"><a className="skip-home" href="#surface-main">Skip to content</a><aside className="home-sidebar"><a className="home-brand" href="/home">phron<span aria-hidden="true">↗</span></a><p className="brand-note">Money, in perspective.</p><nav aria-label="Primary navigation"><a href="/home">Your day</a><a href="/visualize" aria-current={active==='visualize'?'page':undefined}>Visualize spending</a><a href="/manage" aria-current={active==='manage'?'page':undefined}>Buckets &amp; settings</a></nav><div className="sidebar-bottom"><form action="/api/auth/logout" method="post"><button className="text-action">Sign out</button></form></div></aside><main id="surface-main" tabIndex={-1} className="home-main"><header className="surface-header"><h1>{title}</h1><p>{description}</p></header>{children}<footer className="home-footer">Clarity over perfection.</footer></main></div>;
+ return <div className="phron-home surface-shell"><a className="skip-home" href="#surface-main">Skip to content</a><aside className="home-sidebar"><a className="home-brand" href="/home"><PhronLogo /><span aria-hidden="true">↗</span></a><p className="brand-note">Money, in perspective.</p><nav aria-label="Primary navigation"><a href="/home">Your day</a><a href="/visualize" aria-current={active==='visualize'?'page':undefined}>Visualize spending</a><a href="/manage" aria-current={active==='manage'?'page':undefined}>Buckets &amp; settings</a></nav><div className="sidebar-bottom"><form action="/api/auth/logout" method="post"><button className="text-action">Sign out</button></form></div></aside><main id="surface-main" tabIndex={-1} className="home-main"><header className="surface-header"><h1>{title}</h1><p>{description}</p></header>{children}<footer className="home-footer">Clarity over perfection.</footer></main></div>;
 }
 export function SurfaceFeedback({view,session}:{view:ReturnType<SurfaceSession['getSnapshot']>;session:SurfaceSession}){
  const offline=useOffline();

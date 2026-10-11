@@ -109,3 +109,8 @@ Owner Lead/founder. Frozen§36.2: openingcash₹40,000, discretionary spends₹5
 ## Historical record
 
 The earlier BUGS.md template stated no executed application tests/NOT_RUN. It predates this audit and is superseded; prior gate results remain in their evidence records. Driver-only column/selector/union-tag/table-inventory/cleanup mistakes are preserved as failure history in PH23 files and are not application defects.
+
+
+## PH30B-TEST-01 / P2 — OPEN (pre-existing test drift)
+
+2026-10-11. npm run test:e2e:1pass/1fail. foundation.spec.ts:9 still expects More clarity.Less money noise. and Coming soon, while the post-PH28 public root already serves A little clarity.Room to breathe. PHRON title assertion passes. Repro: build then default E2E. No logo-induced copy change; tests unchanged per explicit PH30B guardrail. Owner QA; separately update obsolete expectations to approved live landing with meaningful auth-entry checks, retaining PHRON title. [Evidence](evidence/PH30B/RESULT.md).

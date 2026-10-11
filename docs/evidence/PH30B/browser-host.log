@@ -1,0 +1,8 @@
+file:///W:/AI%20Product%20Sprint/Phron/docs/evidence/PH30B/verify-logo.mjs:25
+  if(boxes.some(b=>b.x<0||b.x+b.width>152||b.y<0||b.y+b.height>56))throw Error('Glyph clipped');
+                                                                         ^
+
+Error: Glyph clipped
+    at file:///W:/AI%20Product%20Sprint/Phron/docs/evidence/PH30B/verify-logo.mjs:25:74
+
+Node.js v24.21.0

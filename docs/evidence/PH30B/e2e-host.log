@@ -1,0 +1,47 @@
+
+> phron@0.1.0 test:e2e
+> playwright test
+
+[WebServer] (node:1812) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:47740) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 [foundation] › tests\e2e\foundation.spec.ts:3:5 › public foundation loads without client errors or financial capture (5.5s)
+(node:25528) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [foundation] › tests\e2e\foundation.spec.ts:14:5 › HTTP liveness reveals no diagnostics and rejects writes (24ms)
+
+
+  1) [foundation] › tests\e2e\foundation.spec.ts:3:5 › public foundation loads without client errors or financial capture
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByRole('heading', { level: 1 })
+    Expected: "More clarity.Less money noise."
+    Received: "A little clarity.Room to breathe."
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" getByRole('heading', { level: 1 }) with timeout 5000ms
+      - waiting for getByRole('heading', { level: 1 })
+        14 × locator resolved to <h1>…</h1>
+           - unexpected value "A little clarity.Room to breathe."
+
+
+       7 |   await page.goto("/");
+       8 |   await expect(page).toHaveTitle("PHRON — Money, in perspective");
+    >  9 |   await expect(page.getByRole("heading", { level: 1 })).toHaveText("More clarity.Less money noise.");
+         |                                                         ^
+      10 |   await expect(page.getByText("Coming soon", { exact: true })).toBeVisible();
+      11 |   await expect(page.getByRole("textbox")).toHaveCount(0);
+      12 |   expect(errors).toEqual([]);
+        at W:\AI Product Sprint\Phron\tests\e2e\foundation.spec.ts:9:57
+
+    Error Context: test-results\foundation-public-foundati-4204d-errors-or-financial-capture-foundation\error-context.md
+
+  1 failed
+    [foundation] › tests\e2e\foundation.spec.ts:3:5 › public foundation loads without client errors or financial capture
+  1 passed (8.1s)

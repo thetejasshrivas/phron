@@ -1,4 +1,5 @@
 "use client";
+import { PhronLogo } from '@/components/brand/PhronLogo';
 import { useEffect, useRef, useState, useSyncExternalStore, type CSSProperties, type FormEvent, type MouseEvent } from 'react';
 import { financialDate } from '@/contracts/boundaries';
 import type { Revision } from '@/contracts/boundaries';
@@ -114,7 +115,7 @@ export function HomeSurface({view,session}:{view:ReturnType<HomeSession['getSnap
  }
  return <div className="phron-home" onClickCapture={event=>{if(!captureCollapsed&&!capturePanelRef.current?.contains(event.target as Node))closeCapture();}} onKeyDown={event=>{if(event.key==='Escape'&&capturePanelRef.current?.contains(event.target as Node)){closeCapture();capturePanelRef.current?.querySelector<HTMLButtonElement>('.capture-toggle')?.focus();}}}>
   <a className="skip-home" href="#home-main" onClick={e=>navigate(e,'home-main')}>Skip to your day</a>
-  <main id="home-main" className="home-main" tabIndex={-1}>
+  <main id="home-main" className="home-main" tabIndex={-1}><div className="mobile-wordmark"><PhronLogo /></div>
    <section ref={capturePanelRef} className={`capture-panel ${!captureCollapsed?'capture-expanded':''}`} aria-labelledby="capture-title"><div><h2 id="capture-title">Spent something?</h2><p>Record what happened. Keep your perspective current.</p></div><button className="text-action capture-toggle" type="button" aria-expanded={!captureCollapsed} aria-controls="capture-content" onClick={()=>{if(captureCollapsed)setCaptureCollapsed(false);else closeCapture();}}>{captureCollapsed?'Expand capture':'Collapse capture'}</button><div id="capture-content" hidden={captureCollapsed}>
     <form className="natural-capture" onSubmit={event=>{event.preventDefault();if(naturalPhase!=='pending'){dictation.stop();naturalIntent.current={text:naturalText,operationId:naturalIntent.current?.text===naturalText?naturalIntent.current.operationId:crypto.randomUUID()};setNaturalMessage('');void sendNatural(disclosureAccepted);}}} aria-busy={naturalPhase==='pending'}>
      <label htmlFor="natural-capture-text">Quick capture · up to 280 characters</label><input type="text" id="natural-capture-text" ref={naturalInputRef} value={naturalText} onChange={event=>{dictation.stop();setNaturalText(event.target.value);}} maxLength={280} placeholder="450 Zomato cash · 2k groceries yesterday" disabled={offline||naturalPhase==='pending'} aria-describedby="natural-capture-feedback" required/>
@@ -160,7 +161,7 @@ export function HomeSurface({view,session}:{view:ReturnType<HomeSession['getSnap
    <HomeDetails section="goals" data={surfaceData} view={surfaceView} session={surfaceSession} onConfirmed={()=>session.refresh()}/>
    <footer className="home-footer"><span>Clarity over perfection.</span><span>Amounts from your confirmed records.</span></footer>
   </main>
-  <aside className="home-sidebar" aria-label="PHRON identity"><a className="home-brand" href="/home">phron<span aria-hidden="true">↗</span></a><p className="brand-note">Money, in perspective.</p>
+  <aside className="home-sidebar" aria-label="PHRON identity"><a className="home-brand" href="/home"><PhronLogo /><span aria-hidden="true">↗</span></a><p className="brand-note">Money, in perspective.</p>
    <nav aria-label="Home navigation">{([['home-main','Your day'],['bucket-section','Buckets'],['goal-section','Goals']] as const).map(([id,label])=><a key={id} href={`#${id}`} aria-current={section===id?'location':undefined} onClick={e=>navigate(e,id)}>{label}</a>)}<a href="/visualize">Visualize spending</a><a href="/manage">Buckets &amp; settings</a></nav>
    <div className="sidebar-bottom"><div>Your perspective<small>Confirmed records</small><form action="/api/auth/logout" method="post"><button className="text-action">Sign out</button></form></div></div>
   </aside>

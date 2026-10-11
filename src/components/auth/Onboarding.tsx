@@ -1,4 +1,5 @@
 'use client';
+import { PhronLogo } from '@/components/brand/PhronLogo';
 import { useRef, useState, type FormEvent } from 'react';
 import { operationId, revision } from '@/contracts/boundaries';
 import { parseSnapshot, type FinancialSnapshot } from '@/contracts/snapshot';
@@ -36,7 +37,7 @@ export function Onboarding() {
     } catch {setRetry(true);setMessage('We could not confirm saving. Retry this same request; it will not create a second profile.');}
     finally {setBusy(false);feedback.current?.focus();}
   }
-  return <main className="auth-shell"><div className="auth-topline"><p className="auth-eyebrow">PHRON / YOUR STARTING POINT</p><form action="/api/auth/logout" method="post"><button className="auth-link">Sign out</button></form></div>
+  return <main className="auth-shell"><div className="auth-topline"><div className="auth-brand"><PhronLogo /><p className="auth-eyebrow">PHRON / YOUR STARTING POINT</p></div><form action="/api/auth/logout" method="post"><button className="auth-link">Sign out</button></form></div>
     <h1>Start where<br/>you are.</h1><p>What’s available today matters more than a perfect month.</p>
     <p className="auth-note">Development preview · fictional details only. No bank connection. Onboarding totals are processed deterministically, without AI.</p>
     <p ref={feedback} tabIndex={-1} role="status" aria-live="polite" className={`auth-feedback ${retry?'auth-error':''}`}>{message}</p>

@@ -13,7 +13,7 @@
 .skip-home:focus{top:12px;clip-path:none;width:auto;height:auto}
 .home-sidebar{padding:40px 24px;display:flex;flex-direction:column;border-right:1px solid var(--line);min-height:100dvh}
 .home-brand{font-size:38px;font-weight:700;letter-spacing:-.065em}
-.home-brand span{display:inline-block;font-size:24px;background:var(--accent);border-radius:50%;padding:1px 7px;margin-left:5px}
+.home-brand > span[aria-hidden="true"]{display:inline-block;font-size:24px;background:var(--accent);border-radius:50%;padding:1px 7px;margin-left:5px}
 .brand-note{font-size:11px;margin-top:12px!important;color:var(--muted)}
 .home-sidebar nav{display:grid;gap:8px;margin-top:64px}
 .home-sidebar nav a{padding:16px 12px;font-size:14px;border-radius:8px}
@@ -190,7 +190,7 @@
 .capture-notice p{line-height:1.5}.capture-notice p:empty{display:none}
 .phron-home input[aria-invalid="true"]{border-color:#933f30}
 @media(max-width:1000px){.outcome-control{grid-column:1}}
-@media(max-width:767px){.home-sidebar nav{display:flex;gap:2px}.home-sidebar nav a,.home-sidebar nav [aria-current]{display:flex;font-size:11px;padding:10px 7px;min-height:44px;align-items:center}.home-sidebar{gap:12px}.home-brand{font-size:27px}.home-brand span{font-size:18px;padding:2px 5px}.outcome-control{font-size:11px}.capture-notice{font-size:11px}}
+@media(max-width:767px){.home-sidebar nav{display:flex;gap:2px}.home-sidebar nav a,.home-sidebar nav [aria-current]{display:flex;font-size:11px;padding:10px 7px;min-height:44px;align-items:center}.home-sidebar{gap:12px}.home-brand{font-size:27px}.home-brand > span[aria-hidden="true"]{font-size:18px;padding:2px 5px}.outcome-control{font-size:11px}.capture-notice{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.phron-home *{transition:none!important;animation:none!important;scroll-behavior:auto!important}.text-action:hover span,.capture-button:active{transform:none}}
 
 /* PH-13: manual records within the accepted Home, confirmed values only. */

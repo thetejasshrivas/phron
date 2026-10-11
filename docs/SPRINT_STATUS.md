@@ -6,12 +6,12 @@ prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
 commit: e50cf4317c8d4eb9e5336f6d2189e61f66c1a5fa # deployed application; final evidence commit separate
-working_tree_state: G7 closure docs verified and committed; synchronized after push; scratch untouched
+working_tree_state: visual wordmark and evidence committed locally; not deployed; scratch untouched
 dirty_files: ["New Text Document.txt (untouched user work)"] # resolve current HEAD/status on resume
-active_chat: PHRON-00 Lead / PH30 single active writer
+active_chat: PHRON-00 acting Experience / PH30B single active writer
 phase: "7 (21-Day Behavioral Pilot eligible; NOT_STARTED)"
-current_step: PH-31
-step_state: PH30 COMPLETE; G7 PASSED (PUBLIC_WEB_PACKAGE_READY); PH31 NOT_STARTED / PENDING_OPERATOR_AUTHORIZATION
+current_step: PH-30B
+step_state: PH30B VISUAL_IMPLEMENTED; UNIT462_INTEGRATION152_BUILD_PASS; BRAND_BROWSER7_PASS; STALE_FOUNDATION_E2E_FAIL; PH31_NOT_STARTED
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
 approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D08-v1, D09-v1, D10-v1, D11-v1, D16-v1, D17-v1, D18-v1, D19-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1, D14-v1, D15-v1, D26-v1, G3-DF-01-v1, PH21-BUCKET-v1, PH21-GOAL-v1, PH21-OBLIGATION-v1, PH21-CHART-v1, D20-v1, G4-FLEX-DATE-01-v1, G4-CUSTOM-RECOVERY-01-v1, D23-v1, D24-v1, G4-GOAL-CALENDAR-01-v1, PH23-SC02-v1, D25-PRIMARY-v1, D25-FALLBACK-v1]
 completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17, PH-18, PH-19, PH-20, PH-21, PH-22, PH-23, PH-24, PH-25, PH-26, PH-27, PH-28, PH-29, PH-30]
@@ -20,12 +20,12 @@ open_gates: [G0B]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: ACCEPTED}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb", V3: "PHRON-V3-01 /36ca7380dfb2235d5556242f59c93da18c98bf04 — ACCEPTED 2026-10-11"}
 blocking_decisions: [] # scoped fixes verified; residual tooling/distributed-limit risks remain documented for release review
-latest_evidence: docs/evidence/PH30/G7_AUDIT.md
+latest_evidence: docs/evidence/PH30B/RESULT.md
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: READY_G6_PASSED, production_url: "https://phron-eight.vercel.app", production_id: dpl_5ugpr2a6QNk5ZhiydzSHBoCogPiX, production_commit: e50cf4317c8d4eb9e5336f6d2189e61f66c1a5fa, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
 migration_state: ALL24_REMOTE_APPLIED; FIRST2_PRESERVED; NEXT22_AUTHORIZED_APPLIED_IN_PINNED_ORDER; CLEAN_REPLAY_PARITY100_PASS
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers", "2026-10-10: Tejas approved PH21 typed contracts, server/API handlers, local-only migration and integration tests for goals, reconciliation, buckets and authenticated account deletion; no remote rollout"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Tejas submits/acknowledges ready public links or separately authorizes PH31 pilot preparation; no pilot begun
+next_action: review PH30B-WORDMARK-01 and separately authorize stale foundation fixture correction/publication if desired
 last_updated_ist: 2026-10-11
 ```
 

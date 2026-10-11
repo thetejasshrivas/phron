@@ -137,3 +137,8 @@ Every open capture body uses normal document flow so it cannot cover recovery/hi
 Separate bounded Impeccable hardening pass read existing DESIGN/MOTION and craft floor; context launcher unavailable(exit127 with downloads disabled), direct-context fallback used. Inspection and correction stayed within incumbent design. No photo/font/model download. Final18screenshots:3surfaces × A/B/C ×375/1280, real local synthetic auth/data; [V3 review](evidence/V3/README.md). Agent batched inspection covers Home A375/B1280/C375, Visualize A375/C1280 and Management B375/A1280. This is viewport evidence, not physical phone or Tejas approval. Reduced-motion/keyboard/runtime proofs in PH26.
 
 One explicit founder action: “Tejas accepts V3 — PHRON-V3-01 at commit36ca738.” Until received, V3 remains PENDING and PH26 is not closed. No release/deployment authorization is inferred.
+
+
+## PH30B-WORDMARK-01 — visual brand direction implemented
+
+2026-10-11: Tejas explicitly requests फ़₹ON, inspired by synchronous cross-script typography. Component src/components/brand/PhronLogo.tsx uses static native SVG typography with optically sized shared-weight glyphs and PHRON accessible name. Installed fonts only, no third-party asset/download; same ink, baseline and existing visual language. Integrated navigation/mobile Home/auth/onboarding. Existing text/metadata/fixtures unchanged; no new V1/V2/V3 or founder review approval inferred. [Screenshots and verification](evidence/PH30B/RESULT.md).
