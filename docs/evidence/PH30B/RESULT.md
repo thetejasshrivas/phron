@@ -1,3 +1,9 @@
+# Latest: PH30B-WORDMARK-02 verified
+
+2026-10-11 IST. Lowercase फ़₹on tightened per founder feedback. Authorized stale sign-in assertion repaired; 462 unit +152 integration, lint/typecheck, host production build, 2/2 default Playwright and7/7 focused browser checks PASS. Initial restricted Windows EPERM retained. [Current report](refinement/RESULT.md); [updated375px preview](auth-root-375.png). Not pushed/deployed; historical uppercase report and original failure below.
+
+---
+
 # PH30B — फ़₹ON visual wordmark
 
 2026-10-11 IST, main, parent ffb975120a821f566a833aead0fbb1036e1fa344 plus this frontend-only diff. Revision PH30B-WORDMARK-01; founder direction implemented, no new founder visual acceptance inferred. No deployment/push, remote/auth/provider operation, finance change, tool install or fixture edit.

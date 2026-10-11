@@ -142,3 +142,7 @@ One explicit founder action: “Tejas accepts V3 — PHRON-V3-01 at commit36ca73
 ## PH30B-WORDMARK-01 — visual brand direction implemented
 
 2026-10-11: Tejas explicitly requests फ़₹ON, inspired by synchronous cross-script typography. Component src/components/brand/PhronLogo.tsx uses static native SVG typography with optically sized shared-weight glyphs and PHRON accessible name. Installed fonts only, no third-party asset/download; same ink, baseline and existing visual language. Integrated navigation/mobile Home/auth/onboarding. Existing text/metadata/fixtures unchanged; no new V1/V2/V3 or founder review approval inferred. [Screenshots and verification](evidence/PH30B/RESULT.md).
+
+# PH30B-WORDMARK-02 — founder typography refinement
+
+2026-10-11 IST. Founder requests फ़₹on with cohesive spacing and lowercase Latin letters. Static SVG shares baseline/weight, reduces inter-glyph gaps and optically enlarges lowercase x-height. Accessible identity remains PHRON. 375px preview visually inspected and375/1280 browser bounds PASS. Native font fallback retained. Implemented and verified; no additional visual acceptance inferred. Evidence: evidence/PH30B/refinement/RESULT.md.

@@ -114,3 +114,7 @@ The earlier BUGS.md template stated no executed application tests/NOT_RUN. It pr
 ## PH30B-TEST-01 / P2 — OPEN (pre-existing test drift)
 
 2026-10-11. npm run test:e2e:1pass/1fail. foundation.spec.ts:9 still expects More clarity.Less money noise. and Coming soon, while the post-PH28 public root already serves A little clarity.Room to breathe. PHRON title assertion passes. Repro: build then default E2E. No logo-induced copy change; tests unchanged per explicit PH30B guardrail. Owner QA; separately update obsolete expectations to approved live landing with meaningful auth-entry checks, retaining PHRON title. [Evidence](evidence/PH30B/RESULT.md).
+
+# PH30B-TEST-01 — RESOLVED (2026-10-11 IST)
+
+Founder explicitly authorized updating the obsolete Coming-soon foundation assertion. It now verifies the rendered sign-in heading, PHRON accessible logo, Google button and POST form while retaining anonymous capture denial and all health/security checks. Default Playwright2/2 PASS, exit0. Evidence: docs/evidence/PH30B/refinement/RESULT.md.

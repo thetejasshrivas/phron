@@ -5,7 +5,7 @@ import ts from 'typescript';
 import {createRequire} from 'node:module';
 import {renderToStaticMarkup} from 'react-dom/server';
 import {createElement} from 'react';
-const req=createRequire(import.meta.url),out='docs/evidence/PH30B',origin='http://127.0.0.1:3104';
+const req=createRequire(import.meta.url),out=process.argv.includes('--refinement')?'docs/evidence/PH30B/refinement':'docs/evidence/PH30B',origin='http://127.0.0.1:3104';
 const built=ts.transpileModule(fs.readFileSync('src/components/brand/PhronLogo.tsx','utf8'),{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS}}).outputText;
 const mod={exports:{}};new Function('require','module','exports',built)(req,mod,mod.exports);
 const logo=renderToStaticMarkup(createElement(mod.exports.PhronLogo));
@@ -23,7 +23,7 @@ try{
   const mark=page.getByRole('img',{name:'PHRON',exact:true});await expect(mark).toBeVisible();await expect(page.getByRole('link',{name:'PHRON',exact:true})).toBeVisible();
   const boxes=await mark.locator('text').evaluateAll(nodes=>nodes.map(n=>{const b=n.getBBox();return {text:n.textContent,x:b.x,y:b.y,width:b.width,height:b.height};}));
   fs.writeFileSync(out+'/glyph-bounds.json',JSON.stringify(boxes,null,2));
-  if(boxes.some(b=>b.x<0||b.x+b.width>152||b.y< -8||b.y+b.height>56))throw Error('Glyph clipped');
+  if(boxes.some(b=>b.x<0||b.x+b.width>124||b.y< -12||b.y+b.height>56))throw Error('Glyph clipped');
   await page.screenshot({path:`${out}/navigation-${width}.png`});checks.push({width,context:'isolated actual component + existing navigation CSS; no auth/finance fixture',status:'PASS',glyphBounds:boxes});
  }
  await page.emulateMedia({reducedMotion:'reduce'});await expect(page.getByRole('img',{name:'PHRON',exact:true})).toBeVisible();checks.push({context:'reduced-motion static mark',status:'PASS'});

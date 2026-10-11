@@ -123,3 +123,7 @@ Strengthened keyboard geometry requires entire target plus7px outline clearance 
 ## PH30B static wordmark
 
 The फ़₹ON mark never animates or interpolates. Normal/reduced-motion render identical final glyphs. No new click handler, tab stop, pending state or financial transition; existing drain/fill/focus behavior preserved. Accessible name PHRON; SVG hidden from accessibility tree. [Focused verification](evidence/PH30B/RESULT.md).
+
+# PH30B-WORDMARK-02
+
+2026-10-11 IST. Typography-only refinement; logo remains static and non-focusable inside the accessible PHRON wrapper. Required financial motion unchanged. Focused reduced-motion check PASS; evidence/PH30B/refinement/RESULT.md.

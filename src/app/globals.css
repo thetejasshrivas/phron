@@ -14,7 +14,7 @@ footer { color: var(--quiet); font-size: .8rem; border-top: 1px solid #c5c8be; p
 
 /* Static cross-script wordmark; no font download, animation or product-copy replacement. */
 .phron-logo{display:inline-flex;vertical-align:middle;line-height:0;letter-spacing:normal;flex-shrink:0}
-.phron-logo svg{display:block;width:120px;height:auto;overflow:visible}
-.auth-brand .phron-logo svg{width:152px}
+.phron-logo svg{display:block;width:110px;height:auto;overflow:visible}
+.auth-brand .phron-logo svg{width:136px}
 .mobile-wordmark{display:none}
 @media(max-width:767px){.mobile-wordmark{display:block;margin-bottom:16px}}
