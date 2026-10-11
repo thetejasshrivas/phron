@@ -8,6 +8,12 @@ PHRON helps salaried urban professionals in India see what they can spend today,
 
 The closed loop is **declare salary, obligations and cash → see Daily/Weekly Safe-to-Spend → capture and confirm → watch buckets drain and goals fill → explicitly accept recovery → reconcile or confirm salary**. Refresh loads saved state. Tracked card purchases reserve cash; settlement releases the reserve without counting the spend twice.
 
+## Verified submission revision
+
+Canonical verified application: **`d90c2c5f1bc52bc5e61c1c4efeb80dc012ce237a`** (PH30B-PAL-04). Tejas explicitly accepted the deep-pine/parchment/amber फ़₹on wordmark. Published on [GitHub](https://github.com/thetejasshrivas/phron); [verification](docs/evidence/PH30B/polish/PALETTE_RESULT.md):462 unit,152 mocked integration,2 default Playwright tests,lint/typecheck/build PASS. Accessible brand remains PHRON. Documentation-pointer commits may follow this application revision.
+
+Production remains [https://phron-eight.vercel.app](https://phron-eight.vercel.app), deployment `dpl_5ugpr2a6QNk5ZhiydzSHBoCogPiX` (e50cf43). Read-only Vercel inspection reports Ready; root/health200 and exact health JSON/no-store verified2026-10-11. The accepted wordmark is **not yet deployed**. Git synchronization does not imply a production rollout.
+
 ## Deterministic engine and bounded AI
 
 `src/domain` owns pure integer-paise math. Typed contracts transport money as exact integer strings. Authenticated server operations and atomic PostgreSQL RPCs enforce ownership, revisions, stable operation IDs, replay and rollback. RLS isolates user-owned tables. Asia/Kolkata dates define cycles; a scheduled payday never credits cash without confirmation. Components display canonical snapshots rather than calculate financial rules.

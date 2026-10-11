@@ -2,6 +2,14 @@
 
 Prepared 2026-10-11 IST from verified records. **PH29/PH30 COMPLETE; G7 PASSED for the operator-specified public-web package readiness. Actual submission NOT_SUBMITTED.** [Final audit](evidence/PH30/G7_AUDIT.md). PH31 is eligible but NOT_STARTED; deadline cutoff/destination and any later submission action remain operator-owned.
 
+## Canonical verified submission revision — PH30B
+
+**`d90c2c5f1bc52bc5e61c1c4efeb80dc012ce237a`** is the canonical verified application revision for the submission package. Tejas explicitly accepted PH30B-PAL-04 (फ़₹on: deep pine, parchment edge, warm amber shadow) and authorized main publication. Initial push completed exit0; remote main matched this full SHA. Documentation-pointer commits follow without changing application code. [Publication evidence](evidence/PH30B/PUBLICATION.md).
+
+Public repository remains [https://github.com/thetejasshrivas/phron](https://github.com/thetejasshrivas/phron); GitHub unauthenticated metadata confirms private=false/main. Production remains [https://phron-eight.vercel.app](https://phron-eight.vercel.app), Ready on deployment `dpl_5ugpr2a6QNk5ZhiydzSHBoCogPiX` /application e50cf43. Root/health200, exact health JSON and no-store rechecked2026-10-11. **d90c2c5 is pushed, not yet deployed.** No production deployment was authorized or executed in this publication task.
+
+Latest accepted wordmark checks:462 unit +152 mocked integration +2 default Playwright tests,lint/typecheck/build PASS;13 contrast pairs and18 isolated responsive/state/reduced-motion component previews PASS. Lettering contrast11.1:1light/15.2:1dark. [Exact scope/limitations](evidence/PH30B/polish/PALETTE_RESULT.md). Earlier financial/production evidence below stays scoped to its executed revisions.
+
 ## Assignment and access
 
 Tejas specifies “1 day, the final web product and public access.” Deadline date **2026-10-12 IST**, interpreted from the October11 request; exact cutoff and destination **NOT_CONFIRMED**. Required artifact: publicly accessible final web product. Public repository, deck and video requirements were not supplied; the requested script and outline are optional supporting plans.
@@ -25,6 +33,7 @@ Local documentation links are checked. GitHub repository visibility is Public by
 
 | Revision | Full commit |
 | --- | --- |
+| Canonical verified submission application /accepted wordmark | d90c2c5f1bc52bc5e61c1c4efeb80dc012ce237a |
 | Accepted V3 base | 36ca7380dfb2235d5556242f59c93da18c98bf04 |
 | Initial candidate | f4857268a7bc2d31c7f006ae8c098ce63e33bf26 |
 | Live corrected application | e50cf4317c8d4eb9e5336f6d2189e61f66c1a5fa |
