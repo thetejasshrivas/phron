@@ -1,3 +1,9 @@
+# PH28 root entry fixed and redeployed — 2026-10-11 IST
+
+Production application **fcbfaeebf32b19cd1c3a9f98e9f0379e04064649**, deployment **dpl_5cDSrxhhnuJmYYx7esqinDMa3hhm**, is READY at https://phron-eight.vercel.app (upload exit0). Root reuses the existing Google sign-in form; visible Continue with Google at375/1280, trusted OAuth initiation and root/health200/no-store pass.460unit/152mocked integration, lint/typecheck/Production build and13public live checks PASS. Focused ordinary-user onboarding passes; provider extraction remains FAIL: Gemini400 REQUEST_SCHEMA_REJECTED, Groq404 MODEL_UNAVAILABLE. Exact rejected field/global model retirement not established; no secrets downloaded or models changed. PH28 PARTIAL/G6 OPEN; phone Google completion pending. [Executed evidence](evidence/PH28/remediation/RESULT.md). Prior records below are historical.
+
+---
+
 # PH28 Production smoke — 2026-10-11 IST
 
 Release f485726 at canonical Production URL,19 PASS/1 FAIL composite checks. Public runner exit0 (11PASS); authenticated runner exit1 (8PASS/1FAIL); focused provider diagnostic exit1, preserves original run. Successful extraction fails with typed providers_failed; manual fallback available. Live onboarding/save-refresh, card accounting/replay,23-table cross-user read denial/forged mutation rejection,23-table caller purge and retained-session denial PASS. Google initiation/PKCE only; password SSR session is not Google completion. Real-phone evidence NOT RUN. [Executed report](evidence/PH28/PRODUCTION_SMOKE.md) and sanitized step/network JSON logs. PH28/G6 incomplete; no raw secret-bearing traces or existing-user financial rows persisted.

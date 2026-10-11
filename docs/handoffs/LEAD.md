@@ -1,3 +1,9 @@
+# PH28 root entry fixed and redeployed — 2026-10-11 IST
+
+Production application **fcbfaeebf32b19cd1c3a9f98e9f0379e04064649**, deployment **dpl_5cDSrxhhnuJmYYx7esqinDMa3hhm**, is READY at https://phron-eight.vercel.app (upload exit0). Root reuses the existing Google sign-in form; visible Continue with Google at375/1280, trusted OAuth initiation and root/health200/no-store pass.460unit/152mocked integration, lint/typecheck/Production build and13public live checks PASS. Focused ordinary-user onboarding passes; provider extraction remains FAIL: Gemini400 REQUEST_SCHEMA_REJECTED, Groq404 MODEL_UNAVAILABLE. Exact rejected field/global model retirement not established; no secrets downloaded or models changed. PH28 PARTIAL/G6 OPEN; phone Google completion pending. [Executed evidence](../evidence/PH28/remediation/RESULT.md). Prior records below are historical.
+
+---
+
 # PH27 COMPLETE → PH28 / QA — 2026-10-11 IST
 
 Explicitly authorized Production upload succeeded (exit 0) for release `f485726`, accepted app `36ca738`; documentation HEAD at upload `9815cd6`. Deployment ID `dpl_45eURazDJvi9CKyuCMVWRYKzkW23`, Production / READY. **Live canonical URL: https://phron-eight.vercel.app**. Unique URL https://phron-dr59yyli6-tts-1e31.vercel.app. All 103 upload files match candidate inputs, source hashes 5/5 PASS; env/docs/scratch excluded. Six required Production names verified without revealing values. Supabase Site URL and exact callback match. No paid upgrade or remote finance/schema changes.

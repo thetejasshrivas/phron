@@ -1,3 +1,11 @@
+# PH28 current remediation disposition — 2026-10-11 IST
+
+**PH28-ENTRY-01 / P1 — RESOLVED at fcbfaee.** Root mounted the original Coming soon skeleton despite a working /sign-in form. Reusing that page exposes Continue with Google. Production13/13public checks PASS, including visible form375/1280 and actual trusted OAuth initiation.
+
+**PH28-AI-01 / P1 — OPEN.** New deployment diagnostics establish Gemini400 REQUEST_SCHEMA_REJECTED and Groq404 MODEL_UNAVAILABLE; ordinary-user extraction still returns providers_failed. Precise rejected field and model/account cause remain unverified. No automatic model substitution or secret retrieval. [Evidence](evidence/PH28/remediation/RESULT.md). Earlier unknown-cause records below are historical.
+
+---
+
 # PH28-AI-01 / P1 — OPEN — 2026-10-11 IST
 
 Live synthetic capture against Production f485726 returns HTTP200 manual_fallback / providers_failed twice. Successful provider extraction required by PH28 is unproven; safe manual fallback remains available. Exact upstream cause unknown (account/key/model/adapter needs verification); do not label it a proven code defect or quota issue. Reproduce with a fresh synthetic onboarded user and bounded explicit-cash merchant capture accepting the provider notice. [Evidence](evidence/PH28/PRODUCTION_SMOKE.md), [typed result](evidence/PH28/provider-result.json). Next: verify free provider account/key restrictions/quota without exposing keys, then targeted rerun. No application fixes performed during QA.

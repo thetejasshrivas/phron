@@ -12,7 +12,7 @@ assert.ok(process.env.SUPABASE_SERVICE_ROLE_KEY,'PRIVATE_SETUP_KEY_REQUIRED');
 const key=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 const options={auth:{persistSession:false,autoRefreshToken:false,detectSessionInUrl:false}};
 const admin=createClient(url,process.env.SUPABASE_SERVICE_ROLE_KEY,options);
-const out='docs/evidence/PH28';mkdirSync(out,{recursive:true});
+const out=process.argv.includes('--remediation')?'docs/evidence/PH28/remediation':'docs/evidence/PH28';mkdirSync(out,{recursive:true});
 const checks=[],network=[],users=[];
 const tables=JSON.parse(readFileSync('docs/evidence/PH27/remote-catalog-post-rollout.json')).tables.filter(t=>t.key.startsWith('public.')).map(t=>t.key.slice(7));
 assert.equal(tables.length,23);
@@ -92,6 +92,6 @@ try{
 }catch{checks.push({name:'synthetic setup or harness prerequisite',status:'FAIL'});}
 finally{
  for(const f of users){if(!f.deleted){const r=await admin.auth.admin.deleteUser(f.id);checks.push({name:f.label+' admin cleanup fallback',status:r.error?'FAIL':'PASS'});}await f.context?.close();}
- await browser?.close();writeFileSync(out+(process.argv.includes('--provider-only')?'/provider-diagnostic-results.json':'/authenticated-results.json'),JSON.stringify({origin,release:'f485726',checks,network,auth:'Admin-created password sessions + supported SSR cookie adapter; Google exchange deferred to phone',trace:'sanitized step/status/timing log only; no raw cookies, passwords, IDs, request bodies or tokens persisted'},null,2)+'\n');
+ await browser?.close();writeFileSync(out+(process.argv.includes('--provider-only')?'/provider-diagnostic-results.json':'/authenticated-results.json'),JSON.stringify({origin,release:process.env.PHRON_SMOKE_RELEASE??'f485726',checks,network,auth:'Admin-created password sessions + supported SSR cookie adapter; Google exchange deferred to phone',trace:'sanitized step/status/timing log only; no raw cookies, passwords, IDs, request bodies or tokens persisted'},null,2)+'\n');
 }
 if(checks.some(x=>x.status==='FAIL'))process.exitCode=1;

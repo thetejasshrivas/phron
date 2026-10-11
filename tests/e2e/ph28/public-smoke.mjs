@@ -3,7 +3,7 @@ import {mkdirSync,writeFileSync} from 'node:fs';
 import {chromium,expect} from '@playwright/test';
 
 const origin='https://phron-eight.vercel.app';
-const out='docs/evidence/PH28';
+const out=process.argv.includes('--remediation')?'docs/evidence/PH28/remediation':'docs/evidence/PH28';
 mkdirSync(out,{recursive:true});
 const checks=[],network=[];
 async function check(name,action){
@@ -31,11 +31,16 @@ await check('OAuth initiation uses Google + exact trusted callback + PKCE cookie
 let browser;
 try{
  browser=await chromium.launch({headless:true,channel:'chrome'});
+ for(const width of [375,1280])await check('root '+width+'px visible working Google entry',async()=>{
+  const context=await browser.newContext({viewport:{width,height:900}});const page=await context.newPage();
+  try{await page.goto(origin+'/');await expect(page.getByRole('button',{name:/Continue with Google/})).toBeVisible();await expect(page.getByText('Coming soon',{exact:true})).toHaveCount(0);await expect(page.locator('form[action="/api/auth/google"]')).toHaveAttribute('method','post');await page.screenshot({path:out+'/root-'+width+'.png',fullPage:true});}
+  finally{await context.close();}
+ });
  for(const width of [375,1280])await check('Chromium '+width+'px sign-in and protected Home redirect',async()=>{
   const context=await browser.newContext({viewport:{width,height:900}});const page=await context.newPage();
   try{await page.goto(origin+'/home');await expect(page).toHaveURL(origin+'/sign-in');await expect(page.getByRole('button',{name:/Continue with Google/})).toBeVisible();await page.screenshot({path:out+'/sign-in-'+width+'.png',fullPage:true});}
   finally{await context.close();}
  });
-}finally{await browser?.close();writeFileSync(out+'/public-results.json',JSON.stringify({origin,release:'f485726',checks,network,oauth:'initiation only; successful Google exchange NOT RUN'},null,2)+'\n');}
+}finally{await browser?.close();writeFileSync(out+'/public-results.json',JSON.stringify({origin,release:process.env.PHRON_SMOKE_RELEASE??'f485726',checks,network,oauth:'initiation only; successful Google exchange NOT RUN'},null,2)+'\n');}
 for(const c of checks)console.log(c.status+' '+c.name);
 if(checks.some(x=>x.status==='FAIL'))process.exitCode=1;

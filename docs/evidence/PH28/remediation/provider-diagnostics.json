@@ -1,0 +1,20 @@
+{
+  "deployment": "dpl_5cDSrxhhnuJmYYx7esqinDMa3hhm",
+  "diagnostics": [
+    {
+      "provider": "gemini",
+      "http_status": 400,
+      "reason": "REQUEST_SCHEMA_REJECTED"
+    },
+    {
+      "provider": "gemini",
+      "http_status": 400,
+      "reason": "REQUEST_SCHEMA_REJECTED"
+    },
+    {
+      "provider": "groq",
+      "http_status": 404,
+      "reason": "MODEL_UNAVAILABLE"
+    }
+  ]
+}
