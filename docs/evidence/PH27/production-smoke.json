@@ -1,0 +1,21 @@
+{
+  "date_ist": "2026-10-11",
+  "credential": "none",
+  "results": [
+    {
+      "url": "https://phron-eight.vercel.app/",
+      "status": 200,
+      "cache_control": "public, max-age=0, must-revalidate",
+      "content_type": "text/html; charset=utf-8",
+      "location": null
+    },
+    {
+      "url": "https://phron-eight.vercel.app/api/health",
+      "status": 200,
+      "cache_control": "no-store",
+      "content_type": "application/json",
+      "location": null,
+      "body": "{\"status\":\"ok\"}"
+    }
+  ]
+}

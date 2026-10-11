@@ -1,3 +1,12 @@
+# PH27 COMPLETE → PH28 / QA — 2026-10-11 IST
+
+Explicitly authorized Production upload succeeded (exit 0) for release `f485726`, accepted app `36ca738`; documentation HEAD at upload `9815cd6`. Deployment ID `dpl_45eURazDJvi9CKyuCMVWRYKzkW23`, Production / READY. **Live canonical URL: https://phron-eight.vercel.app**. Unique URL https://phron-dr59yyli6-tts-1e31.vercel.app. All 103 upload files match candidate inputs, source hashes 5/5 PASS; env/docs/scratch excluded. Six required Production names verified without revealing values. Supabase Site URL and exact callback match. No paid upgrade or remote finance/schema changes.
+
+Anonymous root HTTP200, health HTTP200 / exact `{"status":"ok"}` / `no-store`, smoke exit 0. Hosted production build compilation/typecheck PASS. [Executed evidence](../evidence/PH27/PRODUCTION_RESULT.md). Resolve final documentation HEAD from git. User scratch remains untouched.
+
+Next one action: QA starts PH28 live smoke using canonical URL → Continue with Google → Onboarding/Home under approved synthetic accounts; verify save/refresh, canonical values and ordinary A/B isolation, then remaining deployment checklist and actual phone proof. Do not infer G6 or provider quota/retention success from these shallow smoke checks. G0B/D25/G6 remain pending; no pilot launch. Prior Preview key retention was operator-reported but not visible in final list; recheck before future Preview uploads. Keep the reviewed forward-repair policy, never destructively reverse migrations or automatically promote the old slice as a compatible rollback.
+
+---
 # PH27 authorized Production deployment preflight — HOLD
 
 Tejas explicitly authorizes deploying release f485726 to tts-1e31/phron. Source hashes and build-input equality PASS; actual Supabase Production Site URL/callback match phron-eight.vercel.app. Missing runtime name: NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY is Preview-only; Production ANON_KEY is not read by this release. No code change, deployment, secret reveal or remote write performed. [Evidence](../evidence/PH27/PRODUCTION_PREFLIGHT.md). Next one action: Tejas privately configures the required name for Production. Then verify scope and execute under the existing deployment authorization. PH27 remains active; PH28/G6 not complete. Scratch untouched.

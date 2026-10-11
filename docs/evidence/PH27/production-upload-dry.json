@@ -1,0 +1,776 @@
+{
+  "framework": {
+    "name": "Next.js",
+    "slug": "nextjs"
+  },
+  "basePath": "W:\\AI Product Sprint\\Phron",
+  "fileCount": 103,
+  "totalSize": 634944,
+  "ignoredCount": 35,
+  "ignored": [
+    ".env.example",
+    ".env.local",
+    ".git",
+    ".gitattributes",
+    ".github",
+    ".gitignore",
+    ".next",
+    ".nvmrc",
+    ".swc",
+    ".vercel",
+    ".vercelignore",
+    "AGENTS.md",
+    "New Text Document.txt",
+    "PHRON_PRD_v1.2.1_FROZEN.txt",
+    "Phron Master discussion.txt",
+    "README.md",
+    "coverage",
+    "docs",
+    "eslint.config.mjs",
+    "jest.config.mjs",
+    "jest.domain.config.mjs",
+    "next-env.d.ts",
+    "node_modules",
+    "playwright-report",
+    "playwright.config.ts",
+    "scripts\\domain-coverage.mjs",
+    "scripts\\g3-verification.mjs",
+    "scripts\\preview-smoke.mjs",
+    "scripts\\tests",
+    "scripts\\verify-preview-origin.mjs",
+    "scripts\\verify-sources.mjs",
+    "supabase",
+    "test-results",
+    "tests",
+    "tsconfig.tsbuildinfo"
+  ],
+  "directories": [
+    {
+      "path": "package-lock.json",
+      "fileCount": 1,
+      "size": 345176
+    },
+    {
+      "path": "src",
+      "fileCount": 94,
+      "size": 284362
+    },
+    {
+      "path": "scripts",
+      "fileCount": 2,
+      "size": 2058
+    },
+    {
+      "path": "package.json",
+      "fileCount": 1,
+      "size": 1633
+    },
+    {
+      "path": "tsconfig.json",
+      "fileCount": 1,
+      "size": 722
+    },
+    {
+      "path": "next.config.ts",
+      "fileCount": 1,
+      "size": 653
+    },
+    {
+      "path": "vercel.json",
+      "fileCount": 1,
+      "size": 281
+    },
+    {
+      "path": ".npmrc",
+      "fileCount": 1,
+      "size": 59
+    },
+    {
+      "path": "public",
+      "fileCount": 1,
+      "size": 0
+    }
+  ],
+  "largestFiles": [
+    {
+      "path": "package-lock.json",
+      "size": 345176,
+      "mode": 33206,
+      "sha": "8ce9dfb1e81ff25855e7504bf98e00c089578ab8"
+    },
+    {
+      "path": "src/components/home/Home.tsx",
+      "size": 27730,
+      "mode": 33206,
+      "sha": "597eb47856ed7d8ca9bc3120e3b85755d58dec6d"
+    },
+    {
+      "path": "src/styles/home.css",
+      "size": 20217,
+      "mode": 33206,
+      "sha": "4e0c9e4f005c1d5c7c266865cc7ca66680c1b919"
+    },
+    {
+      "path": "src/app/api/finance/ingest/route.ts",
+      "size": 15239,
+      "mode": 33206,
+      "sha": "bb25089b9cfe11e3e1110db11db641945c00752c"
+    },
+    {
+      "path": "src/styles/surfaces.css",
+      "size": 11586,
+      "mode": 33206,
+      "sha": "4791c239e26e88c5c52212c39eac07ec1b603f4f"
+    },
+    {
+      "path": "src/components/surfaces/Manage.tsx",
+      "size": 11260,
+      "mode": 33206,
+      "sha": "981191735bbec98f75e810f68297cac2bad61c68"
+    },
+    {
+      "path": "src/components/home/CardLedger.tsx",
+      "size": 8523,
+      "mode": 33206,
+      "sha": "eabae7e086fe37d441b49afe59a3aed45b841716"
+    },
+    {
+      "path": "src/domain/card.ts",
+      "size": 8104,
+      "mode": 33206,
+      "sha": "7b5fcbdc5ce66d6a130f20fca70b913c183f998a"
+    },
+    {
+      "path": "src/components/surfaces/HomeDetails.tsx",
+      "size": 8097,
+      "mode": 33206,
+      "sha": "193fb681d84e695f175888031b4072226bd3db14"
+    },
+    {
+      "path": "src/contracts/card.ts",
+      "size": 7309,
+      "mode": 33206,
+      "sha": "c192465dc2d1f077bd6f33fd649f5d4b3369c4a3"
+    }
+  ],
+  "files": [
+    {
+      "path": ".npmrc",
+      "size": 59,
+      "mode": 33206,
+      "sha": "c8a709ecbf599550c722546509583395a5ff142c"
+    },
+    {
+      "path": "next.config.ts",
+      "size": 653,
+      "mode": 33206,
+      "sha": "c2ce300946ed69af94fe2e4e2447c377e86388b3"
+    },
+    {
+      "path": "package-lock.json",
+      "size": 345176,
+      "mode": 33206,
+      "sha": "8ce9dfb1e81ff25855e7504bf98e00c089578ab8"
+    },
+    {
+      "path": "package.json",
+      "size": 1633,
+      "mode": 33206,
+      "sha": "3c62bb0cd1393bba4bf1ca5b4bf39355b329dc33"
+    },
+    {
+      "path": "public/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "scripts/next.mjs",
+      "size": 428,
+      "mode": 33206,
+      "sha": "6897c062b84967916167ae0c557c2a434d93d716"
+    },
+    {
+      "path": "scripts/vercel-build.mjs",
+      "size": 1630,
+      "mode": 33206,
+      "sha": "10b661e1c0783c6e82a8d362aa6a1909e1adbc5f"
+    },
+    {
+      "path": "src/app/api/account/route.ts",
+      "size": 72,
+      "mode": 33206,
+      "sha": "ccbaca8488b88ce695b7134a1bbe381f1fe2ead3"
+    },
+    {
+      "path": "src/app/api/auth/google/route.ts",
+      "size": 100,
+      "mode": 33206,
+      "sha": "85bb0bdcd90ad55f6514b98369f115c8b4c13f08"
+    },
+    {
+      "path": "src/app/api/auth/logout/route.ts",
+      "size": 95,
+      "mode": 33206,
+      "sha": "4a0f2f2c086f56cd18b085041fea3c8070941485"
+    },
+    {
+      "path": "src/app/api/finance/card-lifecycle/route.ts",
+      "size": 100,
+      "mode": 33206,
+      "sha": "385376b1cf635c9ebf5f673c306e8c8610becd97"
+    },
+    {
+      "path": "src/app/api/finance/card-payment/route.ts",
+      "size": 102,
+      "mode": 33206,
+      "sha": "81ea7f29032e60a9e195704c4382816d89c5c43b"
+    },
+    {
+      "path": "src/app/api/finance/card-records/route.ts",
+      "size": 97,
+      "mode": 33206,
+      "sha": "0d81a6dec180c6ac8587f335a38996c68fd37623"
+    },
+    {
+      "path": "src/app/api/finance/ingest/confirm-category/route.ts",
+      "size": 4451,
+      "mode": 33206,
+      "sha": "5994c0086c9ea84c22c971ba4712b45c25319174"
+    },
+    {
+      "path": "src/app/api/finance/ingest/route.ts",
+      "size": 15239,
+      "mode": 33206,
+      "sha": "bb25089b9cfe11e3e1110db11db641945c00752c"
+    },
+    {
+      "path": "src/app/api/finance/ingest/swap/route.ts",
+      "size": 2883,
+      "mode": 33206,
+      "sha": "147e04bc5b7ea896d3f2c9a67a0dd6baca77829b"
+    },
+    {
+      "path": "src/app/api/finance/obligation-payment/route.ts",
+      "size": 66,
+      "mode": 33206,
+      "sha": "d8da31569fa21d11f885f225c0a263714369f4e0"
+    },
+    {
+      "path": "src/app/api/finance/obligation-records/route.ts",
+      "size": 545,
+      "mode": 33206,
+      "sha": "fa604bfb7e7bcfce6fbec8445bc174a6609172ae"
+    },
+    {
+      "path": "src/app/api/finance/reconciliation-preview/route.ts",
+      "size": 1233,
+      "mode": 33206,
+      "sha": "fde002627e23607d3d17d2f8b5c03bc0a8438d42"
+    },
+    {
+      "path": "src/app/api/finance/recovery-preview/route.ts",
+      "size": 1559,
+      "mode": 33206,
+      "sha": "8f3a8be46072aa10bd40cbe4b3bb72241a60a563"
+    },
+    {
+      "path": "src/app/api/finance/spend/route.ts",
+      "size": 100,
+      "mode": 33206,
+      "sha": "6c9b4af09f8f7e88eeb5872696c2fb47e0da8b74"
+    },
+    {
+      "path": "src/app/api/finance/state/route.ts",
+      "size": 100,
+      "mode": 33206,
+      "sha": "d4702a096edc415d0a9b9f2c070f53d9e773a1b0"
+    },
+    {
+      "path": "src/app/api/finance/surfaces/route.ts",
+      "size": 87,
+      "mode": 33206,
+      "sha": "7dc76db41ff43cf8b41dda7ab1ee6b3829011040"
+    },
+    {
+      "path": "src/app/api/health/route.ts",
+      "size": 325,
+      "mode": 33206,
+      "sha": "e24cc6370dbf213ff506d8383b5dee82cc92581d"
+    },
+    {
+      "path": "src/app/api/onboarding/route.ts",
+      "size": 99,
+      "mode": 33206,
+      "sha": "3120930c479bfa9658cdaf5224c2e85eae61e63e"
+    },
+    {
+      "path": "src/app/auth/callback/route.ts",
+      "size": 100,
+      "mode": 33206,
+      "sha": "aa3951bd7313e3a4e57a2fb0652ed646f0cd4a22"
+    },
+    {
+      "path": "src/app/globals.css",
+      "size": 1119,
+      "mode": 33206,
+      "sha": "bf6dd14d207f72a1bd855904c8df1e4d8cea517a"
+    },
+    {
+      "path": "src/app/home/page.tsx",
+      "size": 657,
+      "mode": 33206,
+      "sha": "d9fda207c570d8fc35f34995020856e38bfb8b12"
+    },
+    {
+      "path": "src/app/icon.svg",
+      "size": 202,
+      "mode": 33206,
+      "sha": "9f21c6b9476110182e1ff1ed43009853a29c1495"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "size": 506,
+      "mode": 33206,
+      "sha": "774b251936ca24374cee922dda651997a831db32"
+    },
+    {
+      "path": "src/app/manage/page.tsx",
+      "size": 627,
+      "mode": 33206,
+      "sha": "0f51295a544941b33eb891bcaea8db082f8e2b53"
+    },
+    {
+      "path": "src/app/onboarding/page.tsx",
+      "size": 660,
+      "mode": 33206,
+      "sha": "7fdcfbf726291362c6e66ac3e8d24b84c63ae215"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "size": 513,
+      "mode": 33206,
+      "sha": "1958add87c7d393a52b099fea688b834c2a51617"
+    },
+    {
+      "path": "src/app/sign-in/page.tsx",
+      "size": 956,
+      "mode": 33206,
+      "sha": "01ee4283d6f7d94cec560b86ab9f60b38f9e375b"
+    },
+    {
+      "path": "src/app/visualize/page.tsx",
+      "size": 636,
+      "mode": 33206,
+      "sha": "33a115da70e4c5a9e942e87d7b2c7d2b1dd4ff62"
+    },
+    {
+      "path": "src/client/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/client/chart-presentation.ts",
+      "size": 684,
+      "mode": 33206,
+      "sha": "652fd36f813fd8e8bce25762ca4beae7a7f5365c"
+    },
+    {
+      "path": "src/client/home-presentation.ts",
+      "size": 2226,
+      "mode": 33206,
+      "sha": "98efeac53234bff0b97a36cdf7561884dd25ceae"
+    },
+    {
+      "path": "src/client/home-session.ts",
+      "size": 6400,
+      "mode": 33206,
+      "sha": "26f9e7bf93dedde303808a97d77e49ea32f07a26"
+    },
+    {
+      "path": "src/client/on-device-dictation.ts",
+      "size": 2884,
+      "mode": 33206,
+      "sha": "5c585b3f6ec05e9017bff5922750865cad5b27fd"
+    },
+    {
+      "path": "src/client/surface-session.ts",
+      "size": 4037,
+      "mode": 33206,
+      "sha": "1120a8c04924a9b6ab0118345f1edf266adcdc5e"
+    },
+    {
+      "path": "src/components/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/components/auth/money-input.ts",
+      "size": 742,
+      "mode": 33206,
+      "sha": "12e76b1b2aec3276b48c5dacab677413cf9f8b17"
+    },
+    {
+      "path": "src/components/auth/Onboarding.tsx",
+      "size": 6734,
+      "mode": 33206,
+      "sha": "985de0c6deb93e52b0570e0f498433f6bc4027b4"
+    },
+    {
+      "path": "src/components/home/CardLedger.tsx",
+      "size": 8523,
+      "mode": 33206,
+      "sha": "eabae7e086fe37d441b49afe59a3aed45b841716"
+    },
+    {
+      "path": "src/components/home/Home.tsx",
+      "size": 27730,
+      "mode": 33206,
+      "sha": "597eb47856ed7d8ca9bc3120e3b85755d58dec6d"
+    },
+    {
+      "path": "src/components/surfaces/BucketDeletion.tsx",
+      "size": 2081,
+      "mode": 33206,
+      "sha": "2bf359fe05990721270e8c5192811e81a4117c70"
+    },
+    {
+      "path": "src/components/surfaces/HomeDetails.tsx",
+      "size": 8097,
+      "mode": 33206,
+      "sha": "193fb681d84e695f175888031b4072226bd3db14"
+    },
+    {
+      "path": "src/components/surfaces/Manage.tsx",
+      "size": 11260,
+      "mode": 33206,
+      "sha": "981191735bbec98f75e810f68297cac2bad61c68"
+    },
+    {
+      "path": "src/components/surfaces/ObligationPayments.tsx",
+      "size": 2924,
+      "mode": 33206,
+      "sha": "5b9f06870bbacd599bcb25b10ef8312ac54a712c"
+    },
+    {
+      "path": "src/components/surfaces/RecoveryCard.tsx",
+      "size": 6006,
+      "mode": 33206,
+      "sha": "50e216bcc79887d4b4d7ad2ce4cd4c53685c3605"
+    },
+    {
+      "path": "src/components/surfaces/shared.tsx",
+      "size": 2987,
+      "mode": 33206,
+      "sha": "dd06039764e131bfbaa7b9d078f0d6ff9b5b184b"
+    },
+    {
+      "path": "src/components/surfaces/Visualize.tsx",
+      "size": 4149,
+      "mode": 33206,
+      "sha": "11e0d161f1003331be770713f5a5e4535f8ee1e9"
+    },
+    {
+      "path": "src/contracts/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/contracts/boundaries.ts",
+      "size": 2215,
+      "mode": 33206,
+      "sha": "d15cdaf59783c488f5f809b42319f8282baf5296"
+    },
+    {
+      "path": "src/contracts/card.ts",
+      "size": 7309,
+      "mode": 33206,
+      "sha": "c192465dc2d1f077bd6f33fd649f5d4b3369c4a3"
+    },
+    {
+      "path": "src/contracts/money.ts",
+      "size": 876,
+      "mode": 33206,
+      "sha": "97f2b02e009a6a294329e626be46275ccc70d571"
+    },
+    {
+      "path": "src/contracts/obligation.ts",
+      "size": 1012,
+      "mode": 33206,
+      "sha": "6fa4e1488432daa0ba5a6ab9d3ecc8849d7e9c89"
+    },
+    {
+      "path": "src/contracts/snapshot.ts",
+      "size": 4175,
+      "mode": 33206,
+      "sha": "b61c55aac89df531bed49e4d57083170ac740a27"
+    },
+    {
+      "path": "src/contracts/surfaces.ts",
+      "size": 3616,
+      "mode": 33206,
+      "sha": "3b3f929cdca617884944b0030a049db39e7fddae"
+    },
+    {
+      "path": "src/domain/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/domain/card.ts",
+      "size": 8104,
+      "mode": 33206,
+      "sha": "7b5fcbdc5ce66d6a130f20fca70b913c183f998a"
+    },
+    {
+      "path": "src/domain/CONSTRAINTS.md",
+      "size": 2005,
+      "mode": 33206,
+      "sha": "d5373c71cbc8493428059b726954f45bfba5cea4"
+    },
+    {
+      "path": "src/domain/core.ts",
+      "size": 3758,
+      "mode": 33206,
+      "sha": "8aab9e6202bd82432b6b56d681da6765f7336f7d"
+    },
+    {
+      "path": "src/domain/cycle.ts",
+      "size": 1284,
+      "mode": 33206,
+      "sha": "571f547f495646bd7d5cb907c38b11b22fdd510b"
+    },
+    {
+      "path": "src/domain/dates.ts",
+      "size": 2642,
+      "mode": 33206,
+      "sha": "cdfe8ef9e0724bd894bae5f0a5a8fd84dbe5a38a"
+    },
+    {
+      "path": "src/domain/distress.ts",
+      "size": 791,
+      "mode": 33206,
+      "sha": "d7eaf329d40b40cc547f4e297be8b539ad8979ae"
+    },
+    {
+      "path": "src/domain/firefight.ts",
+      "size": 1123,
+      "mode": 33206,
+      "sha": "c948c222ae7f1a4612ea6d8c60c7ed1bb6f89a8b"
+    },
+    {
+      "path": "src/domain/money.ts",
+      "size": 1283,
+      "mode": 33206,
+      "sha": "f90ec2d6f5f8ac1bc393c2255e1b504895d6fe4f"
+    },
+    {
+      "path": "src/domain/obligation.ts",
+      "size": 553,
+      "mode": 33206,
+      "sha": "8773e1d7d4faa976551ca187f6a1ce912903b32e"
+    },
+    {
+      "path": "src/domain/onboarding.ts",
+      "size": 1333,
+      "mode": 33206,
+      "sha": "ac02e4b55a99c0f587f5cd2565ec638400aa9040"
+    },
+    {
+      "path": "src/domain/PH15_HANDOFF.md",
+      "size": 6805,
+      "mode": 33206,
+      "sha": "e002b80b746720d1576ca7cbed6e11a5474c76e6"
+    },
+    {
+      "path": "src/domain/README.md",
+      "size": 5360,
+      "mode": 33206,
+      "sha": "160ee58239b9bd19d0c2d6c2dcc80c04fe5f16a1"
+    },
+    {
+      "path": "src/domain/recovery.ts",
+      "size": 5840,
+      "mode": 33206,
+      "sha": "66403cb2a8019abd23d633066f0e50cfb67ad71a"
+    },
+    {
+      "path": "src/lib/supabase/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/lib/supabase/request.ts",
+      "size": 2161,
+      "mode": 33206,
+      "sha": "ce8980ab32fe9071fd889c8e904a24a8fccf3f96"
+    },
+    {
+      "path": "src/lib/supabase/server.ts",
+      "size": 788,
+      "mode": 33206,
+      "sha": "85e74f1b05a66158d1a89ee3431cfa767ae814a1"
+    },
+    {
+      "path": "src/proxy.ts",
+      "size": 1925,
+      "mode": 33206,
+      "sha": "d6b99c048bffb788059111280e98b57d4f964f06"
+    },
+    {
+      "path": "src/server/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/server/auth/delete-account.ts",
+      "size": 1383,
+      "mode": 33206,
+      "sha": "6d17f755546d372ce3647c0fd04d5e98d4ef2748"
+    },
+    {
+      "path": "src/server/auth/handlers.ts",
+      "size": 6200,
+      "mode": 33206,
+      "sha": "5b73d2a3ca83d9140cdc63b89d5c90fafc25de8e"
+    },
+    {
+      "path": "src/server/auth/policy.ts",
+      "size": 614,
+      "mode": 33206,
+      "sha": "9c101c4b5e39eff7c57b97ae05a76538c5b18c22"
+    },
+    {
+      "path": "src/server/finance/ai-output.ts",
+      "size": 997,
+      "mode": 33206,
+      "sha": "e4143a469af5ed39d794d5b3cffe2cf3e8404546"
+    },
+    {
+      "path": "src/server/finance/capture-rate-limit.ts",
+      "size": 1189,
+      "mode": 33206,
+      "sha": "caa3e023cbfb08af3bec64642f131aff7ffee46d"
+    },
+    {
+      "path": "src/server/finance/card.ts",
+      "size": 103,
+      "mode": 33206,
+      "sha": "ce98c37e1eeba80fa2510470b4a80e404cbc78f7"
+    },
+    {
+      "path": "src/server/finance/coach.ts",
+      "size": 2786,
+      "mode": 33206,
+      "sha": "ef4f03959c761474ee662f860c26448f5f6d9293"
+    },
+    {
+      "path": "src/server/finance/extraction.ts",
+      "size": 6562,
+      "mode": 33206,
+      "sha": "95c6f70d9d73b4dfcd004e72cd75ce7084e33341"
+    },
+    {
+      "path": "src/server/finance/ingestion-input.ts",
+      "size": 734,
+      "mode": 33206,
+      "sha": "3620d0de4fa56acffeec50a7264b4af27a3f3cee"
+    },
+    {
+      "path": "src/server/finance/parse.ts",
+      "size": 3910,
+      "mode": 33206,
+      "sha": "25cb9050db73a7cb090ad01d418cd92e16ebd68e"
+    },
+    {
+      "path": "src/server/finance/privacy-firewall.ts",
+      "size": 4134,
+      "mode": 33206,
+      "sha": "768057f31da3a55533d2c3dbe600e2403c96e04e"
+    },
+    {
+      "path": "src/server/finance/providers.ts",
+      "size": 7104,
+      "mode": 33206,
+      "sha": "2ffa9b204b5840f648dc89af0f86c106d77fc372"
+    },
+    {
+      "path": "src/server/finance/types.ts",
+      "size": 1322,
+      "mode": 33206,
+      "sha": "0dbd9aeb80180c78fd2cee6932497b0fda535273"
+    },
+    {
+      "path": "src/server/surfaces/handlers.ts",
+      "size": 2140,
+      "mode": 33206,
+      "sha": "97a18afc64a95b48900f49cb6494768faf2009c6"
+    },
+    {
+      "path": "src/server/surfaces/parse.ts",
+      "size": 6791,
+      "mode": 33206,
+      "sha": "62ae4f0db22afb1fc03bceb82d23d3d35178b5e0"
+    },
+    {
+      "path": "src/server/surfaces/projection.ts",
+      "size": 4594,
+      "mode": 33206,
+      "sha": "15a4a5ad7375a1929b6e1d4798ff194c80a21757"
+    },
+    {
+      "path": "src/server/surfaces/reconciliation-preview.ts",
+      "size": 460,
+      "mode": 33206,
+      "sha": "dece60adb507c906abf8bffffb45a9a61794781c"
+    },
+    {
+      "path": "src/server/surfaces/recovery-preview.ts",
+      "size": 3041,
+      "mode": 33206,
+      "sha": "4ed45d522fa08882377c05ba07c4edc0a05c1455"
+    },
+    {
+      "path": "src/styles/.gitkeep",
+      "size": 0,
+      "mode": 33206,
+      "sha": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    },
+    {
+      "path": "src/styles/auth.css",
+      "size": 2844,
+      "mode": 33206,
+      "sha": "f78bd87d98e028f453862750263aa959bc766eb0"
+    },
+    {
+      "path": "src/styles/home.css",
+      "size": 20217,
+      "mode": 33206,
+      "sha": "4e0c9e4f005c1d5c7c266865cc7ca66680c1b919"
+    },
+    {
+      "path": "src/styles/surfaces.css",
+      "size": 11586,
+      "mode": 33206,
+      "sha": "4791c239e26e88c5c52212c39eac07ec1b603f4f"
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 722,
+      "mode": 33206,
+      "sha": "11d9f9a549e9148849f12f1cec9877279e170135"
+    },
+    {
+      "path": "vercel.json",
+      "size": 281,
+      "mode": 33206,
+      "sha": "88445f76fc07631afe9c6e1a3934bb5530561982"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+Vercel CLI 62.4.0 (Node.js 24.21.0)
+Fetching deployment "phron-dr59yyli6-tts-1e31.vercel.app" in tts-1e31
+> Fetched deployment "phron-dr59yyli6-tts-1e31.vercel.app" in tts-1e31 [537ms]
+
+  General
+
+    id		dpl_45eURazDJvi9CKyuCMVWRYKzkW23
+    name	phron
+    target	production
+    status	● Ready
+    url		https://phron-dr59yyli6-tts-1e31.vercel.app
+    created	Sun Oct 11 2026 12:44:51 GMT+0530 (India Standard Time) [1m ago]
+
+
+  Build Machine
+
+    requested build machine basic
+    actual assigned cores   2 vCPU (actual assignment)
+    memory                  8192 MiB
+    selection type          fixed
+    selection source        plan-default
+
+
+  Duration
+
+    build duration	31s
+    post-build duration	unavailable
+    billable duration	unavailable
+    CPU Minutes Usage	unavailable
+
+
+  Aliases
+
+    ╶ https://phron-eight.vercel.app
+    ╶ https://phron-tts-1e31.vercel.app
+
+
+  Builds
+
+    ┌ .        [0ms]
+    ├── λ index (822.52KB) [iad1]
+    ├── λ _global-error (822.52KB) [iad1]
+    ├── λ _global-error.rsc (822.52KB) [iad1]
+    ├── λ _global-error.segments/__PAGE__.segment.rsc (822.52KB) [iad1]
+    ├── λ _global-error.segments/_full.segment.rsc (822.52KB) [iad1]
+    └── 56 output items hidden

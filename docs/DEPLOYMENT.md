@@ -1,3 +1,12 @@
+# PH27 Production deployment COMPLETE — 2026-10-11 IST
+
+Release `f4857268a7bc2d31c7f006ae8c098ce63e33bf26` (accepted base `36ca738`) deployed with explicit Tejas authorization. Deployment `dpl_45eURazDJvi9CKyuCMVWRYKzkW23`, Production / READY, command exit 0. Canonical URL **https://phron-eight.vercel.app**; unique URL https://phron-dr59yyli6-tts-1e31.vercel.app. CLI inspect confirms both phron-eight.vercel.app and phron-tts-1e31.vercel.app aliases. Source hashes and 103-file upload manifest pass; exact runtime environment names and Supabase Production callback verified. No secrets revealed, remote SQL replay or paid upgrade.
+
+Anonymous canonical `/` HTTP200 and `/api/health` HTTP200, exact `{"status":"ok"}`, `cache-control: no-store`; assertion exit 0. Hosted build compiled and typechecked successfully with Node24.21.0/npm11.19.0/Next16.3.8. [Complete deployment and preflight evidence](evidence/PH27/PRODUCTION_RESULT.md). Earlier HOLD records below are historical and superseded by the corrected Production name and executed upload.
+
+PH27 COMPLETE; next PH28 / QA live smoke. G6 remains pending for authenticated saved-state journeys, tenant isolation, synthetic deletion and real-phone proof. G0B/D25 provider/account verification is not closed by deployment success. Final dashboard showed the publishable name for Production, while Preview retention was operator-reported only; verify Preview settings before any future Preview redeployment. Continue with the existing PH28 checklist and forward-repair policy below. No full production-ready or pilot launch claim.
+
+---
 # PH27 Production deployment authorized — environment correction pending
 
 2026-10-11 IST. Tejas explicitly authorized deploying release f485726 to tts-1e31/phron. Read-only dashboard verification confirms Production Auth origin/callback, but NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY is Preview-only. Production has NEXT_PUBLIC_SUPABASE_ANON_KEY, which this release does not read. Upload held before execution; no deployment ID or live smoke claimed. [Preflight](evidence/PH27/PRODUCTION_PREFLIGHT.md). Next one action: privately configure the exact publishable-key name for Production, retaining Preview. Existing deployment authorization remains valid.
