@@ -1,0 +1,11 @@
+
+> phron@0.1.0 test:unit
+> jest --config jest.config.mjs --selectProjects unit --runInBand --runTestsByPath tests/unit/server/ph28-provider-wire.test.ts tests/unit/server/provider-pipeline.test.ts
+
+Running one project: unit
+
+Test Suites: 2 passed, 2 total
+Tests:       20 passed, 20 total
+Snapshots:   0 total
+Time:        4.432 s
+Ran all test suites within paths "tests/unit/server/ph28-provider-wire.test.ts", "tests/unit/server/provider-pipeline.test.ts".

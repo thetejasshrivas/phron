@@ -1,0 +1,55 @@
+{
+  "source": "same deployed adapter transpiled with pinned TypeScript; local private keys; no state writes",
+  "reports": [
+    {
+      "provider": "gemini",
+      "check": "available_model_list",
+      "http_status": 200,
+      "target_listed": true,
+      "generation_method_supported": true
+    },
+    {
+      "provider": "gemini",
+      "check": "actual_adapter_synthetic_extraction",
+      "kind": "manual_fallback",
+      "reason": "providers_failed",
+      "parsed_amount_exact": false,
+      "wire": [],
+      "errors": [
+        {
+          "http_status": 503,
+          "content_type": "application/json; charset=UTF-8",
+          "error_object": true,
+          "error_message_present": true,
+          "message_redacted": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+          "reason": "PROVIDER_HTTP",
+          "not_found_for_api_version": false,
+          "unsupported_generate_content": false,
+          "model_access_denied": false
+        }
+      ]
+    },
+    {
+      "provider": "groq",
+      "check": "available_model_list",
+      "http_status": 200,
+      "target_listed": true,
+      "approved_alternative_listed": false
+    },
+    {
+      "provider": "groq",
+      "check": "actual_adapter_synthetic_extraction",
+      "kind": "extracted",
+      "parsed_amount_exact": true,
+      "wire": [
+        {
+          "http_status": 200,
+          "finish_reason": "stop",
+          "text_present": true,
+          "output_tokens": 73
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

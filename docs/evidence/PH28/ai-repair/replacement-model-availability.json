@@ -1,0 +1,38 @@
+[
+  {
+    "provider": "gemini",
+    "http_status": 200,
+    "candidates": [
+      {
+        "id": "gemini-1.5-flash",
+        "listed": false
+      },
+      {
+        "id": "gemini-3.5-flash-lite",
+        "listed": true
+      },
+      {
+        "id": "gemini-3.8-flash",
+        "listed": true
+      }
+    ]
+  },
+  {
+    "provider": "groq",
+    "http_status": 200,
+    "candidates": [
+      {
+        "id": "llama-3.1-8b-instant",
+        "listed": false
+      },
+      {
+        "id": "openai/gpt-oss-20b",
+        "listed": false
+      },
+      {
+        "id": "openai/gpt-oss-120b",
+        "listed": false
+      }
+    ]
+  }
+]

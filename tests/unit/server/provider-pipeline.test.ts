@@ -16,7 +16,7 @@ describe('PH-19 provider extraction with mocked transport', () => {
     expect(result).toMatchObject({ kind: 'extracted', provider: 'gemini', transactions: [{ amountPaise: '500' }] });
     expect(fetcher).toHaveBeenCalledTimes(1);
     const [url, init] = fetcher.mock.calls[0]!;
-    expect(String(url)).toContain('/models/gemini-2.5-flash:generateContent');
+    expect(String(url)).toContain('/models/gemini-3.8-flash:generateContent');
     expect(JSON.parse(String(init?.body))).toMatchObject({ generationConfig: { temperature: 0.1, maxOutputTokens: 300, responseMimeType: 'application/json' } });
     const body = JSON.parse(String(init?.body));
     expect(Object.keys(body).sort()).toEqual(['contents', 'generationConfig'].sort());
@@ -36,7 +36,7 @@ describe('PH-19 provider extraction with mocked transport', () => {
     const options = { groqApiKey: 'test-only', fetcher, monthly_net_income: 'SENTINEL_INCOME', current_liquid_balance: 'SENTINEL_CASH', total_debt: 'SENTINEL_DEBT', email: 'SENTINEL_EMAIL', user_uuid: 'SENTINEL_UUID' };
     await extractWithFallback('Coffee 1.50 cash', options);
     const body = JSON.parse(String(fetcher.mock.calls[0]![1]?.body));
-    expect(Object.keys(body).sort()).toEqual(['max_tokens', 'messages', 'model', 'response_format', 'temperature'].sort());
+    expect(Object.keys(body).sort()).toEqual(['max_tokens', 'messages', 'model', 'reasoning_effort', 'response_format', 'temperature'].sort());
     expect(JSON.stringify(body)).not.toMatch(/SENTINEL_|monthly_net_income|current_liquid_balance|total_debt|user_uuid|email/i);
     expect(body.messages).toHaveLength(2);
     expect(body.messages[1].content).toContain('Coffee 1.50 cash');

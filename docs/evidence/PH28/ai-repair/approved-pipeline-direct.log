@@ -1,0 +1,2 @@
+{"event":"provider_failure","provider":"gemini","httpStatus":503,"reason":"PROVIDER_HTTP"}
+[{"check":"approved_real_pipeline","kind":"extracted","provider":"groq","parsed_amount_exact":true}]

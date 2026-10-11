@@ -1,0 +1,50 @@
+{
+  "source": "same deployed adapter transpiled with pinned TypeScript; local private keys; no state writes",
+  "reports": [
+    {
+      "provider": "gemini",
+      "check": "available_model_list",
+      "http_status": 200,
+      "target_listed": true,
+      "generation_method_supported": true
+    },
+    {
+      "provider": "gemini",
+      "check": "actual_adapter_synthetic_extraction",
+      "kind": "extracted",
+      "parsed_amount_exact": true,
+      "wire": [
+        {
+          "http_status": 200,
+          "finish_reason": "STOP",
+          "text_present": true,
+          "output_tokens": 46,
+          "thinking_tokens": 202
+        }
+      ],
+      "errors": []
+    },
+    {
+      "provider": "groq",
+      "check": "available_model_list",
+      "http_status": 200,
+      "target_listed": false,
+      "approved_alternative_listed": false
+    },
+    {
+      "provider": "groq",
+      "check": "actual_adapter_synthetic_extraction",
+      "kind": "extracted",
+      "parsed_amount_exact": true,
+      "wire": [
+        {
+          "http_status": 200,
+          "finish_reason": "stop",
+          "text_present": true,
+          "output_tokens": 299
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

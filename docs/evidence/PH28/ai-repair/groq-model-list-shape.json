@@ -1,0 +1,9 @@
+{
+  "http_status": 200,
+  "valid_data_array": true,
+  "model_count": 11,
+  "known_catalog_models": [
+    "openai/gpt-oss-20b",
+    "openai/gpt-oss-120b"
+  ]
+}

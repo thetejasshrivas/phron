@@ -1,0 +1,49 @@
+{
+  "source": "same deployed adapter transpiled with pinned TypeScript; local private keys; no state writes",
+  "reports": [
+    {
+      "provider": "gemini",
+      "check": "available_model_list",
+      "http_status": 200,
+      "target_listed": true
+    },
+    {
+      "provider": "gemini",
+      "check": "actual_adapter_synthetic_extraction",
+      "kind": "manual_fallback",
+      "reason": "providers_failed",
+      "parsed_amount_exact": false,
+      "errors": [
+        {
+          "http_status": 404,
+          "reason": "PROVIDER_HTTP",
+          "not_found_for_api_version": false,
+          "unsupported_generate_content": false,
+          "model_access_denied": false
+        }
+      ]
+    },
+    {
+      "provider": "groq",
+      "check": "available_model_list",
+      "http_status": 200,
+      "target_listed": false
+    },
+    {
+      "provider": "groq",
+      "check": "actual_adapter_synthetic_extraction",
+      "kind": "manual_fallback",
+      "reason": "providers_failed",
+      "parsed_amount_exact": false,
+      "errors": [
+        {
+          "http_status": 404,
+          "reason": "MODEL_UNAVAILABLE",
+          "not_found_for_api_version": false,
+          "unsupported_generate_content": false,
+          "model_access_denied": true
+        }
+      ]
+    }
+  ]
+}

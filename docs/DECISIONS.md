@@ -589,3 +589,13 @@ PH26 release verification also corrects a date-dependent Platform test fixture i
 ## D25 / PH28 runtime eligibility evidence — 2026-10-11 IST
 
 OPEN, no new amendment inferred. Tejas reports Gemini2.5Flash free quota and Groq llama3.3 enabled/free, and refreshed both Production keys. Corrected schema at c4a69a3 now returns Gemini404 and Groq404 in actual Production, preserving the account/runtime discrepancy. Public sources and executed evidence: [PH28](evidence/PH28/ai-repair/RESULT.md). User permits the named2.5/1.5 and3.3/3.1alternatives only if verified supported/eligible; no substitute or paid plan was selected. Phone named journeys PASS by explicit operator report; G6 remains OPEN pending real extraction.
+
+## D25-PRIMARY-v1 — APPROVED
+
+Tejas explicitly approved the exact proposal on2026-10-11 IST. Replace primary with gemini-3.8-flash contingent on successful Free-account synthetic generation; retain temperature0.1/300tokens/4s, extraction-only privacy, strict validation and manual fallback, no paid tier or overflow. Exact text: [D25-PRIMARY-v1](amendments/D25-PRIMARY-v1.md). Groq remains separate OPEN.
+
+## D25-FALLBACK-v1 — APPROVED
+
+Tejas explicitly approved the exact proposal on2026-10-11 IST. Replace fallback with openai/gpt-oss-20b contingent on Free-account synthetic success, retaining Groq/temperature0.1/300tokens/4s, strict privacy/validation and manual fallback. No billing or paid overflow. Exact text: [D25-FALLBACK-v1](amendments/D25-FALLBACK-v1.md).
+
+D25 activation evidence: replacement-wire-results.json shows200/valid15000paise extraction for both approved models. Low reasoning implementation retains all approved numerical/privacy bounds; Groq low mode returns73tokens and complete valid JSON, approved pipeline subsequently extracts via real Groq fallback (approved-pipeline-direct-results.json). Primary high-demand503/timeout and one Groq JSON400 preserved; this is no availability guarantee. Production verification remains pending before G6 closure.

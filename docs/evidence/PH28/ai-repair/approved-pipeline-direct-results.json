@@ -1,0 +1,11 @@
+{
+  "source": "same deployed adapter transpiled with pinned TypeScript; local private keys; no state writes",
+  "reports": [
+    {
+      "check": "approved_real_pipeline",
+      "kind": "extracted",
+      "provider": "groq",
+      "parsed_amount_exact": true
+    }
+  ]
+}

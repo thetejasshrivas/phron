@@ -1,8 +1,8 @@
 import { parseExtraction, type ExtractedTransaction } from './extraction';
 import { hasSensitiveOutboundContext } from './privacy-firewall';
 
-const GEMINI_MODEL = 'gemini-2.5-flash';
-const GROQ_MODEL = 'llama-3.3-70b-versatile';
+const GEMINI_MODEL = 'gemini-3.8-flash';
+const GROQ_MODEL = 'openai/gpt-oss-20b';
 const PROVIDER_TIMEOUT_MS = 4_000;
 const MAX_RESPONSE_BYTES = 32_768;
 const categoryEnum = ['Groceries & Essentials', 'Dining Out & Social', 'Shopping & Personal', 'Transit & Commute', 'Entertainment & Subscriptions', 'Unallocated / Lent', 'Unknown'];
@@ -63,7 +63,7 @@ async function requestGemini(text: string, apiKey: string, temperature: number, 
     method: 'POST', cache: 'no-store', signal: AbortSignal.timeout(timeoutMs),
     headers: { 'content-type': 'application/json', 'x-goog-api-key': apiKey },
     body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: `${systemPrompt}\n${userPrompt(text)}` }] }],
-      generationConfig: { temperature, maxOutputTokens: 300, responseMimeType: 'application/json', responseSchema: extractionSchema } }),
+      generationConfig: { temperature, maxOutputTokens: 300, responseMimeType: 'application/json', responseSchema: extractionSchema, thinkingConfig: { thinkingLevel: 'LOW' } } }),
   });
   if (!response.ok) {await reportHttpFailure('gemini',response);if(response.status===429)throw new RateLimited();throw new TypeError('PROVIDER_HTTP');}
   const body = await boundedResponse(response) as { candidates?: Array<{ content?: { parts?: Array<{ text?: unknown }> } }> };
@@ -76,7 +76,7 @@ async function requestGroq(text: string, apiKey: string, fetcher: typeof fetch):
   const response = await fetcher('https://api.groq.com/openai/v1/chat/completions', {
     method: 'POST', cache: 'no-store', signal: AbortSignal.timeout(PROVIDER_TIMEOUT_MS),
     headers: { 'content-type': 'application/json', authorization: `Bearer ${apiKey}` },
-    body: JSON.stringify({ model: GROQ_MODEL, temperature: 0.1, max_tokens: 300,
+    body: JSON.stringify({ model: GROQ_MODEL, temperature: 0.1, max_tokens: 300, reasoning_effort: 'low',
       response_format: { type: 'json_object' }, messages: [
         { role: 'system', content: `${systemPrompt}\nJSON Schema: ${JSON.stringify(extractionSchema)}` },
         { role: 'user', content: userPrompt(text) },
