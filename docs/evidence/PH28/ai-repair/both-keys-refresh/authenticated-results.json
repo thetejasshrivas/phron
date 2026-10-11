@@ -1,0 +1,245 @@
+{
+  "origin": "https://phron-eight.vercel.app",
+  "release": "c4a69a391eea59542b18c2536950fc9c08df8f85",
+  "checks": [
+    {
+      "name": "ordinary SSR session opens Onboarding; consent save and persisted starter allocations",
+      "status": "PASS",
+      "elapsed_ms": 11645
+    },
+    {
+      "name": "User B ordinary onboarding",
+      "status": "PASS",
+      "elapsed_ms": 1312
+    },
+    {
+      "name": "manual spend UI drains bucket/STS; refresh persists; exact paise",
+      "status": "PASS",
+      "elapsed_ms": 6296
+    },
+    {
+      "name": "tracked card purchase reserve, partial payment and stable-ID replay",
+      "status": "PASS",
+      "elapsed_ms": 8397
+    },
+    {
+      "name": "User B denied User A rows and forged bucket mutation",
+      "status": "PASS",
+      "elapsed_ms": 7365
+    },
+    {
+      "name": "live configured provider extraction: bounded synthetic text only",
+      "status": "FAIL",
+      "error_type": "AssertionError",
+      "elapsed_ms": 3345
+    },
+    {
+      "name": "privacy-intercept fallback opens manual entry without losing capture",
+      "status": "PASS",
+      "elapsed_ms": 3069
+    },
+    {
+      "name": "Settings confirmation UI + caller account API purge; 23 tables; retained session denied",
+      "status": "PASS",
+      "elapsed_ms": 10643
+    },
+    {
+      "name": "User B caller deletion and complete cleanup",
+      "status": "PASS",
+      "elapsed_ms": 4982
+    }
+  ],
+  "network": [
+    {
+      "actor": "A",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 1194
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 851
+    },
+    {
+      "actor": "B",
+      "path": "/api/onboarding",
+      "method": "POST",
+      "status": 200,
+      "elapsed_ms": 1312
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 715
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 716
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 705
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 695
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 1114
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/card-lifecycle",
+      "method": "POST",
+      "status": 200,
+      "elapsed_ms": 1122
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 717
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/card-records",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 1149
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/card-payment",
+      "method": "POST",
+      "status": 200,
+      "elapsed_ms": 708
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 700
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/card-payment",
+      "method": "POST",
+      "status": 200,
+      "elapsed_ms": 1129
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 1057
+    },
+    {
+      "actor": "B",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 1062
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 714
+    },
+    {
+      "actor": "B",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 666
+    },
+    {
+      "actor": "B",
+      "path": "/api/finance/spend",
+      "method": "POST",
+      "status": 404,
+      "elapsed_ms": 1101
+    },
+    {
+      "actor": "B",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 679
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 1125
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/ingest",
+      "method": "POST",
+      "status": 200,
+      "elapsed_ms": 2217
+    },
+    {
+      "actor": "A",
+      "path": "/api/account",
+      "method": "DELETE",
+      "status": 200,
+      "elapsed_ms": 974
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 401,
+      "elapsed_ms": 262
+    },
+    {
+      "actor": "B",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 1287
+    },
+    {
+      "actor": "B",
+      "path": "/api/account",
+      "method": "DELETE",
+      "status": 200,
+      "elapsed_ms": 1306
+    },
+    {
+      "actor": "B",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 401,
+      "elapsed_ms": 263
+    }
+  ],
+  "auth": "Admin-created password sessions + supported SSR cookie adapter; Google exchange deferred to phone",
+  "trace": "sanitized step/status/timing log only; no raw cookies, passwords, IDs, request bodies or tokens persisted"
+}

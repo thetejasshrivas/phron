@@ -1,0 +1,6 @@
+{
+  "http_status": 200,
+  "kind": "manual_fallback",
+  "reason": "providers_failed",
+  "source": "real deployed adapters; synthetic isolated prompt"
+}

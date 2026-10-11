@@ -4,15 +4,15 @@
 
 Running one project: unit
 ---------------|---------|----------|---------|---------|-------------------
-File           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+File           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 ---------------|---------|----------|---------|---------|-------------------
-All files      |     100 |      100 |     100 |     100 |                   
- boundaries.ts |     100 |      100 |     100 |     100 |                   
- card.ts       |     100 |      100 |     100 |     100 |                   
- money.ts      |     100 |      100 |     100 |     100 |                   
- obligation.ts |     100 |      100 |     100 |     100 |                   
- snapshot.ts   |     100 |      100 |     100 |     100 |                   
- surfaces.ts   |     100 |      100 |     100 |     100 |                   
+All files      |     100 |      100 |     100 |     100 |
+ boundaries.ts |     100 |      100 |     100 |     100 |
+ card.ts       |     100 |      100 |     100 |     100 |
+ money.ts      |     100 |      100 |     100 |     100 |
+ obligation.ts |     100 |      100 |     100 |     100 |
+ snapshot.ts   |     100 |      100 |     100 |     100 |
+ surfaces.ts   |     100 |      100 |     100 |     100 |
 ---------------|---------|----------|---------|---------|-------------------
 
 Test Suites: 41 passed, 41 total

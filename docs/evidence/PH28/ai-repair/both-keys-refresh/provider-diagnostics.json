@@ -1,0 +1,21 @@
+{
+  "deployment": "dpl_J5uBQXgHvgbhhNhoQcMgh9xaJkQT",
+  "cli_exit": 0,
+  "diagnostics": [
+    {
+      "provider": "gemini",
+      "http_status": 404,
+      "reason": "PROVIDER_HTTP"
+    },
+    {
+      "provider": "gemini",
+      "http_status": 404,
+      "reason": "PROVIDER_HTTP"
+    },
+    {
+      "provider": "groq",
+      "http_status": 404,
+      "reason": "MODEL_UNAVAILABLE"
+    }
+  ]
+}

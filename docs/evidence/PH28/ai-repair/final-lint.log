@@ -1,0 +1,9 @@
+
+> phron@0.1.0 lint
+> eslint . --max-warnings=0
+
+
+W:\AI Product Sprint\Phron\tests\e2e\ph28\direct-provider-smoke.mjs
+  12:2  error  Do not assign to the variable `module`. See: https://nextjs.org/docs/messages/no-assign-module-variable  @next/next/no-assign-module-variable
+
+✖ 1 problem (1 error, 0 warnings)

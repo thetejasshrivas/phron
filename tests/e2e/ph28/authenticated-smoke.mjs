@@ -12,7 +12,7 @@ assert.ok(process.env.SUPABASE_SERVICE_ROLE_KEY,'PRIVATE_SETUP_KEY_REQUIRED');
 const key=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 const options={auth:{persistSession:false,autoRefreshToken:false,detectSessionInUrl:false}};
 const admin=createClient(url,process.env.SUPABASE_SERVICE_ROLE_KEY,options);
-const out=process.argv.includes('--ai-repair')?'docs/evidence/PH28/ai-repair':process.argv.includes('--remediation')?'docs/evidence/PH28/remediation':'docs/evidence/PH28';mkdirSync(out,{recursive:true});
+const out=process.argv.includes('--both-keys-refresh')?'docs/evidence/PH28/ai-repair/both-keys-refresh':process.argv.includes('--key-refresh')?'docs/evidence/PH28/ai-repair/key-refresh':process.argv.includes('--ai-repair')?'docs/evidence/PH28/ai-repair':process.argv.includes('--remediation')?'docs/evidence/PH28/remediation':'docs/evidence/PH28';mkdirSync(out,{recursive:true});
 const checks=[],network=[],users=[];
 const tables=JSON.parse(readFileSync('docs/evidence/PH27/remote-catalog-post-rollout.json')).tables.filter(t=>t.key.startsWith('public.')).map(t=>t.key.slice(7));
 assert.equal(tables.length,23);

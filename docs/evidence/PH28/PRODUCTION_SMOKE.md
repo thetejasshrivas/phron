@@ -1,3 +1,13 @@
+# PH28 provider repair — PARTIAL / G6 OPEN — 2026-10-11 IST
+
+Production application c4a69a391eea59542b18c2536950fc9c08df8f85 is READY at https://phron-eight.vercel.app. Latest deployment dpl_J5uBQXgHvgbhhNhoQcMgh9xaJkQT, unique URL https://phron-1nmws8wh5-tts-1e31.vercel.app; upload exit0. Gemini REST responseSchema no longer contains unsupported additionalProperties; strict local validation, formulas and model IDs remain unchanged. Groq endpoint/Bearer/model were already correct. Tejas confirms real-phone Google/onboarding/save-refresh/three surfaces/deletion PASS. He reports free access to both configured models and privately refreshed both Production keys.
+
+462unit/152mocked integration,202domain tests with100% coverage, collected contracts100%,50-case mocked corpus, lint/types/Production build PASS. Latest public13/13PASS; ordinary-user authenticated8PASS/1FAIL (exit1), with both disposable users purged. Exact live150 chai request returns HTTP200 manual_fallback/providers_failed; Gemini404 and Groq404 remain after both key refreshes. Google400 no longer occurs. No claim of successful parsed JSON, Groq resolution or G6 pass is warranted. [Executed report](ai-repair/RESULT.md). PH29 has NOT started. Prior records below are historical.
+
+Next one action: privately place the same provider keys in ignored .env.local for direct available-model/API verification; report completion only, never values. No further unchanged redeploy retries, paid upgrade or unapproved model substitution.
+
+---
+
 # PH28 live Production smoke — PARTIAL / NOT READY
 
 2026-10-11 IST. Origin https://phron-eight.vercel.app; release f4857268a7bc2d31c7f006ae8c098ce63e33bf26, deployment dpl_45eURazDJvi9CKyuCMVWRYKzkW23. Documentation HEAD entering smoke 13707b1. Tejas explicitly authorized live synthetic accounts, ordinary financial writes, configured provider calls and disposable account purge. He separately authorized Admin API synthetic sessions to avoid Google bot challenges and assigned real Google completion to his phone.

@@ -1,3 +1,9 @@
+# PH28 provider current disposition — 2026-10-11 IST
+
+PH28-ENTRY-01 remains RESOLVED. PH28-AI-01 remains OPEN: Gemini schema400 fixed at c4a69a3; actual Gemini404/Groq404 persist after both Production keys were privately refreshed. Valid prescribed Groq wire format verified, no model substitution. Phone journeys operatorPASS, public13PASS, authenticated8PASS/1FAIL. [Executed evidence](evidence/PH28/ai-repair/RESULT.md). Direct available-model/API check pending local keys. Earlier unknown-cause/key-update records below are historical.
+
+---
+
 # PH28 current remediation disposition — 2026-10-11 IST
 
 **PH28-ENTRY-01 / P1 — RESOLVED at fcbfaee.** Root mounted the original Coming soon skeleton despite a working /sign-in form. Reusing that page exposes Continue with Google. Production13/13public checks PASS, including visible form375/1280 and actual trusted OAuth initiation.

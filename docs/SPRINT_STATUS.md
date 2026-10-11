@@ -5,13 +5,13 @@ product: PHRON
 prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
-commit: fcbfaeebf32b19cd1c3a9f98e9f0379e04064649 # deployed root-entry correction; documentation HEAD separate
-working_tree_state: PH28 root-entry correction deployed; evidence committed separately; scratch untouched
+commit: c4a69a391eea59542b18c2536950fc9c08df8f85 # deployed Gemini schema correction; documentation HEAD separate
+working_tree_state: PH28 provider schema correction deployed; latest evidence separate; scratch untouched
 dirty_files: ["New Text Document.txt (untouched user work)"] # resolve current HEAD/status on resume
 active_chat: PHRON-00 Lead acting QA / PH28 single active writer
 phase: "6 (Release and Submission)"
 current_step: PH-28
-step_state: PH28 PARTIAL; ROOT_ENTRY_RESOLVED; PUBLIC_LIVE_13_PASS; PROVIDER_EXTRACTION_FAILED; PHONE_GOOGLE_PENDING; G6_OPEN
+step_state: PH28 PARTIAL; ROOT_AND_SCHEMA_RESOLVED; PUBLIC_LIVE_13_PASS; AUTH_LIVE_8_PASS_1_FAIL; PROVIDER_404_PENDING; PHONE_OPERATOR_PASS; G6_OPEN
 source_hash: d83a28f52a6356eb0b28d272edc72feaa39ecac6beaa1a608a5d8170e57ef994
 approved_amendments: [D01-v1, D02-v1, D03-v1, D03-v2, D04-v1, D05-v1, D06-v1, D07a-v1, D07b-v1, D07-v2, D08-v1, D09-v1, D10-v1, D11-v1, D16-v1, D17-v1, D18-v1, D19-v1, D21-v1, D21-lock-scope-v1, D27-v1, D05-extension-v1, D05-unpaid-carry-v1, D03-clearance-v1, D22-v1, D13-v1, D12-v1, D14-v1, D15-v1, D26-v1, G3-DF-01-v1, PH21-BUCKET-v1, PH21-GOAL-v1, PH21-OBLIGATION-v1, PH21-CHART-v1, D20-v1, G4-FLEX-DATE-01-v1, G4-CUSTOM-RECOVERY-01-v1, D23-v1, D24-v1, G4-GOAL-CALENDAR-01-v1, PH23-SC02-v1]
 completed_steps: [PH-01, PH-02, PH-04, PH-05, PH-06, PH-07, PH-08, PH-09, PH-10, PH-11, PH-12, PH-13, PH-14, PH-15, PH-16, PH-17, PH-18, PH-19, PH-20, PH-21, PH-22, PH-23, PH-24, PH-25, PH-26, PH-27]
@@ -20,12 +20,12 @@ open_gates: [G0B, G6, G7]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: ACCEPTED}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb", V3: "PHRON-V3-01 /36ca7380dfb2235d5556242f59c93da18c98bf04 — ACCEPTED 2026-10-11"}
 blocking_decisions: [] # scoped fixes verified; residual tooling/distributed-limit risks remain documented for release review
-latest_evidence: docs/evidence/PH28/remediation/RESULT.md
-deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: READY_PH28_ROOT_ENTRY_PASS, production_url: "https://phron-eight.vercel.app", production_id: dpl_5cDSrxhhnuJmYYx7esqinDMa3hhm, production_commit: fcbfaeebf32b19cd1c3a9f98e9f0379e04064649, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
+latest_evidence: docs/evidence/PH28/ai-repair/RESULT.md
+deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: READY_PH28_ROOT_ENTRY_PASS, production_url: "https://phron-eight.vercel.app", production_id: dpl_J5uBQXgHvgbhhNhoQcMgh9xaJkQT, production_commit: c4a69a391eea59542b18c2536950fc9c08df8f85, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
 migration_state: ALL24_REMOTE_APPLIED; FIRST2_PRESERVED; NEXT22_AUTHORIZED_APPLIED_IN_PINNED_ORDER; CLEAN_REPLAY_PARITY100_PASS
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers", "2026-10-10: Tejas approved PH21 typed contracts, server/API handlers, local-only migration and integration tests for goals, reconciliation, buckets and authenticated account deletion; no remote rollout"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Tejas opens canonical Production on real phone and uses Continue with Google; provider schema/model availability repair remains pending
+next_action: privately add exact deployed provider keys to ignored local env for direct model-list and adapter verification; no secret output
 last_updated_ist: 2026-10-11
 ```
 
@@ -542,5 +542,15 @@ Next eligible guided action: **PH-20 / P04-PRIVACY**, after operator start signa
 # PH28 root entry fixed and redeployed — 2026-10-11 IST
 
 Production application **fcbfaeebf32b19cd1c3a9f98e9f0379e04064649**, deployment **dpl_5cDSrxhhnuJmYYx7esqinDMa3hhm**, is READY at https://phron-eight.vercel.app (upload exit0). Root reuses the existing Google sign-in form; visible Continue with Google at375/1280, trusted OAuth initiation and root/health200/no-store pass.460unit/152mocked integration, lint/typecheck/Production build and13public live checks PASS. Focused ordinary-user onboarding passes; provider extraction remains FAIL: Gemini400 REQUEST_SCHEMA_REJECTED, Groq404 MODEL_UNAVAILABLE. Exact rejected field/global model retirement not established; no secrets downloaded or models changed. PH28 PARTIAL/G6 OPEN; phone Google completion pending. [Executed evidence](evidence/PH28/remediation/RESULT.md). Prior records below are historical.
+
+---
+
+# PH28 provider repair — PARTIAL / G6 OPEN — 2026-10-11 IST
+
+Production application c4a69a391eea59542b18c2536950fc9c08df8f85 is READY at https://phron-eight.vercel.app. Latest deployment dpl_J5uBQXgHvgbhhNhoQcMgh9xaJkQT, unique URL https://phron-1nmws8wh5-tts-1e31.vercel.app; upload exit0. Gemini REST responseSchema no longer contains unsupported additionalProperties; strict local validation, formulas and model IDs remain unchanged. Groq endpoint/Bearer/model were already correct. Tejas confirms real-phone Google/onboarding/save-refresh/three surfaces/deletion PASS. He reports free access to both configured models and privately refreshed both Production keys.
+
+462unit/152mocked integration,202domain tests with100% coverage, collected contracts100%,50-case mocked corpus, lint/types/Production build PASS. Latest public13/13PASS; ordinary-user authenticated8PASS/1FAIL (exit1), with both disposable users purged. Exact live150 chai request returns HTTP200 manual_fallback/providers_failed; Gemini404 and Groq404 remain after both key refreshes. Google400 no longer occurs. No claim of successful parsed JSON, Groq resolution or G6 pass is warranted. [Executed report](evidence/PH28/ai-repair/RESULT.md). PH29 has NOT started. Prior records below are historical.
+
+Next one action: privately place the same provider keys in ignored .env.local for direct available-model/API verification; report completion only, never values. No further unchanged redeploy retries, paid upgrade or unapproved model substitution.
 
 ---

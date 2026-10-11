@@ -1,0 +1,13 @@
+PASS root HTTP200
+PASS health exact safe JSON and no-store
+PASS /api/finance/state anonymous denied
+PASS /api/finance/surfaces anonymous denied
+PASS /api/finance/card-records anonymous denied
+PASS foreign Origin mutation rejected
+PASS absent callback code returns safe sign-in redirect
+PASS forged callback code returns safe sign-in redirect
+PASS OAuth initiation uses Google + exact trusted callback + PKCE cookie
+PASS root 375px visible working Google entry
+PASS root 1280px visible working Google entry
+PASS Chromium 375px sign-in and protected Home redirect
+PASS Chromium 1280px sign-in and protected Home redirect
