@@ -1,0 +1,90 @@
+[
+  {
+    "name": "body",
+    "foreground": "233b2e",
+    "background": "f5f5ee",
+    "minimum": 4.5,
+    "ratio": 11.044079324767358,
+    "status": "PASS"
+  },
+  {
+    "name": "secondary",
+    "foreground": "536353",
+    "background": "f5f5ee",
+    "minimum": 4.5,
+    "ratio": 5.851534139530546,
+    "status": "PASS"
+  },
+  {
+    "name": "secondary on chart",
+    "foreground": "536353",
+    "background": "fafaf5",
+    "minimum": 4.5,
+    "ratio": 6.1198799704276405,
+    "status": "PASS"
+  },
+  {
+    "name": "healthy metric",
+    "foreground": "233b2e",
+    "background": "e5edd8",
+    "minimum": 4.5,
+    "ratio": 10.041364247941889,
+    "status": "PASS"
+  },
+  {
+    "name": "budget metric",
+    "foreground": "233b2e",
+    "background": "efe7d5",
+    "minimum": 4.5,
+    "ratio": 9.82511246777482,
+    "status": "PASS"
+  },
+  {
+    "name": "distress metric",
+    "foreground": "233b2e",
+    "background": "f0e1da",
+    "minimum": 4.5,
+    "ratio": 9.494678272302558,
+    "status": "PASS"
+  },
+  {
+    "name": "alert",
+    "foreground": "933f30",
+    "background": "f5f5ee",
+    "minimum": 4.5,
+    "ratio": 6.404876519507488,
+    "status": "PASS"
+  },
+  {
+    "name": "chart green",
+    "foreground": "607850",
+    "background": "e0e6d7",
+    "minimum": 3,
+    "ratio": 3.8302946916784713,
+    "status": "PASS"
+  },
+  {
+    "name": "chart ochre",
+    "foreground": "997138",
+    "background": "e0e6d7",
+    "minimum": 3,
+    "ratio": 3.45009774175886,
+    "status": "PASS"
+  },
+  {
+    "name": "logo face/edge",
+    "foreground": "d8f36a",
+    "background": "233b2e",
+    "minimum": 3,
+    "ratio": 9.759932587999561,
+    "status": "PASS"
+  },
+  {
+    "name": "control edge",
+    "foreground": "829175",
+    "background": "fafaf5",
+    "minimum": 3,
+    "ratio": 3.2060307670577166,
+    "status": "PASS"
+  }
+]

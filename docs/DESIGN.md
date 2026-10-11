@@ -146,3 +146,7 @@ One explicit founder action: “Tejas accepts V3 — PHRON-V3-01 at commit36ca73
 # PH30B-WORDMARK-02 — founder typography refinement
 
 2026-10-11 IST. Founder requests फ़₹on with cohesive spacing and lowercase Latin letters. Static SVG shares baseline/weight, reduces inter-glyph gaps and optically enlarges lowercase x-height. Accessible identity remains PHRON. 375px preview visually inspected and375/1280 browser bounds PASS. Native font fallback retained. Implemented and verified; no additional visual acceptance inferred. Evidence: evidence/PH30B/refinement/RESULT.md.
+
+# PH30B-POP-03 — comic accent, editorial surfaces
+
+Founder-directed static comic फ़₹on: lime face, crisp ink edge, hard offset shadow; accessible PHRON unchanged. Hard depth belongs only to the mark. Taste preserves accepted warm editorial palette, improves hierarchy/selected navigation, metric depth, chart framing/table rhythm and management editor spacing. No factual copy, formulas, contracts or state logic changed. Native fonts/assets retained. Isolated actual-component previews:375/1280 ×3surfaces ×A/B/C, no horizontal overflow, no axe text-contrast violations,11explicit palette pairs pass. Evidence: evidence/PH30B/polish/RESULT.md. Named revision awaits founder review; no new V3 acceptance inferred.

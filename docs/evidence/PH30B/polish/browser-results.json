@@ -1,0 +1,185 @@
+{
+  "checks": [
+    {
+      "surface": "home",
+      "health": "A",
+      "width": 375,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "visualize",
+      "health": "A",
+      "width": 375,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "manage",
+      "health": "A",
+      "width": 375,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "home",
+      "health": "B",
+      "width": 375,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "visualize",
+      "health": "B",
+      "width": 375,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "manage",
+      "health": "B",
+      "width": 375,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "home",
+      "health": "C",
+      "width": 375,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "visualize",
+      "health": "C",
+      "width": 375,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "manage",
+      "health": "C",
+      "width": 375,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "home",
+      "health": "A",
+      "width": 1280,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "visualize",
+      "health": "A",
+      "width": 1280,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "manage",
+      "health": "A",
+      "width": 1280,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "home",
+      "health": "B",
+      "width": 1280,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "visualize",
+      "health": "B",
+      "width": 1280,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "manage",
+      "health": "B",
+      "width": 1280,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "home",
+      "health": "C",
+      "width": 1280,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "visualize",
+      "health": "C",
+      "width": 1280,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    },
+    {
+      "surface": "manage",
+      "health": "C",
+      "width": 1280,
+      "status": "PASS",
+      "pageOverflow": false,
+      "focus": "visible",
+      "reducedMotion": "zero transitions/animations",
+      "source": "actual components SSR; injected synthetic read-only hook; no hydration or mutation proof"
+    }
+  ],
+  "limitations": "Isolated actual React component previews with synthetic read-only fixtures. Docker unavailable; no auth, database, save or financial-state transitions claimed."
+}

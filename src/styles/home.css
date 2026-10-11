@@ -245,3 +245,24 @@
 .natural-capture :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 @media(max-width:767px){.natural-capture{padding-top:14px}.natural-capture-actions{align-items:stretch}.natural-capture-actions .capture-button{min-height:46px}.ai-disclosure>div{align-items:stretch;flex-direction:column}.ai-disclosure button{min-height:44px}.swap-offer{align-items:flex-start}}
 @media(prefers-reduced-motion:reduce){.natural-capture *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* PH30B Taste refinement: retain the editorial palette and exact-value hierarchy. */
+.phron-home{--elevation:0 10px 28px #233b2e0d;--ease-out:cubic-bezier(.22,1,.36,1)}
+.phron-home .home-sidebar{background:#eeefe5}
+.phron-home .home-sidebar nav a{line-height:1.35;border:1px solid transparent}
+.phron-home .home-sidebar nav a[aria-current]{border-color:#829175;background:#e0e9d2}
+.phron-home .day-header h1,.phron-home .surface-header h1{text-wrap:balance}
+.phron-home .sts-panel{box-shadow:var(--elevation);padding:32px!important}
+.phron-home .sts-top h2{font-weight:600}
+.phron-home .state-label{color:var(--ink);background:#ffffff70;border-color:#829175;line-height:1.4}
+.phron-home .sts-number{font-weight:600;letter-spacing:-.035em}
+.phron-home .coach-panel{padding:16px 0!important}
+.phron-home .coach-panel h2{line-height:1.2}
+.phron-home .capture-panel{background:#fafaf5;border-color:#829175;box-shadow:0 5px 18px #233b2e08}
+.phron-home .bucket h3{font-size:13px;font-weight:600;line-height:1.4}
+.phron-home .bucket p{font-size:19px;letter-spacing:-.02em}
+.phron-home .bucket small{font-size:11px;line-height:1.5}
+.phron-home .bucket-vessel{border-color:#637759}
+.phron-home .section-heading{gap:16px}
+.phron-home .empty-line{background:#eeefe5;border-color:#829175}
+@media(max-width:767px){.phron-home .sts-panel{padding:24px!important}.phron-home .capture-panel{padding:16px!important}.phron-home .bucket p{font-size:18px}}

@@ -18,3 +18,8 @@ footer { color: var(--quiet); font-size: .8rem; border-top: 1px solid #c5c8be; p
 .auth-brand .phron-logo svg{width:136px}
 .mobile-wordmark{display:none}
 @media(max-width:767px){.mobile-wordmark{display:block;margin-bottom:16px}}
+
+/* Founder-directed comic title: crisp ink edge and a static offset impression. */
+.phron-logo{--logo-ink:#233b2e;--logo-face:#d8f36a}
+.phron-logo-shadow{fill:var(--logo-ink);stroke:var(--logo-ink);stroke-width:2}
+.phron-logo-face{fill:var(--logo-face);stroke:var(--logo-ink);stroke-width:1.5}

@@ -126,3 +126,31 @@
  /* Keep the entire focused control and its ring above the wrapped mobile nav. */
  .phron-home .home-main :is(a,button,input,select,textarea,summary,[tabindex]){scroll-margin-block:16px 140px}
 }
+
+/* Impeccable interaction pass: calm depth, tactile actions, unchanged canonical values. */
+.phron-home .surface-header{padding-bottom:28px;margin-bottom:28px}
+.phron-home .surface-header p{max-width:60ch}
+.phron-home .split-chart,.phron-home .burn-chart{padding:24px;background:#fafaf5;border:1px solid #c6cebe;border-radius:16px;margin-bottom:28px}
+.phron-home .bar-track{height:18px;background:#e0e6d7}
+.phron-home .bar-track span{background:#607850}
+.phron-home .bar-track .ochre{background:#997138}
+.phron-home .table-scroll{border:1px solid #c6cebe;border-radius:12px;background:#fafaf5}
+.phron-home .table-scroll caption{padding:16px}
+.phron-home .table-scroll tbody tr:nth-child(even){background:#eef1e7}
+.phron-home .table-scroll th{font-weight:600}
+.phron-home .management-grid{gap:0 28px}
+.phron-home .management-section summary{padding:16px 0;transition:color 160ms var(--ease-out)}
+.phron-home .management-section summary span{font-size:26px}
+.phron-home .new-config{padding:8px 20px;border:1px solid #829175}
+.phron-home .goal-card{gap:22px}
+.phron-home .goal-pace{border-radius:4px;padding:4px 7px;display:inline-block;background:#e0e9d2;color:var(--ink);font-weight:600;font-size:11px}
+.phron-home .capture-button{transition:background 160ms var(--ease-out),box-shadow 160ms var(--ease-out),transform 100ms var(--ease-out)}
+.phron-home .capture-button:not(:disabled):active{transform:translateY(1px);box-shadow:none}
+.phron-home .text-action{transition:color 160ms var(--ease-out),background 160ms var(--ease-out);text-underline-offset:4px}
+.phron-home input,.phron-home textarea,.phron-home select{transition:border-color 160ms var(--ease-out),box-shadow 160ms var(--ease-out)}
+.phron-home input:focus-visible,.phron-home textarea:focus-visible,.phron-home select:focus-visible{border-color:var(--ink);box-shadow:0 0 0 2px var(--canvas)}
+.phron-home .surface-feedback{line-height:1.6}
+.phron-home dialog{border:1px solid #829175}
+@media(hover:hover){.phron-home .home-sidebar nav a:hover{background:#e0e9d2}.phron-home .capture-button:not(:disabled):hover{background:#cbe857;box-shadow:0 3px 8px #233b2e18}.phron-home .danger-button:not(:disabled):hover{background:#713024;color:#fff}.phron-home summary:hover{color:#365d39}.phron-home .text-action:not(:disabled):hover{background:#e5edd870}}
+@media(max-width:767px){.phron-home .split-chart,.phron-home .burn-chart{padding:18px 14px}.phron-home .category-bar{gap:8px}.phron-home .management-section summary span{font-size:24px}}
+@media(prefers-reduced-motion:reduce){.phron-home *{animation:none!important;transition:none!important;scroll-behavior:auto!important}.phron-home .capture-button:active,.phron-home .text-action:hover span{transform:none}}

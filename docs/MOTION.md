@@ -127,3 +127,7 @@ The फ़₹ON mark never animates or interpolates. Normal/reduced-motion rende
 # PH30B-WORDMARK-02
 
 2026-10-11 IST. Typography-only refinement; logo remains static and non-focusable inside the accessible PHRON wrapper. Required financial motion unchanged. Focused reduced-motion check PASS; evidence/PH30B/refinement/RESULT.md.
+
+# PH30B-POP-03 — separate Impeccable polish pass
+
+Buttons receive160ms hover/background/shadow feedback and100ms pressed feedback; input borders/focus halos use160ms; editor summaries use160ms color. No animated authoritative financial text, entrance delay or new handlers. Existing confirmed tank/chart motion retained. Logo is static. prefers-reduced-motion disables transitions/animations/scroll interpolation and pressed transforms; computed equivalence verified for18isolated component views,6reduced screenshots saved. Plain SSR preview does not prove hydrated save/error transitions; existing unit/defaultE2E regression proof and prior authenticated motion evidence remain separate. evidence/PH30B/polish/RESULT.md.

@@ -1,0 +1,8 @@
+file:///W:/AI%20Product%20Sprint/Phron/docs/evidence/PH30B/polish/preview.mjs:41
+  const button=page.locator('button:not(:disabled)').first();if(await button.count()){await button.focus();await page.keyboard.press('Tab');await page.keyboard.press('Shift+Tab');const outline=await button.evaluate(e=>getComputedStyle(e).outlineStyle);if(outline==='none')throw Error('Missing focus '+surface);}
+                                                                                                                                                                                                                                                                                      ^
+
+Error: Missing focus visualize
+    at file:///W:/AI%20Product%20Sprint/Phron/docs/evidence/PH30B/polish/preview.mjs:41:279
+
+Node.js v24.21.0
