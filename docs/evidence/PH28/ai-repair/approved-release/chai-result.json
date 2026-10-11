@@ -1,0 +1,13 @@
+{
+  "http_status": 200,
+  "kind": "routed",
+  "provider": "groq",
+  "outcomes": [
+    {
+      "kind": "clarification",
+      "confidence": "LOW",
+      "amountPaise": "15000"
+    }
+  ],
+  "source": "real deployed adapters; synthetic isolated prompt"
+}

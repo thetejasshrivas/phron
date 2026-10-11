@@ -12,7 +12,7 @@ assert.ok(process.env.SUPABASE_SERVICE_ROLE_KEY,'PRIVATE_SETUP_KEY_REQUIRED');
 const key=process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 const options={auth:{persistSession:false,autoRefreshToken:false,detectSessionInUrl:false}};
 const admin=createClient(url,process.env.SUPABASE_SERVICE_ROLE_KEY,options);
-const out=process.argv.includes('--both-keys-refresh')?'docs/evidence/PH28/ai-repair/both-keys-refresh':process.argv.includes('--key-refresh')?'docs/evidence/PH28/ai-repair/key-refresh':process.argv.includes('--ai-repair')?'docs/evidence/PH28/ai-repair':process.argv.includes('--remediation')?'docs/evidence/PH28/remediation':'docs/evidence/PH28';mkdirSync(out,{recursive:true});
+const out=process.argv.includes('--approved-release')?'docs/evidence/PH28/ai-repair/approved-release':process.argv.includes('--both-keys-refresh')?'docs/evidence/PH28/ai-repair/both-keys-refresh':process.argv.includes('--key-refresh')?'docs/evidence/PH28/ai-repair/key-refresh':process.argv.includes('--ai-repair')?'docs/evidence/PH28/ai-repair':process.argv.includes('--remediation')?'docs/evidence/PH28/remediation':'docs/evidence/PH28';mkdirSync(out,{recursive:true});
 const checks=[],network=[],users=[];
 const tables=JSON.parse(readFileSync('docs/evidence/PH27/remote-catalog-post-rollout.json')).tables.filter(t=>t.key.startsWith('public.')).map(t=>t.key.slice(7));
 assert.equal(tables.length,23);
@@ -80,10 +80,17 @@ try{
   writeFileSync(out+'/chai-result.json',JSON.stringify({http_status:chai.status,kind:chai.data.kind,reason:chai.data.reason,provider:chai.data.provider,outcomes:chai.data.outcomes?.map(x=>({kind:x.kind,confidence:x.confidence,amountPaise:x.transaction?.amountPaise})),source:'real deployed adapters; synthetic isolated prompt'},null,2));
   assert.equal(chai.status,200);assert.equal(chai.data.kind,'routed');assert.ok(['gemini','groq'].includes(chai.data.provider));
   assert.equal(chai.data.outcomes.length,1);assert.equal(chai.data.outcomes[0].transaction.amountPaise,'15000');
-  assert.equal(chai.data.outcomes[0].kind,'method_confirmation');assert.deepEqual(await read(a),baseline);
-  const r=await api(a,'/api/finance/ingest',{text:'Starbucks coffee 12 cash',operationId:randomUUID(),disclosureAccepted:true});
+  // D09 forbids a save without an explicit method. Deterministic LOW confidence
+  // may require category clarification before method confirmation; both are uncommitted.
+  const chaiOutcome=chai.data.outcomes[0];
+  assert.equal(chaiOutcome.kind,chaiOutcome.confidence==='LOW'?'clarification':'method_confirmation');
+  assert.deepEqual(await read(a),baseline);
+  const r=await api(a,'/api/finance/ingest',{text:'Starbucks 12 cash',operationId:randomUUID(),disclosureAccepted:true});
   writeFileSync(out+'/provider-result.json',JSON.stringify({http_status:r.status,kind:r.data.kind,reason:r.data.reason,provider:r.data.provider,outcomes:r.data.outcomes?.map(x=>({kind:x.kind,confidence:x.confidence})),source:'deployed real adapters; no provider mock'},null,2));
-  assert.equal(r.status,200);assert.equal(r.data.kind,'routed');assert.ok(['gemini','groq'].includes(r.data.provider));assert.ok(r.data.outcomes.length>0);
+  assert.equal(r.status,200);assert.equal(r.data.kind,'routed');assert.ok(['gemini','groq'].includes(r.data.provider));assert.equal(r.data.outcomes.length,1);assert.equal(r.data.outcomes[0].kind,'committed');
+  const aiSaved=await read(a);assert.equal(BigInt(aiSaved.snapshot.money.spent)-BigInt(baseline.snapshot.money.spent),1200n);
+  assert.equal(BigInt(baseline.snapshot.money.cash)-BigInt(aiSaved.snapshot.money.cash),1200n);
+  await a.page.reload();assert.deepEqual(await read(a),aiSaved);
  });
  await check('privacy-intercept fallback opens manual entry without losing capture',async()=>{
   await a.page.goto(origin+'/home');await expect(a.page.getByText('Confirmed records loaded.',{exact:true})).toBeVisible();

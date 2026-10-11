@@ -599,3 +599,8 @@ Tejas explicitly approved the exact proposal on2026-10-11 IST. Replace primary w
 Tejas explicitly approved the exact proposal on2026-10-11 IST. Replace fallback with openai/gpt-oss-20b contingent on Free-account synthetic success, retaining Groq/temperature0.1/300tokens/4s, strict privacy/validation and manual fallback. No billing or paid overflow. Exact text: [D25-FALLBACK-v1](amendments/D25-FALLBACK-v1.md).
 
 D25 activation evidence: replacement-wire-results.json shows200/valid15000paise extraction for both approved models. Low reasoning implementation retains all approved numerical/privacy bounds; Groq low mode returns73tokens and complete valid JSON, approved pipeline subsequently extracts via real Groq fallback (approved-pipeline-direct-results.json). Primary high-demand503/timeout and one Groq JSON400 preserved; this is no availability guarantee. Production verification remains pending before G6 closure.
+
+
+## D25 activation outcome / PH28 Production — 2026-10-11 IST
+
+D25-PRIMARY-v1 and D25-FALLBACK-v1 remain APPROVED; both conditional synthetic-generation checks passed. Production application e50cf4317c8d4eb9e5336f6d2189e61f66c1a5fa returns valid live Groq extraction and exact saved paise under ordinary user credentials. G6 PASSED using the executed smoke plus operator phone attestation. [Evidence](evidence/PH28/ai-repair/approved-release/RESULT.md). This resolves the scoped model eligibility mismatch, not indefinite quota, retention, paid overflow or all G0B items. No additional founder decision inferred.

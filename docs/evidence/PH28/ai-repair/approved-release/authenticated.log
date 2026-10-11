@@ -1,0 +1,9 @@
+PASS ordinary SSR session opens Onboarding; consent save and persisted starter allocations
+PASS User B ordinary onboarding
+PASS manual spend UI drains bucket/STS; refresh persists; exact paise
+PASS tracked card purchase reserve, partial payment and stable-ID replay
+PASS User B denied User A rows and forged bucket mutation
+PASS live configured provider extraction: bounded synthetic text only
+PASS privacy-intercept fallback opens manual entry without losing capture
+PASS Settings confirmation UI + caller account API purge; 23 tables; retained session denied
+PASS User B caller deletion and complete cleanup

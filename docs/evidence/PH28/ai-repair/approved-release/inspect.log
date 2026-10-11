@@ -1,0 +1,46 @@
+Vercel CLI 62.4.0 (Node.js 24.21.0)
+Fetching deployment "phron-kk54jowrv-tts-1e31.vercel.app" in tts-1e31
+> Fetched deployment "phron-kk54jowrv-tts-1e31.vercel.app" in tts-1e31 [1s]
+
+  General
+
+    id		dpl_5ugpr2a6QNk5ZhiydzSHBoCogPiX
+    name	phron
+    target	production
+    status	● Ready
+    url		https://phron-kk54jowrv-tts-1e31.vercel.app
+    created	Sun Oct 11 2026 15:39:02 GMT+0530 (India Standard Time) [4m ago]
+
+
+  Build Machine
+
+    requested build machine basic
+    actual assigned cores   2 vCPU (actual assignment)
+    memory                  8192 MiB
+    selection type          fixed
+    selection source        plan-default
+
+
+  Duration
+
+    build duration	38s
+    post-build duration	20s
+    billable duration	1m
+    CPU Minutes Usage	2 minutes (1m x 2vCPU)
+
+
+  Aliases
+
+    ╶ https://phron-eight.vercel.app
+    ╶ https://phron-tts-1e31.vercel.app
+
+
+  Builds
+
+    ┌ .        [0ms]
+    ├── λ index (822.75KB) [iad1]
+    ├── λ _not-found (822.75KB) [iad1]
+    ├── λ _not-found.rsc (822.75KB) [iad1]
+    ├── λ home (822.75KB) [iad1]
+    ├── λ home.rsc (822.75KB) [iad1]
+    └── 53 output items hidden

@@ -1,3 +1,15 @@
+# PH28 COMPLETE / G6 PASSED — 2026-10-11 IST
+
+Production application e50cf4317c8d4eb9e5336f6d2189e61f66c1a5fa, deployment dpl_5ugpr2a6QNk5ZhiydzSHBoCogPiX, is Ready at https://phron-eight.vercel.app (deploy/inspect exit0). Founder-approved D25-PRIMARY-v1 / D25-FALLBACK-v1 activate gemini-3.8-flash / openai/gpt-oss-20b after successful Free-account synthetic calls. Both retain temperature0.1, 300tokens, 4s/provider, strict validation, extraction-only privacy and manual fallback. No paid upgrade, migration, dependency or financial formula change.
+
+462unit/152mocked integration and lint/typecheck/production build PASS; 202domain tests and collected domain/contracts coverage100%. Production public13/13 and ordinary-user authenticated9/9 PASS. Live 150 chai parses exact15000paise through Groq and remains uncommitted clarification; explicit cash capture commits exact1200paise and persists after refresh. Card partial settlement/replay, isolation, privacy fallback, both synthetic purges across23tables and session denial PASS. Original routing-assumption failure is retained; the harness now checks approved LOW clarification vs method confirmation without changing app routing. Tejas explicitly attests real-phone Google/onboarding/save-refresh/three surfaces/deletion PASS; automated Google completion is not claimed.
+
+Earlier provider failures remain evidence; availability/latency/quota/retention guarantees are not inferred. G6 PASSED, PH28 COMPLETE, G0B/G7 retain their separate recorded status. PH29 NOT_STARTED / PENDING_OPERATOR_AUTHORIZATION. Prior records below are historical.
+
+[Executed closure report](../evidence/PH28/ai-repair/approved-release/RESULT.md). Next one action: authorize PH29 / P07-EVIDENCE; no next-step work performed.
+
+---
+
 # PH28 / QA live smoke — PARTIAL, 2026-10-11 IST
 
 Production https://phron-eight.vercel.app / f485726 / dpl_45eURazDJvi9CKyuCMVWRYKzkW23.19 composite checks PASS,1FAIL. Live onboarding/manual save-refresh/card partial settlement + durable duplicate prevention/ordinary A-B isolation/caller purge pass.23 public tables empty for deleted synthetic caller, retained session denied; all four disposable fixtures cleaned up. Service role limited to setup, cleanup and scoped purge diagnostics; all normal mutations ordinary user. Google initiation/PKCE passes; complete Google consent/exchange assigned by Tejas to real phone, not claimed by password-session test.

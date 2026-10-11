@@ -3,7 +3,7 @@ import {mkdirSync,writeFileSync} from 'node:fs';
 import {chromium,expect} from '@playwright/test';
 
 const origin='https://phron-eight.vercel.app';
-const out=process.argv.includes('--both-keys-refresh')?'docs/evidence/PH28/ai-repair/both-keys-refresh':process.argv.includes('--key-refresh')?'docs/evidence/PH28/ai-repair/key-refresh':process.argv.includes('--ai-repair')?'docs/evidence/PH28/ai-repair':process.argv.includes('--remediation')?'docs/evidence/PH28/remediation':'docs/evidence/PH28';
+const out=process.argv.includes('--approved-release')?'docs/evidence/PH28/ai-repair/approved-release':process.argv.includes('--both-keys-refresh')?'docs/evidence/PH28/ai-repair/both-keys-refresh':process.argv.includes('--key-refresh')?'docs/evidence/PH28/ai-repair/key-refresh':process.argv.includes('--ai-repair')?'docs/evidence/PH28/ai-repair':process.argv.includes('--remediation')?'docs/evidence/PH28/remediation':'docs/evidence/PH28';
 mkdirSync(out,{recursive:true});
 const checks=[],network=[];
 async function check(name,action){

@@ -1,3 +1,9 @@
+# PH28-AI-01 RESOLVED — 2026-10-11 IST
+
+Resolved at e50cf4317c8d4eb9e5336f6d2189e61f66c1a5fa: approved accessible replacement models pass direct generation and live Groq extraction/save-refresh; public13/13 and authenticated9/9 PASS. Gemini schema400 and model/access404 causes addressed with strict schema and recorded D25 amendments. Original failures and corrected harness assumption remain preserved. Intermittent upstream503/timeout/JSON failures still use safe manual fallback; no availability guarantee. [Evidence](evidence/PH28/ai-repair/approved-release/RESULT.md). PH28-ENTRY-01 remains RESOLVED. Prior records below historical.
+
+---
+
 # PH28 provider current disposition — 2026-10-11 IST
 
 PH28-ENTRY-01 remains RESOLVED. PH28-AI-01 remains OPEN: Gemini schema400 fixed at c4a69a3; actual Gemini404/Groq404 persist after both Production keys were privately refreshed. Valid prescribed Groq wire format verified, no model substitution. Phone journeys operatorPASS, public13PASS, authenticated8PASS/1FAIL. [Executed evidence](evidence/PH28/ai-repair/RESULT.md). Direct available-model/API check pending local keys. Earlier unknown-cause/key-update records below are historical.
