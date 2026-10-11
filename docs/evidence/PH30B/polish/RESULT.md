@@ -1,3 +1,9 @@
+# Latest: PH30B-PAL-04 palette correction
+
+Deep pine lettering, parchment edge and burnished amber offset replace the neon wordmark.462unit/152integration,2default E2E,lint/typecheck/build PASS.18surface previews regenerated;13palette pairs PASS. Actual lettering contrast11.1:1light/15.2:1dark. [Current report](PALETTE_RESULT.md) · [375px swatch](wordmark-palette-375.png) · [1280px swatch](wordmark-palette-1280.png). Older report below describes dcad039; current PNGs are regenerated for PAL-04.
+
+---
+
 # PH30B-POP-03 — comic wordmark and surface refinement
 
 2026-10-11 IST; W:/AI Product Sprint/Phron; main; parent f68420aea99550f7389c0fc80b7de0cd7bbfa0b7 plus verified visual diff. One active Experience writer. Not pushed or deployed; production e50cf43 unchanged. Scratch New Text Document.txt untouched.

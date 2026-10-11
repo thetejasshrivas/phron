@@ -20,6 +20,7 @@ footer { color: var(--quiet); font-size: .8rem; border-top: 1px solid #c5c8be; p
 @media(max-width:767px){.mobile-wordmark{display:block;margin-bottom:16px}}
 
 /* Founder-directed comic title: crisp ink edge and a static offset impression. */
-.phron-logo{--logo-ink:#233b2e;--logo-face:#d8f36a}
-.phron-logo-shadow{fill:var(--logo-ink);stroke:var(--logo-ink);stroke-width:2}
-.phron-logo-face{fill:var(--logo-face);stroke:var(--logo-ink);stroke-width:1.5}
+.phron-logo{--logo-edge:#f2ede2;--logo-face:#0f382a;--logo-shadow:#b76812}
+.phron-logo[data-tone="dark"]{--logo-edge:#0f382a;--logo-face:#f2ede2;--logo-shadow:#d97706}
+.phron-logo-shadow{fill:var(--logo-shadow);stroke:var(--logo-shadow);stroke-width:2}
+.phron-logo-face{fill:var(--logo-face);stroke:var(--logo-edge);stroke-width:1.5}

@@ -1,3 +1,11 @@
+# PH30B-PAL-04 / Experience — palette handoff
+
+2026-10-11 IST; main; parentdcad039 plus this verified palette commit. Neon logo fill removed; deep pine/parchment/burnished amber, explicit dark-surface variant. Accessible PHRON and comic geometry intact.462unit/152integration,2default Playwright,lint/types/build PASS;18regenerated isolated surface previews,13palette pairs PASS. [Evidence](../evidence/PH30B/polish/PALETTE_RESULT.md). Resolve exact final HEAD on resume.
+
+No financial/state/contracts change, remote action or deployment. Scratch untouched; PH31 NOT_STARTED. Next: Tejas reviews PH30B-PAL-04, then requests publication.
+
+---
+
 # PH30B-POP-03 / Experience handoff
 
 2026-10-11 IST; main; parentf68420a plus this visual commit. Static comic फ़₹on, calm hierarchy/depth and coherent interaction polish across Home/Visualize/Manage. Only brand component, globals/home/surfaces CSS and docs/evidence changed.462unit/152integration,2default E2E,lint/types/build PASS;18synthetic actual-component preview combinations and11palette ratios PASS. [Evidence](../evidence/PH30B/polish/RESULT.md); preview index in same folder. Resolve final HEAD on resume.

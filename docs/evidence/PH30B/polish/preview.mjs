@@ -45,5 +45,17 @@ try{
   if(moving)throw Error('Reduced-motion interpolation '+moving);if(health==='A')await page.screenshot({path:`${out}/${surface}-${width}-reduced.png`,fullPage:true});
   checks.push({surface,health,width,status:'PASS',pageOverflow:false,focus:'visible',reducedMotion:'zero transitions/animations',source:'actual components SSR; injected synthetic read-only hook; no hydration or mutation proof'});
  }
- fs.writeFileSync(out+'/browser-results.json',JSON.stringify({checks,limitations:'Isolated actual React component previews with synthetic read-only fixtures. Docker unavailable; no auth, database, save or financial-state transitions claimed.'},null,2)+'\n');console.log('PASS '+checks.length+' responsive/state/reduced-motion component combinations');
+
+ const {PhronLogo}=load('src/components/brand/PhronLogo.tsx');const logoChecks=[];
+ for(const width of [375,1280]){
+  await page.setViewportSize({width,height:520});
+  const light=renderToStaticMarkup(React.createElement(PhronLogo));const dark=renderToStaticMarkup(React.createElement(PhronLogo,{tone:'dark'}));
+  await page.setContent('<!doctype html><html lang="en"><title>PHRON palette preview</title><style>'+css+' .logo-swatch{padding:40px;min-height:220px}.logo-swatch.dark{background:#111827;color:#f2ede2}.logo-swatch.light{background:#f2ede2;color:#0f382a}.logo-swatch p{font:14px Arial}</style><body><div class="logo-swatch light">'+light+'<p>Deep pine · warm parchment · burnished amber</p></div><div class="logo-swatch dark">'+dark+'<p>Dark-surface contrast variant</p></div></body></html>');
+  await expect(page.getByRole('img',{name:'PHRON',exact:true})).toHaveCount(2);
+  const colors=await page.locator('.logo-swatch').evaluateAll(nodes=>nodes.map(e=>{const fill=getComputedStyle(e.querySelector('.phron-logo-face')).fill,background=getComputedStyle(e).backgroundColor;function lum(rgb){const v=rgb.match(/[0-9.]+/g).slice(0,3).map(n=>Number(n)/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4);return .2126*v[0]+.7152*v[1]+.0722*v[2];}const a=lum(fill),b=lum(background);return {tone:e.classList.contains('dark')?'dark':'light',fill,background,ratio:(Math.max(a,b)+.05)/(Math.min(a,b)+.05)};}));
+  if(colors.some(c=>c.ratio<4.5))throw Error('Logo contrast '+JSON.stringify(colors));
+  await page.screenshot({path:out+'/wordmark-palette-'+width+'.png'});logoChecks.push({width,colors,status:'PASS'});
+ }
+ fs.writeFileSync(out+'/wordmark-contrast.json',JSON.stringify(logoChecks,null,2)+'\n');
+ fs.writeFileSync(out+'/browser-results.json',JSON.stringify({checks,logoChecks,limitations:'Isolated actual React component previews with synthetic read-only fixtures. Docker unavailable; no auth, database, save or financial-state transitions claimed.'},null,2)+'\n');console.log('PASS '+checks.length+' responsive/state/reduced-motion component combinations');
 }finally{await browser.close();}

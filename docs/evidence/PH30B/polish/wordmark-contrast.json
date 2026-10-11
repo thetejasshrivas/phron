@@ -1,0 +1,38 @@
+[
+  {
+    "width": 375,
+    "colors": [
+      {
+        "tone": "light",
+        "fill": "rgb(15, 56, 42)",
+        "background": "rgb(242, 237, 226)",
+        "ratio": 11.10729965337626
+      },
+      {
+        "tone": "dark",
+        "fill": "rgb(242, 237, 226)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.194761309152193
+      }
+    ],
+    "status": "PASS"
+  },
+  {
+    "width": 1280,
+    "colors": [
+      {
+        "tone": "light",
+        "fill": "rgb(15, 56, 42)",
+        "background": "rgb(242, 237, 226)",
+        "ratio": 11.10729965337626
+      },
+      {
+        "tone": "dark",
+        "fill": "rgb(242, 237, 226)",
+        "background": "rgb(17, 24, 39)",
+        "ratio": 15.194761309152193
+      }
+    ],
+    "status": "PASS"
+  }
+]

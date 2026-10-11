@@ -72,11 +72,27 @@
     "status": "PASS"
   },
   {
-    "name": "logo face/edge",
-    "foreground": "d8f36a",
-    "background": "233b2e",
-    "minimum": 3,
-    "ratio": 9.759932587999561,
+    "name": "logo pine/light header",
+    "foreground": "0f382a",
+    "background": "f2ede2",
+    "minimum": 4.5,
+    "ratio": 11.10729965337626,
+    "status": "PASS"
+  },
+  {
+    "name": "logo pine/light canvas",
+    "foreground": "0f382a",
+    "background": "f5f5ee",
+    "minimum": 4.5,
+    "ratio": 11.842594282890968,
+    "status": "PASS"
+  },
+  {
+    "name": "logo parchment/dark",
+    "foreground": "f2ede2",
+    "background": "111827",
+    "minimum": 4.5,
+    "ratio": 15.194761309152193,
     "status": "PASS"
   },
   {

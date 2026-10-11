@@ -1,3 +1,9 @@
+# Latest: PH30B-PAL-04 verified
+
+Founder-directed palette correction retains comic structure with deep pine/soft parchment/burnished amber. [Executed report](polish/PALETTE_RESULT.md) and [current previews](polish/index.html).462unit/152integration,2Playwright,lint/typecheck/build PASS. Not pushed/deployed.
+
+---
+
 # Latest: PH30B-POP-03 verified
 
 Static comic फ़₹on and three-surface Taste/Impeccable refinement.462unit/152integration,2Playwright,lint/typecheck/build PASS.18isolated responsive/state/reduced-motion component combinations and11palette ratios PASS. [Report](polish/RESULT.md) · [Preview index](polish/index.html). Not pushed/deployed. Historical reports below.

@@ -150,3 +150,7 @@ One explicit founder action: “Tejas accepts V3 — PHRON-V3-01 at commit36ca73
 # PH30B-POP-03 — comic accent, editorial surfaces
 
 Founder-directed static comic फ़₹on: lime face, crisp ink edge, hard offset shadow; accessible PHRON unchanged. Hard depth belongs only to the mark. Taste preserves accepted warm editorial palette, improves hierarchy/selected navigation, metric depth, chart framing/table rhythm and management editor spacing. No factual copy, formulas, contracts or state logic changed. Native fonts/assets retained. Isolated actual-component previews:375/1280 ×3surfaces ×A/B/C, no horizontal overflow, no axe text-contrast violations,11explicit palette pairs pass. Evidence: evidence/PH30B/polish/RESULT.md. Named revision awaits founder review; no new V3 acceptance inferred.
+
+# PH30B-PAL-04 — founder palette correction
+
+Founder accepts the comic structure/shadow but rejects neon lettering. Default face now#0F382A, parchment outline#F2EDE2 and burnished amber shadow#B76812. Optional dark tone uses parchment face/pine edge/#D97706 shadow. Geometry, identity and all other surface design unchanged. Light/dark lettering contrast11.1:1/15.2:1; previews regenerated at375/1280. No new whole-revision acceptance inferred. evidence/PH30B/polish/PALETTE_RESULT.md.
