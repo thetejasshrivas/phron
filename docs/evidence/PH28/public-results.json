@@ -1,0 +1,118 @@
+{
+  "origin": "https://phron-eight.vercel.app",
+  "release": "f485726",
+  "checks": [
+    {
+      "name": "root HTTP200",
+      "status": "PASS",
+      "elapsed_ms": 157
+    },
+    {
+      "name": "health exact safe JSON and no-store",
+      "status": "PASS",
+      "elapsed_ms": 341
+    },
+    {
+      "name": "/api/finance/state anonymous denied",
+      "status": "PASS",
+      "elapsed_ms": 240
+    },
+    {
+      "name": "/api/finance/surfaces anonymous denied",
+      "status": "PASS",
+      "elapsed_ms": 257
+    },
+    {
+      "name": "/api/finance/card-records anonymous denied",
+      "status": "PASS",
+      "elapsed_ms": 229
+    },
+    {
+      "name": "foreign Origin mutation rejected",
+      "status": "PASS",
+      "elapsed_ms": 249
+    },
+    {
+      "name": "absent callback code returns safe sign-in redirect",
+      "status": "PASS",
+      "elapsed_ms": 258
+    },
+    {
+      "name": "forged callback code returns safe sign-in redirect",
+      "status": "PASS",
+      "elapsed_ms": 229
+    },
+    {
+      "name": "OAuth initiation uses Google + exact trusted callback + PKCE cookie",
+      "status": "PASS",
+      "elapsed_ms": 249
+    },
+    {
+      "name": "Chromium 375px sign-in and protected Home redirect",
+      "status": "PASS",
+      "elapsed_ms": 1716
+    },
+    {
+      "name": "Chromium 1280px sign-in and protected Home redirect",
+      "status": "PASS",
+      "elapsed_ms": 808
+    }
+  ],
+  "network": [
+    {
+      "path": "/",
+      "status": 200,
+      "elapsed_ms": 156,
+      "cache_control": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "/api/health",
+      "status": 200,
+      "elapsed_ms": 339,
+      "cache_control": "no-store"
+    },
+    {
+      "path": "/api/finance/state",
+      "status": 401,
+      "elapsed_ms": 240,
+      "cache_control": "private, no-store, max-age=0"
+    },
+    {
+      "path": "/api/finance/surfaces",
+      "status": 401,
+      "elapsed_ms": 257,
+      "cache_control": "private, no-store, max-age=0"
+    },
+    {
+      "path": "/api/finance/card-records",
+      "status": 401,
+      "elapsed_ms": 229,
+      "cache_control": "private, no-store, max-age=0"
+    },
+    {
+      "path": "/api/finance/spend",
+      "status": 403,
+      "elapsed_ms": 249,
+      "cache_control": "private, no-store, max-age=0"
+    },
+    {
+      "path": "/auth/callback",
+      "status": 303,
+      "elapsed_ms": 258,
+      "cache_control": "private, no-store, max-age=0"
+    },
+    {
+      "path": "/auth/callback?code=PH28_SYNTHETIC_INVALID",
+      "status": 303,
+      "elapsed_ms": 229,
+      "cache_control": "private, no-store, max-age=0"
+    },
+    {
+      "path": "/api/auth/google",
+      "status": 303,
+      "elapsed_ms": 248,
+      "cache_control": "private, no-store, max-age=0"
+    }
+  ],
+  "oauth": "initiation only; successful Google exchange NOT RUN"
+}

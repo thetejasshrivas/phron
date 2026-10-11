@@ -1,0 +1,92 @@
+{
+  "origin": "https://phron-eight.vercel.app",
+  "release": "f485726",
+  "checks": [
+    {
+      "name": "ordinary SSR session opens Onboarding; consent save and persisted starter allocations",
+      "status": "PASS",
+      "elapsed_ms": 8022
+    },
+    {
+      "name": "User B ordinary onboarding",
+      "status": "PASS",
+      "elapsed_ms": 959
+    },
+    {
+      "name": "manual spend UI drains bucket/STS; refresh persists; exact paise",
+      "status": "NOT RUN",
+      "reason": "focused provider diagnostic"
+    },
+    {
+      "name": "tracked card purchase reserve, partial payment and stable-ID replay",
+      "status": "NOT RUN",
+      "reason": "focused provider diagnostic"
+    },
+    {
+      "name": "User B denied User A rows and forged bucket mutation",
+      "status": "NOT RUN",
+      "reason": "focused provider diagnostic"
+    },
+    {
+      "name": "live configured provider extraction: bounded synthetic text only",
+      "status": "FAIL",
+      "error_type": "AssertionError",
+      "elapsed_ms": 2567
+    },
+    {
+      "name": "privacy-intercept fallback opens manual entry without losing capture",
+      "status": "NOT RUN",
+      "reason": "focused provider diagnostic"
+    },
+    {
+      "name": "Settings confirmation UI + caller account API purge; 23 tables; retained session denied",
+      "status": "NOT RUN",
+      "reason": "focused provider diagnostic"
+    },
+    {
+      "name": "User B caller deletion and complete cleanup",
+      "status": "NOT RUN",
+      "reason": "focused provider diagnostic"
+    },
+    {
+      "name": "A admin cleanup fallback",
+      "status": "PASS"
+    },
+    {
+      "name": "B admin cleanup fallback",
+      "status": "PASS"
+    }
+  ],
+  "network": [
+    {
+      "actor": "A",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 748
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/state",
+      "method": "GET",
+      "status": 200,
+      "elapsed_ms": 1048
+    },
+    {
+      "actor": "B",
+      "path": "/api/onboarding",
+      "method": "POST",
+      "status": 200,
+      "elapsed_ms": 959
+    },
+    {
+      "actor": "A",
+      "path": "/api/finance/ingest",
+      "method": "POST",
+      "status": 200,
+      "elapsed_ms": 2565
+    }
+  ],
+  "auth": "Admin-created password sessions + supported SSR cookie adapter; Google exchange deferred to phone",
+  "trace": "sanitized step/status/timing log only; no raw cookies, passwords, IDs, request bodies or tokens persisted"
+}

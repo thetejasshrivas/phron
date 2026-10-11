@@ -1,3 +1,9 @@
+# PH28 Production smoke — 2026-10-11 IST
+
+Release f485726 at canonical Production URL,19 PASS/1 FAIL composite checks. Public runner exit0 (11PASS); authenticated runner exit1 (8PASS/1FAIL); focused provider diagnostic exit1, preserves original run. Successful extraction fails with typed providers_failed; manual fallback available. Live onboarding/save-refresh, card accounting/replay,23-table cross-user read denial/forged mutation rejection,23-table caller purge and retained-session denial PASS. Google initiation/PKCE only; password SSR session is not Google completion. Real-phone evidence NOT RUN. [Executed report](evidence/PH28/PRODUCTION_SMOKE.md) and sanitized step/network JSON logs. PH28/G6 incomplete; no raw secret-bearing traces or existing-user financial rows persisted.
+
+---
+
 # PH27 authorized remote migration execution — 2026-10-11 IST
 
 22/22pending pinned SQL operations success:true;24logical entries mapped to actual server versions, initial2unchanged. [Report](evidence/PH27/REMOTE_ROLLOUT.md). Clean local replay oracle under observed hostedservice_role defaults matches remote100%:26tables/197columns/183constraints/48policies/54functions/4triggers/405grants/73indexes. Exact54definition hashes, ACL ordering only normalized.23/23publicRLS,69FKvalid, Auth cascade reaches23public+2privatepilot; singleton excluded correctly. Anonymous42501denial and authenticated/noidentity0profile assertion PASS. No actual remote financial mutation/account purge/session journey this step. Existing1user/1profile/4transactions/0payments counts preserved; no per-row equality claim.

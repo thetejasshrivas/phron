@@ -1,3 +1,9 @@
+# PH28 live smoke PARTIAL — 2026-10-11 IST
+
+Production f485726 / dpl_45eURazDJvi9CKyuCMVWRYKzkW23 remains live at https://phron-eight.vercel.app. Live public/authenticated smoke: 19 composite checks PASS,1 FAIL. Onboarding/save-refresh, card reserve/payment/retry, ordinary A/B isolation and synthetic caller purge pass. Real extraction returns typed providers_failed fallback twice; successful external parsing unproven. Google initiation/PKCE passes; complete Google flow and phone proof assigned to Tejas. [Exact evidence and phone checklist](evidence/PH28/PRODUCTION_SMOKE.md). PH28 partial; G6/G0B/D25 pending. No app/DB/config change or paid upgrade; disposable users cleaned up.
+
+---
+
 # PH27 Production deployment COMPLETE — 2026-10-11 IST
 
 Release `f4857268a7bc2d31c7f006ae8c098ce63e33bf26` (accepted base `36ca738`) deployed with explicit Tejas authorization. Deployment `dpl_45eURazDJvi9CKyuCMVWRYKzkW23`, Production / READY, command exit 0. Canonical URL **https://phron-eight.vercel.app**; unique URL https://phron-dr59yyli6-tts-1e31.vercel.app. CLI inspect confirms both phron-eight.vercel.app and phron-tts-1e31.vercel.app aliases. Source hashes and 103-file upload manifest pass; exact runtime environment names and Supabase Production callback verified. No secrets revealed, remote SQL replay or paid upgrade.

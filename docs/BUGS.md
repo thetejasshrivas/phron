@@ -1,3 +1,9 @@
+# PH28-AI-01 / P1 — OPEN — 2026-10-11 IST
+
+Live synthetic capture against Production f485726 returns HTTP200 manual_fallback / providers_failed twice. Successful provider extraction required by PH28 is unproven; safe manual fallback remains available. Exact upstream cause unknown (account/key/model/adapter needs verification); do not label it a proven code defect or quota issue. Reproduce with a fresh synthetic onboarded user and bounded explicit-cash merchant capture accepting the provider notice. [Evidence](evidence/PH28/PRODUCTION_SMOKE.md), [typed result](evidence/PH28/provider-result.json). Next: verify free provider account/key restrictions/quota without exposing keys, then targeted rerun. No application fixes performed during QA.
+
+---
+
 # PH26 current disposition — 2026-10-11 IST
 
 | ID | Status | Actual evidence |

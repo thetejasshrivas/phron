@@ -1,3 +1,11 @@
+# PH28 / QA live smoke — PARTIAL, 2026-10-11 IST
+
+Production https://phron-eight.vercel.app / f485726 / dpl_45eURazDJvi9CKyuCMVWRYKzkW23.19 composite checks PASS,1FAIL. Live onboarding/manual save-refresh/card partial settlement + durable duplicate prevention/ordinary A-B isolation/caller purge pass.23 public tables empty for deleted synthetic caller, retained session denied; all four disposable fixtures cleaned up. Service role limited to setup, cleanup and scoped purge diagnostics; all normal mutations ordinary user. Google initiation/PKCE passes; complete Google consent/exchange assigned by Tejas to real phone, not claimed by password-session test.
+
+PH28-AI-01 OPEN: real external adapters yield providers_failed typed fallback twice. Privacy-intercept manual dialog verified; no successful external parsing claim. [Full evidence and exact phone checklist](../evidence/PH28/PRODUCTION_SMOKE.md). Next one action: Tejas checks Gemini free API/key restrictions/model quota statuses privately, then diagnose Groq if needed and rerun focused test. G6/G0B/D25 pending; no app/config/DB repair or pilot launch. Source frozen and unrelated scratch untouched. Resume from verified files; do not repeat cleanup against pre-existing accounts.
+
+---
+
 # PH25 → PH26 handoff — 2026-10-11 IST
 
 Audited repository W:/AI Product Sprint/Phron, main028c332ceed636b1402b902f5fe31a1927257c1b. QA evidence commit is separate: resolve `git log -1 --format=%H -- docs/evidence/PH25/RESULT.md`. One active writer; no application/dependency/formula/migration/remote changes; source hashes verified. Scratch New Text Document.txt untouched. PH25 audit finished with findings; G5/G0B OPEN, V3 PENDING. PH26 has NOT begun.
