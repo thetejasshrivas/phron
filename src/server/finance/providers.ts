@@ -31,6 +31,20 @@ interface ProviderOptions {
   readonly fetcher?: typeof fetch;
 }
 class RateLimited extends Error {}
+/** Fixed diagnostic fields only; never emit upstream text, input, identities or keys. */
+export function providerFailureDiagnostic(provider:'gemini'|'groq',httpStatus:number,body:unknown) {
+  const error=body && typeof body==='object' ? (body as {error?:{message?:unknown;code?:unknown}}).error : undefined;
+  const message=typeof error?.message==='string'?error.message:'';
+  const reason=/API key not valid|invalid.api.key|invalid.*API key/i.test(message)?'API_KEY_INVALID'
+    : /additionalProperties|Unknown name|Invalid JSON payload/i.test(message)?'REQUEST_SCHEMA_REJECTED'
+    : /model.*not found|model.*does not exist|model.*decommissioned/i.test(message)?'MODEL_UNAVAILABLE'
+    : httpStatus===429?'RATE_LIMITED':httpStatus===401?'UNAUTHENTICATED':httpStatus===403?'PERMISSION_DENIED':'PROVIDER_HTTP';
+  return {event:'provider_failure',provider,httpStatus,reason};
+}
+async function reportHttpFailure(provider:'gemini'|'groq',response:Response) {
+  let body:unknown;try{body=await boundedResponse(response);}catch{ /* report status only */ }
+  console.warn(JSON.stringify(providerFailureDiagnostic(provider,response.status,body)));
+}
 const output = (transactions: readonly ExtractedTransaction[], provider: 'gemini' | 'groq'): ExtractionResult => ({ kind: 'extracted', provider, transactions });
 
 async function boundedResponse(response: Response): Promise<unknown> {
@@ -49,8 +63,7 @@ async function requestGemini(text: string, apiKey: string, temperature: number, 
     body: JSON.stringify({ contents: [{ role: 'user', parts: [{ text: `${systemPrompt}\n${userPrompt(text)}` }] }],
       generationConfig: { temperature, maxOutputTokens: 300, responseMimeType: 'application/json', responseSchema: extractionSchema } }),
   });
-  if (response.status === 429) throw new RateLimited();
-  if (!response.ok) throw new TypeError('PROVIDER_HTTP');
+  if (!response.ok) {await reportHttpFailure('gemini',response);if(response.status===429)throw new RateLimited();throw new TypeError('PROVIDER_HTTP');}
   const body = await boundedResponse(response) as { candidates?: Array<{ content?: { parts?: Array<{ text?: unknown }> } }> };
   const value = body.candidates?.[0]?.content?.parts?.[0]?.text;
   if (typeof value !== 'string') throw new TypeError('INVALID_PROVIDER_RESPONSE');
@@ -67,8 +80,7 @@ async function requestGroq(text: string, apiKey: string, fetcher: typeof fetch):
         { role: 'user', content: userPrompt(text) },
       ] }),
   });
-  if (response.status === 429) throw new RateLimited();
-  if (!response.ok) throw new TypeError('PROVIDER_HTTP');
+  if (!response.ok) {await reportHttpFailure('groq',response);if(response.status===429)throw new RateLimited();throw new TypeError('PROVIDER_HTTP');}
   const body = await boundedResponse(response) as { choices?: Array<{ message?: { content?: unknown } }> };
   const value = body.choices?.[0]?.message?.content;
   if (typeof value !== 'string') throw new TypeError('INVALID_PROVIDER_RESPONSE');

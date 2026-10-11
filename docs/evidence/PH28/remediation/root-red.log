@@ -1,0 +1,25 @@
+
+> phron@0.1.0 test:unit
+> jest --config jest.config.mjs --selectProjects unit --runInBand --runTestsByPath tests/unit/ui/ph28-root-entry.test.ts
+
+Running one project: unit
+FAIL unit tests/unit/ui/ph28-root-entry.test.ts
+  ● root exposes the trusted Google POST entry instead of the skeleton placeholder
+
+    Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: object.
+
+      13 |
+
+      at renderElement (node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6446:15)
+      at retryNode (node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:6783:21)
+      at performWork (node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:7919:19)
+      at startWork (node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:8807:7)
+      at renderToStringImpl (node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:8933:7)
+      at process.env.NODE_ENV.exports.renderToStaticMarkup (node_modules/react-dom/cjs/react-dom-server-legacy.node.development.js:10426:14)
+      at Object.<anonymous> (tests/unit/ui/ph28-root-entry.test.ts:15:51)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.614 s
+Ran all test suites within paths "tests/unit/ui/ph28-root-entry.test.ts".

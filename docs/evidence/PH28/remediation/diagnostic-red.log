@@ -1,0 +1,19 @@
+
+> phron@0.1.0 test:unit
+> jest --config jest.config.mjs --selectProjects unit --runInBand --runTestsByPath tests/unit/ui/ph28-provider-diagnostic.test.ts
+
+Running one project: unit
+FAIL unit tests/unit/ui/ph28-provider-diagnostic.test.ts
+  ● diagnostics report invalid credentials without copying raw upstream text
+
+    TypeError: (0 , _providers.providerFailureDiagnostic) is not a function
+
+
+
+      at Object.<anonymous> (tests/unit/ui/ph28-provider-diagnostic.test.ts:14:61)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.33 s
+Ran all test suites within paths "tests/unit/ui/ph28-provider-diagnostic.test.ts".

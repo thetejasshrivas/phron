@@ -1,0 +1,22 @@
+
+> phron@0.1.0 test:unit
+> jest --config jest.config.mjs --selectProjects unit --runInBand --runTestsByPath tests/unit/ui/ph28-root-entry.test.ts
+
+Running one project: unit
+FAIL unit tests/unit/ui/ph28-root-entry.test.ts
+  ● root exposes the trusted Google POST entry instead of the skeleton placeholder
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected substring: "action=\"/api/auth/google\""
+    Received string:    "<main><header><span class=\"wordmark\">PHRON</span><span class=\"availability\">Coming soon</span></header><section aria-labelledby=\"intro\"><p class=\"eyebrow\">Money, in perspective.</p><h1 id=\"intro\">More clarity.<br/><em>Less money noise.</em></h1><p class=\"intro\">A calmer way to think about everyday money.</p></section><footer>A little perspective goes a long way.</footer></main>"
+
+
+
+      at Object.<anonymous> (tests/unit/ui/ph28-root-entry.test.ts:18:32)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.34 s
+Ran all test suites within paths "tests/unit/ui/ph28-root-entry.test.ts".
