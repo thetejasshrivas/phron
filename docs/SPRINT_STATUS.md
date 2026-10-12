@@ -6,7 +6,7 @@ prd: 1.2.1-FROZEN
 repository_path: "W:/AI Product Sprint/Phron"
 branch: main
 commit: d90c2c5f1bc52bc5e61c1c4efeb80dc012ce237a # canonical verified submission application; documentation HEAD may follow; deployed application separately recorded
-working_tree_state: PH31 protocol/schedule committed locally; submitted revision3f946ba and productiond4c7f8a preserved; no push/deploy; scratch untouched
+working_tree_state: pilot protocol and briefing/consent documentation committed/pushed; no code/deploy changes; scratch untouched
 dirty_files: ["New Text Document.txt (untouched user work)"] # resolve current HEAD/status on resume
 active_chat: PHRON-00 Lead / PH31 preparation single active writer
 phase: "7 (21-Day Behavioral Pilot Preparation)"
@@ -20,12 +20,15 @@ open_gates: [G0B]
 founder_reviews: {V1: PASSED, V2: ACCEPTED, V3: ACCEPTED, PH30B_PAL04: ACCEPTED}
 founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda4eb", V3: "PHRON-V3-01 /36ca7380dfb2235d5556242f59c93da18c98bf04 — ACCEPTED 2026-10-11"}
 blocking_decisions: [] # scoped fixes verified; residual tooling/distributed-limit risks remain documented for release review
-latest_evidence: docs/PILOT_PROTOCOL.md
+latest_evidence: docs/PILOT_INVITATION.md
+pilot_briefing: docs/PILOT_INVITATION.md; DRAFT_COPY_PASTE_ONLY; NO_INVITATIONS_SENT
+pilot_consent: NOT_COLLECTED; PRIVATE_STORAGE_RETENTION_PENDING
+pilot_ai_scope: REAL_EXPENSES_MANUAL_ONLY_UNDER_D08; REAL_DATA_PROVIDER_CALLS_NOT_AUTHORIZED
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: READY_G6_PASSED, production_url: "https://phron-eight.vercel.app", production_id: dpl_3B3mud631WjY4ejbEFqYZLJFMRd5, production_commit: d4c7f8a136505476440c8be135f8e3545f65ef80, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
 migration_state: ALL24_REMOTE_APPLIED; FIRST2_PRESERVED; NEXT22_AUTHORIZED_APPLIED_IN_PINNED_ORDER; CLEAN_REPLAY_PARITY100_PASS
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers", "2026-10-10: Tejas approved PH21 typed contracts, server/API handlers, local-only migration and integration tests for goals, reconciliation, buckets and authenticated account deletion; no remote rollout"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Tejas confirms the consented cohort and private measurement arrangements for October20 Day0
+next_action: Tejas fills private research retention/access fields and confirms consented cohort; resolve real-data AI scope separately
 submission_status: SUBMITTED_LOCKED_OPERATOR_CONFIRMED_2026_10_12
 submission_commit: 3f946ba00917b330cfbb5906e4d4124afe1916ff
 pilot_observation_state: NOT_STARTED

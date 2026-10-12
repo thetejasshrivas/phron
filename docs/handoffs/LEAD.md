@@ -1,3 +1,9 @@
+# PH31 briefing and consent kit — 2026-10-12 IST
+
+Created [PILOT_INVITATION](../PILOT_INVITATION.md),founder copy/paste only,no messages or enrollment. Dates/freeze unchanged;PH31IN_PROGRESS,observation NOT_STARTED. D08 prohibits real personal financial-data provider calls; briefing uses manual real-expense entry,synthetic AI demos only pending separate approval. Salary/debt/balances/identity outbound exclusions,provider retention caveats and immediate-on-demand Settings deletion with confirmed-server/backup/provider boundaries included. Private consent/access/retention fields require founder completion; no replies in public Git. Protocol/read/source5PASS,docs-only,no app tests or production change. Commit/push explicitly authorized;resolve final HEAD/upstream. Scratch untouched. Next:Tejas fills private research retention arrangement and confirms consented cohort.
+
+---
+
 # PH31 pinned observation schedule — 2026-10-12 IST
 
 Founder pins evaluator freeze through October19,2026 23:59 IST; no production code deployment until after this cutoff, with no automatic deployment authorization. Day0 October20,Day7 October27,Day14 November3,Day21/debrief November10; all IST. Calendar offsets independently pass. [Protocol](../PILOT_PROTOCOL.md) and Sprint phase7/currentPH31/IN_PROGRESS updated; observation NOT_STARTED. Actual cohort/consent/measurement route remain pending. Documentation-only local commit; no push/deploy/reminder/enrollment. Submitted3f946ba/live d4c7f8a preserved; scratch untouched. Source5/5 and diff checks pass; app tests NOT_RUN for docs-only work. Next:Tejas confirms consented cohort/private measurement arrangements for Day0. Prior preparation handoff below is historical where dates differ.
