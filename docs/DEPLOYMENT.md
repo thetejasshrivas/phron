@@ -1,3 +1,9 @@
+# PH30B accepted wordmark production — READY
+
+2026-10-11 IST. Deployed synchronized d4c7f8a136505476440c8be135f8e3545f65ef80,accepted application wordmark d90c2c5,using existingCLI62.4.0 and tts-1e31/phron. Exit0;production READY/dpl_3B3mud631WjY4ejbEFqYZLJFMRd5;unique https://phron-jre7usvyc-tts-1e31.vercel.app;alias https://phron-eight.vercel.app. API GitHub/release metadata match exactSHA. Root/health200,exacthealthJSON/no-store,and actual accessible PHRON/deep-pine फ़₹on DOM at375/1280 PASS. [Executed evidence](evidence/PH30B/deployment/RESULT.md). No DB/account/provider changes; prior deployment retained as rollback reference. Historical records below.
+
+---
+
 # PH28 COMPLETE / G6 PASSED — 2026-10-11 IST
 
 Production application e50cf4317c8d4eb9e5336f6d2189e61f66c1a5fa, deployment dpl_5ugpr2a6QNk5ZhiydzSHBoCogPiX, is Ready at https://phron-eight.vercel.app (deploy/inspect exit0). Founder-approved D25-PRIMARY-v1 / D25-FALLBACK-v1 activate gemini-3.8-flash / openai/gpt-oss-20b after successful Free-account synthetic calls. Both retain temperature0.1, 300tokens, 4s/provider, strict validation, extraction-only privacy and manual fallback. No paid upgrade, migration, dependency or financial formula change.

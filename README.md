@@ -12,7 +12,7 @@ The closed loop is **declare salary, obligations and cash → see Daily/Weekly S
 
 Canonical verified application: **`d90c2c5f1bc52bc5e61c1c4efeb80dc012ce237a`** (PH30B-PAL-04). Tejas explicitly accepted the deep-pine/parchment/amber फ़₹on wordmark. Published on [GitHub](https://github.com/thetejasshrivas/phron); [verification](docs/evidence/PH30B/polish/PALETTE_RESULT.md):462 unit,152 mocked integration,2 default Playwright tests,lint/typecheck/build PASS. Accessible brand remains PHRON. Documentation-pointer commits may follow this application revision.
 
-Production remains [https://phron-eight.vercel.app](https://phron-eight.vercel.app), deployment `dpl_5ugpr2a6QNk5ZhiydzSHBoCogPiX` (e50cf43). Read-only Vercel inspection reports Ready; root/health200 and exact health JSON/no-store verified2026-10-11. The accepted wordmark is **not yet deployed**. Git synchronization does not imply a production rollout.
+Production is [https://phron-eight.vercel.app](https://phron-eight.vercel.app), deployment `dpl_3B3mud631WjY4ejbEFqYZLJFMRd5` /live commit `d4c7f8a136505476440c8be135f8e3545f65ef80`, containing the accepted wordmark. CLI exit0 and read-only deployment API report Ready with matching GitHub/release metadata; root/health200/exactJSON/no-store and actual accessible PHRON/फ़₹on DOM at375/1280 PASS. [Release proof](docs/evidence/PH30B/deployment/RESULT.md).
 
 ## Deterministic engine and bounded AI
 

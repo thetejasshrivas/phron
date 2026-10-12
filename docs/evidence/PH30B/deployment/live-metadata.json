@@ -1,0 +1,13 @@
+{
+  "id": "dpl_3B3mud631WjY4ejbEFqYZLJFMRd5",
+  "url": "phron-jre7usvyc-tts-1e31.vercel.app",
+  "target": "production",
+  "state": "READY",
+  "releaseCommit": "d4c7f8a136505476440c8be135f8e3545f65ef80",
+  "gitCommitSha": null,
+  "githubCommitSha": "d4c7f8a136505476440c8be135f8e3545f65ef80",
+  "aliases": [
+    "phron-eight.vercel.app",
+    "phron-tts-1e31.vercel.app"
+  ]
+}

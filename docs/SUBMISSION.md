@@ -6,9 +6,13 @@ Prepared 2026-10-11 IST from verified records. **PH29/PH30 COMPLETE; G7 PASSED f
 
 **`d90c2c5f1bc52bc5e61c1c4efeb80dc012ce237a`** is the canonical verified application revision for the submission package. Tejas explicitly accepted PH30B-PAL-04 (फ़₹on: deep pine, parchment edge, warm amber shadow) and authorized main publication. Initial push completed exit0; remote main matched this full SHA. Documentation-pointer commits follow without changing application code. [Publication evidence](evidence/PH30B/PUBLICATION.md).
 
-Public repository remains [https://github.com/thetejasshrivas/phron](https://github.com/thetejasshrivas/phron); GitHub unauthenticated metadata confirms private=false/main. Production remains [https://phron-eight.vercel.app](https://phron-eight.vercel.app), Ready on deployment `dpl_5ugpr2a6QNk5ZhiydzSHBoCogPiX` /application e50cf43. Root/health200, exact health JSON and no-store rechecked2026-10-11. **d90c2c5 is pushed, not yet deployed.** No production deployment was authorized or executed in this publication task.
+Public repository remains [https://github.com/thetejasshrivas/phron](https://github.com/thetejasshrivas/phron); GitHub unauthenticated metadata confirms private=false/main. Production is [https://phron-eight.vercel.app](https://phron-eight.vercel.app), READY on deployment `dpl_3B3mud631WjY4ejbEFqYZLJFMRd5` /live commit `d4c7f8a136505476440c8be135f8e3545f65ef80`, containing accepted d90c2c5. Explicitly authorized rollout completed exit0;GitHub/release metadata match SHA. Root/health200,exactJSON/no-store and live accessible wordmark375/1280 PASS. [Deployment evidence](evidence/PH30B/deployment/RESULT.md).
 
 Latest accepted wordmark checks:462 unit +152 mocked integration +2 default Playwright tests,lint/typecheck/build PASS;13 contrast pairs and18 isolated responsive/state/reduced-motion component previews PASS. Lettering contrast11.1:1light/15.2:1dark. [Exact scope/limitations](evidence/PH30B/polish/PALETTE_RESULT.md). Earlier financial/production evidence below stays scoped to its executed revisions.
+
+## Final package documentation sign-off — 2026-10-12 IST
+
+Tejas authorizes final deployment-evidence commit and main push. Submission package documentation is finalized; production remains verified d4c7f8a136505476440c8be135f8e3545f65ef80, with accepted d90c2c5 wordmark. The final repository documentation commit follows the live release; resolve it with git rev-parse HEAD and compare origin/main. Public application/repository links and docs/DEMO_SCRIPT.md are ready. Actual external submission remains NOT_SUBMITTED; no video recording, new phone test or pilot start is inferred.
 
 ## Assignment and access
 
@@ -36,10 +40,11 @@ Local documentation links are checked. GitHub repository visibility is Public by
 | Canonical verified submission application /accepted wordmark | d90c2c5f1bc52bc5e61c1c4efeb80dc012ce237a |
 | Accepted V3 base | 36ca7380dfb2235d5556242f59c93da18c98bf04 |
 | Initial candidate | f4857268a7bc2d31c7f006ae8c098ce63e33bf26 |
-| Live corrected application | e50cf4317c8d4eb9e5336f6d2189e61f66c1a5fa |
+| Live wordmark release | d4c7f8a136505476440c8be135f8e3545f65ef80 |
+| Prior PH28 live application /rollback reference | e50cf4317c8d4eb9e5336f6d2189e61f66c1a5fa |
 | G6 evidence | 618b2fe314fc18dbc27fe86b913406bcd6e73efe |
 
-PH29 is documentation only, following 618b2fe; resolve its final hash with git log -1. It is not a new deployed application. Production ID dpl_5ugpr2a6QNk5ZhiydzSHBoCogPiX, scope tts-1e31/phron; unique URL https://phron-kk54jowrv-tts-1e31.vercel.app. All24 ordered remote migrations/parity are pinned in DEPLOYMENT; none ran in PH29.
+PH29 is documentation only, following 618b2fe; resolve its final hash with git log -1. It is not a new deployed application. Current Production ID dpl_3B3mud631WjY4ejbEFqYZLJFMRd5,scope tts-1e31/phron;unique URL https://phron-jre7usvyc-tts-1e31.vercel.app. PH30B rollout updates the accepted visual revision without schema changes. All24 ordered remote migrations/parity are pinned in DEPLOYMENT; none ran in PH29.
 
 ## Verification summary — counts are not additive
 
