@@ -23,19 +23,21 @@ blocking_decisions: [] # scoped fixes verified; residual tooling/distributed-lim
 latest_evidence: docs/PILOT_PRELAUNCH.md
 pilot_prelaunch_checklist: docs/PILOT_PRELAUNCH.md; PREPARED_OFFLINE; OPERATIONAL_CHECKS_PENDING
 pilot_briefing: docs/PILOT_INVITATION.md; DRAFT_COPY_PASTE_ONLY; NO_INVITATIONS_SENT
-pilot_consent: NOT_COLLECTED; ENCRYPTED_LOCAL_FOUNDER_ONLY_POLICY_SET; VAULT_MECHANISM_VERIFIED_KEY_BACKUP_PENDING
+pilot_consent: NOT_COLLECTED; ENCRYPTED_LOCAL_FOUNDER_ONLY_POLICY_SET; VAULT_MECHANISM_VERIFIED; FOUNDER_KEY_RECOVERY_PASS_REPORTED
 pilot_storage_check: VERIFIED_AES256_CMS_VAULT_ONLY; DIRECTORY_EFS_UNSUPPORTED; BITLOCKER_NOT_VERIFIED
 pilot_private_notes_path: docs/pilot/notes
-pilot_vault_protocol: docs/PILOT_VAULT.md; CIPHERTEXT_ONLY; SYNTHETIC_RECOVERY_PASS; REAL_KEY_OFFLINE_BACKUP_PENDING
+pilot_vault_protocol: docs/PILOT_VAULT.md; CIPHERTEXT_ONLY; SYNTHETIC_RECOVERY_PASS
+pilot_founder_key_recovery: VERIFIED_PASS_FOUNDER_REPORTED_2026_10_12; NOT_INDEPENDENTLY_RERUN
+pilot_gate_items: {Item1: VERIFIED_VAULT_ONLY, Item1b: VERIFIED_PASS_FOUNDER_REPORTED, Item2: PENDING_CONSENT_IDS, Item3: PENDING_EVENT_SMOKE, Item4: PENDING_SAFETY_READINESS}
 pilot_synthetic_recovery_drill: VERIFIED_PASS_2026_10_12; docs/evidence/PH31/RECOVERY_DRILL.md
 pilot_qualitative_notes_purge_by_ist: 2026-12-10
-pilot_day0_readiness: DOCUMENTATION_READY; FOUNDER_RECOVERY_DRILL_COHORT_CONSENT_DAY0_CHECKS_PENDING
+pilot_day0_readiness: DOCUMENTATION_READY; FOUNDER_RECOVERY_REPORTED_COMPLETE; COHORT_CONSENT_EVENT_SMOKE_SAFETY_PENDING
 pilot_ai_scope: REAL_EXPENSES_MANUAL_ONLY_UNDER_D08; REAL_DATA_PROVIDER_CALLS_NOT_AUTHORIZED
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: READY_G6_PASSED, production_url: "https://phron-eight.vercel.app", production_id: dpl_3B3mud631WjY4ejbEFqYZLJFMRd5, production_commit: d4c7f8a136505476440c8be135f8e3545f65ef80, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
 migration_state: ALL24_REMOTE_APPLIED; FIRST2_PRESERVED; NEXT22_AUTHORIZED_APPLIED_IN_PINNED_ORDER; CLEAN_REPLAY_PARITY100_PASS
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers", "2026-10-10: Tejas approved PH21 typed contracts, server/API handlers, local-only migration and integration tests for goals, reconciliation, buckets and authenticated account deletion; no remote rollout"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Tejas backs up/restores the actual founder vault key privately before real notes; then cohort consent/Day0 checks
+next_action: Item2 Tejas records participant consent and F00/P01–P10 assignment privately;no tooling invitations
 submission_status: SUBMITTED_LOCKED_OPERATOR_CONFIRMED_2026_10_12
 submission_commit: 3f946ba00917b330cfbb5906e4d4124afe1916ff
 pilot_observation_state: NOT_STARTED

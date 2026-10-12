@@ -1,6 +1,6 @@
 # PH31 pilot prelaunch checklist
 
-Prepared2026-10-12 IST. Status: CHECKLIST_READY / OPERATIONAL_CHECKS_PENDING. This is an offline preparation document, not evidence of completed encryption, enrollment, telemetry or safety tests. Authority: [Protocol](PILOT_PROTOCOL.md), [Invitation/consent](PILOT_INVITATION.md), PRD §§26/33–35 and [D24-v1](amendments/D24-v1.md). No personal roster, research notes or consent responses belong in this public file.
+Prepared2026-10-12 IST. Status: ITEMS1_AND1B_VERIFIED / ITEMS2_TO4_PENDING. This records verified vault encryption,automated synthetic drill evidence and separately founder-reported actual-key recovery;enrollment,telemetry and safety checks remain pending. Authority: [Protocol](PILOT_PROTOCOL.md), [Invitation/consent](PILOT_INVITATION.md), PRD §§26/33–35 and [D24-v1](amendments/D24-v1.md). No personal roster, research notes or consent responses belong in this public file.
 
 ## Dates and freeze
 
@@ -9,7 +9,7 @@ Prepared2026-10-12 IST. Status: CHECKLIST_READY / OPERATIONAL_CHECKS_PENDING. Th
 - Day0 October20; observation Days1–21 October21–November10; reconciliation October27/November3; debrief November10; qualitative-note purge by December10.
 - No enrollment, invites, messages, reminders, provider calls, DB changes or code deployments are performed by preparing this checklist. Real financial entries remain manual underD08; declined provider processing must not be routed externally. Synthetic activity is labeled and excluded from real pilot metrics.
 
-## A. Verify founder encrypted storage offline
+## Item 1. Founder encrypted storage
 
 - [x] Founder designated docs/pilot/notes; directory exists and the entire path is Git-ignored. This explicit inside-repository designation supersedes the earlier outside-repository recommendation. Store coded notes/identity mapping only inside the encrypted vault; no cloud sync.
 - [x] Founder local notes encryption mechanism VERIFIED for the AES-256-CBC CMS vault, using the owner-profile private key. EFS attempt failed; the directory/volume are not verified encrypted. Only ciphertext archive storage is approved. See [vault protocol](PILOT_VAULT.md); never write loose plaintext notes.
@@ -17,10 +17,10 @@ Prepared2026-10-12 IST. Status: CHECKLIST_READY / OPERATIONAL_CHECKS_PENDING. Th
 - [ ] Record privately the checked date, verifier, volume/container identifier and encrypted-at-rest/protection result. Public readiness gets only a PASS/FAIL/PENDING flag and sanitized evidence reference. Latest verification2026-10-12: AES-256 vault encryption PASS; earlier BitLocker/path diagnostics below are historical. Private-key backup/restore remains pending.
 - [ ] Agree participant withdrawal/removal handling and purge all pilot qualitative notes/responses/local copies within30 days of November10—no later than December10 IST. Record actual purge only when done; no automatic deletion job was scheduled.
 
-- [x] Item1b synthetic key backup/recovery drill — **PASS / VERIFIED**. Temporary test key exported to encrypted PFX,removed,restored ephemerally and used explicitly to decrypt a synthetic message;wrong key rejected,no plaintext artifacts,all temporary materials cleaned. [Executed evidence](evidence/PH31/RECOVERY_DRILL.md).
-- [ ] Actual founder vault key offline backup/recovery — **NOT_VERIFIED**. The temporary-key simulation does not substitute for protecting/restoring the real key before research collection. [Private procedure](PILOT_VAULT.md).
+- [x] Supporting synthetic key backup/recovery drill — **PASS / VERIFIED**. Temporary test key exported to encrypted PFX,removed,restored ephemerally and used explicitly to decrypt a synthetic message;wrong key rejected,no plaintext artifacts,all temporary materials cleaned. [Executed evidence](evidence/PH31/RECOVERY_DRILL.md).
+- [x] **Item1b: Founder Vault Key Backup & Recovery Verification — VERIFIED PASS (FOUNDER REPORTED).** Tejas requests recording founder key-drill completion on2026-10-12. This is an operator completion record,not an automated rerun or independent inspection of the real offline backup. No password,PFX,private key,backup location or private evidence was requested/published. The automated synthetic drill remains separately evidenced in b84c872;it is not the basis for claiming actual-key recovery. [Private procedure](PILOT_VAULT.md).
 
-## B. Private roster and consent sheet template
+## Item 2. Participant consent and private ID assignment — PENDING
 
 Copy this **blank** template to encrypted founder storage before filling it. Codes are pseudonyms, not proof that data is anonymous. Do not commit names, contact details, consent timestamps, financial state or completed rows. F00 is the founder; P01–P10 are available friend slots, not assigned participants. Enroll5–10 friends plus founder (6–11 total); unused slots do not count toward any denominator.
 
@@ -42,7 +42,7 @@ Copy this **blank** template to encrypted founder storage before filling it. Cod
 - [ ] Verify explicit operator/admin enrollment into the existing safety cohort; ordinary users cannot enroll themselves. Private code is not a caller-submitted financial user_id or database identity override.
 - [ ] Record actual cohort, founder separately and fixed onboarded denominator after Day0. Preserve late joins, withdrawals, assistance and missingness; never retrospectively remove low-activity users to improve persistence.
 
-## C. Day0 privacy-safe event verification
+## Item 3. Day0 privacy-safe telemetry/event smoke — PENDING
 
 These are planned checks, not a request to deploy instrumentation. Before real collection, identify the existing measurement sink and access/retention controls. If telemetry is absent, use a consented encrypted-local daily observation sheet and mark automated telemetry NOT_AVAILABLE; do not fabricate events or claim equivalent automated coverage. A new collector, migration or API would require separate review/authorization after the freeze.
 
@@ -56,7 +56,7 @@ These are planned checks, not a request to deploy instrumentation. Before real c
 - [ ] Inspect the actual event payload/sink boundary using synthetic sensitive sentinels: no salary/income/balance/debt, amount/rupee figure, merchant, spend string, email, UUID, token or identity mapping leaks. Keep private cohort code mapping off external telemetry.
 - [ ] Confirm measurement coverage/missing data and the Day0 denominator before launch. Log assistance separately. Week2/3 persistence uses distinct transaction-log dates in Oct28–Nov3 and Nov4–10; no early completed-persistence claim.
 
-## D. Hard next-cycle commitment kill-switch review
+## Item 4. Hard commitment kill-switch readiness — PENDING
 
 Monitor every **explicitly enrolled** participant who has accepted a next-cycle commitment. Qualifying evidence is a later transition into StateC, not an unchanged pre-existing StateC snapshot. Count each participant once. At ≥2 distinct qualifying participants, the persistent global switch permanently disables proposing and accepting NEW commitments; this is temporal monitoring, not proof of causation.
 
@@ -73,8 +73,8 @@ Monitor every **explicitly enrolled** participant who has accepted a next-cycle 
 | --- | --- | --- |
 | Dates/briefing/consent wording | PREPARED | Documents reviewed |
 | Encrypted-at-rest notes storage | VERIFIED_AES256_CMS_VAULT_ONLY | Use ciphertext-only workflow; complete private-key backup/restore before real notes |
-| Synthetic backup/recovery drill (item1b) | PASS /VERIFIED | Executed temporary-key simulation;no plaintext artifacts |
-| Actual founder key offline backup/recovery | NOT_VERIFIED | Owner-key backup/password safekeeping + actual-key synthetic recovery |
+| Synthetic backup/recovery supporting evidence | PASS /VERIFIED | Executed temporary-key simulation;no plaintext artifacts |
+| Founder actual-key backup/recovery (Item1b) | VERIFIED PASS /FOUNDER REPORTED | Confirmed2026-10-12;not independently re-executed |
 | Actual cohort and consent | NOT_RECORDED | Private consented roster + fixed denominator |
 | Event collection/coverage/privacy | NOT_VERIFIED | Existing sink or consented manual observation method + synthetic evidence |
 | Deployed safety controls | NOT_REVERIFIED_FOR_PILOT | Authorized synthetic/live-control evidence |
@@ -120,3 +120,17 @@ Remaining launch work: (1) founder performs and privately records backup recover
 ## Executed synthetic recovery — 2026-10-12 IST
 
 [PASS evidence](evidence/PH31/RECOVERY_DRILL.md). Item1 ciphertext storage and item1b synthetic procedure verified. Actual founder key backup remains separate and pending;no false real-key recovery claim. Participant consent/roster,enrollment,measurement/privacy/safety and Day0 onboarding checks remain pending. No production or actual vault change.
+
+## Founder completion / current gate register — 2026-10-12 IST
+
+Latest founder instruction “Record Founder Key Drill Completion” and markItem1b VERIFIED PASS is recorded as founder-reported completion. Exact actual-drill timestamp and private backup artifacts are not inspected or published. Earlier pending actual-key entries below/above in historical verification paragraphs are superseded by this operator record,not by new automation. Actual synthetic drill was executed and committed at b84c872,following procedure documentation4574d45.
+
+| Gate | Current state | Next evidence/action |
+| --- | --- | --- |
+| Item1 encrypted vault storage | VERIFIED PASS /vault-only | Continue ciphertext-only storage and handling hygiene |
+| Item1b founder key backup/recovery | VERIFIED PASS /founder-reported | Retain private recovery proof and secret backup/password privately |
+| Item2 roster/consent | PENDING | Record explicit consent and assignF00/P01–P10 privately;confirm actual cohort/admin enrollment |
+| Item3 Day0 event logging | PENDING | Verify privacy-safe existing event sink/manual observation,IST windows,deduplication,swap proxy and WADU eligibility |
+| Item4 permanent commitment kill-switch | PENDING | Approved synthetic readiness proof:two distinct enrolled users,post-commitment StateC,atomic disable-new-only and preserved obligations/payments |
+
+No participant consent is inferred from founder key verification. Pilot observation remainsNOT_STARTED,PH31IN_PROGRESS. Freeze throughOctober19,2026 23:59IST;Day0October20 unchanged. No app/DB/provider/enrollment/message/deployment action or actual-key export performed in this documentation turn. Source5/5,diff checksPASS;application testsNOT_RUN docs-only. Next pending item:Item2 participant consent/private IDs.

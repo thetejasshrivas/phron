@@ -149,3 +149,7 @@ Verification diagnostic: the initial File.Replace example with a null backup arg
 ## Temporary-key recovery simulation executed — 2026-10-12 IST
 
 PASS:tempRSA3072 certificate,AES256_SHA256 encrypted PFX outsidecheckout,original test private key removed,ephemeral restore,explicit restored-key synthetic decrypt,wrong-key denial,no plaintext notes,unchanged founder vault and cleanup. [Evidence](evidence/PH31/RECOVERY_DRILL.md). This validates the procedure,not an actual offline backup of the founder vault key. That real-key backup/restore remains pending before research collection. No founder key export or real research processing occurred.
+
+## Founder completion report — 2026-10-12 IST
+
+Tejas now requests recording actual founder-key backup/recovery completion as VERIFIED PASS. This updates the operational gate by founder report;the agent has not independently exported/restored the actual key or inspected the private backup. Prior NOT_VERIFIED statements describe the earlier state. Automated temporary-key simulation remains separately recorded at b84c872. Preserve private backup/password and repeat verification after material backup/profile changes;do not upload them.

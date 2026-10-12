@@ -1,3 +1,9 @@
+# PH31 founder recovery gate recorded — 2026-10-12 IST
+
+User “Record Founder Key Drill Completion”/markItem1b VERIFIEDPASS recorded as FOUNDER_REPORTED completion,not new automated actual-key proof. Item1 AESvault verified;Item1b founderreportedPASS. Automatedsyntheticdrill b84c872 remains distinct from procedure4574d45. No privatebackup/password/key requested or inspected. Items2consentF00/P01–P10,3Day0eventsmoke,4hardkillswitch readiness PENDING. PH31IN_PROGRESS/observationsNOT_STARTED;freeze/Oct20dates unchanged. Source5/diffchecksPASS,app testsNOT_RUN docs-only. Documentationcommit/push authorized,scratchuntouched. Next:Item2 private participant consent/ID assignment;no tooling messages.
+
+---
+
 # PH31 synthetic recovery PASS — 2026-10-12 IST
 
 Executed authorized temporary-key simulation:RSA3072,AES256_SHA256 PFX outsidecheckout,original testkey removed,ephemeralbackup restore,explicit-key decrypt,wrongkeydenial,no plaintext artifacts,founder vaultunchanged,cleanupPASS. [Evidence](../evidence/PH31/RECOVERY_DRILL.md). Item1 ciphertext storage/item1b syntheticdrill verified;actual founder key offlinebackup stillNOT_VERIFIED—no real key export/backup performed. Status/procedure/checklist updated truthfully;cohort consent/measurement/safety/Day0 pending. Freeze/code/DB unchanged,scratchuntouched. Docscommit/push authorized;resolveHEAD/upstream. Next:actual founder-key privatebackup recovery before real notes.
