@@ -1,3 +1,9 @@
+# PH31 consent parameters / freeze standby — 2026-10-12 IST
+
+Founder-designated encrypted-local-only,founder-access research storage and all qualitative-note purge byDecember10 (30days afterNovember10) populated in [Invitation](../PILOT_INVITATION.md). Real expenses manual underD08; participants declining externalAI may use manual real/synthetic entries,with no provider call and synthetic results excluded from real pilot metrics. PH31IN_PROGRESS,observationNOT_STARTED. Documentation ready forOctober20; encryption/consent/cohort/measurement/live safety prerequisites not yet verified. Freeze throughOctober19 23:59IST preserved; no code/deploy/enrollment/messages. Source5/date/diff checks PASS,app testsNOT_RUN docs-only. Commit/push authorized;resolve final HEAD/upstream. Scratch untouched. Next:Tejas confirms private storage and operational launch prerequisites.
+
+---
+
 # PH31 briefing and consent kit — 2026-10-12 IST
 
 Created [PILOT_INVITATION](../PILOT_INVITATION.md),founder copy/paste only,no messages or enrollment. Dates/freeze unchanged;PH31IN_PROGRESS,observation NOT_STARTED. D08 prohibits real personal financial-data provider calls; briefing uses manual real-expense entry,synthetic AI demos only pending separate approval. Salary/debt/balances/identity outbound exclusions,provider retention caveats and immediate-on-demand Settings deletion with confirmed-server/backup/provider boundaries included. Private consent/access/retention fields require founder completion; no replies in public Git. Protocol/read/source5PASS,docs-only,no app tests or production change. Commit/push explicitly authorized;resolve final HEAD/upstream. Scratch untouched. Next:Tejas fills private research retention arrangement and confirms consented cohort.

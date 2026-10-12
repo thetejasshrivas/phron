@@ -4,11 +4,11 @@ Prepared2026-10-12 IST for Tejas to copy/paste personally. This file is a draft 
 
 ## Founder checks before sending
 
-Confirm the actual5–10 friends, private consent/measurement storage, access permissions and a research-note deletion date. Do not put identities, replies or participant observations in this public repository. Verify the deployed enrollment/safety controls before real launch, using separately authorized synthetic checks. Production remains frozen at d4c7f8a until after October19,2026 23:59 IST; this task deploys nothing.
+Confirm the actual5–10 friends and consent/measurement arrangements. Research notes and qualitative debrief responses must be kept locally on founder encrypted storage only, accessible only to Tejas; verify encryption before collecting data. Purge all pilot qualitative notes/responses and local copies within30 days of the Day21 debrief, no later than December10,2026. Do not put identities, replies or participant observations in this public repository. Verify the deployed enrollment/safety controls before real launch, using separately authorized synthetic checks. Production remains frozen at d4c7f8a until after October19,2026 23:59 IST; this task deploys nothing.
 
 **Current AI scope:** D08-v1 explicitly does not authorize live provider calls with actual personal financial data. Real pilot expenses therefore use manual entry unless a separate founder-approved amendment resolves that boundary. Synthetic AI demonstrations are optional and separate. Do not change this sentence into a promise that live personal capture is approved. Natural-language pilot accuracy is not measured from synthetic demos. This scope clarification is a launch dependency, not a code change or new privacy approval.
 
-Fill the private research-note retention fields in the consent template before asking for consent. The pilot invitation is voluntary; no replies or enrollment are assumed. Founder permission to draft this kit is not permission for tooling to contact anyone.
+The founder-designated storage/access and deletion parameters are populated below; actual encrypted-storage readiness still requires operator verification before collection. The pilot invitation is voluntary; no replies or enrollment are assumed. Founder permission to draft this kit is not permission for tooling to contact anyone.
 
 ## Copy/paste invitation and participant briefing
 
@@ -24,7 +24,7 @@ Open **https://phron-eight.vercel.app** in your phone browser. You’ll use Goog
 | November3 — Day14 | Repeat the balance check |
 | November10 — Day21 | Short debrief about capture effort, coach tone and trust in Safe-to-Spend. Any normal logging that day still counts in the last observation week |
 
-For real expenses, use **Enter a spend manually** during this pilot’s current approved privacy scope. Optional AI demonstrations use made-up transaction examples only. Missing a day is useful feedback too; don’t spend extra, overspend or borrow just to test the app. No daily automated nudges will be sent. We’ll agree appointment times privately.
+For real expenses, use **Enter a spend manually** during this pilot’s current approved privacy scope. If you decline third-party LLM processing, use manual entry with your real expenses or clearly marked synthetic test amounts; do not submit either through external AI. Synthetic activity stays separate from real-usage metrics. Optional AI demonstrations use made-up transaction examples only and require your affirmative choice; declining does not prevent participation. Missing a day is useful feedback too; don’t spend extra, overspend or borrow just to test the app. No daily automated nudges will be sent. We’ll agree appointment times privately.
 
 ### What stays private—and what AI can see
 
@@ -39,12 +39,12 @@ If at least two enrolled users enter financial distress after accepting a next-c
 
 Participation is optional. If you’d like to join, read the consent below and reply **privately to me**. Declining has no penalty. No one is enrolled until we record their choice and complete setup.
 
-## Private consent template — founder completes fields before use
+## Private consent template — populated research-note parameters
 
 Pilot: October20 setup; October21–November10 observation; November10 debrief.
 
-Private research-note storage/access: **[founder fills location and who can access]**.
-Research-note deletion date and withdrawal procedure: **[founder fills a concrete date and how removal requests are handled]**.
+Private research-note storage/access: **Local founder encrypted storage only; Tejas is the sole permitted reader.** No cloud-synced research folder, plaintext export, public Git upload or third-party LLM processing of research notes/debrief responses. Exact storage location stays private; encryption must be verified before collection.
+Research-note deletion date and withdrawal procedure: **Purge all pilot qualitative notes/debrief responses and their local copies within30 days after November10,2026—by December10,2026 at the latest (IST).** You may privately ask Tejas to withdraw and remove your identifiable research notes earlier. Tejas records request handling privately; no participant replies or consent records are committed to the repository. PHRON Settings account deletion is separate from this research-note purge and external-provider/infrastructure retention.
 Contact: Tejas, through the same private conversation used for this invitation.
 
 Participant reply template:
@@ -60,4 +60,8 @@ Only an explicit private affirmative participation/collection response counts as
 
 ## Preparation record
 
-Read frozen PRD26/33/35, Playbook Part15 and D08/D24. Public Google/Groq data-handling pages checked2026-10-12; public facts are separate from unverified account settings. No claim of enterprise zero-retention headers. Source hashes5/5 PASS; docs-only work, application tests NOT_RUN. No invitations, enrollments, reminders, live provider requests, database changes or deployments were performed. Freeze and Day0 dates remain unchanged. Next: Tejas fills the private research retention arrangement and confirms participant consent before launch; resolve any proposed real-data AI scope change separately.
+Read frozen PRD26/33/35, Playbook Part15 and D08/D24. Public Google/Groq data-handling pages checked2026-10-12; public facts are separate from unverified account settings. No claim of enterprise zero-retention headers. Source hashes5/5 PASS; docs-only work, application tests NOT_RUN. No invitations, enrollments, reminders, live provider requests, database changes or deployments were performed. Freeze and Day0 dates remain unchanged. Next: Tejas verifies founder-storage encryption and confirms participant consent/safety readiness before launch; resolve any proposed real-data AI scope change separately.
+
+## Parameters finalized / freeze standby — 2026-10-12 IST
+
+Founder explicitly designates encrypted local-only research storage and December10 purge deadline. Calendar check: November10→December10 is30 days. This documents the policy; it does not prove device encryption, actual deletion, participant consent or live safety readiness. Observation NOT_STARTED. No production deployment permitted through October19,2026 23:59 IST; live release remains d4c7f8a. Documentation is ready for planned October20 Day0; launch still depends on consented cohort, verified storage/measurement/safety arrangements. No invitation, enrollment, reminder or provider request performed.

@@ -22,13 +22,15 @@ founder_review_revisions: {V2: "G2-V2-02 / 0f28e49e42b13ed07640855468ec943e44dda
 blocking_decisions: [] # scoped fixes verified; residual tooling/distributed-limit risks remain documented for release review
 latest_evidence: docs/PILOT_INVITATION.md
 pilot_briefing: docs/PILOT_INVITATION.md; DRAFT_COPY_PASTE_ONLY; NO_INVITATIONS_SENT
-pilot_consent: NOT_COLLECTED; PRIVATE_STORAGE_RETENTION_PENDING
+pilot_consent: NOT_COLLECTED; ENCRYPTED_LOCAL_FOUNDER_ONLY_POLICY_SET; DEVICE_VERIFICATION_PENDING
+pilot_qualitative_notes_purge_by_ist: 2026-12-10
+pilot_day0_readiness: DOCUMENTATION_READY; COHORT_CONSENT_MEASUREMENT_SAFETY_VERIFICATION_PENDING
 pilot_ai_scope: REAL_EXPENSES_MANUAL_ONLY_UNDER_D08; REAL_DATA_PROVIDER_CALLS_NOT_AUTHORIZED
 deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: READY_G6_PASSED, production_url: "https://phron-eight.vercel.app", production_id: dpl_3B3mud631WjY4ejbEFqYZLJFMRd5, production_commit: d4c7f8a136505476440c8be135f8e3545f65ef80, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
 migration_state: ALL24_REMOTE_APPLIED; FIRST2_PRESERVED; NEXT22_AUTHORIZED_APPLIED_IN_PINNED_ORDER; CLEAN_REPLAY_PARITY100_PASS
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers", "2026-10-10: Tejas approved PH21 typed contracts, server/API handlers, local-only migration and integration tests for goals, reconciliation, buckets and authenticated account deletion; no remote rollout"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Tejas fills private research retention/access fields and confirms consented cohort; resolve real-data AI scope separately
+next_action: Tejas verifies encrypted founder storage and confirms consented cohort/measurement/safety readiness for October20; real-data AI remains unauthorized
 submission_status: SUBMITTED_LOCKED_OPERATOR_CONFIRMED_2026_10_12
 submission_commit: 3f946ba00917b330cfbb5906e4d4124afe1916ff
 pilot_observation_state: NOT_STARTED
