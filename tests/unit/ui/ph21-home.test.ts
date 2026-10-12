@@ -11,7 +11,7 @@ test('primary navigation and privacy-safe microphone fallback are available whil
   }));
   expect(html).toContain('href="/visualize"');
   expect(html).toContain('href="/manage"');
-  expect(html).toContain('Microphone: local voice or text entry');
+  expect(html).toContain('Microphone: voice or text entry');
   expect(html).toContain('Safe this week');
   expect(html).toMatch(/<input[^>]*id="natural-capture-text"/);
   expect(html.indexOf('id="natural-capture-text"')).toBeLessThan(html.indexOf('id="coach-title"'));

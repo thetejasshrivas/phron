@@ -1,3 +1,7 @@
+# PH-HOTFIX-VOICE-01 — IMPLEMENTED / LIVE VERIFICATION PENDING — 2026-10-12 IST
+
+Tejas approved D23-v2 and immediate deployment. Local speech remains primary; unavailable/failed local preflight offers standard browser recognition only after explicit audio-processing disclosure/consent. Distinct denial/service/no-speech/microphone/network errors preserve text;listening starts on the actual event;finish requests the final transcript;280character bound/no-save preserved. Mocked controller tests12/12PASS after RED8FAIL/4PASS. Real microphone/browser recognition awaits Tejas verification;no universal compatibility claim.
+
 # PH28-AI-01 RESOLVED — 2026-10-11 IST
 
 Resolved at e50cf4317c8d4eb9e5336f6d2189e61f66c1a5fa: approved accessible replacement models pass direct generation and live Groq extraction/save-refresh; public13/13 and authenticated9/9 PASS. Gemini schema400 and model/access404 causes addressed with strict schema and recorded D25 amendments. Original failures and corrected harness assumption remain preserved. Intermittent upstream503/timeout/JSON failures still use safe manual fallback; no availability guarantee. [Evidence](evidence/PH28/ai-repair/approved-release/RESULT.md). PH28-ENTRY-01 remains RESOLVED. Prior records below historical.

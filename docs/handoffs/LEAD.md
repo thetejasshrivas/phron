@@ -1,3 +1,9 @@
+# D23-v2 voice hotfix — 2026-10-12 IST
+
+Tejas explicitly approved proposed D23-v2 and immediate production hotfix as a narrow freeze exception. Implemented local-primary/consented-browser fallback,truthful disclosure and errors,actual listening event,finish transcription,280character cap/no-save and cancellation protection. RED8FAIL/4PASS thenGREEN12/12;470unit/152integration/202domain100%,types/lint/build/source5/diffPASS. [Evidence](../evidence/PH-HOTFIX-VOICE/RESULT.md). Browser/deploy results appended after execution;no actual microphone or physical-phone test claimed. No financial/server/DB/dependency changes. Scratch/private tracker untouched. Next:Tejas tests microphone on production,accepts browser processing/permission,dictates and reviews text before capture. Other pilot prerequisites/freeze unchanged.
+
+---
+
 # PH31 voice diagnosis and Item2 tracker preparation — 2026-10-12 IST
 
 Voice diagnostic recorded in PILOT_PRELAUNCH: strict D23 local preflight can return fallback before microphone permission; generic errors hide the cause. Prior read-only Edge155 probe reported en-US unavailable; prior focused tests4/4PASS,not real speech verification. No client changes. Production freeze remains d4c7f8a through October19 23:59IST;granular messages are post-freeze backlog,not release authorization.
