@@ -14,7 +14,7 @@ Prepared2026-10-12 IST. Status: CHECKLIST_READY / OPERATIONAL_CHECKS_PENDING. Th
 - [ ] Choose a local research directory outside this repository and outside OneDrive/Dropbox/other sync folders. Confirm only Tejas can access its contents; keep identity mapping separate from coded notes.
 - [ ] Inspect the volume containing that actual directory in Windows device-encryption/BitLocker status, or verify the encrypted container holding it. Confirm encryption is complete and protection active—not merely a sign-in password, permission setting, or encryption on a different drive. Do not change encryption settings as part of this document task.
 - [ ] Check that drafts, qualitative debrief responses, consent records and temporary/local export copies cannot escape onto unencrypted storage or cloud sync. Do not record a recovery key, password or precise private directory path in public evidence.
-- [ ] Record privately the checked date, verifier, volume/container identifier and encrypted-at-rest/protection result. Public readiness gets only a PASS/FAIL/PENDING flag and sanitized evidence reference. Encryption status is currently NOT_VERIFIED.
+- [ ] Record privately the checked date, verifier, volume/container identifier and encrypted-at-rest/protection result. Public readiness gets only a PASS/FAIL/PENDING flag and sanitized evidence reference. Encryption check attempt completed2026-10-12; protection remains NOT_VERIFIED. Founder says notes location is not chosen; Windows denied BitLocker status queries (see verification record below).
 - [ ] Agree participant withdrawal/removal handling and purge all pilot qualitative notes/responses/local copies within30 days of November10—no later than December10 IST. Record actual purge only when done; no automatic deletion job was scheduled.
 
 ## B. Private roster and consent sheet template
@@ -69,7 +69,7 @@ Monitor every **explicitly enrolled** participant who has accepted a next-cycle 
 | Area | Current status | Tejas records before launch |
 | --- | --- | --- |
 | Dates/briefing/consent wording | PREPARED | Documents reviewed |
-| Encrypted-at-rest notes storage | NOT_VERIFIED | Private evidence + sanitized PASS flag |
+| Encrypted-at-rest notes storage | CHECK_ATTEMPT_COMPLETED / NOT_VERIFIED | Choose notes location; obtain actual-volume/container protection evidence |
 | Actual cohort and consent | NOT_RECORDED | Private consented roster + fixed denominator |
 | Event collection/coverage/privacy | NOT_VERIFIED | Existing sink or consented manual observation method + synthetic evidence |
 | Deployed safety controls | NOT_REVERIFIED_FOR_PILOT | Authorized synthetic/live-control evidence |
@@ -78,3 +78,20 @@ Monitor every **explicitly enrolled** participant who has accepted a next-cycle 
 **Checklist ready; pilot launch not yet signed off.** Tejas confirms all required evidence/consent prerequisites before October20 onboarding. If something fails, record FAIL/NOT_AVAILABLE, continue independent preparation and do not bypass consent, privacy, safety or the review freeze. No new results or metrics are invented.
 
 Preparation evidence: parent804a5d7/main; all5 source hashes verified2026-10-12; documentation-only diff, application tests NOT_RUN. No host encryption change, sensitive-directory inspection, account/DB operation or app deployment. Git diff --check before commit; scratch note untouched. Next one action: Tejas verifies the actual founder notes directory is encrypted at rest and records its private evidence.
+
+## Executed storage check — 2026-10-12 IST
+
+Status: ATTEMPT_COMPLETED / ENCRYPTION_NOT_VERIFIED / NOTES_LOCATION_NOT_CHOSEN. Founder explicitly replies that the pilot notes folder is not chosen. No folder was created and no note contents, credentials or recovery keys were accessed. This is a completed diagnostic attempt, not a passed encrypted-storage gate.
+
+| Read-only check | Actual result | Meaning |
+| --- | --- | --- |
+| Project-volume filesystem metadata | Fixed local volume /NTFS | Filesystem supports storage features; does not prove encryption |
+| Project-directory filesystem attributes | Encrypted attribute false | No EFS flag on that directory; not a designated notes folder and not proof that the volume is unencrypted |
+| Get-BitLockerVolume,restricted context | Access to a CIM resource was not available to the client | Status unavailable |
+| Get-BitLockerVolume,host retry | Access denied | Status unavailable; host execution does not grant Windows administrator rights |
+| manage-bde -status,host retry | Exit -2147217405;an attempt to access a required resource was denied | Protection/encryption percentage not observed |
+| Get-Volume,restricted context | CIM resource access unavailable | Use confirmed filesystem metadata only |
+
+No encryption settings changed, no administrator elevation prompt launched and no secrets printed. Source5/5 and documentation diff checks PASS; application tests NOT_RUN because no app changes. Evaluator freeze remains active; no production deployment or DB operation.
+
+**Next pending item remains storage:** Tejas chooses a notes folder outside this repository/cloud sync on encrypted local founder storage. Then verify that actual volume/container has encryption complete and protection active, using Windows Settings or an authorized administrator read-only status check. Share only the sanitized protection result, never a recovery key. Do not collect participant research data before this gate passes. Roster/consent,measurement and safety checks remain pending afterward.

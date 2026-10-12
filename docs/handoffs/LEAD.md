@@ -1,3 +1,9 @@
+# PH31 local-storage diagnostic — 2026-10-12 IST
+
+Founder says research-notes location is not chosen. Read-only project-volume metadata:FixedNTFS;project directory lacks EFS encrypted attribute (not proof of no BitLocker). Restricted CIM queries denied;host Get-BitLockerVolume Access denied;manage-bde status exit-2147217405 required-resource denial. Check ATTEMPT_COMPLETED,storage NOT_VERIFIED;checklist/status updated without falsely checking protection PASS. No folder creation,private contents,keys,encryption change,UAC,DB/deploy. Source5/date/diff verification retained;docs-only commit/push authorized. Scratch untouched. Next:Tejas chooses actual private notes folder;then verify its volume/container encryption. Consent/measurement/safety readiness still pending.
+
+---
+
 # PH31 offline prelaunch checklist — 2026-10-12 IST
 
 Created [PILOT_PRELAUNCH](../PILOT_PRELAUNCH.md): actual-directory encryption checks,private blank F00/P01–P10 consent/enrollment sheet,approved event/privacy and derived WADU/swap checks,D24 two-distinct-user permanent-disable-new-only safety review. Checklist PREPARED;storage/consent/telemetry/live safety pending,observationsNOT_STARTED. No real roster/data,tests,host encryption change,enrollment,messaging,DB operation or code/deploy. Freeze/Oct20 schedule/Dec10 purge/D08manual scope preserved. Source5PASS/docs diff checked;commit/push authorized,resolveHEAD/upstream. Scratch untouched. Next:Tejas verifies encrypted notes storage privately.
