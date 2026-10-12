@@ -29,12 +29,12 @@ pilot_private_notes_path: docs/pilot/notes
 pilot_vault_protocol: docs/PILOT_VAULT.md; CIPHERTEXT_ONLY; SYNTHETIC_RECOVERY_PASS
 pilot_founder_key_recovery: VERIFIED_PASS_FOUNDER_REPORTED_2026_10_12; NOT_INDEPENDENTLY_RERUN
 pilot_gate_items: {Item1: VERIFIED_VAULT_ONLY, Item1b: VERIFIED_PASS_FOUNDER_REPORTED, Item2: BLANK_ENCRYPTED_TRACKER_PREPARED_CONSENT_IDS_PENDING, Item3: PENDING_EVENT_SMOKE, Item4: PENDING_SAFETY_READINESS}
-pilot_voice_status: D23_V2_APPROVED_2026_10_12; LOCAL_PRIMARY_CONSENTED_BROWSER_FALLBACK_IMPLEMENTED; DEPLOYMENT_PENDING; REAL_VOICE_VERIFICATION_PENDING
+pilot_voice_status: D23_V2_APPROVED_2026_10_12; DEPLOYED_526AAC9; ENDPOINT_SMOKE_PASS; REAL_VOICE_VERIFICATION_PENDING
 pilot_synthetic_recovery_drill: VERIFIED_PASS_2026_10_12; docs/evidence/PH31/RECOVERY_DRILL.md
 pilot_qualitative_notes_purge_by_ist: 2026-12-10
 pilot_day0_readiness: DOCUMENTATION_READY; FOUNDER_RECOVERY_REPORTED_COMPLETE; COHORT_CONSENT_EVENT_SMOKE_SAFETY_PENDING
 pilot_ai_scope: REAL_EXPENSES_MANUAL_ONLY_UNDER_D08; REAL_DATA_PROVIDER_CALLS_NOT_AUTHORIZED
-deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: READY_G6_PASSED, production_url: "https://phron-eight.vercel.app", production_id: dpl_3B3mud631WjY4ejbEFqYZLJFMRd5, production_commit: d4c7f8a136505476440c8be135f8e3545f65ef80, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
+deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_url: "https://phron-hys7wn9wb-tts-1e31.vercel.app", preview_id: dpl_87okEBHQTbn6nZCgr4yrQzpzqdNn, production: READY_G6_PASSED, production_url: "https://phron-eight.vercel.app", production_id: dpl_Dua2j8kJEQ9G5oEaHEzFxwcetCu7, production_commit: 526aac9d74d862a90ed60671698d124065194bc8, commit: 0f28e49e42b13ed07640855468ec943e44dda4eb}
 migration_state: ALL24_REMOTE_APPLIED; FIRST2_PRESERVED; NEXT22_AUTHORIZED_APPLIED_IN_PINNED_ORDER; CLEAN_REPLAY_PARITY100_PASS
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers", "2026-10-10: Tejas approved PH21 typed contracts, server/API handlers, local-only migration and integration tests for goals, reconciliation, buckets and authenticated account deletion; no remote rollout"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]

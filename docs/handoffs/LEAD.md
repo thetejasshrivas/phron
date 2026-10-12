@@ -664,3 +664,5 @@ D07-card, D07-funding, D20, D23, D24 and D25 remain OPEN. No financial semantics
 Next eligible guided action: PH-20 / P04-PRIVACY, when Tejas starts it. Do not start PH-20 work without the operator signal.
 
 PH-19 implementation/evidence commit: `41471ab0149a72f1280f089051532773ee25fd80`.
+
+D23-v2 deployed application526aac9,production dpl_Dua2j8kJEQ9G5oEaHEzFxwcetCu7 at https://phron-eight.vercel.app;CLI exit0/READY metadata/root-health200 exactJSON no-storePASS. Direct Home asset inspectionNOT_VERIFIED and actual voice/phonePENDING;see hotfix evidence. Only this voice rollout exempted from freeze. Next:Tejas performs disclosed/permissioned microphone test;pilot checklist otherwise remains Item2consentpending. Documentation receipt committed/pushed separately;resolve GitHEAD.

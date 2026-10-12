@@ -1,0 +1,14 @@
+{
+  "origin": "https://phron-eight.vercel.app",
+  "rootStatus": 200,
+  "healthStatus": 200,
+  "healthBody": {
+    "status": "ok"
+  },
+  "cacheControl": "no-store",
+  "googleEntryVisible": true,
+  "deploymentCommit": "526aac9d74d862a90ed60671698d124065194bc8",
+  "voiceBundleDirectInspection": "NOT_VERIFIED_CLOUD_CHUNK_FILENAMES_DIFFER",
+  "actualMicrophoneRecognition": "NOT_RUN",
+  "phoneVerification": "PENDING"
+}
