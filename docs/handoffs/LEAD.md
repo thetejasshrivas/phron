@@ -1,3 +1,9 @@
+# PH31 offline prelaunch checklist — 2026-10-12 IST
+
+Created [PILOT_PRELAUNCH](../PILOT_PRELAUNCH.md): actual-directory encryption checks,private blank F00/P01–P10 consent/enrollment sheet,approved event/privacy and derived WADU/swap checks,D24 two-distinct-user permanent-disable-new-only safety review. Checklist PREPARED;storage/consent/telemetry/live safety pending,observationsNOT_STARTED. No real roster/data,tests,host encryption change,enrollment,messaging,DB operation or code/deploy. Freeze/Oct20 schedule/Dec10 purge/D08manual scope preserved. Source5PASS/docs diff checked;commit/push authorized,resolveHEAD/upstream. Scratch untouched. Next:Tejas verifies encrypted notes storage privately.
+
+---
+
 # PH31 consent parameters / freeze standby — 2026-10-12 IST
 
 Founder-designated encrypted-local-only,founder-access research storage and all qualitative-note purge byDecember10 (30days afterNovember10) populated in [Invitation](../PILOT_INVITATION.md). Real expenses manual underD08; participants declining externalAI may use manual real/synthetic entries,with no provider call and synthetic results excluded from real pilot metrics. PH31IN_PROGRESS,observationNOT_STARTED. Documentation ready forOctober20; encryption/consent/cohort/measurement/live safety prerequisites not yet verified. Freeze throughOctober19 23:59IST preserved; no code/deploy/enrollment/messages. Source5/date/diff checks PASS,app testsNOT_RUN docs-only. Commit/push authorized;resolve final HEAD/upstream. Scratch untouched. Next:Tejas confirms private storage and operational launch prerequisites.
