@@ -26,7 +26,8 @@ pilot_briefing: docs/PILOT_INVITATION.md; DRAFT_COPY_PASTE_ONLY; NO_INVITATIONS_
 pilot_consent: NOT_COLLECTED; ENCRYPTED_LOCAL_FOUNDER_ONLY_POLICY_SET; VAULT_MECHANISM_VERIFIED_KEY_BACKUP_PENDING
 pilot_storage_check: VERIFIED_AES256_CMS_VAULT_ONLY; DIRECTORY_EFS_UNSUPPORTED; BITLOCKER_NOT_VERIFIED
 pilot_private_notes_path: docs/pilot/notes
-pilot_vault_protocol: docs/PILOT_VAULT.md; CIPHERTEXT_ONLY; KEY_BACKUP_RECOVERY_READY_FOR_FOUNDER_DRILL_NOT_EXECUTED
+pilot_vault_protocol: docs/PILOT_VAULT.md; CIPHERTEXT_ONLY; SYNTHETIC_RECOVERY_PASS; REAL_KEY_OFFLINE_BACKUP_PENDING
+pilot_synthetic_recovery_drill: VERIFIED_PASS_2026_10_12; docs/evidence/PH31/RECOVERY_DRILL.md
 pilot_qualitative_notes_purge_by_ist: 2026-12-10
 pilot_day0_readiness: DOCUMENTATION_READY; FOUNDER_RECOVERY_DRILL_COHORT_CONSENT_DAY0_CHECKS_PENDING
 pilot_ai_scope: REAL_EXPENSES_MANUAL_ONLY_UNDER_D08; REAL_DATA_PROVIDER_CALLS_NOT_AUTHORIZED
@@ -34,7 +35,7 @@ deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_
 migration_state: ALL24_REMOTE_APPLIED; FIRST2_PRESERVED; NEXT22_AUTHORIZED_APPLIED_IN_PINNED_ORDER; CLEAN_REPLAY_PARITY100_PASS
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers", "2026-10-10: Tejas approved PH21 typed contracts, server/API handlers, local-only migration and integration tests for goals, reconciliation, buckets and authenticated account deletion; no remote rollout"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Tejas performs the documented private offline PFX backup/recovery drill and reports only PASS/FAIL
+next_action: Tejas backs up/restores the actual founder vault key privately before real notes; then cohort consent/Day0 checks
 submission_status: SUBMITTED_LOCKED_OPERATOR_CONFIRMED_2026_10_12
 submission_commit: 3f946ba00917b330cfbb5906e4d4124afe1916ff
 pilot_observation_state: NOT_STARTED

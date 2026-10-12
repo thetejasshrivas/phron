@@ -1,3 +1,9 @@
+# PH31 synthetic recovery PASS — 2026-10-12 IST
+
+Executed authorized temporary-key simulation:RSA3072,AES256_SHA256 PFX outsidecheckout,original testkey removed,ephemeralbackup restore,explicit-key decrypt,wrongkeydenial,no plaintext artifacts,founder vaultunchanged,cleanupPASS. [Evidence](../evidence/PH31/RECOVERY_DRILL.md). Item1 ciphertext storage/item1b syntheticdrill verified;actual founder key offlinebackup stillNOT_VERIFIED—no real key export/backup performed. Status/procedure/checklist updated truthfully;cohort consent/measurement/safety/Day0 pending. Freeze/code/DB unchanged,scratchuntouched. Docscommit/push authorized;resolveHEAD/upstream. Next:actual founder-key privatebackup recovery before real notes.
+
+---
+
 # PH31 recovery procedure ready — 2026-10-12 IST
 
 [PILOT_VAULT](../PILOT_VAULT.md) now provides hidden-password offline AES256_SHA256 PFX backup,explicit ephemeral restored-key drill,no-artifact synthetic self-test. Procedure READY FOR FOUNDER DRILL;actual backup/export/recovery NOT_EXECUTED. NativeAPI availability/syntax/current-key in-memory roundtrip and explicit-key decrypt PASS;no plaintext files/real notes/keyexport. Checklist/status retain pending consent/cohort,measurement/privacy/safety and October20 Day0 checks. No production/code/DB/message/enrollment changes;freeze remains. Source5/diff checksPASS;docs commit/push authorized,scratch untouched. Next:founder runs private recovery drill,shares onlyPASS/FAIL.

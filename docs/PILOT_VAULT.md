@@ -145,3 +145,7 @@ Remove-Variable test,ciphertext
 Keep the private key while required for archive recovery. vault-certificate.txt is only a locator, not a backup. By December10,2026,purge all qualitative note archives/copies per consent; key backups must not include retained note data. Ordinary deletion is not a physical-SSD secure-erasure claim. Pagefile/crash-dump/malware/unlocked-session limits stated earlier remain.
 
 Verification diagnostic: the initial File.Replace example with a null backup argument failed because PowerShell marshaled an empty path. No plaintext or real notes were written and the original vault remained intact. Corrected same-directory File.Move with overwrite passed the synthetic save/readback/restore test; no pending file remains.
+
+## Temporary-key recovery simulation executed — 2026-10-12 IST
+
+PASS:tempRSA3072 certificate,AES256_SHA256 encrypted PFX outsidecheckout,original test private key removed,ephemeral restore,explicit restored-key synthetic decrypt,wrong-key denial,no plaintext notes,unchanged founder vault and cleanup. [Evidence](evidence/PH31/RECOVERY_DRILL.md). This validates the procedure,not an actual offline backup of the founder vault key. That real-key backup/restore remains pending before research collection. No founder key export or real research processing occurred.

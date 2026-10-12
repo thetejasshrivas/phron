@@ -17,7 +17,8 @@ Prepared2026-10-12 IST. Status: CHECKLIST_READY / OPERATIONAL_CHECKS_PENDING. Th
 - [ ] Record privately the checked date, verifier, volume/container identifier and encrypted-at-rest/protection result. Public readiness gets only a PASS/FAIL/PENDING flag and sanitized evidence reference. Latest verification2026-10-12: AES-256 vault encryption PASS; earlier BitLocker/path diagnostics below are historical. Private-key backup/restore remains pending.
 - [ ] Agree participant withdrawal/removal handling and purge all pilot qualitative notes/responses/local copies within30 days of November10—no later than December10 IST. Record actual purge only when done; no automatic deletion job was scheduled.
 
-- [ ] Vault key backup and recovery drill — **READY FOR FOUNDER DRILL**, not performed. [Step-by-step backup/recovery and memory-only self-test](PILOT_VAULT.md). Complete actual offline PFX recovery before real research collection.
+- [x] Item1b synthetic key backup/recovery drill — **PASS / VERIFIED**. Temporary test key exported to encrypted PFX,removed,restored ephemerally and used explicitly to decrypt a synthetic message;wrong key rejected,no plaintext artifacts,all temporary materials cleaned. [Executed evidence](evidence/PH31/RECOVERY_DRILL.md).
+- [ ] Actual founder vault key offline backup/recovery — **NOT_VERIFIED**. The temporary-key simulation does not substitute for protecting/restoring the real key before research collection. [Private procedure](PILOT_VAULT.md).
 
 ## B. Private roster and consent sheet template
 
@@ -72,7 +73,8 @@ Monitor every **explicitly enrolled** participant who has accepted a next-cycle 
 | --- | --- | --- |
 | Dates/briefing/consent wording | PREPARED | Documents reviewed |
 | Encrypted-at-rest notes storage | VERIFIED_AES256_CMS_VAULT_ONLY | Use ciphertext-only workflow; complete private-key backup/restore before real notes |
-| Vault key backup/recovery drill | READY FOR FOUNDER DRILL /NOT_EXECUTED | Actual offline backup + explicit restored-key synthetic PASS |
+| Synthetic backup/recovery drill (item1b) | PASS /VERIFIED | Executed temporary-key simulation;no plaintext artifacts |
+| Actual founder key offline backup/recovery | NOT_VERIFIED | Owner-key backup/password safekeeping + actual-key synthetic recovery |
 | Actual cohort and consent | NOT_RECORDED | Private consented roster + fixed denominator |
 | Event collection/coverage/privacy | NOT_VERIFIED | Existing sink or consented manual observation method + synthetic evidence |
 | Deployed safety controls | NOT_REVERIFIED_FOR_PILOT | Authorized synthetic/live-control evidence |
@@ -114,3 +116,7 @@ Additional verification: documented memory-only note save and encrypted file rep
 Backup/recovery instructions expanded: offline PFX,AES256_SHA256,hidden password,NoClobber,ephemeral restored key and explicit-key synthetic decryption. Installed cmdlet/constructor checks and syntax review PASS;memory-only current-key/explicit-key synthetic tests PASS with0plaintext files. Actual PFX export/offline recovery remainsNOT_EXECUTED/NOT_VERIFIED;procedure READY FOR FOUNDER DRILL.
 
 Remaining launch work: (1) founder performs and privately records backup recovery; (2) collect explicit cohort participation/collection consent,optional choices and admin enrollment in private F00/P01–P10 sheet; (3) Day0 verify approved existing measurement sink or consented manual observation,privacy-safe events/denominators,deduplication and D24 safety proof; (4) October20 verify ordinary-user onboarding/save/refresh and manual entry without real-data provider calls,then record actual cohort and observation start. No new deployment before freeze end,no enrollment/messages by tooling. Readiness stays pending until evidence exists.
+
+## Executed synthetic recovery — 2026-10-12 IST
+
+[PASS evidence](evidence/PH31/RECOVERY_DRILL.md). Item1 ciphertext storage and item1b synthetic procedure verified. Actual founder key backup remains separate and pending;no false real-key recovery claim. Participant consent/roster,enrollment,measurement/privacy/safety and Day0 onboarding checks remain pending. No production or actual vault change.
