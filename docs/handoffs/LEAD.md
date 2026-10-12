@@ -1,3 +1,9 @@
+# PH31 notes vault verified — 2026-10-12 IST
+
+Founder-designated docs/pilot/notes exists;rootGit-ignore covers everything,0trackedprivate files. EFSunsupported/exit1;no7zipinstall. NativeCMS AES-256-CBC encrypted archive +owner-profile document certificate created;syntheticroundtrip/wrongkey rejection/no plaintext marker PASS. Folder itself not encrypted;onlyvault is approved for notes. [Vault protocol](../PILOT_VAULT.md) and prelaunch/status updated;keybackup/restore,drafts hygiene and cohort/consent/telemetry/safety remainpending. Noactualnotes/keyexport/messaging/DB/deploy;freeze remains. PH31-STORAGE-01 records explicitfounder inside-repo exception. Source5/diff checksPASS,app testsNOT_RUN docs-only. Commit/pushauthorized;scratchuntouched. Next:founder privatekey backup/restore using synthetic data before collection,then rosterconsent.
+
+---
+
 # PH31 local-storage diagnostic — 2026-10-12 IST
 
 Founder says research-notes location is not chosen. Read-only project-volume metadata:FixedNTFS;project directory lacks EFS encrypted attribute (not proof of no BitLocker). Restricted CIM queries denied;host Get-BitLockerVolume Access denied;manage-bde status exit-2147217405 required-resource denial. Check ATTEMPT_COMPLETED,storage NOT_VERIFIED;checklist/status updated without falsely checking protection PASS. No folder creation,private contents,keys,encryption change,UAC,DB/deploy. Source5/date/diff verification retained;docs-only commit/push authorized. Scratch untouched. Next:Tejas chooses actual private notes folder;then verify its volume/container encryption. Consent/measurement/safety readiness still pending.

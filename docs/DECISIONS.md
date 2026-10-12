@@ -604,3 +604,7 @@ D25 activation evidence: replacement-wire-results.json shows200/valid15000paise 
 ## D25 activation outcome / PH28 Production — 2026-10-11 IST
 
 D25-PRIMARY-v1 and D25-FALLBACK-v1 remain APPROVED; both conditional synthetic-generation checks passed. Production application e50cf4317c8d4eb9e5336f6d2189e61f66c1a5fa returns valid live Groq extraction and exact saved paise under ordinary user credentials. G6 PASSED using the executed smoke plus operator phone attestation. [Evidence](evidence/PH28/ai-repair/approved-release/RESULT.md). This resolves the scoped model eligibility mismatch, not indefinite quota, retention, paid overflow or all G0B items. No additional founder decision inferred.
+
+## PH31-STORAGE-01 — founder-authorized local storage implementation
+
+2026-10-12 IST. Tejas explicitly designates docs/pilot/notes,authorizes Git-ignore,EFS attempt and an encrypted-archive fallback. This supersedes the earlier outside-repository storage recommendation only. EFS unsupported;native Windows CMS AES-256-CBC vault is verified with synthetic round-trip/wrong-key denial. Only ciphertext research storage approved;directory is not EFS-encrypted. No financial/formula/API/provider scope changes or real research collection. Private-key backup/restore remains pending. [Protocol](PILOT_VAULT.md),[evidence](PILOT_PRELAUNCH.md).

@@ -23,8 +23,10 @@ blocking_decisions: [] # scoped fixes verified; residual tooling/distributed-lim
 latest_evidence: docs/PILOT_PRELAUNCH.md
 pilot_prelaunch_checklist: docs/PILOT_PRELAUNCH.md; PREPARED_OFFLINE; OPERATIONAL_CHECKS_PENDING
 pilot_briefing: docs/PILOT_INVITATION.md; DRAFT_COPY_PASTE_ONLY; NO_INVITATIONS_SENT
-pilot_consent: NOT_COLLECTED; ENCRYPTED_LOCAL_FOUNDER_ONLY_POLICY_SET; DEVICE_VERIFICATION_PENDING
-pilot_storage_check: ATTEMPT_COMPLETED_2026_10_12; NOT_VERIFIED; NOTES_LOCATION_NOT_CHOSEN; WINDOWS_STATUS_ACCESS_DENIED
+pilot_consent: NOT_COLLECTED; ENCRYPTED_LOCAL_FOUNDER_ONLY_POLICY_SET; VAULT_MECHANISM_VERIFIED_KEY_BACKUP_PENDING
+pilot_storage_check: VERIFIED_AES256_CMS_VAULT_ONLY; DIRECTORY_EFS_UNSUPPORTED; BITLOCKER_NOT_VERIFIED
+pilot_private_notes_path: docs/pilot/notes
+pilot_vault_protocol: docs/PILOT_VAULT.md; CIPHERTEXT_ONLY; PRIVATE_KEY_BACKUP_RESTORE_PENDING
 pilot_qualitative_notes_purge_by_ist: 2026-12-10
 pilot_day0_readiness: DOCUMENTATION_READY; COHORT_CONSENT_MEASUREMENT_SAFETY_VERIFICATION_PENDING
 pilot_ai_scope: REAL_EXPENSES_MANUAL_ONLY_UNDER_D08; REAL_DATA_PROVIDER_CALLS_NOT_AUTHORIZED
@@ -32,7 +34,7 @@ deployment: {preview: READY_PROTECTED_SLICE_OPERATOR_JOURNEY_CONFIRMED, preview_
 migration_state: ALL24_REMOTE_APPLIED; FIRST2_PRESERVED; NEXT22_AUTHORIZED_APPLIED_IN_PINNED_ORDER; CLEAN_REPLAY_PARITY100_PASS
 ownership_transfers: ["Tejas approved PH12-only sign-in/onboarding pages and form components/style, protected synthetic /home, empty PHRON_APP_ORIGIN name", "2026-10-08: Tejas directs all work in the single PHRON-00 Lead chat, including PH15 Engine/Platform/Experience/QA paths; no concurrent writers", "2026-10-10: Tejas approved PH21 typed contracts, server/API handlers, local-only migration and integration tests for goals, reconciliation, buckets and authenticated account deletion; no remote rollout"]
 requests_for_other_owners: [Lead safeWeekly snapshot-contract review]
-next_action: Tejas chooses actual notes location outside repository/cloud sync; then verify encryption/protection before collection
+next_action: Tejas privately backs up/restores the vault certificate key using synthetic data before real notes; then confirms roster/consent
 submission_status: SUBMITTED_LOCKED_OPERATOR_CONFIRMED_2026_10_12
 submission_commit: 3f946ba00917b330cfbb5906e4d4124afe1916ff
 pilot_observation_state: NOT_STARTED

@@ -8,7 +8,7 @@ Confirm the actual5–10 friends and consent/measurement arrangements. Research 
 
 **Current AI scope:** D08-v1 explicitly does not authorize live provider calls with actual personal financial data. Real pilot expenses therefore use manual entry unless a separate founder-approved amendment resolves that boundary. Synthetic AI demonstrations are optional and separate. Do not change this sentence into a promise that live personal capture is approved. Natural-language pilot accuracy is not measured from synthetic demos. This scope clarification is a launch dependency, not a code change or new privacy approval.
 
-The founder-designated storage/access and deletion parameters are populated below; actual encrypted-storage readiness still requires operator verification before collection. The pilot invitation is voluntary; no replies or enrollment are assumed. Founder permission to draft this kit is not permission for tooling to contact anyone.
+The founder-designated storage/access and deletion parameters are populated below; the designated local AES-256 vault mechanism is verified,with private-key backup/restore and data-handling hygiene still required before collection. The pilot invitation is voluntary; no replies or enrollment are assumed. Founder permission to draft this kit is not permission for tooling to contact anyone.
 
 ## Copy/paste invitation and participant briefing
 
@@ -43,7 +43,7 @@ Participation is optional. If you’d like to join, read the consent below and r
 
 Pilot: October20 setup; October21–November10 observation; November10 debrief.
 
-Private research-note storage/access: **Local founder encrypted storage only; Tejas is the sole permitted reader.** No cloud-synced research folder, plaintext export, public Git upload or third-party LLM processing of research notes/debrief responses. Exact storage location stays private; encryption must be verified before collection.
+Private research-note storage/access: **Local founder encrypted storage only; Tejas is the sole permitted reader.** No cloud-synced research folder, plaintext export, public Git upload or third-party LLM processing of research notes/debrief responses. The founder-designated docs/pilot/notes folder stores only AES-256 encrypted vault content; do not keep loose plaintext notes. The vault mechanism is verified;private-key backup/restore remains pending before collection.
 Research-note deletion date and withdrawal procedure: **Purge all pilot qualitative notes/debrief responses and their local copies within30 days after November10,2026—by December10,2026 at the latest (IST).** You may privately ask Tejas to withdraw and remove your identifiable research notes earlier. Tejas records request handling privately; no participant replies or consent records are committed to the repository. PHRON Settings account deletion is separate from this research-note purge and external-provider/infrastructure retention.
 Contact: Tejas, through the same private conversation used for this invitation.
 
@@ -60,7 +60,7 @@ Only an explicit private affirmative participation/collection response counts as
 
 ## Preparation record
 
-Read frozen PRD26/33/35, Playbook Part15 and D08/D24. Public Google/Groq data-handling pages checked2026-10-12; public facts are separate from unverified account settings. No claim of enterprise zero-retention headers. Source hashes5/5 PASS; docs-only work, application tests NOT_RUN. No invitations, enrollments, reminders, live provider requests, database changes or deployments were performed. Freeze and Day0 dates remain unchanged. Next: Tejas verifies founder-storage encryption and confirms participant consent/safety readiness before launch; resolve any proposed real-data AI scope change separately.
+Read frozen PRD26/33/35, Playbook Part15 and D08/D24. Public Google/Groq data-handling pages checked2026-10-12; public facts are separate from unverified account settings. No claim of enterprise zero-retention headers. Source hashes5/5 PASS; docs-only work, application tests NOT_RUN. No invitations, enrollments, reminders, live provider requests, database changes or deployments were performed. Freeze and Day0 dates remain unchanged. Next: Tejas completes vault key backup/restore and confirms participant consent/safety readiness before launch; resolve any proposed real-data AI scope change separately.
 
 ## Parameters finalized / freeze standby — 2026-10-12 IST
 

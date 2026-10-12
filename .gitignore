@@ -19,3 +19,6 @@ supabase/.temp/
 supabase/.branches/
 .DS_Store
 npm-debug.log*
+
+# Private pilot notes: exclude all raw notes, vaults, keys and temporary files.
+/docs/pilot/notes/

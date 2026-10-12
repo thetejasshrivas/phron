@@ -11,10 +11,10 @@ Prepared2026-10-12 IST. Status: CHECKLIST_READY / OPERATIONAL_CHECKS_PENDING. Th
 
 ## A. Verify founder encrypted storage offline
 
-- [ ] Choose a local research directory outside this repository and outside OneDrive/Dropbox/other sync folders. Confirm only Tejas can access its contents; keep identity mapping separate from coded notes.
-- [ ] Inspect the volume containing that actual directory in Windows device-encryption/BitLocker status, or verify the encrypted container holding it. Confirm encryption is complete and protection active—not merely a sign-in password, permission setting, or encryption on a different drive. Do not change encryption settings as part of this document task.
+- [x] Founder designated docs/pilot/notes; directory exists and the entire path is Git-ignored. This explicit inside-repository designation supersedes the earlier outside-repository recommendation. Store coded notes/identity mapping only inside the encrypted vault; no cloud sync.
+- [x] Founder local notes encryption mechanism VERIFIED for the AES-256-CBC CMS vault, using the owner-profile private key. EFS attempt failed; the directory/volume are not verified encrypted. Only ciphertext archive storage is approved. See [vault protocol](PILOT_VAULT.md); never write loose plaintext notes.
 - [ ] Check that drafts, qualitative debrief responses, consent records and temporary/local export copies cannot escape onto unencrypted storage or cloud sync. Do not record a recovery key, password or precise private directory path in public evidence.
-- [ ] Record privately the checked date, verifier, volume/container identifier and encrypted-at-rest/protection result. Public readiness gets only a PASS/FAIL/PENDING flag and sanitized evidence reference. Encryption check attempt completed2026-10-12; protection remains NOT_VERIFIED. Founder says notes location is not chosen; Windows denied BitLocker status queries (see verification record below).
+- [ ] Record privately the checked date, verifier, volume/container identifier and encrypted-at-rest/protection result. Public readiness gets only a PASS/FAIL/PENDING flag and sanitized evidence reference. Latest verification2026-10-12: AES-256 vault encryption PASS; earlier BitLocker/path diagnostics below are historical. Private-key backup/restore remains pending.
 - [ ] Agree participant withdrawal/removal handling and purge all pilot qualitative notes/responses/local copies within30 days of November10—no later than December10 IST. Record actual purge only when done; no automatic deletion job was scheduled.
 
 ## B. Private roster and consent sheet template
@@ -69,13 +69,13 @@ Monitor every **explicitly enrolled** participant who has accepted a next-cycle 
 | Area | Current status | Tejas records before launch |
 | --- | --- | --- |
 | Dates/briefing/consent wording | PREPARED | Documents reviewed |
-| Encrypted-at-rest notes storage | CHECK_ATTEMPT_COMPLETED / NOT_VERIFIED | Choose notes location; obtain actual-volume/container protection evidence |
+| Encrypted-at-rest notes storage | VERIFIED_AES256_CMS_VAULT_ONLY | Use ciphertext-only workflow; complete private-key backup/restore before real notes |
 | Actual cohort and consent | NOT_RECORDED | Private consented roster + fixed denominator |
 | Event collection/coverage/privacy | NOT_VERIFIED | Existing sink or consented manual observation method + synthetic evidence |
 | Deployed safety controls | NOT_REVERIFIED_FOR_PILOT | Authorized synthetic/live-control evidence |
 | Observations | NOT_STARTED | Actual Day0 completion/start evidence, not scheduled date alone |
 
-**Checklist ready; pilot launch not yet signed off.** Tejas confirms all required evidence/consent prerequisites before October20 onboarding. If something fails, record FAIL/NOT_AVAILABLE, continue independent preparation and do not bypass consent, privacy, safety or the review freeze. No new results or metrics are invented.
+**Checklist ready; vault encryption verified; pilot launch not yet signed off.** Tejas confirms all required evidence/consent prerequisites before October20 onboarding. If something fails, record FAIL/NOT_AVAILABLE, continue independent preparation and do not bypass consent, privacy, safety or the review freeze. No new results or metrics are invented.
 
 Preparation evidence: parent804a5d7/main; all5 source hashes verified2026-10-12; documentation-only diff, application tests NOT_RUN. No host encryption change, sensitive-directory inspection, account/DB operation or app deployment. Git diff --check before commit; scratch note untouched. Next one action: Tejas verifies the actual founder notes directory is encrypted at rest and records its private evidence.
 
@@ -95,3 +95,13 @@ Status: ATTEMPT_COMPLETED / ENCRYPTION_NOT_VERIFIED / NOTES_LOCATION_NOT_CHOSEN.
 No encryption settings changed, no administrator elevation prompt launched and no secrets printed. Source5/5 and documentation diff checks PASS; application tests NOT_RUN because no app changes. Evaluator freeze remains active; no production deployment or DB operation.
 
 **Next pending item remains storage:** Tejas chooses a notes folder outside this repository/cloud sync on encrypted local founder storage. Then verify that actual volume/container has encryption complete and protection active, using Windows Settings or an authorized administrator read-only status check. Share only the sanitized protection result, never a recovery key. Do not collect participant research data before this gate passes. Roster/consent,measurement and safety checks remain pending afterward.
+
+## Designated-folder encryption closure — 2026-10-12 IST
+
+Founder explicitly designates docs/pilot/notes and authorizes creating/ignoring it,attempting EFS and establishing an encrypted fallback. Directory exists;root ignore covers all files/extensions;git check-ignore passes .md/.txt/.json/.cms and certificate locator;git ls-files reports0private files. EFS cipher /e exit1,“The request is not supported,”directory Encrypted attribute false. No7-Zip install.
+
+Native encrypted-vault fallback VERIFIED:synthetic-only pilot-notes.cms,actualAES-256-CBC OID2.16.840.1.101.3.4.1.42,owning Windows profile decrypt round-trip PASS,wrong-key rejection PASS,no plaintext marker on disk,private key present in current-user store. Actual folder owner matches that profile. No private key exported or printed. This verifies the archive mechanism,not filesystem encryption,device malware resistance or recovery backup. [Workflow/key-recovery limits](PILOT_VAULT.md).
+
+Storage items1/2 above are checked for designated path and verified vault. No real notes collected. Key backup/restore and drafts/export hygiene remain pending before collection. Then proceed to private roster/consent tracking (F00/P01–P10);telemetry and safety checks still pending. Source5/5 and diff checks retained;app testsNOT_RUN because no app changes. No deployment,DB change,message,enrollment or pilot clock start;freeze unchanged.
+
+Additional verification: documented memory-only note save and encrypted file replacement tested with a synthetic note,then original empty vault restored. Initial File.Replace/null-backup marshaling failure corrected to File.Move;failure did not expose plaintext or lose original data. No actual research data collected.

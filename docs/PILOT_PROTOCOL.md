@@ -87,3 +87,7 @@ Next one action: Tejas confirms the actual consented cohort and private measurem
 ## Schedule pinning verification — 2026-10-12 IST
 
 Founder explicitly pins freeze end October19 at23:59 IST,Day0 October20,Day7 October27,Day14 November3 andDay21 November10. Independent calendar offset check passes7/14/21 days from Day0. Documentation-only local commit authorized; submitted commit3f946ba and deployed d4c7f8a stay unchanged. No push, deployment, reminder, enrollment or observation occurred. Source5/5 remains verified.
+
+## Founder-designated local archive — 2026-10-12 IST
+
+Explicit founder direction selects docs/pilot/notes inside the checkout as an exception to the outside-repository recommendation. Entire path is ignored;all research content must remain inside the verified local AES-256 CMS vault,not loose files. EFS is unsupported,BitLocker status unverified. [Vault protocol](PILOT_VAULT.md) records actual synthetic verification and pending key recovery;no real notes,enrollment or launch occurred.
