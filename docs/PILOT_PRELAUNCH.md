@@ -17,6 +17,8 @@ Prepared2026-10-12 IST. Status: CHECKLIST_READY / OPERATIONAL_CHECKS_PENDING. Th
 - [ ] Record privately the checked date, verifier, volume/container identifier and encrypted-at-rest/protection result. Public readiness gets only a PASS/FAIL/PENDING flag and sanitized evidence reference. Latest verification2026-10-12: AES-256 vault encryption PASS; earlier BitLocker/path diagnostics below are historical. Private-key backup/restore remains pending.
 - [ ] Agree participant withdrawal/removal handling and purge all pilot qualitative notes/responses/local copies within30 days of November10—no later than December10 IST. Record actual purge only when done; no automatic deletion job was scheduled.
 
+- [ ] Vault key backup and recovery drill — **READY FOR FOUNDER DRILL**, not performed. [Step-by-step backup/recovery and memory-only self-test](PILOT_VAULT.md). Complete actual offline PFX recovery before real research collection.
+
 ## B. Private roster and consent sheet template
 
 Copy this **blank** template to encrypted founder storage before filling it. Codes are pseudonyms, not proof that data is anonymous. Do not commit names, contact details, consent timestamps, financial state or completed rows. F00 is the founder; P01–P10 are available friend slots, not assigned participants. Enroll5–10 friends plus founder (6–11 total); unused slots do not count toward any denominator.
@@ -70,6 +72,7 @@ Monitor every **explicitly enrolled** participant who has accepted a next-cycle 
 | --- | --- | --- |
 | Dates/briefing/consent wording | PREPARED | Documents reviewed |
 | Encrypted-at-rest notes storage | VERIFIED_AES256_CMS_VAULT_ONLY | Use ciphertext-only workflow; complete private-key backup/restore before real notes |
+| Vault key backup/recovery drill | READY FOR FOUNDER DRILL /NOT_EXECUTED | Actual offline backup + explicit restored-key synthetic PASS |
 | Actual cohort and consent | NOT_RECORDED | Private consented roster + fixed denominator |
 | Event collection/coverage/privacy | NOT_VERIFIED | Existing sink or consented manual observation method + synthetic evidence |
 | Deployed safety controls | NOT_REVERIFIED_FOR_PILOT | Authorized synthetic/live-control evidence |
@@ -105,3 +108,9 @@ Native encrypted-vault fallback VERIFIED:synthetic-only pilot-notes.cms,actualAE
 Storage items1/2 above are checked for designated path and verified vault. No real notes collected. Key backup/restore and drafts/export hygiene remain pending before collection. Then proceed to private roster/consent tracking (F00/P01–P10);telemetry and safety checks still pending. Source5/5 and diff checks retained;app testsNOT_RUN because no app changes. No deployment,DB change,message,enrollment or pilot clock start;freeze unchanged.
 
 Additional verification: documented memory-only note save and encrypted file replacement tested with a synthetic note,then original empty vault restored. Initial File.Replace/null-backup marshaling failure corrected to File.Move;failure did not expose plaintext or lose original data. No actual research data collected.
+
+## Recovery procedure readiness — 2026-10-12 IST
+
+Backup/recovery instructions expanded: offline PFX,AES256_SHA256,hidden password,NoClobber,ephemeral restored key and explicit-key synthetic decryption. Installed cmdlet/constructor checks and syntax review PASS;memory-only current-key/explicit-key synthetic tests PASS with0plaintext files. Actual PFX export/offline recovery remainsNOT_EXECUTED/NOT_VERIFIED;procedure READY FOR FOUNDER DRILL.
+
+Remaining launch work: (1) founder performs and privately records backup recovery; (2) collect explicit cohort participation/collection consent,optional choices and admin enrollment in private F00/P01–P10 sheet; (3) Day0 verify approved existing measurement sink or consented manual observation,privacy-safe events/denominators,deduplication and D24 safety proof; (4) October20 verify ordinary-user onboarding/save/refresh and manual entry without real-data provider calls,then record actual cohort and observation start. No new deployment before freeze end,no enrollment/messages by tooling. Readiness stays pending until evidence exists.

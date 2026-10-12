@@ -1,3 +1,9 @@
+# PH31 recovery procedure ready — 2026-10-12 IST
+
+[PILOT_VAULT](../PILOT_VAULT.md) now provides hidden-password offline AES256_SHA256 PFX backup,explicit ephemeral restored-key drill,no-artifact synthetic self-test. Procedure READY FOR FOUNDER DRILL;actual backup/export/recovery NOT_EXECUTED. NativeAPI availability/syntax/current-key in-memory roundtrip and explicit-key decrypt PASS;no plaintext files/real notes/keyexport. Checklist/status retain pending consent/cohort,measurement/privacy/safety and October20 Day0 checks. No production/code/DB/message/enrollment changes;freeze remains. Source5/diff checksPASS;docs commit/push authorized,scratch untouched. Next:founder runs private recovery drill,shares onlyPASS/FAIL.
+
+---
+
 # PH31 notes vault verified — 2026-10-12 IST
 
 Founder-designated docs/pilot/notes exists;rootGit-ignore covers everything,0trackedprivate files. EFSunsupported/exit1;no7zipinstall. NativeCMS AES-256-CBC encrypted archive +owner-profile document certificate created;syntheticroundtrip/wrongkey rejection/no plaintext marker PASS. Folder itself not encrypted;onlyvault is approved for notes. [Vault protocol](../PILOT_VAULT.md) and prelaunch/status updated;keybackup/restore,drafts hygiene and cohort/consent/telemetry/safety remainpending. Noactualnotes/keyexport/messaging/DB/deploy;freeze remains. PH31-STORAGE-01 records explicitfounder inside-repo exception. Source5/diff checksPASS,app testsNOT_RUN docs-only. Commit/pushauthorized;scratchuntouched. Next:founder privatekey backup/restore using synthetic data before collection,then rosterconsent.
