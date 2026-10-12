@@ -1,3 +1,15 @@
+# PH31 pinned observation schedule — 2026-10-12 IST
+
+Founder pins evaluator freeze through October19,2026 23:59 IST; no production code deployment until after this cutoff, with no automatic deployment authorization. Day0 October20,Day7 October27,Day14 November3,Day21/debrief November10; all IST. Calendar offsets independently pass. [Protocol](../PILOT_PROTOCOL.md) and Sprint phase7/currentPH31/IN_PROGRESS updated; observation NOT_STARTED. Actual cohort/consent/measurement route remain pending. Documentation-only local commit; no push/deploy/reminder/enrollment. Submitted3f946ba/live d4c7f8a preserved; scratch untouched. Source5/5 and diff checks pass; app tests NOT_RUN for docs-only work. Next:Tejas confirms consented cohort/private measurement arrangements for Day0. Prior preparation handoff below is historical where dates differ.
+
+---
+
+# PH31 pilot preparation — 2026-10-12 IST
+
+Operator confirms package submitted/locked at3f946ba;live d4c7f8a unchanged. Read PRD33–35/PlaybookPart15/D24;created [Pilot protocol](../PILOT_PROTOCOL.md). Sprint phase7/currentPH31/IN_PROGRESS; observation NOT_STARTED,Day0/cohort/consent/measurement route pending. No enrollment/messages/scheduling/DB/app/deploy changes. Evaluator review freeze active until explicit release; keep repositoryHEAD/submitted revision protected. Private consented tracking only; D24 permanent disable-new-only/two-distinct-user safety rule retained. Source5/5 verified; documentation diff checked. Scratch untouched. Next:Tejas confirms review-window end and Day0/cohort consent arrangements.
+
+---
+
 # PH30 final documentation sign-off — 2026-10-12 IST
 
 Final deployment evidence and README/SUBMISSION/DEPLOYMENT/status/test records committed and pushed under explicit operator authorization. Resolve final documentation HEAD via git; live application stays d4c7f8a136505476440c8be135f8e3545f65ef80, deployment dpl_3B3mud631WjY4ejbEFqYZLJFMRd5 at https://phron-eight.vercel.app. Public repository https://github.com/thetejasshrivas/phron; demo outline docs/DEMO_SCRIPT.md. All5 source hashes match; git diff --check clean. No app/DB/dependency/config change or redeployment; prior actual app and live checks retained. Only New Text Document.txt remains untracked. Package READY, actual submission NOT_SUBMITTED; PH31 NOT_STARTED. Next: Tejas submits the ready package.
