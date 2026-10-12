@@ -20,7 +20,20 @@ Prepared2026-10-12 IST. Status: ITEMS1_AND1B_VERIFIED / ITEMS2_TO4_PENDING. This
 - [x] Supporting synthetic key backup/recovery drill — **PASS / VERIFIED**. Temporary test key exported to encrypted PFX,removed,restored ephemerally and used explicitly to decrypt a synthetic message;wrong key rejected,no plaintext artifacts,all temporary materials cleaned. [Executed evidence](evidence/PH31/RECOVERY_DRILL.md).
 - [x] **Item1b: Founder Vault Key Backup & Recovery Verification — VERIFIED PASS (FOUNDER REPORTED).** Tejas requests recording founder key-drill completion on2026-10-12. This is an operator completion record,not an automated rerun or independent inspection of the real offline backup. No password,PFX,private key,backup location or private evidence was requested/published. The automated synthetic drill remains separately evidenced in b84c872;it is not the basis for claiming actual-key recovery. [Private procedure](PILOT_VAULT.md).
 
-## Item 2. Participant consent and private ID assignment — PENDING
+## Voice compatibility diagnostic / freeze decision — 2026-10-12 IST
+
+The shared fallback banner does not establish permission denial. `src/client/on-device-dictation.ts` requires a recognition constructor, static `available()`, native `processLocally`, and an already-installed local language reporting `available` before calling `start()`. Unsupported browsers, missing/downloadable packs, unavailable local language/service, rejected preflight and recognition errors all use the same banner. Listeners are installed before `start()`; failed preflight never requests microphone permission. `not-allowed`, `service-not-allowed` and `no-speech` are currently indistinguishable to the user.
+
+Read-only inspection matched frozen application d4c7f8a. Installed headless Edge155 exposed both local APIs but reported en-US `unavailable`; no microphone permission or audio capture was requested. This reproduces preflight fallback in that runtime, not every founder browser/profile. Four focused controller tests passed; real microphone capture remains NOT_VERIFIED. Typed capture remains the primary resilient path, preserving draft text; recognition never saves a transaction. D23-v1 prohibits remote recognition and model downloads.
+
+**Decision: preserve production d4c7f8a through October19,2026 23:59 IST.** No dictation code patch or deployment during evaluator review. Freeze expiry alone does not authorize deployment.
+
+- [ ] Post-freeze backlog: distinguish unsupported browser, missing/unavailable local language pack/service, permission denial and no-speech; add focused tests and accurate recognition-start feedback. Any model download or remote/mobile speech expansion requires a separate approved compatibility/privacy amendment.
+
+## Item 2. Participant consent and private ID assignment — BLANK_TRACKER_PREPARED / CONSENT_PENDING
+
+- [x] Prepared an encrypted blank participant tracker in the ignored private notes folder (`participant-tracker.cms`), using the existing founder-profile certificate. AES-256-CBC OID and in-memory encrypt/decrypt equality verified; no plaintext file written. All11 slots F00/P01–P10 remain unassigned, unconsented and unenrolled. Existing notes vault preserved. Initial restricted-context certificate lookup was unavailable; authorized founder-profile execution succeeded. No key exported or participant data accessed.
+- [ ] Tejas fills the tracker privately: decrypt only into memory, record explicit consent/choices and coded assignment, then reseal with the existing certificate and verify the round-trip before replacing ciphertext. Follow [vault protocol](PILOT_VAULT.md); never export a plaintext sheet or publish completed rows.
 
 Copy this **blank** template to encrypted founder storage before filling it. Codes are pseudonyms, not proof that data is anonymous. Do not commit names, contact details, consent timestamps, financial state or completed rows. F00 is the founder; P01–P10 are available friend slots, not assigned participants. Enroll5–10 friends plus founder (6–11 total); unused slots do not count toward any denominator.
 

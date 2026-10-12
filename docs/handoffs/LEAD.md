@@ -1,3 +1,11 @@
+# PH31 voice diagnosis and Item2 tracker preparation — 2026-10-12 IST
+
+Voice diagnostic recorded in PILOT_PRELAUNCH: strict D23 local preflight can return fallback before microphone permission; generic errors hide the cause. Prior read-only Edge155 probe reported en-US unavailable; prior focused tests4/4PASS,not real speech verification. No client changes. Production freeze remains d4c7f8a through October19 23:59IST;granular messages are post-freeze backlog,not release authorization.
+
+Prepared separate encrypted blank participant tracker in ignored notes folder using existing founder certificate;AES256-CBC and in-memory roundtripPASS;11 unassigned F00/P01–P10 slots,no consent/enrollment/notes/keyexport/plaintextfiles. Restricted certificate lookup failed;authorized founder-profile retryPASS. Existing notes vault preserved. Source5/5,ignore/no-tracked-private-files and diffchecksPASS. Application tests NOT_RUN this documentation/storage-only turn;prior controller evidence distinguished. Item2 preparation complete,actual consent/assignment pending;Items3telemetry/4safety pending. No DB/provider/message/deployment command. Only documentation staged for authorized commit/push;resolve resulting HEAD/upstream. Scratch untouched. Next one action:Tejas privately records explicit consent and coded assignment in memory and reseals tracker;do not share completed rows in chat/Git.
+
+---
+
 # PH31 founder recovery gate recorded — 2026-10-12 IST
 
 User “Record Founder Key Drill Completion”/markItem1b VERIFIEDPASS recorded as FOUNDER_REPORTED completion,not new automated actual-key proof. Item1 AESvault verified;Item1b founderreportedPASS. Automatedsyntheticdrill b84c872 remains distinct from procedure4574d45. No privatebackup/password/key requested or inspected. Items2consentF00/P01–P10,3Day0eventsmoke,4hardkillswitch readiness PENDING. PH31IN_PROGRESS/observationsNOT_STARTED;freeze/Oct20dates unchanged. Source5/diffchecksPASS,app testsNOT_RUN docs-only. Documentationcommit/push authorized,scratchuntouched. Next:Item2 private participant consent/ID assignment;no tooling messages.
